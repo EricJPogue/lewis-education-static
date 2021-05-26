@@ -1,0 +1,35 @@
+.Header {
+	text-align: left;
+	padding: 12px 12px;
+}
+
+.Main {
+	text-align: left;
+	max-width: 1024px;
+	padding: 12px 12px;
+
+	/* Center the website. */
+	margin: 0 auto;
+}
+
+em {
+	font-weight: bold;
+}
+
+a:link {
+	/* Set color for unvisited links. */
+	color: blue;
+}
+
+a:visited {
+	/* Set color for visited links. */
+	color: darkgreen;
+}
+
+p + ul {
+	margin-top: -12px;
+}
+
+p + ol {
+	margin-top: -12px;
+}
