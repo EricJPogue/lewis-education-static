@@ -38,9 +38,13 @@ following branching commands:</p>
 	<li>git push</li>
 </ul>
 
-<p>Below is a Git and GitHub reference provided by GitHub:</p>
+<p>Below are Git and GitHub references:</p>
 <ul style={{listStyleType:'square'}}>
 	<li>GitHub Git Cheat Sheet <a href='https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf' target='blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>“An Intro to Git and GitHub for Beginners” tutorial steps 1 though 3 from GitHub <a href='https://guides.github.com/activities/hello-world/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>“Git Handbook” <a href='https://guides.github.com/introduction/git-handbook/' target='_blank' rel='noopener noreferrer'>[link]</a> and 
+		the “GitHub Git Cheat Sheet” <a href='https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf' target='_blank' rel='noopener noreferrer'>[link]</a></li> 
+	<li>“An Intro to Git and GitHub for Beginners” tutorial from HubSpot <a href='https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners' target='_blank' rel='noopener noreferrer'>[link]</a></li>
 </ul>
 </div>
 

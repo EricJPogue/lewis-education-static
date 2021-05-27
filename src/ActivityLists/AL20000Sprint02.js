@@ -60,3 +60,4 @@ const extras = () => {
 
 // Todo: Reorder or hide some of the programming together entries.
 // Todo: Create and link O’Reilly Books playlist for class or topic.
+// Todo: Add Git/GitHub activity / tutorial. 
