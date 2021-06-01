@@ -15,6 +15,7 @@ on some basic Git commands including:</p>
 <ul style={{listStyleType:'square'}}>
 	<li>git clone</li>
 	<li>git pull</li>
+	<li>git pull --no-edit</li>
 	<li>git add</li>
 	<li>git commit</li>
 	<li>git commit -a -m “Add and update files.”</li>

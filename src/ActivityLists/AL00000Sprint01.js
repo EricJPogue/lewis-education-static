@@ -71,9 +71,9 @@ export const StandardActivitiesClosing = (programmingAssignment) => {
 export const Closing = () => {
 	return (
 
-<p>The best advise that I can give you for being successful this sprint is to attend class, start assignments early, and to submit 
-something for each assignment. If you do these things, I believe your success is virtually guaranteed. Finally, be sure to 
-periodically check for new programming together tutorials <NavLink to='/activity/programming-together'>[link]</NavLink>.</p>
+<p>The best advise that I can give you is to start assignments early, submit something for each assignment, and to 
+attend class. If you do these things, I believe your success is virtually guaranteed. Finally, be sure to periodically 
+check for new programming together tutorials <NavLink to='/activity/programming-together'>[link]</NavLink>.</p>
 
 	) 
 }

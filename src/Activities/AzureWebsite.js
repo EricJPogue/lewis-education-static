@@ -16,8 +16,7 @@ export const AzureWebsite= () => {
 one of the methods demonstrated below. Test your website and make certain that your index.html Landing Page is working 
 as expected.</p>
 <ul style={{listStyleType:'square'}}>
-	<li>Complete “Website Creation with GitHub and Microsoft Azure - 2021 Edition” (highly recommended) <NavLink to='/activity-config/hello-world-html-github-and-azure.mp4'>[link]</NavLink></li>
-	<li>Complete “Website Creation with GitHub and Microsoft Azure - 2020 Edition” <NavLink to='/activity-config/git-deployment-to-azure-supplemental-2020'>[link]</NavLink></li>
+	<li>Complete “Website Creation with GitHub and Microsoft Azure” (highly recommended) <NavLink to='/activity-config/hello-world-html-github-and-azure'>[link]</NavLink></li>
 	<li>Review “Build Your First Web App” from Microsoft <a href='https://azure.microsoft.com/en-us/resources/videos/build-your-first-web-app/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
 	<li>Review “Git Deployment to Microsoft Azure” <NavLink to='/activity-config/git-deployment-to-azure'>[link]</NavLink></li>
 	<li>Review “Azure Static Website with FTP” <NavLink to='/activity-config/my-first-website-with-ftp'>[link]</NavLink></li>
