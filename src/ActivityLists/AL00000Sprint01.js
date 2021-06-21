@@ -12,11 +12,10 @@ export const ScrumIntro = () => {
 	return ( 
 
 <p>You likely noticed that I am using the term “sprint 1” to describe our first set of course activities. Sprints are 
-part of the Scrum software development process. The term is used to describe a unit of work which we have committed to
-delivering by a given date. We will be learning more about sprints and Scrum in the coming days. For now it is 
+part of the scrum software development process. The term is used to describe a unit of work which we have committed to
+delivering by a given date. We will be learning more about sprints and scrum in the coming days. For now it is 
 sufficient to know that our sprint 1 activities will take approximately 18 hours of focused effort to complete, and we 
-need to complete the activities by the sprint 1 end date listed on our course calendar 
-<NavLink to='/calendar/1'>[link]</NavLink>.</p> 
+need to complete the activities by the sprint 1 end date listed on our course <NavLink to='/calendar/1'>calendar</NavLink>.</p> 
 
 	)
 }
@@ -24,7 +23,7 @@ need to complete the activities by the sprint 1 end date listed on our course ca
 export const LearningObjectivesIntro = () => {
 	return (
 
-<p>Let's start with our sprint 1 Learning Objectives. By the end of sprint 1 we will be able to:</p>
+<p>Let’s start with our sprint 1 learning objectives. By the end of sprint 1 we will be able to:</p>
 
 	)
 }
@@ -42,12 +41,12 @@ focused time unless otherwise noted. <em>Bold</em> items are graded assignments.
 export const StandardActivities = (programmingAssignment) => { 
 	return ( <div>
 
-<li>Maintain laser focus on due dates by reviewing our class calendar <NavLink to='/calendar/1'>[link]</NavLink> and sprint 1 schedule <NavLink to='/schedule/1'>[link]</NavLink></li>
-<li>Review our course syllabus <a href={classSyllabusURL()}>[link]</a></li>
-<li>Understand Blended Learning by reviewing “Blended Learning &amp; Flipped Classroom” <NavLink to='/activity/blended-learning'>[video]</NavLink></li>
-<li>Be prepared to participate in your Scrum team by watching “Introduction to Scrum in 7 Minutes” <NavLink to='/activity/scrum-in-7-minutes'>[video]</NavLink></li>
+<li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/1'>calendar</NavLink> and sprint 1 <NavLink to='/schedule/1'>schedule</NavLink></li>
+<li>Review our course <a href={classSyllabusURL()}>syllabus</a></li>
+<li>Understand blended learning by watching <NavLink to='/activity/blended-learning'>Blended Learning &amp; Flipped Classroom</NavLink></li>
+<li>Be prepared to participate in your scrum team by watching <NavLink to='/activity/scrum-in-7-minutes'>Introduction to Scrum in 7 Minutes</NavLink></li>
 <li><em>Review sprint 1 assignments including Lab 1, Quiz 1, Discussion 1, and Reflection 1</em></li>
-<li>Start working on “Tools of the Trade” <NavLink to='/activity/tools'>[link]</NavLink> by setting up Discord and O’Reilly Books</li>
+<li>Start working on <NavLink to='/activity/tools'>Tools of the Trade</NavLink> by setting up Discord and O’Reilly Books</li>
 {StartProgrammingActivity(programmingAssignment)}
 
 	</div> )
@@ -60,7 +59,7 @@ export const InitialPost = () => {
 export const StandardActivitiesClosing = (programmingAssignment) => { 
 	return ( <div>
 
-<li>Add a representative photo of yourself to your Blackboard and Zoom profiles <NavLink to='/activity/photo-to-blackboard'>[video]</NavLink></li>
+<li>Add a representative photo of yourself to your <NavLink to='/activity/photo-to-blackboard'>Blackboard</NavLink> and Zoom profiles </li>
 {ProgrammingActivity(programmingAssignment)}
 <li><em>Complete Discussion 1 by responding to at least two of your classmates’ posts</em></li>
 <li><em>Submit Lab 1, Quiz 1, and Reflection 1</em></li>
@@ -73,7 +72,7 @@ export const Closing = () => {
 
 <p>The best advise that I can give you is to start assignments early, submit something for each assignment, and to 
 attend class. If you do these things, I believe your success is virtually guaranteed. Finally, be sure to periodically 
-check for new programming together tutorials <NavLink to='/activity/programming-together'>[link]</NavLink>.</p>
+check for programming together <NavLink to='/activity/programming-together'>tutorials</NavLink>.</p>
 
 	) 
 }

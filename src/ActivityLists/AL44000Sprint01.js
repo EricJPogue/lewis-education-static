@@ -37,15 +37,14 @@ Maintenance. These are some of the topics that we will be exploring as part of t
 <ol>
 	{StandardActivities(GettingToKnowEachOther)}
 
-	<li>Read Chapter 1 of “Engineering Software as a Service” by Armando Fox and David Patterson</li>
-	<li>Review “Engineering Software as a Service” chapter 1 lecture <NavLink to='/activity/fox-chapter-01'>[video]</NavLink> 
-		and be prepared for a scrum team discussion</li>
-	<li>Review “Engineering Software as a Service” Preface and review associated class lecture <NavLink to='/activity/fox-chapter-00'>[video]</NavLink></li>
+	<li>Read “Engineering Software as a Service” Chapter 1 by Armando Fox and David Patterson</li>
+	<li>Review “Engineering Software as a Service” Chapter 1 lecture <NavLink to='/activity/fox-chapter-01'>video</NavLink> and be prepared for a scrum team discussion</li>
+	<li>Read “Engineering Software as a Service” Preface and review associated class lecture <NavLink to='/activity/fox-chapter-00'>video</NavLink></li>
 	{ProgrammingActivity(HTMLProgrammingPart1)}
 
 	{InitialPost()}
 
-	<li>Read Chapter 2 of “Engineering Software as a Service” and review our associated class lecture <NavLink to='/activity/fox-chapter-02'>[video]</NavLink></li>
+	<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated class lecture <NavLink to='/activity/fox-chapter-02'>video</NavLink></li>
 	{ProgrammingActivity(ToolsOfTheTradeParts1And2)}
 	{ProgrammingActivity(HelloWorldWithPython, 1)}
 

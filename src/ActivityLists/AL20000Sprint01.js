@@ -20,7 +20,7 @@ problem solving, and programming.</p>
 
 {LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
-	<li>Effectively participate in a blended classroom environment and as part of a Scrum team</li>
+	<li>Effectively participate in a blended classroom environment and as part of a scrum team</li>
 	<li>Describe the concept of abstraction</li>
 	<li>Identify, define, and discuss numbering systems</li>
 	<li>Begin to understand algorithmic thinking, representation, programming, and design</li>
@@ -31,16 +31,15 @@ problem solving, and programming.</p>
 <ol>
 	{StandardActivities(HelloWorldWithPython)}
 
-	<li>Within O’Reilly Books <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>[link]</a>
-		read “Computer Science Illuminated” chapter 11 File Systems and Directories</li>
-	<li>Review our “Computer Science Illuminated” chapter 11 lecture <NavLink to='/activity-dale/11'>[video]</NavLink> 
-		and be prepared for a scrum team discussion</li>
+	<li>Within <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> read
+		“Computer Science Illuminated” chapter 11 File Systems and Directories</li>
+	<li>Review our “Computer Science Illuminated” <NavLink to='/activity-dale/11'>chapter 11 lecture video</NavLink> and be prepared for a scrum team discussion</li>
 	{ProgrammingActivity(ToolsOfTheTradePart1)}
 	<li>Review “Sequences, selections, and loops (repetition)” <a href='https://edu.gcfglobal.org/en/computer-science/sequences-selections-and-loops/1/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
 
 	{InitialPost()}
 
-	<li>Read “Computer Science Illuminated” Chapter 1 <a href='https://learning.oreilly.com/library/view/computer-science-illuminated/9781284055917/' target='_blank' rel='noopener noreferrer'>[link]</a> and review our chapter 1 lecture <NavLink to='/activity-dale/1'>[video]</NavLink><sup> ~2 hours</sup></li>
+	<li>Read “Computer Science Illuminated” <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Chapter 1</a> and review our chapter 1 lecture <NavLink to='/activity-dale/1'>video</NavLink><sup> ~2 hours</sup></li>
 	{ProgrammingActivity(HelloWorldWithPython)}
 	{ProgrammingActivity(NumberingSystemsWithPython)}
 

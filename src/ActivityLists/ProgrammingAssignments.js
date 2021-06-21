@@ -2,37 +2,37 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 export const ToolsOfTheTradePart1 = {
-	'name':'“Tools of the Trade - Part 1”',
+	'name':'Tools of the Trade - Part 1',
 	'link':'/activity/tools',
 	'estimate':'~2 hours'
 }
 
 export const ToolsOfTheTradeParts1And2 = {
-	'name':'“Tools of the Trade” parts 1 and 2',
+	'name':'Tools of the Trade parts 1 and 2',
 	'link':'/activity/tools',
 	'estimate':'~3 hours'
 }
 
 export const HTMLProgrammingPart1 = {
-	'name':'“HTML Programming - Part 1” from W3C',
+	'name':'HTML Programming - Part 1',
 	'link':'/activity/html',
 	'estimate':'~2 hours'
 }
 
 export const HelloWorldWithPython = {
-	'name':'“Hello World with Python”',
+	'name':'Hello World with Python',
 	'link':'/activity/hello-world-python',
 	'estimate':'~3 hours'
 }
 
 export const NumberingSystemsWithPython = {
-	'name':'“Numbering Systems with Python”',
+	'name':'Numbering Systems with Python',
 	'link':'/activity/numbering-systems-python',
 	'estimate':'~3 hours'
 }
 
 export const GettingToKnowEachOther = {
-	'name':'“Getting to Know Each Other”',
+	'name':'Getting to Know Each Other',
 	'link':'/activity/getting-to-know-each-other',
 	'estimate':'~6 hours'
 }
@@ -194,7 +194,7 @@ export const start = (assignment) => {
 
 export const StartProgrammingActivity = (assignment) => {
 	if (assignment != null) 
-		return ( <div><li>Start working on {assignment.name} <NavLink to={assignment.link}>[link]</NavLink></li></div> )
+		return ( <div><li>Start working on <NavLink to={assignment.link}>{assignment.name}</NavLink></li></div> )
 }
 
 export const reviewAndUpdate = (assignment) => { 
@@ -220,7 +220,7 @@ export const ProgrammingActivity = (assignment, estimatedTime) => {
 				estimate = '~'+estimatedTime+' hours'
 		} 
 
-		return ( <div><li>Complete {assignment.name} <NavLink to={assignment.link}>[link]</NavLink>{sup(estimate)}</li></div> )
+		return ( <div><li>Complete  <NavLink to={assignment.link}>{assignment.name}</NavLink>{sup(estimate)}</li></div> )
 	}
 }
 
