@@ -6,6 +6,11 @@ import { NavLink } from 'react-router-dom'
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro, Closing } from './AL00000Sprint01'
 import { ProgrammingActivity, ToolsOfTheTradePart1, HelloWorldWithPython, NumberingSystemsWithPython } from './ProgrammingAssignments'
 
+const oreillyPlaylist = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
+const computerScienceIlluminated = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Computer Science Illuminated</a> ) }
+const sequenceSelectionAndRepetition = () => { return( <a href='https://edu.gcfglobal.org/en/computer-science/sequences-selections-and-loops/1/' target='_blank' rel='noopener noreferrer'>Sequences, selections, and loops (repetition)</a> ) }
+
+
 export const al20000Sprint01 = () => {
 	return ( <div>
 
@@ -31,15 +36,14 @@ problem solving, and programming.</p>
 <ol>
 	{StandardActivities(HelloWorldWithPython)}
 
-	<li>Within <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> read
-		“Computer Science Illuminated” chapter 11 File Systems and Directories</li>
-	<li>Review our “Computer Science Illuminated” <NavLink to='/activity-dale/11'>chapter 11 lecture video</NavLink> and be prepared for a scrum team discussion</li>
+	<li>Within {oreillyPlaylist()} read “Computer Science Illuminated” chapter 11 File Systems and Directories</li>
+	<li>Review our “Computer Science Illuminated” <NavLink to='/activity-dale/11'>chapter 11 lecture</NavLink> and be prepared for a scrum team discussion</li>
 	{ProgrammingActivity(ToolsOfTheTradePart1)}
-	<li>Review “Sequences, selections, and loops (repetition)” <a href='https://edu.gcfglobal.org/en/computer-science/sequences-selections-and-loops/1/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>Review {sequenceSelectionAndRepetition()}</li>
 
 	{InitialPost()}
 
-	<li>Read “Computer Science Illuminated” <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Chapter 1</a> and review our chapter 1 lecture <NavLink to='/activity-dale/1'>video</NavLink><sup> ~2 hours</sup></li>
+	<li>Read {computerScienceIlluminated()} chapter 1, review our <NavLink to='/activity-dale/1'>chapter 1 lecture</NavLink>, and be prepared for a scrum team discussion<sup> ~2 hours</sup></li>
 	{ProgrammingActivity(HelloWorldWithPython)}
 	{ProgrammingActivity(NumberingSystemsWithPython)}
 

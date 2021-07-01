@@ -30,7 +30,7 @@ export class SprintClassActivities extends Component {
 		return( 
 		<div>
 			<h4>{courseTitle()}</h4>
-			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <em>{sprintEndDateWithoutTime(sprint-1)}</em>.</p>
+			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <em>{sprintEndDateWithoutTime(sprint-1)} at 11:59pm CT.</em></p>
 			<h5 style={{marginTop:'32px', color: "grey"}} onClick={() => this.headerClicked(sprint)}>Calendar | <span style={{color: "black"}}>Schedule</span></h5>
 		</div>	
 		)
@@ -102,7 +102,6 @@ export class SprintClassActivities extends Component {
 						{this.renderScheduleRow(incrementDate(dates.start,11),schedule.SecondFriday)}
 					</tbody>
 				</Table>
-				<em>Everything is due {CSTDate(dates.end,true,true)}</em>
 			</div>
 		)
 	}
@@ -137,7 +136,7 @@ export class SprintClassActivities extends Component {
 			default: schedule = this.TTSchedule
 		}
 
-		let calendar = sprintCalendarFromURL() // Todo: Move this into renderSprintSchedule 
+		let calendar = sprintCalendarFromURL()
 		let dates = calendar[this.currentSprint()]
 		return (
 			<div>
@@ -151,7 +150,6 @@ export class SprintClassActivities extends Component {
 						{this.renderScheduleRow(incrementDate(dates.start,10),schedule.SecondThursday)}
 					</tbody>
 				</Table>
-				<em>Everything is due {CSTDate(dates.end,true,true)}</em>
 			</div>
 		)
 	}

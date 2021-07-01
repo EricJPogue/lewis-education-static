@@ -29,13 +29,13 @@ languages in industry leading cloud environments to deliver Web applications.</p
 	{StandardActivities(GettingToKnowEachOther)}
 
 	<li>Read chapter 2 of “Programming The World Wide Web” (Sebesta)</li>
-	<li>Review our “Programming The World Wide Web” (Sebesta) lecture <NavLink to='/activity/sebesta-chapter-02'>video</NavLink> and be prepared for a scrum team discussion</li>
+	<li>Review our “Programming The World Wide Web” (Sebesta) <NavLink to='/activity/sebesta-chapter-02'>lecture</NavLink> and be prepared for a scrum team discussion</li>
 	{ProgrammingActivity(ToolsOfTheTradePart1)}
 	{ProgrammingActivity(HTMLProgrammingPart1)}
 
 	{InitialPost()}
 
-	<li>Read chapter 1 of Sebesta and review the associated lecture <NavLink to='/activity/sebesta-chapter-01'>video</NavLink></li>
+	<li>Read chapter 1 of Sebesta and review the associated <NavLink to='/activity/sebesta-chapter-01'>lecture</NavLink></li>
 	{ProgrammingActivity(HelloWorldWithPython, 2)}
 
 	{StandardActivitiesClosing(GettingToKnowEachOther)}

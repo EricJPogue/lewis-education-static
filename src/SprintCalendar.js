@@ -29,7 +29,7 @@ export class SprintCalendar extends Component {
 			return (null)
 		else
 			return (
-				<p>Sprint {sprint+1} starts <em>{sprintStartDate(sprint)}</em> and ends <em>{sprintEndDateWithoutTime(sprint)}</em>.</p>
+				<p>Sprint {sprint+1} starts <em>{sprintStartDate(sprint)}</em> and ends <em>{sprintEndDateWithoutTime(sprint)} at 11:59pm CT</em>.</p>
 			)
 	}
 
@@ -44,7 +44,7 @@ export class SprintCalendar extends Component {
 				return (
 					<tr onClick={() => this.rowClicked(index+1)} key={index+1} style={{backgroundColor:'#adebdb'}}>
 						<td style={{textAlign:'center'}}>{index+1}</td>
-						<td>{CSTDate(end,true,true)}</td>
+						<td>{CSTDate(end,true,false)}</td>
 						<td>{duration(start,end)} days</td>
 						<td>{notes}</td>
 					</tr>
@@ -53,7 +53,7 @@ export class SprintCalendar extends Component {
 				return (
 					<tr onClick={() => this.rowClicked(index+1)} key={index+1}>
 						<td style={{textAlign:'center'}}>{index+1}</td>
-						<td>{CSTDate(end,true,true)}</td>
+						<td>{CSTDate(end,true,false)}</td>
 						<td>{duration(start,end)} days</td>
 						<td>{notes}</td>
 					</tr>
