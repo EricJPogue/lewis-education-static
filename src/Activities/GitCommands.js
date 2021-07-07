@@ -47,6 +47,15 @@ following branching commands:</p>
 		the “GitHub Git Cheat Sheet” <a href='https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf' target='_blank' rel='noopener noreferrer'>[link]</a></li> 
 	<li>“An Intro to Git and GitHub for Beginners” tutorial from HubSpot <a href='https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners' target='_blank' rel='noopener noreferrer'>[link]</a></li>
 </ul>
+
+<br />
+<p>Frequently Asked Questions:</p>
+Question: How do I reinstall Git on MacOS? Consider the follow commands.
+<pre>{`
+xcode-select --print-path
+sudo rm -r -f /Library/Developer/CommandLineTools
+xcode-select --install
+`}</pre>
 </div>
 
 	);

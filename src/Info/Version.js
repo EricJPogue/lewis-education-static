@@ -5,7 +5,7 @@ export const Version = () => {
 
 <div>
 <h4>Lewis.education</h4>
-<h5>Version 2021.fall.05</h5>
+<h5>Version 2021.fall.06</h5>
 </div>
 
 	)
