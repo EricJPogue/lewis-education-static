@@ -37,14 +37,13 @@ Maintenance. These are some of the topics that we will be exploring as part of t
 <ol>
 	{StandardActivities(GettingToKnowEachOther)}
 
-	<li>Read “Engineering Software as a Service” Chapter 1 by Armando Fox and David Patterson</li>
-	<li>Review “Engineering Software as a Service” Chapter 1 lecture <NavLink to='/activity/fox-chapter-01'>video</NavLink> and be prepared for a scrum team discussion</li>
-	<li>Read “Engineering Software as a Service” Preface and review associated class lecture <NavLink to='/activity/fox-chapter-00'>video</NavLink></li>
+	<li>Read “Engineering Software as a Service” Chapter 1 by Armando Fox and David Patterson and review the associated <NavLink to='/activity/fox-chapter-00'>lecture</NavLink></li>
+	<li>Read “Engineering Software as a Service” Preface and review associated <NavLink to='/activity/fox-chapter-00'>lecture</NavLink></li>
 	{ProgrammingActivity(HTMLProgrammingPart1)}
 
 	{InitialPost()}
 
-	<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated class lecture <NavLink to='/activity/fox-chapter-02'>video</NavLink></li>
+	<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated <NavLink to='/activity/fox-chapter-02'>lecture</NavLink></li>
 	{ProgrammingActivity(ToolsOfTheTradeParts1And2)}
 	{ProgrammingActivity(HelloWorldWithPython, 1)}
 
@@ -55,5 +54,3 @@ Maintenance. These are some of the topics that we will be exploring as part of t
 
 	)
 }
-
-// Todo: Add Git/GitHub activity / tutorial. 
