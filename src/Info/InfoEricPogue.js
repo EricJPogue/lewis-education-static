@@ -10,23 +10,19 @@ export const InfoEricPogue = () => {
 <img src={photo} alt='Eric Pogue' height='200' /><br /><br />
 <h5>Eric Pogue</h5>
 Email: <a href='mailto:webmaster@example.com'>epogue@lewisu.edu</a><br />
-Mobile Phone: <a href='tel: +15632097280'>(563)209-7280</a><br />
+Desk Phone: <a href='tel: +18158365015'>(815)836-5015</a><br />
+Personal Mobile Phone: <a href='tel: +15632097280'>(563)209-7280</a><br />
 Personal Zoom Meeting <a href='https://us02web.zoom.us/j/6068812502?pwd=ODI5anpCa2RYNHV1Qlp3a3MyT01pUT09' target='_blank' rel='noopener noreferrer'>[link]</a><br />
 Personal Discord “Lewis” Server Invite (preview) <a href='https://discord.gg/5GEgy5nEce' target='_blank' rel='noopener noreferrer'>[link]</a><br /><br />
-Short Bio: Professional software developer and software development manager turned college 
-instructor.<br /><br />
+
+Short Bio: Professional software developer and software development manager turned college instructor.<br /><br />
 
 <p>How to Contact Me?</p>
-<p>For most questions please utilize our <em>“Class Forum” Discussion Board</em>. History suggests that posts to our 
-Class Forum get the quickest and highest quality responses. However, if your question is of personal nature, email is 
-your best alternative. In either case, you can expect a maximum response time of 24 hours weekdays.</p>
-
-<p>For weekend questions that need quick responses the “Class Forum” is definitely your best bet. </p>
-
-<p>If you need immediate response, call my mobile phone.</p>
+<p>Email is the best way to contact me for nearly all questions that can not be asked during class. You can expect a 
+maximum response time of 24 hours weekdays. If your question requires an immediate response, please call me.</p>
 <br />
-<p>Need help with University Resources including the Office of Technology, Tutoring, or the Library? Here is a good 
-place to start <NavLink to='/getting-help'>[link]</NavLink></p>
+<p>Need help with University Resources including the Office of Technology, Tutoring, or the Library? Check out 
+the <NavLink to='/getting-help'>University Resources</NavLink> page</p>
 </div>
 
 	)

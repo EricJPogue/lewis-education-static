@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro, Closing } from './AL00000Sprint01'
-import { ProgrammingActivity, ToolsOfTheTradePart1, HTMLProgrammingPart1, GettingToKnowEachOther, HelloWorldWithPython  } from './ProgrammingAssignments'
+import { ProgrammingActivity, ToolsOfTheTrade, HTMLProgrammingPart1, GettingToKnowEachOther, HelloWorldWithPython  } from './ProgrammingAssignments'
 
 export const al24700Sprint01 = (syllabusURL) => {
 	return (
@@ -30,7 +30,7 @@ languages in industry leading cloud environments to deliver Web applications.</p
 
 	<li>Read chapter 2 of “Programming The World Wide Web” (Sebesta)</li>
 	<li>Review our “Programming The World Wide Web” (Sebesta) <NavLink to='/activity/sebesta-chapter-02'>lecture</NavLink> and be prepared for a scrum team discussion</li>
-	{ProgrammingActivity(ToolsOfTheTradePart1)}
+	{ProgrammingActivity(ToolsOfTheTrade)}
 	{ProgrammingActivity(HTMLProgrammingPart1)}
 
 	{InitialPost()}

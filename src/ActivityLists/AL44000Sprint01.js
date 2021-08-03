@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro, Closing } from './AL00000Sprint01'
-import { GettingToKnowEachOther, ProgrammingActivity, ToolsOfTheTradeParts1And2, HTMLProgrammingPart1, HelloWorldWithPython } from './ProgrammingAssignments'
+import { GettingToKnowEachOther, ProgrammingActivity, ToolsOfTheTrade, HTMLProgrammingPart1, HelloWorldWithPython } from './ProgrammingAssignments'
 
 export const al44000Sprint01 = (syllabusURL) => {
 	return (
@@ -44,7 +44,7 @@ Maintenance. These are some of the topics that we will be exploring as part of t
 	{InitialPost()}
 
 	<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated <NavLink to='/activity/fox-chapter-02'>lecture</NavLink></li>
-	{ProgrammingActivity(ToolsOfTheTradeParts1And2)}
+	{ProgrammingActivity(ToolsOfTheTrade)}
 	{ProgrammingActivity(HelloWorldWithPython, 1)}
 
 	{StandardActivitiesClosing(GettingToKnowEachOther)}

@@ -1,14 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export const ToolsOfTheTradePart1 = {
-	'name':'Tools of the Trade - Part 1',
-	'link':'/activity/tools',
-	'estimate':'~2 hours'
-}
 
-export const ToolsOfTheTradeParts1And2 = {
-	'name':'Tools of the Trade parts 1 and 2',
+export const ToolsOfTheTrade = {
+	'name':'Tools of the Trade',
 	'link':'/activity/tools',
 	'estimate':'~3 hours'
 }
