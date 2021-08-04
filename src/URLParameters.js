@@ -50,8 +50,12 @@ export const courseNumber = () => {
 export const classSyllabusURL = () => { 
 	let classReference = cpsc()
 	switch(classReference) {
-		case '20000-fall-2021-002': return 'https://botb.blob.core.windows.net/nvm4zqwm/lzq51xkz-syllabus-cpsc-20000-002.pdf'
-		case '20000-fall-2021-003': return 'https://botb.blob.core.windows.net/nvm4zqwm/pto4cncy-syllabus-cpsc-20000-003.pdf'
+		case '20000-fall-2021-002': return 'https://pithub.blob.core.windows.net/nvm4zqwm/lnt2ybs1-syllabus-cpsc-20000-002.pdf'
+		case '20000-fall-2021-003': return 'https://pithub.blob.core.windows.net/nvm4zqwm/lonr2vt9-syllabus-cpsc-20000-003.pdf'
+
+// !!!StartHere!!!
+// Update syllabi and move them to PitHub.
+
 		case '24700-fall-2021-001': return 'https://botb.blob.core.windows.net/nvm4zqwm/btey68pg-syllabus-cpsc-24700-001.pdf'
 		case '44000-fall-2021-001': return 'https://botb.blob.core.windows.net/nvm4zqwm/l9vm2own-syllabus-cpsc-44000-001.pdf'
 

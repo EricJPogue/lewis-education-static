@@ -13,10 +13,9 @@ export const UniversityResources = () => {
 <ul style={{listStyleType:'square'}}>
 	<li><a href='https://docs.google.com/document/d/1apPN5avRsTZ4TL7EL_wEczs8vFd_uyrwts-dfIgkOgg/edit#heading=h.gkos893m3ubj' target='_blank' rel='noopener noreferrer'>Office of Technology Help Desk</a></li>
 	<li><a href='https://www.lewisu.edu/academics/library/index.htm' target='_blank' rel='noopener noreferrer'>University Library</a></li>
-	<li><a href='https://docs.google.com/document/d/1apPN5avRsTZ4TL7EL_wEczs8vFd_uyrwts-dfIgkOgg/edit#heading=h.bep7p3pp0iq3' target='_blank' rel='noopener noreferrer'>Blackboard Support</a></li>
-	<li><a href='http://lewisstudenttutorials.weebly.com/' target='_blank' rel='noopener noreferrer'>Blackboard Tutorials</a></li>
 	<li><a href='https://www.lewisu.edu/welcome/offices/business/facilities.htm' target='_blank' rel='noopener noreferrer'>Campus Facilities</a></li>
 	<li><a href='https://www.lewisu.edu/studentservices/security/' target='_blank' rel='noopener noreferrer'>Campus Security</a></li>
+	<li><a href='https://www.youtube.com/watch?v=3KQ6QemExf4' target='_blank' rel='noopener noreferrer'>Center for Health and Counseling Services</a></li>
 </ul>
 
 <br />
@@ -30,6 +29,8 @@ export const UniversityResources = () => {
 <br />
 <p>Below are several Additional References that you may also find useful:</p>
 <ul>
+	<li><a href='https://docs.google.com/document/d/1apPN5avRsTZ4TL7EL_wEczs8vFd_uyrwts-dfIgkOgg/edit#heading=h.bep7p3pp0iq3' target='_blank' rel='noopener noreferrer'>Blackboard Support</a></li>
+	<li><a href='http://lewisstudenttutorials.weebly.com/' target='_blank' rel='noopener noreferrer'>Blackboard Tutorials</a></li>
 	<li><a href='https://docs.google.com/document/d/1F1t882ne3d2Y64wJxTQX1GuUV7HvVafzB7Uj8mMSARU/edit'>Technology Requirements for Web Enhanced Courses</a></li>
 	<li><a href='https://docs.google.com/document/d/1rFkPECHaEIxEYV4ImmZmbox8VF8UiJhvDo_jbFH4jzo/edit'>Being a Successful Online Learner</a></li>
 	<li><a href='https://www.youtube.com/watch?v=LQy40B4y-AE'>Five Tips for Success in Online Learning</a></li>
