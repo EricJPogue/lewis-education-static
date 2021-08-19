@@ -28,7 +28,7 @@ problem solving, and programming.</p>
 	<li>Effectively participate in a blended classroom environment and as part of a scrum team</li>
 	<li>Describe the concept of abstraction</li>
 	<li>Identify, define, and discuss numbering systems</li>
-	<li>Begin to understand algorithmic thinking, representation, programming, and design</li>
+	<li>Begin to understand representation, programming, algorithmic thinking, and design</li>
 	<li>Utilize important developer tools to create and update basic software applications</li>
 </ul>
 
