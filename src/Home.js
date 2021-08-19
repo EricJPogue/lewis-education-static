@@ -15,10 +15,10 @@ export class Home extends React.Component {
 <h6>MWF 11am CT <a href= '/?cpsc=20000-fall-2021-003#/sprint/1'>[link]</a></h6><br />
 
 <h5>Web and Distributed Programming</h5>
-<h6>MWF 3pm CT <a href= '/?cpsc=24700-fall-2021-001#/sprint/1'>[link]</a></h6>
+<h6>MWF 3pm CT <a href= '/?cpsc=24700-fall-2021-001#/sprint/1'>[link]</a></h6><br />
 
 <h5>Software Engineering</h5>
-<h6>MWF 2pm CT <a href= '/?cpsc=44000-fall-2021-001#/sprint/1'>[link]</a></h6><br />
+<h6>MWF 2pm CT <a href= '/?cpsc=44000-fall-2021-001#/sprint/1'>[link]</a></h6>
 
 </div>
 
