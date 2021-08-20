@@ -2,30 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { cpsc, courseTitle, classSyllabusURL } from './URLParameters'
-
-/* Todo: Remove unused code below.
-
-export const welcome2021Spring = () => {
-	return (
-		<div>
-		<h4>{courseTitle()}</h4>
-		<h5>Welcome to Lewis University Spring 2021 Semester!</h5>
-		<p style={{marginTop:'20px'}}>Please take a few minutes to view your spring 2021 welcome message.</p>
-		<IFrameComponent iframe={panoptoWelcomeIFrameTag()} />
-		<br />
-		<p>Prior to our first class session, please also take a few minutes to gain a better understand of 
-		Blended Learning and Scrum by reviewing the following videos.</p>
-		<ul style={{listStyleType:'square'}}>
-			<li>“Blended Learning &amp; Flipped Classroom” 
-				<NavLink to='/activity/blended-learning'>[video]</NavLink></li>
-			<li>“Introduction to Scrum in 7 Minutes”
-				<NavLink to='/activity/scrum-in-7-minutes'>[video]</NavLink></li> 
-		</ul>
-		Finally, you will want to take a look at our course syllabus <a href={classSyllabusURL()}>[link]</a> 
-			and obtain the items identified in the “IV. Course Materials.”
-		</div> )
-}
-*/
+import { Blended } from './Links'
 
 export const welcome2021Fall = () => {
 	return (
@@ -38,10 +15,9 @@ export const welcome2021Fall = () => {
 		<p>Prior to our first class session, please also take a few minutes to gain a better understand of 
 		Blended Learning and Scrum by reviewing the following videos.</p>
 		<ul style={{listStyleType:'square'}}>
-			<li>“Blended Learning &amp; Flipped Classroom” 
-				<NavLink to='/activity/blended-learning'>[video]</NavLink></li>
-			<li>“Introduction to Scrum in 7 Minutes”
-				<NavLink to='/activity/scrum-in-7-minutes'>[video]</NavLink></li> 
+			<li>{Blended()}</li>
+			<li><NavLink to='/activity/scrum-in-7-minutes'>Introduction to Scrum in 7 Minutes</NavLink></li> 
+			
 		</ul>
 		Finally, you will want to take a look at our course syllabus <a href={classSyllabusURL()}>[link]</a> 
 			and obtain the items identified in the “IV. Course Materials.”

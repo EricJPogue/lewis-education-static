@@ -22,6 +22,8 @@ export const PowerShell = () =>    { return internalLink('PowerShell',          
 export const Terminal = () =>      { return internalLink('Terminal',                  '/activity-config/macos-setup-terminal-finder-and-git') }
 export const GitTutorial = () =>   { return internalLink('tutorial',                  '/activity-config/git-installation-on-windows-10') }
 
+export const Blended = () =>       { return externalLink('Blended Learning & Flipped Classroom',          'https://youtu.be/paQCE58334M') }
+
 
 const externalLink = (displayName, url) => {
 	return (
