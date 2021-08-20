@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom'
 
 import { cpsc, courseTitle, classSyllabusURL } from './URLParameters'
 
-/*
+/* Todo: Remove unused code below.
+
 export const welcome2021Spring = () => {
 	return (
 		<div>

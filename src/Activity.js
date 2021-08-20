@@ -76,7 +76,8 @@ class Activity extends Component {
 			// Learning activities:
 			//     http://localhost:3000/#/activity/blended-learning  
 			//     http://www.lewis.education/#/activity/blended-learning
-			case 'blended-learning': return videoLink('Blended Learning', 'https://www.youtube.com/watch?v=paQCE58334M&vl')
+			case 'blended-learning-old': return videoLink('Blended Learning', 'https://www.youtube.com/watch?v=paQCE58334M&vl')
+			case 'blended-learning': return videoLink('Blended Learning', 'https://www.youtube.com/watch?v=paQCE58334M')
 			case 'scrum-in-7-minutes': return videoLink('Introduction to Scrum', 'https://www.youtube.com/watch?v=9TycLR0TqFA')
 			case 'photo-to-blackboard': return videoLink('Add Your Photo to Blackboard', 'https://www.youtube.com/watch?v=PTmK3QdwZro&feature=youtu.be')
 			case 'blackboard-ultra': return videoLink('Introduction to Blackboard Ultra', 'https://www.youtube.com/watch?v=IKjBxIe_138&feature=youtu.be')
