@@ -8,7 +8,6 @@ export const al44000Sprint04 = () => {
 	return (
 
 <div>
-<h4>Software Engineering</h4>
 <h5>Sprint 4: Testing, Test-Driven Development, Express, Node.js, and Azure</h5>
 
 <p>Welcome to sprint 4. This sprint we are going to be focused focused on learning about Testing and Test-Driven

@@ -8,7 +8,6 @@ export const al36000Sprint06 = () => {
 	return (
 
 <div>
-<h4>Applied Programming Languages</h4>
 <h5>Sprint 6: Continuous Integration and Continuous Deployment (CI/CD), React, and React on Azure</h5>
 <p>Let’s develop some React web applications on Microsoft Azure.</p>
 

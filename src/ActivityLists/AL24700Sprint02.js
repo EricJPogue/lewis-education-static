@@ -5,7 +5,6 @@ export const al24700Sprint02 = () => {
 	return (
 
 <div>
-<h4>Web and Distributed Programming</h4>
 <h5>Sprint 2: Cascading Style Sheets, JavaScript, and the Azure Cloud</h5>
 
 <p>Welcome to sprint 2 of Web and Distributed Programming. In sprint 2 we are going to take a look at the key

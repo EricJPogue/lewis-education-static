@@ -8,7 +8,6 @@ export const al44000Sprint05 = () => {
 	return (
 
 <div>
-	<h4>Software Engineering</h4>
 	<h5>Sprint 5: Software Maintenance, Final Project Proposal, and production Azure Site Setup</h5>
 
 	<p>Welcome to sprint 5. This sprint marks the start of our final project. Think of this sprint as your final project

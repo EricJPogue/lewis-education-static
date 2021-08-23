@@ -8,7 +8,6 @@ export const al36000Sprint04 = () => {
 	return (
 
 <div>
-<h4>Applied Programming Languages</h4>
 <h5>Sprint 4: Concurrency, Serverless Computing, and Docker Containers</h5>
 <p><em>Welcome to sprint 4.</em> This sprint we will continue to be focused on working in small teams and using industry standard source 
 code control and configuration management tools and patterns. We will be expanding our configuration management knowledge into the hosting

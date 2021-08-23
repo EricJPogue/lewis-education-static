@@ -6,7 +6,6 @@ import { FinalProject, start, complete } from './ProgrammingAssignments'
 export const al20000Sprint08 = () => {
 	return (
 <div>
-<h4>Introduction to Computer Science</h4>
 <h5>Sprint 8: Final Project, Final Project, and more Final Project</h5>
 
 <p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 

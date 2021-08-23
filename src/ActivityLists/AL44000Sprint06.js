@@ -8,7 +8,6 @@ export const al44000Sprint06 = () => {
 	return (
 
 <div>
-	<h4>Software Engineering</h4>
 	<h5>Sprint 6: Project Management, Serverless Computing, and Final Project</h5>
 
 	<p>Welcome to sprint 6. This sprint will see us splitting our time between working on sprint 1 of our final 

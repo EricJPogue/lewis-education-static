@@ -5,7 +5,6 @@ export const al24700Sprint04 = () => {
 	return (
 
 <div>
-<h4>Web and Distributed Programming</h4>
 <h5>Sprint 4: Map Mania, JavaScript, XML, and JSON</h5>
 
 <p>Sprint 4. Where does the time go? I hope you enjoyed Map Mania v1. This sprint we will be focused on

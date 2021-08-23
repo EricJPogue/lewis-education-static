@@ -8,7 +8,6 @@ export const al20000Sprint06 = () => {
 	return (
 
 <div>
-<h4>Introduction to Computer Science</h4>
 <h5>Sprint 6: Networks, The Internet, Cloud Computing, and Updated Final Project Proposal</h5>
 
 <p>Welcome to sprint 6. Sprint 6 is going to see you taking control and being more proactive exploring how to learn 

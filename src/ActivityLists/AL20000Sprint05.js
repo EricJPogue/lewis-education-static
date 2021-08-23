@@ -8,7 +8,6 @@ export const al20000Sprint05 = () => {
 	return (
 
 <div>
-<h4>Introduction to Computer Science</h4>
 <h5>Sprint 5: Networks, Encryption, Hashing, and Final Projects</h5>
 
 <p><em>Wow!</em> We made it to the halfway point. I hope you enjoyed 

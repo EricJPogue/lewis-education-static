@@ -7,7 +7,6 @@ export const al36000Sprint08 = () => {
 	return (
 
 <div>
-<h4>Applied Programming Languages</h4>
 <h5>Sprint 8: Final Project, Application Architecture, and Databases</h5>
 
 <p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 

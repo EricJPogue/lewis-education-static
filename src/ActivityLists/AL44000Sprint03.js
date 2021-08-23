@@ -8,7 +8,6 @@ export const al44000Sprint03 = () => {
 	return (
 
 <div>
-<h4>Software Engineering</h4>
 <h5>Sprint 3: Application Requirements, Behavior-Driven Design, Node.js, and Azure, </h5>
 
 <p>Welcome to sprint 3. This sprint we will be focused on Node.js as a platform for Saas. We will be

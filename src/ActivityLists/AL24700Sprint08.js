@@ -5,7 +5,6 @@ export const al24700Sprint08 = () => {
 	return (
 
 <div>
-<h4>Web and Distributed Programming</h4>
 <h5>Sprint 8: Final Project</h5>
 
 <p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 

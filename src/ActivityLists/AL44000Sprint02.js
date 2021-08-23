@@ -8,7 +8,6 @@ export const al44000Sprint02 = () => {
 	return (
 
 <div>
-<h4>Software Engineering</h4>
 <h5>Sprint 2: Node.js, JavaScript, Ruby on Rails, and Azure</h5>
 
 <p><em>Welcome to sprint 2.</em> We covered a lot of material in sprint 1. However, we didn't get a chance to write 

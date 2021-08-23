@@ -8,7 +8,6 @@ export const al36000Sprint03 = () => {
 	return (
 
 <div>
-<h4>Applied Programming Languages</h4>
 <h5>Sprint 3: Testing and Programming Language Features</h5>
 <p><em>Welcome to sprint 3.</em> This sprint we will be focused on working in small teams and using industry standard source 
 code control and configuration management tools and patterns. We will continue to focus on programming “Coding Standards 

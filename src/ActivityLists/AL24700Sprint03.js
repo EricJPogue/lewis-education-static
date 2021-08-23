@@ -5,7 +5,6 @@ export const al24700Sprint03 = () => {
 	return (
 
 <div>
-<h4>Web and Distributed Programming</h4>
 <h5>Sprint 3: More JavaScript, Google Maps API, and Map Mania</h5>
 
 <p>Welcome to Sprint 3. We have covered a lot in our first two sprints. Much of what we covered was preparing us

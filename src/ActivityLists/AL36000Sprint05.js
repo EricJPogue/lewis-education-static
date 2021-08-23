@@ -8,7 +8,6 @@ export const al36000Sprint05 = () => {
 	return (
 
 <div>
-<h4>Applied Programming Languages</h4>
 <h5>Sprint 5: Web Development with HTML, CSS, JavaScript, and a touch of React</h5>
 <p>Sprint 5. Where does the time go?</p>
 <p>Sprint 5 sees us working in the same teams but working with new technologies. We will be full speed ahead with web 

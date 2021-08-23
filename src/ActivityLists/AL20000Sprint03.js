@@ -8,7 +8,6 @@ export const al20000Sprint03 = () => {
 	return (
 
 <div>
-<h4>Introduction to Computer Science</h4>
 <h5>Sprint 3: Gates and Circuits, Computing Components, and Hosting Web Application is Azure</h5>
 
 <p>Welcome to sprint 3. I hope you enjoyed our work with HTML and CSS because we are going to be continuing that journey

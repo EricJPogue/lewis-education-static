@@ -8,7 +8,6 @@ export const al20000Sprint07 = () => {
 	return (
 
 <div>
-<h4>Introduction to Computer Science</h4>
 <h5>Sprint 7: Security, JavaScript, and you setting the direction</h5>
 
 <p>Welcome to sprint 7.</p>

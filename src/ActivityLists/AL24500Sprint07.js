@@ -7,7 +7,6 @@ export const al24500Sprint07 = ( props ) => {
 	return (
 
 <div>
-<h4>Object-Oriented Programming</h4>
 <h5>Sprint 7: Thunderbird, Final Project sprint 0, and Application Architecture</h5>
 
 <p><em>Welcome to sprint 7.</em> How time flies. We have two separate programming activities this sprint. The first 

@@ -8,7 +8,6 @@ export const al20000Sprint02 = () => {
 	return (
 
 <div>
-<h4>Introduction to Computer Science</h4>
 <h5>Sprint 2: Numbering Systems, Data Representation, HTML, Cascading Style Sheets, and more Tools of the Trade</h5>
 
 <p>Welcome to sprint 2 of Introduction to Computer Science. In sprint 2 we are going to continue our journey into data

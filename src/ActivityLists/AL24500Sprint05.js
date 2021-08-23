@@ -8,7 +8,6 @@ export const al24500Sprint05 = ( props ) => {
 	return (
 
 <div>
-<h4>Object-Oriented Programming</h4>
 <h5>Sprint 5: Network Programming, Testing, and The Cloud</h5>
 
 <p>Sprint 5. Do you feel your software development skills growing? Do you feel the power? As your skills grow you will 

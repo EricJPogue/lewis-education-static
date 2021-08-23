@@ -8,7 +8,6 @@ export const al44000Sprint07 = () => {
 	return (
 
 <div>
-	<h4>Software Engineering</h4>
 	<h5>Sprint 7: Design Patterns, Model-View-Controller, Application Architecture, and Final Project</h5>
 
 	<p>Welcome to sprint 7. Or should I say sprint 2 of your final project? This sprint will see us continuing to work 

@@ -7,7 +7,6 @@ export const al24500Sprint08 = ( props ) => {
 	return (
 
 <div>
-<h4>Object-Oriented Programming</h4>
 <h5>Sprint 8: Final Project, Application Architecture, and Databases</h5>
 
 <p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 

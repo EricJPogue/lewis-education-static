@@ -8,7 +8,6 @@ export const al36000Sprint07 = () => {
 	return (
 
 <div>
-<h4>Applied Programming Languages</h4>
 <h5>Sprint 7: Application Architecture, Data Management, Application State, Security, React, and Azure</h5>
 <p>Welcome to sprint 7. This sprint we are going to focus on understanding data management and how managing data fit’s 
 into application architecture. The journey starts with understanding how to effectively manage application state across 

@@ -9,7 +9,6 @@ export const al24500Sprint03 = ( props ) => {
 	return (
 
 <div>
-	<h4>Object-Oriented Programming</h4>
 	<h5>Sprint 3: Graphical User Interfaces and FaceDraw</h5>
 
 	<p>Welcome to Sprint 3. We have covered a lot in the first two sprints. Much of it was preparing us for our first

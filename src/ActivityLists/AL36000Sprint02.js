@@ -8,7 +8,6 @@ export const al36000Sprint02 = () => {
 	return (
 
 <div>
-<h4>Applied Programming Languages</h4>
 <h5>Sprint 2: Patterns, Principles, Interfaces, Packages, and Functional Programming, </h5>
 <p><em>Welcome to sprint 2.</em> We covered a lot of material in sprint 1. We even did some programming by completing
 Matchmaker with Go. Keep your Go compilers out for this sprint. We will be enhancing our knowledge of interfaces and 

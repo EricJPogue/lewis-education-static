@@ -5,7 +5,6 @@ export const al24700Sprint07 = () => {
 	return (
 
 <div>
-<h4>Web and Distributed Programming</h4>
 <h5>Sprint 7: More Server-side Programming, Cloud Computing, and Map Reduce</h5>
 
 <p>Welcome to Sprint 7. We have two parts to our programming assignment this week. First, we need to wrap up Mustang 

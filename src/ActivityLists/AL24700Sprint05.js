@@ -5,7 +5,6 @@ export const al24700Sprint05 = () => {
 	return (
 
 <div>
-<h4>Web and Distributed Programming</h4>
 <h5>Sprint 5: Distributed applications, JavaScript, Ajax, and JSON</h5>
 
 <p><em>Wow!</em> We made it to the halfway point. I hope you enjoyed Map Mania. This week we switch gears and move into 

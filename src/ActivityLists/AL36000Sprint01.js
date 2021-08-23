@@ -9,7 +9,6 @@ export const al36000Sprint01 = (syllabusURL) => {
 	return (
 
 <div>
-<h4>Applied Programming Languages</h4>
 <h5>Sprint 1: Getting Started, Programming Languages, Object-Oriented Programming, Go, and Matchmaker</h5>
 <p><em>Welcome to Applied Programming Languages!</em> By this point in your software development journey I'm sure you 
 are confident in writing moderately complicated software programs. You’ve learned about structured programming 

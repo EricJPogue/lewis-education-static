@@ -5,7 +5,6 @@ export const al24700Sprint06 = () => {
 	return (
 
 <div>
-<h4>Web and Distributed Programming</h4>
 <h5>Sprint 6: Server-side Programming with PHP or Node.js</h5>
 
 <p>Welcome to Sprint 6! Need I say more? I hope you enjoyed our first implementation Mustang. This week it’s

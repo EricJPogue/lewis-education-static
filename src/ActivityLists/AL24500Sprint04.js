@@ -8,7 +8,6 @@ export const al24500Sprint04 = ( props ) => {
 	return (
 
 <div>
-<h4>Object-Oriented Programming</h4>
 <h5>Sprint 4: Interactive User Interfaces and Mosaic</h5>
 
 <p>Welcome to sprint 4. We have covered a lot of material in the first three sprints. I suspect
