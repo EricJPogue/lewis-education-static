@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const Discord = () =>       { return externalLink('Discord',                   'https://discord.com/') }
-export const OReillyBooks = () =>  { return externalLink('O’Reilly Books',            'https://www.oreilly.com/library/view/temporary-access/') }
+export const OReillyBooks = () =>  { return externalLink('O’Reilly Books',            'https://lewisu.libguides.com/az.php?q=o%27reilly') }
 export const Firefox = () =>       { return externalLink('FireFox',                   'https://www.mozilla.org/en-US/firefox/new/') }
 export const Chrome = () =>        { return externalLink('Chrome',                    'https://www.google.com/chrome/') }
 export const VSCode = () =>        { return externalLink('Visual Studio Code',        'https://code.visualstudio.com/') }

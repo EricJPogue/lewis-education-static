@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 import { classSyllabusURL } from '../URLParameters'
 import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
+import { Blended } from '../Links'
 
 
 export const ScrumIntro = () => {
@@ -43,7 +44,11 @@ export const StandardActivities = (programmingAssignment) => {
 
 <li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/1'>calendar</NavLink> and sprint 1 <NavLink to='/schedule/1'>schedule</NavLink></li>
 <li>Review our course <a href={classSyllabusURL()}>syllabus</a></li>
-<li>Understand blended learning by watching <NavLink to='/activity/blended-learning'>Blended Learning &amp; Flipped Classroom</NavLink></li>
+
+{/* The blended learning link below stopped supporting embedded functionality in the first half of 2021. We may want to 
+    retest '<NavLink to='/activity/blended-learning'>Blended Learning &amp; Flipped Classroom</NavLink>' at some point. */}
+
+<li>Understand blended learning by watching {Blended()}</li>
 <li>Be prepared to participate in your scrum team by watching <NavLink to='/activity/scrum-in-7-minutes'>Introduction to Scrum in 7 Minutes</NavLink></li>
 <li><em>Review sprint 1 assignments including Lab 1, Quiz 1, Discussion 1, and Reflection 1</em></li>
 <li>Start working on <NavLink to='/activity/tools'>Tools of the Trade</NavLink> by setting up Discord and O’Reilly Books</li>
