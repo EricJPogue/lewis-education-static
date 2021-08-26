@@ -19,11 +19,12 @@ export const UniversityResources = () => {
 </ul>
 
 <br />
-<p>Catalogs, Schedules, and Calendars:</p>
+<p>Calendars, Catalogs, and Schedules:</p>
 <ul>
+	<li><a href='https://www.lewisu.edu/calendar/'>Lewis University Events Calendar</a></li>
+	<li><a href='https://www.lewisu.edu/academics/academiccalendar.htm'>Academic Calendars</a></li>
 	<li><a href='https://lewisu.edu/academics/programs/catalog.htm'>Course Catalogs</a></li>
 	<li><a href='https://lewisu.edu/academics/programs/schedule.htm'>Course Schedules</a></li>
-	<li><a href='https://www.lewisu.edu/academics/academiccalendar.htm'>Academic Calendars</a></li>
 </ul>
 
 <br />
