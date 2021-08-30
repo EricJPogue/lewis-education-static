@@ -11,6 +11,7 @@ export const UniversityResources = () => {
 
 <p>Below are some of the additional Lewis University organizations that are available to assist you:</p>
 <ul style={{listStyleType:'square'}}>
+	<li><a href='https://mylewis.lewisu.edu/web/mylewis-home/resources' target='_blank' rel='noopener noreferrer'>myLewis Resources including WiFi</a></li>
 	<li><a href='https://docs.google.com/document/d/1apPN5avRsTZ4TL7EL_wEczs8vFd_uyrwts-dfIgkOgg/edit#heading=h.gkos893m3ubj' target='_blank' rel='noopener noreferrer'>Office of Technology Help Desk</a></li>
 	<li><a href='https://www.lewisu.edu/academics/library/index.htm' target='_blank' rel='noopener noreferrer'>University Library</a></li>
 	<li><a href='https://www.lewisu.edu/welcome/offices/business/facilities.htm' target='_blank' rel='noopener noreferrer'>Campus Facilities</a></li>
