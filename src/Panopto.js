@@ -44,22 +44,17 @@ const panoptoEmbedCodePrefixForPlaylist = '<iframe src="https://lewisu.hosted.pa
 const panoptoEmbedSuffixForPlaylist = '&autoplay=false&offerviewer=false&showtitle=false&showbrand=false&start=0&interactivity=all" height="576" width="1024" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>'
 const embedCodePlaylist = (iD) => { return panoptoEmbedCodePrefixForPlaylist+iD+panoptoEmbedSuffixForPlaylist }
 
-const programmingTogether20000ID = '5b13e440-2f35-437a-ba5e-acaf01643326'
-const programmingTogether24500ID = '52d70042-a880-4d3f-990d-acf701094e57'
-const programmingTogether44000ID = '02966c28-e8c1-4a94-b6b2-acbe003233bb'
+const programmingTogether20000ID = '739ac123-56e2-4959-84f2-ad95013d3459'
+const programmingTogether24700ID = '88eb7868-6f43-4645-99ad-ad9501397cf7'
+const programmingTogether44000ID = '7623082b-65bf-485a-a10d-ad95013d47f4'
 
 export const ProgrammingTogether = () => {
 	let classReference = cpsc()
 	switch(classReference) {
 		case '20000-fall-2021-002': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
 		case '20000-fall-2021-003': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
-		case '24700-fall-2021-001': return (null)
+		case '24700-fall-2021-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether24700ID)} /></div>)
 		case '44000-fall-2021-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether44000ID)} /></div>)
-
-		case '20000-spring-2021-002': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
-		case '24500-spring-2021-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether24500ID)} /></div>)
-		case '36000-spring-2021-001': return (null)
-		case '44000-spring-2021-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether44000ID)} /></div>)
 		default: return (null)
 	}
 }
