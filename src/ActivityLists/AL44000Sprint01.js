@@ -37,7 +37,7 @@ Maintenance. These are some of the topics that we will be exploring as part of t
 <ol>
 	{StandardActivities(GettingToKnowEachOther)}
 
-	<li>Read “Engineering Software as a Service” Chapter 1 by Armando Fox and David Patterson and review the associated <NavLink to='/activity/fox-chapter-00'>lecture</NavLink></li>
+	<li>Read “Engineering Software as a Service” Chapter 1 by Armando Fox and David Patterson and review the associated <NavLink to='/activity/fox-chapter-01'>lecture</NavLink></li>
 	<li>Read “Engineering Software as a Service” Preface and review associated <NavLink to='/activity/fox-chapter-00'>lecture</NavLink></li>
 	{ProgrammingActivity(HTMLProgrammingPart1)}
 
