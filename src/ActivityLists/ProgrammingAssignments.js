@@ -215,7 +215,13 @@ export const ProgrammingActivity = (assignment, estimatedTime) => {
 				estimate = '~'+estimatedTime+' hours'
 		} 
 
-		return ( <div><li>Complete  <NavLink to={assignment.link}>{assignment.name}</NavLink>{sup(estimate)}</li></div> )
+		return ( <div><li>Complete <NavLink to={assignment.link}>{assignment.name}</NavLink>{sup(estimate)}</li></div> )
+	}
+}
+
+export const ReviewProgrammingActivity = (assignment) => { 
+	if (assignment != null) {
+		return ( <div><li>Review <NavLink to={assignment.link}>{assignment.name}</NavLink></li></div> )
 	}
 }
 
