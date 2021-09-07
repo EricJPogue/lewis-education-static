@@ -83,6 +83,6 @@ export const courseTitle = () => {
 
 		default:
 			console.log('Warning: Class title not found (class='+classReference+')') 
-			return '[[course-title-not-found]]'
+			return ''
 	}
 }
