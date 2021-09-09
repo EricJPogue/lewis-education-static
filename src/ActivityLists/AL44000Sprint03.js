@@ -36,8 +36,7 @@ with your classmates and scrum team members as you work through some of the open
 	<li>Review “Engineering Software as a Service” section 4.5 of Fox on Debugging</li>
 	<li>Read “Engineering Software as a Service” chapter 7 on Requirements and review the associated class lecture <NavLink to='/activity/fox-chapter-07'>[video]</NavLink></li>
 
-	<li>Within O’Reilly Books <a href='https://www.oreilly.com' target='_blank' rel='noopener noreferrer'>[link]</a>
-		find “Web Development with Node and Express, 2nd Edition” by Ethan Brown</li>
+	<li>Within O’Reilly Books <a href='https://www.oreilly.com' target='_blank' rel='noopener noreferrer'>[link]</a> find “Web Development with Node and Express, 2nd Edition” by Ethan Brown</li>
 	<li>Read “Web Development with Node and Express” chapters 1 and 2 <a href='https://learning.oreilly.com/library/view/web-development-with/9781492053507/' target='_blank' rel='noopener noreferrer'>[link]</a>
 		while completing each of the exercises</li>
 	<li>Review “web/node-js-on-azure” code in our class example code</li>
@@ -45,6 +44,8 @@ with your classmates and scrum team members as you work through some of the open
 	<li>Read “Web Development with Node and Express” chapters 3 and 4 <a href='https://learning.oreilly.com/library/view/web-development-with/9781492053507/' target='_blank' rel='noopener noreferrer'>[link]</a>
 		while completing each of the exercises</li>
 	<li>Complete the “Node.js Tutorial” from W3C <a href='https://www.w3schools.com/nodejs/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>Read <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>What is JSON? JavaScript Object Notation explained</a> and 
+		complete <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>JSON Introduction</a></li> 
 
 	{/* The items below should be consistent across classes. */ }
 	<li>{complete(programmingAssignment)}</li>

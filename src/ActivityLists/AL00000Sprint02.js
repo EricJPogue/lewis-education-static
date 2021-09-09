@@ -4,6 +4,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
+import { ExampleCode } from '../Links'
 
 export const ScrumIntro = () => {
 	return ( 
@@ -41,6 +42,7 @@ export const StandardActivities = (programmingAssignment) => {
 <li><em>Review sprint 2 assignments including Lab 2, Quiz 2, Discussion 2, Reflection 2, and Lab Demo</em></li>
 <li>Study and understand our <NavLink to='/activity/coding-standards'>Coding Standards</NavLink></li>
 {StartProgrammingActivity(programmingAssignment)}
+<li>Review our class {ExampleCode()}</li>
 
 	</div> )
 }
@@ -65,5 +67,6 @@ export const Closing = () => {
 	return (
 
 <p>If you are struggling, remember to reach out to your Scrum teammates early and often for help. Also, be sure to periodically check for new programming together <NavLink to='/activity/programming-together'>tutorials</NavLink>.</p>
+
 	) 
 }

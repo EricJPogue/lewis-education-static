@@ -14,6 +14,12 @@ export const HTMLProgrammingPart1 = {
 	'estimate':'~2 hours'
 }
 
+export const HTMLProgrammingParts1And2 = {
+	'name':'HTML Programming - Parts 1 and 2',
+	'link':'/activity/html',
+	'estimate':'~3 hours'
+}
+
 export const HelloWorldWithPython = {
 	'name':'Hello World with Python',
 	'link':'/activity/hello-world-python',
@@ -33,7 +39,7 @@ export const GettingToKnowEachOther = {
 }
 
 export const AssignmentPortfolioWebsite = {
-	'name':'“Assignment Portfolio”',
+	'name':'Assignment Portfolio',
 	'link':'/activity/assignment-portfolio',
 	'estimate':'~2 hours'	
 }
@@ -226,3 +232,18 @@ export const ReviewProgrammingActivity = (assignment) => {
 }
 
 const sup = (text) => { return (<sup> {text} </sup>)}
+
+
+export const ProgrammingActivityPlus = (assignment, estimatedTime, additionalText) => { 
+	if (assignment != null) {
+		let estimate = assignment.estimate
+		if (estimatedTime != null) {
+			if (estimatedTime === 1)
+				estimate = '~'+estimatedTime+' hour'
+			else
+				estimate = '~'+estimatedTime+' hours'
+		} 
+
+		return ( <div><li>Complete <NavLink to={assignment.link}>{assignment.name}</NavLink> {additionalText}{sup(estimate)} </li></div> )
+	}
+}

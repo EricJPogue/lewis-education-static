@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro, Closing } from './AL00000Sprint01'
 import { ProgrammingActivity, ToolsOfTheTrade, HelloWorldWithPython, NumberingSystemsWithPython } from './ProgrammingAssignments'
+import { CommandLine } from '../Links'
 
 export const oreillyPlaylist = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
 const computerScienceIlluminated = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Computer Science Illuminated</a> ) }
@@ -51,8 +52,20 @@ problem solving, and programming.</p>
 </ol>
 
 {Closing()}
+{Extras()}
 
 </div> )
+}
+
+const Extras = () => {
+	return (<div>	
+		<br />
+		<p>Additional suggested activities:</p>
+		<ul style={{listStyleType:'square'}}>
+			<li>{CommandLine()} from W3C</li>
+
+		</ul>
+	</div>)
 }
 
 
