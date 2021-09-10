@@ -29,10 +29,11 @@ Sheets (CSS).</p>
 <ol>
 	{StandardActivities(GettingToKnowEachOther)}
 
-	<li>Within {oreillyPlaylist()} read “Computer Science Illuminated” chapter 2 The Information Layer and review our chapter 2 <NavLink to='/activity-dale/2'>lecture</NavLink></li>
+	<li>Review our {oreillyPlaylist()} playlist</li>
+	<li>Within {oreillyPlaylist()} read “Computer Science Illuminated” The Information Layer and review our associated <NavLink to='/activity-dale/2'>lecture</NavLink></li>
 	{ReviewProgrammingActivity(ToolsOfTheTrade)}
 	{InitialPost(2)}
-	<li>Within {oreillyPlaylist()} read “Computer Science Illuminated” chapter 3 Data Representation and review our chapter 3 <NavLink to='/activity-dale/3'>lecture</NavLink></li>
+	<li>Within {oreillyPlaylist()} read “Computer Science Illuminated” Data Representation and review our associated <NavLink to='/activity-dale/3'>lecture</NavLink></li>
 	{ProgrammingActivity(HTMLProgrammingPart1, '4')}
 
 	{StandardActivitiesClosing(GettingToKnowEachOther)}

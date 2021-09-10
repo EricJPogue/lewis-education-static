@@ -7,8 +7,9 @@ import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, Initi
 import { ProgrammingActivity, ToolsOfTheTrade, HelloWorldWithPython, NumberingSystemsWithPython } from './ProgrammingAssignments'
 import { CommandLine } from '../Links'
 
-export const oreillyPlaylist = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
 const computerScienceIlluminated = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Computer Science Illuminated</a> ) }
+export const oreillyPlaylist = () => { return( <a href='https://learning.oreilly.com/playlists/1a69d11a-2aff-4179-a664-6b842a666f34/' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
+
 const sequenceSelectionAndRepetition = () => { return( <a href='https://edu.gcfglobal.org/en/computer-science/sequences-selections-and-loops/1/' target='_blank' rel='noopener noreferrer'>Sequences, selections, and loops (repetition)</a> ) }
 
 
