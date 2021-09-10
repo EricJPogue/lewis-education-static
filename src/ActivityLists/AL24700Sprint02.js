@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
-import { ProgrammingActivityPlus, AssignmentPortfolioWebsite, HTMLProgrammingParts1And2 } from './ProgrammingAssignments'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities } from './AL00000Sprint02'
+import { AssignmentPortfolioWebsite } from './ProgrammingAssignments'
 import { oreillyPlaylistWeb } from '../Links'
 
 export const al24700Sprint02 = () => {
