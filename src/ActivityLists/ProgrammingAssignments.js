@@ -44,6 +44,12 @@ export const FavoriteHobby = {
 	'estimate':'~3 hours'
 }
 
+export const Resume = {
+	'name':'Web Resume',
+	'link':'/activity/resume',
+	'estimate':'~3 hours'
+}
+
 export const AssignmentPortfolioWebsite = {
 	'name':'Assignment Portfolio',
 	'link':'/activity/assignment-portfolio',
@@ -231,6 +237,10 @@ export const ProgrammingActivity = (assignment, estimatedTime) => {
 	}
 }
 
+export const Activity = (assignment) => { 
+	return ( <NavLink to={assignment.link}>{assignment.name}</NavLink> )
+}
+
 export const ReviewProgrammingActivity = (assignment, estimatedTime) => {
 	if (assignment != null) {
 		let estimate = assignment.estimate
@@ -261,3 +271,9 @@ export const ProgrammingActivityPlus = (assignment, estimatedTime, additionalTex
 		return ( <div><li>Complete <NavLink to={assignment.link}>{assignment.name}</NavLink> {additionalText}{sup(estimate)} </li></div> )
 	}
 }
+
+export const AlternativeProgrammingActivity = (assignmentAlternative, assignmentDefault) => { 
+	return ( <div>Consider substituting <NavLink to={assignmentAlternative.link}>{assignmentAlternative.name}</NavLink> (preferred) 
+		for <NavLink to={assignmentDefault.link}>{assignmentDefault.name}</NavLink></div> )
+}
+

@@ -2,8 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
-import { ProgrammingActivityPlus, AssignmentPortfolioWebsite, HTMLProgrammingParts1And2 } from './ProgrammingAssignments'
-import { FoxHTML, FoxCSS, FoxCookies, FoxAttributes, FoxRubyMVC, CSSW3C, JavaScriptW3C, RegularExpressionsW3C } from '../Links'
+import { AssignmentPortfolioWebsite, Activity, Resume } from './ProgrammingAssignments'
+import { HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C } from '../Links'
+import { FoxHTML, FoxCSS, FoxCookies, FoxAttributes, FoxRubyMVC } from '../Links'
 
 export const al44000Sprint02 = () => {
 	return (
@@ -32,10 +33,9 @@ much code. This sprint get your text editors out. We are going to start practici
 	<li>Scan “Engineering Software as a Service” chapters 3 through 5 and review the associated <NavLink to='/activity/fox-chapter-03'>lecture</NavLink></li>
 	<li>Read “Engineering Software as a Service” sections A.6 and A.7</li>
 
-	{ProgrammingActivityPlus(HTMLProgrammingParts1And2, '4', 'while formatting either your resume or key sections of our course syllabus')} 
+	<li>Implement your {Activity(Resume)} while completing the W3Schools {HTMLW3C()} and {CSSW3C()} tutorials<sup> ~6 hours </sup></li>
 	{InitialPost(2)}
 
-	<li>Complete {CSSW3C()} tutorial while enhancing the syllabus or resume you created above</li>
 	<li>Complete {JavaScriptW3C()} tutorial including {RegularExpressionsW3C()}</li>
 	<li>Scan the following “Engineering Software as a Service” videos on {FoxHTML()}, {FoxCSS()}, {FoxCookies()}, {FoxAttributes()}, and {FoxRubyMVC()}</li>
 

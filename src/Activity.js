@@ -34,6 +34,7 @@ import { WebAssignmentPortfolio } from './Activities/WebAssignmentPortfolio'
 import { WebDiceRoller } from './Activities/WebDiceRoller'
 import { WebGettingToKnowEachOther } from './Activities/WebGettingToKnowEachOther'
 import { WebMyFavoriteHobby } from './Activities/WebMyFavoriteHobby'
+import { WebResume } from './Activities/WebResume';
 import { WebCourseSchedule } from './Activities/WebCourseSchedule'
 import { WebMapManiaVersion1 } from './Activities/WebMapManiaVersion1'
 import { WebMapManiaVersion2 } from './Activities/WebMapManiaVersion2'
@@ -140,6 +141,7 @@ class Activity extends Component {
 			case 'dice-roller': return WebDiceRoller()
 			case 'getting-to-know-each-other': return WebGettingToKnowEachOther()
 			case 'favorite-hobby': return WebMyFavoriteHobby()
+			case 'resume': return WebResume()
 			case 'course-schedule': return WebCourseSchedule()
 			case 'map-mania-v1': return WebMapManiaVersion1()
 			case 'map-mania-v2': return WebMapManiaVersion2()

@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
-import { ProgrammingActivity, ReviewProgrammingActivity, AssignmentPortfolioWebsite, HTMLProgrammingParts1And2, AzureWebsite, ToolsOfTheTrade, FavoriteHobby } from './ProgrammingAssignments'
+import { ProgrammingActivity, ReviewProgrammingActivity, AlternativeProgrammingActivity, AssignmentPortfolioWebsite, HTMLProgrammingParts1And2, AzureWebsite, ToolsOfTheTrade, FavoriteHobby, Resume } from './ProgrammingAssignments'
 
 import { oreillyPlaylistWeb } from '../Links'
 
@@ -29,6 +29,7 @@ JavaScript.</p>
 {ActivitiesListIntro()}
 <ol>
 	{StandardActivities(FavoriteHobby)}
+	<li>{AlternativeProgrammingActivity(Resume, FavoriteHobby)}</li>
 	<li>Read Sebesta chapter 3 on Cascading Style Sheets (CSS) and review the associated <NavLink to='/activity/sebesta-chapter-03'>lecture</NavLink></li>
 	<li>Review our {oreillyPlaylistWeb()} playlist</li>
 	{ReviewProgrammingActivity(ToolsOfTheTrade, '1')}
@@ -42,21 +43,7 @@ JavaScript.</p>
 	{StandardActivitiesClosing(FavoriteHobby)}
 </ol>
 {Closing()}
-{extras()}
 </div>
 
 	)
-}
-
-const extras = () => {
-	return (<div>	
-		<br />
-		<p>Additional suggested activities:</p>
-		<ul style={{listStyleType:'square'}}>
-			<li>Review “Website Creation with GitHub and Microsoft Azure” as needed <NavLink to='/activity/azure-website'>[link]</NavLink></li>
-			<li>Review the Sebesta HTML, CSS, and JavaScript examples <a href='http://sebesta-examples.azurewebsites.net/'>[link]</a></li>
-			<li>Review Git Cheat Sheet from GitHub <a href='https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf'
-				target='_blank' rel='noopener noreferrer'>[link]</a></li>
-		</ul>
-	</div>)
 }

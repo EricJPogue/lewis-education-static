@@ -28,6 +28,7 @@ export const FoxCSS = () => { return externalLink('CSS', 'https://www.youtube.co
 export const FoxCookies = () => { return externalLink('Cookies', 'https://www.youtube.com/watch?v=Xlt7xeqVfO4') }
 export const FoxAttributes = () => { return externalLink('Attributes', 'https://www.youtube.com/watch?v=X5ArSbUea_o') }
 export const FoxRubyMVC = () => { return externalLink('Ruby MVC', 'https://www.youtube.com/watch?v=XXrYmVzjTKQ') }
+export const HTMLW3C =  () => { return externalLink('HTML', 'https://www.w3schools.com/html/') }
 export const CSSW3C =  () => { return externalLink('CSS', 'https://www.w3schools.com/css/') }
 export const JavaScriptW3C =  () => { return externalLink('JavaScript', 'https://www.w3schools.com/js/') }
 export const RegularExpressionsW3C =  () => { return externalLink('Regular Expressions', 'https://www.w3schools.com/jsref/jsref_obj_regexp.asp') }
