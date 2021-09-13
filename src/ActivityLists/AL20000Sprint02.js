@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { oreillyPlaylist } from './AL20000Sprint01'
+import { oreillyPlaylistICS } from '../Links'
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
 import { ProgrammingActivity, ReviewProgrammingActivity, ToolsOfTheTrade } from './ProgrammingAssignments'
 import { GettingToKnowEachOther, HTMLProgrammingPart1 } from './ProgrammingAssignments'
@@ -29,11 +29,11 @@ Sheets (CSS).</p>
 <ol>
 	{StandardActivities(GettingToKnowEachOther)}
 
-	<li>Review our {oreillyPlaylist()} playlist</li>
-	<li>Within {oreillyPlaylist()} read “Computer Science Illuminated” The Information Layer and review our associated <NavLink to='/activity-dale/2'>lecture</NavLink></li>
+	<li>Review our {oreillyPlaylistICS()} playlist</li>
+	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The Information Layer and review our associated <NavLink to='/activity-dale/2'>lecture</NavLink></li>
 	{ReviewProgrammingActivity(ToolsOfTheTrade)}
 	{InitialPost(2)}
-	<li>Within {oreillyPlaylist()} read “Computer Science Illuminated” Data Representation and review our associated <NavLink to='/activity-dale/3'>lecture</NavLink></li>
+	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Data Representation and review our associated <NavLink to='/activity-dale/3'>lecture</NavLink></li>
 	{ProgrammingActivity(HTMLProgrammingPart1, '4')}
 
 	{StandardActivitiesClosing(GettingToKnowEachOther)}

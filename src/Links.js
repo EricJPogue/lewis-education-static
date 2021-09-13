@@ -32,7 +32,10 @@ export const CSSW3C =  () => { return externalLink('CSS', 'https://www.w3schools
 export const JavaScriptW3C =  () => { return externalLink('JavaScript', 'https://www.w3schools.com/js/') }
 export const RegularExpressionsW3C =  () => { return externalLink('Regular Expressions', 'https://www.w3schools.com/jsref/jsref_obj_regexp.asp') }
 
-export const oreillyPlaylistWeb = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
+export const oreillyPlaylistICS = () => { return( <a href='https://learning.oreilly.com/playlists/1a69d11a-2aff-4179-a664-6b842a666f34' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
+export const oreillyPlaylistWeb = () => { return( <a href='https://learning.oreilly.com/playlists/70918629-ecf2-4b8c-8268-9e6d699d533d' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
+export const oreillyPlaylistSE = () => { return( <a href='https://learning.oreilly.com/playlists/b2510780-81f1-404e-975d-4354219ff894' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
+
 
 const externalLink = (displayName, url) => {
 	return (

@@ -22,7 +22,7 @@ favorite hobby. For example, you may find a passion around:</p>
 </ul>
 
 <em>Requirement 1</em>
-<p>Create an aesthetically pleasing HTML based web page named “my-favorite-hobby.html” which tells us something about 
+<p>Create an aesthetically pleasing HTML-based web page named “my-favorite-hobby.html” which tells us something about 
 your hobby, why you find it interesting, your proudest hobby related accomplishment, and maybe how someone else might 
 get started with this hobby.</p>
  	

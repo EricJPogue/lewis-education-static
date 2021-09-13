@@ -38,6 +38,12 @@ export const GettingToKnowEachOther = {
 	'estimate':'~6 hours'
 }
 
+export const FavoriteHobby = {
+	'name':'My Favorite Hobby',
+	'link':'/activity/favorite-hobby',
+	'estimate':'~3 hours'
+}
+
 export const AssignmentPortfolioWebsite = {
 	'name':'Assignment Portfolio',
 	'link':'/activity/assignment-portfolio',
@@ -225,9 +231,17 @@ export const ProgrammingActivity = (assignment, estimatedTime) => {
 	}
 }
 
-export const ReviewProgrammingActivity = (assignment) => { 
+export const ReviewProgrammingActivity = (assignment, estimatedTime) => {
 	if (assignment != null) {
-		return ( <div><li>Review <NavLink to={assignment.link}>{assignment.name}</NavLink></li></div> )
+		let estimate = assignment.estimate
+		if (estimatedTime != null) {
+			if (estimatedTime === '1')
+				estimate = '~'+estimatedTime+' hour'
+			else
+				estimate = '~'+estimatedTime+' hours'
+		} 
+
+		return ( <div><li>Review <NavLink to={assignment.link}>{assignment.name}</NavLink>{sup(estimate)}</li></div> )
 	}
 }
 

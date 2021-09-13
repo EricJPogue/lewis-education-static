@@ -38,7 +38,7 @@ efficient for you and the <em>bold</em> items are graded assignments.</p>
 export const StandardActivities = (programmingAssignment) => { 
 	return ( <div>
 
-<li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/2'>calendar</NavLink> and sprint 2 <NavLink to='/schedule/2'>schedule</NavLink></li>
+<li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/2'>Calendar</NavLink> and sprint 2 <NavLink to='/schedule/2'>Schedule</NavLink></li>
 <li><em>Review sprint 2 assignments including Lab 2, Quiz 2, Discussion 2, Reflection 2, and Lab Demo</em></li>
 <li>Study and understand our <NavLink to='/activity/coding-standards'>Coding Standards</NavLink></li>
 {StartProgrammingActivity(programmingAssignment)}
