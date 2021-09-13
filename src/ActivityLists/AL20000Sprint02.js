@@ -31,7 +31,7 @@ Sheets (CSS).</p>
 
 	<li>Review our {oreillyPlaylistICS()} playlist</li>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The Information Layer and review our associated <NavLink to='/activity-dale/2'>lecture</NavLink></li>
-	{ReviewProgrammingActivity(ToolsOfTheTrade)}
+	{ReviewProgrammingActivity(ToolsOfTheTrade, '1')}
 	{InitialPost(2)}
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Data Representation and review our associated <NavLink to='/activity-dale/3'>lecture</NavLink></li>
 	{ProgrammingActivity(HTMLProgrammingPart1, '4')}
