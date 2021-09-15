@@ -5,6 +5,7 @@ import { oreillyPlaylistICS } from '../Links'
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
 import { ProgrammingActivity, ReviewProgrammingActivity, ToolsOfTheTrade } from './ProgrammingAssignments'
 import { GettingToKnowEachOther, HTMLProgrammingPart1 } from './ProgrammingAssignments'
+import { CommandLine } from '../Links'
 
 export const al20000Sprint02 = () => {
 	return (
@@ -39,9 +40,19 @@ Sheets (CSS).</p>
 	{StandardActivitiesClosing(GettingToKnowEachOther)}
 </ol>
 {Closing()}
+{Extras()}
 
 {/* Programming Together: “HelloWorld Plus for the Web” and “HelloWorldPlus with Pictures” */}
 </div> )
 };
 
+const Extras = () => {
+	return (<div>	
+		<p>Additional suggested activities:</p>
+		<ul style={{listStyleType:'square'}}>
+			<li>{CommandLine()} from W3C</li>
+			<li>Be sure to review the programming together tutorial above</li>
+		</ul>
+	</div>)
+}
 // Todo: Add Git/GitHub activity / tutorial. 

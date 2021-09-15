@@ -61,7 +61,6 @@ problem solving, and programming.</p>
 
 const Extras = () => {
 	return (<div>	
-		<br />
 		<p>Additional suggested activities:</p>
 		<ul style={{listStyleType:'square'}}>
 			<li>{CommandLine()} from W3C</li>
