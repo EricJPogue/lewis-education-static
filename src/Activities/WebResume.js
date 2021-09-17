@@ -2,6 +2,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { ResumeFormat, ResumeReviewServices } from '../Links'
+
 export const WebResume = () => {
 	return (
 	
@@ -24,8 +26,12 @@ career development services and hosting it on Azure.</p>
 </ol>	
  	
 <em>Requirement 2</em>
-<p>Utilize the available Lewis University career development resume creation and review services.</p>
- 	
+<p>Utilize the available Lewis University career planning services including:</p>
+<ol>
+	<li>The standard Lewis University {ResumeFormat()}</li>
+	<li>(Optional) Our Lewis University {ResumeReviewServices()}</li>
+</ol>	
+
 <em>Requirement 3: </em>
 <p>Host your web page on Azure that:</p>
 <ol>
