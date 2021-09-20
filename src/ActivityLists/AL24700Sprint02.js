@@ -37,9 +37,9 @@ JavaScript.</p>
 	{ProgrammingActivity(AssignmentPortfolioWebsite, '3')}
 	
 	{InitialPost(2)}
-	<li>Read chapter 4 of Sebesta on Basic JavaScript and review the associated lecture <NavLink to='/activity/sebesta-chapter-04'>[video]</NavLink></li>
+	<li>Read chapter 4 of Sebesta on Basic JavaScript and review the associated <NavLink to='/activity/sebesta-chapter-04'>lecture</NavLink></li>
 	{ProgrammingActivity(HTMLProgrammingParts1And2, '3')} 
-	<li>Review the Google Maps JavaScript API <a href='https://developers.google.com/maps/documentation/javascript/overview' target='blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>Review the <a href='https://developers.google.com/maps/documentation/javascript/overview' target='blank' rel='noopener noreferrer'>Google Maps JavaScript API</a></li>
 	{StandardActivitiesClosing(FavoriteHobby)}
 </ol>
 {Closing()}
