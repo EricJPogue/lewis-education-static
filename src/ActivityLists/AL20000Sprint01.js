@@ -6,12 +6,10 @@ import { NavLink } from 'react-router-dom'
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro, Closing } from './AL00000Sprint01'
 import { ProgrammingActivity, ToolsOfTheTrade, HelloWorldWithPython, NumberingSystemsWithPython } from './ProgrammingAssignments'
 import { CommandLine } from '../Links'
-import { oreillyPlaylistICS } from '../Links'
+import { oreillyPlaylistICS, SequenceSelectionAndRepetition } from '../Links'
 
 const computerScienceIlluminated = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Computer Science Illuminated</a> ) }
 
-
-const sequenceSelectionAndRepetition = () => { return( <a href='https://edu.gcfglobal.org/en/computer-science/sequences-selections-and-loops/1/' target='_blank' rel='noopener noreferrer'>Sequences, selections, and loops (repetition)</a> ) }
 
 
 export const al20000Sprint01 = () => {
@@ -42,7 +40,7 @@ problem solving, and programming.</p>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” chapter 11 File Systems and Directories</li>
 	<li>Review our “Computer Science Illuminated” <NavLink to='/activity-dale/11'>chapter 11 lecture</NavLink> and be prepared for a scrum team discussion</li>
 	{ProgrammingActivity(ToolsOfTheTrade)}
-	<li>Review {sequenceSelectionAndRepetition()}</li>
+	<li>Review {SequenceSelectionAndRepetition()}</li>
 
 	{InitialPost()}
 

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Discord = () => { return externalLink('Discord', 'https://discord.com/') }
 export const OReillyBooks = () => { return externalLink('O’Reilly Books', 'https://lewisu.libguides.com/az.php?q=o%27reilly') }
-export const ExampleCode = () => { return externalLink('Example Code', 'https://github.com/EricJPogue/cpsc-example-code') }
+export const ExampleCode = () => { return externalLink('example code', 'https://github.com/EricJPogue/cpsc-example-code') }
 export const CommandLine = () => { return externalLink('Command Line Interface', 'https://www.w3schools.com/whatis/whatis_cli.asp' )}
 export const Firefox = () => { return externalLink('FireFox', 'https://www.mozilla.org/en-US/firefox/new/') }
 export const Chrome = () => { return externalLink('Chrome', 'https://www.google.com/chrome/') }
@@ -33,12 +33,15 @@ export const CSSW3C =  () => { return externalLink('CSS', 'https://www.w3schools
 export const JavaScriptW3C =  () => { return externalLink('JavaScript', 'https://www.w3schools.com/js/') }
 export const RegularExpressionsW3C =  () => { return externalLink('Regular Expressions', 'https://www.w3schools.com/jsref/jsref_obj_regexp.asp') }
 
-export const oreillyPlaylistICS = () => { return( <a href='https://learning.oreilly.com/playlists/1a69d11a-2aff-4179-a664-6b842a666f34' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
-export const oreillyPlaylistWeb = () => { return( <a href='https://learning.oreilly.com/playlists/70918629-ecf2-4b8c-8268-9e6d699d533d' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
-export const oreillyPlaylistSE = () => { return( <a href='https://learning.oreilly.com/playlists/b2510780-81f1-404e-975d-4354219ff894' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
+export const oreillyPlaylistICS = () => { return( <a href='https://learning.oreilly.com/playlists/1a69d11a-2aff-4179-a664-6b842a666f34' target='_blank' rel='noopener noreferrer'>O’Reilly books</a> ) }
+export const oreillyPlaylistWeb = () => { return( <a href='https://learning.oreilly.com/playlists/70918629-ecf2-4b8c-8268-9e6d699d533d' target='_blank' rel='noopener noreferrer'>O’Reilly books</a> ) }
+export const oreillyPlaylistSE = () => { return( <a href='https://learning.oreilly.com/playlists/b2510780-81f1-404e-975d-4354219ff894' target='_blank' rel='noopener noreferrer'>O’Reilly books</a> ) }
 
 export const ResumeFormat = () => { return( <a href='https://pithub.blob.core.windows.net/nvm4zqwm/f7h4j48d-resume-format.pdf' target='_blank' rel='noopener noreferrer'>resume format</a> ) }
 export const ResumeReviewServices = () => { return( <a href='https://lewisu.edu/resources/careerservices/students.htm' target='_blank' rel='noopener noreferrer'>resume review services</a> ) }
+
+export const SequenceSelectionAndRepetition = () => { return( <a href='https://edu.gcfglobal.org/en/computer-science/sequences-selections-and-loops/1/' target='_blank' rel='noopener noreferrer'>Sequences, selections, and loops (repetition)</a> ) }
+
 
 const externalLink = (displayName, url) => {
 	return (
