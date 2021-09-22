@@ -38,6 +38,25 @@ export const GettingToKnowEachOther = {
 	'estimate':'~6 hours'
 }
 
+export const MapManiaVersion1 = {
+	'name':'Map Mania Version 1',
+	'link':'/activity/map-mania-v1',
+	'estimate':'~6 hours'
+}
+
+export const MapManiaLite = {
+	'name':'Map Mania Lite',
+	'link':'/activity-web/map-mania-lite',
+	'estimate':'~2 hours'
+}
+
+export const DiceRoller = {
+	'name':'Dice Roller',
+	'link':'/activity/dice-roller',
+	'estimate':'~2 hours'
+}
+
+
 export const FavoriteHobby = {
 	'name':'My Favorite Hobby',
 	'link':'/activity/favorite-hobby',
@@ -220,7 +239,7 @@ export const reviewAndUpdateProgrammingActivity = (assignment) => {
 }
 
 export const complete = (assignment) => { 
-	return ( <div>Complete {assignment.name} <NavLink to={assignment.link}>[link]</NavLink>{sup(assignment.estimate)}</div>)
+	return ( <div>Complete <NavLink to={assignment.link}>{assignment.name}</NavLink>{sup(assignment.estimate)}</div>)
 }
 
 export const ProgrammingActivity = (assignment, estimatedTime) => { 

@@ -1,10 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { AssignmentPortfolioWebsite, start, complete } from './ProgrammingAssignments'
-const programmingAssignment = AssignmentPortfolioWebsite
+import { InitialPost,  } from './AL00000Sprint02'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint03'
+import { oreillyPlaylistSE } from '../Links'
+
+import { AssignmentPortfolioWebsite } from './ProgrammingAssignments'
 
 export const al44000Sprint03 = () => {
+	let playlist = oreillyPlaylistSE()
 	return (
 
 <div>
@@ -16,22 +20,17 @@ utilizing is “Web Development with Node and Express, 2nd Edition” by Ethan B
 with this sprint the assignments are becoming more open-ended and less prescriptive. I encourage you to collaborate 
 with your classmates and scrum team members as you work through some of the open-ended topics.</p>
 
-<p>By the end of sprint 3 we will be able to:</p>
+{LearningObjectivesIntro()}
 <ul style={{ listStyleType:'square'}}>
 	<li>Understand how client-side HTML, CSS, JavaScript, and Bootstrap applications can be hosted using Node.js and Express</li>
 	<li>Create and modify basic Node.js utilizing server-side JavaScript applications</li>
 	<li>Migrate all of your HTML, CSS, JavaScript, and Bootstrap applications over to a single Node.js hosted site running locally</li>
 	<li>Create a basic Node.js application on Azure</li>
 </ul>
-<p>Below is the list of activities that we will need to complete this sprint.</p>
+
+{ActivitiesListIntro()}
 <ol>
-	<li>Stay focused on the due dates by reviewing our course calendar <NavLink to='/calendar/3'>[link]</NavLink></li>
-	<li><em>Review sprint 3 assignments including Lab 3, Quiz 3, Discussion 3, Reflection 3, and Lab Demo</em></li>
-	<li>{start(programmingAssignment)}</li>
-	<li>Review the CAMS Study Table tutoring options <NavLink to='/activity/study-table'>[link]</NavLink></li>
-	<li>Review our class example code <NavLink to='/activity/example-code'>[link]</NavLink></li>
-	<li>Review our coding standards <NavLink to='/activity/coding-standards'>[link]</NavLink></li>
-	{/* The above items should be consistent across classes. */}
+	{StandardActivities(AssignmentPortfolioWebsite, playlist)}
 
 	<li>Review “Engineering Software as a Service” section 4.5 of Fox on Debugging</li>
 	<li>Read “Engineering Software as a Service” chapter 7 on Requirements and review the associated class lecture <NavLink to='/activity/fox-chapter-07'>[video]</NavLink></li>
@@ -40,31 +39,22 @@ with your classmates and scrum team members as you work through some of the open
 	<li>Read “Web Development with Node and Express” chapters 1 and 2 <a href='https://learning.oreilly.com/library/view/web-development-with/9781492053507/' target='_blank' rel='noopener noreferrer'>[link]</a>
 		while completing each of the exercises</li>
 	<li>Review “web/node-js-on-azure” code in our class example code</li>
-	<li><em>Make your initial Discussion 3 post by the middle of the sprint</em></li>
+
+	{InitialPost(3)}
 	<li>Read “Web Development with Node and Express” chapters 3 and 4 <a href='https://learning.oreilly.com/library/view/web-development-with/9781492053507/' target='_blank' rel='noopener noreferrer'>[link]</a>
 		while completing each of the exercises</li>
 	<li>Complete the “Node.js Tutorial” from W3C <a href='https://www.w3schools.com/nodejs/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
 	<li>Read <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>What is JSON? JavaScript Object Notation explained</a> and 
 		complete <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>JSON Introduction</a></li> 
 
-	{/* The items below should be consistent across classes. */ }
-	<li>{complete(programmingAssignment)}</li>
-	<li><em>Complete Discussion 3 by responding to at least two of your classmates’ posts</em></li>
-	<li><em>Submit Lab 3, Quiz 3, and Reflection 3</em></li>
+	{StandardActivitiesClosing(AssignmentPortfolioWebsite)}
 </ol>
-<p>If you are struggling, remember to reach out to your Scrum teammates early and often for help. Also, be sure to 
-periodically check for new programming together tutorials <NavLink to='/activity/programming-together'>[link]</NavLink>.</p>
-{extras()}
+{Closing()}
 </div>
 
 	)
 }
 
-// Todo: Remove question 9 from lab 3.
-// Todo: Remove lab 3 final question.
 // Todo: Change assignment from AssignmentPortfolioWebsite.
-// Todo: Update "Spike are a story" quiz 3 question to be more clear.
 
-const extras = () => {
-	return (null)
-}
+

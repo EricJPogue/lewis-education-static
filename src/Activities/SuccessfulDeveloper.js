@@ -10,7 +10,6 @@ export const SuccessfulDeveloper = () => {
 	the most valuable</h5>
 <h5>Prerequisites: Some programming experience</h5>
 
-<h4>How to Be a Successful Programmer</h4>
 <p>For many of us this is likely our first time doing sophisticated programming. Programming can be a very creative 
 and rewarding endeavor. However, programming can also feel overwhelming at times. This is completely normal. When you 
 start to feel overwhelmed or frustrated, consider taking a break from the problem and coming back with a fresh set of 

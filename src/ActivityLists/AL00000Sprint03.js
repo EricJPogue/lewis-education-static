@@ -8,7 +8,7 @@ import { ExampleCode } from '../Links'
 export const LearningObjectivesIntro = () => { return ( <p>Our Learning Objectives for this sprint include:</p> ) }
 export const ActivitiesListIntro = () => { return ( <p>Below is our activities list:</p> ) }
 
-export const StandardActivities = (programmingAssignment, playlist ) => { 
+export const StandardActivities = (programmingAssignment, playlist) => { 
 	return ( <div>
 
 <li>Focus on due dates by reviewing our <NavLink to='/calendar/3'>calendar</NavLink> and <NavLink to='/schedule/3'>schedule</NavLink></li>
@@ -29,4 +29,4 @@ export const StandardActivitiesClosing = (programmingAssignment) => {
 	</div> ) 
 }
 
-export const Closing = () => { return ( <p>Remember to tell your Scrum teammates how much you appreciate them and regularly check for new <NavLink to='/activity/programming-together'>programming together tutorials</NavLink>.</p> ) }
+export const Closing = () => { return ( <p>Remember to tell your Scrum teammates how much you appreciate them and to regularly check for new <NavLink to='/activity/programming-together'>programming together tutorials</NavLink>.</p> ) }

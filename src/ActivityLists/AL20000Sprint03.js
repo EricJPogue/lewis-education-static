@@ -29,7 +29,7 @@ and computing components.</p>
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivities(AzureWebsite, playlist, true)}
+	{StandardActivities(AzureWebsite, playlist)}
 
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Gates and Circuits and review our associated <NavLink to='/activity-dale/4'>lecture</NavLink></li>
 	<li>Complete <NavLink to='/activity/html'>HTML Programming - Part 2</NavLink><sup>~4 hours</sup></li>

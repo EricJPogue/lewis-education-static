@@ -1,7 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint03'
+import { InitialPost,  } from './AL00000Sprint02'
+import { oreillyPlaylistWeb } from '../Links'
+import { MapManiaVersion1, AssignmentPortfolioWebsite, DiceRoller, complete, ReviewProgrammingActivity, MapManiaLite } from './ProgrammingAssignments'
+
 export const al24700Sprint03 = () => {
+	let playlist = oreillyPlaylistWeb()
 	return (
 
 <div>
@@ -16,7 +22,7 @@ embrace it this sprint.</p>
 sprint and completing Map Mania version 2 next sprint. Although the Google Maps JavaScript API can be daunting
 at first, I think you will enjoy what you are able to create using it.</p>
 
-<p>By the end of sprint 3 we will be able to:</p>
+{LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
 	<li>Effectively utilize the Google Maps JavaScript API</li>
 	<li>Build dynamic web applications using basic JavaScript</li>
@@ -25,41 +31,25 @@ at first, I think you will enjoy what you are able to create using it.</p>
     <li>Utilize Azure along with Git and GitHub to quickly create and update our global websites</li>
 </ul>  
 
-<p>Below is our sprint 3 activities list. You will notice that the list is shorter than in earlier sprints. 
-This is so that you can focus your time on Lab 3 and Map Mania.</p>
+{ActivitiesListIntro()}
 <ol>
-	<li>Review our course calendar <NavLink to='/calendar/3'>[link]</NavLink></li>
-	<li><em>Review sprint 3 assignments including Lab 3, Quiz 3, Discussion 3, and Reflection 3</em></li>
-	<li>Start early and remain laser focused on “Map Mania Version 1” <NavLink to='/activity/map-mania-v1'>[link]</NavLink></li>
-	<li>Review our “Coding Standards” <NavLink to='/activity/coding-standards'>[link]</NavLink> and consistently utilize 
-		them on all activities and assignments</li>
-	<li>Complete “Assignment Portfolio Website” <NavLink to='/activity/assignment-portfolio'>[link]</NavLink></li>
+	{StandardActivities(MapManiaVersion1, playlist)}
+
+	{ReviewProgrammingActivity(AssignmentPortfolioWebsite, '1')}
 	<li>Read chapter 5 of Sebesta on JavaScript and review the associated JavaScript and HTML lecture <NavLink to='/activity/sebesta-chapter-05'>[video]</NavLink></li>
-	<li>Complete “Dice Roller” <NavLink to='/activity/dice-roller'>[link]</NavLink></li>
-	<li>Review the Sebesta HTML, CSS, and JavaScript examples <a href='http://sebesta-examples.azurewebsites.net/'>[link]</a></li>
-	<li><em>Make your initial Discussion 3 post by the middle of the sprint</em></li>
-    <li>Complete “How To Be A Successful Programmer” <NavLink to='/activity/successful-programmer'>[link]</NavLink></li>
-    <li>Start looking ahead to next sprint by reviewing “Map Mania Lite” <NavLink to='/activity-web/map-mania-lite'>[video]</NavLink>~2 hours </li>
-	<li><em>Complete Discussion 3 by responding to at least two of your classmates’ posts</em></li>
-	<li><em>Submit Lab 3, Quiz 3, and Reflection 3</em></li>
+	<li>{complete(DiceRoller)}</li>
+	<li>Review <a href='http://sebesta-examples.azurewebsites.net/'>Sebesta HTML, CSS, and JavaScript examples</a></li>
+
+	{InitialPost(3)}
+
+    <li>Complete <NavLink to='/activity/successful-programmer'>How To Be A Successful Programmer</NavLink></li>
+	{ReviewProgrammingActivity(MapManiaLite)}
+
+	{StandardActivitiesClosing(MapManiaVersion1)}
 </ol>
-<p>Alway feel free to drop a note note to your scrum teammates or to post something in our Class Forum discussion board 
-area if you have questions. Oh yes, and treat yourself to something nice. Maybe ice cream this sprint?</p>
-{extras()}
+{Closing()}
+
 </div>
 
 	)
-}
-
-const extras = () => {
-	return (<div>	
-		<br />
-		<p>Additional suggested activities:</p>
-		<ul style={{listStyleType:'square'}}>
-			<li>Review our class sample code by executing “git clone https://github.com/EricJPogueCourses/WEB-ExampleCode.git”</li>
-			<li>Review“Website Creation with GitHub and Microsoft Azure - 2020 Supplemental Edition” (highly recommended) <NavLink to='/activity-config/git-deployment-to-azure-supplemental-2020'>[link]</NavLink></li>
-			<li>Consider tutoring options<a href='https://botb.blob.core.windows.net/nvm4zqwm/cadahnn5-tutoring.pdf'
-				target='_blank' rel='noopener noreferrer'>[link]</a></li> 
-		</ul>
-	</div>)
 }
