@@ -42,12 +42,9 @@ much code. This sprint get your text editors out. We are going to start practici
 	{StandardActivitiesClosing(AssignmentPortfolioWebsite)}
 </ol>
 {Closing()}
-{/* Programming Together: “Deploying Node.js on Microsoft Azure” */}
+
 
 </div>
 	)
 }
 
-// Todo: Update lab 2 question 6 so that it says to just deploy it to Azure instead of referencing specific sites.
-// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
-// Todo: Change estimated to actual capacity metric to actual over estimated so that it comes out to less than one generally. 

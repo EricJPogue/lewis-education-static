@@ -31,6 +31,7 @@ import { PythonW3C } from './Activities/PythonW3C'
 import { SuccessfulDeveloper } from './Activities/SuccessfulDeveloper'
 import { AzureWebsite } from './Activities/AzureWebsite'
 import { WebAssignmentPortfolio } from './Activities/WebAssignmentPortfolio'
+import { WebAssignmentPortfolioWithNodeJS } from './Activities/WebAssignmentPortfolioWithNodeJS'
 import { WebDiceRoller } from './Activities/WebDiceRoller'
 import { WebGettingToKnowEachOther } from './Activities/WebGettingToKnowEachOther'
 import { WebMyFavoriteHobby } from './Activities/WebMyFavoriteHobby'
@@ -138,6 +139,7 @@ class Activity extends Component {
 			case 'python-w3c': return PythonW3C()
 			case 'azure-website': return AzureWebsite()
 			case 'assignment-portfolio': return WebAssignmentPortfolio()
+			case 'assignment-portfolio-with-node-js': return WebAssignmentPortfolioWithNodeJS()
 			case 'dice-roller': return WebDiceRoller()
 			case 'getting-to-know-each-other': return WebGettingToKnowEachOther()
 			case 'favorite-hobby': return WebMyFavoriteHobby()

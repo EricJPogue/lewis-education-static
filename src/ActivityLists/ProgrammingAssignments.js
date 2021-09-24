@@ -56,7 +56,6 @@ export const DiceRoller = {
 	'estimate':'~2 hours'
 }
 
-
 export const FavoriteHobby = {
 	'name':'My Favorite Hobby',
 	'link':'/activity/favorite-hobby',
@@ -73,6 +72,12 @@ export const AssignmentPortfolioWebsite = {
 	'name':'Assignment Portfolio',
 	'link':'/activity/assignment-portfolio',
 	'estimate':'~2 hours'	
+}
+
+export const AssignmentPortfolioWebsiteWithNodeJS = {
+	'name':'Assignment Portfolio with Node.js',
+	'link':'/activity/assignment-portfolio-with-node-js',
+	'estimate':'~6 hours'	
 }
 
 export const MatchmakerWithPython = {

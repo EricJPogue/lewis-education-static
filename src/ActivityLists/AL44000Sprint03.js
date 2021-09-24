@@ -5,7 +5,7 @@ import { InitialPost,  } from './AL00000Sprint02'
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint03'
 import { oreillyPlaylistSE } from '../Links'
 
-import { AssignmentPortfolioWebsite } from './ProgrammingAssignments'
+import { AssignmentPortfolioWebsiteWithNodeJS } from './ProgrammingAssignments'
 
 export const al44000Sprint03 = () => {
 	let playlist = oreillyPlaylistSE()
@@ -30,31 +30,28 @@ with your classmates and scrum team members as you work through some of the open
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivities(AssignmentPortfolioWebsite, playlist)}
+	{StandardActivities(AssignmentPortfolioWebsiteWithNodeJS, playlist)}
 
-	<li>Review “Engineering Software as a Service” section 4.5 of Fox on Debugging</li>
 	<li>Read “Engineering Software as a Service” chapter 7 on Requirements and review the associated class lecture <NavLink to='/activity/fox-chapter-07'>[video]</NavLink></li>
-
-	<li>Within O’Reilly Books <a href='https://www.oreilly.com' target='_blank' rel='noopener noreferrer'>[link]</a> find “Web Development with Node and Express, 2nd Edition” by Ethan Brown</li>
-	<li>Read “Web Development with Node and Express” chapters 1 and 2 <a href='https://learning.oreilly.com/library/view/web-development-with/9781492053507/' target='_blank' rel='noopener noreferrer'>[link]</a>
-		while completing each of the exercises</li>
-	<li>Review “web/node-js-on-azure” code in our class example code</li>
+	<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapters 1 and 2 while completing each of the exercises</li>
 
 	{InitialPost(3)}
-	<li>Read “Web Development with Node and Express” chapters 3 and 4 <a href='https://learning.oreilly.com/library/view/web-development-with/9781492053507/' target='_blank' rel='noopener noreferrer'>[link]</a>
-		while completing each of the exercises</li>
-	<li>Complete the “Node.js Tutorial” from W3C <a href='https://www.w3schools.com/nodejs/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li>Read <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>What is JSON? JavaScript Object Notation explained</a> and 
-		complete <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>JSON Introduction</a></li> 
+	<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapters 3 and 4 while completing each of the exercises</li>
+	<li>Complete the W3C <a href='https://www.w3schools.com/nodejs/' target='_blank' rel='noopener noreferrer'>Node.js Tutorial</a></li>
+	<li>Read <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>What is JSON? JavaScript Object Notation explained</a></li> 
+	<li>Complete the W3C <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>JSON Tutorial</a></li>
 
-	{StandardActivitiesClosing(AssignmentPortfolioWebsite)}
+	{StandardActivitiesClosing(AssignmentPortfolioWebsiteWithNodeJS)}
 </ol>
 {Closing()}
+{/* Programming Together: “Deploying Node.js on Microsoft Azure” */}
 </div>
 
 	)
 }
 
-// Todo: Change assignment from AssignmentPortfolioWebsite.
+// Todo: Change assignment from AssignmentPortfolioWebsite and create AssignmentPortfolioWebsiteWithNodeJS and Team GettingToKnowEachOtherWithNodeJS.
+// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
+// Todo: Change estimated to actual capacity metric to actual over estimated so that it comes out to less than one generally. 
 
 
