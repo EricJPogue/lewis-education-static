@@ -14,6 +14,7 @@ export const UniversityResources = () => {
 	<li><a href='https://mylewis.lewisu.edu/web/mylewis-home/resources' target='_blank' rel='noopener noreferrer'>myLewis Resources including WiFi</a></li>
 	<li><a href='https://docs.google.com/document/d/1apPN5avRsTZ4TL7EL_wEczs8vFd_uyrwts-dfIgkOgg/edit#heading=h.gkos893m3ubj' target='_blank' rel='noopener noreferrer'>Office of Technology Help Desk</a></li>
 	<li><a href='https://www.lewisu.edu/academics/library/index.htm' target='_blank' rel='noopener noreferrer'>University Library</a></li>
+	<li><a href='https://www.lewisu.edu/covid-19/star.htm' target='_blank' rel='noopener noreferrer'>Student Technology Academic Resources (STAR) Program</a></li>
 	<li><a href='https://www.lewisu.edu/welcome/offices/business/facilities.htm' target='_blank' rel='noopener noreferrer'>Campus Facilities</a></li>
 	<li><a href='https://www.lewisu.edu/studentservices/security/' target='_blank' rel='noopener noreferrer'>Campus Security</a></li>
 	<li><a href='https://www.youtube.com/watch?v=3KQ6QemExf4' target='_blank' rel='noopener noreferrer'>Center for Health and Counseling Services</a></li>

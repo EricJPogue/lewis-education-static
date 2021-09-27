@@ -5,7 +5,7 @@ import { InitialPost,  } from './AL00000Sprint02'
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint03'
 import { oreillyPlaylistSE } from '../Links'
 
-import { AssignmentPortfolioWebsiteWithNodeJS } from './ProgrammingAssignments'
+import { AssignmentPortfolioWebsiteWithNodeJS, GettingToKnowEachOthersTeams, complete } from './ProgrammingAssignments'
 
 export const al44000Sprint03 = () => {
 	let playlist = oreillyPlaylistSE()
@@ -37,6 +37,9 @@ with your classmates and scrum team members as you work through some of the open
 
 	{InitialPost(3)}
 	<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapters 3 and 4 while completing each of the exercises</li>
+
+
+	<li>{complete(GettingToKnowEachOthersTeams)}</li>
 	<li>Complete the W3C <a href='https://www.w3schools.com/nodejs/' target='_blank' rel='noopener noreferrer'>Node.js Tutorial</a></li>
 	<li>Read <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>What is JSON? JavaScript Object Notation explained</a></li> 
 	<li>Complete the W3C <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>JSON Tutorial</a></li>

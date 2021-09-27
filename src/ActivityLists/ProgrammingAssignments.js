@@ -38,6 +38,12 @@ export const GettingToKnowEachOther = {
 	'estimate':'~6 hours'
 }
 
+export const GettingToKnowEachOthersTeams = {
+	'name':'Getting to Know Each Others Teams',
+	'link':'/activity/getting-to-know-each-others-teams',
+	'estimate':'~4 hours'
+}
+
 export const MapManiaVersion1 = {
 	'name':'Map Mania Version 1',
 	'link':'/activity/map-mania-v1',
@@ -77,7 +83,7 @@ export const AssignmentPortfolioWebsite = {
 export const AssignmentPortfolioWebsiteWithNodeJS = {
 	'name':'Assignment Portfolio with Node.js',
 	'link':'/activity/assignment-portfolio-with-node-js',
-	'estimate':'~6 hours'	
+	'estimate':'~4 hours'	
 }
 
 export const MatchmakerWithPython = {
