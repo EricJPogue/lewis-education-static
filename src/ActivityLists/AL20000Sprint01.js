@@ -53,7 +53,7 @@ problem solving, and programming.</p>
 
 {Closing()}
 {Extras()}
-
+{/* Add something about creating zip files to tools of the trade. */}
 </div> )
 }
 
