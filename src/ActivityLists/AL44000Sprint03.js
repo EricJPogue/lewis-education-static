@@ -32,7 +32,7 @@ with your classmates and scrum team members as you work through some of the open
 <ol>
 	{StandardActivities(AssignmentPortfolioWebsiteWithNodeJS, playlist)}
 
-	<li>Read “Engineering Software as a Service” chapter 7 on Requirements and review the associated class lecture <NavLink to='/activity/fox-chapter-07'>[video]</NavLink></li>
+	<li>Read “Engineering Software as a Service” chapter 7 on Requirements and review the associated class <NavLink to='/activity/fox-chapter-07'>lecture</NavLink></li>
 	<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapters 1 and 2 while completing each of the exercises</li>
 
 	{InitialPost(3)}
