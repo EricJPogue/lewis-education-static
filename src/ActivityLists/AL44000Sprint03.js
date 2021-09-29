@@ -48,11 +48,23 @@ with your classmates and scrum team members as you work through some of the open
 </ol>
 {Closing()}
 {/* Programming Together: “Deploying Node.js on Microsoft Azure” */}
+
+{Extras()}
 </div>
 
 	)
 }
 
+const Extras = () => {
+	return (<div>	
+		<p>Additional suggested activities:</p>
+		<ul style={{listStyleType:'square'}}>
+		<li>Study and consistently utilize the <NavLink to='/activity/git-commands'>Git commands</NavLink> and patterns used by professional development teams </li>
+		</ul>
+	</div>)
+}
+
+//	
 // Todo: Change assignment from AssignmentPortfolioWebsite and create AssignmentPortfolioWebsiteWithNodeJS and Team GettingToKnowEachOtherWithNodeJS.
 // Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
 // Todo: Change estimated to actual capacity metric to actual over estimated so that it comes out to less than one generally. 
