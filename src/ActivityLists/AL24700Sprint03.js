@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint03'
 import { InitialPost,  } from './AL00000Sprint02'
-import { oreillyPlaylistWeb } from '../Links'
+import { oreillyPlaylistWeb, JavaScriptW3C } from '../Links'
 import { MapManiaVersion1, AssignmentPortfolioWebsite, DiceRoller, complete, ReviewProgrammingActivity, MapManiaLite } from './ProgrammingAssignments'
 
 export const al24700Sprint03 = () => {
@@ -36,12 +36,13 @@ at first, I think you will enjoy what you are able to create using it.</p>
 	{StandardActivities(MapManiaVersion1, playlist)}
 
 	{ReviewProgrammingActivity(AssignmentPortfolioWebsite, '1')}
-	<li>Read chapter 5 of Sebesta on JavaScript and review the associated JavaScript and HTML lecture <NavLink to='/activity/sebesta-chapter-05'>[video]</NavLink></li>
+	<li>Read chapter 5 of Sebesta on JavaScript and review the associated JavaScript and HTML <NavLink to='/activity/sebesta-chapter-05'>lecture</NavLink></li>
 	<li>{complete(DiceRoller)}</li>
 	<li>Review <a href='http://sebesta-examples.azurewebsites.net/'>Sebesta HTML, CSS, and JavaScript examples</a></li>
 
 	{InitialPost(3)}
 
+	<li>Review {JavaScriptW3C()} tutorial</li>
     <li>Complete <NavLink to='/activity/successful-programmer'>How To Be A Successful Programmer</NavLink></li>
 	{ReviewProgrammingActivity(MapManiaLite)}
 

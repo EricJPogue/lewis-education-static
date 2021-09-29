@@ -43,6 +43,7 @@ export const ResumeReviewServices = () => { return( <a href='https://lewisu.edu/
 export const SequenceSelectionAndRepetition = () => { return( <a href='https://edu.gcfglobal.org/en/computer-science/sequences-selections-and-loops/1/' target='_blank' rel='noopener noreferrer'>Sequences, selections, and loops (repetition)</a> ) }
 
 
+
 const externalLink = (displayName, url) => {
 	return (
 		<a href={url} target='_blank' rel='noopener noreferrer'>{displayName}</a>

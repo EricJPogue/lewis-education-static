@@ -56,3 +56,5 @@ const Extras = () => {
 	</div>)
 }
 // Todo: Add Git/GitHub activity / tutorial. 
+// Update quiz question "The Unicode encoding scheme..."
+// Update/fix quiz question "How many characters can be represented by the Unicode character set?"... it is a bad answer and a duplicate question for some. 
