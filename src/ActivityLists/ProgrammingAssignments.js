@@ -225,7 +225,7 @@ export const FinalProjectSprint3 = {
 }
 
 export const AzureWebsite = {
-	'name':'“Azure Website”',
+	'name':'Azure Website',
 	'link':'/activity/azure-website',
 	'estimate':'~6 hours'
 }
