@@ -24,7 +24,7 @@ repository and Assure static website that is linked to the GitHub repository.</p
 <em>Requirement 2</em>
 <p>Create an aesthetically pleasing web page in HTML, CSS, and JavaScript that includes:</p>
 <ol>
-	<li>A large centered picture of your full scrum team that is an image map linked to each team member’s Getting To Know Each Other page</li>
+	<li>A large centered picture of your scrum team that is an image map linked to each team member’s Getting To Know Each Other page</li>
 	<li>A list of team members that also includes links to each team member’s Getting To Know Each Other page</li>
 	<li>An area that will serve as your team’s assignment portfolio</li>
 	<li>A GitHub history that demonstrates each team member updating their own image map section and own membership information</li>
