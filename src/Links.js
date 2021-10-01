@@ -14,6 +14,8 @@ export const Git = () => { return externalLink('Git', 'https://git-scm.com/') }
 export const GitHub = () => { return externalLink('GitHub', 'https://help.github.com/en/articles/applying-for-a-student-developer-pack') }
 export const Azure = () => { return externalLink('Microsoft Azure', 'https://azure.microsoft.com/en-us/free/students/') }
 export const Python = () => { return externalLink('Python', 'https://www.python.org/') }
+export const IntroducingPythonSampleCode = () => { return externalLink('sample code', 'https://github.com/madscheme/introducing-python') }
+
 export const VSCodePython = () => { return externalLink('Visual Studio Code Python', 'https://code.visualstudio.com/docs/python/python-tutorial') }
 export const NodeJS = () => { return externalLink('Node.js', 'https://nodejs.org/en/') }
 export const Java = () => { return externalLink('Java SDK', 'https://docs.microsoft.com/en-us/java/azure/jdk/?view=azure-java-stable') }

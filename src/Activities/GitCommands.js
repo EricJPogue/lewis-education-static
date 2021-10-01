@@ -24,6 +24,7 @@ on some basic Git commands including:</p>
 	<li>get checkout</li>
 	<li>git merge</li>
 	<li>git stash</li>
+	<li>git config –global pull.rebase false</li>
 </ul>
 
 <p>There is a common pattern of Git commands often utilized when developing complex software. The pattern includes the 
