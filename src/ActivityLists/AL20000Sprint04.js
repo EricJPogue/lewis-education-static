@@ -2,8 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { InitialPost,  } from './AL00000Sprint02'
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities } from './AL00000Sprint03'
-import { StandardActivitiesClosing, Closing  } from './AL00000Sprint04'
+import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
+import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint04'
 
 import { oreillyPlaylistICS } from '../Links'
 import { IntroducingPythonSampleCode } from '../Links'
@@ -32,7 +32,7 @@ for Python will be challenging application but I think you will enjoy working on
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivities(MatchmakerWithPython, playlist)}
+	{StandardActivities(MatchmakerWithPython, playlist, 4)}
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated <NavLink to='/activity-dale/13'>lecture</NavLink></li>
 	<li>Complete <NavLink to='/activity/python-w3c'>Python Programming - Part 1 &amp; Part 2</NavLink> from W3C</li>
 	<li>Complete Programming Together with MatchmakerLite - Part 1</li>

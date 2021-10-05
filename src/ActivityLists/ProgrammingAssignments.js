@@ -44,17 +44,24 @@ export const GettingToKnowEachOthersTeams = {
 	'estimate':'~4 hours'
 }
 
+export const MapManiaLite = {
+	'name':'Map Mania Lite',
+	'link':'/activity-web/map-mania-lite',
+	'estimate':'~2 hours'
+}
+
 export const MapManiaVersion1 = {
 	'name':'Map Mania Version 1',
 	'link':'/activity/map-mania-v1',
 	'estimate':'~6 hours'
 }
 
-export const MapManiaLite = {
-	'name':'Map Mania Lite',
-	'link':'/activity-web/map-mania-lite',
-	'estimate':'~2 hours'
+export const MapManiaVersion2 = {
+	'name':'Map Mania Version 2',
+	'link':'/activity/map-mania-v2',
+	'estimate':'~12 hours'
 }
+
 
 export const DiceRoller = {
 	'name':'Dice Roller',
@@ -111,7 +118,7 @@ export const MatchmakerWithGo = {
 }
 
 export const HealthRiskCalculatorForTheWeb = {
-	'name':'“Health Insurance Risk Calculator for the Web”',
+	'name':'Health Insurance Risk Calculator for the Web',
 	'link':'/activity/health-risk-calculator-web',
 	'estimate':'~6 hours'
 }
