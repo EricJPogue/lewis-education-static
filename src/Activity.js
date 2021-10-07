@@ -7,6 +7,8 @@ import { StudyTable } from './Activities/StudyTable'
 import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './Activities/HelloWorld'
 import { MatchmakerPython, MatchmakerWeb, MatchmakerJava, MatchmakerGo, MatchmakerExamples } from './Activities/Matchmaker';
 import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './Activities/HealthRiskCalculator'
+import { HealthRiskCalculatorTeamWeb } from './Activities/HealthRiskCalculatorTeam'
+
 
 import { OvalDrawPlusJava } from './Activities/OvalDrawPlus'
 import { ExampleCode } from './Activities/ExampleCode'
@@ -124,7 +126,7 @@ class Activity extends Component {
 			case 'mosaic-v2-react': return MosaicV2React()
 
 			case 'swiss-army-knife-java': return SwissArmyKnifeJava()
-			case 'swiss-army-knife-java-v2': return SwissArmyKnifeJavaV2()
+			case 'swiss-army-knife-java-v2': return SwissArmyKnifeJavaV2()	
 
 			case 'thunderbird-java': return ThunderbirdJava()
 
@@ -133,6 +135,7 @@ class Activity extends Component {
 			case 'health-risk-calculator-java': return HealthRiskCalculatorJava()
 			case 'health-risk-calculator-go': return HealthRiskCalculatorGo()
 			case 'health-risk-calculator-examples': return HealthRiskCalculatorExamples()
+			case 'health-risk-calculator-team-web': return HealthRiskCalculatorTeamWeb()
 
 			case 'numbering-systems-python': return PythonNumberingSystems()
 			case 'turtle-draw': return PythonTurtleDraw()

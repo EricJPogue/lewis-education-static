@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Git, GitTutorial, GitHub } from '../Links'
+
 export const GitCommands = () => {
 	return (
 
@@ -14,12 +16,13 @@ engineering. Git is a rich and powerful source code control and configuration ma
 on some basic Git commands including:</p>
 <ul style={{listStyleType:'square'}}>
 	<li>git clone</li>
+	<li>git add</li>
+	<li>git add .</li>
+	<li>git commit -m "Add and update files"</li>
+	<li>git push</li>
 	<li>git pull</li>
 	<li>git pull --no-edit</li>
-	<li>git add</li>
-	<li>git commit</li>
 	<li>git commit -a -m “Add and update files.”</li>
-	<li>git push</li>
 	<li>git branch</li>
 	<li>get checkout</li>
 	<li>git merge</li>
@@ -42,6 +45,7 @@ following branching commands:</p>
 
 <p>Below are Git and GitHub references:</p>
 <ul style={{listStyleType:'square'}}>
+	<li>{GitHub()} and the {Git()} command line source code management tool while reviewing the related {GitTutorial()}</li>
 	<li>GitHub Git Cheat Sheet <a href='https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf' target='blank' rel='noopener noreferrer'>[link]</a></li>
 	<li>“An Intro to Git and GitHub for Beginners” tutorial steps 1 though 3 from GitHub <a href='https://guides.github.com/activities/hello-world/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
 	<li>“Git Handbook” <a href='https://guides.github.com/introduction/git-handbook/' target='_blank' rel='noopener noreferrer'>[link]</a> and 

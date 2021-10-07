@@ -123,6 +123,13 @@ export const HealthRiskCalculatorForTheWeb = {
 	'estimate':'~6 hours'
 }
 
+export const HealthRiskCalculatorTeamForTheWeb = {
+	'name':'Health Insurance Risk Calculator for the Web with Teams',
+	'link':'/activity/health-risk-calculator-team-web',
+	'estimate':'~6 hours'
+}
+
+
 export const OvalDrawPlusWithJava = {
 	'name':'“OvalDraw Plus”',
 	'link':'/activity/ovaldraw-plus-java',
