@@ -10,10 +10,8 @@ export const HealthRiskCalculatorTeamWeb = () => { return HealthRiskCalculatorTe
 const HealthRiskCalculatorTeamWebWithNodeJSProperties = {
 	'name': 'Health Insurance Risk Calculator for the Web As A Team', 
 	'language': 'Web',	
-	'prerequisites': 'HTML, CSS, JavaScript, VS Code, and Terminal',
+	'prerequisites': 'HTML, CSS, JavaScript, GitHub, and Microsoft Azure',
 	'type': 'Web application using HTML, CSS, and JavaScript',
-	'requirement1_1': 'Is implemented in a single file name “index.html”',
-	'requirement1_2': 'Is hosted as a public website in Microsoft Azure'
 }	
 	
 const HealthRiskCalculatorTeam = (appProps) => {
@@ -97,10 +95,12 @@ improve on his design in any event.
 </p>
 
 <em>Requirement 1</em>
-<p>Create a command line based application that:</p>
+<p>Create a web application that:</p>
 <ol>
-	<li>{appProps.requirement1_1}</li>
-	<li>{appProps.requirement1_2}</li>
+	<li>Utilizes Node.js and the Express JavaScript library for all hosting</li>
+	<li>Utilizes a single GitHub repository that all team members can update</li>
+	<li>Utilizes “production” and “test” GitHub branches</li>
+	<li>Hosts the “test” branch in an Azure website</li>
 </ol>
 
 <em>Requirement 2</em>
@@ -123,13 +123,9 @@ improve on his design in any event.
 </ol>
 
 <em>Requirement 4</em>
-<p>Test and refactor the application so that it implements all appropriate <NavLink to='/activity/coding-standards'>coding standards</NavLink></p>
-
-
-<em>Requirement 5</em>
 <p>Implement the application so that it:</p>
 <ol>
-	<li>Fully utilizes Node.js and the Express JavaScript library for all hosting</li>
+	<li>Utilizes Node.js and the Express JavaScript library such that each team member can changes locally</li>
 	<li>Utilizes no client-side JavaScript math commands but instead implements all calculations on the Node.js server</li>
 	<li>Utilizes no client-side comparison commands but instead implements them on the Node.js server</li>
 	<li>Has each team member verifiably implement and test at least one server-side Node.js function</li>
