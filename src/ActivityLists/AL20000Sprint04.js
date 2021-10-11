@@ -16,7 +16,7 @@ export const al20000Sprint04 = () => {
 	return (
 
 <div>
-<h5>Sprint 4: Selection, Repetition, String, Lists, and Dictionaries</h5>
+<h5>Sprint 4: More Python including Sequences, Selections, and Loops (Repetition), Strings, Lists, and Dictionaries</h5>
 
 <p>Sprint 4. Let’s write some Python code. <span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084; </span> 
 for Python will be challenging application but I think you will enjoy it. 
@@ -25,7 +25,7 @@ for Python will be challenging application but I think you will enjoy it.
 {LearningObjectivesIntro()}
 <ul style={{ listStyleType:'square' }}>
 	<li>Create, update, and test Python applications</li>
-	<li>Understand variables, expressions, functions, lists, and dictionaries</li>
+	<li>Understand variables, strings, expressions, functions, lists, and dictionaries</li>
 	<li>Master {SequenceSelectionAndRepetition()}</li>
 	<li>Develop a basic understanding of artificial intelligence</li>
 </ul>
