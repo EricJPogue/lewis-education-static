@@ -5,7 +5,7 @@ import { InitialPost,  } from './AL00000Sprint02'
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint04'
 
-import { oreillyPlaylistICS } from '../Links'
+import { oreillyPlaylistICS, SequenceSelectionAndRepetition } from '../Links'
 import { IntroducingPythonSampleCode } from '../Links'
 
 import { MatchmakerWithPython } from './ProgrammingAssignments'
@@ -18,17 +18,15 @@ export const al20000Sprint04 = () => {
 <div>
 <h5>Sprint 4: Selection, Repetition, String, Lists, and Dictionaries</h5>
 
-<p>Sprint 4. Where does the time go?</p>
-
-<p>Let’s write some Python code. <span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084; </span> 
+<p>Sprint 4. Let’s write some Python code. <span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084; </span> 
 for Python will be challenging application but I think you will enjoy it. 
 </p>
 
 {LearningObjectivesIntro()}
 <ul style={{ listStyleType:'square' }}>
 	<li>Create, update, and test Python applications</li>
-	<li>Understand variables &amp; expressions, lists &amp; dictionaries, repetition, selection, and functions</li>
-	<li>Verify our understanding of file systems</li>
+	<li>Understand variables, expressions, functions, lists, and dictionaries</li>
+	<li>Master {SequenceSelectionAndRepetition()}</li>
 	<li>Develop a basic understanding of artificial intelligence</li>
 </ul>
 
