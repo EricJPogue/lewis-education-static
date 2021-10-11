@@ -33,8 +33,8 @@ for Python will be challenging application but I think you will enjoy it.
 {ActivitiesListIntro()}
 <ol>
 	{StandardActivities(MatchmakerWithPython, playlist, 4)}
-	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated <NavLink to='/activity-dale/13'>lecture</NavLink></li>
 	<li>Complete <NavLink to='/activity/python-w3c'>Python Programming - Part 1 &amp; Part 2</NavLink> from W3C</li>
+	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated <NavLink to='/activity-dale/13'>lecture</NavLink></li>
 	<li>Complete Programming Together with MatchmakerLite - Part 1</li>
 
 	{InitialPost(4)}

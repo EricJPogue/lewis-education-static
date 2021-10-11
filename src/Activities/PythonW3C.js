@@ -11,7 +11,7 @@ export const PythonW3C= () => {
 <h5>Summary: Create basic Python applications</h5>
 <h5>Prerequisites: Windows 10 or MacOS, and Python</h5>
 			
-<p>Instructions: Complete the Python tutorial from W3C <a href='https://www.w3schools.com/python/'>[link]</a></p>
+<p>Instructions: Complete the Python <a href='https://www.w3schools.com/python/'>tutorial</a> from W3C </p>
 <ul style={{ listStyleType:'square' }}>
 	<li>Part 1 of begins with the “Python Home” section ends with the “Python Functions” section</li>
 	<li>Part 2 includes only the following Python tutorial sections:</li>
