@@ -98,7 +98,7 @@ improve on his design in any event.
 <p>Create a web application that:</p>
 <ol>
 	<li>Utilizes Node.js and the Express JavaScript library for all hosting</li>
-	<li>Utilizes a single GitHub repository that all team members can update</li>
+	<li>Utilizes a shared GitHub repository that all team members can update and also meets the following <NavLink to='/activity/repository'>criteria</NavLink></li>
 	<li>Utilizes “production” and “test” GitHub branches</li>
 	<li>Hosts the “test” branch in an Azure website</li>
 </ol>

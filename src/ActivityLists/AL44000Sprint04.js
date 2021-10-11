@@ -25,7 +25,7 @@ software as a Agile team in sprints 5 through 8 utilizing our full software-as-a
 
 {LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
-	<li>Utilize client-side HTML, CSS, JavaScript, and Bootstrap to create client applications</li>
+	<li>Utilize client-side HTML, CSS, and JavaScript to create client applications</li>
 	<li>Create and modify basic Node.js, Express, and JavaScript to create server-side applications</li>
 	<li>Effectively utilize Microsoft Azure to host Node.js applications</li>
 	<li>Work as part of a team utilizing GitHub, Azure, Node.js, and Express</li>
@@ -34,8 +34,8 @@ software as a Agile team in sprints 5 through 8 utilizing our full software-as-a
 {ActivitiesListIntro()}
 <ol>
 	{StandardActivities(HealthRiskCalculatorTeamForTheWeb, oreillyPlaylistSE(), 4)}
-	<li>Deliver “Health Insurance Risk Calculator” <em>as a team</em> using Node.js, Azure, and shared GitHub repository<NavLink to='/activity/repository'>[link]</NavLink></li>
-	<li>Read Chapter 8 of Fox on Test-Driven Development and review the associated class lecture <NavLink to='/activity/fox-chapter-08'>[video]</NavLink></li>
+	<li>Review standard <NavLink to='/activity/git-commands'>Git commands</NavLink> and <NavLink to='/activity/repository'>Shared GitHub Repository</NavLink> requirements</li>
+	<li>Read Chapter 8 of Fox on Test-Driven Development and review the associated class <NavLink to='/activity/fox-chapter-08'>lecture</NavLink></li>
 	<li>Within {oreillyPlaylistSE()} briefly scan “Web Development with Node and Express” chapters 5 through 14</li>
 
 	{InitialPost(4)}
