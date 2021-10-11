@@ -115,7 +115,7 @@ improve on his design in any event.
 <em>Requirement 3</em>
 <p>Enhance the application so that it:</p>
 <ol>
-	<li>Validates user input for appropriate values, displays an meaningful error messages, and asks the question again 
+	<li>Validates user input for appropriate values, displays meaningful error messages, and asks the question again 
 		if the user enters a value that seems inappropriate (i.e. a height equal to 2 feet)</li>
 	<li>Summarizes each of the values used in the final calculation including Age, BMI, Blood Pressure, and Family Disease(s)</li>
 	<li>Calculates and displays the final Risk Category</li>
@@ -125,7 +125,7 @@ improve on his design in any event.
 <em>Requirement 4</em>
 <p>Implement the application so that it:</p>
 <ol>
-	<li>Utilizes Node.js and the Express JavaScript library such that each team member can changes locally</li>
+	<li>Utilizes Node.js and the Express JavaScript library such that each team member can test changes locally</li>
 	<li>Utilizes no client-side JavaScript math commands but instead implements all calculations on the Node.js server</li>
 	<li>Utilizes no client-side comparison commands but instead implements them on the Node.js server</li>
 	<li>Has each team member verifiably implement and test at least one server-side Node.js function</li>
