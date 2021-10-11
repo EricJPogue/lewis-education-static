@@ -18,8 +18,10 @@ export const al20000Sprint04 = () => {
 <div>
 <h5>Sprint 4: Selection, Repetition, String, Lists, and Dictionaries</h5>
 
-<p>Sprint 4. Where does the time go? Let’s write some Python code. <span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084; </span> 
-for Python will be challenging application but I think you will enjoy working on it. 
+<p>Sprint 4. Where does the time go?</p>
+
+<p>Let’s write some Python code. <span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084; </span> 
+for Python will be challenging application but I think you will enjoy it. 
 </p>
 
 {LearningObjectivesIntro()}
