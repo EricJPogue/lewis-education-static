@@ -64,9 +64,8 @@ const Extras = () => {
 	</div>)
 }
 
-//	
+// Todo: Update Lab 3 to request URL more specifically. 
 // Todo: Change assignment from AssignmentPortfolioWebsite and create AssignmentPortfolioWebsiteWithNodeJS and Team GettingToKnowEachOtherWithNodeJS.
-// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
-// Todo: Change estimated to actual capacity metric to actual over estimated so that it comes out to less than one generally. 
+
 
 
