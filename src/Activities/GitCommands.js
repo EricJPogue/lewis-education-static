@@ -16,18 +16,30 @@ engineering. Git is a rich and powerful source code control and configuration ma
 on some basic Git commands including:</p>
 <ul style={{listStyleType:'square'}}>
 	<li>git clone</li>
+	<li>git pull</li>
+	<li>git pull --no-edit</li>
 	<li>git add</li>
 	<li>git add .</li>
 	<li>git commit -m "Add and update files"</li>
-	<li>git push</li>
-	<li>git pull</li>
-	<li>git pull --no-edit</li>
 	<li>git commit -a -m “Add and update files.”</li>
+	<li>git push</li>
 	<li>git branch</li>
 	<li>get checkout</li>
 	<li>git merge</li>
 	<li>git stash</li>
-	<li>git config –global pull.rebase false</li>
+	<li>git config --global user.name "FIRST_NAME LAST_NAME"</li>
+	<li>git config --global user.email "MY_EMAIL@example.com"</li>
+	<li>git config --global core.editor emacs</li>
+	<li>git config –-global pull.rebase false</li>
+</ul>
+
+<p>The most common pattern of Git commands is to update a repository includes:</p>
+<ul style={{listStyleType:'square'}}>
+	<li>git status (optional)</li>
+	<li>git pull (optional)</li>
+	<li>git add .</li>
+	<li>git commit -m "Update files."</li>
+	<li>git push</li>
 </ul>
 
 <p>There is a common pattern of Git commands often utilized when developing complex software. The pattern includes the 

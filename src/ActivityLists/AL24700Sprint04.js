@@ -38,14 +38,12 @@ works.</p>
 <ol>
 	{StandardActivities(MapManiaVersion2, oreillyPlaylistWeb(), 4)}
 	<li>{complete(MapManiaLite)}</li>
-	<li>Read Sebesta chapter 6 on Dynamic Documents with JavaScript and review the associated <NavLink to='/activity/sebesta-chapter-06'>lecture</NavLink></li>
+	<li>Read Sebesta chapter 6 on Dynamic Documents with JavaScript, review the associated <NavLink to='/activity/sebesta-chapter-06'>lecture</NavLink>, and review the <a href='http://sebesta-examples.azurewebsites.net/'>examples</a></li>
 
 	{InitialPost(4)}
 	<li>Read Sebesta chapter 7 on XML and Web Services and review the associated <NavLink to='/activity/sebesta-chapter-07'>lecture</NavLink></li>
-
-	<li>Read and Understand the article “What is JSON? JavaScript Object Notation explained” 
-                <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-    <li>Complete “JSON Introduction” from W3C <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>[link]</a></li>	
+	<li>Read <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>What is JSON? JavaScript Object Notation explained</a></li>
+    <li>Complete <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>JSON Introduction</a></li>	
 
 	{StandardActivitiesClosing(MapManiaVersion2, 4)}
 </ol>
@@ -55,6 +53,4 @@ works.</p>
 	)
 }
 
-//Todo: Fix the samples! And uncomment the following line.*/}
-//<li>Review the associated Sebesta HTML, CSS, and JavaScript examples<a href='http://examples.epogue.info/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
 
