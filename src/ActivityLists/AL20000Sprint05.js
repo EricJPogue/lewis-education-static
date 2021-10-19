@@ -1,10 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { TurtleDraw, FinalProjectProposal, start, complete } from './ProgrammingAssignments'
-const programmingAssignment = TurtleDraw
+import { InitialPost,  } from './AL00000Sprint02'
+import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
+import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint05'
+
+import { oreillyPlaylistICS, introducingPythonCodeExamples, programmingTogether, PythonW3C } from '../Links'
+import { TurtleDraw, FinalProjectProposal, StartProgrammingActivity, complete } from './ProgrammingAssignments'
 
 export const al20000Sprint05 = () => {
+	let playlist = oreillyPlaylistICS()
+
 	return (
 
 <div>
@@ -22,52 +28,36 @@ looking for internships or jobs? How can I help?</p>
 <p>You will also notice a continuing trend this sprint where assignments will become less prescriptive and you
 will have more control <em>and responsibility</em> in determining what is done and how it is implemented.</p>
 
-<p>Let's start with what we hope to learn in sprint 5:</p>
+{LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
 	<li>Explore Networks</li>
-	<li>Understand Functions</li>
+	<li>Master Functions</li>
 	<li>Understand Encryption and Hashing</li>
 	<li>Create your initial Final Project Proposal</li>
 </ul>
 
-<p>Below is our sprint 5 activities list. </p>
+{ActivitiesListIntro()}
 <ol>
-	<li>Stay focused on the due dates by reviewing our course calendar <NavLink to='/calendar/5'>[link]</NavLink></li>
-	<li><em>Review Lab 5, Quiz 5, Discussion 5, Reflection 5, and Lab Demo</em></li>
-	<li>{start(programmingAssignment)}</li>
-	<li>{start(FinalProjectProposal)}</li>
-	{/* The above items should be consistent across classes. */ }
+	{StandardActivities(TurtleDraw, playlist, 5 )}
+	<li>{StartProgrammingActivity(FinalProjectProposal)}</li>
 
-	<li>Read Dale chapter 15 Networks <a href='https://learning.oreilly.com/library/view/computer-science-illuminated/9781284055917/' target='_blank' rel='noopener noreferrer'>[link]</a>
-		and review our chapter 15 lecture <NavLink to='/activity-dale/15'>[video]</NavLink></li>
-	<li>Complete Programming Together with TurtleDrawLite Part 1</li>
-	<li>Review the CAMS Study Table tutoring options <NavLink to='/activity/study-table'>[link]</NavLink></li>
-	<li>Review “Python Programming - Part 1 &amp; Part 2” from W3C <NavLink to='/activity/python-w3c'>[link]</NavLink></li>
-	<li>Review the Turtle graphics documentation <a href='https://docs.python.org/3/library/turtle.html#introduction'target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li><em>Make your initial Discussion post by the middle of the sprint</em></li>
-	<li>Complete Programming Together with TurtleDrawLite Parts 2 and 3</li>
-	<li>Review the “Introducing Python, 2nd Edition” example code utilizing “git clone https://github.com/madscheme/introducing-python"</li>
-	<li>Read “Introducing Python, 2nd Edition” chapters 2 &amp; 3 and complete each of the exercises<a href='https://learning.oreilly.com/home/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Networks and review our associated <NavLink to='/activity-dale/15'>lecture</NavLink></li>
+	<li>Complete {programmingTogether()} with TurtleDrawLite Part 1</li>
+	<li>Scan the {PythonW3C()} from W3C</li>
 
-	{/* The items below should be consistent across classes. */ }
+	{InitialPost()}	
+	<li>Within {oreillyPlaylistICS()} scan “Introducing Python” Chapters 2 through 4</li>
+	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 5 through 9 and review the associated {introducingPythonCodeExamples()}</li>
+	<li>Complete {programmingTogether()} with TurtleDrawLite Parts 2 &amp; 3</li>
+
 	<li>{complete(FinalProjectProposal)}</li>
-	<li>{complete(programmingAssignment)}</li>
-	<li><em>Complete Discussion 5, Lab 5, Quiz 5, and Reflection 5</em></li>
+	{StandardActivitiesClosing(TurtleDraw )}
 </ol>
-<p>If you are struggling, remember to reach out to your Scrum teammates early and often for help. Also, be sure to 
-periodically check for new programming together tutorials <NavLink to='/activity/programming-together'>[link]</NavLink>.</p>
-{extras()}
+{Closing()}
 </div>
 
 	)
 }
-
-const extras = () => {
-	return (null)
-}
-
-// Final project proposals.
-// Todo: Consider moving Networks to sprint 5. 
 
 //<p>Take a deep breath and consider if you are you getting what you hoped to get out of the course. If not, let's
 //sit down and talk for a few minutes to see if we can make it something special for you.</p>

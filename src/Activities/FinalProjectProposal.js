@@ -10,13 +10,13 @@ export const FinalProjectProposal = () => {
 <h5>Summary: Create a final project proposal web page.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
-	<li>“Getting to Know Each Other” <NavLink to='/activity/getting-to-know-each-other'>[link]</NavLink></li>
-	<li>“Azure Free Static Website Tutorial” <NavLink to='/activity/azure-website'>[link]</NavLink></li>
+	<li><NavLink to='/activity/getting-to-know-each-other'>Getting to Know Each Other</NavLink></li>
+	<li><NavLink to='/activity/azure-website'>Azure Free Static Website Tutorial</NavLink></li>
 </ul>
 			
 <p>In this project you will create a final project proposal web page. The web page should take the form of a single 
-file named “final-project-[[NAME]].html” where [[NAME]] is the name you have given your application. The single file 
-should be self contained and include HTML, CSS, and any JavaScript associated with your proposal.</p>
+file named “index.html” The file should be self contained and include HTML, CSS, and any JavaScript associated 
+with your proposal and should be hosted as a website in Azure.</p>
 
 <em>Requirement</em>
 <p>Create a descriptive and aesthetically pleasing final project proposal web page that includes:</p>

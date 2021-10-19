@@ -15,6 +15,7 @@ export const GitHub = () => { return externalLink('GitHub', 'https://help.github
 export const Azure = () => { return externalLink('Microsoft Azure', 'https://azure.microsoft.com/en-us/free/students/') }
 export const Python = () => { return externalLink('Python', 'https://www.python.org/') }
 export const IntroducingPythonSampleCode = () => { return externalLink('sample code', 'https://github.com/madscheme/introducing-python') }
+export const introducingPythonCodeExamples = () => { return externalLink('code examples', 'https://github.com/madscheme/introducing-python') }
 
 export const VSCodePython = () => { return externalLink('Visual Studio Code Python', 'https://code.visualstudio.com/docs/python/python-tutorial') }
 export const NodeJS = () => { return externalLink('Node.js', 'https://nodejs.org/en/') }
@@ -34,6 +35,7 @@ export const HTMLW3C =  () => { return externalLink('HTML', 'https://www.w3schoo
 export const CSSW3C =  () => { return externalLink('CSS', 'https://www.w3schools.com/css/') }
 export const JavaScriptW3C =  () => { return externalLink('JavaScript', 'https://www.w3schools.com/js/') }
 export const RegularExpressionsW3C =  () => { return externalLink('Regular Expressions', 'https://www.w3schools.com/jsref/jsref_obj_regexp.asp') }
+export const PythonW3C =  () => { return internalLink('Python Tutorial', '/activity/python-w3c') }
 
 export const oreillyPlaylistICS = () => { return( <a href='https://learning.oreilly.com/playlists/1a69d11a-2aff-4179-a664-6b842a666f34' target='_blank' rel='noopener noreferrer'>O’Reilly books</a> ) }
 export const oreillyPlaylistWeb = () => { return( <a href='https://learning.oreilly.com/playlists/70918629-ecf2-4b8c-8268-9e6d699d533d' target='_blank' rel='noopener noreferrer'>O’Reilly books</a> ) }
@@ -44,6 +46,9 @@ export const ResumeReviewServices = () => { return( <a href='https://lewisu.edu/
 
 export const SequenceSelectionAndRepetition = () => { return( <a href='https://edu.gcfglobal.org/en/computer-science/sequences-selections-and-loops/1/' target='_blank' rel='noopener noreferrer'>Sequences, selections, and loops (repetition)</a> ) }
 
+export const programmingTogether = () => { return internalLink('programming together', '/activity/programming-together')}
+
+export const PythonTurtleLibrary = () => { return externalLink('Turtle', 'https://docs.python.org/3/library/turtle.html#introduction')}
 
 
 const externalLink = (displayName, url) => {

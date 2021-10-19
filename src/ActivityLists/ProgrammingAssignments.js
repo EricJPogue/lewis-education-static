@@ -197,13 +197,13 @@ export const ThunderbirdWithJava = {
 }
 
 export const TurtleDraw = {
-	'name':'“TurtleDraw”',
+	'name':'TurtleDraw',
 	'link':'/activity/turtle-draw',
 	'estimate':'~8 hours'
 }
 
 export const FinalProjectProposal = {
-	'name':'“Final Project Proposal”',
+	'name':'Final Project Proposal',
 	'link':'/activity/final-project-proposal',
 	'estimate':'~2 hours'
 }

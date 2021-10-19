@@ -53,7 +53,6 @@ problem solving, and programming.</p>
 
 {Closing()}
 {Extras()}
-{/* Add something about creating zip files to tools of the trade. */}
 </div> )
 }
 
@@ -67,4 +66,5 @@ const Extras = () => {
 	</div>)
 }
 
-
+// Add Introducing Python Preface and Chapters 1 through 4
+// Add Add something about creating zip files to tools of the trade. 

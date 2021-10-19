@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
+import { PythonTurtleLibrary } from '../Links'
 import PythonTurtleDrawScreenShot from './PythonTurtleDrawScreenShot.png';
 
 export const PythonTurtleDraw = () => {
@@ -12,23 +12,22 @@ export const PythonTurtleDraw = () => {
 <br />
 <h4>TurtleDraw</h4>
 <h5>Summary: Create a Python application that will read from a file and draw graphical lines and shapes.</h5>
-<h5>Prerequisites: Python (v3), VS Code, Terminal, and the Python Debugger (optional) plus</h5>
-<ul style={{listStyleType:'square'}}>
-	<li>“Hello World with Python” <NavLink to='/activity/hello-world-python'>[link]</NavLink></li>
-	<li>“Numbering Systems with Python” <NavLink to='/activity/numbering-systems-python'>[link]</NavLink></li>
-</ul>
+<h5>Prerequisites: Python (v3), VS Code, Terminal, and the {PythonTurtleLibrary()} graphics library plus</h5>
 			
-<p>In this assignment you will develop and test a python application that reads data from a text file and then based on 
-the data draws graphical lines and shapes.</p>
+<p>In this assignment you will develop and test a python application that reads data from a text file and then draws
+graphical lines and shapes based on the data.</p>
 
 <p>Your program will read a data text file and produce a drawing. When the program reads "stop" on a line, it will 
 create a new group of connected segments. Otherwise, it will continue the connected group by drawing a line to the next 
 point it has read. It will change colors for each line and point as it reads the new colors from the file.</p> 
 
+<p>Be sure to review the documentation for the {PythonTurtleLibrary()} graphics library as you are working on 
+TurtleDraw</p>
+
 <em>Requirement 1</em>
 <p>Create a Python application that:</p>
 <ol>
-	<li>Is implemented in a single Python3 (.py) file name “TurtleDraw_xx.py” where “xx” are your initials in lower case</li>
+	<li>Is implemented in a single Python 3 compatible (.py) file name “TurtleDraw_xx.py” where “xx” are your initials in lower case</li>
 	<li>Successfully executes from the command line by typing “python3 TurtleDraw_xx.py” </li>
 	<li>Opens a window of dimension 450x450</li>
 	<li>Sets the turtle to run at maximum speed</li>
