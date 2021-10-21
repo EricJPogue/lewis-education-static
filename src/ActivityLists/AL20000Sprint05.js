@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom'
 
 import { InitialPost,  } from './AL00000Sprint02'
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
-import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint05'
+import { FinalProjectsAndMoreResponsibility, StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint05'
 
 import { oreillyPlaylistICS, introducingPythonCodeExamples, programmingTogether, PythonW3C } from '../Links'
-import { TurtleDraw, FinalProjectProposal, StartProgrammingActivity, complete } from './ProgrammingAssignments'
+import { TurtleDraw } from './ProgrammingAssignments'
 
 export const al20000Sprint05 = () => {
 	let playlist = oreillyPlaylistICS()
@@ -18,15 +18,9 @@ export const al20000Sprint05 = () => {
 
 <p><em>Wow!</em> We made it to the halfway point. I hope you enjoyed 
 <span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084;</span>.
-This week we switch gears and move into graphical drawing using Turtle graphics.</p>
+This week we switch gears and move into graphical drawing using Python and the Turtle graphics library.</p>
 
-<p>We will also start working on our Final Project proposals this sprint. How would you like to finishing the course by 
-creating something that makes you proud? What type of a final project would you enjoy creating? Is there a final project 
-that would both be interesting to create and be something you could add to your professional portfolio as you are 
-looking for internships or jobs? How can I help?</p>
-
-<p>You will also notice a continuing trend this sprint where assignments will become less prescriptive and you
-will have more control <em>and responsibility</em> in determining what is done and how it is implemented.</p>
+{FinalProjectsAndMoreResponsibility()}
 
 {LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
@@ -39,7 +33,6 @@ will have more control <em>and responsibility</em> in determining what is done a
 {ActivitiesListIntro()}
 <ol>
 	{StandardActivities(TurtleDraw, playlist, 5 )}
-	<li>{StartProgrammingActivity(FinalProjectProposal)}</li>
 
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Networks and review our associated <NavLink to='/activity-dale/15'>lecture</NavLink></li>
 	<li>Complete {programmingTogether()} with TurtleDrawLite Part 1</li>
@@ -50,8 +43,7 @@ will have more control <em>and responsibility</em> in determining what is done a
 	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 5 through 9 and review the associated {introducingPythonCodeExamples()}</li>
 	<li>Complete {programmingTogether()} with TurtleDrawLite Parts 2 &amp; 3</li>
 
-	<li>{complete(FinalProjectProposal)}</li>
-	{StandardActivitiesClosing(TurtleDraw )}
+	{StandardActivitiesClosing(TurtleDraw)}
 </ol>
 {Closing()}
 </div>

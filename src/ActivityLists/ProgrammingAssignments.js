@@ -62,7 +62,6 @@ export const MapManiaVersion2 = {
 	'estimate':'~12 hours'
 }
 
-
 export const DiceRoller = {
 	'name':'Dice Roller',
 	'link':'/activity/dice-roller',
@@ -202,6 +201,12 @@ export const TurtleDraw = {
 	'estimate':'~8 hours'
 }
 
+export const MustangV1 = {
+	'name':'Mustang version 1',
+	'link':'/activity/mustang-v1',
+	'estimate':'~8 hours'
+}
+
 export const FinalProjectProposal = {
 	'name':'Final Project Proposal',
 	'link':'/activity/final-project-proposal',
@@ -254,6 +259,11 @@ export const StartProgrammingActivity = (assignment) => {
 		return ( <div><li>Start working on <NavLink to={assignment.link}>{assignment.name}</NavLink></li></div> )
 }
 
+export const startActivity = (assignment) => {
+	if (assignment != null) 
+		return ( <div>Start working on <NavLink to={assignment.link}>{assignment.name}</NavLink></div> )
+}
+
 export const reviewAndUpdate = (assignment) => { 
 	return ( <div>Review and update your {assignment.name} <NavLink to={assignment.link}>[link]</NavLink></div>) 
 }
@@ -266,6 +276,10 @@ export const reviewAndUpdateProgrammingActivity = (assignment) => {
 export const complete = (assignment) => { 
 	return ( <div>Complete <NavLink to={assignment.link}>{assignment.name}</NavLink>{sup(assignment.estimate)}</div>)
 }
+
+export const completeActivity = (assignment) => { 
+	return ( <div>Complete <NavLink to={assignment.link}>{assignment.name}</NavLink>{sup(assignment.estimate)}</div>)
+} 
 
 export const ProgrammingActivity = (assignment, estimatedTime) => { 
 	if (assignment != null) {

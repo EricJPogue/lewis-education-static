@@ -50,6 +50,13 @@ export const programmingTogether = () => { return internalLink('programming toge
 
 export const PythonTurtleLibrary = () => { return externalLink('Turtle', 'https://docs.python.org/3/library/turtle.html#introduction')}
 
+export const JSONAndAJAXTutorial = () => { return externalLink('JSON and AJAX Tutorial: With Real Examples', 'https://www.youtube.com/watch?v=rJesac0_Ftw')}
+
+export const RandomStrings = () => { return externalLink('Random', 'https://www.random.org/strings/')}
+export const JSONExamples = () => { return externalLink('JSON Examples', 'https://mustang-index.azurewebsites.net/')}
+export const JSONHostingExample = () => { return externalLink('JSON Hosting Example', 'https://github.com/EricJPogue/cpsc-example-code/blob/main/web/hosting-json/')}
+export const JSONHostingWebConfigExample = () => { return externalLink('web.config', 'https://github.com/EricJPogue/cpsc-example-code/blob/main/web/hosting-json/web.config')}
+export const JSONIndex = () => { return externalLink('index.json', 'https://mustang-index.azurewebsites.net/index.json')}
 
 const externalLink = (displayName, url) => {
 	return (
