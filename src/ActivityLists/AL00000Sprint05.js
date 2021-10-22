@@ -8,7 +8,7 @@ import { programmingTogether } from '../Links'
 
 export const FinalProjectsAndMoreResponsibility = () => {
 	return ( <div>
-		<p>We will also start working on our Final Project proposals this sprint. How would you like to finishing the course by 
+		<p>We will also be creating our Final Project proposals this sprint. How would you like to finishing the course by 
 		creating something that makes you proud? What type of a final project would you enjoy creating? Is there a final project 
 		that would both be interesting to create and be something you could add to your professional portfolio as you are 
 		looking for internships or jobs? How can I help?</p>

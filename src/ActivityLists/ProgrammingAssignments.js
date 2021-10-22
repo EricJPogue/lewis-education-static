@@ -220,7 +220,7 @@ export const FinalProject = {
 }
 
 export const FinalProjectSprint0 = {
-	'name':'“Final Project Sprint 0”',
+	'name':'Final Project Sprint 5',
 	'link':'/activity/final-project-sprint-0',
 	'estimate':'~4 hours'
 }

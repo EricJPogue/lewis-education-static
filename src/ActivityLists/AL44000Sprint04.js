@@ -44,9 +44,20 @@ software as a Agile team in sprints 5 through 8 utilizing our full software-as-a
 	{StandardActivitiesClosing(HealthRiskCalculatorTeamForTheWeb, 4)}
 </ol>
 {Closing()}
+{extras()}
 </div>
 	)
 }
 
+const extras = () => {
+	return (<div>	
+		<p>Additional suggested activities:</p>
+		<ul style={{listStyleType:'square'}}>
+			<li>Within {oreillyPlaylistSE()} watch “Project Management” by Pearson Lesson 1: Why Projects?</li>
+			<li>Within {oreillyPlaylistSE()} watch “Project Management” by Pearson Lesson 4: Creating the Project Network</li>
+			<li>Within {oreillyPlaylistSE()} watch “Project Management” by Pearson Lesson 5: Duration Estimation and Critical Path</li>
+		</ul>
+	</div>)
+}
 // Todo: Update lab Health Risk Calculator questions to separate requirements 1 though 4... and possibly rearrange and rescore them. 
 // Todo: Consider moving from sprint 5 the activity and lab 4 question to move all applications to NodeJS and Azure.
