@@ -219,27 +219,27 @@ export const FinalProject = {
 	'estimate':'~12 hours per team member'
 }
 
-export const FinalProjectSprint0 = {
+export const FinalProjectSprint5 = {
 	'name':'Final Project Sprint 5',
-	'link':'/activity/final-project-sprint-0',
+	'link':'/activity/final-project-sprint-5',
 	'estimate':'~4 hours'
 }
 
-export const FinalProjectSprint1 = {
-	'name':'“Final Project Sprint 1”',
-	'link':'/activity/final-project-sprint-1',
+export const FinalProjectSprint6 = {
+	'name':'“Final Project Sprint 6”',
+	'link':'/activity/final-project-sprint-6',
 	'estimate':'~8 hours per team member'
 }
 
-export const FinalProjectSprint2 = {
-	'name':'“Final Project Sprint 2”',
-	'link':'/activity/final-project-sprint-2',
+export const FinalProjectSprint7 = {
+	'name':'“Final Project Sprint 7”',
+	'link':'/activity/final-project-sprint-7',
 	'estimate':'~10 hours per team member'
 }
 
-export const FinalProjectSprint3 = {
-	'name':'“Final Project Sprint 3”',
-	'link':'/activity/final-project-sprint-3',
+export const FinalProjectSprint8 = {
+	'name':'“Final Project Sprint 8”',
+	'link':'/activity/final-project-sprint-8',
 	'estimate':'~12 hours per team member'
 }
 

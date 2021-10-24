@@ -25,7 +25,7 @@ import { CodingStandards, CodingStandardsValidator } from './Activities/CodingSt
 import { QuizMaster } from './Activities/QuizMaster'
 import { GitCommands } from './Activities/GitCommands'
 import { FinalProjectProposal } from './Activities/FinalProjectProposal'
-import { FinalProject, FinalProjectSprint0, FinalProjectSprint1, FinalProjectSprint2, FinalProjectSprint3 } from './Activities/FinalProject'
+import { FinalProject, FinalProjectSprint5, FinalProjectSprint6, FinalProjectSprint7, FinalProjectSprint8 } from './Activities/FinalProject'
 import { PythonNumberingSystems } from './Activities/PythonNumberingSystems'
 import { PythonTurtleDraw } from './Activities/PythonTurtleDraw'
 import { HTML } from './Activities/HTML'
@@ -94,10 +94,10 @@ class Activity extends Component {
 			case 'quiz-master': return QuizMaster()
 			case 'final-project-proposal': return FinalProjectProposal()
 			case 'final-project': return FinalProject()
-			case 'final-project-sprint-0': return FinalProjectSprint0()
-			case 'final-project-sprint-1': return FinalProjectSprint1()
-			case 'final-project-sprint-2': return FinalProjectSprint2()
-			case 'final-project-sprint-3': return FinalProjectSprint3()
+			case 'final-project-sprint-5': return FinalProjectSprint5()
+			case 'final-project-sprint-6': return FinalProjectSprint6()
+			case 'final-project-sprint-7': return FinalProjectSprint7()
+			case 'final-project-sprint-8': return FinalProjectSprint8()
 
 			case 'git-commands': return GitCommands()
 			case 'successful-programmer': return SuccessfulDeveloper()

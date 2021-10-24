@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { ThunderbirdWithJava, FinalProjectProposal, FinalProjectSprint0, start, complete, reviewAndUpdate } from './ProgrammingAssignments'
+import { ThunderbirdWithJava, FinalProjectProposal, FinalProjectSprint7, start, complete, reviewAndUpdate } from './ProgrammingAssignments'
 
 export const al24500Sprint07 = ( props ) => {
 	return (
@@ -39,7 +39,7 @@ middle of the sprint so that you can be 100% focused on your final project durin
 
 	<li><em>Make your initial Discussion post by the middle of the sprint</em></li>
 	<li>{reviewAndUpdate(FinalProjectProposal)}</li>
-	<li>{complete(FinalProjectSprint0)}</li>
+	<li>{complete(FinalProjectSprint7)}</li>
 
 	{/* The items below should be consistent across classes. */ }
 	<li><em>Complete Discussion 7, Lab 7, Quiz 7, Reflection 7, and Lab Demo</em></li>

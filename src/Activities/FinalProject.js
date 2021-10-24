@@ -10,7 +10,7 @@ export const FinalProject = () => {
 <h5>Summary: Based on our final project proposal, you are going to deliver something uniquely your own.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
-	<li>“Final Project Proposal” <NavLink to='/activity/final-project-proposal'>[link]</NavLink></li>
+	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
 </ul>
 
 <p>In this activity you will deliver a final project that is uniquely your own. What you create should include the 
@@ -47,32 +47,33 @@ are <em>greater in complexity</em> than features we delivered in previous applic
 </div> )
 }
 
-export const FinalProjectSprint0 = () => {
+export const FinalProjectSprint5 = () => {
 	return (
 	
 <div>
 <br />
-<h4>Final Project Sprint 0</h4>
+<h4>Final Project Sprint 5</h4>
 <h5>Summary: In addition to creating a final project proposal, we are going to deliver something.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
-	<li>“Final Project Proposal” <NavLink to='/activity/final-project-proposal'>[link]</NavLink></li>
+	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
 </ul>
 
 <p>In this activity you will start your final project. Build something. Anything that makes you feel good and shows 
-that you invested an appropriate amount of effort. Maybe perform a technology spike?</p>
+that you invested an appropriate amount of time and effort. Maybe perform a technology spike?</p>
 
 <em>Requirement</em>
-<p>Create something pretty that showcases your idea by:</p>
+<p>Create something pretty that showcases your idea by utilizing the CI/CD philosophy to :</p>
 <ol>
-	<li>Successfully deploying it to production environment</li>
+	<li>Successfully deploying your product to a local development and test environment to you personal computer</li>
+	<li>Successfully deploying your product to hosted test and production environments</li>
 	<li>Making the source code available for review</li>
 </ol>
 
 </div> )
 }
 
-export const FinalProjectSprint1 = () => {
+export const FinalProjectSprint6 = () => {
 	return (
 	
 <div>
@@ -102,7 +103,7 @@ website, and is “demo-able” by every member of the team.</p>
 </div> )
 }
 
-export const FinalProjectSprint2 = () => {
+export const FinalProjectSprint7 = () => {
 	return (
 	
 <div>
@@ -132,7 +133,7 @@ something special?</p>
 </div> )
 }
 
-export const FinalProjectSprint3 = () => {
+export const FinalProjectSprint8 = () => {
 	return (
 	
 <div>

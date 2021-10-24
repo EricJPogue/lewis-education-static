@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-import { FinalProjectProposal, FinalProjectSprint0, MosaicV2WithReact, start, complete, reviewAndUpdate } from './ProgrammingAssignments'
+import { FinalProjectProposal, FinalProjectSprint7, MosaicV2WithReact, start, complete, reviewAndUpdate } from './ProgrammingAssignments'
 const programmingAssignment = MosaicV2WithReact
 
 export const al36000Sprint07 = () => {
@@ -49,7 +49,7 @@ and authorize users</p>
 	<li>Complete “Access Azure Storage from a web app” Tutorial <a href='https://docs.microsoft.com/en-us/azure/app-service/scenario-secure-app-access-storage?tabs=azure-portal%2Ccommand-line' target='_blank' rel='noopener noreferrer'>[link]</a></li>
 	<li>{complete(programmingAssignment)}</li>
 
-	<li>{complete(FinalProjectSprint0)}</li>
+	<li>{complete(FinalProjectSprint7)}</li>
 
 	{/* The items below should be consistent across classes. */}
 	<li><em>Complete Discussion 7, Lab 7, Quiz 7, Reflection 7, and Lab Demo</em></li>

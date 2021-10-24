@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { FinalProjectSprint2, start, complete } from './ProgrammingAssignments'
-const programmingAssignment = FinalProjectSprint2
+import { FinalProjectSprint7, start, complete } from './ProgrammingAssignments'
+const programmingAssignment = FinalProjectSprint7
 
 export const al44000Sprint07 = () => {
 	return (

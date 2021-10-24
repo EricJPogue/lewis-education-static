@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { FinalProjectSprint1, start, complete } from './ProgrammingAssignments'
-const programmingAssignment = FinalProjectSprint1
+import { FinalProjectSprint6, start, complete } from './ProgrammingAssignments'
+const programmingAssignment = FinalProjectSprint6
 
 export const al44000Sprint06 = () => {
 	return (
@@ -66,3 +66,9 @@ export const al44000Sprint06 = () => {
 const extras = () => {
 	return (null)
 }
+
+// Todo: Change estimated to actual capacity metric to actual over estimated so that it comes out to less than one generally. 
+// Todo: Add lots of links from the Agile Alliance to various activity lists.
+// Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
+// Todo: Consider doing the same thing for testing.
+// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
