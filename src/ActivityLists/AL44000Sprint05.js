@@ -35,14 +35,12 @@ export const al44000Sprint05 = () => {
 
 		<li>Read Chapter 9 of Fox on Software Maintenance</li>
 		<li>Review <a href='https://lewiseducation.blob.core.windows.net/software-engineering/software-maintenance-and-support.mp4' target='_blank' rel='noopener noreferrer'>Software Maintenance &amp; Support</a></li>
-
-		<li>Review <a href='https://www.agilealliance.org/agile-essentials/' target='_blank' rel='noopener noreferrer'>Agile Alliance</a> by 
-			analyzing “Agile 101” and reviewing the “Agile Glossary”</li>
+		<li>Review <a href='https://www.agilealliance.org/agile-essentials/' target='_blank' rel='noopener noreferrer'>Agile Alliance</a> by analyzing “Agile 101” and reviewing the “Agile Glossary”</li>
 		<li>Create your product backlog utilizing epics and stories</li>
 
 		{InitialPost()}	
 		<li>Review <a href='https://lewiseducation.blob.core.windows.net/software-engineering/software-engineering-metrics.mp4' target='_blank' rel='noopener noreferrer'>Software Metrics</a></li>
-		<li>Set up your team’s final project production site and deploy your Final Project Proposal and “Health Insurance Risk Calculator”</li>
+		<li>Set up your team’s final project production site and deploy “Health Insurance Risk Calculator for the Web with Teams”</li>
 		<li>Create and execute a test plan on the site that verifies that the site and all applications</li>
 
 		{StandardActivitiesClosing(FinalProjectSprint5)}

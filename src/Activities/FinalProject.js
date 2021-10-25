@@ -60,7 +60,8 @@ export const FinalProjectSprint5 = () => {
 </ul>
 
 <p>In this activity you will start your final project. Build something. Anything that makes you feel good and shows 
-that you invested an appropriate amount of time and effort. Maybe perform a technology spike?</p>
+that you invested an appropriate amount of time and effort. Maybe perform a technology spike to set up development,
+test, and production environments?</p>
 
 <em>Requirement</em>
 <p>Create something pretty that showcases your idea by utilizing the CI/CD philosophy to :</p>
