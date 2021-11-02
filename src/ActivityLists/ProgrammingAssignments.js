@@ -105,7 +105,7 @@ export const MatchmakerWithJava = {
 }
 
 export const MatchmakerForTheWeb = {
-	'name':'“Matchmaker for the Web”',
+	'name':'Matchmaker for the Web',
 	'link':'/activity/matchmaker-web',
 	'estimate':'~6 hours'
 }
@@ -127,7 +127,6 @@ export const HealthRiskCalculatorTeamForTheWeb = {
 	'link':'/activity/health-risk-calculator-team-web',
 	'estimate':'~6 hours'
 }
-
 
 export const OvalDrawPlusWithJava = {
 	'name':'“OvalDraw Plus”',
@@ -207,6 +206,12 @@ export const MustangV1 = {
 	'estimate':'~8 hours'
 }
 
+export const MustangV2 = {
+	'name':'Mustang version 2',
+	'link':'/activity/mustang-v2',
+	'estimate':'~8 hours'
+}
+
 export const FinalProjectProposal = {
 	'name':'Final Project Proposal',
 	'link':'/activity/final-project-proposal',
@@ -265,7 +270,7 @@ export const startActivity = (assignment) => {
 }
 
 export const reviewAndUpdate = (assignment) => { 
-	return ( <div>Review and update your {assignment.name} <NavLink to={assignment.link}>[link]</NavLink></div>) 
+	return ( <div>Review and update your <NavLink to={assignment.link}>{assignment.name}</NavLink></div>) 
 }
 
 export const reviewAndUpdateProgrammingActivity = (assignment) => { 

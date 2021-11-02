@@ -59,5 +59,6 @@ const extras = () => {
 		</ul>
 	</div>)
 }
-// Todo: Update lab Health Risk Calculator questions to separate requirements 1 though 4... and possibly rearrange and rescore them. 
+
 // Todo: Consider moving from sprint 5 the activity and lab 4 question to move all applications to NodeJS and Azure.
+// Todo: Fix or remove “Use case diagram actors include” quiz 4 question

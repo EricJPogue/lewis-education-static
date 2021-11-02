@@ -49,6 +49,3 @@ This week we switch gears and move into graphical drawing using Python and the T
 
 	)
 }
-
-//<p>Take a deep breath and consider if you are you getting what you hoped to get out of the course. If not, let's
-//sit down and talk for a few minutes to see if we can make it something special for you.</p>

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { InitialPost,  } from './AL00000Sprint02'
+import { InitialPost } from './AL00000Sprint02'
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { FinalProjectsAndMoreResponsibility, StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint05'
 
-import { oreillyPlaylistSE } from '../Links'
+import { oreillyPlaylistSE, NodeJSExpressAndHandlebars } from '../Links'
 
 import { FinalProjectSprint5 } from './ProgrammingAssignments'
 
@@ -46,11 +46,20 @@ export const al44000Sprint05 = () => {
 		{StandardActivitiesClosing(FinalProjectSprint5)}
 	</ol>
 	{Closing()}
+	{extras()}
 </div>
 
 	)
 }
 
+const extras = () => {
+	return (<div>	
+		<p>Additional suggested activities:</p>
+		<ul style={{listStyleType:'square'}}>
+			<li>Optionally review {NodeJSExpressAndHandlebars()}</li>
+		</ul>
+	</div>)
+}
 // Todo: Add multiple-choice question on refactoring vs re-engineering.
 // Todo: Add multiple-choice question on “Describe the similarities and differences normally observed when maintaining a
 //     software product using a Waterfall vs an Agile process.”

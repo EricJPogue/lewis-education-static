@@ -58,6 +58,13 @@ export const JSONHostingExample = () => { return externalLink('JSON Hosting Exam
 export const JSONHostingWebConfigExample = () => { return externalLink('web.config', 'https://github.com/EricJPogue/cpsc-example-code/blob/main/web/hosting-json/web.config')}
 export const JSONIndex = () => { return externalLink('index.json', 'https://mustang-index.azurewebsites.net/index.json')}
 
+export const NodeJSExpressAndHandlebars = () => { return externalLink('NodeJS, Express, and Handlebars by Daniel Tujo', 'https://www.youtube.com/watch?v=daaMlE2sfoM')}
+
+export const AutocompleteW3CSchools = () => { return externalLink('W3C Schools Autocomplete', 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_autocomplete')}
+export const AutocompleteJQuery = () => { return externalLink('jQuery Autocomplete', 'https://jqueryui.com/autocomplete/')}
+export const AutocompletePixabay = () => { return externalLink('Pixabay Autocomplete', 'https://github.com/Pixabay/JavaScript-autoComplete/')}
+export const AutocompleteAwesomplete = () => { return externalLink('Awesomplete Autocomplete', 'https://www.sitepoint.com/javascript-autocomplete-widget-awesomplete/')}
+
 const externalLink = (displayName, url) => {
 	return (
 		<a href={url} target='_blank' rel='noopener noreferrer'>{displayName}</a>

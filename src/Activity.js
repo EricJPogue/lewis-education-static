@@ -43,6 +43,7 @@ import { WebCourseSchedule } from './Activities/WebCourseSchedule'
 import { WebMapManiaVersion1 } from './Activities/WebMapManiaVersion1'
 import { WebMapManiaVersion2 } from './Activities/WebMapManiaVersion2'
 import { MustangVersion1 } from './Activities/MustangVersion1';
+import { MustangVersion2 } from './Activities/MustangVersion2';
 
 import { ProgrammingTogether } from './Panopto'
 
@@ -154,6 +155,7 @@ class Activity extends Component {
 			case 'map-mania-v1': return WebMapManiaVersion1()
 			case 'map-mania-v2': return WebMapManiaVersion2()
 			case 'mustang-v1': return MustangVersion1()
+			case 'mustang-v2': return MustangVersion2()
 			case 'programming-together': return ProgrammingTogether()
 
 			// Start Programming The World Wide Web” by Robert W. Sebesta (Sebesta)

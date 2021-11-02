@@ -49,6 +49,7 @@ for Python will be challenging application but I think you will enjoy it.
 }
 
 // Todo: Consider updating Matchmaker to remove question weighting.
-// Todo: Consider updating to include Introducing Python chapters 4 through 9
+// Todo: Consider updating to include Introducing Python chapters 4 through 9.
+// Todo: Really add chapters 4 and 5 including reviewing quiz questions.
 
 
