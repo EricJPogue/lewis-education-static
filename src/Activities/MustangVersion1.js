@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import { JSONAndAJAXTutorial, RandomStrings, JSONExamples, JSONHostingExample, JSONHostingWebConfigExample, JSONIndex } from '../Links'
+import { JSONAndAJAXTutorial, JSONWebServicesTutorial, RandomStrings, JSONExamples, JSONHostingExample, JSONHostingWebConfigExample, JSONIndex } from '../Links'
 
 export const MustangVersion1 = () => {
 	return (
@@ -20,7 +20,7 @@ You will first create several JSON files with contact
 information and host them in Azure. Then you will create a Web application that will read these JSON files as well as the 
 JSON files that your classmates create.</p>
 <ul style={{listStyleType:'square'}}>
-	<li>Completing the {JSONAndAJAXTutorial()} tutorial</li>
+	<li>Completing {JSONAndAJAXTutorial()} or {JSONWebServicesTutorial()} tutorial</li>
 	<li>Creating multiple personal information JSON files</li>
 	<li>Sharing your personal information JSON files with your classmates</li>
 	<li>Creating a web application that reads and displays you and your classmates personal information JSON files</li>
@@ -29,7 +29,8 @@ JSON files that your classmates create.</p>
 <p>The specific requirements include the following.</p>
 
 <em>Requirement 1</em>
-<p>Complete {JSONAndAJAXTutorial()} and host your implementation on Azure.</p>
+<p>Complete {JSONAndAJAXTutorial()} and host your implementation on Azure. Alternatively you may complete the updated
+version of {JSONWebServicesTutorial()}</p>
 
 <em>Requirement 2</em>
 <p>Create three personal information JSON files to share with your classmates. One file should be for yourself
