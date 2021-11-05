@@ -96,8 +96,6 @@ Always keep in mind the user experience that you want to exist in your applicati
 	<li>{AutocompleteAwesomplete()}</li>
 </ul>  
 
-
-
 </div> )
 
 }

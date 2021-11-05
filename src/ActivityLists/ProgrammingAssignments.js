@@ -116,10 +116,16 @@ export const MatchmakerWithGo = {
 	'estimate':'~6 hours'
 }
 
+export const HealthRiskCalculatorPython = {
+	'name':'Health Insurance Risk Calculator with Python',
+	'link':'/activity/health-risk-calculator-python',
+	'estimate':'~8 hours'
+}
+
 export const HealthRiskCalculatorForTheWeb = {
 	'name':'Health Insurance Risk Calculator for the Web',
 	'link':'/activity/health-risk-calculator-web',
-	'estimate':'~6 hours'
+	'estimate':'~8 hours'
 }
 
 export const HealthRiskCalculatorTeamForTheWeb = {
@@ -231,7 +237,7 @@ export const FinalProjectSprint5 = {
 }
 
 export const FinalProjectSprint6 = {
-	'name':'“Final Project Sprint 6”',
+	'name':'Final Project Sprint 6',
 	'link':'/activity/final-project-sprint-6',
 	'estimate':'~8 hours per team member'
 }
@@ -319,7 +325,6 @@ export const ReviewProgrammingActivity = (assignment, estimatedTime) => {
 }
 
 const sup = (text) => { return (<sup> {text} </sup>)}
-
 
 export const ProgrammingActivityPlus = (assignment, estimatedTime, additionalText) => { 
 	if (assignment != null) {

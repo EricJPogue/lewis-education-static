@@ -5,6 +5,29 @@ import { NavLink } from 'react-router-dom';
 import BloodPressureImage from './HealthRiskCalculatorBloodPressure.png';
 import BodyMassIndexImage from './HealthRiskCalculatorBodyMassIndex.png';
 
+const HealthRiskCalculatorWebProperties = {
+	'name': 'Health Insurance Risk Calculator for the Web', 
+	'language': 'Web',
+	'prerequisites': 'HTML, CSS, JavaScript, VS Code, and Terminal',
+	'type': 'Web application using HTML, CSS, and JavaScript',
+	'requirement1_1': 'Is implemented in a single file name “index.html”',
+	'requirement1_2': 'Is hosted as a public website in Microsoft Azure',
+	'internalLink': '/activity/health-risk-calculator-web'
+}
+
+const internalLink = (displayName, url) => { return ( <NavLink to={url}>{displayName}</NavLink> ) }
+export const HealthRiskCalculatorWebLink = () => {
+	return internalLink(HealthRiskCalculatorWebProperties.name, HealthRiskCalculatorWebProperties.internalLink)
+}
+
+export const HealthRiskCalculatorPythonLink = () => {
+	return internalLink(HealthRiskCalculatorPythonProperties.name, HealthRiskCalculatorPythonProperties.internalLink)
+}
+
+export const HealthRiskCalculatorWebOrPythonLink = () => {
+	return HealthRiskCalculatorWebLink()
+}
+
 export const HealthRiskCalculatorPython = () => { return HealthRiskCalculator(HealthRiskCalculatorPythonProperties) }
 export const HealthRiskCalculatorWeb = ()    => { return HealthRiskCalculator(HealthRiskCalculatorWebProperties) }
 export const HealthRiskCalculatorJava = ()   => { return HealthRiskCalculator(HealthRiskCalculatorJavaProperties) }
@@ -16,17 +39,11 @@ const HealthRiskCalculatorPythonProperties = {
 	'prerequisites': 'Python (v3), VS Code, and Terminal',
 	'type': 'command-line application written in the Python language',
 	'requirement1_1': 'Is implemented in a single Python (.py) file named “RiskCalculator.py”',
-	'requirement1_2': 'Successfully executes from the command line by typing “python3 RiskCalculator.py'
+	'requirement1_2': 'Successfully executes from the command line by typing “python3 RiskCalculator.py',
+	'internalLink': '/activity/health-risk-calculator-python'
 }
 
-const HealthRiskCalculatorWebProperties = {
-	'name': 'Health Insurance Risk Calculator for the Web', 
-	'language': 'Web',
-	'prerequisites': 'HTML, CSS, JavaScript, VS Code, and Terminal',
-	'type': 'Web application using HTML, CSS, and JavaScript',
-	'requirement1_1': 'Is implemented in a single file name “index.html”',
-	'requirement1_2': 'Is hosted as a public website in Microsoft Azure'
-}
+
 
 const HealthRiskCalculatorJavaProperties = {
 	'name': 'Health Insurance Risk Calculator with Java', 

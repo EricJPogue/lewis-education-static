@@ -5,7 +5,6 @@ import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { FinalProjectsAndMoreResponsibility, StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint05'
 
 import { oreillyPlaylistSE, NodeJSExpressAndHandlebars } from '../Links'
-
 import { FinalProjectSprint5 } from './ProgrammingAssignments'
 
 export const al44000Sprint05 = () => {
