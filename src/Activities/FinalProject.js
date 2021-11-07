@@ -87,8 +87,8 @@ export const FinalProjectSprint6 = () => {
 	<li><NavLink to='/activity/final-project-sprint-5'>Final Project Sprint 5</NavLink></li>
 </ul>
 
-<p>This is our first full sprint for our final project. We delivered something in sprint 0, we completed sprint 1 
-planning, and we have made our specific commitment for sprint 1.</p>
+<p>This is our first full sprint for our final project. We delivered something in sprint 5, we completed sprint 6 
+planning, and we have made our specific commitment for sprint 6.</p>
 
 <p>Always remember the that in agile and scrum stories must be 100% complete in order to receive any credit for completing 
 the story. There is no such thing as “almost complete” or even ”99% complete” in scrum. We often use the term <em>done</em> to 
