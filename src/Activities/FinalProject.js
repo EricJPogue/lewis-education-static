@@ -1,6 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+// Define exported activities. 
+export const Start_FinalProject = () => { return (<div>Start working on <em>your</em> <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
+export const Complete_FinalProject = () => { return (<div>Complete <em>your</em> <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
+
 export const FinalProject = () => {
 	return (
 	

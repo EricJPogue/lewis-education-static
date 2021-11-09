@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import { InitialPost,  } from './AL00000Sprint02'
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
-import { Closing  } from './AL00000Sprint06'
+import { Closing } from './AL00000Sprint06'
 import { StandardActivities, StandardActivitiesClosing } from './AL00000Sprint07'
 
 import { oreillyPlaylistICS } from '../Links'

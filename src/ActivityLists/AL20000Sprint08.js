@@ -1,7 +1,10 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
-import { FinalProject, start, complete } from './ProgrammingAssignments'
+import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
+import { StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint08'
+
+import { oreillyPlaylistICS } from '../Links'
+import { Start_FinalProject, Complete_FinalProject } from '../Activities/FinalProject'
 
 export const al20000Sprint08 = () => {
 	return (
@@ -12,27 +15,22 @@ export const al20000Sprint08 = () => {
 strong and deliver a Final Project that makes you proud. Don’t do it for the grade, don’t do it for me, do this one for 
 yourself.</p>  
 
-<p>Let's start with what we hope to learn in sprint 8:</p>
+{LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
-	<li>Independently deliver and present meaningful working software</li>
+	<li>Independently deliver and present meaningful working software as part of your Final Project</li>
+	<li>Present your Final Project to your classmates</li>
 </ul>
 
-<p>Below is our sprint 8 activities list. </p>
+{ActivitiesListIntro()}
 <ol>
-	<li><em style={{color:'red'}}>Stay laser focused on the due dates by reviewing our course calendar</em> <NavLink to='/calendar/8'>[link]</NavLink></li>
-	<li><em>Confirm your Final Project presentation date &amp; time</em></li>
-	<li><em>Review Lab 8, Quiz 8, Discussion 8, Reflection 8, and Final Project Presentation</em></li>
-	<li>{start(FinalProject)}</li>
-	<li>{complete(FinalProject)}</li>
-	<li>Complete your Final Project presentation</li>
-	<li><em>Complete Discussion 8, Lab 8, Quiz 8, Reflection 8, and Final Project Presentation</em></li>
-	<li><em style={{color:'red'}}> Submit all assignments at least two hours prior to your <u>scheduled presentation time</u></em></li>
+	{StandardActivities(Start_FinalProject(), oreillyPlaylistICS(), 8)}
+	{StandardActivitiesClosing(Complete_FinalProject())}
 </ol>
 
-<p>Let’s finish strong. It has been a sincere pleasure.</p>
+{Closing()}
 </div>
 	)
 }
 
-// Todo: Spread readings out so that we have a reading assignment in sprint 8.
+
 // Todo: Add finals date to calendar.
