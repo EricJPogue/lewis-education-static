@@ -18,7 +18,7 @@ yourself.</p>
 {LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
 	<li>Independently deliver and present meaningful working software as part of your Final Project</li>
-	<li>Present your Final Project to your classmates</li>
+	<li>Present your Final Project to your instructor and classmates</li>
 </ul>
 
 {ActivitiesListIntro()}
@@ -31,6 +31,5 @@ yourself.</p>
 </div>
 	)
 }
-
 
 // Todo: Add finals date to calendar.

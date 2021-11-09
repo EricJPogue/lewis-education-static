@@ -66,3 +66,5 @@ const extras = () => {
 		</ul>
 	</div>)
 }
+
+// Todo: In Lab 3 move Coding Standards to the top.

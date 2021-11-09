@@ -52,8 +52,4 @@ const extras = () => {
 	return (null)
 }
 
-// Todo: Change estimated to actual capacity metric to actual over estimated so that it comes out to less than one generally. 
-// Todo: Add lots of links from the Agile Alliance to various activity lists.
-// Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
-// Todo: Consider doing the same thing for testing.
-// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
+// Todo: Update Capacity Ratio Metric to reflect effort, actual capacity, and estimated capacity 

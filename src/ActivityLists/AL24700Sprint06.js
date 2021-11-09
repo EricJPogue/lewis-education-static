@@ -37,14 +37,11 @@ Node.js for your assignments if you would prefer.</p>
 	{InitialPost()}	
 
 	<li>Explore  <NavLink to='/activity-architecture/application-architecture-part1'>Application Architecture - Part 1</NavLink></li>
-
 	{StandardActivitiesClosing(MustangV2, 6)}
 </ol>
 
 {Closing()}
-
 {al24700Sprint06Extras()}
-
 </div>
 
 	)
