@@ -11,6 +11,8 @@ import { HealthRiskCalculatorForTheWeb, complete } from './ProgrammingAssignment
 import { Start_HealthRiskCalculatorWebOrPython } from '../Activities/HealthRiskCalculator'
 
 export const al20000Sprint07 = () => {
+	let i = 1
+	console.log('i = ' + i)
 	return (
 
 <div>
@@ -38,7 +40,7 @@ Web development with HTML, CSS, and JavaScript. But never forget the legendary p
 
 {ActivitiesListIntro()}
 <ol>
-	<li><em>!!! Start Here !!!</em></li>
+	<li><em>!!! Start Here - Now!!!</em></li>
 	{StandardActivities(Start_HealthRiskCalculatorWebOrPython(), oreillyPlaylistICS(), 7)}
 	<li>Determine if you will be focusing on Web development or Python development in Sprints 7 and 8</li>
 	<li>... Or maybe you would prefer working in Python and to start working on <NavLink to='/activity/health-risk-calculator-python'>Health Insurance Risk Calculator with Python</NavLink></li>
