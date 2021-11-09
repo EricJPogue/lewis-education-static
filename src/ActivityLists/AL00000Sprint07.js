@@ -15,3 +15,10 @@ export const StandardActivities = (activity, playlist, sprint) => {
 		<li>{activity}</li>
 	</div> )
 }
+
+export const StandardActivitiesClosing = (activity) => { 
+	return ( <div>
+		<li>{activity}</li>
+		<li><em>Submit Discussion, Quiz, Lab, and Reflection</em></li>
+	</div> ) 
+}

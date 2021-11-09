@@ -3,16 +3,13 @@ import { NavLink } from 'react-router-dom'
 
 import { InitialPost,  } from './AL00000Sprint02'
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
-import { StandardActivitiesClosing, Closing  } from './AL00000Sprint06'
-import { StandardActivities } from './AL00000Sprint07'
+import { Closing  } from './AL00000Sprint06'
+import { StandardActivities, StandardActivitiesClosing } from './AL00000Sprint07'
 
 import { oreillyPlaylistICS } from '../Links'
-import { HealthRiskCalculatorForTheWeb, complete } from './ProgrammingAssignments'
-import { Start_HealthRiskCalculatorWebOrPython } from '../Activities/HealthRiskCalculator'
+import { Start_HealthRiskCalculatorWebOrPython, Complete_HealthRiskCalculatorWebOrPython } from '../Activities/HealthRiskCalculator'
 
 export const al20000Sprint07 = () => {
-	let i = 1
-	console.log('i = ' + i)
 	return (
 
 <div>
@@ -34,30 +31,22 @@ Web development with HTML, CSS, and JavaScript. But never forget the legendary p
 {LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
 	<li>Understand Computer Security</li>
-	<li>Deliver more sophisticated HTML, CSS, and JavaScript Website or Python Terminal development</li>
+	<li>Deliver more sophisticated Web applications using HTML, CSS, and JavaScript Website</li>
+	<li>... Or deliver more sophisticated Python applications</li>
 	<li>Finalize and commit to your Final Project</li> 
 </ul>
 
 {ActivitiesListIntro()}
 <ol>
-	<li><em>!!! Start Here - Now!!!</em></li>
 	{StandardActivities(Start_HealthRiskCalculatorWebOrPython(), oreillyPlaylistICS(), 7)}
-	<li>Determine if you will be focusing on Web development or Python development in Sprints 7 and 8</li>
-	<li>... Or maybe you would prefer working in Python and to start working on <NavLink to='/activity/health-risk-calculator-python'>Health Insurance Risk Calculator with Python</NavLink></li>
-
-<li></li>
-
+	<li>Determine whether you would prefer to focus on Web including Web or Python development going forward</li>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Security and review our associated <NavLink to='/activity-dale/17'>lecture</NavLink></li>
 
 	{InitialPost()}	
 	<li>Review, update, and finalize your <NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
-	<li>Review your Final Project presentation date &amp; time</li>
+	<li>Verify your Final Project presentation date &amp; time</li>
 
-	{StandardActivitiesClosing(HealthRiskCalculatorForTheWeb, 7)}
-	{/* The items below should be consistent across classes. */ }
-	<li>{complete(HealthRiskCalculatorForTheWeb)}</li>
-	<li>... Or complete <NavLink to='/activity/health-risk-calculator-python'>Health Insurance Risk Calculator with Python</NavLink></li>
-	<li><em>Complete Discussion 7, Lab 7, Quiz 7, Reflection 7, and Lab Demo</em></li>
+	{StandardActivitiesClosing(Complete_HealthRiskCalculatorWebOrPython())}
 </ol>
 {Closing()}
 </div>
