@@ -46,7 +46,9 @@ export const ResumeReviewServices = () => { return( <a href='https://lewisu.edu/
 
 export const SequenceSelectionAndRepetition = () => { return( <a href='https://edu.gcfglobal.org/en/computer-science/sequences-selections-and-loops/1/' target='_blank' rel='noopener noreferrer'>Sequences, selections, and loops (repetition)</a> ) }
 
-export const programmingTogether = () => { return internalLink('programming together', '/activity/programming-together')}
+export const programmingTogether = () => { return internalLink('programming together', '/activity/programming-together') }
+export const NodeJSOnAzure = () => { return internalLink('Deploying Node.js on Microsoft Azure', '/activity/programming-together') }
+export const AzureFunctionsWithVSCodeAndJavaScript = () => { return internalLink('Azure Functions with VS Code and JavaScript', '/activity/programming-together') }
 
 export const PythonTurtleLibrary = () => { return externalLink('Turtle', 'https://docs.python.org/3/library/turtle.html#introduction')}
 
@@ -65,6 +67,10 @@ export const AutocompleteW3CSchools = () => { return externalLink('W3C Schools A
 export const AutocompleteJQuery = () => { return externalLink('jQuery Autocomplete', 'https://jqueryui.com/autocomplete/')}
 export const AutocompletePixabay = () => { return externalLink('Pixabay Autocomplete', 'https://github.com/Pixabay/JavaScript-autoComplete/')}
 export const AutocompleteAwesomplete = () => { return externalLink('Awesomplete Autocomplete', 'https://www.sitepoint.com/javascript-autocomplete-widget-awesomplete/')}
+
+export const ServerlessAzure = () => { return externalLink('Azure Functions', 'https://azure.microsoft.com/en-us/overview/serverless-computing/') }
+export const ServerlessGoogle = () => { return externalLink('Google Cloud Functions', 'https://cloud.google.com/functions') }
+export const ServerlessAWS = () => { return externalLink('AWS Lambda', 'https://aws.amazon.com/lambda/') }
 
 const externalLink = (displayName, url) => {
 	return (

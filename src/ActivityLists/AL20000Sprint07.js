@@ -7,8 +7,8 @@ import { StandardActivitiesClosing, Closing  } from './AL00000Sprint06'
 import { StandardActivities } from './AL00000Sprint07'
 
 import { oreillyPlaylistICS } from '../Links'
-import { HealthRiskCalculatorForTheWeb, HealthRiskCalculatorPython, startActivity, complete } from './ProgrammingAssignments'
-import { HealthRiskCalculatorWebLink, HealthRiskCalculatorPythonLink, HealthRiskCalculatorWebOrPythonLink } from '../Activities/HealthRiskCalculator'
+import { HealthRiskCalculatorForTheWeb, complete } from './ProgrammingAssignments'
+import { Start_HealthRiskCalculatorWebOrPython } from '../Activities/HealthRiskCalculator'
 
 export const al20000Sprint07 = () => {
 	return (
@@ -39,13 +39,11 @@ Web development with HTML, CSS, and JavaScript. But never forget the legendary p
 {ActivitiesListIntro()}
 <ol>
 	<li><em>!!! Start Here !!!</em></li>
-	{StandardActivities(HealthRiskCalculatorWebOrPythonLink(), oreillyPlaylistICS(), 7)}
+	{StandardActivities(Start_HealthRiskCalculatorWebOrPython(), oreillyPlaylistICS(), 7)}
 	<li>Determine if you will be focusing on Web development or Python development in Sprints 7 and 8</li>
-	<li>{startActivity(HealthRiskCalculatorForTheWeb)}</li>
-	<li>{startActivity(HealthRiskCalculatorPython)}</li>
 	<li>... Or maybe you would prefer working in Python and to start working on <NavLink to='/activity/health-risk-calculator-python'>Health Insurance Risk Calculator with Python</NavLink></li>
 
-<li>{HealthRiskCalculatorWebLink()} or {HealthRiskCalculatorPythonLink()}</li>
+<li></li>
 
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Security and review our associated <NavLink to='/activity-dale/17'>lecture</NavLink></li>
 

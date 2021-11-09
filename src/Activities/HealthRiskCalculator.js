@@ -5,6 +5,19 @@ import { NavLink } from 'react-router-dom';
 import BloodPressureImage from './HealthRiskCalculatorBloodPressure.png';
 import BodyMassIndexImage from './HealthRiskCalculatorBodyMassIndex.png';
 
+// Define exported activities. 
+const sup = (text) => { return (<sup>{text}</sup>)}
+export const Start_HealthRiskCalculatorWebOrPython = () => { return HealthRiskCalculatorWebOrPython('Start working on ', '') }
+export const Complete_HealthRiskCalculatorWebOrPython = () => { return HealthRiskCalculatorWebOrPython('Complete ', sup('~8 hours')) }
+
+const HealthRiskCalculatorWebOrPython = (prefix, postfix) => {
+	let nameWeb = HealthRiskCalculatorWebProperties.name
+	let linkWeb = HealthRiskCalculatorWebProperties.internalLink
+	let namePython = HealthRiskCalculatorPythonProperties.name
+	let linkPython = HealthRiskCalculatorPythonProperties.internalLink
+	return (<div>{prefix} <NavLink to={linkWeb}>{nameWeb}</NavLink> or <NavLink to={linkPython}>{namePython}</NavLink> {postfix}</div>)
+}
+
 const HealthRiskCalculatorWebProperties = {
 	'name': 'Health Insurance Risk Calculator for the Web', 
 	'language': 'Web',
@@ -13,19 +26,6 @@ const HealthRiskCalculatorWebProperties = {
 	'requirement1_1': 'Is implemented in a single file name “index.html”',
 	'requirement1_2': 'Is hosted as a public website in Microsoft Azure',
 	'internalLink': '/activity/health-risk-calculator-web'
-}
-
-const internalLink = (displayName, url) => { return ( <NavLink to={url}>{displayName}</NavLink> ) }
-export const HealthRiskCalculatorWebLink = () => {
-	return internalLink(HealthRiskCalculatorWebProperties.name, HealthRiskCalculatorWebProperties.internalLink)
-}
-
-export const HealthRiskCalculatorPythonLink = () => {
-	return internalLink(HealthRiskCalculatorPythonProperties.name, HealthRiskCalculatorPythonProperties.internalLink)
-}
-
-export const HealthRiskCalculatorWebOrPythonLink = () => {
-	return HealthRiskCalculatorWebLink()
 }
 
 export const HealthRiskCalculatorPython = () => { return HealthRiskCalculator(HealthRiskCalculatorPythonProperties) }
