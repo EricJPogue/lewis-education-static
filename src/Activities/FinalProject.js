@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 export const Start_FinalProject = () => { return (<div>Start working on <em>your</em> <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 export const Complete_FinalProject = () => { return (<div>Complete <em>your</em> <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 
+
 export const FinalProject = () => {
 	return (
 	
@@ -20,6 +21,7 @@ export const FinalProject = () => {
 <p>In this activity you will deliver a final project that is uniquely your own. What you create should include the 
 features defined in your final project proposal. As much as possible the features should be implemented in the priority 
 order that you identified in your proposal.</p>
+
 <p>It’s understandable that you may not be able to implement all of the features that you identified. However, you will
 need to make sure that your finished product implements sufficient features to be a complete and usable product.</p>
 
@@ -108,21 +110,23 @@ website, and is “demo-able” by every member of the team.</p>
 </div> )
 }
 
+export const Start_FinalProjectSprint7 = () => { return (<div>Start working on <NavLink to='/activity/final-project-sprint-7'>Final Project Sprint 7</NavLink></div>) }
+export const Complete_FinalProjectSprint7 = () => { return (<div>Complete <NavLink to='/activity/final-project-sprint-7'>Final Project Sprint 7</NavLink><sup>~10 hours per team member</sup></div>) }
 export const FinalProjectSprint7 = () => {
 	return (
 	
 <div>
 <br />
-<h4>Final Project Sprint 2</h4>
-<h5>Summary: Sprint 2. Let’s keep building on we have accomplished.</h5>
+<h4>Final Project Sprint 7</h4>
+<h5>Summary: Sprint 7. Let’s keep building on we have accomplished.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
-	<li>“Final Project Proposal” <NavLink to='/activity/final-project-proposal'>[link]</NavLink></li>
-	<li>“Final Project Sprint 1” <NavLink to='/activity/final-project-sprint-1'>[link]</NavLink></li>
+	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
+	<li><NavLink to='/activity/final-project-sprint-6'>Final Project Sprint 6</NavLink></li>
 </ul>
 
 <p>We should be gaining a rhythm in our working together as a team by now. Hopefully we delivered something useful 
-in sprint 1. Now it’s time to focus continuous improvement and living up sprint 2 commitments.</p>
+in sprint 6. Now it’s time to focus continuous improvement and living up sprint 7 commitments.</p>
 
 <p>Part of our rhythm should include:</p>
 <ul style={{listStyleType:'square'}}>
@@ -138,18 +142,19 @@ something special?</p>
 </div> )
 }
 
+export const Start_FinalProjectSprint8 = () => { return (<div>Start working on <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink></div>) }
+export const Complete_FinalProjectSprint8 = () => { return (<div>Complete <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink><sup>~10 hours per team member</sup></div>) }
 export const FinalProjectSprint8 = () => {
 	return (
 	
 <div>
 <br />
-<h4>Final Project Sprint 3</h4>
-<h5>Summary: Sprint 2. This is it. Let’s build something special.</h5>
+<h4>Final Project Sprint 8</h4>
+<h5>Summary: Sprint 8. This is it. Let’s build something special.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
-	<li>“Final Project Proposal” <NavLink to='/activity/final-project-proposal'>[link]</NavLink></li>
-	<li>“Final Project Sprint 1” <NavLink to='/activity/final-project-sprint-1'>[link]</NavLink></li>
-	<li>“Final Project Sprint 2” <NavLink to='/activity/final-project-sprint-2'>[link]</NavLink></li>
+	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
+	<li><NavLink to='/activity/final-project-sprint-7'>Final Project Sprint 7</NavLink></li>
 </ul>
 
 <p>We should be working with a solid cadence. Now it’s time to focus all of our energy on building something special.</p>

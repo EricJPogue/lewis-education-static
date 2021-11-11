@@ -19,7 +19,7 @@ export const al20000Sprint07 = () => {
 on developing more sophisticated terminal applications using Python, or if your energy would be better spent mastering 
 Web development with HTML, CSS, and JavaScript. But never forget the legendary phrase:</p>
 
-<h5>
+<h5> 
 <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
 “With great power there must also come great responsibility”<br /></div>
 <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -45,7 +45,6 @@ Web development with HTML, CSS, and JavaScript. But never forget the legendary p
 	{InitialPost()}	
 	<li>Review, update, and finalize your <NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
 	<li>Verify your Final Project presentation date &amp; time</li>
-
 	{StandardActivitiesClosing(Complete_HealthRiskCalculatorWebOrPython())}
 </ol>
 {Closing()}

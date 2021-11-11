@@ -1,51 +1,46 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { FinalProjectSprint8, start, complete } from './ProgrammingAssignments'
-const programmingAssignment = FinalProjectSprint8
+import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
+import { StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint08'
+
+import { oreillyPlaylistSE } from '../Links'
+import { Start_FinalProjectSprint8, Complete_FinalProjectSprint8 } from '../Activities/FinalProject'
 
 export const al44000Sprint08 = () => {
+	const sprint = 8
 	return (
 
 <div>
 	<h5>Sprint 8: Final project, Software Architecture, Performance, Releases, Reliability, and Security</h5>
 
-<p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 
-strong and deliver a Final Project that makes you proud. Don’t do it for the grade, don’t do it for me, do this one for 
-yourself.</p> 
+	<p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 
+	strong and deliver a Final Project that makes you proud. Don’t do it for the grade, don’t do it for me, do this one for 
+	yourself.</p> 
 
-<p>Let's start with what we hope to learn in sprint 8:</p>
-<ul style={{listStyleType:'square'}}>
-	<li>Utilize your knowledge of Agile development and Saas to deliver a final project that you are proud of creating</li>
-	<li>Understand Software Architecture including performance, releases, reliability, and security</li>
-	<li>Enhance your understanding of application architecture, Object-Oriented Programming, and Databases</li>
-</ul>
+	{LearningObjectivesIntro()}
+	<ul style={{listStyleType:'square'}}>
+		<li>Utilize your knowledge of Agile development and Saas to deliver a final project that you are proud of creating</li>
+		<li>Understand Software Architecture including performance, releases, reliability, and security</li>
+		<li>Enhance your understanding of application architecture, Object-Oriented Programming, and Databases</li>
+	</ul>
 
-<p>In order to do my part if giving you time to build something exceptional, I am removing all non-essential items
-this week's Activities List. As such, our list includes:</p>
-<ol>
-	<li><em style={{color:'red'}}>Stay laser focused on the due dates by reviewing our course calendar</em> <NavLink to='/calendar/8'>[link]</NavLink></li>
-	<li><em>Confirm your Final Project presentation date &amp; time</em></li>
-	<li><em>Review Lab 8, Quiz 8, Discussion 8, Reflection 8, and Final Project Presentation</em></li>
+	{ActivitiesListIntro()}
+	<ol>
+		{StandardActivities(Start_FinalProjectSprint8(), oreillyPlaylistSE(), sprint)}
+		<li>Read Fox Chapter 12 on Performance, Releases, Reliability, and Security</li>
 
-	<li>{start(programmingAssignment)}</li>
+		<li>Complete your team’s sprint 7 Review and Retrospective</li>
+		<li>Focus your energy on delivering and testing your team’s sprint 8 backlog stories</li>
+		<li>Make sure that your project is sustainable and well documented so that a future team could pick up where you left off</li>
+		<li>Complete <NavLink to='/activity-architecture/application-architecture-part2'>Application Architectures, Object-Oriented Programming, and Databases - Part 2</NavLink></li>
 
-	<li>Complete “Application Architectures, Object-Oriented Programming, and Databases - Part 2” <NavLink to='/activity-architecture/application-architecture-part2'>[video]</NavLink></li>
-	<li>Complete your team’s sprint 2 Review and Retrospective</li>
-	<li>Focus your energy on delivering and testing your team’s sprint 3 backlog stories</li>
-
-	<li>Read Fox Chapter 12 on Performance, Releases, Reliability, and Security</li>
-	<li>{complete(programmingAssignment)}</li>
-	<li>Complete your Final Project presentation</li>
-	<li><em>Complete Discussion 8, Lab 8, Quiz 8, Reflection 8, and Final Project Presentation</em></li>
-	<li><em style={{color:'red'}}> Submit all assignments at least two hours prior to your <u>scheduled presentation time</u></em></li>
-</ol>
-
-<p>Let's finish strong and deliver something that makes you proud.</p>
+		{StandardActivitiesClosing(Complete_FinalProjectSprint8())}
+	</ol>
+	{Closing()}
 </div>
 
 	)
 }
 
 // Todo: Consider having only one discussion topic in sprint 8. 
-// Todo: Lab question 2 review and update for non-Python. 

@@ -27,10 +27,8 @@ export const al44000Sprint06 = () => {
 	{ActivitiesListIntro()}
 	<ol>
 		{StandardActivities(FinalProjectSprint6, oreillyPlaylistSE(), 6 )}
-
 		<li>Compete your sprint 5 Review and Retrospective</li>
 		<li>Read Chapter 10 of Fox on Project Management, Scrum, Pairs, and Version Control Systems</li>
-
 		<li>Within {oreillyPlaylistSE()} “Scaling Software Agility” read chapters 1 and 2 focussing on “Assumptions Underlying the Model”</li>
 
 		{InitialPost()}	
@@ -39,7 +37,6 @@ export const al44000Sprint06 = () => {
 		<li>Complete {AzureFunctionsWithVSCodeAndJavaScript()} and build your <em>personal</em> serverless function</li>
 		<li>Review {NodeJSOnAzure()} and consider how it could be used to create a “serverless” function</li>
 		<li>Complete backlog grooming in preparation for sprint 7 planning</li>
-
 		{StandardActivitiesClosing(FinalProjectSprint6, 6)}
 	</ol>
 	{Closing()}
