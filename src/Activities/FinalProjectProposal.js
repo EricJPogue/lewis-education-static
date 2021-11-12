@@ -1,12 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+const FinalProjectProposalName = 'Final Project Proposal'
+const FinalProjectProposalLink = '/activity/final-project-proposal'
+export const FinalProjectProposalNavLink = () => { return( <NavLink to={FinalProjectProposalLink}>{FinalProjectProposalName}</NavLink> )} 
+
 export const FinalProjectProposal = () => {
 	return (
 	
 <div>
 <br />
-<h4>Final Project Proposal</h4>
+<h4>{FinalProjectProposalName}</h4>
 <h5>Summary: Create a final project proposal webpage.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>

@@ -1,15 +1,23 @@
 
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { JSONAndAJAXTutorial, RandomStrings, JSONExamples, JSONHostingExample, JSONHostingWebConfigExample, JSONIndex } from '../Links'
 import { AutocompleteAwesomplete, AutocompleteJQuery, AutocompletePixabay, AutocompleteW3CSchools } from '../Links'
+
+export const Start_MustangVersion2 = () => { return (<div>Start working on {MustangVersion2NavLink()}</div>) }
+export const Complete_MustangVersion2 = () => { return (<div>Complete {MustangVersion2NavLink()} <sup>~8 hours</sup></div>) }
+
+const MustangVersion2Name = 'Mustang version 2'
+const MustangVersion2Link = '/activity/mustang-v2'
+const MustangVersion2NavLink = () => { return( <NavLink to={MustangVersion2Link}>{MustangVersion2Name}</NavLink> )} 
 
 export const MustangVersion2 = () => {
 	return (
 	
 <div>
 <br />
-<h4>Mustang version 2</h4>
+<h4>{MustangVersion2Name}</h4>
 <h5>Summary: Mustang is a simple contact management application. In version 1 we will create the a basic web application
 that can access JSON based contact information that we are also creating.</h5>
 <h5>Prerequisites: Windows 10 or MacOS, VS Code, Chrome, HTML, CSS, JavaScript, and Azure</h5>
@@ -83,7 +91,7 @@ in Azure to host you personal information JSON files by:</p>
 	<li>Enhancing the server-side process above so that it appropriately responds to an Ajax requests</li>
 </ol>
 
-<em>Requirement 6</em>
+<em>Requirement 7</em>
 <p>The final requirement for Mustang v2 is a Google Search style search (autocomplete) for contacts in the application. 
 For implementing this feature you will want to research various options for implementing a Google Search style search 
 style field in JavaScript, experiment with one or two options, and then select one to implement in your application. 
@@ -95,6 +103,42 @@ Always keep in mind the user experience that you want to exist in your applicati
 	<li>{AutocompletePixabay()}</li>
 	<li>{AutocompleteAwesomplete()}</li>
 </ul>  
+
+</div> )
+
+}
+
+export const Start_MustangVersion3 = () => { return (<div>Start working on {MustangVersion3NavLink()}</div>) }
+export const Complete_MustangVersion3 = () => { return (<div>Complete {MustangVersion3NavLink()} <sup>~5 hours</sup></div>) }
+
+const MustangVersion3Name = 'Mustang version 3'
+const MustangVersion3Link = '/activity/mustang-v3'
+const MustangVersion3NavLink = () => { return( <NavLink to={MustangVersion3Link}>{MustangVersion3Name}</NavLink> )} 
+
+export const MustangVersion3 = () => {
+	return (
+	
+<div>
+<br />
+<h4>{MustangVersion3Name}</h4>
+<h5>Summary: In this version of Mustang we will enhance our contact management application so that it stores persistent data.</h5>
+<h5>Prerequisites: Windows 10 or MacOS, VS Code, Chrome, HTML, CSS, JavaScript, and Azure</h5>
+			
+<p>In {MustangVersion3Name} you will enhance what you created in {MustangVersion2NavLink()} to add functionality that 
+will allow the application to store persistent data on the server. In order to do this you will need to utilize 
+server-side file storage or a database.</p>
+
+<p>After verifying Requirements 1 through 7 in {MustangVersion2NavLink()}, continue with implementing the following 
+requirements.</p>
+
+<em>Requirement 8</em>
+<p>Implement Create Contact and Read Contacts features that utilize persistent storage to save new contacts and load 
+existing contacts when the application starts (“Create” and “Read” parts of CRUD). Note that creating a new Contact
+must not overwrite existing contacts.</p>
+
+<em>Requirement 9</em>
+<p>Implement a Import contacts feature that reads each of the JSON files created by your classmates and saves them
+to your application’s persistent store.</p>
 
 </div> )
 

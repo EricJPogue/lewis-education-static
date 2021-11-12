@@ -54,9 +54,9 @@ const al24700Sprint06Extras = () => {
 <br />
 <h5>Extras:</h5>
 <ul style={{listStyleType:'square'}}>
-	<li>Complete Programming Together with “Deploying Node.js on Microsoft Azure” <a href='https://app.knowmia.com/lyyA' target='_blank' rel='noopener noreferrer'>[link]</a></li>		
-	<li>Optionally complete Programming Together with “React On Azure” <a href='https://app.knowmia.com/bBVA' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li>Optionally review the “React - The Complete Guide” video tutorial series available from O'Reilly <a href='https://learning.oreilly.com/videos/react-the/9781789132229' target='_blank' rel='noopener noreferrer'>[link]</a></li>					
+	<li>Complete Programming Together with <a href='https://app.knowmia.com/lyyA' target='_blank' rel='noopener noreferrer'>Deploying Node.js on Microsoft Azure</a></li>		
+	<li>Optionally complete Programming Together with <a href='https://app.knowmia.com/bBVA' target='_blank' rel='noopener noreferrer'>React On Azure</a></li>
+	<li>Optionally review the video tutorial series available from O'Reilly <a href='React - The Complete Guide' target='_blank' rel='noopener noreferrer'>[link]</a></li>					
 </ul>
 </div>
 

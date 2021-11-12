@@ -26,6 +26,7 @@ does not require you to post anything.</p>
 <ol>
 	<li><em style={{color:'red'}}>Stay laser focused on the due dates by reviewing our course calendar</em> <NavLink to='/calendar/8'>[link]</NavLink></li>
 	<li>Confirm your final project presentation date &amp; time</li>
+	<li>Explore <NavLink to='/activity-architecture/application-architecture-part2'>Application Architecture - Part 2</NavLink></li>
 	<li><em>Review sprint 8 assignments including Final Project Presentation, Lab 8, Quiz 8, Discussion 8, and Reflection 8</em></li>
     <li>Complete Final Project version 2<sup> ~12 hours</sup></li>
     <li><em>Submit your Final Project and all assignment including Final Project Presentation, Lab 8, Quiz 8, and Reflection 8
