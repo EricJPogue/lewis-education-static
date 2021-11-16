@@ -3,9 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 import { FinalProjectProposalNavLink } from './FinalProjectProposal';
 
-// Define exported activities. 
-export const Start_FinalProject = () => { return (<div>Start working on <em>your</em> <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
-export const Complete_FinalProject = () => { return (<div>Complete <em>your</em> <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
+export const Start_FinalProject = () => { return (<div>Start working on your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
+export const Complete_FinalProject = () => { return (<div>Complete your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 
 export const FinalProject = () => {
 	return (
@@ -55,7 +54,10 @@ are <em>greater in complexity</em> than features we delivered in previous applic
 </div> )
 }
 
-// !!! Start Here: Add Final Project Distributed to Web.
+export const Start_FinalProjectDistributedV1 = () => { return (<div>Start working on version 1 of your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink></div>) }
+export const Complete_FinalProjectDistributedV1 = () => { return (<div>Complete version 1 of your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink><sup> ~5 hours</sup></div>) }
+export const Start_FinalProjectDistributed = () => { return (<div>Start working on your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink></div>) }
+export const Complete_FinalProjectDistributed = () => { return (<div>Complete your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink> <sup> ~12 hours</sup></div>) }
 
 export const FinalProjectDistributed = () => {
 	return (
@@ -63,7 +65,7 @@ export const FinalProjectDistributed = () => {
 <div>
 <br />
 <h4>Final Project</h4>
-<h5>Summary: Based on our final project proposal, you are going to deliver something uniquely your own.</h5>
+<h5>Summary: Based on your final project proposal, you are going to deliver something uniquely your own.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
 	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
@@ -90,17 +92,12 @@ need to make sure that your finished product implements sufficient features to b
 features we delivered in previous applications.</p>
 
 <em>Requirement 3</em>
-<p>Enhance your application so that it implements at least two (2) meaningful features that 
+<p>Enhance your application so that it implements at least two (2) meaningful client features that 
 are <em>greater in complexity</em> than features we delivered in previous applications.</p>
 
 <em>Requirement 4</em>
-<p>Update your <NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink> and README.md file so they reflect:</p>
-<ol>
-	<li>What was originally planned for your final project</li>
-	<li>What was delivered in your Final Project</li>
-	<li>What would be the next feature(s) you would add if you had more time</li>
-	<li>Contact information for yourself if someone wanted to contact you about continuing to enhance your application</li>
-</ol>
+<p>Enhance your application so that it implements at least two (2) server-side features that 
+are <em>greater or equal in complexity</em> than features we delivered in previous applications.</p>
 </div> )
 }
 

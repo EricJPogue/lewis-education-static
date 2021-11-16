@@ -25,7 +25,7 @@ import { CodingStandards, CodingStandardsValidator } from './Activities/CodingSt
 import { QuizMaster } from './Activities/QuizMaster'
 import { GitCommands } from './Activities/GitCommands'
 import { FinalProjectProposal } from './Activities/FinalProjectProposal'
-import { FinalProject, FinalProjectSprint5, FinalProjectSprint6, FinalProjectSprint7, FinalProjectSprint8 } from './Activities/FinalProject'
+import { FinalProject, FinalProjectDistributed, FinalProjectSprint5, FinalProjectSprint6, FinalProjectSprint7, FinalProjectSprint8 } from './Activities/FinalProject'
 import { PythonNumberingSystems } from './Activities/PythonNumberingSystems'
 import { PythonTurtleDraw } from './Activities/PythonTurtleDraw'
 import { HTML } from './Activities/HTML'
@@ -96,6 +96,7 @@ class Activity extends Component {
 			case 'quiz-master': return QuizMaster()
 			case 'final-project-proposal': return FinalProjectProposal()
 			case 'final-project': return FinalProject()
+			case 'final-project-distributed': return FinalProjectDistributed()
 			case 'final-project-sprint-5': return FinalProjectSprint5()
 			case 'final-project-sprint-6': return FinalProjectSprint6()
 			case 'final-project-sprint-7': return FinalProjectSprint7()

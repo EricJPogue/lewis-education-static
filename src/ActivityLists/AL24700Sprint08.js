@@ -1,6 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
+import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
+import { StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint08'
+
+import { Start_FinalProjectDistributed, Complete_FinalProjectDistributed } from '../Activities/FinalProject'
+import { oreillyPlaylistWeb } from '../Links'
+
 export const al24700Sprint08 = () => {
 	return (
 
@@ -11,30 +17,20 @@ export const al24700Sprint08 = () => {
 strong and deliver a Final Project that makes you proud. Don’t do it for me, don’t do it for the grade, do it for 
 yourself.</p>  
 
-<p>By the end of the sprint you will:</p>
+{LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
 	<li>Deliver a sophisticated web application utilizing technologies that include HTML, CSS, JavaScript, Azure, and Node.js or PHP</li>
     <li>Explore leading edge web development technology trends and determine where you would like to focus your future learning 
 		efforts</li>
 </ul>  
 
-<p>Very intentionally, I have removed almost everything except our Final Project from our activities list in hopes 
-that we will be able to focus entirely on delivering something special. Even our discussion topic is trivial and 
-does not require you to post anything.</p>
-
-<p>With this in mind our activities list includes:</p>
+{ActivitiesListIntro()}
 <ol>
-	<li><em style={{color:'red'}}>Stay laser focused on the due dates by reviewing our course calendar</em> <NavLink to='/calendar/8'>[link]</NavLink></li>
-	<li>Confirm your final project presentation date &amp; time</li>
+	{StandardActivities(Start_FinalProjectDistributed(), oreillyPlaylistWeb(), 8)}
 	<li>Explore <NavLink to='/activity-architecture/application-architecture-part2'>Application Architecture - Part 2</NavLink></li>
-	<li><em>Review sprint 8 assignments including Final Project Presentation, Lab 8, Quiz 8, Discussion 8, and Reflection 8</em></li>
-    <li>Complete Final Project version 2<sup> ~12 hours</sup></li>
-    <li><em>Submit your Final Project and all assignment including Final Project Presentation, Lab 8, Quiz 8, and Reflection 8
-		<em style={{color:'red'}}> at least two hours prior to your scheduled Final Project presentation time</em></em></li>
+	{StandardActivitiesClosing(Complete_FinalProjectDistributed())}
  </ol>
-
-<p>Let’s finish strong. It has been a sincere pleasure.</p>
-
+ {Closing()}
 </div>
 
 	)

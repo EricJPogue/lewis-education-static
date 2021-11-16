@@ -24,7 +24,7 @@ export const StandardActivitiesClosing = (activity) => {
 		<li><em>Submit your Final Project Presentation assignment <u>at least two hours before to your scheduled presentation time</u></em></li>
 		<li><em>Deliver your Final Project Presentation during your scheduled presentation time</em></li>
 		<li>{activity}</li>
-		<li><em style={{color:'red'}}>Submit Quiz, Lab, and Reflection by the end of the day <u>Thursday, December 16, 2021</u>... no late assignments</em></li>
+		<li><em style={{color:'red'}}>Submit <u>all assignments</u> by the end of the day <u>Thursday, December 16, 2021</u>... no late assignments</em></li>
 	</div> ) 
 }
 

@@ -7,9 +7,8 @@ import { Closing } from './AL00000Sprint06'
 import { StandardActivities, StandardActivitiesClosing } from './AL00000Sprint07'
 
 import { Start_MustangVersion3, Complete_MustangVersion3 } from '../Activities/MustangVersion2'
-import { Start_FinalProject, Complete_FinalProject } from '../Activities/FinalProject'
+import { Start_FinalProjectDistributedV1, Complete_FinalProjectDistributedV1 } from '../Activities/FinalProject'
 import { oreillyPlaylistWeb } from '../Links'
-
 
 export const al24700Sprint07 = () => {
 	let sprint = 7
@@ -35,10 +34,8 @@ version 3 by implementing persistent storage. Second, we will be delivering vers
 	<li>{Complete_MustangVersion3()}</li>
 
 	{InitialPost()}	
-	<li>{Start_FinalProject()}</li>
-
-	<li><em>Complete Final Project version 1</em><sup> ~5 hours</sup></li>
-	{StandardActivitiesClosing(Complete_FinalProject())}
+	<li>{Start_FinalProjectDistributedV1()}</li>
+	{StandardActivitiesClosing(Complete_FinalProjectDistributedV1())}
  </ol>
 
  {Closing()}
