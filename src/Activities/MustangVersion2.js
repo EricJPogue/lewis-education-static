@@ -83,12 +83,12 @@ in Azure to host you personal information JSON files by:</p>
 <em>Requirement 6</em>
 <p>Implement a visually appealing Zip Code to City and State Autocompletion by:</p>
 <ol>
-	<li>Creating a graphical user interface that encourages user to enter the zip code prior to the city or state</li>
+	<li>Creating a graphical user interface that encourages users to enter the zip code prior to the city or state</li>
 	<li>Validating a 5 digit zip code when it is entered</li>
-	<li>Updating the city and state when a new zip code is entered</li>
-	<li>NOT overwriting either the city or the state if either one the city or state are already entered ("do no harm")</li>
-	<li>implementing server-side processing in either PHP or Node.js that returns the default city/state for any Illinois zip code</li>
-	<li>Enhancing the server-side process above so that it appropriately responds to an Ajax requests</li>
+	<li>Updating the city and state when a new zip code is entered but NOT overwriting either the city or the state if either is already entered</li>
+	<li>Implementing server-side processing in either PHP or Node.js that returns the default city/state for local Illinois zip codes</li>
+	<li>Enhancing the server-side process above so that it appropriately responds to Ajax requests</li>
+	<li>Testing that entering a zip code of "60106" in the zip code field correctly autocomplete "Bensenville, IL"</li>
 </ol>
 
 <em>Requirement 7</em>
