@@ -22,7 +22,7 @@ export const al44000Sprint07 = () => {
 
 	{LearningObjectivesIntro()}
 	<ul style={{listStyleType:'square'}}>
-		<li>Utilize your knowledge of Agile development and Saas to deliver your sprint 2 backlog stories</li>
+		<li>Utilize your knowledge of Agile development and Saas to deliver sprint backlog stories</li>
 		<li>Understand Design Patterns with a particular focus on the Model-View-Controller pattern</li>
 		<li>Delivery a basic React application in Azure</li>
 		<li>Understand Application architecture particularly as it relates to Object-Oriented Programming and Databases</li>
@@ -31,7 +31,7 @@ export const al44000Sprint07 = () => {
 	{ActivitiesListIntro()}
 	<ol>
 		{StandardActivities(Start_FinalProjectSprint7(), oreillyPlaylistSE(), sprint)}
-		<li>Complete your team’s sprint 1 Review and Retrospective</li>
+		<li>Complete your team’s sprint 6 Review and Retrospective</li>
 		<li>Focus your energy on delivering and testing your sprint 2 backlog stories</li>
 		<li>Read Fox Chapter 11 on Design Patterns</li>
 		<li>Within {oreillyPlaylistSE()} read “Design Patterns: Elements of Reusable Object-Oriented Software” through 
