@@ -3,12 +3,14 @@ import ReactPlayer from 'react-player'
 
 import * as URLParameters from './URLParameters'
 
+import { SeatSelector } from './Activities/SeatSelector'
+
+
 import { StudyTable } from './Activities/StudyTable'
 import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './Activities/HelloWorld'
 import { MatchmakerPython, MatchmakerWeb, MatchmakerJava, MatchmakerGo, MatchmakerExamples } from './Activities/Matchmaker';
 import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './Activities/HealthRiskCalculator'
 import { HealthRiskCalculatorTeamWeb } from './Activities/HealthRiskCalculatorTeam'
-
 
 import { OvalDrawPlusJava } from './Activities/OvalDrawPlus'
 import { ExampleCode } from './Activities/ExampleCode'
@@ -79,6 +81,9 @@ class Activity extends Component {
 	activity() {
 		let activityReference = this.props.match.params.reference
 		switch(activityReference) {
+			case 'seat-selector': return SeatSelector()
+
+
 			// Each of the case statements below represent a link to an activity. Activities are referenced via the
 			// application URL. For example, the following two links would take us to the test and production Blended 
 			// Learning activities:

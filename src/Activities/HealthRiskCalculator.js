@@ -43,8 +43,6 @@ const HealthRiskCalculatorPythonProperties = {
 	'internalLink': '/activity/health-risk-calculator-python'
 }
 
-
-
 const HealthRiskCalculatorJavaProperties = {
 	'name': 'Health Insurance Risk Calculator with Java', 
 	'language': 'Java',
