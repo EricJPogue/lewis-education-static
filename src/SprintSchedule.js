@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { courseTitle } from './URLParameters'
-import { CSTDate, incrementDate, isToday, pastDate, sprintCalendarFromURL, tuesdayThursdayClass, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
+import { CSTDate, incrementDate, isToday, pastDate, sprintCalendarFromURL, tuesdayThursdayClass, sprintStartDate, sprintEndDateWithoutTime, finalExamDateAndTime } from './SprintDates'
 
 export class SprintClassActivities extends Component {
 	// Todo: Update 'currentSprint()+1' to 'currentSprintBaseOne()'.
@@ -30,7 +30,7 @@ export class SprintClassActivities extends Component {
 		return( 
 		<div>
 			<h4>{courseTitle()}</h4>
-			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <em>{sprintEndDateWithoutTime(sprint-1)} at 11:59pm CT.</em></p>
+			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <em>{sprintEndDateWithoutTime(sprint-1)} at 11:59 PM CT.</em></p>
 			<h5 style={{marginTop:'32px', color: "grey"}} onClick={() => this.headerClicked(sprint)}>Calendar | <span style={{color: "black"}}>Schedule</span></h5>
 		</div>	
 		)
@@ -77,7 +77,6 @@ export class SprintClassActivities extends Component {
 		"SecondFriday":    "Lab"
 	}
 
-
 	MWFScheduleSprint8 = {
 		"FirstMonday":     "Sprint Planning",
 		"FirstWednesday":  "Demos & Retrospectives",
@@ -85,6 +84,13 @@ export class SprintClassActivities extends Component {
 		"SecondMonday":    "No regular classes (final exams)",
 		"SecondWednesday": "No regular classes (final exams)",
 		"SecondFriday":    "No regular classes (final exams)"
+	}
+
+	finalExamDateAndTimeTextForFinalSprint = () => {
+		if (this.currentSprintBaseOne() === 8)
+			return (<div><br />The Final Exam will be held on  <em>{finalExamDateAndTime()}</em> with in-person attendance required.</div>)
+		else
+			return null
 	}
 
 	renderScheduleRow = (activityDate,activity) => {
@@ -123,6 +129,7 @@ export class SprintClassActivities extends Component {
 						{this.renderScheduleRow(incrementDate(dates.start,11),schedule.SecondFriday)}
 					</tbody>
 				</Table>
+				{this.finalExamDateAndTimeTextForFinalSprint()}
 			</div>
 		)
 	}

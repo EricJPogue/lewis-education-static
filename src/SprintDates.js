@@ -1,3 +1,5 @@
+import { cpsc } from './URLParameters'
+
 import * as URLParameters from './URLParameters'
 
 export const sprintCalendarFromURL = () => {
@@ -29,6 +31,8 @@ export const tuesdayThursdayClass = () => {
 		default: return false;
 	}
 }
+
+
 
 export const sprintCalendar = (startDateAndDuration) => {
 	// The following structure represents the sprint calendar for any class that starts on 2020-01-13 and is 16 weeks long. 
@@ -65,6 +69,17 @@ export const sprintCalendar = (startDateAndDuration) => {
 
 	console.log('Fatal Error: sprintCalendar() called with invalid start date and duration')
 	return sprintCalendarFall_2021_08_30_16;
+}
+
+export const finalExamDateAndTime = () => {
+	let classReference = cpsc()
+	switch(classReference) {
+		case '20000-fall-2021-002': return 'Monday, December 13 from 10:30 AM to 12:30 AM CT'
+		case '20000-fall-2021-003': return 'Friday, December 17 from 10:30 AM to 12:30 AM CT'
+		case '24700-fall-2021-001': return 'Friday, December 17 from 4 PM to 6 PM CT'
+		case '44000-fall-2021-001': return 'Monday, December 13 from 4 PM to 6 PM CT'
+		default: return null
+	}
 }
 
 export const CSTDate = (dateIn, includeYear, includeTime) => {
@@ -134,3 +149,4 @@ export const sprintEndDateWithoutTime = (sprintNumber) => {
 	let sprintCalendar = sprintCalendarFromURL()
 	return CSTDate(sprintCalendar[sprintNumber].end,false,false)
 }
+

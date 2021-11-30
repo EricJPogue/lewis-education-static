@@ -82,8 +82,3 @@ check for programming together <NavLink to='/activity/programming-together'>tuto
 	) 
 }
 
-// Todo: Remove "final comments" from all assignments.
-// Todo: Spread readings out so that we have a reading assignment in sprint 8. Consider moving chapter 5, 13, 15,
-// 16, and 17 each back one sprint and consider adding Python and Web development book reading up (possibly
-// replacing W3C tutorials). Note that it likely does not make sense to move the Web development chapter before
-// networks. I suggested that somewhere, but should reconsider. 
