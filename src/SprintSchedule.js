@@ -30,7 +30,8 @@ export class SprintClassActivities extends Component {
 		return( 
 		<div>
 			<h4>{courseTitle()}</h4>
-			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <em>{sprintEndDateWithoutTime(sprint-1)} at 11:59 PM CT.</em></p>
+			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <u><em>{sprintEndDateWithoutTime(sprint-1)} at 11:59 PM CT.</em></u></p>
+			<p>{this.finalExamDateAndTimeTextForFinalSprint()}</p>
 			<h5 style={{marginTop:'32px', color: "grey"}} onClick={() => this.headerClicked(sprint)}>Calendar | <span style={{color: "black"}}>Schedule</span></h5>
 		</div>	
 		)
@@ -88,7 +89,7 @@ export class SprintClassActivities extends Component {
 
 	finalExamDateAndTimeTextForFinalSprint = () => {
 		if (this.currentSprintBaseOne() === 8)
-			return (<div><br />The Final Exam will be held on  <em>{finalExamDateAndTime()}</em> with in-person attendance required.</div>)
+			return (<div>Final Project Presentations will be held during our scheduled Final Exam time with is <u><em>{finalExamDateAndTime()}</em></u> with in-person attendance required.</div>)
 		else
 			return null
 	}
@@ -129,7 +130,6 @@ export class SprintClassActivities extends Component {
 						{this.renderScheduleRow(incrementDate(dates.start,11),schedule.SecondFriday)}
 					</tbody>
 				</Table>
-				{this.finalExamDateAndTimeTextForFinalSprint()}
 			</div>
 		)
 	}
