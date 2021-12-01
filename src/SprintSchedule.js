@@ -89,7 +89,7 @@ export class SprintClassActivities extends Component {
 
 	finalExamDateAndTimeTextForFinalSprint = () => {
 		if (this.currentSprintBaseOne() === 8)
-			return (<div>Final Project Presentations will be held during our scheduled Final Exam time with is <u><em>{finalExamDateAndTime()}</em></u> with in-person attendance required.</div>)
+			return (<div>Final Project Presentations will be held during our scheduled Final Exam time which is <u><em>{finalExamDateAndTime()}</em></u> with in-person attendance required.</div>)
 		else
 			return null
 	}
