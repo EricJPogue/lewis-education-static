@@ -32,7 +32,7 @@ export const al44000Sprint07 = () => {
 	<ol>
 		{StandardActivities(Start_FinalProjectSprint7(), oreillyPlaylistSE(), sprint)}
 		<li>Complete your team’s sprint 6 Review and Retrospective</li>
-		<li>Focus your energy on delivering and testing your sprint 2 backlog stories</li>
+		<li>Focus your energy on delivering and testing your sprint 7 backlog stories</li>
 		<li>Read Fox Chapter 11 on Design Patterns</li>
 		<li>Within {oreillyPlaylistSE()} read “Design Patterns: Elements of Reusable Object-Oriented Software” through 
 			chapter 1 focussing on “Guide to Readers” and “Model/View/Controller”</li>

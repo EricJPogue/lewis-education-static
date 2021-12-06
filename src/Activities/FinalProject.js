@@ -191,7 +191,7 @@ something special?</p>
 }
 
 export const Start_FinalProjectSprint8 = () => { return (<div>Start working on <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink></div>) }
-export const Complete_FinalProjectSprint8 = () => { return (<div>Complete <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink><sup>~10 hours per team member</sup></div>) }
+export const Complete_FinalProjectSprint8 = () => { return (<div>Complete <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink><sup>~12 hours per team member</sup></div>) }
 export const FinalProjectSprint8 = () => {
 	return (
 	
