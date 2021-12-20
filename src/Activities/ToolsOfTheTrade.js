@@ -1,26 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { courseNumber } from '../URLParameters' 
+import { getCourseNumber } from '../data/ClientDataAPIs' 
 
 import { Discord, OReillyBooks, Firefox, Chrome, VSCode, Office365, PowerShell, Terminal, ScreenCapture, Git, 
 	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, Java, JavaTutorial, Go } from '../Links'
 
 export const Tools = () => {
 	const checkNodeJS = () => {
-		if ((courseNumber() === 24700) || (courseNumber() === 44000)) {
+		if ((getCourseNumber() === 24700) || (getCourseNumber() === 44000)) {
 			return ( <li>{NodeJS()} development environment</li> )
 		}
 	}
 
 	const checkJava = () => {
-		if (courseNumber() === 24500) {
+		if (getCourseNumber() === 24500) {
 			return ( <li>{Java()} development environment reviewing the associated {JavaTutorial()}</li> )
 		}
 	}
 
 	const checkGo = () => {
-		if (courseNumber() === 36000) {
+		if (getCourseNumber() === 36000) {
 			return ( <li>{Go()} development environment</li> )
 		}
 	}

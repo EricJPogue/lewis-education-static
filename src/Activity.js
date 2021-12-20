@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player'
 
-import * as URLParameters from './URLParameters'
+import { getCourseTitle } from './data/ClientDataAPIs';
 
 import { SeatSelector } from './Activities/SeatSelector'
 
@@ -236,7 +236,7 @@ class Activity extends Component {
 	render() {
 		return (
 			<div>
-				<h4>{URLParameters.courseTitle()}</h4>
+				<h4>{getCourseTitle()}</h4>
 				{this.activity()}
 			</div>
 		)

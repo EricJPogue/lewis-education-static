@@ -4,7 +4,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { classSyllabusURL } from '../URLParameters'
+import { getSyllabusURL /* classSyllabusURL */ } from '../data/ClientDataAPIs'
+
 import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
 import { Blended } from '../Links'
 
@@ -43,7 +44,7 @@ export const StandardActivities = (programmingAssignment) => {
 	return ( <div>
 
 <li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/1'>Calendar</NavLink> and sprint 1 <NavLink to='/schedule/1'>Schedule</NavLink></li>
-<li>Review our course <a href={classSyllabusURL()}>syllabus</a></li>
+<li>Review our course <a href={getSyllabusURL() /* classSyllabusURL() */}>syllabus</a></li>
 
 {/* The blended learning link below stopped supporting embedded functionality in the first half of 2021. We may want to 
     retest '<NavLink to='/activity/blended-learning'>Blended Learning &amp; Flipped Classroom</NavLink>' at some point. */}

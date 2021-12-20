@@ -45,3 +45,5 @@ version 3 by implementing persistent storage. Second, we will be delivering vers
 }
 
 // Review FinalProjectDistributed to see if we need more to differentiate version 1 from version 2.
+// Following Coding Standards are graded twice. Consider updating programming assignment so that it does not have 
+//     coding standards as requirement 4.  

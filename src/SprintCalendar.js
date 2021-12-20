@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
-import { CSTDate, duration, sprintCalendarFromURL, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
-import { courseTitle } from './URLParameters'
+import { CSTDate, duration, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
+import { getCalendar, getCourseTitle } from './data/ClientDataAPIs'
 
 export class SprintCalendar extends Component {
 	headerClicked = (input) => {
@@ -24,7 +24,6 @@ export class SprintCalendar extends Component {
 	}
 
 	renderSummaryText = (sprint) => {
-		console.log('sprint='+sprint)
 		if (sprint === -1)
 			return (null)
 		else
@@ -34,9 +33,7 @@ export class SprintCalendar extends Component {
 	}
 
 	renderCalendarBody = () => {
-		console.log(1)
-		let sprintCalendar = sprintCalendarFromURL()
-		console.log(sprintCalendar)
+		let sprintCalendar = getCalendar()
 
 		return sprintCalendar.map((row, index) => {
 			const {start, end, notes} = row 
@@ -65,7 +62,7 @@ export class SprintCalendar extends Component {
 	render = () => {
 		return (
 			<div>
-			<h4>{courseTitle()}</h4>
+			<h4>{getCourseTitle()}</h4>
 			{this.renderSummaryText(this.currentSprint())}
 
 			<h5 style={{marginTop:'32px'}} onClick={() => this.headerClicked(this.currentSprint()+1)}>Calendar | <span style={{color: "grey"}}>Schedule</span></h5>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
-import { courseTitle } from './URLParameters'
-import { CSTDate, incrementDate, isToday, pastDate, sprintCalendarFromURL, tuesdayThursdayClass, sprintStartDate, sprintEndDateWithoutTime, finalExamDateAndTime } from './SprintDates'
+import { CSTDate, incrementDate, isToday, pastDate, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
+import { getCalendar, getCourseTitle, finalExamDateAndTime, tuesdayThursdayClass } from './data/ClientDataAPIs'
 
 export class SprintClassActivities extends Component {
 	// Todo: Update 'currentSprint()+1' to 'currentSprintBaseOne()'.
@@ -29,9 +29,9 @@ export class SprintClassActivities extends Component {
 		let sprint = this.currentSprint()+1
 		return( 
 		<div>
-			<h4>{courseTitle()}</h4>
+			<h4>{getCourseTitle()}</h4>
 			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <u><em>{sprintEndDateWithoutTime(sprint-1)} at 11:59 PM CT.</em></u></p>
-			<p>{this.finalExamDateAndTimeTextForFinalSprint()}</p>
+			{this.finalExamDateAndTimeTextForFinalSprint()}
 			<h5 style={{marginTop:'32px', color: "grey"}} onClick={() => this.headerClicked(sprint)}>Calendar | <span style={{color: "black"}}>Schedule</span></h5>
 		</div>	
 		)
@@ -114,7 +114,7 @@ export class SprintClassActivities extends Component {
 			default: schedule = this.MWFSchedule
 		}
 
-		const calendar = sprintCalendarFromURL()
+		const calendar = getCalendar()
 		const dates = calendar[this.currentSprint()]
 		return (
 			<div>
@@ -164,7 +164,7 @@ export class SprintClassActivities extends Component {
 			default: schedule = this.TTSchedule
 		}
 
-		let calendar = sprintCalendarFromURL()
+		let calendar = getCalendar()
 		let dates = calendar[this.currentSprint()]
 		return (
 			<div>

@@ -37,3 +37,6 @@ yourself.</p>
 }
 
 // Review FinalProjectDistributed to see if we need more to differentiate version 1 from version 2.
+// Update Lab 8 to remove final question.
+// Update Lab 8 to reference Final Project version 2 and to make sure that the students describe what they implemented 
+//     that meet the requirement.

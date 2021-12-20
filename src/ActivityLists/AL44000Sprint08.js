@@ -43,4 +43,5 @@ export const al44000Sprint08 = () => {
 	)
 }
 
+// Todo: Update Final Project Presentation assignment to match other classes. Maybe update all the other assignments?
 // Todo: Consider having only one discussion topic in sprint 8. 

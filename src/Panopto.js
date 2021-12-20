@@ -1,13 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { cpsc, courseTitle, classSyllabusURL } from './URLParameters'
+import { getCourseTitle, getSyllabusURL /* classSyllabusURL */ } from './data/ClientDataAPIs';
+import { getClassIDfromURL } from './data/ClientDataAPIs'
 import { Blended } from './Links'
 
 export const welcome2021Fall = () => {
 	return (
 		<div>
-		<h4>{courseTitle()}</h4>
+		<h4>{getCourseTitle()}</h4>
 		<h5>Welcome to Lewis University Fall 2021 Semester!</h5>
 		<p style={{marginTop:'20px'}}>Please take a few minutes to view your fall 2021 welcome message.</p>
 		<IFrameComponent iframe={panoptoWelcomeIFrameTag()} />
@@ -19,7 +20,7 @@ export const welcome2021Fall = () => {
 			<li><NavLink to='/activity/scrum-in-7-minutes'>Introduction to Scrum in 7 Minutes</NavLink></li> 
 			
 		</ul>
-		Finally, you will want to take a look at our course <a href={classSyllabusURL()}>syllabus</a> and obtain the 
+		Finally, you will want to take a look at our course <a href={getSyllabusURL /* classSyllabusURL() */}>syllabus</a> and obtain the 
 		items identified in the “IV. Course Materials.”
 		</div> )
 }
@@ -49,7 +50,7 @@ const programmingTogether24700ID = '88eb7868-6f43-4645-99ad-ad9501397cf7'
 const programmingTogether44000ID = '7623082b-65bf-485a-a10d-ad95013d47f4'
 
 export const ProgrammingTogether = () => {
-	let classReference = cpsc()
+	let classReference = getClassIDfromURL()
 	switch(classReference) {
 		case '20000-fall-2021-002': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
 		case '20000-fall-2021-003': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)

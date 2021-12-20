@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import * as URLParameters from './URLParameters'
+import { getCourseTitle } from './data/ClientDataAPIs';
+
 
 import { baseLink, videoLink } from './Activity'
 
@@ -16,7 +17,7 @@ export class ActivityWeb extends Component {
 	render() {
 		return (
 			<div>
-				<h4>{URLParameters.courseTitle()}</h4>
+				<h4>{getCourseTitle()}</h4>
 				{this.activity()}
 			</div>
 		)

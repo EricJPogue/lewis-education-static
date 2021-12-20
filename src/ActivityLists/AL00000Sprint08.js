@@ -4,14 +4,14 @@ import { NavLink } from 'react-router-dom'
 
 import { ExampleCode } from '../Links'
 
-import { finalExamDateAndTime } from '../SprintDates'
+import { finalExamDateAndTime } from '../data/ClientDataAPIs'
 
 export const StandardActivities = (activity, playlist, sprint) => {
 	let scheduleLink = '/schedule/'+sprint
 	let calendarLink = '/calendar/'+sprint
 
 	return ( <div>
-		<li>Stay laser focused on the due dates by reviewing our course calendar <NavLink to={calendarLink}>calendar</NavLink> and <NavLink to={scheduleLink}>schedule</NavLink></li>
+		<li>Stay laser focused on due dates by reviewing our course calendar <NavLink to={calendarLink}>calendar</NavLink> and <NavLink to={scheduleLink}>schedule</NavLink></li>
 		<li><em>Review assignments including Discussion, Quiz, Lab, Reflection, and Final Project Presentation</em></li>
 		<li>From previous sprints review {ExampleCode()}, <NavLink to='/activity/git-commands'>Git commands</NavLink>, <NavLink to='/activity/coding-standards'>coding standards</NavLink>, <NavLink to='/activity/study-table'>tutoring options</NavLink>, and {playlist}</li>
 		<li>{activity}</li>

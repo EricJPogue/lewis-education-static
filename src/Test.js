@@ -1,5 +1,10 @@
 import React from 'react'
 
+
+// Test links are available at:
+//     http://localhost:3000/#/test/me
+//     http://www.lewis.education/#/test/me
+
 export class Test extends React.Component {
 	render() {
 		return ( <div>
@@ -8,6 +13,12 @@ export class Test extends React.Component {
 <h5>Summary: This page is intended to provide test scenarios and links</h5>
 
 <p>Parameter ID: {this.props.match.params.id}</p>
+
+<br />
+<h4>Spring 2022 Class Links:</h4>
+<h5>Introduction to Computer Science</h5>
+<h6>MWF 10am CT <a href= '/?cpsc=20000-fall-2021-002#/sprint/1'>[link]</a></h6>
+{localAndGlobalLink('?cpsc=20000-fall-2021-002#/sprint/1')}
 
 <br />
 <h4>Fall 2021 Class Links:</h4>
@@ -26,8 +37,6 @@ export class Test extends React.Component {
 <h5>Web and Distributed Programming</h5>
 <h6>MWF 3pm CT <a href= '/?cpsc=24700-fall-2021-001#/sprint/1'>[link]</a></h6>
 {localAndGlobalLink('?cpsc=24700-fall-2021-001#/sprint/1')}
-
-
 
 <br /><br />
 <h4>Spring 2021 Class Links:</h4>

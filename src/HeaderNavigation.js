@@ -3,11 +3,25 @@ import { Nav } from 'react-bootstrap'
 import { Navbar } from 'react-bootstrap'
 import { NavDropdown } from 'react-bootstrap'
 
-import * as URLParameters from './URLParameters'
+
+
+export const showHeaderNavigation = () => {
+	// The 'hide-nav' URL parameter must be before the React routing parameters.
+	// For example: http://localhost:3000/?hide-nav=y&#/44000-sprint03
+	// Example that does not work: http://localhost:3000/#/44000-sprint03&hide-nav=y
+
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	const hideNav = urlParams.get('hide-nav')
+	if (hideNav === 'y') {
+		return false; // false to show the nav bar
+	}
+	return true; // true to hide the nav bar
+}
 
 class HeaderNavigation extends Component {
 	render() {
-		if (URLParameters.showHeaderNavigation()) {
+		if (showHeaderNavigation()) {
 			return (
 				<div className='Header'>
 				<Navbar bg='light' expand='lg'>

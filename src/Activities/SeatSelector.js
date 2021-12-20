@@ -39,7 +39,7 @@ of the room layout are provided below.</p>
 <ol>
 	<li>Select a seat or the lectern by clicking on the seat</li>
 	<li>Display the last seat number selected in a field on the webpage</li>
-	<li>Select virtual participation and display in the last selected seat number field</li>
+	<li>Displays a “Participating Remotely” option that displays “Online" in the last selected seat number field</li>
 </ol>
 
 <em>Requirement 3</em>

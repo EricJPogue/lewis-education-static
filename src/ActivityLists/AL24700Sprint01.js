@@ -47,5 +47,7 @@ languages in industry leading cloud environments to deliver Web applications.</p
 	)
 }
 
+// Move Final Project Presentation assignment up so that it is between sprint 7 and sprint 8 (instead of after sprint 8).
+// Remove last question in Lab 8.
 // Todo: Add "grader" standards to Discussions. 
 // Todo: Add Git/GitHub activity / tutorial. 
