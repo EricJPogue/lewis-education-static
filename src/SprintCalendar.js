@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { CSTDate, duration, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
-import { getCalendar, getCourseTitle } from './data/ClientDataAPIs'
+import { getCalendar, getCourseTitle, getFinalExamDateAndTime } from './data/ClientDataAPIs'
 
 export class SprintCalendar extends Component {
 	headerClicked = (input) => {
@@ -27,9 +27,15 @@ export class SprintCalendar extends Component {
 		if (sprint === -1)
 			return (null)
 		else
-			return (
-				<p>Sprint {sprint+1} starts <em>{sprintStartDate(sprint)}</em> and ends <em>{sprintEndDateWithoutTime(sprint)} at 11:59pm CT</em>.</p>
-			)
+			return (<p>Sprint {sprint+1} starts <em>{sprintStartDate(sprint)}</em> and ends <u><em>{sprintEndDateWithoutTime(sprint)} at 11:59 PM CT.</em></u></p>)
+	}
+
+	finalExamDateAndTimeText = () => {
+		let finalExam = getFinalExamDateAndTime()
+		if (finalExam.length > 0)
+			return (<div>Final Project Presentations will be held during our scheduled Final Exam time which is <u><em>{finalExam}</em></u> with in-person attendance required.</div>)
+		else
+			return null
 	}
 
 	renderCalendarBody = () => {
@@ -75,7 +81,7 @@ export class SprintCalendar extends Component {
 				</tr></thead>
 				<tbody>{this.renderCalendarBody()}</tbody>
 			</Table>
-			<p>View daily schedule by clicking on “Schedule” in the table header.</p>
+			{this.finalExamDateAndTimeText()}
 			</div>
 		)
 	}

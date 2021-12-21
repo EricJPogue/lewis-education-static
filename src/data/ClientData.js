@@ -1,21 +1,25 @@
 // Application Constants
 export const URLCLASSID = 'cpsc'
+export const SCHEDULE_MWF = 'MWF'
+export const SCHEDULE_TTR = 'TTh'
+
 
 export const classList = [																											 
-	{ 'classID':'sp22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2022-01-10-16', 'syllabusURL':'' },
-	{ 'classID':'sp22-cpsc-24500-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2022-01-10-16', 'syllabusURL':'' },
-	{ 'classID':'sp22-cpsc-44000-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2022-01-10-16', 'syllabusURL':'' },
-	{ 'classID':'sp22-cpsc-49200-001', 'title':'Software Systems Capstone', 'number':'49200', 'calendarID':'2022-01-10-16', 'syllabusURL':'' },
-	{ 'classID':'sp22-cpsc-49200-004', 'title':'Software Systems Capstone', 'number':'49200', 'calendarID':'2022-01-10-16', 'syllabusURL':'' },
-	{ 'classID':'20000-fall-2021-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2021-08-30-16', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lnt2ybs1-syllabus-cpsc-20000-002.pdf' },
-	{ 'classID':'20000-fall-2021-003', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2021-08-30-16', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lonr2vt9-syllabus-cpsc-20000-003.pdf' },
-	{ 'classID':'24700-fall-2021-001', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2021-08-30-16', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/js13m00k-syllabus-cpsc-24700-001.pdf' },
-	{ 'classID':'44000-fall-2021-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2021-08-30-16', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/zj5cvkl3-syllabus-cpsc-44000-001.pdf' },
-	{ 'classID':'20000-spring-2021-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2021-01-18-16', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/v1qshz2j-syllabus-cpsc-20000-002.pdf' },
-	{ 'classID':'24500-spring-2021-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2021-01-18-16', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/o2sla524-syllabus-cpsc-24500-001.pdf' },
-	{ 'classID':'36000-spring-2021-001', 'title':'Applied Programming Languages', 'number':'36000', 'calendarID':'2021-01-18-16', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/se3c5q62-syllabus-cpsc-36000-001.pdf' },
-	{ 'classID':'44000-spring-2021-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2021-01-18-16', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/ps6xfphd-syllabus-cpsc-44000-001.pdf' }
+	{ 'classID':'sp22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'finalExam':'Wednesday, May 4 from 1:30 PM to 3:30 PM CT', 'syllabusURL':'' },
+	{ 'classID':'sp22-cpsc-24500-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'finalExam':'Monday, May 2 from 4 PM to 6 PM CT', 'syllabusURL':'' },
+	{ 'classID':'sp22-cpsc-44000-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2022-01-10-16', 'schedule':'TTh', 'finalExam':'Tuesday, May 3 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'' },
+	{ 'classID':'sp22-cpsc-49200-001', 'title':'Software Systems Capstone', 'number':'49200', 'calendarID':'2022-01-10-16', 'schedule':'Online', 'finalExam':'Thursday, May 5 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'' },
+	{ 'classID':'sp22-cpsc-49200-004', 'title':'Software Systems Capstone', 'number':'49200', 'calendarID':'2022-01-10-16', 'schedule':'Online', 'finalExam':'Thursday, May 5 from 4 PM to 6 PM CT', 'syllabusURL':'' },
+	{ 'classID':'20000-fall-2021-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2021-08-30-16', 'schedule':'MWF', 'finalExam':'Monday, December 13 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lnt2ybs1-syllabus-cpsc-20000-002.pdf' },
+	{ 'classID':'20000-fall-2021-003', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2021-08-30-16', 'schedule':'MWF', 'finalExam':'Friday, December 17 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lonr2vt9-syllabus-cpsc-20000-003.pdf' },
+	{ 'classID':'24700-fall-2021-001', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2021-08-30-16', 'schedule':'MWF', 'finalExam':'Friday, December 17 from 4 PM to 6 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/js13m00k-syllabus-cpsc-24700-001.pdf' },
+	{ 'classID':'44000-fall-2021-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2021-08-30-16', 'schedule':'MWF', 'finalExam':'Monday, December 13 from 4 PM to 6 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/zj5cvkl3-syllabus-cpsc-44000-001.pdf' },
+	{ 'classID':'20000-spring-2021-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2021-01-18-16', 'schedule':'', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/v1qshz2j-syllabus-cpsc-20000-002.pdf' },
+	{ 'classID':'24500-spring-2021-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2021-01-18-16', 'schedule':'', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/o2sla524-syllabus-cpsc-24500-001.pdf' },
+	{ 'classID':'36000-spring-2021-001', 'title':'Applied Programming Languages', 'number':'36000', 'calendarID':'2021-01-18-16', 'schedule':'TTh', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/se3c5q62-syllabus-cpsc-36000-001.pdf' },
+	{ 'classID':'44000-spring-2021-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2021-01-18-16', 'schedule':'TTh', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/ps6xfphd-syllabus-cpsc-44000-001.pdf' }
 ]; 
+export const CURRENTCALENDARID = classList[0].calendarID
 
 // Sprint Calendars
 // The following structure represents the sprint calendar for any class that starts on 2021-01-10 and is 16 weeks long. 

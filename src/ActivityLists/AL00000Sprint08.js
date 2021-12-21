@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import { ExampleCode } from '../Links'
 
-import { finalExamDateAndTime } from '../data/ClientDataAPIs'
+import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
 
 export const StandardActivities = (activity, playlist, sprint) => {
 	let scheduleLink = '/schedule/'+sprint
@@ -15,7 +15,7 @@ export const StandardActivities = (activity, playlist, sprint) => {
 		<li><em>Review assignments including Discussion, Quiz, Lab, Reflection, and Final Project Presentation</em></li>
 		<li>From previous sprints review {ExampleCode()}, <NavLink to='/activity/git-commands'>Git commands</NavLink>, <NavLink to='/activity/coding-standards'>coding standards</NavLink>, <NavLink to='/activity/study-table'>tutoring options</NavLink>, and {playlist}</li>
 		<li>{activity}</li>
-		<li><em style={{color:'red'}}>Make plans to attend your Final Project Presentation <u>in person</u> on <u>{finalExamDateAndTime()}</u></em></li>
+		<li><em style={{color:'red'}}>Make plans to attend your Final Project Presentation <u>in person</u> on <u>{getFinalExamDateAndTime()}</u></em></li>
 	</div> )
 }
 

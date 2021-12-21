@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { CSTDate, incrementDate, isToday, pastDate, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
-import { getCalendar, getCourseTitle, finalExamDateAndTime, tuesdayThursdayClass } from './data/ClientDataAPIs'
+import { getCalendar, getCourseTitle, getFinalExamDateAndTime, getIsScheduleTTr } from './data/ClientDataAPIs'
 
 export class SprintClassActivities extends Component {
 	// Todo: Update 'currentSprint()+1' to 'currentSprintBaseOne()'.
@@ -31,7 +31,6 @@ export class SprintClassActivities extends Component {
 		<div>
 			<h4>{getCourseTitle()}</h4>
 			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <u><em>{sprintEndDateWithoutTime(sprint-1)} at 11:59 PM CT.</em></u></p>
-			{this.finalExamDateAndTimeTextForFinalSprint()}
 			<h5 style={{marginTop:'32px', color: "grey"}} onClick={() => this.headerClicked(sprint)}>Calendar | <span style={{color: "black"}}>Schedule</span></h5>
 		</div>	
 		)
@@ -88,8 +87,9 @@ export class SprintClassActivities extends Component {
 	}
 
 	finalExamDateAndTimeTextForFinalSprint = () => {
-		if (this.currentSprintBaseOne() === 8)
-			return (<div>Final Project Presentations will be held during our scheduled Final Exam time which is <u><em>{finalExamDateAndTime()}</em></u> with in-person attendance required.</div>)
+		let finalExam = getFinalExamDateAndTime()
+		if ((this.currentSprintBaseOne() === 8) && (finalExam.length > -0))
+			return (<div>Final Project Presentations will be held during our scheduled Final Exam time which is <u><em>{finalExam}</em></u> with in-person attendance required.</div>)
 		else
 			return null
 	}
@@ -130,6 +130,7 @@ export class SprintClassActivities extends Component {
 						{this.renderScheduleRow(incrementDate(dates.start,11),schedule.SecondFriday)}
 					</tbody>
 				</Table>
+				{this.finalExamDateAndTimeTextForFinalSprint()}
 			</div>
 		)
 	}
@@ -183,7 +184,7 @@ export class SprintClassActivities extends Component {
 	}
 
 	render() {
-		if (tuesdayThursdayClass()) return this.renderTTSchedule()
+		if (getIsScheduleTTr()) return this.renderTTSchedule()
 		else return this.renderMWFSchedule()
 	}
 }
