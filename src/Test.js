@@ -1,78 +1,57 @@
 import React from 'react'
+import Table from 'react-bootstrap/Table'
 
+import { getAllClasses } from './data/ClientDataAPIs'
 
 // Test links are available at:
 //     http://localhost:3000/#/test/me
 //     http://www.lewis.education/#/test/me
+
+
+const renderTableBody = () => {
+	let currentClasses = getAllClasses()
+	return currentClasses.map((currentClass, index) => {
+		const { classID, title, schedule, time } = currentClass
+		return (
+			<tr key={classID}>
+				<td><a href= {`https://www.lewis.education/?cpsc=${classID}#/sprint/1`}>{title} ({classID})</a> </td>
+				<td><a href= {`http://localhost:3000/?cpsc=${classID}#/sprint/1`}>[Test]</a> <a href= {`https://www.lewis.education/?cpsc=${classID}#/sprint/1`}>[Production]</a></td>
+				<td>{schedule}</td>
+				<td>{time}</td>
+			</tr>
+			
+		)
+	})
+}
 
 export class Test extends React.Component {
 	render() {
 		return ( <div>
 
 <h4>Test Page</h4>
-<h5>Summary: This page is intended to provide test scenarios and links</h5>
+<h5>Test and production links for all classes are provided below:</h5><br />
 
+<Table striped bordered hover>
+	<thead>
+		<tr>
+			<th style={{textAlign:'center'}}>Class</th>
+			<th style={{textAlign:'center'}}>Links</th>
+			<th style={{textAlign:'center'}}>Schedule</th>
+			<th style={{textAlign:'center'}}>Time</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		{renderTableBody()}
+	</tbody>
+</Table>
+
+<br />
+The "Parameter ID" below should be "me" or the test page was not called correct. 
 <p>Parameter ID: {this.props.match.params.id}</p>
-
-<br />
-<h4>!!!Spring 2022 Class Links:</h4>
-<h5>Introduction to Computer Science</h5>
-<h6>MWF 10am CT</h6>
-{localAndGlobalLink('?cpsc=20000-spring-2022-002#/sprint/1')}
-
-<br />
-<h4>Fall 2021 Class Links:</h4>
-<h5>Introduction to Computer Science</h5>
-<h6>MWF 10am CT <a href= '/?cpsc=20000-fall-2021-002#/sprint/1'>[link]</a></h6>
-{localAndGlobalLink('?cpsc=20000-fall-2021-002#/sprint/1')}
-
-<h5>Introduction to Computer Science</h5>
-<h6>MWF 11am CT <a href= '/?cpsc=20000-fall-2021-003#/sprint/1'>[link]</a></h6>
-{localAndGlobalLink('?cpsc=20000-fall-2021-003#/sprint/1')}
-
-<h5>Software Engineering</h5>
-<h6>MWF 2pm CT <a href= '/?cpsc=44000-fall-2021-001#/sprint/1'>[link]</a></h6>
-{localAndGlobalLink('?cpsc=44000-fall-2021-001#/sprint/1')}
-
-<h5>Web and Distributed Programming</h5>
-<h6>MWF 3pm CT <a href= '/?cpsc=24700-fall-2021-001#/sprint/1'>[link]</a></h6>
-{localAndGlobalLink('?cpsc=24700-fall-2021-001#/sprint/1')}
-
-<br /><br />
-<h4>Spring 2021 Class Links:</h4>
-<h5>Introduction to Computer Science</h5>
-<h6>20000-spring-2021-002:</h6>
-{localAndGlobalLink('?cpsc=20000-spring-2021-002#/sprint/1')}
-
-<h5>Object-Oriented Programming</h5>
-<h6>24500-spring-2021-001:</h6>
-{localAndGlobalLink('?cpsc=24500-spring-2021-001#/sprint/1')}
-
-<h5>Applied Programming Languages</h5>
-<h6>36000-spring-2021-001:</h6>
-{localAndGlobalLink('?cpsc=36000-spring-2021-001#/sprint/1')}
-
-<h5>Software Engineering</h5>
-<h6>44000-spring-2020-001:</h6>
-{localAndGlobalLink('?cpsc=44000-spring-2021-001#/sprint/1')}
-<br /><br /><br />
 
 		</div>	)
 	}
 }
 
-const localLink = (link) => {
-	return (<div><a href= {'http://localhost:3000/'+link}>{'http://localhost:3000/'+link}</a><br /></div>)
-}
 
-const globalLink = (link) => {
-	return (<div><a href= {'https://www.lewis.education/'+link}>{'https://www.lewis.education/'+link}</a><br /></div>)
-}
-
-const localAndGlobalLink = (link) => {
-	return ( <div>
-		{globalLink(link)}
-		{localLink(link)}
-		<br />
-	</div> 	)
-}

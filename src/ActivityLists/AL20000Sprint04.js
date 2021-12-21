@@ -5,6 +5,7 @@ import { InitialPost,  } from './AL00000Sprint02'
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint04'
 
+import { ProgrammingActivity, NumberingSystemsWithPython } from './ProgrammingAssignments'
 import { oreillyPlaylistICS, SequenceSelectionAndRepetition } from '../Links'
 import { IntroducingPythonSampleCode } from '../Links'
 
@@ -39,6 +40,7 @@ for Python will be challenging application but I think you will enjoy it.
 
 	{InitialPost(4)}
 	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface and Chapter 1 while completing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
+	{ProgrammingActivity(NumberingSystemsWithPython)}
 	<li>Complete Programming Together with MatchmakerLite - Part 2</li>
 	{StandardActivitiesClosing(MatchmakerWithPython, 4)}
 </ol>
@@ -48,6 +50,7 @@ for Python will be challenging application but I think you will enjoy it.
 	)
 }
 
+// Todo: Review “Numbering Systems with Python” activity and make sure that the lab assignment is updated to verify completion 
 // Todo: Consider updating Matchmaker to remove question weighting.
 // Todo: Consider updating to include Introducing Python chapters 4 through 9.
 // Todo: Really add chapters 4 and 5 including reviewing quiz questions.

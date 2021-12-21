@@ -23,11 +23,7 @@ need to complete the activities by the sprint 1 end date listed on our course <N
 }
 
 export const LearningObjectivesIntro = () => {
-	return (
-
-<p>Let’s start with our sprint 1 learning objectives. By the end of sprint 1 we will be able to:</p>
-
-	)
+	return ( <p>Let’s start with our sprint 1 learning objectives. By the end of sprint 1 we will be able to:</p> )
 }
 
 export const ActivitiesListIntro = () => {
@@ -43,7 +39,7 @@ focused time unless otherwise noted. <em>Bold</em> items are graded assignments.
 export const StandardActivities = (programmingAssignment) => { 
 	return ( <div>
 
-<li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/1'>Calendar</NavLink> and sprint 1 <NavLink to='/schedule/1'>Schedule</NavLink></li>
+<li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/1'>calendar</NavLink> and sprint 1 <NavLink to='/schedule/1'>schedule</NavLink></li>
 <li>Review our course <a href={getSyllabusURL() /* classSyllabusURL() */}>syllabus</a></li>
 
 {/* The blended learning link below stopped supporting embedded functionality in the first half of 2021. We may want to 

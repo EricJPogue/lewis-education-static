@@ -43,6 +43,23 @@ export const getClassIDfromURL = () => {
 	return cpscParam
 }
 
+export const getCurrentClasses = () => {
+	const currentClasses = []
+	for (let i = 0; i < classList.length; i++) {
+		if (classList[i].calendarID === CURRENTCALENDARID)
+			currentClasses.push(classList[i])
+	}
+	return currentClasses
+}
+
+export const getAllClasses = () => {
+	const currentClasses = []
+	for (let i = 0; i < classList.length; i++) {
+			currentClasses.push(classList[i])
+	}
+	return currentClasses
+}
+
 const getClass = () => {
 	let classID = getClassIDfromURL()
 	for (let i = 0; i < classList.length; i++) {
