@@ -55,7 +55,5 @@ Maintenance. These are some of the topics that we will be exploring as part of t
 	)
 }
 
-// Todo: Add lots of links from the Agile Alliance to various activity lists.
-// Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
-// Todo: Consider doing the same thing for testing.
-// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
+// Update schedule for TTh class.
+

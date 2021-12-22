@@ -48,3 +48,7 @@ much code. This sprint get your text editors out. We are going to start practici
 	)
 }
 
+// Todo: Add lots of links from the Agile Alliance to various activity lists.
+// Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
+// Todo: Consider doing the same thing for testing.
+// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?

@@ -51,3 +51,6 @@ problem solving, and programming.</p>
 {Closing()}
 </div> )
 }
+
+// Todo: Post and update syllabus. 
+// Todo: Complete welcome message video.
