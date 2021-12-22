@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 import { getCourseNumber } from '../data/ClientDataAPIs' 
 
-import { Discord, OReillyBooks, Firefox, Chrome, VSCode, Office365, PowerShell, Terminal, ScreenCapture, Git, 
+import { Discord, OReillyBooks, Firefox, Chrome, VSCode, FileExplorer, Finder, ZipFiles, Office365, PowerShell, Terminal, ScreenCapture, Git, 
 	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, Java, JavaTutorial, Go } from '../Links'
 
 export const Tools = () => {
 	const checkNodeJS = () => {
-		if ((getCourseNumber() === 24700) || (getCourseNumber() === 44000)) {
+		if ((getCourseNumber() === 24700) || (getCourseNumber() === 44000) || (getCourseNumber() === 49200)) {
 			return ( <li>{NodeJS()} development environment</li> )
 		}
 	}
@@ -46,12 +46,12 @@ install, configure, and utilize the following tools and services. By the end of 
 	<li>{OReillyBooks()} online service which is available free through Lewis University</li>
 	<li>{Firefox()} and {Chrome()} web browsers</li> 
 	<li>{VSCode()} source code editor</li>
-	<li>File Explorer or Finder to manage files and folders</li>
-	<li>{PowerShell()} or {Terminal()} command line environments</li>
+	<li>{FileExplorer()} or {Finder()} to manage files, folders, and {ZipFiles()}</li>
 	<li>{ScreenCapture()} to capture images of our computer screen</li>
-	<li>{Office365()} which is available to you free through Lewis University</li>
+	<li>{PowerShell()} or {Terminal()} command line environments</li>
+	<li>{GitHub()} and the {Git()} command line source code management tool by following this {GitTutorial()}</li>
 	<li>{Python()} and the {VSCodePython()} integrated development environment</li>
-	<li>{GitHub()} and the {Git()} command line source code management tool while reviewing the related {GitTutorial()}</li>
+	<li>{Office365()} which is available to you free through Lewis University</li>
 	<li>{Azure()} cloud hosting service</li>
 	{checkNodeJS()}
 	{checkJava()}

@@ -45,13 +45,18 @@ const panoptoEmbedCodePrefixForPlaylist = '<iframe src="https://lewisu.hosted.pa
 const panoptoEmbedSuffixForPlaylist = '&autoplay=false&offerviewer=false&showtitle=false&showbrand=false&start=0&interactivity=all" height="576" width="1024" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>'
 const embedCodePlaylist = (iD) => { return panoptoEmbedCodePrefixForPlaylist+iD+panoptoEmbedSuffixForPlaylist }
 
+// Todo: These should be moved to ClientData and accessed through an API.
 const programmingTogether20000ID = '739ac123-56e2-4959-84f2-ad95013d3459'
 const programmingTogether24700ID = '88eb7868-6f43-4645-99ad-ad9501397cf7'
 const programmingTogether44000ID = '7623082b-65bf-485a-a10d-ad95013d47f4'
 
+// BugBug: This should be based on the class number (i.e. 20000 or 44000) and not the full class ID.
 export const ProgrammingTogether = () => {
 	let classReference = getClassIDfromURL()
 	switch(classReference) {
+		case 'sp22-cpsc-20000-002': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
+		case 'sp22-cpsc-44000-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether44000ID)} /></div>)
+
 		case '20000-fall-2021-002': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
 		case '20000-fall-2021-003': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
 		case '24700-fall-2021-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether24700ID)} /></div>)

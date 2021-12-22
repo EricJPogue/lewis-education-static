@@ -4,10 +4,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { getSyllabusURL /* classSyllabusURL */ } from '../data/ClientDataAPIs'
-
+import { getSyllabusURL } from '../data/ClientDataAPIs'
 import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
-import { Blended } from '../Links'
+import { Blended, programmingTogether } from '../Links'
 
 
 export const ScrumIntro = () => {
@@ -74,7 +73,7 @@ export const Closing = () => {
 
 <p>The best advise that I can give you is to start assignments early, submit something for each assignment, and to 
 attend class. If you do these things, I believe your success is virtually guaranteed. Finally, be sure to periodically 
-check for programming together <NavLink to='/activity/programming-together'>tutorials</NavLink>.</p>
+check for our {programmingTogether()} tutorials.</p>
 
 	) 
 }

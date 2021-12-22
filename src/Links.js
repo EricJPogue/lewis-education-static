@@ -5,6 +5,9 @@ export const Discord = () => { return externalLink('Discord', 'https://discord.c
 export const OReillyBooks = () => { return externalLink('O’Reilly Books', 'https://lewisu.libguides.com/az.php?q=o%27reilly') }
 export const ExampleCode = () => { return externalLink('example code', 'https://github.com/EricJPogue/cpsc-example-code') }
 export const CommandLine = () => { return externalLink('Command Line Interface', 'https://www.w3schools.com/whatis/whatis_cli.asp' )}
+export const FileExplorer = () => { return externalLink('File Explorer', 'https://www.tutorialspoint.com/windows10/windows10_file_explorer.htm' )}
+export const Finder = () => { return externalLink('Finder', 'https://support.apple.com/en-us/HT201732')}
+export const ZipFiles = () => { return externalLink('Zip files', 'https://www.businessinsider.com/how-to-zip-a-file')}
 export const Firefox = () => { return externalLink('FireFox', 'https://www.mozilla.org/en-US/firefox/new/') }
 export const Chrome = () => { return externalLink('Chrome', 'https://www.google.com/chrome/') }
 export const VSCode = () => { return externalLink('Visual Studio Code', 'https://code.visualstudio.com/') }

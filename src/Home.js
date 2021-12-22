@@ -12,8 +12,8 @@ export class Home extends React.Component {
 			const { classID, title, schedule, time } = currentClass
 			return (
 				<tr key={classID}>
-					<td>{title}</td>
-					<td><a href= {`/?cpsc=${classID}#/sprint/1`}>{classID}</a></td>
+					<td><a href= {`/?cpsc=${classID}#/sprint/1`}>{title}</a></td>
+					<td>{classID}</td>
 					<td>{schedule}</td>
 					<td>{time}</td>
 				</tr>
@@ -40,7 +40,7 @@ export class Home extends React.Component {
 				</tbody>
 			</Table>
 
-			Looking for classes from previous semesters, try <a href='https://www.lewis.education/#/test/me'>here</a>.
+			Looking for classes from previous semesters, check <a href='https://www.lewis.education/#/test/me'>here</a>.
 			</div>
 		)
 	}
