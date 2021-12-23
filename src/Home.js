@@ -25,7 +25,9 @@ export class Home extends React.Component {
 		return (
 			<div>
 			<h4>Lewis.education</h4>
-			<p>The following spring 2020 classes are available from Eric Pogue at Lewis.education</p>
+			<p>The following classes are currently available from Eric Pogue at Lewis.education.</p><br />
+
+			<h5>Classes</h5>
 			<Table striped bordered hover>
 				<thead>
 					<tr>

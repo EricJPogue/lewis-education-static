@@ -10,6 +10,11 @@ const sup = (text) => { return (<sup>{text}</sup>)}
 export const Start_HealthRiskCalculatorWebOrPython = () => { return HealthRiskCalculatorWebOrPython('Start working on ', '') }
 export const Complete_HealthRiskCalculatorWebOrPython = () => { return HealthRiskCalculatorWebOrPython('Complete ', sup('~8 hours')) }
 
+export const HealthRiskCalculatorPython = () => { return HealthRiskCalculator(HealthRiskCalculatorPythonProperties) }
+export const HealthRiskCalculatorWeb = ()    => { return HealthRiskCalculator(HealthRiskCalculatorWebProperties) }
+export const HealthRiskCalculatorJava = ()   => { return HealthRiskCalculator(HealthRiskCalculatorJavaProperties) }
+export const HealthRiskCalculatorGo = ()     => { return HealthRiskCalculator(HealthRiskCalculatorGoProperties) }
+
 const HealthRiskCalculatorWebOrPython = (prefix, postfix) => {
 	let nameWeb = HealthRiskCalculatorWebProperties.name
 	let linkWeb = HealthRiskCalculatorWebProperties.internalLink
@@ -27,11 +32,6 @@ const HealthRiskCalculatorWebProperties = {
 	'requirement1_2': 'Is hosted as a public website in Microsoft Azure',
 	'internalLink': '/activity/health-risk-calculator-web'
 }
-
-export const HealthRiskCalculatorPython = () => { return HealthRiskCalculator(HealthRiskCalculatorPythonProperties) }
-export const HealthRiskCalculatorWeb = ()    => { return HealthRiskCalculator(HealthRiskCalculatorWebProperties) }
-export const HealthRiskCalculatorJava = ()   => { return HealthRiskCalculator(HealthRiskCalculatorJavaProperties) }
-export const HealthRiskCalculatorGo = ()     => { return HealthRiskCalculator(HealthRiskCalculatorGoProperties) }
 
 const HealthRiskCalculatorPythonProperties = {
 	'name': 'Health Insurance Risk Calculator with Python', 

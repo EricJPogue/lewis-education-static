@@ -6,6 +6,10 @@ import { getCourseNumber } from '../data/ClientDataAPIs'
 import { Discord, OReillyBooks, Firefox, Chrome, VSCode, FileExplorer, Finder, ZipFiles, Office365, PowerShell, Terminal, ScreenCapture, Git, 
 	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, Java, JavaTutorial, Go } from '../Links'
 
+export const ToolsOfTheTradeLink = () => {return (<NavLink to={internalLink}>{name}</NavLink>)}
+const internalLink = '/activity/tools'
+const name = 'Tools of the Trade'
+
 export const Tools = () => {
 	const checkNodeJS = () => {
 		if ((getCourseNumber() === 24700) || (getCourseNumber() === 44000) || (getCourseNumber() === 49200)) {
@@ -28,7 +32,7 @@ export const Tools = () => {
 	return (
 
 <div>
-<h5>Tools of the Trade</h5>
+<h5>{name}</h5>
 <h6>Summary: Install, configure, and utilize important software development tools</h6>
 <p>Prerequisites: Windows 10 or MacOS</p>
 

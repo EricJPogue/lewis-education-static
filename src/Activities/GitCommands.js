@@ -1,13 +1,19 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { Git, GitTutorial, GitHub } from '../Links'
+
+export const GetCommandsLink = () => {return (<NavLink to={internalLink}>{name}</NavLink>)}
+const internalLink = '/activity/git-commands'
+const name = 'Git Commands and Patterns'
+
 
 export const GitCommands = () => {
 	return (
 
 <div>
 <br />
-<h4>Git Commands and Patterns</h4>
+<h4>{name}</h4>
 <h5>Summary: Understand and utilize common Git commands and patterns including branching.</h5>
 <h5>Prerequisites: Git</h5>
 
@@ -30,7 +36,7 @@ on some basic Git commands including:</p>
 	<li>git config --global user.name "FIRST_NAME LAST_NAME"</li>
 	<li>git config --global user.email "MY_EMAIL@example.com"</li>
 	<li>git config --global core.editor emacs</li>
-	<li>git config –-global pull.rebase false</li>
+	<li>git config --global pull.rebase false</li>
 </ul>
 
 <p>The most common pattern of Git commands is to update a repository includes:</p>

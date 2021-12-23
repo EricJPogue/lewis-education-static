@@ -1,8 +1,12 @@
 
 import React from 'react';
-
 import ReactPlayer from 'react-player'
+import { NavLink } from 'react-router-dom';
+
 import { programmingTogetherHelloWorldPython } from './../Panopto'
+
+export const HelloWorldJavaLink = () => {return (<NavLink to={JavaProperties.internalLink}>{JavaProperties.name}</NavLink>)}
+export const HelloWorldPythonLink = () => {return (<NavLink to={PythonProperties.internalLink}>{PythonProperties.name}</NavLink>)}
 
 export const HelloWorldPython = () => { return HelloWorld(PythonProperties) }
 export const HelloWorldJava = () => { return HelloWorld(JavaProperties) }
@@ -10,15 +14,19 @@ export const HelloWorldGo = () => { return HelloWorld(GoProperties) }
 export const HelloWorldWeb = () => { return HelloWorld(WebProperties) }
 
 const PythonProperties = {
+	'name': 'Hello World with Python',
 	'language': 'Python',
 	'prerequisites': 'Python (v3), VS Code, and Terminal',
-	'tutorial': 'https://botb.blob.core.windows.net/nvm4zqwm/s44aopq9-hello-world.mp4'
+	'tutorial': 'https://botb.blob.core.windows.net/nvm4zqwm/s44aopq9-hello-world.mp4',
+	'internalLink': '/activity/hello-world-python'
 }
 
 const JavaProperties = {
+	'name': 'Hello World with Java',
 	'language': 'Java',
 	'prerequisites': 'Java, VS Code, and Terminal',
-	'tutorial': null
+	'tutorial': null,
+	'internalLink': '/activity/hello-world-java'
 }
 
 const GoProperties = {

@@ -39,7 +39,7 @@ export const StandardActivities = (programmingAssignment) => {
 	return ( <div>
 
 <li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/1'>calendar</NavLink> and sprint 1 <NavLink to='/schedule/1'>schedule</NavLink></li>
-<li>Review our course <a href={getSyllabusURL() /* classSyllabusURL() */}>syllabus</a></li>
+<li>Review our course <a href={getSyllabusURL()}>syllabus</a></li>
 
 {/* The blended learning link below stopped supporting embedded functionality in the first half of 2021. We may want to 
     retest '<NavLink to='/activity/blended-learning'>Blended Learning &amp; Flipped Classroom</NavLink>' at some point. */}

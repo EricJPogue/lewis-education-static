@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro, Closing } from './AL00000Sprint01'
 import { ProgrammingActivity, ToolsOfTheTrade, HTMLProgrammingPart1, GettingToKnowEachOther, HelloWorldWithPython  } from './ProgrammingAssignments'
 
-export const al24700Sprint01 = (syllabusURL) => {
+export const al24700Sprint01 = () => {
 	return (
 
 <div>
