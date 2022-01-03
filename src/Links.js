@@ -42,8 +42,9 @@ export const PythonW3C =  () => { return internalLink('Python Tutorial', '/activ
 
 export const oreillyPlaylistICS = () => { return( <a href='https://learning.oreilly.com/playlists/1a69d11a-2aff-4179-a664-6b842a666f34' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
 export const oreillyPlaylistWeb = () => { return( <a href='https://learning.oreilly.com/playlists/70918629-ecf2-4b8c-8268-9e6d699d533d' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
-export const oreillyPlaylistSE = () => { return( <a href='https://learning.oreilly.com/playlists/b2510780-81f1-404e-975d-4354219ff894' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
 export const oreillyPlaylistOOP = () => { return externalLink('O’Reilly Books', 'https://learning.oreilly.com/playlists/788c5005-f6f7-499b-a13f-2885daadf0bd') }
+export const oreillyPlaylistSE = () => { return( <a href='https://learning.oreilly.com/playlists/b2510780-81f1-404e-975d-4354219ff894' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
+export const oreillyPlaylistSC = () => { return( <a href='https://learning.oreilly.com/playlists/d72310ce-9438-4d60-a2fb-3725153fd236' target='_blank' rel='noopener noreferrer'>O’Reilly Books</a> ) }
 
 export const ResumeFormat = () => { return( <a href='https://pithub.blob.core.windows.net/nvm4zqwm/f7h4j48d-resume-format.pdf' target='_blank' rel='noopener noreferrer'>resume format</a> ) }
 export const ResumeReviewServices = () => { return( <a href='https://lewisu.edu/resources/careerservices/students.htm' target='_blank' rel='noopener noreferrer'>resume review services</a> ) }

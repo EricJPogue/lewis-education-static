@@ -3,8 +3,9 @@ import ReactPlayer from 'react-player'
 
 import { getCourseTitle } from './data/ClientDataAPIs';
 
-import { SeatSelector } from './Activities/SeatSelector'
+import { routeActivity } from './Activities/ActivityRouter';
 
+import { SeatSelector } from './Activities/SeatSelector'
 
 import { StudyTable } from './Activities/StudyTable'
 import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './Activities/HelloWorld'
@@ -80,6 +81,10 @@ const foxLink = (fileName) => {
 class Activity extends Component {
 	activity() {
 		let activityReference = this.props.match.params.reference
+
+		let routeActivityResponse = routeActivity(activityReference)
+		if (routeActivityResponse != null) return routeActivityResponse
+
 		switch(activityReference) {
 			case 'seat-selector': return SeatSelector()
 
