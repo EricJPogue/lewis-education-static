@@ -77,6 +77,13 @@ export const ServerlessAzure = () => { return externalLink('Azure Functions', 'h
 export const ServerlessGoogle = () => { return externalLink('Google Cloud Functions', 'https://cloud.google.com/functions') }
 export const ServerlessAWS = () => { return externalLink('AWS Lambda', 'https://aws.amazon.com/lambda/') }
 
+export const unrealEngine = () => { return externalLink('Unreal Engine', 'https://www.unrealengine.com/en-US/')}
+export const unity = () => { return externalLink('Unity', 'https://unity.com/')}
+export const revit = () => { return externalLink('Revit', 'https://www.autodesk.com/products/revit/architecture')}
+
+export const mern = () => { return externalLink('MERN', 'https://www.mongodb.com/mern-stack')}
+export const firebase = () => { return externalLink('Google Firebase', 'https://firebase.google.com/')}
+
 const externalLink = (displayName, url) => {
 	return (
 		<a href={url} target='_blank' rel='noopener noreferrer'>{displayName}</a>

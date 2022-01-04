@@ -43,7 +43,7 @@ problem solving, and programming.</p>
 
 	<li>Read {computerScienceIlluminated()} chapter 1, review our <NavLink to='/activity-dale/1'>chapter 1 lecture</NavLink>, and be prepared for a scrum team discussion<sup> ~2 hours</sup></li>
 	{ProgrammingActivity(HelloWorldWithPython)}
-	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface, Chapter 1, and Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
+	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface through Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
 
 	{StandardActivitiesClosing()}
 </ol>
