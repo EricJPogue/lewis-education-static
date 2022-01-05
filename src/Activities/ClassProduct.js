@@ -34,10 +34,11 @@ development, support, operations, product owner, and marketing for your product 
 	<li>{pitHubLink()}</li>
 	<li>{seatSelectorMERNLink()}</li>
 	<li>{quizMasterMERNLink()}</li>
+
 	
 {/* Todo: Joint Delivery Drone project */}
 {/* Todo: Consider Arduino drone Software project */}
-
+ 
 </ul>
 
 <em>Requirement 1</em>
@@ -45,34 +46,19 @@ development, support, operations, product owner, and marketing for your product 
 <ol>
 	<li>Your prioritized (forced ranked) list of at least three products from above that you would like to work on this semester</li>
 	<li>A very brief summary of what interest you most about your top two prioritized products</li>
-	<li>Any classmates that you would like to work together with on the same product and team</li>
+	<li>A list of any classmates that you would like to work together with on the same product and team</li>
+	<li>When you took Software Engineering (and your instructor) plus a description of your comfort level with Agile and Scrum</li>
 </ol>
 
 <em>Requirement 2</em>
 <p>Accept the invitation from your instructor to join the GitHub repository where you and your team will be developing 
 your class product:</p>
 <ol>
-	<li>Successfully deploying your product to a local development and test environment to you personal computer</li>
-	<li>Successfully deploying your product to hosted test and production environments</li>
-	<li>Making the source code available for review</li>
+	<li>Accept the GitHub invitation from your instructor</li>
+	<li>Add your name and email address to the Credits section of the README.md file</li>
+	<li>Review any code or documents currently</li>
+	<li>Review how you and your team will submit and update all team assignments utilizing the product repository</li>
 </ol>
 
-<em>Requirement 3</em>
-<p>Accept the invitation from your instructor to join the GitHub repository where you and your team will be developing 
-your class product:</p>
-<ol>
-	<li>Successfully deploying your product to a local development and test environment to you personal computer</li>
-	<li>Successfully deploying your product to hosted test and production environments</li>
-	<li>Making the source code available for review</li>
-</ol>
-
-<em>Requirement 4</em>
-<p>Accept the invitation from your instructor to join the GitHub repository where you and your team will be developing 
-your class product:</p>
-<ol>
-	<li>Successfully deploying your product to a local development and test environment to you personal computer</li>
-	<li>Successfully deploying your product to hosted test and production environments</li>
-	<li>Making the source code available for review</li>
-</ol>
 </div> )
 }

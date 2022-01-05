@@ -20,6 +20,11 @@ export const Python = () => { return externalLink('Python', 'https://www.python.
 export const IntroducingPythonSampleCode = () => { return externalLink('sample code', 'https://github.com/madscheme/introducing-python') }
 export const introducingPythonCodeExamples = () => { return externalLink('code examples', 'https://github.com/madscheme/introducing-python') }
 
+export const firebase = () => { return externalLink('Google Firebase', 'https://firebase.google.com/')}
+export const mongoDBAtlas = () => { return externalLink('MongoDB Atlas', 'https://www.mongodb.com/atlas') }
+export const grammarly = () => { return externalLink('Grammarly', 'https://www.grammarly.com')}
+
+
 export const VSCodePython = () => { return externalLink('Visual Studio Code Python', 'https://code.visualstudio.com/docs/python/python-tutorial') }
 export const NodeJS = () => { return externalLink('Node.js', 'https://nodejs.org/en/') }
 export const Java = () => { return externalLink('Java SDK', 'https://docs.microsoft.com/en-us/java/azure/jdk/?view=azure-java-stable') }
@@ -82,7 +87,7 @@ export const unity = () => { return externalLink('Unity', 'https://unity.com/')}
 export const revit = () => { return externalLink('Revit', 'https://www.autodesk.com/products/revit/architecture')}
 
 export const mern = () => { return externalLink('MERN', 'https://www.mongodb.com/mern-stack')}
-export const firebase = () => { return externalLink('Google Firebase', 'https://firebase.google.com/')}
+
 
 const externalLink = (displayName, url) => {
 	return (

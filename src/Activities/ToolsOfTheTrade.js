@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { getCourseNumber } from '../data/ClientDataAPIs' 
 
 import { Discord, OReillyBooks, Firefox, Chrome, VSCode, FileExplorer, Finder, ZipFiles, Office365, PowerShell, Terminal, ScreenCapture, Git, 
-	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, Java, JavaTutorial, Go } from '../Links'
+	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, Java, JavaTutorial, Go, grammarly, mongoDBAtlas, firebase } from '../Links'
 
 export const ToolsOfTheTradeLink = () => {return (<NavLink to={internalLink}>{name}</NavLink>)}
 const internalLink = '/activity/tools'
@@ -15,18 +15,42 @@ export const Tools = () => {
 		if ((getCourseNumber() === 24700) || (getCourseNumber() === 44000) || (getCourseNumber() === 49200)) {
 			return ( <li>{NodeJS()} development environment</li> )
 		}
+		return null
 	}
 
 	const checkJava = () => {
 		if (getCourseNumber() === 24500) {
 			return ( <li>{Java()} development environment reviewing the associated {JavaTutorial()}</li> )
 		}
+		return null
 	}
 
 	const checkGo = () => {
 		if (getCourseNumber() === 36000) {
 			return ( <li>{Go()} development environment</li> )
 		}
+		return null
+	}
+
+	const checkFirebase = () => {
+		if (getCourseNumber() === 49200) {
+			return ( <li>{firebase()} application hosting service</li> )
+		}
+		return null
+	}
+
+	const checkMongoDBAtlas = () => {
+		if (getCourseNumber() === 49200) {
+			return ( <li>{mongoDBAtlas()} database hosting service</li> )
+		}
+		return null
+	}
+
+	const checkGrammarly = () => {
+		if (getCourseNumber() === 49200) {
+			return ( <li>{grammarly()} writing assistant / validator</li> )
+		}
+		return null
 	}
 
 	return (
@@ -60,6 +84,9 @@ install, configure, and utilize the following tools and services. By the end of 
 	{checkNodeJS()}
 	{checkJava()}
 	{checkGo()}
+	{checkFirebase()}
+	{checkMongoDBAtlas()}
+	{checkGrammarly()}
 </ol>
 
 <br />

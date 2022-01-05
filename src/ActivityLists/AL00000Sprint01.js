@@ -13,8 +13,8 @@ export const ScrumIntro = () => {
 	return ( 
 
 <p>You likely noticed that I am using the term “sprint 1” to describe our first set of course activities. Sprints are 
-part of the scrum software development process. The term is used to describe a unit of work which we have committed to
-delivering by a given date. We will be learning more about sprints and scrum in the coming days. For now it is 
+part of the scrum software development process. The term is used to describe a unit of work that we have committed to
+delivering by a given date. We will be learning more about sprints and scrum in the coming days. For now, it is 
 sufficient to know that our sprint 1 activities will take approximately 18 hours of focused effort to complete, and we 
 need to complete the activities by the sprint 1 end date listed on our course <NavLink to='/calendar/1'>calendar</NavLink>.</p> 
 
