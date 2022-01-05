@@ -2,10 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { makeInternalURL } from './ActivityRouter';
+
 import { aidanLink } from './Aidan';
-import { seatSelectorMERNLink } from './SeatSelectorMERN';
-import { quizMasterMERNLink } from './QuizMasterMERN';
+import { arduinoDroneLink } from './ArduinoDrone';
+import { deliveryDroneLink } from './DeliveryDrone';
 import { pitHubLink } from './PitHub';
+import { quizMasterMERNLink } from './QuizMasterMERN';
+import { seatSelectorMERNLink } from './SeatSelectorMERN';
+
 
 const name = 'Class Product Sprint 1'
 export const CLASS_PRODUCT_SPRINT_1_ROUTE = 'class-product-sprint-1'
@@ -31,15 +35,14 @@ development, support, operations, product owner, and marketing for your product 
 <p>The products that are available for you to work on this semester are:</p>
 <ul style={{listStyleType:'square'}}>
 	<li>{aidanLink()}</li>
+	<li>{deliveryDroneLink()} / {arduinoDroneLink()}</li>
 	<li>{pitHubLink()}</li>
-	<li>{seatSelectorMERNLink()}</li>
 	<li>{quizMasterMERNLink()}</li>
-
-	
-{/* Todo: Joint Delivery Drone project */}
-{/* Todo: Consider Arduino drone Software project */}
- 
+	<li>{seatSelectorMERNLink()}</li>
 </ul>
+
+<p>Note that since the {deliveryDroneLink()} project is limited to two additional team members this semester, we will 
+likely utilize the {arduinoDroneLink()} project as our “overflow” if we have additional drone interest.</p>
 
 <em>Requirement 1</em>
 <p>Review each of the products above in detail and send an email to your instructor that includes:</p>

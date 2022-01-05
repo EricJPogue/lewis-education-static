@@ -29,7 +29,6 @@ in VS Code so that you can fully understand the HTML and CSS that makes up a web
 	<li>One or two paragraphs about yourself, your family, and your major/minor</li>
 	<li>A section labeled “What I Hope to Learn in this Course”</li>
 	<li>A bulleted list of topics from the course that interest you most</li>
-
 </ol>
 
 <em>Requirement 3</em>

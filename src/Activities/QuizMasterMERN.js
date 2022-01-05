@@ -9,9 +9,9 @@ export const quizMasterMERNLink = () => {return (<NavLink to={makeInternalURL(QU
 export const quizMasterMERN = () => { return ( <div>
 
 <br />
-<h4>QuizMaster Server</h4>
-<h5>Summary: Create a web service that serves quiz questions</h5>
-<h5>Prerequisites: Windows 10 or MacOS, VS Code, Go, and a cloud provider</h5>
+<h4>QuizMaster</h4>
+<h5>Summary: Create a Web based quiz application</h5>
+<h5>Prerequisites: HTML, CSS, JavaScript, React, MERN, Go, and a cloud provider</h5>
 			
 <p>In this project you will start by creating a web service that returns a quiz based on multiple question banks.</p>
 

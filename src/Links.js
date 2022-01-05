@@ -24,7 +24,6 @@ export const firebase = () => { return externalLink('Google Firebase', 'https://
 export const mongoDBAtlas = () => { return externalLink('MongoDB Atlas', 'https://www.mongodb.com/atlas') }
 export const grammarly = () => { return externalLink('Grammarly', 'https://www.grammarly.com')}
 
-
 export const VSCodePython = () => { return externalLink('Visual Studio Code Python', 'https://code.visualstudio.com/docs/python/python-tutorial') }
 export const NodeJS = () => { return externalLink('Node.js', 'https://nodejs.org/en/') }
 export const Java = () => { return externalLink('Java SDK', 'https://docs.microsoft.com/en-us/java/azure/jdk/?view=azure-java-stable') }
@@ -88,6 +87,7 @@ export const revit = () => { return externalLink('Revit', 'https://www.autodesk.
 
 export const mern = () => { return externalLink('MERN', 'https://www.mongodb.com/mern-stack')}
 
+export const deliveryDronePowerpoint = () => { return externalLink('Delivery Drone PowerPoint', 'https://lewiseducation.blob.core.windows.net/todo/delivery-drone.pptx')}
 
 const externalLink = (displayName, url) => {
 	return (
