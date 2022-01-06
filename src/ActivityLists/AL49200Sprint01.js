@@ -1,9 +1,12 @@
 import React from 'react'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro } from './AL00000Sprint01'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, StandardActivitiesPlus, InitialPost, StandardActivitiesClosing, ScrumIntro } from './AL00000Sprint01'
 import { GettingToKnowEachOther, ProgrammingActivity, ToolsOfTheTrade } from './ProgrammingAssignments'
 import { classProductSprint1Link } from '../Activities/ClassProduct'
 import { oreillyPlaylistSC } from '../Links'
+
+import { gettingToKnowEachOtherAbbreviatedLink } from '../Activities/WebGettingToKnowEachOtherAbbreviated'
+
 
 export const al49200Sprint01 = (syllabusURL) => { return (
 
@@ -36,6 +39,8 @@ team, you and your scrum teammates will self-organize to implement key Agile rol
 {ActivitiesListIntro()}
 <ol>
 	<li>Request a product team by submitting Requirement 1 of {classProductSprint1Link()} via email by noon on <em>Wednesday, January 12th</em>.</li>
+	{StandardActivitiesPlus(gettingToKnowEachOtherAbbreviatedLink())}
+	<li>ttt</li>
 	{StandardActivities(GettingToKnowEachOther)}
 
 	<li>Within {oreillyPlaylistSC()} scan “Essential Scrum” from the beginning through chapter 12</li>

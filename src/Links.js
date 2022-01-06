@@ -32,7 +32,10 @@ export const Go = () => { return externalLink('Go', 'https://golang.org/') }
 export const PowerShell = () => { return internalLink('PowerShell', '/activity-config/powershell-windows10-setup') }
 export const Terminal = () => { return internalLink('Terminal', '/activity-config/macos-setup-terminal-finder-and-git') }
 export const GitTutorial = () => { return internalLink('tutorial', '/activity-config/git-installation-on-windows-10') }
-export const Blended = () => { return externalLink('Blended Learning & Flipped Classroom', 'https://youtu.be/paQCE58334M') }
+
+// export const Blended = () => { return externalLink('Blended Learning & Flipped Classroom', 'https://youtu.be/paQCE58334M') }
+export const Blended = () => { return internalLink('Blended Learning & Flipped Classroom', '/activity/blended-learning') }
+
 export const FoxHTML = () => { return externalLink('HTML', 'https://www.youtube.com/watch?v=wy6O5hAjKAo') }
 export const FoxCSS = () => { return externalLink('CSS', 'https://www.youtube.com/watch?v=AfBK2Masemk') }
 export const FoxCookies = () => { return externalLink('Cookies', 'https://www.youtube.com/watch?v=Xlt7xeqVfO4') }

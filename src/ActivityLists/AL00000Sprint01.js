@@ -5,7 +5,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { getSyllabusURL } from '../data/ClientDataAPIs'
-import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
+import { ProgrammingAssignmentToLink, ProgrammingActivity } from './ProgrammingAssignments'
 import { Blended, programmingTogether } from '../Links'
 
 
@@ -35,22 +35,22 @@ focused time unless otherwise noted. <em>Bold</em> items are graded assignments.
 	)
 }
 
-export const StandardActivities = (programmingAssignment) => { 
+export const StandardActivitiesPlus = (programmingAssignmentLink) => { 
 	return ( <div>
 
 <li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/1'>calendar</NavLink> and sprint 1 <NavLink to='/schedule/1'>schedule</NavLink></li>
 <li>Review our course <a href={getSyllabusURL()}>syllabus</a></li>
-
-{/* The blended learning link below stopped supporting embedded functionality in the first half of 2021. We may want to 
-    retest '<NavLink to='/activity/blended-learning'>Blended Learning &amp; Flipped Classroom</NavLink>' at some point. */}
-
 <li>Understand blended learning by watching {Blended()}</li>
 <li>Be prepared to participate in your scrum team by watching <NavLink to='/activity/scrum-in-7-minutes'>Introduction to Scrum in 7 Minutes</NavLink></li>
 <li><em>Review sprint 1 assignments including Lab 1, Quiz 1, Discussion 1, and Reflection 1</em></li>
 <li>Start working on <NavLink to='/activity/tools'>Tools of the Trade</NavLink> by setting up Discord and O’Reilly Books</li>
-{StartProgrammingActivity(programmingAssignment)}
+<li>Start working on {programmingAssignmentLink}</li>
 
 	</div> )
+}
+
+export const StandardActivities = (programmingAssignment) => { 
+	return StandardActivitiesPlus(ProgrammingAssignmentToLink(programmingAssignment))
 }
 
 export const InitialPost = () => {
