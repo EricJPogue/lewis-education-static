@@ -7,6 +7,11 @@ import { NavLink } from 'react-router-dom'
 import { getSyllabusURL } from '../data/ClientDataAPIs'
 import { ProgrammingAssignmentToLink, ProgrammingActivity } from './ProgrammingAssignments'
 import { Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether } from '../Links'
+import { sprintEndDateWithoutTime } from '../SprintDates'
+const sprintEndDate = (sprint) => {
+	// SprintEndDateWithoutTime is base zero.
+	return sprintEndDateWithoutTime(sprint-1)
+}
 
 export const ScrumIntro = () => {
 	return ( 
@@ -15,7 +20,7 @@ export const ScrumIntro = () => {
 part of the scrum software development process. The term is used to describe a unit of work that we have committed to
 delivering by a given date. We will be learning more about sprints and scrum in the coming days. For now, it is 
 sufficient to know that our sprint 1 activities will take approximately 18 hours of focused effort to complete, and we 
-need to complete the activities by the sprint 1 end date listed on our course <NavLink to='/calendar/1'>calendar</NavLink>.</p> 
+need to complete the activities by the end of sprint 1 which is <em>{sprintEndDate(1)}</em>.</p> 
 
 	)
 }
@@ -34,14 +39,19 @@ focused time unless otherwise noted. <em>Bold</em> items are graded assignments.
 	)
 }
 
-const sprintCalendar = (sprint) => {
+const sprint1Calendar = (sprint) => {
 	return ( <NavLink to='/calendar/1'>calendar</NavLink> )
 }
+
+const sprint1Schedule = (sprint) => {
+	return ( <NavLink to='/schedule/1'>schedule</NavLink> )
+}
+
+
 export const StandardActivitiesPlus = (programmingAssignmentLink) => { 
 	return ( <div>
 
-<li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/1'>calendar</NavLink> and sprint 1 <NavLink to='/schedule/1'>schedule</NavLink></li>
-<li>Maintain laser focus on due dates by reviewing our class {sprintCalendar(1)} <NavLink to='/schedule/1'>schedule</NavLink></li>
+<li>Maintain laser focus on due dates by reviewing our class {sprint1Calendar(1)} and sprint 1 {sprint1Schedule()}</li>
 <li>Review our course <a href={getSyllabusURL()}>syllabus</a></li>
 <li>Understand blended learning by watching {Blended()}</li>
 <li>Be prepared to participate in your scrum team by watching {scrumIn7Min()}</li>

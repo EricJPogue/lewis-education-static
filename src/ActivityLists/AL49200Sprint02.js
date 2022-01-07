@@ -20,6 +20,7 @@ much code. This sprint get your text editors out. We are going to start practici
 {LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
 	<li>Write simple HTML, CSS, Javascript, and Node.js applications and install them to Azure</li>
+	<li>Describe the benefits of modern Web development stacks and frameworks including MERN</li>
 	<li>Understand simple Ruby programs using basic control structures and data structures</li>
 	<li>Understand has Saas applications are developed in JavaScript using AJAX and JSON</li>
 	<li>Comfortably be able to utilize single-developer workflow with Git and GitHub</li>

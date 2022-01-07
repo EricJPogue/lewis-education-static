@@ -6,7 +6,7 @@ import { classProductSprint1Link } from '../Activities/ClassProduct'
 import { oreillyPlaylistSC } from '../Links'
 import { gettingToKnowEachOtherAbbreviatedLink } from '../Activities/WebGettingToKnowEachOtherAbbreviated'
 
-export const al49200Sprint01 = (syllabusURL) => { return (
+export const al49200Sprint01 = () => { return (
 
 <div>
 <h5>Sprint 1: Product Team Assignments, Software Engineering Life Cycles and Agile Review, and Tools of the Trade</h5>
@@ -29,9 +29,8 @@ team, you and your scrum teammates will self-organize to implement key Agile rol
 <ul style={{listStyleType:'square'}}>
 	<li>Effectively participate in a blended classroom environment</li>
 	<li>Effectively lead and participate in the creation on your product focused scrum team</li>
-	<li>Describe agile development and explain why it has become the preferred software development process</li>
+	<li>Describe and utilize the key elements of agile development and scrum</li>
 	<li>Implement Agile Software Development Life Cycle Roles, Activities, and Artifacts for your scrum team</li>
-	<li>Describe the benefits of modern Web development stacks and frameworks including MERN</li>
 </ul>
 
 {ActivitiesListIntro()}

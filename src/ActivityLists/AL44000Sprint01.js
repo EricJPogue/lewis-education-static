@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro, Closing } from './AL00000Sprint01'
 import { GettingToKnowEachOther, ProgrammingActivity, ToolsOfTheTrade, HTMLProgrammingPart1, HelloWorldWithPython } from './ProgrammingAssignments'
 
-export const al44000Sprint01 = (syllabusURL) => {
+export const al44000Sprint01 = () => {
 	return (
 
 <div>
@@ -55,5 +55,4 @@ Maintenance. These are some of the topics that we will be exploring as part of t
 	)
 }
 
-// Update schedule for TTh class.
 
