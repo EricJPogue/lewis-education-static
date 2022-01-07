@@ -10,7 +10,6 @@ import { pitHubLink } from './PitHub';
 import { quizMasterMERNLink } from './QuizMasterMERN';
 import { seatSelectorMERNLink } from './SeatSelectorMERN';
 
-
 const name = 'Class Product Sprint 1'
 export const CLASS_PRODUCT_SPRINT_1_ROUTE = 'class-product-sprint-1'
 export const classProductSprint1Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_1_ROUTE)}>{name}</NavLink>)}
@@ -20,7 +19,8 @@ export const classProductSprint1 = () => {
 <div>
 <br />
 <h4>{name}</h4>
-<h5>Summary: Review available products, make team assignments, and self-organize into scrum teams, and start working.</h5>
+<h5>Summary: Review available products, request teams, make team assignments, and self-organize into scrum teams, and 
+start working.</h5>
 <h5>Prerequisites: None</h5>
 
 <p>In sprint 1 we will be requesting products, assigning ourselves to 3 to 5 person scrum teams, self-organizing within 
@@ -34,7 +34,7 @@ development, support, operations, product owner, and marketing for your product 
 
 <p>The products that are available for you to work on this semester are:</p>
 <ul style={{listStyleType:'square'}}>
-	<li>{aidanLink()}</li>
+	<li>{aidanLink()} (formerly known as Stadia)</li>
 	<li>{deliveryDroneLink()} / {arduinoDroneLink()}</li>
 	<li>{pitHubLink()}</li>
 	<li>{quizMasterMERNLink()}</li>
