@@ -271,8 +271,7 @@ export const StartProgrammingActivity = (assignment) => {
 }
 
 export const ProgrammingAssignmentToLink = (assignment) => {
-	if (assignment != null) 
-		return ( <NavLink to={assignment.link}>{assignment.name}</NavLink> )
+	return ( <NavLink to={assignment.link}>{assignment.name}</NavLink> )
 }
 
 export const startActivity = (assignment) => {

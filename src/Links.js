@@ -35,6 +35,9 @@ export const GitTutorial = () => { return internalLink('tutorial', '/activity-co
 
 // export const Blended = () => { return externalLink('Blended Learning & Flipped Classroom', 'https://youtu.be/paQCE58334M') }
 export const Blended = () => { return internalLink('Blended Learning & Flipped Classroom', '/activity/blended-learning') }
+export const scrumIn7Min = () => { return internalLink('Introduction to Scrum in 7 Minutes', '/activity/scrum-in-7-minutes') }
+
+export const blackboardChangePhoto = () => { return internalLink('Blackboard', '/activity/photo-to-blackboard')}
 
 export const FoxHTML = () => { return externalLink('HTML', 'https://www.youtube.com/watch?v=wy6O5hAjKAo') }
 export const FoxCSS = () => { return externalLink('CSS', 'https://www.youtube.com/watch?v=AfBK2Masemk') }

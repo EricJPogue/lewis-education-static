@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { CSTDate, incrementDate, isToday, pastDate, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
-import { getCalendar, getCourseTitle, getFinalExamDateAndTime, getIsScheduleTTr } from './data/ClientDataAPIs'
+import { getCalendar, getCourseTitle, getFinalExamDateAndTime, getIsScheduleTTr, getIsScheduleOnline } from './data/ClientDataAPIs'
 
 export class SprintClassActivities extends Component {
 	// Todo: Update 'currentSprint()+1' to 'currentSprintBaseOne()'.
@@ -183,8 +183,16 @@ export class SprintClassActivities extends Component {
 		)
 	}
 
+	renderOnlineSchedule = () => {
+		return ( <div>
+			{this.renderScheduleHeader()}
+			<p>This is an online class and does not have regularly scheduled class sessions.</p>
+		</div> )
+	}
+
 	render() {
 		if (getIsScheduleTTr()) return this.renderTTSchedule()
+		if (getIsScheduleOnline()) return this.renderOnlineSchedule()
 		else return this.renderMWFSchedule()
 	}
 }

@@ -6,8 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 import { getSyllabusURL } from '../data/ClientDataAPIs'
 import { ProgrammingAssignmentToLink, ProgrammingActivity } from './ProgrammingAssignments'
-import { Blended, programmingTogether } from '../Links'
-
+import { Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether } from '../Links'
 
 export const ScrumIntro = () => {
 	return ( 
@@ -35,13 +34,17 @@ focused time unless otherwise noted. <em>Bold</em> items are graded assignments.
 	)
 }
 
+const sprintCalendar = (sprint) => {
+	return ( <NavLink to='/calendar/1'>calendar</NavLink> )
+}
 export const StandardActivitiesPlus = (programmingAssignmentLink) => { 
 	return ( <div>
 
 <li>Maintain laser focus on due dates by reviewing our class <NavLink to='/calendar/1'>calendar</NavLink> and sprint 1 <NavLink to='/schedule/1'>schedule</NavLink></li>
+<li>Maintain laser focus on due dates by reviewing our class {sprintCalendar(1)} <NavLink to='/schedule/1'>schedule</NavLink></li>
 <li>Review our course <a href={getSyllabusURL()}>syllabus</a></li>
 <li>Understand blended learning by watching {Blended()}</li>
-<li>Be prepared to participate in your scrum team by watching <NavLink to='/activity/scrum-in-7-minutes'>Introduction to Scrum in 7 Minutes</NavLink></li>
+<li>Be prepared to participate in your scrum team by watching {scrumIn7Min()}</li>
 <li><em>Review sprint 1 assignments including Lab 1, Quiz 1, Discussion 1, and Reflection 1</em></li>
 <li>Start working on <NavLink to='/activity/tools'>Tools of the Trade</NavLink> by setting up Discord and O’Reilly Books</li>
 <li>Start working on {programmingAssignmentLink}</li>
@@ -57,10 +60,30 @@ export const InitialPost = () => {
 	return ( <li><em>Make your initial Discussion 1 post by the middle of the sprint</em></li> )
 }
 
+const makeEstimateString = (estimate) => {
+	if ((estimate === null) || (estimate === undefined) || (estimate === '')) {
+		return null
+	}
+	return (<sup> ~{estimate}</sup>)
+}
+
+export const StandardActivitiesClosingPlus = (programmingAssignmentLink, programmingAssignmentEstimate) => { 
+	console.log(programmingAssignmentEstimate)
+	return ( <div>
+
+<li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles </li>
+<li>Complete {programmingAssignmentLink}{makeEstimateString(programmingAssignmentEstimate)}</li>
+<li><em>Complete Discussion 1 by responding to at least two of your classmates’ posts</em></li>
+<li><em>Submit Lab 1, Quiz 1, and Reflection 1</em></li>
+
+	</div> ) 
+}
+
+// Todo: This function should be replace by StandardActivitiesClosingPlus().
 export const StandardActivitiesClosing = (programmingAssignment) => { 
 	return ( <div>
 
-<li>Add a representative photo of yourself to your <NavLink to='/activity/photo-to-blackboard'>Blackboard</NavLink> and Zoom profiles </li>
+<li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles </li>
 {ProgrammingActivity(programmingAssignment)}
 <li><em>Complete Discussion 1 by responding to at least two of your classmates’ posts</em></li>
 <li><em>Submit Lab 1, Quiz 1, and Reflection 1</em></li>

@@ -59,3 +59,5 @@ much code. This sprint get your text editors out. We are going to start practici
 // Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
 // Todo: Consider doing the same thing for testing.
 // Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
+// Sprint 2 Planning
+// Jira Tutorial https://www.atlassian.com/software/jira/guides/getting-started - Jira will be used to manage your team’s project.

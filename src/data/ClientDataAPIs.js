@@ -1,4 +1,4 @@
-import { URLCLASSID, SCHEDULE_TTR, CURRENTCALENDARID } from './ClientData'
+import { URLCLASSID, SCHEDULE_TTR, SCHEDULE_ONLINE, CURRENTCALENDARID } from './ClientData'
 import { classList } from './ClientData'
 import { sprintCalendarSpring_2022_01_10_16, sprintCalendarFall_2021_08_30_16, sprintCalendarSpring_2021_01_18_16 } from './ClientData'
 
@@ -27,6 +27,10 @@ export const getCalendar = () => {
 
 export const getIsScheduleTTr = () => {
 	return (getClass().schedule === SCHEDULE_TTR)
+}
+
+export const getIsScheduleOnline = () => {
+	return (getClass().schedule === SCHEDULE_ONLINE)
 }
 
 export const getFinalExamDateAndTime = () => {

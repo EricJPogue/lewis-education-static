@@ -2,6 +2,7 @@
 export const URLCLASSID = 'cpsc'
 export const SCHEDULE_MWF = 'MWF'
 export const SCHEDULE_TTR = 'TTh'
+export const SCHEDULE_ONLINE = 'Online'
 
 
 export const classList = [																											 

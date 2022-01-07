@@ -1,12 +1,10 @@
 import React from 'react'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, StandardActivitiesPlus, InitialPost, StandardActivitiesClosing, ScrumIntro } from './AL00000Sprint01'
-import { GettingToKnowEachOther, ProgrammingActivity, ToolsOfTheTrade } from './ProgrammingAssignments'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesPlus, InitialPost, StandardActivitiesClosingPlus, ScrumIntro } from './AL00000Sprint01'
+import { ProgrammingActivity, ToolsOfTheTrade } from './ProgrammingAssignments'
 import { classProductSprint1Link } from '../Activities/ClassProduct'
 import { oreillyPlaylistSC } from '../Links'
-
 import { gettingToKnowEachOtherAbbreviatedLink } from '../Activities/WebGettingToKnowEachOtherAbbreviated'
-
 
 export const al49200Sprint01 = (syllabusURL) => { return (
 
@@ -40,8 +38,6 @@ team, you and your scrum teammates will self-organize to implement key Agile rol
 <ol>
 	<li>Request a product team by submitting Requirement 1 of {classProductSprint1Link()} via email by noon on <em>Wednesday, January 12th</em>.</li>
 	{StandardActivitiesPlus(gettingToKnowEachOtherAbbreviatedLink())}
-	<li>ttt</li>
-	{StandardActivities(GettingToKnowEachOther)}
 
 	<li>Within {oreillyPlaylistSC()} scan “Essential Scrum” from the beginning through chapter 12</li>
 	<li>Within {oreillyPlaylistSC()} read “Essential Scrum” from the beginning through chapter 3</li>
@@ -51,7 +47,7 @@ team, you and your scrum teammates will self-organize to implement key Agile rol
 	{ProgrammingActivity(ToolsOfTheTrade, 1)}
 
 	<li>Complete {classProductSprint1Link()}</li>
-	{StandardActivitiesClosing(GettingToKnowEachOther)}
+	{StandardActivitiesClosingPlus(gettingToKnowEachOtherAbbreviatedLink(), '2 hours')}
 </ol>
 The best advise that I can give you is to start early, submit something for each assignment, and focus on delivering 
 high quality incremental releases of your product with your scrum team. 
@@ -59,12 +55,5 @@ high quality incremental releases of your product with your scrum team.
 
 ) }
 
-// Update schedule for Online class.
-// Add quiz or lab question to address <p>Note that if we were working within a organization that utilized a Waterfall SDLC you would likely be assigned to 
-// a project instead of a product team. Are you comfortable with the difference between Agile and Waterfall?</p>
-// Quiz -> Individual writing assignment 
-// Sprint 1 -> MVP (minimum viable product) definition plus what is your idea for an MVP that can be delivered at the end of sprint 4.
-// Lab -> Architecture paper plus first attempt at Hello World deployed to local and test environments
-// Sprint 2 Planning
-// Jira Tutorial https://www.atlassian.com/software/jira/guides/getting-started - Jira will be used to manage your team’s project.
+
 
