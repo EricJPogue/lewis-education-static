@@ -49,6 +49,7 @@ likely utilize the {arduinoDroneLink()} project as our “overflow” if we have
 <ol>
 	<li>Your prioritized (forced ranked) list of at least three products from above that you would like to work on this semester</li>
 	<li>A very brief summary of what interest you most about your top two prioritized products</li>
+	<li>Your GitHub ID</li>
 	<li>A list of any classmates that you would like to work together with on the same Scrum product team</li>
 	<li>A brief summary of when you would be available to meet regularly and synchronously with your Scrum team</li>
 	<li>When you took Software Engineering (and your instructor) plus a description of your comfort level with Agile and Scrum</li>
