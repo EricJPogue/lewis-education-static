@@ -1,12 +1,14 @@
-
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter';
 
-export const WebGettingToKnowEachOthersTeams = () => {
-	return (
-	
-<div>
+const NAME = 'Getting to Know Each Other Teams'
+export const GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE = 'web-resume'
+export const gettingToKnowEachOthersTeamsLink = () => {return (<NavLink to={makeInternalURL(GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE)}>{NAME}</NavLink>)}
+export const gettingToKnowEachOthersTeams = () => {
+	return ( <div>
 <br />
-<h4>Getting to Know Each Other’s Teams</h4>
+<h4>{NAME}</h4>
 <h5>Summary: <em>As a team</em> create an HTML page dedicated to your scrum team</h5>
 <h5>Prerequisites: Windows 10 or MacOS, VS Code, FireFox, Chrome, HTML, and CSS</h5>
 			
@@ -31,5 +33,4 @@ repository and Assure static website that is linked to the GitHub repository.</p
 </ol>
 
 </div> )
-
 }

@@ -33,12 +33,12 @@ import { PythonTurtleDraw } from './Activities/PythonTurtleDraw'
 import { HTML } from './Activities/HTML'
 import { PythonW3C } from './Activities/PythonW3C'
 import { SuccessfulDeveloper } from './Activities/SuccessfulDeveloper'
-import { AzureWebsite } from './Activities/AzureWebsite'
-import { WebAssignmentPortfolio } from './Activities/WebAssignmentPortfolio'
+// import { AzureWebsite } from './Activities/AzureWebsite'
+// import { WebAssignmentPortfolio } from './Activities/WebAssignmentPortfolio'
 import { WebAssignmentPortfolioWithNodeJS } from './Activities/WebAssignmentPortfolioWithNodeJS'
 import { WebDiceRoller } from './Activities/WebDiceRoller'
 import { gettingToKnowEachOther } from './Activities/WebGettingToKnowEachOther'
-import { WebGettingToKnowEachOthersTeams } from './Activities/WebGettingToKnowEachOthersTeams';
+// import { WebGettingToKnowEachOthersTeams } from './Activities/WebGettingToKnowEachOthersTeams';
 // import { WebMyFavoriteHobby } from './Activities/WebMyFavoriteHobby'
 // import { WebResume } from './Activities/WebResume';
 import { WebCourseSchedule } from './Activities/WebCourseSchedule'
@@ -153,12 +153,12 @@ class Activity extends Component {
 			case 'turtle-draw': return PythonTurtleDraw()
 			case 'html': return HTML()
 			case 'python-w3c': return PythonW3C()
-			case 'azure-website': return AzureWebsite()
-			case 'assignment-portfolio': return WebAssignmentPortfolio()
+			// case 'azure-website': return AzureWebsite()
+			// case 'assignment-portfolio': return WebAssignmentPortfolio()
 			case 'assignment-portfolio-with-node-js': return WebAssignmentPortfolioWithNodeJS()
 			case 'dice-roller': return WebDiceRoller()
 			case 'getting-to-know-each-other': return gettingToKnowEachOther()
-			case 'getting-to-know-each-others-teams': return WebGettingToKnowEachOthersTeams()
+			// case 'getting-to-know-each-others-teams': return WebGettingToKnowEachOthersTeams()
 			// case 'favorite-hobby': return WebMyFavoriteHobby()
 			// case 'resume': return WebResume()
 			case 'course-schedule': return WebCourseSchedule()

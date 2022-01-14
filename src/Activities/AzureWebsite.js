@@ -1,14 +1,17 @@
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter';
 
-export const AzureWebsite= () => {
+const NAME = 'Azure Website'
+export const AZURE_WEBSITE_ROUTE = 'azure-website'
+export const azureWebsiteLink = () => {return (<NavLink to={makeInternalURL(AZURE_WEBSITE_ROUTE)}>{NAME}</NavLink>)}
+export const azureWebsite = () => {
 	return (
 	
 <div>
 
 <br />
-<h4>Azure Website</h4>
+<h4>{NAME}</h4>
 <h5>Summary: Deploy a basic web applications to Microsoft Azure</h5>
 <h5>Prerequisites: GitHub, Azure, Windows 10 or MacOS, Web Browser, and VS Code</h5>
 			

@@ -1,15 +1,20 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { makeEstimateString } from './AL00000Sprint01'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
-import { AssignmentPortfolioWebsite, Activity, Resume } from './ProgrammingAssignments'
-import { HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C } from '../Links'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialDiscussionPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint02'
+import { HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C, internalLink } from '../Links'
 import { FoxHTML, FoxCSS, FoxCookies, FoxAttributes, FoxRubyMVC } from '../Links'
 
-export const al44000Sprint02 = () => {
-	return (
+import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
+import { azureWebsiteLink } from '../Activities/AzureWebsite'
+import { webResumeLink } from '../Activities/WebResume'
 
-<div>
+const foxChapter6Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-06')}
+const foxChapter3Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-03')}
+
+export const al44000Sprint02 = () => {
+	return ( <div>
+
 <h5>Sprint 2: Node.js, JavaScript, Ruby on Rails, and Azure</h5>
 
 <p><em>Welcome to sprint 2.</em> We covered a lot of material in sprint 1. However, we didn't get a chance to write 
@@ -25,27 +30,22 @@ much code. This sprint get your text editors out. We are going to start practici
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivities(AssignmentPortfolioWebsite)}
-
-	<li>Read “Engineering Software as a Service” chapter 6 and review our chapter 6 <NavLink to='/activity/fox-chapter-06'>lecture</NavLink></li>
-	<li>Complete <NavLink to='/activity/azure-website'>Azure Website</NavLink><sup> ~2 hours </sup></li>
-
-	<li>Scan “Engineering Software as a Service” chapters 3 through 5 and review the associated <NavLink to='/activity/fox-chapter-03'>lecture</NavLink></li>
+	{StandardActivitiesWithLink(assignmentPortfolioLink())}
+	<li>Read “Engineering Software as a Service” chapter 6 and review our chapter 6 {foxChapter6Lecture()}</li>
+	<li>Complete {azureWebsiteLink()}{makeEstimateString('2 hours')}</li>
+	<li>Scan “Engineering Software as a Service” chapters 3 through 5 and review the associated {foxChapter3Lecture()}</li>
 	<li>Read “Engineering Software as a Service” sections A.6 and A.7</li>
-
-	<li>Implement your {Activity(Resume)} while completing the W3Schools {HTMLW3C()} and {CSSW3C()} tutorials<sup> ~6 hours </sup></li>
-	{InitialPost(2)}
+	<li>Implement your {webResumeLink()} while completing the W3Schools {HTMLW3C()} and {CSSW3C()} tutorials{makeEstimateString('6 hours')}</li>
+	<li>{InitialDiscussionPost(2)}</li>
 
 	<li>Complete {JavaScriptW3C()} tutorial including {RegularExpressionsW3C()}</li>
 	<li>Scan the following “Engineering Software as a Service” videos on {FoxHTML()}, {FoxCSS()}, {FoxCookies()}, {FoxAttributes()}, and {FoxRubyMVC()}</li>
 
-	{StandardActivitiesClosing(AssignmentPortfolioWebsite)}
+	{StandardActivitiesClosingWithLink(assignmentPortfolioLink(), '2 hours')}
 </ol>
 {Closing()}
 
-
-</div>
-	)
+</div> )
 }
 
 // Todo: Add lots of links from the Agile Alliance to various activity lists.

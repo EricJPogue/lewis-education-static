@@ -9,10 +9,9 @@ import { AssignmentPortfolioWebsiteWithNodeJS, GettingToKnowEachOthersTeams, com
 
 export const al44000Sprint03 = () => {
 	let playlist = oreillyPlaylistSE()
-	return (
+	return ( <div>
 
-<div>
-<h5>Sprint 3: Application Requirements, Behavior-Driven Design, Node.js, and Azure, </h5>
+<h5>Sprint 3: Application Requirements, Node.js, and Azure, </h5>
 
 <p>Welcome to sprint 3. This sprint we will be focused on Node.js as a platform for Saas. We will be
 utilizing a book from O’Reilly Books to learn more about the Node.js and Express platform. The book that we are 

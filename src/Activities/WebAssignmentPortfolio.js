@@ -1,13 +1,16 @@
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { makeInternalURL } from './ActivityRouter'
 
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-
-export const WebAssignmentPortfolio = () => {
+const NAME = 'Assignment Portfolio'
+export const ASSIGNMENT_PORTFOLIO_ROUTE = 'assignment-portfolio'
+export const assignmentPortfolioLink = () => {return (<NavLink to={makeInternalURL(ASSIGNMENT_PORTFOLIO_ROUTE)}>{NAME}</NavLink>)}
+export const assignmentPortfolio = () => {
 	return (
 	
 <div>
 <br />
-<h4>Assignment Portfolio</h4>
+<h4>{NAME}</h4>
 <h5>Summary: Create a website that links all of your class assignments utilizing HTML, CSS, and Azure</h5>
 <h5>Prerequisite: <NavLink to='/activity/azure-website'>Azure Website</NavLink></h5>
 			

@@ -1,16 +1,16 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { makeEstimateString } from './AL00000Sprint01'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
-import { ProgrammingActivity, AssignmentPortfolioWebsite, HTMLProgrammingParts1And2, AzureWebsite, FavoriteHobby } from './ProgrammingAssignments'
-
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialDiscussionPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint02'
 import { oreillyPlaylistWeb, internalLink } from '../Links'
-
 import { favoriteHobbyLink } from '../Activities/WebMyFavoriteHobby';
-import { ToolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade';
 import { webResumeLink } from '../Activities/WebResume';
+import { azureWebsiteLink } from '../Activities/AzureWebsite';
+import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio';
+import { htmlLink } from '../Activities/HTML'
 
 const sebestaChapter3Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-03')}
+const sebestaChapter4Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-04')}
 
 export const al24700Sprint02 = () => {
 	return (
@@ -37,22 +37,19 @@ JavaScript.</p>
 	{StandardActivitiesWithLink(favoriteHobbyLink())}
 	<li>Consider substituting {webResumeLink()} (preferred) for {favoriteHobbyLink()}</li>
 	<li>Read Sebesta chapter 3 on Cascading Style Sheets (CSS) and review the associated {sebestaChapter3Lecture()}</li>
-	<li>Review our {oreillyPlaylistWeb()} playlist</li>
-	<li>Review {ToolsOfTheTradeLink()}</li>
+	<li>Complete {azureWebsiteLink()}{makeEstimateString('3 hours')}</li>
+	<li>Complete {assignmentPortfolioLink()}{makeEstimateString('3 hours')}</li>
+	<li>{InitialDiscussionPost(2)}</li>
 
-{/* START HERE!!!*/}
-
-	{ProgrammingActivity(AzureWebsite, '3')} 
-	{ProgrammingActivity(AssignmentPortfolioWebsite, '3')}
-	
-	{InitialPost(2)}
-	<li>Read chapter 4 of Sebesta on Basic JavaScript and review the associated <NavLink to='/activity/sebesta-chapter-04'>lecture</NavLink></li>
-	{ProgrammingActivity(HTMLProgrammingParts1And2, '3')} 
-	<li>Review the <a href='https://developers.google.com/maps/documentation/javascript/overview' target='blank' rel='noopener noreferrer'>Google Maps JavaScript API</a></li>
-	{StandardActivitiesClosing(FavoriteHobby)}
+	<li>Read chapter 4 of Sebesta on Basic JavaScript and review the associated {sebestaChapter4Lecture()}</li>
+	<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
+	<li>Complete {htmlLink()} - Parts 1 and 2{makeEstimateString('3 hours')}</li>
+	{StandardActivitiesClosingWithLink(favoriteHobbyLink())}
 </ol>
 {Closing()}
 </div>
 
 	)
 }
+
+
