@@ -1,12 +1,16 @@
-
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter';
 
-export const WebMyFavoriteHobby = () => {
+const NAME = 'My Favorite Hobby'
+export const FAVORITE_HOBBY_ROUTE = 'favorite-hobby'
+export const favoriteHobbyLink = () => {return (<NavLink to={makeInternalURL(FAVORITE_HOBBY_ROUTE)}>{NAME}</NavLink>)}
+export const favoriteHobby = () => {
 	return (
 	
 <div>
 <br />
-<h4>My Favorite Hobby</h4>
+<h4>{NAME}</h4>
 <h5>Summary: Create a HTML page describing your favorite hobby</h5>
 <h5>Prerequisites: Windows 10 or MacOS, VS Code, HTML, and CSS</h5>
 			

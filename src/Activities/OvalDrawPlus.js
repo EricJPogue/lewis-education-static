@@ -1,10 +1,9 @@
-
 import React from 'react';
-
-export const OvalDrawPlusJava = () => { return OvalDrawPlus(JavaProperties) }
+import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter';
 
 const JavaProperties = {
-	'name': 'OvalDraw Plus with Java', 
+	'name': 'OvalDraw Plus', 
 	'language': 'Java',
 	'prerequisites': 'Java, VS Code, and Terminal',
 	'type': 'command-line application written in the Java language',
@@ -12,6 +11,12 @@ const JavaProperties = {
 	'requirement1_2': 'Successfully compiles with “javac *.java" and successfully executes with “java OvalDrawPlus',
 	'example': 'https://github.com/EricJPogue/cpsc-example-code.git'
 }
+
+const NAME = JavaProperties.name
+export const OVAL_DRAW_PLUS_JAVA_ROUTE = 'ovaldraw-plus-java'
+export const ovalDrawPlusJavaLink = () => {return (<NavLink to={makeInternalURL(OVAL_DRAW_PLUS_JAVA_ROUTE)}>{NAME}</NavLink>)}
+
+export const ovalDrawPlusJava = () => { return OvalDrawPlus(JavaProperties) }
 
 const ExampleLink = (tutorialLink) => {
 	if (tutorialLink == null) {

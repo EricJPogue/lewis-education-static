@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { getCourseNumber } from '../data/ClientDataAPIs' 
 
 import { Discord, OReillyBooks, Firefox, Chrome, VSCode, FileExplorer, Finder, ZipFiles, Office365, PowerShell, Terminal, ScreenCapture, Git, 
-	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, Java, JavaTutorial, Go, grammarly, mongoDBAtlas, firebase } from '../Links'
+	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, microsoftOpenJDK, /* Java, */ JavaTutorial, Go, grammarly, mongoDBAtlas, firebase, CommandLine } from '../Links'
 
 export const ToolsOfTheTradeLink = () => {return (<NavLink to={internalLink}>{name}</NavLink>)}
 const internalLink = '/activity/tools'
@@ -20,7 +20,7 @@ export const Tools = () => {
 
 	const checkJava = () => {
 		if (getCourseNumber() === 24500) {
-			return ( <li>{Java()} development environment reviewing the associated {JavaTutorial()}</li> )
+			return ( <li>{microsoftOpenJDK() /* Java() */} development environment reviewing the associated {JavaTutorial()}</li> )
 		}
 		return null
 	}
@@ -76,7 +76,7 @@ install, configure, and utilize the following tools and services. By the end of 
 	<li>{VSCode()} source code editor</li>
 	<li>{FileExplorer()} or {Finder()} to manage files, folders, and {ZipFiles()}</li>
 	<li>{ScreenCapture()} to capture images of our computer screen</li>
-	<li>{PowerShell()} or {Terminal()} command line environments</li>
+	<li>{PowerShell()} or {Terminal()} to execute {CommandLine()} functions</li>
 	<li>{GitHub()} and the {Git()} command line source code management tool by following this {GitTutorial()}</li>
 	<li>{Python()} and the {VSCodePython()} integrated development environment</li>
 	<li>{Office365()} which is available to you free through Lewis University</li>

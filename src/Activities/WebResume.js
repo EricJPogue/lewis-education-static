@@ -1,15 +1,19 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter';
 
 import { ResumeFormat, ResumeReviewServices } from '../Links'
 
-export const WebResume = () => {
+const NAME = 'Web Resume'
+export const WEB_RESUME_ROUTE = 'web-resume'
+export const webResumeLink = () => {return (<NavLink to={makeInternalURL(WEB_RESUME_ROUTE)}>{NAME}</NavLink>)}
+export const webResume = () => {
 	return (
 	
 <div>
 <br />
-<h4>Web Resume</h4>
+<h4>{NAME}</h4>
 <h5>Summary: Create and publish an high quality current resume for yourself utilizing HTML, CSS, and Azure</h5>
 <h5>Prerequisite: <NavLink to='/activity/azure-website'>Azure Website</NavLink></h5>
 			

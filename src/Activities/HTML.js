@@ -1,13 +1,17 @@
-
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter';
 
+const NAME = 'HTML Programming'
+export const HTML_ROUTE = 'html'
+export const htmlLink = () => {return (<NavLink to={makeInternalURL(HTML_ROUTE)}>{NAME}</NavLink>)}
 export const HTML= () => {
 	return (
 	
 <div>
 
 <br />
-<h4>HTML Tutorial</h4>
+<h4>{NAME}</h4>
 <h5>Summary: Complete the W3C tutorial on HTML</h5>
 <h5>Prerequisites: Windows 10 or MacOS, Web Browser, and VS Code</h5>
 			

@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro, Closing } from './AL00000Sprint01'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro } from './AL00000Sprint01'
 import { oreillyPlaylistOOP } from '../Links';
 
 import { GetCommandsLink } from '../Activities/GitCommands';
@@ -46,7 +46,8 @@ additional skills are what object-oriented programming give us.</p>
 	{StandardActivitiesClosing(MatchmakerWithJava)}
 </ol>
 
-{Closing()}
+<p>The best advise that I can give you is to start assignments early, submit something for each assignment, and to 
+attend class. If you do these things, I believe your success is virtually guaranteed. </p>
 </div>
 
 	)

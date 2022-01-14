@@ -1,17 +1,20 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { makeEstimateString } from './AL00000Sprint01'
 
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialDiscussionPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint02'
+
+import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
+import { htmlLink } from '../Activities/HTML'
+import { ToolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
+import { SequenceSelectionAndRepetition } from '../Links'
 import { oreillyPlaylistICS } from '../Links'
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
-import { ProgrammingActivity, ReviewProgrammingActivity, ToolsOfTheTrade } from './ProgrammingAssignments'
-import { GettingToKnowEachOther, HTMLProgrammingPart1 } from './ProgrammingAssignments'
-import { CommandLine, SequenceSelectionAndRepetition } from '../Links'
 
 export const al20000Sprint02 = () => {
 	return (
 
 <div>
-<h5>Sprint 2: Numbering Systems, Data Representation, HTML, Cascading Style Sheets, and more Tools of the Trade</h5>
+<h5>Sprint 2: Numbering Systems, Data Representation, HTML, and Cascading Style Sheets</h5>
 
 <p>Welcome to sprint 2 of Introduction to Computer Science. In sprint 2 we are going to continue our journey into data
 representation and also take look at some of the key technologies that make up the Web. Our sprint activities will 
@@ -20,8 +23,8 @@ Sheets (CSS).</p>
 
 {LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
-	<li>Develop browser based HTML5 applications that utilize common HTML and CSS</li>
-	<li>Utilize important software developer tools and services create, update, and deploy basic software applications</li>
+	<li>Develop browser-based HTML5 applications that utilize common HTML and CSS</li>
+	<li>Utilize important software developer tools and services to create, update, and deploy basic software applications</li>
 	<li>Understand and utilize numbering systems</li>
 	<li>Understand sequences, selections, and loops (repetition)</li>
 	<li>Identify, define, and discuss data representation, programming, and algorithmic thinking</li>
@@ -29,28 +32,29 @@ Sheets (CSS).</p>
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivities(GettingToKnowEachOther)}
+	{StandardActivitiesWithLink(gettingToKnowEachOtherLink())}
 
 	<li>Review our {oreillyPlaylistICS()} playlist</li>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The Information Layer and review our associated <NavLink to='/activity-dale/2'>lecture</NavLink></li>
-	{ReviewProgrammingActivity(ToolsOfTheTrade, '1')}
+	<li>Review {ToolsOfTheTradeLink()}</li>
 	<li>Review {SequenceSelectionAndRepetition()}</li>
-	{InitialPost(2)}
+	<li>{InitialDiscussionPost(2)}</li>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Data Representation and review our associated <NavLink to='/activity-dale/3'>lecture</NavLink></li>
-	<li>Review {CommandLine()}</li>
-	{ProgrammingActivity(HTMLProgrammingPart1, '4')}
+	
+	<li>Complete {htmlLink()} - Part 1{makeEstimateString('3 hours')}</li>
+	<li>Within {oreillyPlaylistICS()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
 
-	{StandardActivitiesClosing(GettingToKnowEachOther)}
+	{StandardActivitiesClosingWithLink(gettingToKnowEachOtherLink(), '6')}
 </ol>
 {Closing()}
 
+<br />
+<p>Programming Together: “HelloWorld Plus for the Web” and “HelloWorldPlus with Pictures”</p>
+
 {/* Programming Together: “HelloWorld Plus for the Web” and “HelloWorldPlus with Pictures” */}
 </div> )
-};
+}
 
-// Add Introducing Python Preface and Chapters 1 through 4
-// Todo: Verify "final comments" were removed from all assignments.
 // Todo: Add Git/GitHub activity / tutorial. 
-// Update quiz question "The Unicode encoding scheme..."
-// Update/fix quiz question "How many characters can be represented by the Unicode character set?"... it is a bad answer and a duplicate question for some. 
+// Todo: Add Quiz section on Sequences, selections, and loops (repetition)
 // Todo: Consider lining up certain discussion topics with Friendly Conversation Topics.

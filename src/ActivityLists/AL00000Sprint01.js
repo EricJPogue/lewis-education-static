@@ -39,11 +39,11 @@ focused time unless otherwise noted. <em>Bold</em> items are graded assignments.
 	)
 }
 
-const sprint1Calendar = (sprint) => {
+const sprint1Calendar = () => {
 	return ( <NavLink to='/calendar/1'>calendar</NavLink> )
 }
 
-const sprint1Schedule = (sprint) => {
+const sprint1Schedule = () => {
 	return ( <NavLink to='/schedule/1'>schedule</NavLink> )
 }
 
@@ -51,7 +51,7 @@ const sprint1Schedule = (sprint) => {
 export const StandardActivitiesPlus = (programmingAssignmentLink) => { 
 	return ( <div>
 
-<li>Maintain laser focus on due dates by reviewing our class {sprint1Calendar(1)} and sprint 1 {sprint1Schedule()}</li>
+<li>Maintain a laser focus on due dates by reviewing our class {sprint1Calendar(1)} and sprint 1 {sprint1Schedule()}</li>
 <li>Review our course <a href={getSyllabusURL()}>syllabus</a></li>
 <li>Understand blended learning by watching {Blended()}</li>
 <li>Be prepared to participate in your scrum team by watching {scrumIn7Min()}</li>
@@ -70,7 +70,7 @@ export const InitialPost = () => {
 	return ( <li><em>Make your initial Discussion 1 post by the middle of the sprint</em></li> )
 }
 
-const makeEstimateString = (estimate) => {
+export const makeEstimateString = (estimate) => {
 	if ((estimate === null) || (estimate === undefined) || (estimate === '')) {
 		return null
 	}
@@ -106,7 +106,7 @@ export const Closing = () => {
 
 <p>The best advise that I can give you is to start assignments early, submit something for each assignment, and to 
 attend class. If you do these things, I believe your success is virtually guaranteed. Finally, be sure to periodically 
-check for our {programmingTogether()} tutorials.</p>
+check for updates to our {programmingTogether()} tutorials.</p>
 
 	) 
 }

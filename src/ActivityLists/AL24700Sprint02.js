@@ -1,10 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
-import { ProgrammingActivity, ReviewProgrammingActivity, AlternativeProgrammingActivity, AssignmentPortfolioWebsite, HTMLProgrammingParts1And2, AzureWebsite, ToolsOfTheTrade, FavoriteHobby, Resume } from './ProgrammingAssignments'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
+import { ProgrammingActivity, AssignmentPortfolioWebsite, HTMLProgrammingParts1And2, AzureWebsite, FavoriteHobby } from './ProgrammingAssignments'
 
-import { oreillyPlaylistWeb } from '../Links'
+import { oreillyPlaylistWeb, internalLink } from '../Links'
+
+import { favoriteHobbyLink } from '../Activities/WebMyFavoriteHobby';
+import { ToolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade';
+import { webResumeLink } from '../Activities/WebResume';
+
+const sebestaChapter3Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-03')}
 
 export const al24700Sprint02 = () => {
 	return (
@@ -28,11 +34,14 @@ JavaScript.</p>
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivities(FavoriteHobby)}
-	<li>{AlternativeProgrammingActivity(Resume, FavoriteHobby)}</li>
-	<li>Read Sebesta chapter 3 on Cascading Style Sheets (CSS) and review the associated <NavLink to='/activity/sebesta-chapter-03'>lecture</NavLink></li>
+	{StandardActivitiesWithLink(favoriteHobbyLink())}
+	<li>Consider substituting {webResumeLink()} (preferred) for {favoriteHobbyLink()}</li>
+	<li>Read Sebesta chapter 3 on Cascading Style Sheets (CSS) and review the associated {sebestaChapter3Lecture()}</li>
 	<li>Review our {oreillyPlaylistWeb()} playlist</li>
-	{ReviewProgrammingActivity(ToolsOfTheTrade, '1')}
+	<li>Review {ToolsOfTheTradeLink()}</li>
+
+{/* START HERE!!!*/}
+
 	{ProgrammingActivity(AzureWebsite, '3')} 
 	{ProgrammingActivity(AssignmentPortfolioWebsite, '3')}
 	

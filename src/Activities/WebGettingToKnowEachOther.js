@@ -1,12 +1,17 @@
-
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter';
 
-export const WebGettingToKnowEachOther = () => {
+const NAME = 'Getting to Know Each Other'
+export const GETTING_TO_KNOW_EACH_OTHER_ROUTE = 'getting-to-know-each-other'
+export const gettingToKnowEachOtherLink = () => {return (<NavLink to={makeInternalURL(GETTING_TO_KNOW_EACH_OTHER_ROUTE)}>{NAME}</NavLink>)}
+
+export const gettingToKnowEachOther = () => {
 	return (
 	
 <div>
 <br />
-<h4>Getting to Know Each Other</h4>
+<h4>{NAME}</h4>
 <h5>Summary: Create an HTML page describing yourself</h5>
 <h5>Prerequisites: Windows 10 or MacOS, VS Code, FireFox, Chrome, HTML, and CSS</h5>
 			

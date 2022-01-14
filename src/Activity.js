@@ -13,7 +13,6 @@ import { MatchmakerPython, MatchmakerWeb, MatchmakerJava, MatchmakerGo, Matchmak
 import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './Activities/HealthRiskCalculator'
 import { HealthRiskCalculatorTeamWeb } from './Activities/HealthRiskCalculatorTeam'
 
-import { OvalDrawPlusJava } from './Activities/OvalDrawPlus'
 import { ExampleCode } from './Activities/ExampleCode'
 import { FaceDrawWeb, FaceDrawJava, FaceDrawReact } from './Activities/FaceDraw'
 import { MosaicWeb, MosaicJava, MosaicReact, MosaicV2React } from './Activities/Mosaic'
@@ -38,10 +37,10 @@ import { AzureWebsite } from './Activities/AzureWebsite'
 import { WebAssignmentPortfolio } from './Activities/WebAssignmentPortfolio'
 import { WebAssignmentPortfolioWithNodeJS } from './Activities/WebAssignmentPortfolioWithNodeJS'
 import { WebDiceRoller } from './Activities/WebDiceRoller'
-import { WebGettingToKnowEachOther } from './Activities/WebGettingToKnowEachOther'
+import { gettingToKnowEachOther } from './Activities/WebGettingToKnowEachOther'
 import { WebGettingToKnowEachOthersTeams } from './Activities/WebGettingToKnowEachOthersTeams';
-import { WebMyFavoriteHobby } from './Activities/WebMyFavoriteHobby'
-import { WebResume } from './Activities/WebResume';
+// import { WebMyFavoriteHobby } from './Activities/WebMyFavoriteHobby'
+// import { WebResume } from './Activities/WebResume';
 import { WebCourseSchedule } from './Activities/WebCourseSchedule'
 import { WebMapManiaVersion1 } from './Activities/WebMapManiaVersion1'
 import { WebMapManiaVersion2 } from './Activities/WebMapManiaVersion2'
@@ -127,7 +126,6 @@ class Activity extends Component {
 			case 'matchmaker-go': return MatchmakerGo()
 			case 'matchmaker-examples': return MatchmakerExamples()
 
-			case 'ovaldraw-plus-java': return OvalDrawPlusJava()
 			case 'example-code': return ExampleCode()
 
 			case 'facedraw-web': return FaceDrawWeb()
@@ -159,10 +157,10 @@ class Activity extends Component {
 			case 'assignment-portfolio': return WebAssignmentPortfolio()
 			case 'assignment-portfolio-with-node-js': return WebAssignmentPortfolioWithNodeJS()
 			case 'dice-roller': return WebDiceRoller()
-			case 'getting-to-know-each-other': return WebGettingToKnowEachOther()
+			case 'getting-to-know-each-other': return gettingToKnowEachOther()
 			case 'getting-to-know-each-others-teams': return WebGettingToKnowEachOthersTeams()
-			case 'favorite-hobby': return WebMyFavoriteHobby()
-			case 'resume': return WebResume()
+			// case 'favorite-hobby': return WebMyFavoriteHobby()
+			// case 'resume': return WebResume()
 			case 'course-schedule': return WebCourseSchedule()
 			case 'map-mania-v1': return WebMapManiaVersion1()
 			case 'map-mania-v2': return WebMapManiaVersion2()

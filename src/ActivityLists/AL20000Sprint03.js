@@ -48,5 +48,6 @@ and computing components.</p>
 	)
 }
 
-
+// Add Introducing Python Preface and Chapters 3 and 4
+// Todo: Verify "final comments" were removed from all assignments.
 

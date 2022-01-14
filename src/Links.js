@@ -27,13 +27,14 @@ export const grammarly = () => { return externalLink('Grammarly', 'https://www.g
 export const VSCodePython = () => { return externalLink('Visual Studio Code Python', 'https://code.visualstudio.com/docs/python/python-tutorial') }
 export const NodeJS = () => { return externalLink('Node.js', 'https://nodejs.org/en/') }
 export const Java = () => { return externalLink('Java SDK', 'https://docs.microsoft.com/en-us/java/azure/jdk/?view=azure-java-stable') }
+export const microsoftOpenJDK = () => { return externalLink('Java Software Development Kit (Microsoft OpenJDK)', 'https://www.microsoft.com/openjdk') }
+
 export const JavaTutorial = () => { return internalLink('tutorial', '/activity-config/java-jdk-windows10-setup') }
 export const Go = () => { return externalLink('Go', 'https://golang.org/') }
 export const PowerShell = () => { return internalLink('PowerShell', '/activity-config/powershell-windows10-setup') }
 export const Terminal = () => { return internalLink('Terminal', '/activity-config/macos-setup-terminal-finder-and-git') }
 export const GitTutorial = () => { return internalLink('tutorial', '/activity-config/git-installation-on-windows-10') }
 
-// export const Blended = () => { return externalLink('Blended Learning & Flipped Classroom', 'https://youtu.be/paQCE58334M') }
 export const Blended = () => { return internalLink('Blended Learning & Flipped Classroom', '/activity/blended-learning') }
 export const scrumIn7Min = () => { return internalLink('Introduction to Scrum in 7 Minutes', '/activity/scrum-in-7-minutes') }
 
@@ -94,14 +95,20 @@ export const revit = () => { return externalLink('Revit', 'https://www.autodesk.
 export const mern = () => { return externalLink('MERN', 'https://www.mongodb.com/mern-stack')}
 
 export const deliveryDronePowerpoint = () => { return externalLink('Delivery Drone PowerPoint', 'https://lewiseducation.blob.core.windows.net/todo/delivery-drone.pptx')}
+export const umlClassDiagrams = () => { return externalLink('UML Class Diagrams', 'https://www.youtube.com/watch/UI6lqHOVHic')}
 
-const externalLink = (displayName, url) => {
+export const codingStandards = () => { return internalLink('Coding Standards', '/activity/coding-standards')}
+
+export const calendarLink = (sprint) => { return ( <NavLink to={'/calendar/'+sprint}>calendar</NavLink> ) }
+export const scheduleLink = (sprint) => { return ( <NavLink to={'/schedule/'+sprint}>schedule</NavLink> ) }
+
+export const externalLink = (displayName, url) => {
 	return (
 		<a href={url} target='_blank' rel='noopener noreferrer'>{displayName}</a>
 	)
 }
 
-const internalLink = (displayName, url) => {
+export const internalLink = (displayName, url) => {
 	return ( <NavLink to={url}>{displayName}</NavLink> )
 }
 
