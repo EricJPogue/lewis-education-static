@@ -3,6 +3,7 @@ import { ARDUINO_DRONE_ROUTE, arduinoDrone } from './ArduinoDrone'
 import { ASSIGNMENT_PORTFOLIO_ROUTE, assignmentPortfolio } from './WebAssignmentPortfolio'
 import { AZURE_WEBSITE_ROUTE, azureWebsite } from './AzureWebsite'
 import { CLASS_PRODUCT_SPRINT_1_ROUTE, classProductSprint1 } from './ClassProduct'
+import { CLASS_PRODUCT_SPRINT_2_ROUTE, classProductSprint2 } from './ClassProduct'
 import { DELIVERY_DRONE_ROUTE, deliveryDrone } from './DeliveryDrone'
 import { FAVORITE_HOBBY_ROUTE, favoriteHobby} from './WebMyFavoriteHobby'
 import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebGettingToKnowEachOther'
@@ -26,6 +27,7 @@ export const routeActivity = (activityRoute) => {
 		case ASSIGNMENT_PORTFOLIO_ROUTE: return assignmentPortfolio()
 		case AZURE_WEBSITE_ROUTE: return azureWebsite()
 		case CLASS_PRODUCT_SPRINT_1_ROUTE: return classProductSprint1()
+		case CLASS_PRODUCT_SPRINT_2_ROUTE: return classProductSprint2()
 		case DELIVERY_DRONE_ROUTE: return deliveryDrone()
 		case FAVORITE_HOBBY_ROUTE: return favoriteHobby()
 		case GETTING_TO_KNOW_EACH_OTHER_ROUTE: return gettingToKnowEachOther()
