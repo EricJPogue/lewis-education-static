@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { makeEstimateString } from './AL00000Sprint01'
+import { estimated } from './AL00000Sprint01'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialDiscussionPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint02'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialDiscussionPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
 
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { htmlLink } from '../Activities/HTML'
@@ -32,7 +32,7 @@ Sheets (CSS).</p>
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivitiesWithLink(gettingToKnowEachOtherLink())}
+	{StandardActivities(gettingToKnowEachOtherLink())}
 
 	<li>Review our {oreillyPlaylistICS()} playlist</li>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The Information Layer and review our associated <NavLink to='/activity-dale/2'>lecture</NavLink></li>
@@ -41,10 +41,10 @@ Sheets (CSS).</p>
 	<li>{InitialDiscussionPost(2)}</li>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Data Representation and review our associated <NavLink to='/activity-dale/3'>lecture</NavLink></li>
 	
-	<li>Complete {htmlLink()} - Part 1{makeEstimateString('3 hours')}</li>
+	<li>Complete {htmlLink()} - Part 1{estimated('3 hours')}</li>
 	<li>Within {oreillyPlaylistICS()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
 
-	{StandardActivitiesClosingWithLink(gettingToKnowEachOtherLink(), '6')}
+	{StandardActivitiesClosing(gettingToKnowEachOtherLink(), '6')}
 </ol>
 {Closing()}
 
@@ -56,5 +56,4 @@ Sheets (CSS).</p>
 }
 
 // Todo: Add Git/GitHub activity / tutorial. 
-// Todo: Add Quiz section on Sequences, selections, and loops (repetition)
 // Todo: Consider lining up certain discussion topics with Friendly Conversation Topics.

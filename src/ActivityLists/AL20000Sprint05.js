@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { InitialPost,  } from './AL00000Sprint02'
-import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
+import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { FinalProjectsAndMoreResponsibility, StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint05'
 
 import { oreillyPlaylistICS, introducingPythonCodeExamples, programmingTogether, PythonW3C } from '../Links'

@@ -1,7 +1,7 @@
 import React from 'react'
-import { makeEstimateString } from './AL00000Sprint01'
+import { estimated } from './AL00000Sprint01'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialDiscussionPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint02'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialDiscussionPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
 import { oreillyPlaylistWeb, internalLink } from '../Links'
 import { favoriteHobbyLink } from '../Activities/WebMyFavoriteHobby';
 import { webResumeLink } from '../Activities/WebResume';
@@ -34,17 +34,17 @@ JavaScript.</p>
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivitiesWithLink(favoriteHobbyLink())}
+	{StandardActivities(favoriteHobbyLink())}
 	<li>Consider substituting {webResumeLink()} (preferred) for {favoriteHobbyLink()}</li>
 	<li>Read Sebesta chapter 3 on Cascading Style Sheets (CSS) and review the associated {sebestaChapter3Lecture()}</li>
-	<li>Complete {azureWebsiteLink()}{makeEstimateString('3 hours')}</li>
-	<li>Complete {assignmentPortfolioLink()}{makeEstimateString('3 hours')}</li>
+	<li>Complete {azureWebsiteLink()}{estimated('3 hours')}</li>
+	<li>Complete {assignmentPortfolioLink()}{estimated('3 hours')}</li>
 	<li>{InitialDiscussionPost(2)}</li>
 
 	<li>Read chapter 4 of Sebesta on Basic JavaScript and review the associated {sebestaChapter4Lecture()}</li>
 	<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
-	<li>Complete {htmlLink()} - Parts 1 and 2{makeEstimateString('3 hours')}</li>
-	{StandardActivitiesClosingWithLink(favoriteHobbyLink())}
+	<li>Complete {htmlLink()} - Parts 1 and 2{estimated('3 hours')}</li>
+	{StandardActivitiesClosing(favoriteHobbyLink())}
 </ol>
 {Closing()}
 </div>

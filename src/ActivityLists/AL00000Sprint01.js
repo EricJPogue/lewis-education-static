@@ -70,7 +70,7 @@ export const InitialPost = () => {
 	return ( <li><em>Make your initial Discussion 1 post by the middle of the sprint</em></li> )
 }
 
-export const makeEstimateString = (estimate) => {
+export const estimated = (estimate) => {
 	if ((estimate === null) || (estimate === undefined) || (estimate === '')) {
 		return null
 	}
@@ -82,7 +82,7 @@ export const StandardActivitiesClosingPlus = (programmingAssignmentLink, program
 	return ( <div>
 
 <li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles </li>
-<li>Complete {programmingAssignmentLink}{makeEstimateString(programmingAssignmentEstimate)}</li>
+<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 <li><em>Complete Discussion 1 by responding to at least two of your classmates’ posts</em></li>
 <li><em>Submit Lab 1, Quiz 1, and Reflection 1</em></li>
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-import { InitialPost,  } from './AL00000Sprint02'
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint03'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint03'
 
 import { oreillyPlaylistWeb, JavaScriptW3C, internalLink } from '../Links'
 import { MapManiaVersion1, AssignmentPortfolioWebsite, DiceRoller, complete, ReviewProgrammingActivity, MapManiaLite } from './ProgrammingAssignments'

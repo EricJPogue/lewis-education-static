@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { makeInternalURL } from './ActivityRouter';
 
 const NAME = 'Getting to Know Each Other Teams'
-export const GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE = 'web-resume'
+export const GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE = 'getting-to-know-each-other-teams'
 export const gettingToKnowEachOthersTeamsLink = () => {return (<NavLink to={makeInternalURL(GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE)}>{NAME}</NavLink>)}
 export const gettingToKnowEachOthersTeams = () => {
 	return ( <div>

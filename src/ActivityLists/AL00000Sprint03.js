@@ -19,6 +19,8 @@ export const StandardActivities = (programmingAssignment, playlist) => {
 	</div> )
 }
 
+// Todo: The following function should be removed. 
+export const InitialPost = (sprint) => { return ( <li><em>Make your initial Discussion {sprint} post by the middle of the sprint</em></li> ) }
 export const StandardActivitiesClosing = (programmingAssignment) => { 
 	return ( <div>
 

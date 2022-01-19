@@ -19,7 +19,7 @@ software development.</p>
 	<li><em>All code must compile and execute without errors or warnings</em></li>
 	<li><em>Plagiarism in any form is not acceptable</em></li>
 	<li><em>Any non-original work must be appropriately identified and credited in your README.md file</em></li>
-	<li>Only the source files required to compile and execute an application plus README.md and LICENSE files should be submitted</li>
+	<li>Only submit the source files required to compile and execute an application plus README.md and LICENSE files should be submitted</li>
 	<li>The README.md file should:
 	<ul style={{listStyleType:'square'}}>
 		<li>Include your name, the project, and your Lewis email address</li>

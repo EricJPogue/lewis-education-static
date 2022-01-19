@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { InitialPost,  } from './AL00000Sprint02'
-import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
+import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint06'
 
 import { oreillyPlaylistSE, NodeJSOnAzure, AzureFunctionsWithVSCodeAndJavaScript, ServerlessAzure, ServerlessGoogle, ServerlessAWS } from '../Links'

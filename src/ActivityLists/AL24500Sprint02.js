@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialDiscussionPost, StandardActivitiesClosingWithLink } from './AL00000Sprint02'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialDiscussionPost, StandardActivitiesClosing } from './AL00000Sprint02'
 import { ovalDrawPlusJavaLink } from '../Activities/OvalDrawPlus';
 import { oreillyPlaylistOOP, umlClassDiagrams, internalLink } from '../Links';
 
@@ -31,7 +31,7 @@ we focus on OOP Patterns and Principles.</p>
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivitiesWithLink(ovalDrawPlusJavaLink())}
+	{StandardActivities(ovalDrawPlusJavaLink())}
 	<li>Complete {oopPatterns()}</li>
 	<li>Complete {successfulProgrammer()}</li>
 	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapters 4 and 5</li>
@@ -41,7 +41,7 @@ we focus on OOP Patterns and Principles.</p>
 	<li>Complete {shapesPart2()}</li>
 	<li>Complete {oopPrinciples()}</li>
 	<li>Review {umlClassDiagrams()}</li>
-	{StandardActivitiesClosingWithLink(ovalDrawPlusJavaLink(), '4 hours')}
+	{StandardActivitiesClosing(ovalDrawPlusJavaLink(), '4 hours')}
 </ol> 
 
 <p>If you are struggling, remember to reach out to your Scrum teammates early and often for help.</p>

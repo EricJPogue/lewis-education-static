@@ -33,7 +33,7 @@ career development services and hosting it on Azure.</p>
 <p>Utilize the available Lewis University career planning services including:</p>
 <ol>
 	<li>The standard Lewis University {ResumeFormat()}</li>
-	<li>(Optional) Our Lewis University {ResumeReviewServices()}</li>
+	<li>Our Lewis University {ResumeReviewServices()}</li>
 </ol>	
 
 <em>Requirement 3: </em>
