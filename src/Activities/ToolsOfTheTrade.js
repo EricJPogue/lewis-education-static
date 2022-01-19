@@ -1,15 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
 import { getCourseNumber } from '../data/ClientDataAPIs' 
 
+import { internalLink, externalLink } from '../Links';
+
 import { Discord, OReillyBooks, Firefox, Chrome, VSCode, FileExplorer, Finder, ZipFiles, Office365, PowerShell, Terminal, ScreenCapture, Git, 
-	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, microsoftOpenJDK, /* Java, */ JavaTutorial, Go, grammarly, mongoDBAtlas, firebase, CommandLine } from '../Links'
+	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, microsoftOpenJDK, JavaTutorial, Go, grammarly, mongoDBAtlas, firebase, CommandLine } from '../Links'
 
-export const ToolsOfTheTradeLink = () => {return (<NavLink to={internalLink}>{name}</NavLink>)}
-const internalLink = '/activity/tools'
+const chocolateyTutorial = () => { return internalLink('Chocolatey tutorial', '/activity-config/chocolatey') }
+const chocolateyInstallApplicationTutorial = () => { return internalLink('Chocolatey application installation tutorial', '/activity-config/chocolatey-install') }
+const chocolateyScript = () => { return externalLink('script', 'https://lewiseducation.blob.core.windows.net/configuration/choco-install-packages.txt') }
+const homebrew = () => { return externalLink('Homebrew tutorial', 'https://lewiseducation.blob.core.windows.net/configuration/homebrew.mp4')}
+
+export const ToolsOfTheTradeLink = () => {return (<NavLink to={link}>{name}</NavLink>)}
+const link = '/activity/tools'
 const name = 'Tools of the Trade'
-
 export const Tools = () => {
 	const checkNodeJS = () => {
 		if ((getCourseNumber() === 24700) || (getCourseNumber() === 44000) || (getCourseNumber() === 49200)) {
@@ -20,7 +25,7 @@ export const Tools = () => {
 
 	const checkJava = () => {
 		if (getCourseNumber() === 24500) {
-			return ( <li>{microsoftOpenJDK() /* Java() */} development environment reviewing the associated {JavaTutorial()}</li> )
+			return ( <li>{microsoftOpenJDK()} development environment reviewing the associated {JavaTutorial()}</li> )
 		}
 		return null
 	}
@@ -95,13 +100,12 @@ install, configure, and utilize the following tools and services. By the end of 
 Either Chocolatey (Windows) and Homebrew (MacOS) can be utilized to set up the above applications.</p>
 <p>Chocolatey (Windows):</p>
 <ol>
-	<li>Install Chocolatey with PowerShell <NavLink to='/activity-config/chocolatey'>[video]</NavLink></li>
-	<li>Install VS Code, Python3, VS Code Python extension, MS Teams, Git, Node.js, and OpenJDK using Chocolatey <NavLink to='/activity-config/chocolatey-install'>[video]</NavLink>
-		<a href='https://lewiseducation.blob.core.windows.net/configuration/choco-install-packages.txt' target='_blank' rel='noopener noreferrer'>[script]</a>
-	</li>
+	<li>Complete {chocolateyTutorial()} using PowerShell</li>
+	<li>Complete {chocolateyInstallApplicationTutorial()} to install VS Code, Python3, VS Code Python extension, MS 
+	    Teams, Git, Node.js, and OpenJDK using a Chocolatey {chocolateyScript()}</li>
 </ol>
-<p>Homebrew (MacOS): Install Homebrew and Visual Studio Code, Python3, Visual Studio Code Python extension, MS Teams, 
-Git, Node.js, and OpenJDK <a href='https://lewiseducation.blob.core.windows.net/configuration/homebrew.mp4' target='_blank' rel='noopener noreferrer'>[video]</a></p>
+<p>Homebrew (MacOS): Complete the {homebrew()} to install Visual Studio Code, Python3, Visual Studio Code Python 
+extension, MS Teams, Git, Node.js, and OpenJDK.</p>
 </div>
 
 	);

@@ -19,6 +19,7 @@ export const StandardActivities = (activity, playlist, sprint) => {
 export const StandardActivitiesClosing = (activity) => { 
 	return ( <div>
 		<li>{activity}</li>
+		<li><em>Complete Lab Demo if you have not already</em></li>
 		<li><em>Submit Discussion, Quiz, Lab, and Reflection</em></li>
 	</div> ) 
 }

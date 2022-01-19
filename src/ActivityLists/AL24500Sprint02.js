@@ -33,15 +33,15 @@ we focus on OOP Patterns and Principles.</p>
 <ol>
 	{StandardActivities(ovalDrawPlusJavaLink())}
 	<li>Complete {oopPatterns()}</li>
-	<li>Complete {successfulProgrammer()}</li>
 	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapters 4 and 5</li>
 	<li>Complete {shapesPart1()}</li>
 	<li>{InitialDiscussionPost(2)}</li>
 
+	<li>Complete {successfulProgrammer()}</li>
 	<li>Complete {shapesPart2()}</li>
 	<li>Complete {oopPrinciples()}</li>
 	<li>Review {umlClassDiagrams()}</li>
-	{StandardActivitiesClosing(ovalDrawPlusJavaLink(), '4 hours')}
+	{StandardActivitiesClosing(ovalDrawPlusJavaLink(), '6 hours')}
 </ol> 
 
 <p>If you are struggling, remember to reach out to your Scrum teammates early and often for help.</p>

@@ -34,7 +34,6 @@ Sheets (CSS).</p>
 <ol>
 	{StandardActivities(gettingToKnowEachOtherLink())}
 
-	<li>Review our {oreillyPlaylistICS()} playlist</li>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The Information Layer and review our associated <NavLink to='/activity-dale/2'>lecture</NavLink></li>
 	<li>Review {ToolsOfTheTradeLink()}</li>
 	<li>Review {SequenceSelectionAndRepetition()}</li>

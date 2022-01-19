@@ -17,13 +17,11 @@ export const StandardActivities = (programmingAssignmentLink) => {
 	return ( <div>
 		<li>Maintain a laser focus on due dates by reviewing our class {calendarLink(2)} and sprint 2 {scheduleLink(2)}</li>
 		<li><em>Review sprint 2 assignments including Lab 2, Quiz 2, Discussion 2, Reflection 2, and Lab Demo</em></li>
-		<li>Study and understand our {codingStandards()} </li>
+		<li>Study and understand our {codingStandards()}</li>
 		<li>Start working on {programmingAssignmentLink}</li>
 		<li>Review our class {ExampleCode()}</li>
 	</div> )
 }
-
-
 
 export const InitialDiscussionPost = (sprint) => { return ( <em>Make your initial Discussion {sprint} post by the middle of the sprint</em> ) }
 
@@ -33,7 +31,7 @@ export const StandardActivitiesClosing = (programmingAssignmentLink, programming
 <li>Verify that you added a representative photo of yourself to <NavLink to='/activity/photo-to-blackboard'>Blackboard</NavLink> and Zoom</li>
 <li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 <li><em>Complete Discussion 2 by responding to at least two of your classmates’ posts</em></li>
-<li><em>Complete Lab Demo if you demoed during sprint 2</em></li>
+
 <li><em>Submit Lab 2, Quiz 2, and Reflection 2</em></li>
 
 	</div> ) 
