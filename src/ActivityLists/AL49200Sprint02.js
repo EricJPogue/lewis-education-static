@@ -21,14 +21,15 @@ export const al49200Sprint02 = () => {
 <h5>Sprint 2: Continuous Integration and Continuous Deployment (CI/CD)</h5>
 
 <p><em>Welcome to sprint 2.</em> Now that we know our product teams, it’s time to focus on delivering a product. Our 
-first step is to implement continuous integration / continuous delivery (CI/CD) for our product. CI/CD is often 
+first step in delivering a product is to implement continuous integration / continuous delivery (CI/CD). CI/CD is often 
 much harder than it sounds. Done well, CI/CD allows a team to consistently release new functionality development, 
 test, and production environments. How will you implement and demonstrate this functionality?</p>
 
 {LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
 	<li>Continuous Integration and Continuous Deployment (CI/CD)</li>
-	<li>Understand, implement, document, and demonstrate CI/CD for your product’s development, test, and productions environments</li>
+	<li>Implement, document, and demonstrate CI/CD for your product team’s development, test, and productions environments</li>
+	<li>Implement, document, and demonstrate CI/CD for your customer’s access to test, and productions environments</li>
 </ul>
 
 {ActivitiesListIntro()}

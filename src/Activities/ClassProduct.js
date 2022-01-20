@@ -62,7 +62,7 @@ likely utilize the {arduinoDroneLink()} project as our “overflow” if we have
 your class product:</p>
 <ol>
 	<li>Accept the GitHub invitation from your instructor</li>
-	<li>Add your name and email address to the Credits section of the README.md file</li>
+	<li>Add your name and email address and GitHub user ID to the Credits section of the README.md file</li>
 	<li>Review any code or documents currently</li>
 	<li>Review how you and your team will submit and update all team assignments utilizing the product repository</li>
 </ol>
@@ -78,9 +78,8 @@ const name2 = 'Class Product Sprint 2'
 export const CLASS_PRODUCT_SPRINT_2_ROUTE = 'class-product-sprint-2'
 export const classProductSprint2Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_2_ROUTE)}>{name2}</NavLink>)}
 export const classProductSprint2 = () => {
-	return (
-	
-<div>
+	return ( <div>
+		
 <br />
 <h4>{name2}</h4>
 <h5>Summary: Implement an initial version of your product with full continuous integration / continuous deployment (CI/CD)
@@ -98,17 +97,35 @@ a shared MVP view that you will publish as a team in your team’s GitHub reposi
 	<li>Review each team member’s MVP proposal from sprint 1</li>
 	<li>As a team create and publish a MVP direction paper for your product</li>
 	<li>Your direction paper needs to be very high quality from a content, clarity, format, and technical perspective</li>
-	<li>Your final MVP paper should be embraced by all team members and maintained in your GitHub repository utilizing {markdownOnGitHub()}</li>
+	<li>Your final MVP paper should be embraced by all team members, maintained in your GitHub repository utilizing 
+		{markdownOnGitHub()}, and linked to the README.md file</li>
 	<li>To appropriately cover the topics a 500 to 1500 word document would be expected (1 to 3 pages)</li>
 </ol>
 
 <em>Requirement 2</em>
-<p>Implement CI/CD for your product:</p>
+<p>Implement CI/CD for product team:</p>
 <ol>
-	<li>Determine what your product’s architecture requires from a CI/CD perspective</li>
-	<li>!!!Start Here!!!</li>
-
+	<li>Determine what your product’s development, test, and production architecture requires from a CI/CD perspective</li>
+	<li>Configure your GitHub repository so that it support development, test, and production environments</li>
+	<li>Configure each team member’s local development environment so that they develop and unit test</li>
+	<li>Configure test and production environments so that they fully implement CI/CD</li>
 </ol>
 
-</div> )
+<em>Requirement 3</em>
+<p>Implement CI/CD for customers (users):</p>
+<ol>
+	<li>Determine what your product’s architecture requires from a CI/CD customer (end user) perspective</li>
+	<li>Configure customer (end user) environments for access to test and production environments</li>
+</ol>
+
+<em>Requirement 4</em>
+<p>Sustainably document CI/CD team philosophy and detailed implementation:</p>
+<ol>
+	<li>Document the system process and configuration of product organization for repository, hosting, and deployment</li>
+	<li>Document the individual developer process (new team member) process and configuration</li>
+	<li>Document the new customer (user) process and configuration</li>
+	<li>Maintain each of these document in {markdownOnGitHub()} in the product GitHub repository and link them to the README.md file</li>
+</ol>
+
+	</div> )
 }
