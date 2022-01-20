@@ -4,6 +4,7 @@ import { estimated } from './AL00000Sprint01'
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialDiscussionPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
 import { HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C, internalLink } from '../Links'
 import { FoxHTML, FoxCSS, FoxCookies, FoxAttributes, FoxRubyMVC } from '../Links'
+import { oreillyPlaylistSE } from '../Links'
 
 import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
@@ -35,12 +36,12 @@ much code. This sprint get your text editors out. We are going to start practici
 	<li>Complete {azureWebsiteLink()}{estimated('2 hours')}</li>
 	<li>Scan “Engineering Software as a Service” chapters 3 through 5 and review the associated {foxChapter3Lecture()}</li>
 	<li>Read “Engineering Software as a Service” sections A.6 and A.7</li>
+	<li>Within {oreillyPlaylistSE()} scan “Learning Web Development” Preface through Chapter 4</li>
 	<li>Implement your {webResumeLink()} while completing the W3Schools {HTMLW3C()} and {CSSW3C()} tutorials{estimated('6 hours')}</li>
 	<li>{InitialDiscussionPost(2)}</li>
 
 	<li>Complete {JavaScriptW3C()} tutorial including {RegularExpressionsW3C()}</li>
 	<li>Scan the following “Engineering Software as a Service” videos on {FoxHTML()}, {FoxCSS()}, {FoxCookies()}, {FoxAttributes()}, and {FoxRubyMVC()}</li>
-
 	{StandardActivitiesClosing(assignmentPortfolioLink(), '2 hours')}
 </ol>
 {Closing()}
