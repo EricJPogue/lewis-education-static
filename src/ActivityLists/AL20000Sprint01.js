@@ -55,5 +55,4 @@ problem solving, and programming.</p>
 </div> )
 }
 
-// Todo: Post and update syllabus. 
-// Todo: Complete welcome message video.
+// Todo: Consider starting with Web development and then moving to Python. 

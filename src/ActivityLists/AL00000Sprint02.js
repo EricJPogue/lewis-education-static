@@ -1,15 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { estimated } from './AL00000Sprint01'
-
+import { sprintEndDateWithoutTime } from '../SprintDates'
 import { ExampleCode, programmingTogether, calendarLink, scheduleLink, codingStandards } from '../Links'
 
 export const LearningObjectivesIntro = () => { return ( <p>Let’s start with our Learning Objectives. By the end of sprint 2 we will be able to:</p>	) }
 
 export const ActivitiesListIntro = () => {
 	return (
-		<p>Below is our sprint 2 activities list. Once again they are provided in the order that I think will be the most
-		efficient for you and the <em>bold</em> items are graded assignments.</p>
+		<p>Below is our sprint 2 activities list. Activities are listed in the order that I think will be the most efficient 
+			for them to be completed, the <em>bold</em> items are graded assignments, and everything is by the end of the sprint 
+			which is <em>{sprintEndDateWithoutTime(1 /* base zero */)}</em>.</p>
 	)
 }
 
