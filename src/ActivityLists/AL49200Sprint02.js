@@ -14,6 +14,7 @@ import { HTMLW3C, CSSW3C, JavaScriptW3C } from '../Links'
 const cICDArticle = () => { return externalLink('What is CI/CD? Continuous integration and continuous delivery explained', 'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
 const jira = () => { return externalLink('Jira', 'https://www.atlassian.com/software/jira/guides/getting-started' )}
 const trello = () => { return externalLink('Trello', 'https://trello.com')}
+const lectureRecordingPlaylist = () => { return externalLink('lecture', 'https://lewisu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=50ad011a-766e-43e7-8ec4-ae2301373d46')}
 
 export const al49200Sprint02 = () => {
 	return ( <div>
@@ -35,6 +36,7 @@ test, and production environments. How will you implement and demonstrate this f
 {ActivitiesListIntro()}
 <ol>
 	{StandardActivities(classProductSprint2Link())}
+	<li>Review our sprint 2 planning {lectureRecordingPlaylist()}</li>
 	<li>Read {cICDArticle()}</li>
 	<li>Within {oreillyPlaylistSC()} read “Essential Scrum” chapters 7 through 10</li>
 
