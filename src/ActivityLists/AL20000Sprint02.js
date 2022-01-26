@@ -38,11 +38,10 @@ Sheets (CSS).</p>
 	<li>Review {ToolsOfTheTradeLink()}</li>
 	<li>Review {SequenceSelectionAndRepetition()}</li>
 	<li>{InitialDiscussionPost(2)}</li>
+
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Data Representation and review our associated <NavLink to='/activity-dale/3'>lecture</NavLink></li>
-	
 	<li>Complete {htmlLink()} - Part 1{estimated('3 hours')}</li>
 	<li>Within {oreillyPlaylistICS()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
-
 	{StandardActivitiesClosing(gettingToKnowEachOtherLink(), '6')}
 </ol>
 {Closing()}

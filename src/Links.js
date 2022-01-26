@@ -102,6 +102,10 @@ export const codingStandards = () => { return internalLink('Coding Standards', '
 export const calendarLink = (sprint) => { return ( <NavLink to={'/calendar/'+sprint}>calendar</NavLink> ) }
 export const scheduleLink = (sprint) => { return ( <NavLink to={'/schedule/'+sprint}>schedule</NavLink> ) }
 
+export const blackboard = () => { return externalLink('Blackboard', 'https://lewisuniversity.blackboard.com/')}
+export const wireless = () => { return externalLink('wireless', 'https://mylewis.lewisu.edu/web/mylewis-home/resources')}
+
+
 export const externalLink = (displayName, url) => {
 	return (
 		<a href={url} target='_blank' rel='noopener noreferrer'>{displayName}</a>

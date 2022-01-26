@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player'
 import { getCourseTitle } from './data/ClientDataAPIs';
 
 import { routeActivity } from './Activities/ActivityRouter';
+import { routeSlide } from './Slides/SlideRouter'
 
 import { SeatSelector } from './Activities/SeatSelector'
 
@@ -33,14 +34,10 @@ import { PythonTurtleDraw } from './Activities/PythonTurtleDraw'
 import { HTML } from './Activities/HTML'
 import { PythonW3C } from './Activities/PythonW3C'
 import { SuccessfulDeveloper } from './Activities/SuccessfulDeveloper'
-// import { AzureWebsite } from './Activities/AzureWebsite'
-// import { WebAssignmentPortfolio } from './Activities/WebAssignmentPortfolio'
+
 import { WebAssignmentPortfolioWithNodeJS } from './Activities/WebAssignmentPortfolioWithNodeJS'
 import { WebDiceRoller } from './Activities/WebDiceRoller'
 import { gettingToKnowEachOther } from './Activities/WebGettingToKnowEachOther'
-// import { WebGettingToKnowEachOthersTeams } from './Activities/WebGettingToKnowEachOthersTeams';
-// import { WebMyFavoriteHobby } from './Activities/WebMyFavoriteHobby'
-// import { WebResume } from './Activities/WebResume';
 import { WebCourseSchedule } from './Activities/WebCourseSchedule'
 import { WebMapManiaVersion1 } from './Activities/WebMapManiaVersion1'
 import { WebMapManiaVersion2 } from './Activities/WebMapManiaVersion2'
@@ -84,9 +81,12 @@ class Activity extends Component {
 		let routeActivityResponse = routeActivity(activityReference)
 		if (routeActivityResponse != null) return routeActivityResponse
 
+		console.log('yes more testing:'+activityReference)
+		let routeSlideResponse = routeSlide(activityReference)
+		if (routeSlideResponse != null) return routeSlideResponse
+
 		switch(activityReference) {
 			case 'seat-selector': return SeatSelector()
-
 
 			// Each of the case statements below represent a link to an activity. Activities are referenced via the
 			// application URL. For example, the following two links would take us to the test and production Blended 
@@ -153,14 +153,9 @@ class Activity extends Component {
 			case 'turtle-draw': return PythonTurtleDraw()
 			case 'html': return HTML()
 			case 'python-w3c': return PythonW3C()
-			// case 'azure-website': return AzureWebsite()
-			// case 'assignment-portfolio': return WebAssignmentPortfolio()
 			case 'assignment-portfolio-with-node-js': return WebAssignmentPortfolioWithNodeJS()
 			case 'dice-roller': return WebDiceRoller()
 			case 'getting-to-know-each-other': return gettingToKnowEachOther()
-			// case 'getting-to-know-each-others-teams': return WebGettingToKnowEachOthersTeams()
-			// case 'favorite-hobby': return WebMyFavoriteHobby()
-			// case 'resume': return WebResume()
 			case 'course-schedule': return WebCourseSchedule()
 			case 'map-mania-v1': return WebMapManiaVersion1()
 			case 'map-mania-v2': return WebMapManiaVersion2()

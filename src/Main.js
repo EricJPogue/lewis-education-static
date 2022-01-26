@@ -25,6 +25,8 @@ import { ActivityDale } from './ActivityDale'
 import { ActivityArchitecture } from './ActivityArchitecture'
 import { StudyTable } from './Activities/StudyTable'
 
+import { Slide } from './Slide';
+
 import { Test } from './Test'
 
 class Main extends Component {
@@ -55,6 +57,8 @@ class Main extends Component {
 						<Route path={'/activity-web/:reference'} component={ActivityWeb}/>
 						<Route path={'/activity-dale/:reference'} component={ActivityDale}/>
 						<Route path={'/activity-architecture/:reference'} component={ActivityArchitecture}/>
+
+						<Route path={'/slide/:reference'} component={Slide}/>			
 
 						<Route path={'/test/:id'} component={Test}/>
 					</div>
