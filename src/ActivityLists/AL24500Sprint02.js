@@ -2,7 +2,7 @@ import React from 'react'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialDiscussionPost, StandardActivitiesClosing } from './AL00000Sprint02'
 import { ovalDrawPlusJavaLink } from '../Activities/OvalDrawPlus';
-import { oreillyPlaylistOOP, umlClassDiagrams, internalLink } from '../Links';
+import { oreillyPlaylistOOP, umlClassDiagrams, gitCommands, internalLink } from '../Links';
 
 const shapesPart1 = () => { return internalLink('Shapes - Part 1', '/activity-oop/java-shapes-step1') }
 const shapesPart2 = () => { return internalLink('Shapes - Part 2', '/activity-oop/java-shapes-step2') }
@@ -32,6 +32,7 @@ we focus on OOP Patterns and Principles.</p>
 {ActivitiesListIntro()}
 <ol>
 	{StandardActivities(ovalDrawPlusJavaLink())}
+	<li>Review basic {gitCommands()}</li>
 	<li>Complete {oopPatterns()}</li>
 	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapters 4 and 5</li>
 	<li>Complete {shapesPart1()}</li>
@@ -49,3 +50,4 @@ we focus on OOP Patterns and Principles.</p>
 
 	)
 }
+

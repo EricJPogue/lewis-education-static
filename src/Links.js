@@ -105,6 +105,8 @@ export const scheduleLink = (sprint) => { return ( <NavLink to={'/schedule/'+spr
 export const blackboard = () => { return externalLink('Blackboard', 'https://lewisuniversity.blackboard.com/')}
 export const wireless = () => { return externalLink('wireless', 'https://mylewis.lewisu.edu/web/mylewis-home/resources')}
 
+export const gitCommands = () => { return internalLink('Git Commands', '/activity/git-commands')}
+
 
 export const externalLink = (displayName, url) => {
 	return (
