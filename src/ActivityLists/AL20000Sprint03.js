@@ -1,52 +1,57 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint03'
+import { estimated } from './AL00000Sprint01'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint03'
 
-import { oreillyPlaylistICS, SequenceSelectionAndRepetition } from '../Links'
-import { AzureWebsite } from './ProgrammingAssignments'
+import { oreillyPlaylistICS, CSSW3C } from '../Links'
+import { htmlLink } from '../Activities/HTML'
+import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
+import { azureWebsiteLink } from '../Activities/AzureWebsite'
 
 export const al20000Sprint03 = () => {
 	let playlist = oreillyPlaylistICS()
-
 	return (
 
 <div>
-<h5>Sprint 3: Gates and Circuits, Computing Components, and Hosting Web Application is Azure</h5>
+<h5>Sprint 3: Gates and Circuits, Computing Components, HTML, CSS, and Hosting Web Applications in Azure</h5>
 
-<p>Welcome to sprint 3. I hope you enjoyed our work with HTML and CSS because we are going to be continuing that journey
-by enhancing our web applications and hosting them in Microsoft Azure. We will also be learning about gates, circuits, 
-and computing components.</p>
+<p>Welcome to sprint 3. I hope you enjoyed our work with HTML and your introduction to CSS because we are going to be 
+continuing that journey by enhancing our web applications with more sophisticated HTML and CSS while hosting your 
+Web applications in Microsoft Azure so that the whole world can view your creations. We will also be learning about 
+gates, circuits, and computing components.</p>
 
 {LearningObjectivesIntro()}
 <ul style={{ listStyleType:'square' }}>
-	<li>Create enhanced web applications and host them in Microsoft Azure</li>
+	<li>Utilize more more sophisticated HTML and CSS to develop enhanced Web applications</li>
+	<li>Host those enhanced web applications in Microsoft Azure</li>
 	<li>Understand and discuss gates and circuits</li>
 	<li>Understand and discuss computing components</li>
-	<li>Understand variables and expressions</li>
 </ul>
 
 {ActivitiesListIntro()}
 <ol>
-	{StandardActivities(AzureWebsite, playlist)}
+	{StandardActivitiesWithLink(azureWebsiteLink(), playlist)}
 
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Gates and Circuits and review our associated <NavLink to='/activity-dale/4'>lecture</NavLink></li>
-	<li>Complete <NavLink to='/activity/html'>HTML Programming - Part 2</NavLink><sup>~4 hours</sup></li>
-	<li>Review {SequenceSelectionAndRepetition()}</li>
+	<li>Within {oreillyPlaylistICS()} review “Learning Web Development” Chapter 2 on HTML and read Chapter 3 on CSS</li>
+	<li>Study and consistently utilize the basic <NavLink to='/activity/git-commands'>Git commands and patterns</NavLink> </li>
+
 	{InitialPost(3)}
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Computing Components and review our associated <NavLink to='/activity-dale/5'>lecture</NavLink></li>
-	<li>Study and consistently utilize the basic <NavLink to='/activity/git-commands'>Git commands and patterns</NavLink> </li>
-	<li>Utilize what you learned in <NavLink to='/activity/html'>HTML Programming - Part 2</NavLink> to enhance your <NavLink to='/activity/getting-to-know-each-other'>Getting to Know Each Other</NavLink> application</li>
-	<li>Deploy your enhanced version of <NavLink to='/activity/getting-to-know-each-other'>Getting to Know Each Other</NavLink> to an <NavLink to='/activity/azure-website'>Azure website</NavLink><sup>~2 hours</sup></li>
 
-	{StandardActivitiesClosing(AzureWebsite)}
+	<li>Review {htmlLink()} Part 1 and complete {htmlLink()} Part 2{estimated('2 hours')}</li>
+	<li>Complete {CSSW3C()} tutorial{estimated('2 hours')}</li>
+	<li>Utilize what you learned in “Learning Web Development” and W3C tutorials to enhance {gettingToKnowEachOtherLink()}</li>
+	<li>Deploy your enhanced version of {gettingToKnowEachOtherLink()} to an {azureWebsiteLink()}{estimated('4 hours')}</li>
+
+	{StandardActivitiesClosingWithLink(azureWebsiteLink(), '2 hours') }
 </ol>
 {Closing()}
-</div>
 
-	)
+</div> )
 }
 
-// Add Introducing Python Preface and Chapters 3 and 4
-// Todo: Verify "final comments" were removed from all assignments.
+
+
 

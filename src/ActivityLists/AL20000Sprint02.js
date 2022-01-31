@@ -14,7 +14,7 @@ export const al20000Sprint02 = () => {
 	return (
 
 <div>
-<h5>Sprint 2: Numbering Systems, Data Representation, HTML, and Cascading Style Sheets</h5>
+<h5>Sprint 2: Numbering Systems, Data Representation, HyperText Markup Language (HTML), and Cascading Style Sheets (CSS)</h5>
 
 <p>Welcome to sprint 2 of Introduction to Computer Science. In sprint 2 we are going to continue our journey into data
 representation and also take look at some of the key technologies that make up the Web. Our sprint activities will 
@@ -53,5 +53,6 @@ Sheets (CSS).</p>
 </div> )
 }
 
-// Todo: Add Git/GitHub activity / tutorial. 
+// Todo: Move “Learning Web Development” above Part 1 of the HTML tutorial.
+// Todo: Consider adding Git/GitHub activity / tutorial. 
 // Todo: Consider lining up certain discussion topics with Friendly Conversation Topics.

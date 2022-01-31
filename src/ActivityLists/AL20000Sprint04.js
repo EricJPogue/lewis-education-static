@@ -28,6 +28,7 @@ for Python will be challenging application but I think you will enjoy it.
 	<li>Understand variables, strings, expressions, functions, lists, and dictionaries</li>
 	<li>Master {SequenceSelectionAndRepetition()}</li>
 	<li>Develop a basic understanding of artificial intelligence</li>
+	<li>Understand variables and expressions</li>
 </ul>
 
 {ActivitiesListIntro()}
@@ -37,6 +38,7 @@ for Python will be challenging application but I think you will enjoy it.
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated <NavLink to='/activity-dale/13'>lecture</NavLink></li>
 	<li>Complete Programming Together with MatchmakerLite - Part 1</li>
 
+	<li>Review {SequenceSelectionAndRepetition()}</li>
 	{InitialPost(4)}
 	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface and Chapter 1 while completing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
 	{ProgrammingActivity(NumberingSystemsWithPython)}
@@ -49,6 +51,7 @@ for Python will be challenging application but I think you will enjoy it.
 	)
 }
 
+// Add Introducing Python Preface and Chapters 3 and 4
 // Todo: Review “Numbering Systems with Python” activity and make sure that the lab assignment is updated to verify completion 
 // Todo: Consider updating Matchmaker to remove question weighting.
 // Todo: Consider updating to include Introducing Python chapters 4 through 9.
