@@ -1,6 +1,7 @@
 import { AIDAN_ROUTE, aidan } from './Aidan'
 import { ARDUINO_DRONE_ROUTE, arduinoDrone } from './ArduinoDrone'
 import { ASSIGNMENT_PORTFOLIO_ROUTE, assignmentPortfolio } from './WebAssignmentPortfolio'
+import { assignmentPortfolioWithNodeJS, ASSIGNMENT_PORTFOLIO_NODEJS_ROUTE } from './WebAssignmentPortfolioWithNodeJS'
 import { AZURE_WEBSITE_ROUTE, azureWebsite } from './AzureWebsite'
 import { CLASS_PRODUCT_SPRINT_1_ROUTE, classProductSprint1 } from './ClassProduct'
 import { CLASS_PRODUCT_SPRINT_2_ROUTE, classProductSprint2 } from './ClassProduct'
@@ -25,6 +26,7 @@ export const routeActivity = (activityRoute) => {
 		case AIDAN_ROUTE: return aidan()
 		case ARDUINO_DRONE_ROUTE: return arduinoDrone()
 		case ASSIGNMENT_PORTFOLIO_ROUTE: return assignmentPortfolio()
+		case ASSIGNMENT_PORTFOLIO_NODEJS_ROUTE: return assignmentPortfolioWithNodeJS()
 		case AZURE_WEBSITE_ROUTE: return azureWebsite()
 		case CLASS_PRODUCT_SPRINT_1_ROUTE: return classProductSprint1()
 		case CLASS_PRODUCT_SPRINT_2_ROUTE: return classProductSprint2()

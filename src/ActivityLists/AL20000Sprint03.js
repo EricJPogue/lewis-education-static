@@ -11,6 +11,7 @@ import { azureWebsiteLink } from '../Activities/AzureWebsite'
 
 export const al20000Sprint03 = () => {
 	let playlist = oreillyPlaylistICS()
+	const sprint = 3
 	return (
 
 <div>
@@ -29,7 +30,7 @@ gates, circuits, and computing components.</p>
 	<li>Understand and discuss computing components</li>
 </ul>
 
-{ActivitiesListIntro()}
+{ActivitiesListIntro(sprint)}
 <ol>
 	{StandardActivitiesWithLink(azureWebsiteLink(), playlist)}
 

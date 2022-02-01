@@ -1,12 +1,17 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { estimated } from './AL00000Sprint01'
+import { sprintEndDateWithoutTime } from '../SprintDates'
 
 import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
 import { calendarLink, scheduleLink, ExampleCode, codingStandards } from '../Links'
 
-export const LearningObjectivesIntro = () => { return ( <p>Our Learning Objectives for this sprint include:</p> ) }
-export const ActivitiesListIntro = () => { return ( <p>Below is our activities list:</p> ) }
+export const LearningObjectivesIntro = () => { return (<p>Our Learning Objectives for this sprint include:</p>) }
+// export const ActivitiesListIntro = () => { return ( <p>Below is our activities list:</p> ) }
+
+export const ActivitiesListIntro = (sprint) => { 
+	return (<p>Below is our activities list which needs to be completed by {sprintEndDateWithoutTime(sprint-1)}:</p>)
+}
 
 export const StandardActivitiesWithLink = (programmingAssignmentLink, playlist) => { 
 	return ( <div>

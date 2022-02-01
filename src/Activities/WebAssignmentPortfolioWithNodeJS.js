@@ -1,11 +1,16 @@
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter'
 
 import ReactPlayer from 'react-player'
-
 import { ExampleCode } from '../Links'
 
+const NAME = 'Assignment Portfolio with Node.js'
+export const ASSIGNMENT_PORTFOLIO_NODEJS_ROUTE = 'assignment-portfolio-nodejs'
+export const assignmentPortfolioWithNodeJSLink = () => {return (<NavLink to={makeInternalURL(ASSIGNMENT_PORTFOLIO_NODEJS_ROUTE)}>{NAME}</NavLink>)}
+export const assignmentPortfolioWithNodeJS = () => {return WebAssignmentPortfolioWithNodeJS()}
+
+// Todo: Rename the following function.
 export const WebAssignmentPortfolioWithNodeJS = () => {
 	return (
 	

@@ -107,7 +107,6 @@ export const wireless = () => { return externalLink('wireless', 'https://mylewis
 
 export const gitCommands = () => { return internalLink('Git Commands', '/activity/git-commands')}
 
-
 export const externalLink = (displayName, url) => {
 	return (
 		<a href={url} target='_blank' rel='noopener noreferrer'>{displayName}</a>

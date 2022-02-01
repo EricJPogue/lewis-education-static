@@ -1,14 +1,21 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { estimated } from './AL00000Sprint01'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, Closing } from './AL00000Sprint03'
-import { oreillyPlaylistSE } from '../Links'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint03'
+import { oreillyPlaylistSE, internalLink, externalLink, gitCommands } from '../Links'
 
-import { AssignmentPortfolioWebsiteWithNodeJS, GettingToKnowEachOthersTeams, complete } from './ProgrammingAssignments'
+import { assignmentPortfolioWithNodeJSLink } from '../Activities/WebAssignmentPortfolioWithNodeJS'
+import { gettingToKnowEachOthersTeamsLink } from '../Activities/WebGettingToKnowEachOthersTeams'
+
+const foxChapter7Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-07') }
+const nodeJSW3CTutorial = () => { return externalLink('Node.js Tutorial', 'https://www.w3schools.com/nodejs/') }
+const jsonW3CTutorial = () => { return externalLink('JSON Tutorial', 'https://www.w3schools.com/js/js_json_intro.asp')}
+const jsonArticle = () => { return externalLink('What is JSON? JavaScript Object Notation explained', 'https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html')}
 
 export const al44000Sprint03 = () => {
 	let playlist = oreillyPlaylistSE()
-	return ( <div>
+	const sprint = 3
+	return (<div>
 
 <h5>Sprint 3: Application Requirements, Node.js, and Azure, </h5>
 
@@ -26,44 +33,32 @@ with your classmates and scrum team members as you work through some of the open
 	<li>Create a basic Node.js application on Azure</li>
 </ul>
 
-{ActivitiesListIntro()}
+{ActivitiesListIntro(sprint)}
 <ol>
-	{StandardActivities(AssignmentPortfolioWebsiteWithNodeJS, playlist)}
-
-	<li>Read “Engineering Software as a Service” chapter 7 on Requirements and review the associated class <NavLink to='/activity/fox-chapter-07'>lecture</NavLink></li>
+	{StandardActivitiesWithLink(assignmentPortfolioWithNodeJSLink(), playlist)}
+	<li>Read “Engineering Software as a Service” chapter 7 on Requirements and review the associated {foxChapter7Lecture()}</li>
 	<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapters 1 and 2 while completing each of the exercises</li>
+	<li>Study and consistently utilize the {gitCommands()} and patterns used by professional development teams </li>
 
-	{InitialPost(3)}
+	{InitialPost(sprint)}
 	<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapters 3 and 4 while completing each of the exercises</li>
-
-
-	<li>{complete(GettingToKnowEachOthersTeams)}</li>
-	<li>Complete the W3C <a href='https://www.w3schools.com/nodejs/' target='_blank' rel='noopener noreferrer'>Node.js Tutorial</a></li>
-	<li>Read <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>What is JSON? JavaScript Object Notation explained</a></li> 
-	<li>Complete the W3C <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>JSON Tutorial</a></li>
-
-	{StandardActivitiesClosing(AssignmentPortfolioWebsiteWithNodeJS)}
+	<li>Complete the W3C {nodeJSW3CTutorial()}</li>
+	<li>Complete {gettingToKnowEachOthersTeamsLink()}{estimated('4 hours')}</li>
+	<li>Read {jsonArticle()}</li>
+	<li>Complete the W3C {jsonW3CTutorial()}</li>
+	{StandardActivitiesClosingWithLink(assignmentPortfolioWithNodeJSLink(), '4 hours')}
 </ol>
 {Closing()}
-{/* Programming Together: “Deploying Node.js on Microsoft Azure” */}
 
-{Extras()}
-</div>
+<br />
+<p>Programming Together: “Deploying Node.js on Microsoft Azure”</p>
 
-	)
-}
-
-const Extras = () => {
-	return (<div>	
-		<p>Additional suggested activities:</p>
-		<ul style={{listStyleType:'square'}}>
-		<li>Study and consistently utilize the <NavLink to='/activity/git-commands'>Git commands</NavLink> and patterns used by professional development teams </li>
-		</ul>
 	</div>)
 }
 
+
 // Todo: Update Lab 3 to request URL more specifically. 
-// Todo: Change assignment from AssignmentPortfolioWebsite and create AssignmentPortfolioWebsiteWithNodeJS and Team GettingToKnowEachOtherWithNodeJS.
+
 
 
 

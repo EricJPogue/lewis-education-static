@@ -51,7 +51,8 @@ export const videoLink = (header, url) => {
 	return ( <div><h5>{header}</h5><ReactPlayer url={url} controls={true} width={1024} height={576} /></div> )
 }
 
-const videoLinkWithSlides = (header, url, urlSlides) => {
+const videoLinkWithSlides = (header, url, urlSlides, discussionLink) => {
+	
 	return ( 
 		<div>
 			<h5>{header}</h5>
@@ -214,7 +215,7 @@ class Activity extends Component {
 				'“Engineering Software as a Service” by Armando Fox and David Patterson (Fox) Chapter 2 Lecture', 
 				foxLink('chapter-02-lecture.mp4'), foxLink('chapter-02-lecture.pptx'))
 			case 'fox-chapter-03': return videoLinkWithSlides(
-				'“Engineering Software as a Service” by Armando Fox and David Patterson (Fox) Chapters 3-6 Lecture', 
+				'“Engineering Software as a Service” by Armando Fox and David Patterson (Fox) Chapters 3-5 Lecture', 
 				foxLink('chapter-03-lecture.mp4'), foxLink('chapter-03-lecture.pptx'))
 			case 'fox-chapter-06': return videoLinkWithSlides(
 				'“Engineering Software as a Service” by Armando Fox and David Patterson (Fox) Chapter 6 Lecture', 

@@ -2,16 +2,15 @@ import React from 'react'
 import { estimated } from './AL00000Sprint01'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialDiscussionPost, StandardActivitiesClosing, Closing } from './AL00000Sprint02'
-import { HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C, internalLink } from '../Links'
+import { oreillyPlaylistSE, HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C, internalLink } from '../Links'
 import { FoxHTML, FoxCSS, FoxCookies, FoxAttributes, FoxRubyMVC } from '../Links'
-import { oreillyPlaylistSE } from '../Links'
 
 import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 import { webResumeLink } from '../Activities/WebResume'
 
-const foxChapter6Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-06')}
 const foxChapter3Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-03')}
+const foxChapter6Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-06')}
 
 export const al44000Sprint02 = () => {
 	return ( <div>
