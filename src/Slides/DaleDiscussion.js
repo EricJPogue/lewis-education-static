@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import { makeSlideInternalURL } from './SlideRouter';
 
-const NAME = 'Dale Chapter 3 Data Representation'
+const NAME = 'Data Representation'
 export const DALE_DISCUSSION_3_ROUTE = 'dale-discussion-3'
 export const daleDiscussion3Link = () => {return (<NavLink to={makeSlideInternalURL(DALE_DISCUSSION_3_ROUTE)}>{NAME}</NavLink>)}
 export const daleDiscussion3 = () => {
