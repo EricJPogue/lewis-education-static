@@ -42,7 +42,7 @@ we focus on OOP Patterns and Principles.</p>
 	<li>Complete {shapesPart2()}</li>
 	<li>Complete {oopPrinciples()}</li>
 	<li>Review {umlClassDiagrams()}</li>
-	{StandardActivitiesClosing(ovalDrawPlusJavaLink(), '6 hours')}
+	{StandardActivitiesClosing(ovalDrawPlusJavaLink(), '4 hours')}
 </ol> 
 
 <p>If you are struggling, remember to reach out to your Scrum teammates early and often for help.</p>
