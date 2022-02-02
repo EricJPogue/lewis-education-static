@@ -25,11 +25,11 @@ export const designPrinciples = () => {
 				<li style={subListItem}>“Architecture” vs. “Agile Software Development” Principles</li>
 				<li style={subListItem}>Rigidity, fragility, and immobility</li>
 				<li style={subListItem}>SOLID</li>
-				<li style={subListItem}>Single-Responsibility Principle</li>
-				<li style={subListItem}>Open-Closed Principle</li>
-				<li style={subListItem}>Lisko’s Substitution Principle</li>
-				<li style={subListItem}>Dependency-Inversion Principle</li>
-				<li style={subListItem}>Interface-Segregation Principle</li>
+				<li style={subListItem}><u>S</u>ingle-Responsibility Principle</li>
+				<li style={subListItem}><u>O</u>pen-Closed Principle</li>
+				<li style={subListItem}><u>L</u>iskov’s Substitution Principle</li>
+				<li style={subListItem}><u>I</u>nterface-Segregation Principle</li>
+				<li style={subListItem}><u>D</u>ependency-Inversion Principle</li>
 			</ol>
 			<li style={listItem}>Sit back, relax, and acknowledge the bravery and dedication of the presenter</li>
 		</ol>
