@@ -1,9 +1,14 @@
 
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { makeInternalURL } from './ActivityRouter';
 import FaceDrawScreenshot from './FaceDrawScreenshot.png'
 
-export const FaceDrawJava  = () => { return FaceDraw(FaceDrawJavaProperties) }
+const FACEDRAW_JAVA_NAME = 'FaceDraw'
+export const FACEDRAW_JAVA_ROUTE = 'facedraw-java'
+export const faceDrawJavaLink = () => {return (<NavLink to={makeInternalURL(FACEDRAW_JAVA_ROUTE)}>{FACEDRAW_JAVA_NAME}</NavLink>)}
+export const faceDrawJava  = () => { return FaceDraw(FaceDrawJavaProperties) }
+
 export const FaceDrawWeb   = () => { return FaceDraw(FaceDrawWebProperties) }
 export const FaceDrawReact = () => { return FaceDraw(FaceDrawReactProperties) }
 

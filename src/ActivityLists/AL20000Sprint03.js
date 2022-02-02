@@ -10,11 +10,10 @@ import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOt
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 
 export const al20000Sprint03 = () => {
-	let playlist = oreillyPlaylistICS()
+	const playlist = oreillyPlaylistICS()
 	const sprint = 3
-	return (
+	return ( <div>
 
-<div>
 <h5>Sprint 3: Gates and Circuits, Computing Components, HTML, CSS, and Hosting Web Applications in Azure</h5>
 
 <p>Welcome to sprint 3. I hope you enjoyed our work with HTML and your introduction to CSS because we are going to be 
@@ -38,7 +37,7 @@ gates, circuits, and computing components.</p>
 	<li>Within {oreillyPlaylistICS()} review “Learning Web Development” Chapter 2 on HTML and read Chapter 3 on CSS</li>
 	<li>Study and consistently utilize the basic <NavLink to='/activity/git-commands'>Git commands and patterns</NavLink> </li>
 
-	{InitialPost(3)}
+	{InitialPost(sprint)}
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Computing Components and review our associated <NavLink to='/activity-dale/5'>lecture</NavLink></li>
 
 	<li>Review {htmlLink()} Part 1 and complete {htmlLink()} Part 2{estimated('2 hours')}</li>

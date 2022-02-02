@@ -2,15 +2,13 @@ import React from 'react'
 import { estimated } from './AL00000Sprint01'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint03'
-import { oreillyPlaylistSE, internalLink, externalLink, gitCommands } from '../Links'
+import { oreillyPlaylistSE, internalLink, externalLink, gitCommands, jsonArticle, jsonW3CTutorial } from '../Links'
 
 import { assignmentPortfolioWithNodeJSLink } from '../Activities/WebAssignmentPortfolioWithNodeJS'
 import { gettingToKnowEachOthersTeamsLink } from '../Activities/WebGettingToKnowEachOthersTeams'
 
 const foxChapter7Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-07') }
 const nodeJSW3CTutorial = () => { return externalLink('Node.js Tutorial', 'https://www.w3schools.com/nodejs/') }
-const jsonW3CTutorial = () => { return externalLink('JSON Tutorial', 'https://www.w3schools.com/js/js_json_intro.asp')}
-const jsonArticle = () => { return externalLink('What is JSON? JavaScript Object Notation explained', 'https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html')}
 
 export const al44000Sprint03 = () => {
 	let playlist = oreillyPlaylistSE()
@@ -50,14 +48,10 @@ with your classmates and scrum team members as you work through some of the open
 </ol>
 {Closing()}
 
-<br />
 <p>Programming Together: “Deploying Node.js on Microsoft Azure”</p>
 
 	</div>)
 }
-
-
-// Todo: Update Lab 3 to request URL more specifically. 
 
 
 

@@ -6,6 +6,7 @@ import { AZURE_WEBSITE_ROUTE, azureWebsite } from './AzureWebsite'
 import { CLASS_PRODUCT_SPRINT_1_ROUTE, classProductSprint1 } from './ClassProduct'
 import { CLASS_PRODUCT_SPRINT_2_ROUTE, classProductSprint2 } from './ClassProduct'
 import { DELIVERY_DRONE_ROUTE, deliveryDrone } from './DeliveryDrone'
+import { FACEDRAW_JAVA_ROUTE, faceDrawJava } from './FaceDraw'
 import { FAVORITE_HOBBY_ROUTE, favoriteHobby} from './WebMyFavoriteHobby'
 import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebGettingToKnowEachOther'
 import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbbreviated } from './WebGettingToKnowEachOtherAbbreviated'
@@ -31,6 +32,7 @@ export const routeActivity = (activityRoute) => {
 		case CLASS_PRODUCT_SPRINT_1_ROUTE: return classProductSprint1()
 		case CLASS_PRODUCT_SPRINT_2_ROUTE: return classProductSprint2()
 		case DELIVERY_DRONE_ROUTE: return deliveryDrone()
+		case FACEDRAW_JAVA_ROUTE: return faceDrawJava()
 		case FAVORITE_HOBBY_ROUTE: return favoriteHobby()
 		case GETTING_TO_KNOW_EACH_OTHER_ROUTE: return gettingToKnowEachOther()
 		case GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE: return gettingToKnowEachOtherAbbreviated()
@@ -40,7 +42,6 @@ export const routeActivity = (activityRoute) => {
 		case PIT_HUB_ROUTE: return pitHub()
 		case QUIZ_MASTER_MERN_ROUTE: return quizMasterMERN()
 		case WEB_RESUME_ROUTE: return webResume()
-
 		default: return null
 	}
 }

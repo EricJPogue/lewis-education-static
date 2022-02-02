@@ -107,6 +107,9 @@ export const wireless = () => { return externalLink('wireless', 'https://mylewis
 
 export const gitCommands = () => { return internalLink('Git Commands', '/activity/git-commands')}
 
+export const jsonW3CTutorial = () => { return externalLink('JSON Tutorial', 'https://www.w3schools.com/js/js_json_intro.asp')}
+export const jsonArticle = () => { return externalLink('What is JSON? JavaScript Object Notation explained', 'https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html') }
+
 export const externalLink = (displayName, url) => {
 	return (
 		<a href={url} target='_blank' rel='noopener noreferrer'>{displayName}</a>

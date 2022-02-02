@@ -15,7 +15,7 @@ import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculat
 import { HealthRiskCalculatorTeamWeb } from './Activities/HealthRiskCalculatorTeam'
 
 import { ExampleCode } from './Activities/ExampleCode'
-import { FaceDrawWeb, FaceDrawJava, FaceDrawReact } from './Activities/FaceDraw'
+import { FaceDrawWeb, /* FaceDrawJava, */ FaceDrawReact } from './Activities/FaceDraw'
 import { MosaicWeb, MosaicJava, MosaicReact, MosaicV2React } from './Activities/Mosaic'
 
 import { SwissArmyKnifeJava, SwissArmyKnifeJavaV2 } from './Activities/SwissArmyKnife'
@@ -130,7 +130,7 @@ class Activity extends Component {
 			case 'example-code': return ExampleCode()
 
 			case 'facedraw-web': return FaceDrawWeb()
-			case 'facedraw-java': return FaceDrawJava()
+			// case 'facedraw-java': return FaceDrawJava()
 			case 'facedraw-react': return FaceDrawReact()
 
 			case 'mosaic-web': return MosaicWeb()
