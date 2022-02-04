@@ -38,7 +38,7 @@ at first, I think you will enjoy what you are able to create using it.</p>
 	{StandardActivities(MapManiaVersion1, playlist)}
 
 	{ReviewProgrammingActivity(AssignmentPortfolioWebsite, '1')}
-	<li>{/* Where should this activy go in sprint 3? */}Review the {googleMapsJavaScriptAPIOverview()}</li>
+	<li>{/* Where should this activity go in sprint 3? */}Review the {googleMapsJavaScriptAPIOverview()}</li>
 	<li>Read Sebesta chapter 5 on JavaScript and HTML and review the associated <NavLink to='/activity/sebesta-chapter-05'>lecture</NavLink></li>
 	<li>{complete(DiceRoller)}</li>
 	<li>Review <a href='http://sebesta-examples.azurewebsites.net/'>Sebesta HTML, CSS, and JavaScript examples</a></li>

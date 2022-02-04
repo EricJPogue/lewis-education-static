@@ -1,11 +1,12 @@
 import { al49200Sprint01 } from './AL49200Sprint01'
 import { al49200Sprint02 } from './AL49200Sprint02'
+import { al49200Sprint03 } from './AL49200Sprint03'
 
 export const al49200 = (sprint) => {
 	switch(sprint) {
 		case 1: return al49200Sprint01()
 		case 2: return al49200Sprint02()
-		case 3: return null
+		case 3: return al49200Sprint03()
 		case 4: return null
 		case 5: return null
 		case 6: return null

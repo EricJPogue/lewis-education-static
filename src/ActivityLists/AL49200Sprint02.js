@@ -54,5 +54,4 @@ test, and production environments. How will you implement and demonstrate this f
 </div> )
 }
 
-// Node.js in sprint 3?
 

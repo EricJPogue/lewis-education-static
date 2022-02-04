@@ -39,8 +39,7 @@ activities list this week. That is because you will need to focus your time and 
 	{StandardActivitiesClosingWithLink(faceDrawJavaLink(), '8 hours')}
 	</ol>
 {Closing()}
-</div>
 
-	)
+</div> )
 }
 
