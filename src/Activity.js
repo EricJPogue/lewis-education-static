@@ -82,7 +82,6 @@ class Activity extends Component {
 		let routeActivityResponse = routeActivity(activityReference)
 		if (routeActivityResponse != null) return routeActivityResponse
 
-		console.log('yes more testing:'+activityReference)
 		let routeSlideResponse = routeSlide(activityReference)
 		if (routeSlideResponse != null) return routeSlideResponse
 

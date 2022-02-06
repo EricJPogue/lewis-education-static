@@ -2,9 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { estimated } from './AL00000Sprint01'
-import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint03'
+import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialPost, Closing } from './AL00000Sprint03'
 
-import { oreillyPlaylistICS, CSSW3C } from '../Links'
+import { oreillyPlaylistICS, SequenceSelectionAndRepetition, CSSW3C } from '../Links'
 import { htmlLink } from '../Activities/HTML'
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
@@ -23,29 +23,28 @@ gates, circuits, and computing components.</p>
 
 {LearningObjectivesIntro()}
 <ul style={{ listStyleType:'square' }}>
-	<li>Utilize more more sophisticated HTML and CSS to develop enhanced Web applications</li>
-	<li>Host those enhanced web applications in Microsoft Azure</li>
 	<li>Understand and discuss gates and circuits</li>
 	<li>Understand and discuss computing components</li>
+	<li>Utilize more more sophisticated HTML and CSS to develop enhanced Web applications</li>
+	<li>Host those enhanced web applications in Microsoft Azure</li>
 </ul>
 
 {ActivitiesListIntro(sprint)}
 <ol>
 	{StandardActivitiesWithLink(azureWebsiteLink(), playlist)}
-
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Gates and Circuits and review our associated <NavLink to='/activity-dale/4'>lecture</NavLink></li>
 	<li>Within {oreillyPlaylistICS()} review “Learning Web Development” Chapter 2 on HTML and read Chapter 3 on CSS</li>
 	<li>Study and consistently utilize the basic <NavLink to='/activity/git-commands'>Git commands and patterns</NavLink> </li>
+	<li>Review {SequenceSelectionAndRepetition()}</li>
 
 	{InitialPost(sprint)}
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Computing Components and review our associated <NavLink to='/activity-dale/5'>lecture</NavLink></li>
-
 	<li>Review {htmlLink()} Part 1 and complete {htmlLink()} Part 2{estimated('2 hours')}</li>
 	<li>Complete {CSSW3C()} tutorial{estimated('2 hours')}</li>
-	<li>Utilize what you learned in “Learning Web Development” and W3C tutorials to enhance {gettingToKnowEachOtherLink()}</li>
-	<li>Deploy your enhanced version of {gettingToKnowEachOtherLink()} to an {azureWebsiteLink()}{estimated('4 hours')}</li>
-
-	{StandardActivitiesClosingWithLink(azureWebsiteLink(), '2 hours') }
+	<li>Utilize what you learned in “Learning Web Development” and W3C tutorials to enhance {gettingToKnowEachOtherLink()}{estimated('3 hours')}</li>
+	<li>Deploy your enhanced version of {gettingToKnowEachOtherLink()} to an {azureWebsiteLink()}{estimated('3 hours')}</li>
+	<li><em>Complete Discussion 3 by responding to at least two of your classmates’ posts</em></li>
+	<li><em>Submit Quiz 3, Lab 3, and Reflection 3</em></li>
 </ol>
 {Closing()}
 

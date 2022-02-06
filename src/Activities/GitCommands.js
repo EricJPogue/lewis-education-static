@@ -39,7 +39,7 @@ git push
 <p>Sometimes it is helpful to review the current status of the local repository and to pull down any changes that have 
 been made to the remote repository by using following commands:</p>
 <pre>{`git status
-git pull (or git pull --no-edit)
+git pull
 `}</pre><br />
 
 <p>Common Git configuration commands include</p>

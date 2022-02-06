@@ -1,7 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
+import { getCourseNumber } from '../data/ClientDataAPIs';
+
 export const CodingStandards = () => {
+	if (getCourseNumber() === 20000) return CodingStandardsAbbreviated()
 	return (
 
 <div>
@@ -48,6 +51,41 @@ software development.</p>
 	<li><a href='https://google.github.io/styleguide/javaguide.html' target='blank' rel='noopener noreferrer'>Google Java</a></li>
 	<li><a href='https://www.oracle.com/technetwork/java/codeconventions-150003.pdf' target='blank' rel='noopener noreferrer'>Oracle Java</a></li> 	
 </ul>
+</div>
+
+	);
+}
+
+export const CodingStandardsAbbreviated = () => {
+	return (
+
+<div>
+<br />
+<h4>Coding Standards</h4>
+<h5>Summary: Understand and utilize the following coding standards</h5>
+<h5>Prerequisites: None</h5>
+
+<p>Nearly all effective software development teams maintain a set of coding standards. These standards allows them to 
+maintain consistency, share code more effectively, find issues quicker, and focus on the most important aspects of 
+software development.</p>
+
+<p>With this in mind, our required coding standards include:</p>
+<ol>
+	<li><em>All code must compile and execute without errors or warnings</em></li>
+	<li><em>Plagiarism in any form is not acceptable</em></li>
+	<li><em>Any non-original work must be appropriately identified and credited in your README.md file</em></li>
+	<li>Only submit the source files required to compile and execute an application plus README.md and LICENSE files should be submitted</li>
+	<li>The README.md file should:
+	<ul style={{listStyleType:'square'}}>
+		<li>Include your name, the project, and your Lewis email address</li>
+		<li>Include credits for all non-original content or a statement indicating that all content is original</li>
+		<li>Include clear and concise build and execution instructions including a list of required files</li>
+	</ul></li>
+	<li>A LICENSE file should be included and must be MIT, GNU General Public License (GPL), or all rights reserved</li> 
+	<li>Lines should be wrapped at 100 characters</li>
+	<li>Tabs should be utilized for line indention (not spaces) and only line feeds utilized (LF, /n) at the end of lines</li>
+	<li>Submitted zip files should extract all files into the current folder and not create subfolders</li>
+</ol>
 </div>
 
 	);
