@@ -180,15 +180,15 @@ most likely to entice a person to use this product?” It is expected that each 
 	<li>Verify that each team member is committed to delivering User Stories that are estimated at lest 12 hours effort</li>
 	<li>Develop, unit test, and deploy committed User Stories</li>
 	<li>Verify that each story that is complete meets your team’s definition of {done()}</li>
-	<li>Complete any production upgrade conversions and update any CI/CD documentation to reflect any environment changes</li>
+	<li>Complete any production version upgrade conversions verifying that production data from previous version is not lost</li>
 </ol>
 
 <em>Requirement 4</em>
-<p>Test and deploy to production:</p>
+<p>Test stories, deploy to production, and update CI/CD documentation:</p>
 <ol>
 	<li>System test your stories in the development and production environments</li>
 	<li>Acceptance test one other team members stories in the development and production environments</li>
-	<li>Be certain that the production environment maintain backward compatibility</li>
+	<li>Update CI/CD documentation so that it is verified current, maintained as MarkDown, and linked to README.md</li>
 	<li>Do <em>not</em> break the production environment</li>
 </ol>
 
