@@ -39,10 +39,10 @@ gates, circuits, and computing components.</p>
 
 	{InitialPost(sprint)}
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Computing Components and review our associated <NavLink to='/activity-dale/5'>lecture</NavLink></li>
-	<li>Review {htmlLink()} Part 1 and complete {htmlLink()} Part 2{estimated('2 hours')}</li>
+	<li>Review {htmlLink()} Part 1 and complete {htmlLink()} Part 2{estimated('1 hour maximum')}</li>
 	<li>Complete {CSSW3C()} tutorial{estimated('2 hours')}</li>
-	<li>Utilize what you learned in “Learning Web Development” and W3C tutorials to enhance {gettingToKnowEachOtherLink()}{estimated('3 hours')}</li>
-	<li>Deploy your enhanced version of {gettingToKnowEachOtherLink()} to an {azureWebsiteLink()}{estimated('3 hours')}</li>
+	<li>Utilize what you learned in “Learning Web Development” and W3C tutorials to enhance {gettingToKnowEachOtherLink()}{estimated('2 hours')}</li>
+	<li>Deploy your enhanced version of {gettingToKnowEachOtherLink()} to an {azureWebsiteLink()}{estimated('2 hours')}</li>
 	<li><em>Complete Discussion 3 by responding to at least two of your classmates’ posts</em></li>
 	<li><em>Submit Quiz 3, Lab 3, and Reflection 3</em></li>
 </ol>
