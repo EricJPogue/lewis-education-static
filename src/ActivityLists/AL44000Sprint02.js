@@ -48,6 +48,7 @@ much code. This sprint get your text editors out. We are going to start practici
 </div> )
 }
 
+// Todo: Remove all multiple selection multiple choice questions for quiz 2 and any other quizzes.
 // Todo: Add lots of links from the Agile Alliance to various activity lists.
 // Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
 // Todo: Consider doing the same thing for testing.

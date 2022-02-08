@@ -6,7 +6,7 @@ import { oreillyPlaylistOOP, internalLink, jsonArticle, jsonW3CTutorial } from '
 import { faceDrawJavaLink } from '../Activities/FaceDraw';
 
 const faceDrawLite = () => { return internalLink('FaceDraw Lite', '/activity-oop/java-facedraw-lite') }
-const gUIsInJava = () => { return internalLink('FaceDraw Graphical User Interfaces (GUIs) in Java', '/activity-oop/java-gui-programming') }
+const gUIsInJava = () => { return internalLink('Graphical User Interfaces (GUIs) in Java', '/activity-oop/java-gui-programming') }
 
 export const al24500Sprint03 = ( props ) => {
 	const playlist = oreillyPlaylistOOP()
@@ -30,8 +30,8 @@ activities list this week. That is because you will need to focus your time and 
 {ActivitiesListIntro(sprint)}
 <ol>
 	{StandardActivitiesWithLink(faceDrawJavaLink(), playlist )}
-	<li>Complete {gUIsInJava()}</li>
 	<li>Complete {faceDrawLite()}{estimated('2 hours')}</li>
+	<li>Complete {gUIsInJava()}</li>
 
 	{InitialPost(sprint)}
 	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapters 6 and 7</li>
