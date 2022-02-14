@@ -35,7 +35,14 @@ export const StandardActivitiesClosing = (programmingAssignment) => {
 export const LearningObjectivesIntro = () => { return (<p>Our Learning Objectives for this sprint include:</p>) }
 
 export const ActivitiesListIntro = (sprint) => { 
-	return (<p>Below is our activities list which needs to be completed by {sprintEndDateWithoutTime(sprint-1)}:</p>)
+	console.log('sprint='+sprint)
+	let localSprint = 1
+	if ((sprint === null) || (sprint === undefined) || (sprint === '')) {
+		localSprint = 1
+	}
+	else localSprint = sprint
+	
+	return (<p>Below is our activities list which needs to be completed by {sprintEndDateWithoutTime(localSprint-1)}:</p>)
 }
 
 export const StandardActivitiesWithLink = (programmingAssignmentLink, playlist, excludePreviousTopics) => { 
