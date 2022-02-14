@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 import { makeSlideInternalURL } from './SlideRouter';
 
 const NAME = 'Graphical User Interfaces (GUIs) - Java'
-export const DESIGN_PRINCIPLES_ROUTE = 'guis-java'
-export const graphicalUserInterfacesJavaLink = () => {return (<NavLink to={makeSlideInternalURL(DESIGN_PRINCIPLES_ROUTE)}>{NAME}</NavLink>)}
+export const GUIS_JAVA_ROUTE = 'guis-java'
+export const graphicalUserInterfacesJavaLink = () => {return (<NavLink to={makeSlideInternalURL(GUIS_JAVA_ROUTE)}>{NAME}</NavLink>)}
 export const graphicalUserInterfacesJava = () => {
 	const defaultText = { fontSize:24 }
 	const title = { fontSize:36	}
