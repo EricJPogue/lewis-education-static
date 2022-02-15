@@ -10,7 +10,7 @@ import { SeatSelector } from './Activities/SeatSelector'
 
 import { StudyTable } from './Activities/StudyTable'
 import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './Activities/HelloWorld'
-import { MatchmakerPython, MatchmakerWeb, MatchmakerJava, MatchmakerGo, MatchmakerExamples } from './Activities/Matchmaker';
+import { /* MatchmakerPython, */ MatchmakerWeb, MatchmakerJava, MatchmakerGo, MatchmakerExamples } from './Activities/Matchmaker';
 import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './Activities/HealthRiskCalculator'
 import { HealthRiskCalculatorTeamWeb } from './Activities/HealthRiskCalculatorTeam'
 
@@ -29,7 +29,7 @@ import { QuizMaster } from './Activities/QuizMaster'
 import { GitCommands } from './Activities/GitCommands'
 import { FinalProjectProposal } from './Activities/FinalProjectProposal'
 import { FinalProject, FinalProjectDistributed, FinalProjectSprint5, FinalProjectSprint6, FinalProjectSprint7, FinalProjectSprint8 } from './Activities/FinalProject'
-import { PythonNumberingSystems } from './Activities/PythonNumberingSystems'
+// import { PythonNumberingSystems } from './Activities/PythonNumberingSystems'
 import { PythonTurtleDraw } from './Activities/PythonTurtleDraw'
 import { HTML } from './Activities/HTML'
 import { PythonW3C } from './Activities/PythonW3C'
@@ -120,7 +120,7 @@ class Activity extends Component {
 			case 'hello-world-go': return HelloWorldGo()
 			case 'hello-world-web': return HelloWorldWeb()
 
-			case 'matchmaker-python': return MatchmakerPython()
+			// case 'matchmaker-python': return MatchmakerPython()
 			case 'matchmaker-web': return MatchmakerWeb()
 			case 'matchmaker-java': return MatchmakerJava()
 			case 'matchmaker-go': return MatchmakerGo()
@@ -149,7 +149,7 @@ class Activity extends Component {
 			case 'health-risk-calculator-examples': return HealthRiskCalculatorExamples()
 			case 'health-risk-calculator-team-web': return HealthRiskCalculatorTeamWeb()
 
-			case 'numbering-systems-python': return PythonNumberingSystems()
+			// case 'numbering-systems-python': return PythonNumberingSystems()
 			case 'turtle-draw': return PythonTurtleDraw()
 			case 'html': return HTML()
 			case 'python-w3c': return PythonW3C()

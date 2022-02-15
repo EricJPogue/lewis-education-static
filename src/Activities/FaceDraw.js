@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { makeInternalURL } from './ActivityRouter';
+import { makeInternalURL } from './ActivityRouter'
 import FaceDrawScreenshot from './FaceDrawScreenshot.png'
 
 const FACEDRAW_JAVA_NAME = 'FaceDraw'

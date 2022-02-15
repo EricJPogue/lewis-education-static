@@ -1,13 +1,21 @@
 
-import React from 'react';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 import ReactPlayer from 'react-player'
-export const PythonNumberingSystems = () => {
+import { makeInternalURL } from './ActivityRouter'
+
+const NUMBERING_SYSTEMS_NAME = 'Numbering Systems with Python'
+export const NUMBERING_SYSTEMS_ROUTE = 'numbering-systems-python'
+export const numberingSystemsLink = () => {return (<NavLink to={makeInternalURL(NUMBERING_SYSTEMS_ROUTE)}>{NUMBERING_SYSTEMS_NAME}</NavLink>)}
+export const numberingSystems = () => { return PythonNumberingSystems() }
+
+const PythonNumberingSystems = () => {
 	return (
 	
 <div>
 
 <br />
-<h4>Numbering Systems with Python Tutorial</h4>
+<h4>{NUMBERING_SYSTEMS_NAME}</h4>
 <h5>Summary: Follow the video tutorial to create a Python application that converts numbers from different bases</h5>
 <h5>Prerequisites: Python (v3), VS Code, Terminal, and the Python Debugger (optional)</h5>
 

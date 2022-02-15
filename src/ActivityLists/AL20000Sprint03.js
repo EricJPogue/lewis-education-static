@@ -10,7 +10,6 @@ import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOt
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 
 export const al20000Sprint03 = () => {
-	const playlist = oreillyPlaylistICS()
 	const sprint = 3
 	return ( <div>
 
@@ -31,7 +30,7 @@ gates, circuits, and computing components.</p>
 
 {ActivitiesListIntro(sprint)}
 <ol>
-	{StandardActivitiesWithLink(azureWebsiteLink(), playlist)}
+	{StandardActivitiesWithLink(azureWebsiteLink(), oreillyPlaylistICS())}
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Gates and Circuits and review our associated <NavLink to='/activity-dale/4'>lecture</NavLink></li>
 	<li>Within {oreillyPlaylistICS()} review “Learning Web Development” Chapter 2 on HTML and read Chapter 3 on CSS</li>
 	<li>Study and consistently utilize the basic <NavLink to='/activity/git-commands'>Git commands and patterns</NavLink> </li>

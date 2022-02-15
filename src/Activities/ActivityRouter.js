@@ -12,6 +12,8 @@ import { FAVORITE_HOBBY_ROUTE, favoriteHobby} from './WebMyFavoriteHobby'
 import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebGettingToKnowEachOther'
 import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbbreviated } from './WebGettingToKnowEachOtherAbbreviated'
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
+import { MATCHMAKER_PYTHON_ROUTE, matchmakerPython } from './Matchmaker'
+import { NUMBERING_SYSTEMS_ROUTE, numberingSystems } from './PythonNumberingSystems'
 import { OVAL_DRAW_PLUS_JAVA_ROUTE, ovalDrawPlusJava } from './OvalDrawPlus'
 import { SEAT_SELECTOR_MERN_ROUTE, seatSelectorMERN } from './SeatSelectorMERN'
 import { PIT_HUB_ROUTE, pitHub } from './PitHub'
@@ -39,6 +41,8 @@ export const routeActivity = (activityRoute) => {
 		case GETTING_TO_KNOW_EACH_OTHER_ROUTE: return gettingToKnowEachOther()
 		case GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE: return gettingToKnowEachOtherAbbreviated()
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()
+		case MATCHMAKER_PYTHON_ROUTE: return matchmakerPython()
+		case NUMBERING_SYSTEMS_ROUTE: return numberingSystems()
 		case OVAL_DRAW_PLUS_JAVA_ROUTE: return ovalDrawPlusJava()
 		case SEAT_SELECTOR_MERN_ROUTE: return seatSelectorMERN()
 		case PIT_HUB_ROUTE: return pitHub()

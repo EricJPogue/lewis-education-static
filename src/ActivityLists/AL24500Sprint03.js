@@ -27,6 +27,7 @@ activities list this week. That is because you will need to focus your time and 
 	<li>Utilize source code management and Git/GitHub</li>
 	<li>Effectively compile, debug, submit, update, and manage Java application source code</li>
 </ul>
+
 {ActivitiesListIntro(sprint)}
 <ol>
 	{StandardActivitiesWithLink(faceDrawJavaLink(), playlist )}

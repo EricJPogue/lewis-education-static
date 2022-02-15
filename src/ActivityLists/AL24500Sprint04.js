@@ -23,7 +23,6 @@ read and write files.</p>
 	<li>Describe how to develop <em>interactive</em> command-line Java applications utilizing Scanner</li>
 	<li>Develop Java applications that read and write files including JSON files</li>
 	<li>Understand JavaDoc and how it can create self-documenting source code</li>
-
 </ul>
 
 <p>Our activities list for this sprint is provided below:</p> 

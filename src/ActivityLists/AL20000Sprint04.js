@@ -1,18 +1,19 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
+import { estimated } from './AL00000Sprint01'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
-import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint04'
+import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint04'
 
-import { ProgrammingActivity, NumberingSystemsWithPython } from './ProgrammingAssignments'
-import { oreillyPlaylistICS, SequenceSelectionAndRepetition } from '../Links'
-import { IntroducingPythonSampleCode } from '../Links'
+import { oreillyPlaylistICS, SequenceSelectionAndRepetition, IntroducingPythonSampleCode, internalLink } from '../Links'
 
-import { MatchmakerWithPython } from './ProgrammingAssignments'
+import { numberingSystemsLink} from '../Activities/PythonNumberingSystems'
+import { matchmakerPythonLink } from '../Activities/Matchmaker'
 
 export const al20000Sprint04 = () => {
-	let playlist = oreillyPlaylistICS()
-
+	const pythonW3CPart1 = () => { return internalLink('Python Programming - Part 1', '/activity/python-w3c') }
+	const pythonW3CPart2 = () => { return internalLink('Python Programming - Part 2', '/activity/python-w3c') }
+	const daleArtificialIntelligenceLecture = () => { return internalLink('lecture', '/activity-dale/13' )}
+	let sprint = 4
 	return (
 
 <div>
@@ -24,37 +25,35 @@ for Python will be challenging application but I think you will enjoy it.
 
 {LearningObjectivesIntro()}
 <ul style={{ listStyleType:'square' }}>
-	<li>Create, update, and test Python applications</li>
-	<li>Understand variables, strings, expressions, functions, lists, and dictionaries</li>
 	<li>Master {SequenceSelectionAndRepetition()}</li>
 	<li>Develop a basic understanding of artificial intelligence</li>
-	<li>Understand variables and expressions</li>
+	<li>Create, update, and test Python applications</li>
+	<li>Understand variables, strings, expressions, functions, lists, and dictionaries</li>
 </ul>
 
-{ActivitiesListIntro()}
+{ActivitiesListIntro(sprint)}
 <ol>
-	{StandardActivities(MatchmakerWithPython, playlist, 4)}
-	<li>Complete <NavLink to='/activity/python-w3c'>Python Programming - Part 1 &amp; Part 2</NavLink> from W3C</li>
-	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated <NavLink to='/activity-dale/13'>lecture</NavLink></li>
-	<li>Complete Programming Together with MatchmakerLite - Part 1</li>
+	{StandardActivitiesWithLinkAndSprint(sprint, matchmakerPythonLink(), oreillyPlaylistICS())}
+	<li>Complete {numberingSystemsLink()}{estimated('2 hours')}</li>
+	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>
+	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 3 and 4 while reviewing associated {IntroducingPythonSampleCode()}</li>
+	<li>Review {pythonW3CPart1()} from W3C</li>
 
-	<li>Review {SequenceSelectionAndRepetition()}</li>
-	{InitialPost(4)}
-	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface and Chapter 1 while completing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
-	{ProgrammingActivity(NumberingSystemsWithPython)}
-	<li>Complete Programming Together with MatchmakerLite - Part 2</li>
-	{StandardActivitiesClosing(MatchmakerWithPython, 4)}
+	{InitialPost(sprint)}
+	<li>Master {SequenceSelectionAndRepetition()}</li>
+	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 5 and 6 while reviewing associated {IntroducingPythonSampleCode()}</li>
+	<li>Review {pythonW3CPart2()} from W3C</li>
+	{StandardActivitiesClosingWithLinkAndSprint(sprint, matchmakerPythonLink(), '6 hours' )}
 </ol>
 {Closing()}
+<br />
+<p>Programming Together: “MatchmakerLite - Part 1” and “MatchmakerLite - Part 2”</p>
 </div>
 
 	)
 }
 
-// Add Introducing Python Preface and Chapters 3 and 4
 // Todo: Review “Numbering Systems with Python” activity and make sure that the lab assignment is updated to verify completion 
-// Todo: Consider updating Matchmaker to remove question weighting.
-// Todo: Consider updating to include Introducing Python chapters 4 through 9.
-// Todo: Really add chapters 4 and 5 including reviewing quiz questions.
+// Todo: Really quiz questions for Introducing Python chapters.
 
 

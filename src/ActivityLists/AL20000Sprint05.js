@@ -48,3 +48,5 @@ This week we switch gears and move into graphical drawing using Python and the T
 
 	)
 }
+
+// Todo: Consider updating to include Introducing Python chapters 4 through 9.

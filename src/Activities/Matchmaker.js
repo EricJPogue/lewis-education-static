@@ -1,8 +1,15 @@
 
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { makeInternalURL } from './ActivityRouter'
 
-export const MatchmakerPython = () => { return Matchmaker(MatchmakerPythonProperties) }
+const MATCHMAKER_PYTHON_NAME = 'Matchmaker with Python'
+export const MATCHMAKER_PYTHON_ROUTE = 'matchmaker-python'
+export const matchmakerPythonLink = () => {return (<NavLink to={makeInternalURL(MATCHMAKER_PYTHON_ROUTE)}>{MATCHMAKER_PYTHON_NAME}</NavLink>)}
+export const matchmakerPython = () => { return Matchmaker(MatchmakerPythonProperties) }
+
+
+// export const MatchmakerPython = () => { return Matchmaker(MatchmakerPythonProperties) }
 export const MatchmakerWeb = ()    => { return Matchmaker(MatchmakerWebProperties) }
 export const MatchmakerJava = ()   => { return Matchmaker(MatchmakerJavaProperties) }
 export const MatchmakerGo = ()     => { return Matchmaker(MatchmakerGoProperties) }

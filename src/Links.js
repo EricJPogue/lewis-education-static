@@ -17,7 +17,7 @@ export const Git = () => { return externalLink('Git', 'https://git-scm.com/') }
 export const GitHub = () => { return externalLink('GitHub', 'https://help.github.com/en/articles/applying-for-a-student-developer-pack') }
 export const Azure = () => { return externalLink('Microsoft Azure', 'https://azure.microsoft.com/en-us/free/students/') }
 export const Python = () => { return externalLink('Python', 'https://www.python.org/') }
-export const IntroducingPythonSampleCode = () => { return externalLink('sample code', 'https://github.com/madscheme/introducing-python') }
+export const IntroducingPythonSampleCode = () => { return externalLink('source code', 'https://github.com/madscheme/introducing-python') }
 export const introducingPythonCodeExamples = () => { return externalLink('code examples', 'https://github.com/madscheme/introducing-python') }
 
 export const firebase = () => { return externalLink('Google Firebase', 'https://firebase.google.com/')}
@@ -97,7 +97,7 @@ export const mern = () => { return externalLink('MERN', 'https://www.mongodb.com
 export const deliveryDronePowerpoint = () => { return externalLink('Delivery Drone PowerPoint', 'https://lewiseducation.blob.core.windows.net/todo/delivery-drone.pptx')}
 export const umlClassDiagrams = () => { return externalLink('UML Class Diagrams', 'https://www.youtube.com/watch/UI6lqHOVHic')}
 
-export const codingStandards = () => { return internalLink('Coding Standards', '/activity/coding-standards')}
+export const codingStandards = () => { return internalLink('coding standards', '/activity/coding-standards')}
 
 export const calendarLink = (sprint) => { return ( <NavLink to={'/calendar/'+sprint}>calendar</NavLink> ) }
 export const scheduleLink = (sprint) => { return ( <NavLink to={'/schedule/'+sprint}>schedule</NavLink> ) }
@@ -105,7 +105,7 @@ export const scheduleLink = (sprint) => { return ( <NavLink to={'/schedule/'+spr
 export const blackboard = () => { return externalLink('Blackboard', 'https://lewisuniversity.blackboard.com/')}
 export const wireless = () => { return externalLink('wireless', 'https://mylewis.lewisu.edu/web/mylewis-home/resources')}
 
-export const gitCommands = () => { return internalLink('Git Commands', '/activity/git-commands')}
+export const gitCommands = () => { return internalLink('Git commands', '/activity/git-commands')}
 
 export const jsonW3CTutorial = () => { return externalLink('JSON Tutorial', 'https://www.w3schools.com/js/js_json_intro.asp')}
 export const jsonArticle = () => { return externalLink('What is JSON? JavaScript Object Notation explained', 'https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html') }
