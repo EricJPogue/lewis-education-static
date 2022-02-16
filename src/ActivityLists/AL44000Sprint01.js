@@ -5,9 +5,8 @@ import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, Initi
 import { GettingToKnowEachOther, ProgrammingActivity, ToolsOfTheTrade, HTMLProgrammingPart1, HelloWorldWithPython } from './ProgrammingAssignments'
 
 export const al44000Sprint01 = () => {
-	return (
-
-<div>
+	return ( <div>
+		
 <h5>Sprint 1: Getting Started, Software Engineering Life Cycles, Software as a Service, and Tools of the Trade</h5>
 <p><em>Welcome to Software Engineering!</em> By this point in your software development journey I'm sure you are 
 confident in writing moderately complicated software programs. You’ve learned about structured programming techniques 
@@ -50,9 +49,7 @@ Maintenance. These are some of the topics that we will be exploring as part of t
 	{StandardActivitiesClosing(GettingToKnowEachOther)}
 </ol>
 {Closing()}
-</div>
-
-	)
+</div> )
 }
 
 // Todo: Consider moving chapter 2 to sprint 2 so that we can focus more on chapter 1 (review the very good chapter 1 video for more insights.)

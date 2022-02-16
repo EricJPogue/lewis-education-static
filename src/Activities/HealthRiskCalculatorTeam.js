@@ -1,11 +1,17 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter'
+
+import { internalLink } from '../Links'
 
 import BloodPressureImage from './HealthRiskCalculatorBloodPressure.png';
 import BodyMassIndexImage from './HealthRiskCalculatorBodyMassIndex.png';
 
-export const HealthRiskCalculatorTeamWeb = () => { return HealthRiskCalculatorTeam(HealthRiskCalculatorTeamWebWithNodeJSProperties) }
+const HEALTH_RISK_CALCULATOR_TEAM_WEB_NAME = 'Health Insurance Risk Calculator for the Web As A Team'
+export const HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE = 'health-risk-calculator-team-web'
+export const healthRiskCalculatorTeamWebLink = () => {return (<NavLink to={makeInternalURL(HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE)}>{HEALTH_RISK_CALCULATOR_TEAM_WEB_NAME}</NavLink>)}
+export const healthRiskCalculatorTeamWeb  = () => { return HealthRiskCalculatorTeam(HealthRiskCalculatorTeamWebWithNodeJSProperties) }
 
 const HealthRiskCalculatorTeamWebWithNodeJSProperties = {
 	'name': 'Health Insurance Risk Calculator for the Web As A Team', 
@@ -15,14 +21,15 @@ const HealthRiskCalculatorTeamWebWithNodeJSProperties = {
 }	
 	
 const HealthRiskCalculatorTeam = (appProps) => {
+	const sharedGitHubRepository = () => internalLink('Shared GitHub Repository', '/activity/repository')
 	return (
 
 <div>
 <br />
 <h4>{appProps.name}</h4>
 <h5>Summary: Work with your scrum team to create a {appProps.language} application that will calculate the health risk 
-of a new insurance company customer utilizing Node.js and server-side programming for all calculations and 
-comparisons.
+of a new insurance company customer <em>utilizing Node.js and server-side programming for all calculations and 
+comparisons</em>. Implement the application utilizing a {sharedGitHubRepository()}
 </h5>
 <h5>Prerequisites: {appProps.prerequisites}</h5>
 
@@ -99,7 +106,7 @@ improve on his design in any event.
 <ol>
 	<li>Utilizes Node.js and the Express JavaScript library for all hosting</li>
 	<li>Utilizes a shared GitHub repository that all team members can update and also meets the following <NavLink to='/activity/repository'>criteria</NavLink></li>
-	<li>Utilizes “production” and “test” GitHub branches</li>
+	<li>Utilizes a {sharedGitHubRepository()} including “production” and “test” GitHub branches</li>
 	<li>Hosts the “test” branch in an Azure website</li>
 </ol>
 

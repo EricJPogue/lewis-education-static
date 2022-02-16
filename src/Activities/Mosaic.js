@@ -1,10 +1,17 @@
 
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter'
 
 import MosaicScreenshot from './MosaicScreenshot.png'
 
-export const MosaicJava  = () => { return Mosaic(MosaicJavaProperties) }
+const MOSAIC_JAVA_NAME = 'Mosaic with Java'
+export const MOSAIC_JAVA_ROUTE = 'mosaic-java'
+export const mosaicJavaLink = () => {return (<NavLink to={makeInternalURL(MOSAIC_JAVA_ROUTE)}>{MOSAIC_JAVA_NAME}</NavLink>)}
+export const mosaicJava  = () => { return Mosaic(MosaicJavaProperties) }
+
+// export const MosaicJava  = () => { return Mosaic(MosaicJavaProperties) }
+
 export const MosaicWeb   = () => { return Mosaic(MosaicWebProperties) }
 export const MosaicReact = () => { return Mosaic(MosaicReactProperties) }
 

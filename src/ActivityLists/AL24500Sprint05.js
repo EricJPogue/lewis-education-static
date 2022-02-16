@@ -37,6 +37,8 @@ professional portfolio to show as you are looking for an internship or job? You 
 	<li>Develop intermediate command-line Java applications that span multiple Java files</li>
 	<li>Understand software testing and the basics of software development life cycles</li>
 	<li>Describe multiple object-oriented languages and platforms</li>
+	<li>Develop Java applications that read and write files including JSON files</li>
+	<li>Understand JavaDoc and how it can create self-documenting source code</li>
 </ul>
 
 <p>Below is our sprint 5 activities list. </p>
@@ -60,6 +62,10 @@ professional portfolio to show as you are looking for an internship or job? You 
 	<li>{complete(FinalProjectProposal)}</li>
 	<li>{complete(programmingAssignment)}</li>
 	<li><em>Complete Discussion 5, Lab 5, Quiz 5, and Reflection 5</em></li>
+	<li>Review the Java file documentation provide by Oracle <a href='https://docs.oracle.com/javase/7/docs/api/java/io/package-summary.html' target='_blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>Review the related Java file tutorials provided my Oracle <a href='https://docs.oracle.com/javase/tutorial/essential/io/' target='_blank' rel='noopener noreferrer'>[link]</a>
+		and complete and complete one of the tutorials.</li>
+	<li>Complete the BMI with JavaDoc and Scanner (keyboard input) <NavLink to='/activity-oop/bmi-calculator-add-javadoc-and-keyboard-input'>[video]</NavLink></li>
 </ol>
 
 <p>If you are struggling, remember to reach out to your Scrum teammates early and often for help. Also, be sure to 
@@ -79,5 +85,7 @@ const extras = () => {
 	</div>)
 }
 
+// Todo: Assign chapters 8 and 9 and 11
+// Todo: From sprint 4 (but removed) consider adding: import { jsonArticle, jsonW3CTutorial } from '../Links';
 // Todo: Determine how to reusing and/or enhance Testing lecture.
 // Todo: Add Final Project proposals to assignments. 

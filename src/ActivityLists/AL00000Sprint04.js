@@ -11,7 +11,7 @@ export const StandardActivitiesWithLinkAndSprint = (sprint, programmingAssignmen
 	const tutoringOptions = () => { return internalLink('tutoring options', '/activity/study-table') }
 
 	const checkExcludingPreviousSprintReviewTopics = (excludePreviousTopics) => { 
-		if (!excludePreviousTopics) return ( <div><li>From previous sprints recall {ExampleCode()}, {gitCommands()}, {codingStandards()}, {tutoringOptions()}, and {playlist}</li></div>)
+		if (!excludePreviousTopics) return ( <div><li>From previous sprints review {ExampleCode()}, {gitCommands()}, {codingStandards()}, {tutoringOptions()}, and {playlist}</li></div>)
 		else return null
 	}
 	

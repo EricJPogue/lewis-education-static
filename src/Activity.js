@@ -2,21 +2,19 @@ import React, { Component } from 'react';
 import ReactPlayer from 'react-player'
 
 import { getCourseTitle } from './data/ClientDataAPIs';
-
 import { routeActivity } from './Activities/ActivityRouter';
 import { routeSlide } from './Slides/SlideRouter'
 
 import { SeatSelector } from './Activities/SeatSelector'
-
 import { StudyTable } from './Activities/StudyTable'
 import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './Activities/HelloWorld'
 import { /* MatchmakerPython, */ MatchmakerWeb, MatchmakerJava, MatchmakerGo, MatchmakerExamples } from './Activities/Matchmaker';
 import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './Activities/HealthRiskCalculator'
-import { HealthRiskCalculatorTeamWeb } from './Activities/HealthRiskCalculatorTeam'
+// import { HealthRiskCalculatorTeamWeb } from './Activities/HealthRiskCalculatorTeam'
 
 import { ExampleCode } from './Activities/ExampleCode'
 import { FaceDrawWeb, /* FaceDrawJava, */ FaceDrawReact } from './Activities/FaceDraw'
-import { MosaicWeb, MosaicJava, MosaicReact, MosaicV2React } from './Activities/Mosaic'
+import { MosaicWeb, /* MosaicJava, */ MosaicReact, MosaicV2React } from './Activities/Mosaic'
 
 import { SwissArmyKnifeJava, SwissArmyKnifeJavaV2 } from './Activities/SwissArmyKnife'
 import { ThunderbirdJava } from './Activities/Thunderbird'
@@ -133,7 +131,7 @@ class Activity extends Component {
 			case 'facedraw-react': return FaceDrawReact()
 
 			case 'mosaic-web': return MosaicWeb()
-			case 'mosaic-java': return MosaicJava()
+			// case 'mosaic-java': return MosaicJava()
 			case 'mosaic-react': return MosaicReact()
 			case 'mosaic-v2-react': return MosaicV2React()
 
@@ -147,7 +145,7 @@ class Activity extends Component {
 			case 'health-risk-calculator-java': return HealthRiskCalculatorJava()
 			case 'health-risk-calculator-go': return HealthRiskCalculatorGo()
 			case 'health-risk-calculator-examples': return HealthRiskCalculatorExamples()
-			case 'health-risk-calculator-team-web': return HealthRiskCalculatorTeamWeb()
+			// case 'health-risk-calculator-team-web': return HealthRiskCalculatorTeamWeb()
 
 			// case 'numbering-systems-python': return PythonNumberingSystems()
 			case 'turtle-draw': return PythonTurtleDraw()

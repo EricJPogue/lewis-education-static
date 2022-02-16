@@ -5,7 +5,6 @@ import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL0
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint04'
 
 import { oreillyPlaylistICS, SequenceSelectionAndRepetition, IntroducingPythonSampleCode, internalLink } from '../Links'
-
 import { numberingSystemsLink} from '../Activities/PythonNumberingSystems'
 import { matchmakerPythonLink } from '../Activities/Matchmaker'
 
@@ -14,6 +13,7 @@ export const al20000Sprint04 = () => {
 	const pythonW3CPart2 = () => { return internalLink('Python Programming - Part 2', '/activity/python-w3c') }
 	const daleArtificialIntelligenceLecture = () => { return internalLink('lecture', '/activity-dale/13' )}
 	let sprint = 4
+
 	return (
 
 <div>
@@ -48,12 +48,7 @@ for Python will be challenging application but I think you will enjoy it.
 {Closing()}
 <br />
 <p>Programming Together: “MatchmakerLite - Part 1” and “MatchmakerLite - Part 2”</p>
-</div>
-
-	)
+</div> )
 }
-
-// Todo: Review “Numbering Systems with Python” activity and make sure that the lab assignment is updated to verify completion 
-// Todo: Really quiz questions for Introducing Python chapters.
 
 

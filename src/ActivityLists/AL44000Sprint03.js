@@ -7,13 +7,13 @@ import { oreillyPlaylistSE, internalLink, externalLink, gitCommands, jsonArticle
 import { assignmentPortfolioWithNodeJSLink } from '../Activities/WebAssignmentPortfolioWithNodeJS'
 import { gettingToKnowEachOthersTeamsLink } from '../Activities/WebGettingToKnowEachOthersTeams'
 
-const foxChapter7Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-07') }
-const nodeJSW3CTutorial = () => { return externalLink('Node.js Tutorial', 'https://www.w3schools.com/nodejs/') }
-
 export const al44000Sprint03 = () => {
+	const foxChapter7Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-07') }
+	const nodeJSW3CTutorial = () => { return externalLink('Node.js Tutorial', 'https://www.w3schools.com/nodejs/') }
 	let playlist = oreillyPlaylistSE()
 	const sprint = 3
-	return (<div>
+
+	return ( <div>
 
 <h5>Sprint 3: Application Requirements, Node.js, and Azure, </h5>
 
@@ -46,11 +46,10 @@ with your classmates and scrum team members as you work through some of the open
 	<li>Complete the W3C {jsonW3CTutorial()}</li>
 	{StandardActivitiesClosingWithLink(assignmentPortfolioWithNodeJSLink(), '4 hours')}
 </ol>
-{Closing()}
+{Closing()}<br />
 
 <p>Programming Together: “Deploying Node.js on Microsoft Azure”</p>
-
-	</div>)
+</div> )
 }
 
 

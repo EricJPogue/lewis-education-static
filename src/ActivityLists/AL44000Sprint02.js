@@ -44,7 +44,6 @@ much code. This sprint get your text editors out. We are going to start practici
 	{StandardActivitiesClosing(assignmentPortfolioLink(), '2 hours')}
 </ol>
 {Closing()}
-
 </div> )
 }
 

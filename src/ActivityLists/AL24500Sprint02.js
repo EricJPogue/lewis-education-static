@@ -10,7 +10,7 @@ const oopPatterns = () => { return internalLink('Object-Oriented Programming Pat
 const oopPrinciples = () => { return internalLink('Object-Oriented Programming Principles', '/activity-oop/principles') }
 const successfulProgrammer = () => { return internalLink('How To Be A Successful Programmer', '/activity/successful-programmer') }
 
-export const al24500Sprint02 = ( props ) => {
+export const al24500Sprint02 = () => {
 	return (
 
 <div>

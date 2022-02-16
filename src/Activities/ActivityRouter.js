@@ -12,7 +12,9 @@ import { FAVORITE_HOBBY_ROUTE, favoriteHobby} from './WebMyFavoriteHobby'
 import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebGettingToKnowEachOther'
 import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbbreviated } from './WebGettingToKnowEachOtherAbbreviated'
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
+import { HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE, healthRiskCalculatorTeamWeb } from './HealthRiskCalculatorTeam'
 import { MATCHMAKER_PYTHON_ROUTE, matchmakerPython } from './Matchmaker'
+import { MOSAIC_JAVA_ROUTE, mosaicJava } from './Mosaic'
 import { NUMBERING_SYSTEMS_ROUTE, numberingSystems } from './PythonNumberingSystems'
 import { OVAL_DRAW_PLUS_JAVA_ROUTE, ovalDrawPlusJava } from './OvalDrawPlus'
 import { SEAT_SELECTOR_MERN_ROUTE, seatSelectorMERN } from './SeatSelectorMERN'
@@ -41,7 +43,9 @@ export const routeActivity = (activityRoute) => {
 		case GETTING_TO_KNOW_EACH_OTHER_ROUTE: return gettingToKnowEachOther()
 		case GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE: return gettingToKnowEachOtherAbbreviated()
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()
+		case HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE: return healthRiskCalculatorTeamWeb()
 		case MATCHMAKER_PYTHON_ROUTE: return matchmakerPython()
+		case MOSAIC_JAVA_ROUTE: return mosaicJava()
 		case NUMBERING_SYSTEMS_ROUTE: return numberingSystems()
 		case OVAL_DRAW_PLUS_JAVA_ROUTE: return ovalDrawPlusJava()
 		case SEAT_SELECTOR_MERN_ROUTE: return seatSelectorMERN()

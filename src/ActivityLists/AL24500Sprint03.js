@@ -5,11 +5,10 @@ import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLin
 import { oreillyPlaylistOOP, internalLink, jsonArticle, jsonW3CTutorial } from '../Links';
 import { faceDrawJavaLink } from '../Activities/FaceDraw';
 
-const faceDrawLite = () => { return internalLink('FaceDraw Lite', '/activity-oop/java-facedraw-lite') }
-const gUIsInJava = () => { return internalLink('Graphical User Interfaces (GUIs) in Java', '/activity-oop/java-gui-programming') }
+export const gUIsInJava = () => { return internalLink('Graphical User Interfaces (GUIs) in Java', '/activity-oop/java-gui-programming') }
 
-export const al24500Sprint03 = ( props ) => {
-	const playlist = oreillyPlaylistOOP()
+export const al24500Sprint03 = () => {
+	const faceDrawLite = () => { return internalLink('FaceDraw Lite', '/activity-oop/java-facedraw-lite') }
 	const sprint = 3
 	return ( <div>
 
@@ -30,7 +29,7 @@ activities list this week. That is because you will need to focus your time and 
 
 {ActivitiesListIntro(sprint)}
 <ol>
-	{StandardActivitiesWithLink(faceDrawJavaLink(), playlist )}
+	{StandardActivitiesWithLink(faceDrawJavaLink(), oreillyPlaylistOOP() )}
 	<li>Complete {faceDrawLite()}{estimated('2 hours')}</li>
 	<li>Complete {gUIsInJava()}</li>
 
