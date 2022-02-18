@@ -127,19 +127,20 @@ a shared MVP view that you will publish as a team in your team’s GitHub reposi
 	</div> )
 }
 
+const scrum = () => { return externalLink('Scrum', 'https://www.agilealliance.org/glossary/scrum')}
+const agileAllianceAgile101 = () => { return externalLink('Agile 101', 'https://www.agilealliance.org/agile101') }
+const productBacklog = () => { return externalLink('Product Backlog', 'https://www.agilealliance.org/glossary/backlog' )}
+const sprintPlanning = () => { return externalLink('Sprint Planning', 'https://www.agilealliance.org/glossary/sprint-planning')}
+const sprintBacklog = () => { return externalLink('Sprint Backlog', 'https://www.agilealliance.org/glossary/sprint-backlog')}
+const userStory = () => { return externalLink('User Story', 'https://www.agilealliance.org/glossary/user-stories')}
+const userStoryTemplate = () => { return externalLink('User Story Template', 'https://www.agilealliance.org/glossary/user-story-template/')}
+const iNVEST = () => { return externalLink('INVEST', 'https://www.agilealliance.org/glossary/invest' )}
+const done = () => { return externalLink('Done', 'https://www.agilealliance.org/glossary/definition-of-done')}
+
 const name3 = 'Class Product Sprint 3'
 export const CLASS_PRODUCT_SPRINT_3_ROUTE = 'class-product-sprint-3'
 export const classProductSprint3Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_3_ROUTE)}>{name3}</NavLink>)}
 export const classProductSprint3 = () => {
-	const scrum = () => { return externalLink('Scrum', 'https://www.agilealliance.org/glossary/scrum')}
-	const agileAllianceAgile101 = () => { return externalLink('Agile 101', 'https://www.agilealliance.org/agile101') }
-	const productBacklog = () => { return externalLink('Product Backlog', 'https://www.agilealliance.org/glossary/backlog' )}
-	const sprintPlanning = () => { return externalLink('Sprint Planning', 'https://www.agilealliance.org/glossary/sprint-planning')}
-	const sprintBacklog = () => { return externalLink('Sprint Backlog', 'https://www.agilealliance.org/glossary/sprint-backlog')}
-	const userStory = () => { return externalLink('User Story', 'https://www.agilealliance.org/glossary/user-stories')}
-	const userStoryTemplate = () => { return externalLink('User Story Template', 'https://www.agilealliance.org/glossary/user-story-template/')}
-	const iNVEST = () => { return externalLink('INVEST', 'https://www.agilealliance.org/glossary/invest' )}
-	const done = () => { return externalLink('Done', 'https://www.agilealliance.org/glossary/definition-of-done')}
 	return ( <div>
 		
 <h5>{name3}</h5>
@@ -178,6 +179,66 @@ most likely to entice a person to use this product?” It is expected that each 
 <p>Execute sprint 3:</p>
 <ol>
 	<li>Verify that each team member is committed to delivering User Stories that are estimated at lest 12 hours effort</li>
+	<li>Develop, unit test, and deploy committed User Stories</li>
+	<li>Verify that each story that is complete meets your team’s definition of {done()}</li>
+	<li>Complete any production version upgrade conversions verifying that production data from previous version is not lost</li>
+</ol>
+
+<em>Requirement 4</em>
+<p>Test stories, deploy to production, and update CI/CD documentation:</p>
+<ol>
+	<li>System test your stories in the development and production environments</li>
+	<li>Acceptance test one other team members stories in the development and production environments</li>
+	<li>Update CI/CD documentation so that it is verified current, maintained as MarkDown, and linked to README.md</li>
+	<li>Do <em>not</em> break the production environment</li>
+</ol>
+</div> )
+}
+
+const name4 = 'Class Product Sprint 4'
+export const CLASS_PRODUCT_SPRINT_4_ROUTE = 'class-product-sprint-4'
+export const classProductSprint4Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_4_ROUTE)}>{name4}</NavLink>)}
+export const classProductSprint4 = () => {
+	const sprint = 4
+	const effort = 12
+	return ( <div>
+		
+<h5>{name4}</h5>
+<p>Prerequisites: {classProductSprint3Link()} </p>
+<p><em>Summary:</em> Complete your team’s MVP while continuing to enhance the continuous integration / continuous 
+deployment (CI/CD) functionality in your product.</p>
+
+<p>In sprint {sprint} you and your team will continue to focus on implementing the most valuable features from your 
+MVP. <em>Value should always be viewed from a customer perspective</em> by constantly asking the question, ”What 
+feature would be most likely to entice a person to use this product?” It is expected that each team member will contribute 
+approximately {effort} hours to the activity.</p>
+
+<p>As your team completes each requirement, be sure to appropriately <em>document</em> each activity.</p>
+
+<em>Requirement 1</em>
+<p>Bring closure to sprint {sprint-1} by completing Review/Demos and Retrospective:</p>
+<ol>
+	<li>Review {scrum()} and complete your team’s Sprint {sprint-1} Review</li>
+	<li>Make sure that each team member Demos the stories they completed</li>
+	<li>Note that each team member will also need to demo at least one time during the semester their instructor</li>
+	<li>Complete your team’s Sprint {sprint-1} Retrospective</li>
+</ol>
+
+<em>Requirement 2</em>
+<p>Plan sprint {sprint}:</p>
+<ol>
+	<li>Review {scrum()} while focusing on Events, Artifacts, and Rolls</li>
+	<li>Review, understand, and utilize {userStory()}, {userStoryTemplate()}, and {iNVEST()}</li>
+	<li>Review {agileAllianceAgile101()} from {agileAlliance()} while creating your {productBacklog()}</li>
+	<li>Complete {sprintPlanning()} to finalize to the team’s {sprintBacklog()}</li>
+	<li>Define {done()} for your team</li>
+	<li>Assign each {userStory()} to a single team member and commit as a team to delivering the {sprintBacklog()}</li>
+</ol>
+
+<em>Requirement 3</em>
+<p>Execute sprint {sprint}:</p>
+<ol>
+	<li>Verify that each team member is committed to delivering User Stories that are estimated at lest {effort} hours effort</li>
 	<li>Develop, unit test, and deploy committed User Stories</li>
 	<li>Verify that each story that is complete meets your team’s definition of {done()}</li>
 	<li>Complete any production version upgrade conversions verifying that production data from previous version is not lost</li>
