@@ -39,9 +39,8 @@ read and write files.</p>
 	<li>Review {gUIsInJava()}</li>
 	<li>Complete {actionListenerPlus()}</li>
 
-	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 10 on Desktop Applications and review associated {learningJavaExampleCode()}</li>
-
 	{InitialPost(sprint)}
+	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 10 on Desktop Applications and review associated {learningJavaExampleCode()}</li>
 	<li>Within {oreillyPlaylistOOP()} review “Learning Java” chapter 6 on Error Handling and Logging</li>
 	<li>Analyze and test ShapeDraw which is located in our {ExampleCode()}</li>
 	<li>Complete {shapeDrawPlus()} by enhancing ShapeDraw (sometimes referred to as “OvalDraw”){estimated('2 hours')}</li>

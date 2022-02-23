@@ -37,9 +37,9 @@ for Python will be challenging application but I think you will enjoy it.
 	<li>Complete {numberingSystemsLink()}{estimated('2 hours')}</li>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>
 	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 3 and 4 while reviewing associated {IntroducingPythonSampleCode()}</li>
-	<li>Review {pythonW3CPart1()} from W3C</li>
 
 	{InitialPost(sprint)}
+	<li>Review {pythonW3CPart1()} from W3C</li>
 	<li>Master {SequenceSelectionAndRepetition()}</li>
 	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 5 and 6 while reviewing associated {IntroducingPythonSampleCode()}</li>
 	<li>Review {pythonW3CPart2()} from W3C</li>
