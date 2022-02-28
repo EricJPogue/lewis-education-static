@@ -6,12 +6,14 @@ import { daleLectureVideo } from './Panopto'
 import { daleLectureSlidesURL } from './AzureStorage'
 import { daleDiscussion3Link } from './Slides/DaleDiscussion'
 import { daleDiscussion4Link } from './Slides/DaleDiscussion';
+import { daleDiscussion13Link } from './Slides/DaleDiscussion';
 
 export class ActivityDale extends Component {
 	getDiscussionLink = (chapter) => { 
 		switch(chapter) {
 			case '3': return (<div>{daleDiscussion3Link()} Breakout Session</div>)
 			case '4': return (<div>{daleDiscussion4Link()} Breakout Session</div>)
+			case '13': return (<div>{daleDiscussion13Link()} Breakout Session</div>)
 			default: return null
 		}
 	}

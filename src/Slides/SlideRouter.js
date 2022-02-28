@@ -1,7 +1,10 @@
+import { ARTIFICIAL_INTELLIGENCE_ROUTE, artificialIntelligence } from './BreakoutTemplate'
 import { DALE_DISCUSSION_3_ROUTE, daleDiscussion3 } from './DaleDiscussion'
 import { DALE_DISCUSSION_4_ROUTE, daleDiscussion4 } from './DaleDiscussion'
+import { DALE_DISCUSSION_13_ROUTE, daleDiscussion13 } from './DaleDiscussion'
 import { DESIGN_PRINCIPLES_ROUTE, designPrinciples } from './DesignPrinciples'
 import { GUIS_JAVA_ROUTE, graphicalUserInterfacesJava } from './GUIsInJava'
+import { LEARNING_JAVA_DESKTOP_APPLICATIONS_ROUTE, learningJavaDesktopApplications } from './LearningJavaDesktopApplications'
 import { PREFLIGHT_CHECKLIST_ROUTE, preflightChecklist } from './PreflightChecklist'
 import { FOX_DISCUSSION_3TO5A6A7_ROUTE, foxDiscussion3to5A6A7 } from './FoxDiscussionChapter3to5PlusA6A7'
 import { FOX_DISCUSSION_7_ROUTE, foxDiscussion7 } from './FoxDiscussionChapter7'
@@ -14,10 +17,13 @@ export const makeSlideInternalURL = (slideRoute) => {
 
 export const routeSlide = (slideRoute) => {
 	switch(slideRoute) {
+		case ARTIFICIAL_INTELLIGENCE_ROUTE: return artificialIntelligence()
 		case DALE_DISCUSSION_3_ROUTE: return daleDiscussion3()
 		case DALE_DISCUSSION_4_ROUTE: return daleDiscussion4()
+		case DALE_DISCUSSION_13_ROUTE: return daleDiscussion13()
 		case DESIGN_PRINCIPLES_ROUTE: return designPrinciples()
 		case GUIS_JAVA_ROUTE: return graphicalUserInterfacesJava()
+		case LEARNING_JAVA_DESKTOP_APPLICATIONS_ROUTE: return learningJavaDesktopApplications()
 		case PREFLIGHT_CHECKLIST_ROUTE: return preflightChecklist()
 		case FOX_DISCUSSION_3TO5A6A7_ROUTE: return foxDiscussion3to5A6A7()
 		case FOX_DISCUSSION_7_ROUTE: return foxDiscussion7()

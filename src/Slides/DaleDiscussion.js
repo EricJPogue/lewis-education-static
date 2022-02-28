@@ -59,3 +59,33 @@ export const daleDiscussion4 = () => {
 		</ol>
 	</div> )
 }
+
+const NAME13 = 'Artificial Intelligence'
+export const DALE_DISCUSSION_13_ROUTE = 'artificial-intelligence'
+export const daleDiscussion13Link = () => {return (<NavLink to={makeSlideInternalURL(DALE_DISCUSSION_13_ROUTE)}>{NAME13}</NavLink>)}
+export const daleDiscussion13 = () => {
+	const defaultText = { fontSize:24 }
+	const title = { fontSize:36	}
+	const listItem = { fontSize:24 }
+	const subListItem = { fontSize:20 }
+	const subList = { listStyleType:'lower-alpha' }
+
+	return ( <div>
+		<h1 style={title}>{NAME13}</h1>
+		<p style={defaultText}>In this breakout session your team will:</p>
+		<ol>
+			<li style={listItem}>Identify a presenter</li>
+			<li style={listItem}>Discuss the following topics while the presenter summarizes the conversation:</li>
+			<ol style={subList}>
+				<li style={subListItem}>How does Artificial Intelligence relate to Data Science</li>
+				<li style={subListItem}>Thinking Machines</li>
+				<li style={subListItem}>Knowledge Representation and Data Quality</li>
+				<li style={subListItem}>Expert Systems</li>
+				<li style={subListItem}>Neural Networks</li>
+				<li style={subListItem}>Natural Language Processing</li>
+				<li style={subListItem}>Robotics</li>
+			</ol>
+			<li style={listItem}>Sit back, relax, and acknowledge the bravery and dedication of the presenter</li>
+		</ol>
+	</div> )
+}

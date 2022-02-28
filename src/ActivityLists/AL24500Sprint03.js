@@ -43,3 +43,6 @@ activities list this week. That is because you will need to focus your time and 
 </div> )
 }
 
+// Todo: Review and update FaceDraw and Lab 3 to better reflect FaceDraw requirement 4 which should not be Coding 
+// standards. Make coding standards the first question on every lab and not part of a programming assignment’s 
+// requirements.
