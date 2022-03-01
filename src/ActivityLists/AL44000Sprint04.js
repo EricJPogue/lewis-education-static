@@ -4,7 +4,7 @@ import { estimated } from './AL00000Sprint01'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint04'
 
-import { oreillyPlaylistSE, internalLink } from '../Links'
+import { oreillyPlaylistSE, internalLink, JSONWebServicesTutorial } from '../Links'
 import { healthRiskCalculatorTeamWebLink } from '../Activities/HealthRiskCalculatorTeam'
 
 export const al44000Sprint04 = () => {
@@ -46,8 +46,19 @@ software as a Agile team in sprints 5 through 8 utilizing our full software-as-a
 	</ul>
 	{StandardActivitiesClosingWithLinkAndSprint(sprint, healthRiskCalculatorTeamWebLink(), '6 hours')}
 </ol>
-{Closing()}<br />
+{Closing()}
+{/*<p>Programming Together: “Deploying Node.js on Microsoft Azure”</p>*/}
 
-<p>Programming Together: “Deploying Node.js on Microsoft Azure”</p>
+{extras()}
 </div> )
 }
+
+const extras = () => {
+	return (<div>	
+		<p>Additional suggested activities:</p>
+		<ul style={{listStyleType:'square'}}>
+			<li>Complete {JSONWebServicesTutorial()}</li>
+		</ul>
+	</div>)
+}
+
