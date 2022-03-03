@@ -10,6 +10,7 @@ import { CLASS_PRODUCT_SPRINT_4_ROUTE, classProductSprint4 } from './ClassProduc
 import { DELIVERY_DRONE_ROUTE, deliveryDrone } from './DeliveryDrone'
 import { FACEDRAW_JAVA_ROUTE, faceDrawJava } from './FaceDraw'
 import { FAVORITE_HOBBY_ROUTE, favoriteHobby} from './WebMyFavoriteHobby'
+import { FINAL_PROJECT_PROPOSAL_ROUTE, finalProjectProposal } from './FinalProjectProposal'
 import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebGettingToKnowEachOther'
 import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbbreviated } from './WebGettingToKnowEachOtherAbbreviated'
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
@@ -19,6 +20,7 @@ import { MOSAIC_JAVA_ROUTE, mosaicJava } from './Mosaic'
 import { NUMBERING_SYSTEMS_ROUTE, numberingSystems } from './PythonNumberingSystems'
 import { OVAL_DRAW_PLUS_JAVA_ROUTE, ovalDrawPlusJava } from './OvalDrawPlus'
 import { SEAT_SELECTOR_MERN_ROUTE, seatSelectorMERN } from './SeatSelectorMERN'
+import { TURTLEDRAW_ROUTE, turtledraw } from './PythonTurtleDraw'
 import { PIT_HUB_ROUTE, pitHub } from './PitHub'
 import { QUIZ_MASTER_MERN_ROUTE, quizMasterMERN } from './QuizMasterMERN'
 import { WEB_RESUME_ROUTE, webResume } from './WebResume'
@@ -42,6 +44,7 @@ export const routeActivity = (activityRoute) => {
 		case DELIVERY_DRONE_ROUTE: return deliveryDrone()
 		case FACEDRAW_JAVA_ROUTE: return faceDrawJava()
 		case FAVORITE_HOBBY_ROUTE: return favoriteHobby()
+		case FINAL_PROJECT_PROPOSAL_ROUTE: return finalProjectProposal()
 		case GETTING_TO_KNOW_EACH_OTHER_ROUTE: return gettingToKnowEachOther()
 		case GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE: return gettingToKnowEachOtherAbbreviated()
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()
@@ -51,6 +54,7 @@ export const routeActivity = (activityRoute) => {
 		case NUMBERING_SYSTEMS_ROUTE: return numberingSystems()
 		case OVAL_DRAW_PLUS_JAVA_ROUTE: return ovalDrawPlusJava()
 		case SEAT_SELECTOR_MERN_ROUTE: return seatSelectorMERN()
+		case TURTLEDRAW_ROUTE: return turtledraw()
 		case PIT_HUB_ROUTE: return pitHub()
 		case QUIZ_MASTER_MERN_ROUTE: return quizMasterMERN()
 		case WEB_RESUME_ROUTE: return webResume()

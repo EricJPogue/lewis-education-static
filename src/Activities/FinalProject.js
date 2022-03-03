@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { FinalProjectProposalNavLink } from './FinalProjectProposal';
+import { finalProjectProposalLink /* FinalProjectProposalNavLink */ } from './FinalProjectProposal';
 
 export const Start_FinalProject = () => { return (<div>Start working on your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 export const Complete_FinalProject = () => { return (<div>Complete your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
@@ -16,7 +16,7 @@ export const FinalProject = () => {
 your own.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
-	<li>{FinalProjectProposalNavLink()}</li>
+	<li>{finalProjectProposalLink()}</li>
 </ul>
 
 <p>In this activity you will deliver a final project that is uniquely your own. What you create should include the 

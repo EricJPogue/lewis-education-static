@@ -3,8 +3,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { startActivity, completeActivity, FinalProjectProposal } from './ProgrammingAssignments'
-import { ExampleCode } from '../Links'
-import { programmingTogether } from '../Links'
+
+import { programmingTogether, ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink } from '../Links'
 
 export const FinalProjectsAndMoreResponsibility = () => {
 	return ( <div>
@@ -17,6 +17,26 @@ export const FinalProjectsAndMoreResponsibility = () => {
 		will have more control <em>and responsibility</em> in determining what is done and how it is implemented.</p>
 	</div> )
 }
+
+export const StandardActivitiesWithLinkAndSprint = (sprint, programmingAssignmentLink, playlist, excludePreviousTopics) => { 
+	const tutoringOptions = () => { return internalLink('tutoring options', '/activity/study-table') }
+
+	const checkExcludingPreviousSprintReviewTopics = (excludePreviousTopics) => { 
+		if (!excludePreviousTopics) return ( <div><li>From previous sprints review {ExampleCode()}, {gitCommands()}, {codingStandards()}, {tutoringOptions()}, and {playlist}</li></div>)
+		else return null
+	}
+	
+	return ( <div>
+		<li>Focus on due dates by reviewing our {calendarLink(sprint)} and {scheduleLink(sprint)}</li>
+		<li><em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, Reflection {sprint}, and Lab Demo</em></li>
+		{checkExcludingPreviousSprintReviewTopics(excludePreviousTopics)}
+		<li>Start working on {programmingAssignmentLink}</li>
+	</div> )
+}
+
+
+
+
 
 export const StandardActivities = (programmingAssignment, playlist, sprint) => {
 	let scheduleLink = '/schedule/'+sprint

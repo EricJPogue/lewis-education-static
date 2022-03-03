@@ -25,10 +25,10 @@ import { Repository } from './Activities/Repository'
 import { CodingStandards, CodingStandardsValidator } from './Activities/CodingStandards'
 import { QuizMaster } from './Activities/QuizMaster'
 import { GitCommands } from './Activities/GitCommands'
-import { FinalProjectProposal } from './Activities/FinalProjectProposal'
+// import { FinalProjectProposal } from './Activities/FinalProjectProposal'
 import { FinalProject, FinalProjectDistributed, FinalProjectSprint5, FinalProjectSprint6, FinalProjectSprint7, FinalProjectSprint8 } from './Activities/FinalProject'
 // import { PythonNumberingSystems } from './Activities/PythonNumberingSystems'
-import { PythonTurtleDraw } from './Activities/PythonTurtleDraw'
+// import { PythonTurtleDraw } from './Activities/PythonTurtleDraw'
 import { HTML } from './Activities/HTML'
 import { PythonW3C } from './Activities/PythonW3C'
 import { SuccessfulDeveloper } from './Activities/SuccessfulDeveloper'
@@ -101,7 +101,10 @@ class Activity extends Component {
 			case 'coding-standards': return CodingStandards()
 			case 'coding-standards-validator': return CodingStandardsValidator()
 			case 'quiz-master': return QuizMaster()
-			case 'final-project-proposal': return FinalProjectProposal()
+
+
+			// case 'final-project-proposal': return FinalProjectProposal()
+
 			case 'final-project': return FinalProject()
 			case 'final-project-distributed': return FinalProjectDistributed()
 			case 'final-project-sprint-5': return FinalProjectSprint5()
@@ -148,7 +151,7 @@ class Activity extends Component {
 			// case 'health-risk-calculator-team-web': return HealthRiskCalculatorTeamWeb()
 
 			// case 'numbering-systems-python': return PythonNumberingSystems()
-			case 'turtle-draw': return PythonTurtleDraw()
+			// case 'turtle-draw': return PythonTurtleDraw()
 			case 'html': return HTML()
 			case 'python-w3c': return PythonW3C()
 			case 'assignment-portfolio-with-node-js': return WebAssignmentPortfolioWithNodeJS()

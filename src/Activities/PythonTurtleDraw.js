@@ -1,10 +1,17 @@
-
 import React from 'react';
+import { NavLink } from 'react-router-dom'
+import { makeInternalURL } from './ActivityRouter'
 
 import { PythonTurtleLibrary } from '../Links'
 import PythonTurtleDrawScreenShot from './PythonTurtleDrawScreenShot.png';
 
-export const PythonTurtleDraw = () => {
+
+const TURTLEDRAW_NAME = 'TurtleDraw'
+export const TURTLEDRAW_ROUTE = 'turtledraw'
+export const turtledrawLink = () => {return (<NavLink to={makeInternalURL(TURTLEDRAW_ROUTE)}>{TURTLEDRAW_NAME}</NavLink>)}
+export const turtledraw  = () => { return PythonTurtleDraw() }
+
+const PythonTurtleDraw = () => {
 	return (
 	
 <div>

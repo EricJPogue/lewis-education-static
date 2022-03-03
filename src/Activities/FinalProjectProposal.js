@@ -1,16 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter'
 
-const FinalProjectProposalName = 'Final Project Proposal'
-const FinalProjectProposalLink = '/activity/final-project-proposal'
-export const FinalProjectProposalNavLink = () => { return( <NavLink to={FinalProjectProposalLink}>{FinalProjectProposalName}</NavLink> )} 
 
-export const FinalProjectProposal = () => {
+const FINAL_PROJECT_PROPOSAL_NAME = 'Final Project Proposal'
+export const FINAL_PROJECT_PROPOSAL_ROUTE = 'final-project-proposal'
+export const finalProjectProposalLink = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_PROPOSAL_ROUTE)}>{FINAL_PROJECT_PROPOSAL_NAME}</NavLink>)}
+
+/*
+const finalProjectProposalName = 'Final Project Proposal'
+const finalProjectProposalLink = '/activity/final-project-proposal'
+export const finalProjectProposalNavLink = () => { return( <NavLink to={finalProjectProposalLink}>{finalProjectProposalName}</NavLink> )} 
+*/
+
+export const finalProjectProposal = () => {
 	return (
 	
 <div>
 <br />
-<h4>{FinalProjectProposalName}</h4>
+<h4>{FINAL_PROJECT_PROPOSAL_NAME}</h4>
 <h5>Summary: Create a final project proposal webpage.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
