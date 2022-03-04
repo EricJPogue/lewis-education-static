@@ -121,6 +121,8 @@ export const sprintPlanning = () => { return externalLink('Sprint Planning', 'ht
 export const userStory = () => { return externalLink('User Story', 'https://www.agilealliance.org/glossary/user-stories')}
 export const userStoryTemplate = () => { return externalLink('User Story Template', 'https://www.agilealliance.org/glossary/user-story-template/')}
 
+export const learningJavaExampleCode = () =>  { return internalLink('example code', 'https://github.com/l0y/learnjava5e.git')}
+
 export const done = () => { return externalLink('Done', 'https://www.agilealliance.org/glossary/definition-of-done')}
 
 export const externalLink = (displayName, url) => {

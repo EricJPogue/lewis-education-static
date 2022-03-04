@@ -1,20 +1,26 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { estimated } from './AL00000Sprint01'
 
-import { FinalProjectProposal, SwissArmyKnifeWithJava, start, complete } from './ProgrammingAssignments'
-const programmingAssignment = SwissArmyKnifeWithJava
+import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
+import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing  } from './AL00000Sprint05'
+import { oreillyPlaylistOOP, learningJavaExampleCode, jsonArticle, jsonW3CTutorial, internalLink } from '../Links';
+
+import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
+import { swissArmyKnifeLink } from '../Activities/SwissArmyKnife'
+import { htmlLink } from '../Activities/HTML'
+import { azureWebsiteLink } from '../Activities/AzureWebsite'
 
 export const al24500Sprint05 = ( props ) => {
+	const softwareTesting = () => { return internalLink('Software Testing', '/activity-oop/java-testing') }
+	const sprint = 5
 	return (
 
 <div>
-<h5>Sprint 5: Network Programming, Testing, and The Cloud</h5>
+<h5>Sprint 5: Network Programming, Testing, and the Cloud</h5>
 
 <p>Sprint 5. Do you feel your software development skills growing? Do you feel the power? As your skills grow you will 
 realize that you are in the driver’s seat. More and more you will need to be doing your own research and decision 
-making. For example, you will notice that our activities list this sprint includes Microsoft Azure and accessing JSON 
-files over the Internet from Java. I will be giving you some direction but you will have the power to explore options, 
-experiment, and make decisions on how you wish to implement the features. However, always remember: </p>
+making.</p>
 
 <h5>
 <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -24,68 +30,36 @@ experiment, and make decisions on how you wish to implement the features. Howeve
 </h5>
 <br />
 
-<p>Part of this new found responsibility will include working on your Final Project proposal. Sprint 8 will be dedicated 
-to your final project. We will see if we can carve out some additional time prior to sprint 8 as well. How would you 
-like to finish the class by creating something that makes you proud? What type of a final project would you enjoy 
-creating? Is there a project that would both be interesting to create and be something you could add to your 
-professional portfolio to show as you are looking for an internship or job? You have the power.</p>
+{FinalProjectsAndMoreResponsibility()}
 
-<p>By the end of this sprint we will be able to:</p>
+{LearningObjectivesIntro()}
 <ul style={{ listStyleType: 'square' }}>
-	<li>Develop your first network and distributed Java application</li>
-	<li>Create a web service utilizing the MS Azure cloud platform</li>
-	<li>Develop intermediate command-line Java applications that span multiple Java files</li>
+	<li>Understand how to develop distributed network aware Java applications</li>
+	<li>Create a web service API utilizing the Microsoft Azure cloud platform</li>
 	<li>Understand software testing and the basics of software development life cycles</li>
-	<li>Describe multiple object-oriented languages and platforms</li>
 	<li>Develop Java applications that read and write files including JSON files</li>
-	<li>Understand JavaDoc and how it can create self-documenting source code</li>
 </ul>
 
-<p>Below is our sprint 5 activities list. </p>
+{ActivitiesListIntro(sprint)}
 <ol>
-	<li>Stay focused on the due dates by reviewing our course calendar<NavLink to='/calendar/5'>[link]</NavLink></li>
-	<li><em>Review Lab 5, Quiz 5, Discussion 5, Reflection 5, and Lab Demo</em></li>
-	<li>{start(FinalProjectProposal)}</li>
-	<li>{start(programmingAssignment)}</li>
-	{/* The above items should be consistent across classes. */}
+	{StandardActivitiesWithLinkAndSprint(sprint, finalProjectProposalLink(), oreillyPlaylistOOP())}
+	<li>Start working on {swissArmyKnifeLink()}</li>
+	<li>Review {softwareTesting()} lecture</li>
+	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 11 on Networking and I/O and review associated {learningJavaExampleCode()}</li>
+	<li>Complete {htmlLink()} - Part 1</li>
+	<li>Complete {azureWebsiteLink()}{estimated('2 hours')}</li>
 
-	<li>Complete Testing lecture <NavLink to='/activity-oop/java-testing'>[link]</NavLink></li>
-	<li>Read “Learning Java, 5th Edition” chapter 11 <a href='https://learning.oreilly.com/library/view/learning-java-5th/9781492056263/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li>Review “HTML Programming - Part 1” from W3C <NavLink to='/activity/html'>[link]</NavLink><sup>~2 hours</sup></li>
-	<li>Complete “Azure Website” <NavLink to='/activity/azure-website'>[link]</NavLink><sup>~3 hours</sup></li>
-	<li>Review “What is JSON? JavaScript Object Notation explained” <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>[link]</a>
-		and “JSON Introduction” from W3C <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li><em>Make your initial Discussion post by the middle of the sprint</em></li>
+	{InitialPost()}	
+	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 12 on Programming the Web</li>
+	<li>Read {jsonArticle()} and complete the W3C {jsonW3CTutorial()}</li>
 	<li>Create an Azure website to host globally accessible JSON files</li>
-
-	{/* The items below should be consistent across classes. */ }
-	<li>{complete(FinalProjectProposal)}</li>
-	<li>{complete(programmingAssignment)}</li>
-	<li><em>Complete Discussion 5, Lab 5, Quiz 5, and Reflection 5</em></li>
-	<li>Review the Java file documentation provide by Oracle <a href='https://docs.oracle.com/javase/7/docs/api/java/io/package-summary.html' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li>Review the related Java file tutorials provided my Oracle <a href='https://docs.oracle.com/javase/tutorial/essential/io/' target='_blank' rel='noopener noreferrer'>[link]</a>
-		and complete and complete one of the tutorials.</li>
-	<li>Complete the BMI with JavaDoc and Scanner (keyboard input) <NavLink to='/activity-oop/bmi-calculator-add-javadoc-and-keyboard-input'>[video]</NavLink></li>
+	<li>Complete {finalProjectProposalLink()}{estimated('2 hours')}</li>
+	{StandardActivitiesClosingWithLinkAndSprint(sprint, swissArmyKnifeLink(), '8 hours')}
 </ol>
+{Closing()}
 
-<p>If you are struggling, remember to reach out to your Scrum teammates early and often for help. Also, be sure to 
-periodically check for new programming together tutorials <NavLink to='/activity/programming-together'>[link]</NavLink>.</p>
-{extras()}
-</div>
-	)
+</div> )
 }
 
-const extras = () => {
-	return (<div>	
-		<p>Additional suggested activities:</p>
-		<ul style={{listStyleType:'square'}}>
-			<li>Review our class example code <NavLink to='/activity/example-code'>[link]</NavLink></li>
-			<li>Review “Learning Java, 5th Edition” example code <a href='https://github.com/l0y/learnjava5e.git' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-		</ul>
-	</div>)
-}
-
-// Todo: Assign chapters 8 and 9 and 11
-// Todo: From sprint 4 (but removed) consider adding: import { jsonArticle, jsonW3CTutorial } from '../Links';
 // Todo: Determine how to reusing and/or enhance Testing lecture.
 // Todo: Add Final Project proposals to assignments. 

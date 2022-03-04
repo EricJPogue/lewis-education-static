@@ -1,8 +1,13 @@
-
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { makeInternalURL } from './ActivityRouter'
 
-export const SwissArmyKnifeJava  = () => { return SwissArmyKnife(SwissArmyKnifeJavaProperties) }
+const SWISS_ARMY_KNIFE_NAME = 'SwissArmyKnife'
+export const SWISS_ARMY_KNIFE_ROUTE = 'swiss-army-knife-java'
+export const swissArmyKnifeLink = () => {return (<NavLink to={makeInternalURL(SWISS_ARMY_KNIFE_ROUTE)}>{SWISS_ARMY_KNIFE_NAME}</NavLink>)}
+export const swissArmyKnife  = () => { return SwissArmyKnife(SwissArmyKnifeJavaProperties) }
+
+// export const SwissArmyKnifeJava  = () => { return SwissArmyKnife(SwissArmyKnifeJavaProperties) }
 export const SwissArmyKnifeJavaV2  = () => { return SwissArmyKnifeV2(SwissArmyKnifeJavaV2Properties) }
 
 const SwissArmyKnifeJavaProperties = {

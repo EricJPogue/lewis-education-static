@@ -3,7 +3,7 @@ import React from 'react'
 import { estimated } from './AL00000Sprint01'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint04'
-import { oreillyPlaylistOOP, ExampleCode, internalLink } from '../Links';
+import { oreillyPlaylistOOP, ExampleCode, learningJavaExampleCode, internalLink } from '../Links';
 import { gUIsInJava } from './AL24500Sprint03';
 
 import { mosaicJavaLink } from '../Activities/Mosaic';
@@ -12,7 +12,6 @@ export const al24500Sprint04 = () => {
 	const actionListenerPlus = () => { return internalLink('ActionListenerPlus', '/activity-oop/java-action-listeners') }
 	const mosaicLite = () => { return internalLink('Mosaic Lite', '/activity-oop/java-mosaic-lite')}
 	const shapeDrawPlus = () => { return internalLink('ShapeDraw Plus', '/activity-oop/java-ovaldraw-plus')}
-	const learningJavaExampleCode = () =>  { return internalLink('example code', 'https://github.com/l0y/learnjava5e.git')}
 	const sprint = 4
 	return ( <div>
 
@@ -34,7 +33,7 @@ read and write files.</p>
 
 {ActivitiesListIntro(sprint)}
 <ol>
-	{StandardActivitiesWithLinkAndSprint(sprint, mosaicJavaLink(), oreillyPlaylistOOP() )}
+	{StandardActivitiesWithLinkAndSprint(sprint, mosaicJavaLink(), oreillyPlaylistOOP())}
 	<li>Complete {mosaicLite()}{estimated('2 hours')}</li>
 	<li>Review {gUIsInJava()}</li>
 	<li>Complete {actionListenerPlus()}</li>

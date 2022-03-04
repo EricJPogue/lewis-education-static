@@ -21,6 +21,7 @@ import { MOSAIC_JAVA_ROUTE, mosaicJava } from './Mosaic'
 import { NUMBERING_SYSTEMS_ROUTE, numberingSystems } from './PythonNumberingSystems'
 import { OVAL_DRAW_PLUS_JAVA_ROUTE, ovalDrawPlusJava } from './OvalDrawPlus'
 import { SEAT_SELECTOR_MERN_ROUTE, seatSelectorMERN } from './SeatSelectorMERN'
+import { SWISS_ARMY_KNIFE_ROUTE, swissArmyKnife } from './SwissArmyKnife'
 import { TURTLEDRAW_ROUTE, turtledraw } from './PythonTurtleDraw'
 import { PIT_HUB_ROUTE, pitHub } from './PitHub'
 import { QUIZ_MASTER_MERN_ROUTE, quizMasterMERN } from './QuizMasterMERN'
@@ -56,6 +57,7 @@ export const routeActivity = (activityRoute) => {
 		case NUMBERING_SYSTEMS_ROUTE: return numberingSystems()
 		case OVAL_DRAW_PLUS_JAVA_ROUTE: return ovalDrawPlusJava()
 		case SEAT_SELECTOR_MERN_ROUTE: return seatSelectorMERN()
+		case SWISS_ARMY_KNIFE_ROUTE: return swissArmyKnife()
 		case TURTLEDRAW_ROUTE: return turtledraw()
 		case PIT_HUB_ROUTE: return pitHub()
 		case QUIZ_MASTER_MERN_ROUTE: return quizMasterMERN()

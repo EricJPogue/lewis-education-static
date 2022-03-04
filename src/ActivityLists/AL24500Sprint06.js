@@ -20,6 +20,9 @@ other hand, learning how to write multi-threaded Java applications will likely p
 	<li>Create and update a web service by hosting JSON files in Azure</li>
 	<li>Enhance intermediate command line Java applications that span multiple Java files</li>
 	<li>Create an automated (api level) Java test client</li>
+
+	{/* BugBug: The following item was moved from sprint 5 and should be reviewed and placed properly */}
+	<li>Understand JavaDoc and how it can create self-documenting source code</li>
 </ul>
 
 <p>Below is the list of activities that we will need to complete this sprint.</p>
@@ -41,6 +44,9 @@ other hand, learning how to write multi-threaded Java applications will likely p
 	{/* The items below should be consistent across classes. */}
 	<li>{complete(programmingAssignment)}</li>
 	<li><em>Complete Discussion 6, Lab 6, Quiz 6, and Reflection 6</em></li>
+
+	{/* BugBug: The following item was moved from sprint 5 and should be reviewed and placed properly */}
+	<li>Complete the BMI with JavaDoc and Scanner (keyboard input) <NavLink to='/activity-oop/bmi-calculator-add-javadoc-and-keyboard-input'>[video]</NavLink></li>
 </ol>
 
 <p>If you are struggling, remember to reach out to your Scrum teammates early and often for help. Also, be sure to 

@@ -11,9 +11,8 @@ import { SequenceSelectionAndRepetition } from '../Links'
 import { oreillyPlaylistICS } from '../Links'
 
 export const al20000Sprint02 = () => {
-	return (
-
-<div>
+	return ( <div>
+		
 <h5>Sprint 2: Numbering Systems, Data Representation, HyperText Markup Language (HTML), and Cascading Style Sheets (CSS)</h5>
 
 <p>Welcome to sprint 2 of Introduction to Computer Science. In sprint 2 we are going to continue our journey into data
@@ -49,7 +48,6 @@ Sheets (CSS).</p>
 <br />
 <p>Programming Together: “HelloWorld Plus for the Web” and “HelloWorldPlus with Pictures”</p>
 
-{/* Programming Together: “HelloWorld Plus for the Web” and “HelloWorldPlus with Pictures” */}
 </div> )
 }
 
