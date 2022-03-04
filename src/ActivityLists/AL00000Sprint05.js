@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { estimated } from './AL00000Sprint01'
 
 import { startActivity, completeActivity, FinalProjectProposal } from './ProgrammingAssignments'
 
@@ -28,16 +29,28 @@ export const StandardActivitiesWithLinkAndSprint = (sprint, programmingAssignmen
 	
 	return ( <div>
 		<li>Focus on due dates by reviewing our {calendarLink(sprint)} and {scheduleLink(sprint)}</li>
-		<li><em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, Reflection {sprint}, and Lab Demo</em></li>
+		<li><em>Review sprint {sprint} assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em></li>
 		{checkExcludingPreviousSprintReviewTopics(excludePreviousTopics)}
 		<li>Start working on {programmingAssignmentLink}</li>
 	</div> )
 }
 
+export const StandardActivitiesClosingWithLinkAndSprint = (sprint, programmingAssignmentLink, programmingAssignmentEstimate) => { 
+	return ( <div>
+	<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+		<li><em>Submit sprint {sprint} assignments including Discussion, Quiz, Lab, and Reflection</em></li>
+	</div> ) 
+}
 
+export const Closing = () => { 
+	return ( <div>
+		<p>Remember to periodically check for new {programmingTogether()} tutorials. Also, take a minute to consider if 
+		you are you getting what you hoped to get out of this course. If not, let’s sit down and talk for a few minutes 
+		to see if we can make the course something special for you.</p> 
+	</div> ) 
+}
 
-
-
+// Depreciated **********
 export const StandardActivities = (programmingAssignment, playlist, sprint) => {
 	let scheduleLink = '/schedule/'+sprint
 	let calendarLink = '/calendar/'+sprint
@@ -59,10 +72,3 @@ export const StandardActivitiesClosing = (programmingAssignment, sprint) => {
 	</div> ) 
 }
 
-export const Closing = () => { 
-	return ( <div>
-		<p>Remember to periodically check for new {programmingTogether()} tutorials. Also, take a minute to consider if 
-		you are you getting what you hoped to get out of this course. If not, let’s sit down and talk for a few minutes 
-		to see if we can make the course something special for you.</p> 
-	</div> ) 
-}

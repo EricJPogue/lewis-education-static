@@ -1,5 +1,8 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { makeInternalURL } from './ActivityRouter'
+
+import { agileAlliance, agileAllianceAgile101, backlogGrooming, epic, iNVEST, productBacklog, scrum, userStory, userStoryTemplate } from '../Links';
 
 import { finalProjectProposalLink /* FinalProjectProposalNavLink */ } from './FinalProjectProposal';
 
@@ -101,16 +104,19 @@ are <em>greater or equal in complexity</em> than features we delivered in previo
 </div> )
 }
 
-export const FinalProjectSprint5 = () => {
-	return (
-	
-<div>
+const FINAL_PROJECT_SPRINT_5_NAME = 'Final Project Sprint 5'
+export const FINAL_PROJECT_SPRINT_5_ROUTE = 'final-project-sprint-5'
+export const finalProjectSprint5Link = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_SPRINT_5_ROUTE)}>{FINAL_PROJECT_SPRINT_5_NAME}</NavLink>)}
+export const finalProjectSprint5 = () => { 
+	return ( <div>
+
 <br />
-<h4>Final Project Sprint 5</h4>
-<h5>Summary: In addition to creating a final project proposal, we are going to deliver something.</h5>
+<h4>{FINAL_PROJECT_SPRINT_5_NAME}</h4>
+<h5>Summary: In addition to creating a final project proposal, we are going to utilize our technical capabilities and 
+process knowledge to deliver something to a production environment.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
-	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
+	<li>{finalProjectProposalLink()}</li>
 </ul>
 
 <p>In this activity you will start your final project. Build something. Anything that makes you feel good and shows 
@@ -122,7 +128,10 @@ test, and production environments?</p>
 <ol>
 	<li>Successfully deploying your product to a local development and test environment to you personal computer</li>
 	<li>Successfully deploying your product to hosted test and production environments</li>
-	<li>Making the source code available for review</li>
+	<li>Review {scrum()} while focusing on Events, Artifacts, and Rolls</li>
+	<li>Review {agileAllianceAgile101()} from {agileAlliance()}</li>
+	<li>Understand and consistently utilize {userStory()}, {userStoryTemplate()}, {epic()}, {productBacklog()}, {backlogGrooming()} and {iNVEST()}</li>
+	<li>Complete {backlogGrooming()} to create and update groom your {productBacklog()} while creating appropriate <em>artifacts</em></li>
 </ol>
 
 </div> )

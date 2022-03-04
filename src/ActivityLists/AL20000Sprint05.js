@@ -1,14 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { estimated } from './AL00000Sprint01'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
-import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosing, Closing  } from './AL00000Sprint05'
-
-import { turtledrawLink } from '../Activities/PythonTurtleDraw'
-import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
+import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing  } from './AL00000Sprint05'
 
 import { oreillyPlaylistICS, introducingPythonCodeExamples, programmingTogether, PythonW3C } from '../Links'
-import { TurtleDraw } from './ProgrammingAssignments'
+import { turtledrawLink } from '../Activities/PythonTurtleDraw'
+import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 
 export const al20000Sprint05 = () => {
 	let sprint = 5
@@ -34,23 +33,22 @@ This week we switch gears and move into graphical drawing using Python and the T
 <ol>
 	{StandardActivitiesWithLinkAndSprint(sprint, turtledrawLink(), oreillyPlaylistICS())}
 	<li>Start working on {finalProjectProposalLink()}</li>
-
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Networks and review our associated <NavLink to='/activity-dale/15'>lecture</NavLink></li>
 	<li>Complete {programmingTogether()} with TurtleDrawLite Parts 1 &amp; 2</li>
-	<li>Scan the {PythonW3C()} from W3C</li>
 
 	{InitialPost()}	
+	<li>Scan the {PythonW3C()} from W3C</li>
 	<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 7 through 9 and review the associated {introducingPythonCodeExamples()}</li>
 	<li>Complete {programmingTogether()} with TurtleDrawLite Part 3</li>
-
-	{/* BugBug: Start here to replace closing!!! And then verify associated sprint 5 assignments. */}
-
-	{StandardActivitiesClosing(TurtleDraw)}
+	<li>Complete {finalProjectProposalLink()}{estimated('2 hours')}</li>
+	{StandardActivitiesClosingWithLinkAndSprint(sprint, turtledrawLink(), '8 hours')}
 </ol>
 {Closing()}
 
 </div> )
 }
+
+// Status: Signed off SP22.
 
 // Todo: Remove the programming together tutorials from the activity list to the Turtledraw activity itself, and then 
 // remove the tutorials from the programming together.  

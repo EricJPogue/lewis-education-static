@@ -1,13 +1,15 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { externalLink } from '../Links';
-import { makeInternalURL } from './ActivityRouter';
-import { aidanLink } from './Aidan';
-import { arduinoDroneLink } from './ArduinoDrone';
-import { deliveryDroneLink } from './DeliveryDrone';
-import { pitHubLink } from './PitHub';
-import { quizMasterMERNLink } from './QuizMasterMERN';
-import { seatSelectorMERNLink } from './SeatSelectorMERN';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+import { makeInternalURL } from './ActivityRouter'
+import { externalLink, agileAlliance, scrum, agileAllianceAgile101, productBacklog, sprintPlanning, sprintBacklog, userStory, userStoryTemplate, iNVEST, done } from '../Links'
+
+import { aidanLink } from './Aidan'
+import { arduinoDroneLink } from './ArduinoDrone'
+import { deliveryDroneLink } from './DeliveryDrone'
+import { pitHubLink } from './PitHub'
+import { quizMasterMERNLink } from './QuizMasterMERN'
+import { seatSelectorMERNLink } from './SeatSelectorMERN'
 
 const name1 = 'Class Product Sprint 1'
 export const CLASS_PRODUCT_SPRINT_1_ROUTE = 'class-product-sprint-1'
@@ -69,7 +71,7 @@ your class product:</p>
 
 const markdownOnGitHub = () => { return externalLink('Markdown', 'https://docs.github.com/en/github/writing-on-github')}
 const minimumViableProduct = () => { return externalLink('Minimum Viable Product', 'https://www.agilealliance.org/glossary/mvp/')}
-const agileAlliance = () => { return externalLink('Agile Alliance', 'https://www.agilealliance.org/')}
+
 
 const name2 = 'Class Product Sprint 2'
 export const CLASS_PRODUCT_SPRINT_2_ROUTE = 'class-product-sprint-2'
@@ -126,16 +128,6 @@ a shared MVP view that you will publish as a team in your team’s GitHub reposi
 
 	</div> )
 }
-
-const scrum = () => { return externalLink('Scrum', 'https://www.agilealliance.org/glossary/scrum')}
-const agileAllianceAgile101 = () => { return externalLink('Agile 101', 'https://www.agilealliance.org/agile101') }
-const productBacklog = () => { return externalLink('Product Backlog', 'https://www.agilealliance.org/glossary/backlog' )}
-const sprintPlanning = () => { return externalLink('Sprint Planning', 'https://www.agilealliance.org/glossary/sprint-planning')}
-const sprintBacklog = () => { return externalLink('Sprint Backlog', 'https://www.agilealliance.org/glossary/sprint-backlog')}
-const userStory = () => { return externalLink('User Story', 'https://www.agilealliance.org/glossary/user-stories')}
-const userStoryTemplate = () => { return externalLink('User Story Template', 'https://www.agilealliance.org/glossary/user-story-template/')}
-const iNVEST = () => { return externalLink('INVEST', 'https://www.agilealliance.org/glossary/invest' )}
-const done = () => { return externalLink('Done', 'https://www.agilealliance.org/glossary/definition-of-done')}
 
 const name3 = 'Class Product Sprint 3'
 export const CLASS_PRODUCT_SPRINT_3_ROUTE = 'class-product-sprint-3'

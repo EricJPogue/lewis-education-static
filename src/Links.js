@@ -77,8 +77,6 @@ export const JSONHostingExample = () => { return externalLink('JSON Hosting Exam
 export const JSONHostingWebConfigExample = () => { return externalLink('web.config', 'https://github.com/EricJPogue/cpsc-example-code/blob/main/web/hosting-json/web.config')}
 export const JSONIndex = () => { return externalLink('index.json', 'https://mustang-index.azurewebsites.net/index.json')}
 
-export const NodeJSExpressAndHandlebars = () => { return externalLink('NodeJS, Express, and Handlebars by Daniel Tujo', 'https://www.youtube.com/watch?v=daaMlE2sfoM')}
-
 export const AutocompleteW3CSchools = () => { return externalLink('W3C Schools Autocomplete', 'https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_autocomplete')}
 export const AutocompleteJQuery = () => { return externalLink('jQuery Autocomplete', 'https://jqueryui.com/autocomplete/')}
 export const AutocompletePixabay = () => { return externalLink('Pixabay Autocomplete', 'https://github.com/Pixabay/JavaScript-autoComplete/')}
@@ -109,6 +107,21 @@ export const gitCommands = () => { return internalLink('Git commands', '/activit
 
 export const jsonW3CTutorial = () => { return externalLink('JSON Tutorial', 'https://www.w3schools.com/js/js_json_intro.asp')}
 export const jsonArticle = () => { return externalLink('What is JSON? JavaScript Object Notation explained', 'https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html') }
+
+// Agile Alliance
+export const agileAlliance = () => { return externalLink('Agile Alliance', 'https://www.agilealliance.org/')}
+export const agileAllianceAgile101 = () => { return externalLink('Agile 101', 'https://www.agilealliance.org/agile101') }
+export const backlogGrooming = () => { return externalLink('Backlog Grooming', 'https://www.agilealliance.org/glossary/backlog-refinement/')}
+export const epic = () => { return externalLink('Epic', 'https://www.agilealliance.org/glossary/epic') }
+export const iNVEST = () => { return externalLink('INVEST', 'https://www.agilealliance.org/glossary/invest' )}
+export const productBacklog = () => { return externalLink('Product Backlog', 'https://www.agilealliance.org/glossary/backlog' )}
+export const scrum = () => { return externalLink('Scrum', 'https://www.agilealliance.org/glossary/scrum')}
+export const sprintBacklog = () => { return externalLink('Sprint Backlog', 'https://www.agilealliance.org/glossary/sprint-backlog')}
+export const sprintPlanning = () => { return externalLink('Sprint Planning', 'https://www.agilealliance.org/glossary/sprint-planning')}
+export const userStory = () => { return externalLink('User Story', 'https://www.agilealliance.org/glossary/user-stories')}
+export const userStoryTemplate = () => { return externalLink('User Story Template', 'https://www.agilealliance.org/glossary/user-story-template/')}
+
+export const done = () => { return externalLink('Done', 'https://www.agilealliance.org/glossary/definition-of-done')}
 
 export const externalLink = (displayName, url) => {
 	return (
