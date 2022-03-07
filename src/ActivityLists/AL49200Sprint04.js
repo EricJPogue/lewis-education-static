@@ -8,8 +8,9 @@ import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkA
 
 import { classProductSprint4Link } from '../Activities/ClassProduct'
 
+export const lectureRecordingPlaylist = () => { return externalLink('lecture', 'https://lewisu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=50ad011a-766e-43e7-8ec4-ae2301373d46')}
+
 export const al49200Sprint04 = () => {
-	const lectureRecordingPlaylist = () => { return externalLink('lecture', 'https://lewisu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=50ad011a-766e-43e7-8ec4-ae2301373d46')}
 	const sprint = 4
 	return ( <div>
 		
@@ -26,11 +27,11 @@ goal of delivering an MVP product by the end of sprint 4. Now we are here. What 
 potential customers? Maybe we were not able to commit to all the features of the MVP in our sprint 4 planning. That 
 happens. Stay focused on delivering something of value to production. Always remember that being “done” with a 
 something small and delivering it to production is <em>immensely</em> more valuable than being “almost done” with 
-great.</p>
+somethigng great.</p>
 
 {LearningObjectivesIntro()}
 <ul style={{listStyleType:'square'}}>
-	<li>Fully understand sprint planning while complete sprint {sprint} planning within the first two days of the sprint</li>
+	<li>Fully understand sprint planning while completing sprint {sprint} planning within the first two days of the sprint</li>
 	<li>Fully understand MVP while staying laser focused on implementing your MVP by the end of sprint {sprint}</li>
 	<li>Master ”done” and keep it in mind at all times while you are working on features</li>
 	<li>Master sprint reviews (demos) and sprint retrospectives as you complete them for sprint {sprint-1}</li>
