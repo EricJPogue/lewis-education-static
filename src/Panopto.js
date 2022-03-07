@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getCourseTitle, getSyllabusURL /* classSyllabusURL */ } from './data/ClientDataAPIs';
+import { getCourseTitle, getSyllabusURL } from './data/ClientDataAPIs';
 import { getClassIDfromURL } from './data/ClientDataAPIs'
 import { Blended, scrumIn7Min } from './Links'
 
@@ -26,36 +26,9 @@ export const welcome2022Spring = () => {
 		</div> )
 }
 
-/*
-export const welcome2021Fall = () => {
-	return ( <div>
-		<h4>{getCourseTitle()}</h4>
-		<h5>Welcome to Lewis University Fall 2021 Semester!</h5>
-		<p style={{marginTop:'20px'}}>Please take a few minutes to view your fall 2021 welcome message.</p>
-		<IFrameComponent iframe={panoptoWelcomeIFrameTag()} />
-		<br />
-		<p>Prior to our first class session, please also take a few minutes to gain a better understand of 
-		Blended Learning and Scrum by reviewing the following videos.</p>
-		<ul style={{listStyleType:'square'}}>
-			<li>{Blended()}</li>
-			<li>{scrumIn7Min()}</li> 
-		</ul>
-		Finally, you will want to take a look at our course <a href={getSyllabusURL()}>syllabus</a> and obtain the 
-		items identified in the “IV. Course Materials.”
-		</div> )
-}
-
-const panoptoWelcomeIFrameTag = () => {
-	// return "<iframe src='https://lewisu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=ea0cac63-6820-411f-b31a-acaf01489295&autoplay=true&offerviewer=false&showtitle=false&showbrand=false&start=0&interactivity=all' height='576' width='1024' style='border: 1px solid #464646;' allowfullscreen allow='autoplay'></iframe>"
-	return "<iframe src='https://lewisu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1da31c59-e009-446b-80d6-ad8a012fffde&autoplay=true&offerviewer=false&showtitle=false&showbrand=false&captions=false&interactivity=all' height='576' width='1024' style='border: 1px solid #464646;' allowfullscreen allow='autoplay'></iframe>"
-}
-*/
-
 const IFrameComponent = (props) =>{
 	return (<div dangerouslySetInnerHTML={{__html: props.iframe?props.iframe:""}} />);
 }
-
-
 
 // Programming together functions.
 const PanoptoIFrameComponent = (props) =>{
@@ -70,15 +43,19 @@ const embedCodePlaylist = (iD) => { return panoptoEmbedCodePrefixForPlaylist+iD+
 
 // Todo: These should be moved to ClientData and accessed through an API.
 const programmingTogether20000ID = '739ac123-56e2-4959-84f2-ad95013d3459'
+const programmingTogether24500ID = 'dc5406b0-66a0-45a6-93c3-ae5101092544'
 const programmingTogether24700ID = '88eb7868-6f43-4645-99ad-ad9501397cf7'
 const programmingTogether44000ID = '7623082b-65bf-485a-a10d-ad95013d47f4'
+const programmingTogether49200ID = '97acc02f-11c9-46ca-8993-ae4d00f84450'
 
 // BugBug: This should be based on the class number (i.e. 20000 or 44000) and not the full class ID.
 export const ProgrammingTogether = () => {
 	let classReference = getClassIDfromURL()
 	switch(classReference) {
 		case 'sp22-cpsc-20000-002': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
+		case 'sp22-cpsc-24500-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether24500ID)} /></div>)
 		case 'sp22-cpsc-44000-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether44000ID)} /></div>)
+		case 'sp22-cpsc-49200-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether49200ID)} /></div>)
 
 		case '20000-fall-2021-002': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
 		case '20000-fall-2021-003': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
