@@ -1,14 +1,17 @@
-
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter'
 
 import { JSONAndAJAXTutorial, JSONWebServicesTutorial, RandomStrings, JSONExamples, JSONHostingExample, JSONHostingWebConfigExample, JSONIndex } from '../Links'
 
-export const MustangVersion1 = () => {
-	return (
-	
-<div>
+const MUSTANG_NAME = 'Mustang'
+export const MUSTANG_ROUTE = 'mustang'
+export const mustangLink = () => {return (<NavLink to={makeInternalURL(MUSTANG_ROUTE)}>{MUSTANG_NAME}</NavLink>)}
+export const mustang = () => {
+	return ( <div>
+
 <br />
-<h4>Mustang version 1</h4>
+<h4>{MUSTANG_NAME}</h4>
 <h5>Summary: Mustang is a simple contact management application. In version 1 we will create the a basic web application
 that can access JSON based contact information that we are also creating.</h5>
 <h5>Prerequisites: Windows 10 or MacOS, VS Code, Chrome, HTML, CSS, JavaScript, and Azure</h5>
@@ -64,5 +67,4 @@ in Azure to host you personal information JSON files by:</p>
 </ol>
 
 </div> )
-
 }

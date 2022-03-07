@@ -2,12 +2,16 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
-import { FinalProjectsAndMoreResponsibility, StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint05'
+import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing  } from './AL00000Sprint05'
+
+import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
+import { mustangLink } from '../Activities/MustangVersion1';
 
 import { oreillyPlaylistWeb } from '../Links'
-import { MustangV1 } from './ProgrammingAssignments'
+import { estimated } from './AL00000Sprint01';
 
 export const al24700Sprint05 = () => {
+	const sprint = 5
 	return (
 
 <div>
@@ -30,17 +34,19 @@ writing Distributed applications using JavaScript, Ajax, and JSON.</p>
 complete. In Mustang version 1 we will be utilizing the Azure to host personal information JSON files that we can 
 utilize to create a simple distributed contact management web application.</p>
 
-{ActivitiesListIntro()}
+{ActivitiesListIntro(sprint)}
 <ol>
-	{StandardActivities(MustangV1, oreillyPlaylistWeb(), 5 )}
+	{StandardActivitiesWithLinkAndSprint(sprint, finalProjectProposalLink(), oreillyPlaylistWeb())}
+	<li>Start working on {mustangLink()}</li>
 
 	{/* Todo: Double-check and consider creating if there is a Mustang lite tutorial?*/}
 	<li>Read Sebesta chapter 10 and review our Ajax <NavLink to='/activity/sebesta-chapter-10'>lecture</NavLink></li>
 
-	{InitialPost()}	
+	{InitialPost(sprint)}	
 	<li>Read Sebesta chapter 13 and review our Database Access through the Web <NavLink to='/activity/sebesta-chapter-13'>lecture</NavLink></li>
 
-	{StandardActivitiesClosing(MustangV1)}
+	<li>Complete {finalProjectProposalLink()}{estimated('2 hours')}</li>
+	{StandardActivitiesClosingWithLinkAndSprint(sprint, mustangLink(), '8 hours' )}
 </ol>
 {Closing()}
 </div>

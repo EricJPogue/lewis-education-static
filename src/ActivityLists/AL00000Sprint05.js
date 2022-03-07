@@ -1,10 +1,6 @@
 
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import { estimated } from './AL00000Sprint01'
-
-import { startActivity, completeActivity, FinalProjectProposal } from './ProgrammingAssignments'
-
 import { programmingTogether, ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink } from '../Links'
 
 export const FinalProjectsAndMoreResponsibility = () => {
@@ -49,26 +45,3 @@ export const Closing = () => {
 		to see if we can make the course something special for you.</p> 
 	</div> ) 
 }
-
-// Depreciated **********
-export const StandardActivities = (programmingAssignment, playlist, sprint) => {
-	let scheduleLink = '/schedule/'+sprint
-	let calendarLink = '/calendar/'+sprint
-
-	return ( <div>
-		<li>Focus on due dates by reviewing our <NavLink to={calendarLink}>calendar</NavLink> and <NavLink to={scheduleLink}>schedule</NavLink></li>
-		<li><em>Review assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em></li>
-		<li>From previous sprints review {ExampleCode()}, <NavLink to='/activity/git-commands'>Git commands</NavLink>, <NavLink to='/activity/coding-standards'>coding standards</NavLink>, <NavLink to='/activity/study-table'>tutoring options</NavLink>, and {playlist}</li>
-		<li>{startActivity(programmingAssignment)}</li>
-		<li>{startActivity(FinalProjectProposal)}</li>
-	</div> )
-}
-
-export const StandardActivitiesClosing = (programmingAssignment, sprint) => { 
-	return ( <div>
-		<li>{completeActivity(FinalProjectProposal)}</li>
-		<li>{completeActivity(programmingAssignment)}</li>
-		<li><em>Submit Discussion, Quiz, Lab, and Reflection</em></li>
-	</div> ) 
-}
-

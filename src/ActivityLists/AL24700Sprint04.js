@@ -4,10 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint04'
 
-
 import { oreillyPlaylistWeb } from '../Links'
 import { MapManiaVersion2, complete, MapManiaLite } from './ProgrammingAssignments'
-
 
 export const al24700Sprint04 = () => {
 	return (

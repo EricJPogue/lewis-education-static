@@ -206,11 +206,13 @@ export const TurtleDraw = {
 	'estimate':'~8 hours'
 }
 
+/*
 export const MustangV1 = {
 	'name':'Mustang version 1',
 	'link':'/activity/mustang-v1',
 	'estimate':'~8 hours'
 }
+*/
 
 export const MustangV2 = {
 	'name':'Mustang version 2',
