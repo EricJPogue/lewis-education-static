@@ -1,13 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { makeInternalURL } from './ActivityRouter'
+import { externalLink } from '../Links'
 
 const SWISS_ARMY_KNIFE_NAME = 'SwissArmyKnife'
 export const SWISS_ARMY_KNIFE_ROUTE = 'swiss-army-knife-java'
 export const swissArmyKnifeLink = () => {return (<NavLink to={makeInternalURL(SWISS_ARMY_KNIFE_ROUTE)}>{SWISS_ARMY_KNIFE_NAME}</NavLink>)}
 export const swissArmyKnife  = () => { return SwissArmyKnife(SwissArmyKnifeJavaProperties) }
 
-// export const SwissArmyKnifeJava  = () => { return SwissArmyKnife(SwissArmyKnifeJavaProperties) }
 export const SwissArmyKnifeJavaV2  = () => { return SwissArmyKnifeV2(SwissArmyKnifeJavaV2Properties) }
 
 const SwissArmyKnifeJavaProperties = {
@@ -29,6 +29,7 @@ const SwissArmyKnifeJavaV2Properties = {
 }
 
 const SwissArmyKnife = (appProps) => {
+	let indexFileURL = externalLink('https://thunderbird-index-sp22.azurewebsites.net/index-w0a6zk195d', 'https://thunderbird-index-sp22.azurewebsites.net/index-w0a6zk195d')
 	return (
 	
 <div>
@@ -76,7 +77,7 @@ from immobility.</p>
 <p>Enhance your application by implementing an HTTPRequestIndex feature that it:</p>
 <ol>
 	<li>Responds to the “-HttpRequestIndex [URL]” command-line parameter assuming case insensitivity</li>
-	<li>Opens the following JSON index file <a href='https://thunderbird-index.azurewebsites.net/w0a6zk195d.json' target='_blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>Opens the JSON index file which is available at {indexFileURL}</li>
 	<li>Parses the index file for the additional URLs</li>
 	<li>Retrieves the data from each additional URL</li>
 	<li>Prints the index data followed by each individual URL data elegantly to the command-line</li>

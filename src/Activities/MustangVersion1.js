@@ -9,7 +9,7 @@ export const MUSTANG_ROUTE = 'mustang'
 export const mustangLink = () => {return (<NavLink to={makeInternalURL(MUSTANG_ROUTE)}>{MUSTANG_NAME}</NavLink>)}
 export const mustang = () => {
 	return ( <div>
-
+		
 <br />
 <h4>{MUSTANG_NAME}</h4>
 <h5>Summary: Mustang is a simple contact management application. In version 1 we will create the a basic web application
