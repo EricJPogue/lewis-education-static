@@ -5,17 +5,20 @@ import { Route, HashRouter } from 'react-router-dom';
 import { HeaderNavigation } from './HeaderNavigation'
 
 import { Home } from './Home'
-
 import { Welcome } from './Welcome'
 import { Sprint } from './Sprint'
-
 import { SprintCalendar } from './SprintCalendar'
 import { SprintClassActivities } from './SprintSchedule'
-
 import { UniversityResources } from './Info/UniversityResources'
 import { InfoEricPogue } from './Info/InfoEricPogue'
 import { Credits } from './Info/Credits'
 import { Version } from './Info/Version'
+import { StudyTable } from './Activities/StudyTable'
+import { Slide } from './Slides/Slide'
+
+import { Breakout } from './Slides/Breakout'
+
+import { Test } from './Test'
 
 import { Activity } from './Activity'
 import { ActivityConfig } from './ActivityConfig'
@@ -23,11 +26,7 @@ import { ActivityOOP } from './ActivityOOP'
 import { ActivityWeb } from './ActivityWeb'
 import { ActivityDale } from './ActivityDale'
 import { ActivityArchitecture } from './ActivityArchitecture'
-import { StudyTable } from './Activities/StudyTable'
 
-import { Slide } from './Slide';
-
-import { Test } from './Test'
 
 class Main extends Component {
 	render() {
@@ -38,10 +37,8 @@ class Main extends Component {
 					<div className='Main'>
 						<Route exact path='/' component={Home}/>
 						<Route exact path='/home' component={Home}/>
-
 						<Route path='/welcome' component={Welcome}/>
 						<Route path='/sprint/:reference' component={Sprint}/>
-
 						<Route path='/calendar/:reference' component={SprintCalendar}/>
 						<Route path='/schedule/:reference' component={SprintClassActivities}/>
 
@@ -50,6 +47,11 @@ class Main extends Component {
 						<Route path='/getting-help' component={UniversityResources}/>
 						<Route path='/study-table' component={StudyTable}/>
 						<Route path='/version' component={Version}/>
+						<Route path={'/slide/:reference'} component={Slide}/>
+
+						<Route path={'/breakout/:reference'} component={Breakout}/>
+
+						<Route path={'/test/:id'} component={Test}/>
 
 						<Route path={'/activity/:reference'} component={Activity}/>
 						<Route path={'/activity-config/:reference'} component={ActivityConfig}/>
@@ -57,10 +59,6 @@ class Main extends Component {
 						<Route path={'/activity-web/:reference'} component={ActivityWeb}/>
 						<Route path={'/activity-dale/:reference'} component={ActivityDale}/>
 						<Route path={'/activity-architecture/:reference'} component={ActivityArchitecture}/>
-
-						<Route path={'/slide/:reference'} component={Slide}/>			
-
-						<Route path={'/test/:id'} component={Test}/>
 					</div>
 				</HashRouter>
 			</div>

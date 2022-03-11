@@ -1,11 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import { makeSlideInternalURL } from './SlideRouter';
+import { makeSlideInternalURL } from './SlideRouter'
 import { INSTRUCTOR_CHECKLIST_ROUTE } from './InstructorChecklist'
-import { wireless, blackboard } from '../Links';
+import { wireless, blackboard } from '../Links'
 
-import LewisUniversityLogo from './LewisUniversityLogo.png';
+import LewisUniversityLogo from './LewisUniversityLogo.png'
 
 const NAME = 'Preflight Checklist'
 export const PREFLIGHT_CHECKLIST_ROUTE = 'preflight-checklist'

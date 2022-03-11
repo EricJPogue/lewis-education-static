@@ -1,5 +1,5 @@
 import React from 'react'
-import { routeSlide } from './Slides/SlideRouter'
+import { routeSlide } from './SlideRouter'
 
 export class Slide extends React.Component {
 	render() { return ( <div>
