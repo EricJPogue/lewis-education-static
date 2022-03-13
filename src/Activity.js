@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player'
 
 import { getCourseTitle } from './data/ClientDataAPIs';
 import { routeActivity } from './Activities/ActivityRouter';
-import { routeSlide } from './Slides/SlideRouter'
+// import { routeSlide } from './Slides/SlideRouter'
 
 import { SeatSelector } from './Activities/SeatSelector'
 import { StudyTable } from './Activities/StudyTable'
@@ -80,8 +80,8 @@ class Activity extends Component {
 		let routeActivityResponse = routeActivity(activityReference)
 		if (routeActivityResponse != null) return routeActivityResponse
 
-		let routeSlideResponse = routeSlide(activityReference)
-		if (routeSlideResponse != null) return routeSlideResponse
+//		let routeSlideResponse = routeSlide(activityReference)
+//		if (routeSlideResponse != null) return routeSlideResponse
 
 		switch(activityReference) {
 			case 'seat-selector': return SeatSelector()

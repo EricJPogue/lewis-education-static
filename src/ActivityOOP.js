@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { getCourseTitle } from './data/ClientDataAPIs';
 
 import { baseLink, videoLink } from './Activity'
-import { designPrinciplesLink } from './Slides/DesignPrinciples';
+import { designPrinciplesLink } from './Slides/Breakout';
 
 const oopLink = (fileName) => {
 	return baseLink()+'object-oriented-programming/'+fileName
