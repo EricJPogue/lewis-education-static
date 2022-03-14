@@ -12,6 +12,9 @@ export class Slide extends React.Component {
 			case PREFLIGHT_CHECKLIST_ROUTE: return preflightChecklist()
 			case INSTRUCTOR_CHECKLIST_ROUTE: return instructorChecklist()
 			case CURRENT_SPRINT_ACTIVITY_LIST_ROUTE: return currentSprintActivityList()
+			case AGENDA_SPRINT_PLANNING_ROUTE: return agendaSprintPlanning(getCurrentSprintBase1())
+			case MWF_SESSION_1_PREWORK_ROUTE: return mwfSession1Prework()
+			case SPRINT_PLANNING: return sprintPlanning()
 			default: return null
 		}
 	}
@@ -47,7 +50,7 @@ const instructorChecklist = () => {
 	return ( <div>
 		{renderLogo()}
 		{renderHeaderAndBulletList(
-			'Instructor Checklist', CURRENT_SPRINT_ACTIVITY_LIST_ROUTE,
+			'Instructor Checklist', AGENDA_SPRINT_PLANNING_ROUTE,
 			'In preparation for class:', [
 			'Load polls as needed',
 			'Set camera, microphone, and speakers',
@@ -56,6 +59,51 @@ const instructorChecklist = () => {
 			'Open the Activity List, open the Agenda, and Start recording' ]
 		)}
 	</div> )
+}
+
+const AGENDA_SPRINT_PLANNING_ROUTE = 'agenda-sprint-planning'
+const agendaSprintPlanning = (sprint) => {
+	return ( <div>
+		{renderLogo()}
+		{renderHeaderAndOrderedList(
+			'Agenda:', MWF_SESSION_1_PREWORK_ROUTE, '', [
+			'Prework',
+			`Sprint ${sprint} Planning`,
+			`Breakout Session for ${sprint} Planning`,
+			'Review Demo Schedule for Wednesday',
+			'Prework for Next Class' ]
+		)}
+		<br /><br />
+		<p style={styleBodyText}>Discussion &amp; Questions welcome at any time but please be present with no phones or 
+		email during our time together</p>
+	</div> )
+
+} 
+
+const styleBodyText = { fontSize:20 }
+const MWF_SESSION_1_PREWORK_ROUTE = 'mwf-session-1-prework'
+const mwfSession1Prework = () => {
+	// Todo: Add be prepared for sprint demos on Wednesday to prework.
+	return ( <div>
+		{renderLogo()}
+		{renderHeader('Prework for Today', SPRINT_PLANNING )}
+		<p style={styleBodyText}><em>Everything is due the Sunday before we get back from Spring Break!</em></p>
+		<p style={styleBodyText}>Be prepared for sprint 5 planning</p>
+	</div>)
+}
+
+const SPRINT_PLANNING = 'sprint-planning' 
+const sprintPlanning = () => {
+	let sprint = getCurrentSprintBase1()
+	return ( <div>
+		<br />
+		{renderHeader(`Sprint ${sprint} Planning`, CURRENT_SPRINT_ACTIVITY_LIST_ROUTE)}
+		<p style={styleBodyText}>Very similar to previous sprints</p>
+		<br />
+		{renderBulletList(`New in sprint ${sprint}`, [
+			'We will be developing our Final Project Proposals with an eye toward sprints 7 and 8',
+			'More individual responsibility' ])}
+	</div>)
 }
 
 const CURRENT_SPRINT_ACTIVITY_LIST_ROUTE = 'current-sprint-activity-list'
@@ -100,6 +148,25 @@ const renderBulletList = (intro, list) => {
 		</ul>
 	</div>)
 }
+
+const renderHeaderAndOrderedList = (header, route, intro, list) => {
+	return ( <div>
+		{renderHeader(header, route)}
+		{renderOrderedList(intro, list)}
+	</div> )
+}
+
+const renderOrderedList = (intro, list) => {
+	// const squareType = { listStyleType:'square' }
+	return ( <div>
+		{renderListIntro(intro)}
+		<ol>
+			{renderList(list)}
+		</ol>
+	</div> )
+}
+
+
 
 const styleListIntro = { fontSize:20 }
 const renderListIntro = (intro) => { return ( <p style={styleListIntro}>{intro}</p> ) }
