@@ -1,4 +1,6 @@
 import React from 'react'
+import { getClassIDfromURL } from '../data/ClientDataAPIs'
+import { getCurrentSprintBase1 } from '../data/ClientDataAPIs';
 
 import LewisUniversityLogo from './LewisUniversityLogo.png';
 
@@ -9,6 +11,7 @@ export class Slide extends React.Component {
 		switch(route) {
 			case PREFLIGHT_CHECKLIST_ROUTE: return preflightChecklist()
 			case INSTRUCTOR_CHECKLIST_ROUTE: return instructorChecklist()
+			case CURRENT_SPRINT_ACTIVITY_LIST_ROUTE: return currentSprintActivityList()
 			default: return null
 		}
 	}
@@ -44,7 +47,7 @@ const instructorChecklist = () => {
 	return ( <div>
 		{renderLogo()}
 		{renderHeaderAndBulletList(
-			'Instructor Checklist', INSTRUCTOR_CHECKLIST_ROUTE,
+			'Instructor Checklist', CURRENT_SPRINT_ACTIVITY_LIST_ROUTE,
 			'In preparation for class:', [
 			'Load polls as needed',
 			'Set camera, microphone, and speakers',
@@ -53,6 +56,11 @@ const instructorChecklist = () => {
 			'Open the Activity List, open the Agenda, and Start recording' ]
 		)}
 	</div> )
+}
+
+const CURRENT_SPRINT_ACTIVITY_LIST_ROUTE = 'current-sprint-activity-list'
+const currentSprintActivityList = () => {
+	window.location.assign(`?cpsc=${getClassIDfromURL()}#/sprint/${getCurrentSprintBase1()}`);
 }
 
 const renderLogo = () => {

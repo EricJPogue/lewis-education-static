@@ -2,6 +2,8 @@ import { URLCLASSID, SCHEDULE_TTR, SCHEDULE_ONLINE, CURRENTCALENDARID } from './
 import { classList } from './ClientData'
 import { sprintCalendarSpring_2022_01_10_16, sprintCalendarFall_2021_08_30_16, sprintCalendarSpring_2021_01_18_16 } from './ClientData'
 
+import { pastDate } from '../SprintDates'
+
 // Exported APIs
 export const getCourseTitle = () => { 
 	return getClass().title
@@ -23,6 +25,20 @@ export const getCalendar = () => {
 		case '2021-01-18-16': return sprintCalendarSpring_2021_01_18_16
 		default: console.log('Error: Calendar not found.')
 	}
+}
+
+export const getCurrentSprintBase1 = () => { return getCurrentSprint() + 1}
+const getCurrentSprint = () => {
+	const maxSprint = 7
+	let calendar = getCalendar()
+	for (let sprint = 0; sprint < (maxSprint+1); sprint++) {
+		// If the start date is in the past and the end date is in the future, then today is in the current sprint.
+		if ((pastDate(calendar[sprint].start)) && (!pastDate(calendar[sprint].end))) {
+			return sprint
+		}
+	}
+
+	return maxSprint 
 }
 
 export const getIsScheduleTTr = () => {

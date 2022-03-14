@@ -4,7 +4,6 @@ export const SCHEDULE_MWF = 'MWF'
 export const SCHEDULE_TTR = 'TTh'
 export const SCHEDULE_ONLINE = 'Online'
 
-
 export const classList = [																											 
 	{ 'classID':'sp22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'1-1:50 PM', 'finalExam':'Wednesday, May 4 from 1:30 PM to 3:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-20000-002.pdf' },
 	{ 'classID':'sp22-cpsc-24500-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'2-2:50 PM', 'finalExam':'Monday, May 2 from 4 PM to 6 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
