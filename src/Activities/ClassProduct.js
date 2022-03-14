@@ -248,8 +248,7 @@ approximately {effort} hours to the activity.</p>
 	</div> )
 }
 
-// const name5Plus = 'Class Product Sprint 4'
-export const name5Plus = (sprint) => { return `class Product Sprint ${sprint}` }
+export const name5Plus = (sprint) => { return `Class Product Sprint ${sprint}` }
 export const CLASS_PRODUCT_SPRINT_5_ROUTE = 'class-product-sprint-5'
 export const classProductSprint5Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_5_ROUTE)}>{name5Plus(5)}</NavLink>)}
 export const classProductSprint5 = () => {
@@ -258,7 +257,7 @@ export const classProductSprint5 = () => {
 	return ( <div>
 		
 <h5>{name5Plus(5)}</h5>
-<p>Prerequisites: {classProductSprint3Link()} </p>
+<p>Prerequisites: {classProductSprint4Link()} </p>
 <p><em>Summary:</em> Stay focused on delivering your team’s MVP.</p>
 
 <p>In sprint {sprint} you and your team will continue to focus on implementing the most valuable features from your 

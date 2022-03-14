@@ -2,7 +2,7 @@ import React from 'react'
 import { oreillyPlaylistSC } from '../Links'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
-import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint04'
+import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint05'
 
 import { lectureRecordingPlaylist } from './AL49200Sprint04'
 
@@ -41,7 +41,7 @@ than being “almost done” with something great.</p>
 <ol>
 	{StandardActivitiesWithLinkAndSprint(sprint, classProductSprint5Link(), oreillyPlaylistSC(), true)}
 	<li>Review our sprint {sprint} planning {lectureRecordingPlaylist()}</li>
-	<li>Within {oreillyPlaylistSC()} review “Essential Scrum” and look for what elements your team can focus on improving this sprint</li>
+	<li>Within {oreillyPlaylistSC()} review “Essential Scrum” looking for topics that your team can focus on improving</li>
 
 	{InitialPost(sprint)}
 	{StandardActivitiesClosingWithLinkAndSprint(sprint, classProductSprint5Link(),'14 hours per team member')}
