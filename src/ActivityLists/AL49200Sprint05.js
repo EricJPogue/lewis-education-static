@@ -13,7 +13,7 @@ export const al49200Sprint05 = () => {
 	return ( <div>
 		
 <h5>Sprint {sprint}: Stay focused on delivering your minimum viable product (MVP)</h5>
-<p><em>Welcome to sprint 4.</em></p> 
+<p><em>Welcome to sprint {sprint}.</em></p> 
 <p>Now that we have:</p>
 <ul style={{listStyleType:'square'}}>
 	<li>Continued to refine and updated our minimum viable product (MVP)</li>
