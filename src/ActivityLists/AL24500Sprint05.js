@@ -42,8 +42,8 @@ making.</p>
 
 {ActivitiesListIntro(sprint)}
 <ol>
-	{StandardActivitiesWithLinkAndSprint(sprint, finalProjectProposalLink(), oreillyPlaylistOOP())}
-	<li>Start working on {swissArmyKnifeLink()}</li>
+	{StandardActivitiesWithLinkAndSprint(sprint, swissArmyKnifeLink(), oreillyPlaylistOOP())}
+	<li>Start working on {finalProjectProposalLink()}</li>
 	<li>Review {softwareTesting()} lecture</li>
 	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 11 on Networking and I/O and review associated {learningJavaExampleCode()}</li>
 	<li>Complete {htmlLink()} - Part 1</li>
