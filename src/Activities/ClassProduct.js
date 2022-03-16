@@ -252,7 +252,7 @@ export const name5Plus = (sprint) => { return `Class Product Sprint ${sprint}` }
 export const CLASS_PRODUCT_SPRINT_5_ROUTE = 'class-product-sprint-5'
 export const classProductSprint5Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_5_ROUTE)}>{name5Plus(5)}</NavLink>)}
 export const classProductSprint5 = () => {
-	const sprint = 4
+	const sprint = 5
 	const effort = 14
 	return ( <div>
 		

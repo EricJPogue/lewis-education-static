@@ -15,9 +15,8 @@ import { Credits } from './Info/Credits'
 import { Version } from './Info/Version'
 import { StudyTable } from './Activities/StudyTable'
 import { Slide } from './Slides/Slide'
-
+import { SlideDeck } from './Slides/SlideDeck';
 import { Breakout } from './Slides/Breakout'
-
 import { Test } from './Test'
 
 import { Activity } from './Activity'
@@ -26,7 +25,6 @@ import { ActivityOOP } from './ActivityOOP'
 import { ActivityWeb } from './ActivityWeb'
 import { ActivityDale } from './ActivityDale'
 import { ActivityArchitecture } from './ActivityArchitecture'
-
 
 class Main extends Component {
 	render() {
@@ -48,9 +46,9 @@ class Main extends Component {
 						<Route path='/study-table' component={StudyTable}/>
 						<Route path='/version' component={Version}/>
 						<Route path={'/slide/:reference'} component={Slide}/>
+						<Route path={'/slide-deck/:reference'} component={SlideDeck}/>
 
 						<Route path={'/breakout/:reference'} component={Breakout}/>
-
 						<Route path={'/test/:id'} component={Test}/>
 
 						<Route path={'/activity/:reference'} component={Activity}/>

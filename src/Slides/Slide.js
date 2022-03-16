@@ -7,7 +7,9 @@ import LewisUniversityLogo from './LewisUniversityLogo.png';
 const BASE_SLIDE_ROUTE = '/slide/'
 export class Slide extends React.Component {
 	renderSlide = () => {
-		const route = this.props.match.params.reference
+		console.log(this.params)
+		// const route = this.props.match.params.reference
+		const route = PREFLIGHT_CHECKLIST_ROUTE
 		switch(route) {
 			case PREFLIGHT_CHECKLIST_ROUTE: return preflightChecklist()
 			case INSTRUCTOR_CHECKLIST_ROUTE: return instructorChecklist()
@@ -23,7 +25,7 @@ export class Slide extends React.Component {
 }
 
 const PREFLIGHT_CHECKLIST_ROUTE = 'preflight-checklist'
-const preflightChecklist = () => {
+export const preflightChecklist = () => {
 	return ( <div>
 		{renderLogo()}
 		{renderHeaderAndBulletList(
@@ -165,8 +167,6 @@ const renderOrderedList = (intro, list) => {
 		</ol>
 	</div> )
 }
-
-
 
 const styleListIntro = { fontSize:20 }
 const renderListIntro = (intro) => { return ( <p style={styleListIntro}>{intro}</p> ) }
