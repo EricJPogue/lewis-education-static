@@ -7,15 +7,17 @@ import LewisUniversityLogo from './LewisUniversityLogo.png';
 const BASE_SLIDE_ROUTE = '/slide/'
 export class Slide extends React.Component {
 	renderSlide = () => {
-		console.log(this.params)
-		// const route = this.props.match.params.reference
-		const route = PREFLIGHT_CHECKLIST_ROUTE
+		console.log(this.props.match.params.reference)
+		const route = this.props.match.params.reference
+
 		switch(route) {
 			case PREFLIGHT_CHECKLIST_ROUTE: return preflightChecklist()
 			case INSTRUCTOR_CHECKLIST_ROUTE: return instructorChecklist()
 			case CURRENT_SPRINT_ACTIVITY_LIST_ROUTE: return currentSprintActivityList()
 			case AGENDA_SPRINT_PLANNING_ROUTE: return agendaSprintPlanning(getCurrentSprintBase1())
+			case AGENDA_SPRINT_REVIEW_ROUTE: return agendaSprintReview(getCurrentSprintBase1())
 			case MWF_SESSION_1_PREWORK_ROUTE: return mwfSession1Prework()
+			case MWF_SESSION_2_PREWORK_ROUTE: return mwfSession2Prework()
 			case SPRINT_PLANNING: return sprintPlanning()
 			default: return null
 		}
@@ -52,7 +54,7 @@ const instructorChecklist = () => {
 	return ( <div>
 		{renderLogo()}
 		{renderHeaderAndBulletList(
-			'Instructor Checklist', AGENDA_SPRINT_PLANNING_ROUTE,
+			'Instructor Checklist', AGENDA_SPRINT_REVIEW_ROUTE,
 			'In preparation for class:', [
 			'Load polls as needed',
 			'Set camera, microphone, and speakers',
@@ -61,6 +63,14 @@ const instructorChecklist = () => {
 			'Open the Activity List, open the Agenda, and Start recording' ]
 		)}
 	</div> )
+}
+
+
+const agendaFooter = () => {
+	return (
+		<p style={styleBodyText}>Discussion &amp; Questions welcome at any time but please be present with no phones or 
+		email during our time together</p>
+	)
 }
 
 const AGENDA_SPRINT_PLANNING_ROUTE = 'agenda-sprint-planning'
@@ -76,10 +86,26 @@ const agendaSprintPlanning = (sprint) => {
 			'Prework for Next Class' ]
 		)}
 		<br /><br />
-		<p style={styleBodyText}>Discussion &amp; Questions welcome at any time but please be present with no phones or 
-		email during our time together</p>
+		{agendaFooter()}
 	</div> )
+} 
 
+const AGENDA_SPRINT_REVIEW_ROUTE = 'agenda-sprint-review'
+const agendaSprintReview = (sprint) => {
+	
+	return ( <div>
+		{renderLogo()}
+		{renderHeaderAndOrderedList(
+			'Agenda', MWF_SESSION_2_PREWORK_ROUTE, 'Topics for today include:', [
+			'Prework',
+			`Sprint ${sprint} Demos`,
+			`Sprint ${sprint} Retrospective`,
+			`Breakout Session: Sprint ${sprint} Planning`,
+			'Prework for Next Class' ]
+		)}
+		<br /><br />
+		{agendaFooter()}
+	</div> )
 } 
 
 const styleBodyText = { fontSize:20 }
@@ -93,6 +119,18 @@ const mwfSession1Prework = () => {
 		<p style={styleBodyText}>Be prepared for sprint 5 planning</p>
 	</div>)
 }
+
+const MWF_SESSION_2_PREWORK_ROUTE = 'mwf-session-2-prework'
+const mwfSession2Prework = () => {
+	// Todo: Add be prepared for sprint demos on Wednesday to prework.
+	return ( <div>
+		{renderLogo()}
+		{renderHeader('Prework', SPRINT_PLANNING )}
+		<p style={styleBodyText}>Complete through activity 4</p>
+		<p style={styleBodyText}>Those scheduled to demo on Wednesday please be a couple of minutes early to class</p>
+	</div>)
+}
+
 
 const SPRINT_PLANNING = 'sprint-planning' 
 const sprintPlanning = () => {
