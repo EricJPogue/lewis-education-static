@@ -10,6 +10,8 @@ export class Slide extends React.Component {
 		console.log(this.props.match.params.reference)
 		const route = this.props.match.params.reference
 
+		console.log(DISCUSSION_SE_5_ROUTE)
+
 		switch(route) {
 			case PREFLIGHT_CHECKLIST_ROUTE: return preflightChecklist()
 			case INSTRUCTOR_CHECKLIST_ROUTE: return instructorChecklist()
@@ -19,6 +21,8 @@ export class Slide extends React.Component {
 			case MWF_SESSION_1_PREWORK_ROUTE: return mwfSession1Prework()
 			case MWF_SESSION_2_PREWORK_ROUTE: return mwfSession2Prework()
 			case SPRINT_PLANNING: return sprintPlanning()
+			case DISCUSSION_SE_5_ROUTE: return discussionSE5('5')
+			case DISCUSSION__SE_5_BREAKOUT_ROUTE: return discussionSE5Breakout('5')
 			default: return null
 		}
 	}
@@ -65,7 +69,6 @@ const instructorChecklist = () => {
 	</div> )
 }
 
-
 const agendaFooter = () => {
 	return (
 		<p style={styleBodyText}>Discussion &amp; Questions welcome at any time but please be present with no phones or 
@@ -89,6 +92,48 @@ const agendaSprintPlanning = (sprint) => {
 		{agendaFooter()}
 	</div> )
 } 
+
+const DISCUSSION__SE_5_BREAKOUT_ROUTE = 'discussion-se-5-breakout'
+const discussionSE5Breakout = (sprint) => {
+	return ( <div>
+		{renderHeader(`Breakout: Discussion ${sprint}`, null)}
+		{discussionFinalProjects()}
+
+		<br /><br />
+		<h3>Required Notes Format:</h3>
+		Discussion: {sprint}<br />
+		Team: FluffyPenguins<br />
+		Participants: Eric Pogue (note taker), Chanda Rubin (presenter), and Ted Danson
+		{renderOrderedList('Key discussion points:', ['Discussion point 1', 'Discussion point 2', 'Discussion point 3'])}
+	</div>)
+}
+
+const DISCUSSION_SE_5_ROUTE = 'discussion-se-5'
+const discussionSE5 = (sprint) => {
+	return ( <div>
+		{renderHeader(`Discussion ${sprint}`, null)}
+		{discussionFinalProjects()}
+		{discussionFooter()}
+	</div> )
+}
+
+const discussionFinalProjects = () => {
+	return ( <div>
+	{renderOrderedList(`In order to assist us in developing our Final Project proposals we will utilize this 
+	discussion to share our Final Project ideas. In your initial discussion post provide a summary of the 
+	application that you will be developing including:`, [
+	'The team working on the project (this may be just you)', 
+	'The initial application name (in CamelCase with no spaces)',
+	'At least three of the key features that you envision developing in the application'])}
+	</div>)
+}
+
+const discussionFooter = () => {
+	return (
+		<p style={styleBodyText}><br /><i>Your initial post is due by the end of the day on the first Sunday of the sprint and your response to at 
+			least two of classmates' posts is due be the end of the sprint.</i></p>
+	)
+}
 
 const AGENDA_SPRINT_REVIEW_ROUTE = 'agenda-sprint-review'
 const agendaSprintReview = (sprint) => {
