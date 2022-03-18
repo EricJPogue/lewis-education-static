@@ -46,7 +46,7 @@ class HeaderNavigation extends Component {
 							<NavDropdown title='Help' id='basic-nav-dropdown'>
 								<NavDropdown.Item href='#info'>Your Instructor</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item href='#/slide/preflight-checklist'>Preflight Checklist</NavDropdown.Item>
+								<NavDropdown.Item href='#/slide-deck/checklist'>Preflight Checklist</NavDropdown.Item>
 								<NavDropdown.Divider />
 								<NavDropdown.Item href='#activity/study-table'>Study Table Tutoring</NavDropdown.Item>
 								<NavDropdown.Item href='#getting-help'>University Resources</NavDropdown.Item>

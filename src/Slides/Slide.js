@@ -1,8 +1,8 @@
 import React from 'react'
 import { getClassIDfromURL } from '../data/ClientDataAPIs'
-import { getCurrentSprintBase1 } from '../data/ClientDataAPIs';
+import { getCurrentSprintBase1 } from '../data/ClientDataAPIs'
 
-import LewisUniversityLogo from './LewisUniversityLogo.png';
+import LewisUniversityLogo from './LewisUniversityLogo.png'
 
 const BASE_SLIDE_ROUTE = '/slide/'
 export class Slide extends React.Component {
