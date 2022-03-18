@@ -7,10 +7,8 @@ import LewisUniversityLogo from './LewisUniversityLogo.png';
 const BASE_SLIDE_ROUTE = '/slide/'
 export class Slide extends React.Component {
 	renderSlide = () => {
-		console.log(this.props.match.params.reference)
+		// console.log(this.props.match.params.reference)
 		const route = this.props.match.params.reference
-
-		console.log(DISCUSSION_SE_5_ROUTE)
 
 		switch(route) {
 			case PREFLIGHT_CHECKLIST_ROUTE: return preflightChecklist()
@@ -21,8 +19,8 @@ export class Slide extends React.Component {
 			case MWF_SESSION_1_PREWORK_ROUTE: return mwfSession1Prework()
 			case MWF_SESSION_2_PREWORK_ROUTE: return mwfSession2Prework()
 			case SPRINT_PLANNING: return sprintPlanning()
-			case DISCUSSION_SE_5_ROUTE: return discussionSE5('5')
-			case DISCUSSION__SE_5_BREAKOUT_ROUTE: return discussionSE5Breakout('5')
+			case DISCUSSION_5_ROUTE: return discussionSE5('5')
+			case DISCUSSION_5_BREAKOUT_ROUTE: return discussionSE5Breakout('5')
 			default: return null
 		}
 	}
@@ -54,7 +52,7 @@ export const preflightChecklist = () => {
 }
 
 const INSTRUCTOR_CHECKLIST_ROUTE = 'instructor-checklist'
-const instructorChecklist = () => {
+export const instructorChecklist = () => {
 	return ( <div>
 		{renderLogo()}
 		{renderHeaderAndBulletList(
@@ -77,7 +75,7 @@ const agendaFooter = () => {
 }
 
 const AGENDA_SPRINT_PLANNING_ROUTE = 'agenda-sprint-planning'
-const agendaSprintPlanning = (sprint) => {
+export const agendaSprintPlanning = (sprint) => {
 	return ( <div>
 		{renderLogo()}
 		{renderHeaderAndOrderedList(
@@ -93,22 +91,16 @@ const agendaSprintPlanning = (sprint) => {
 	</div> )
 } 
 
-const DISCUSSION__SE_5_BREAKOUT_ROUTE = 'discussion-se-5-breakout'
+const DISCUSSION_5_BREAKOUT_ROUTE = 'discussion-se-breakout'
 const discussionSE5Breakout = (sprint) => {
 	return ( <div>
 		{renderHeader(`Breakout: Discussion ${sprint}`, null)}
-		{discussionFinalProjects()}
-
-		<br /><br />
-		<h3>Required Notes Format:</h3>
-		Discussion: {sprint}<br />
-		Team: FluffyPenguins<br />
-		Participants: Eric Pogue (note taker), Chanda Rubin (presenter), and Ted Danson
-		{renderOrderedList('Key discussion points:', ['Discussion point 1', 'Discussion point 2', 'Discussion point 3'])}
+		{discussionFinalProjects()}<br /><br /><br />
+		{breakoutNoteExample(sprint)}
 	</div>)
 }
 
-const DISCUSSION_SE_5_ROUTE = 'discussion-se-5'
+const DISCUSSION_5_ROUTE = 'discussion-5'
 const discussionSE5 = (sprint) => {
 	return ( <div>
 		{renderHeader(`Discussion ${sprint}`, null)}
@@ -125,6 +117,18 @@ const discussionFinalProjects = () => {
 	'The team working on the project (this may be just you)', 
 	'The initial application name (in CamelCase with no spaces)',
 	'At least three of the key features that you envision developing in the application'])}
+	</div>)
+}
+
+const breakoutNoteExample = (sprint) => {
+	return ( <div>
+		<div style={styleBodyText}>
+		<em><u>Required Notes Format:</u></em><br />
+		Team: FluffyPenguins<br />
+		Discussion: {sprint}<br />
+		Participants: Eric Pogue (note taker), Chanda Rubin (presenter), and Ted Danson
+		</div>
+		{renderOrderedList('Key discussion points:', ['Discussion point 1', 'Discussion point 2', 'Discussion point 3'])}
 	</div>)
 }
 
@@ -242,7 +246,6 @@ const renderHeaderAndOrderedList = (header, route, intro, list) => {
 }
 
 const renderOrderedList = (intro, list) => {
-	// const squareType = { listStyleType:'square' }
 	return ( <div>
 		{renderListIntro(intro)}
 		<ol>

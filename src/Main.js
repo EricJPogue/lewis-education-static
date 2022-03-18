@@ -46,7 +46,7 @@ class Main extends Component {
 						<Route path='/study-table' component={StudyTable}/>
 						<Route path='/version' component={Version}/>
 						<Route path={'/slide/:reference'} component={Slide}/>
-						<Route path={'/slide-deck/:reference'} component={SlideDeck}/>
+						<Route path={'/slide-deck/:route'} component={SlideDeck}/>
 
 						<Route path={'/breakout/:reference'} component={Breakout}/>
 						<Route path={'/test/:id'} component={Test}/>
