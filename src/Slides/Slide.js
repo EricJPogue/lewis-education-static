@@ -91,6 +91,8 @@ export const agendaSprintPlanning = (sprint) => {
 	</div> )
 } 
 
+
+
 const DISCUSSION_5_BREAKOUT_ROUTE = 'discussion-se-breakout'
 const discussionSE5Breakout = (sprint) => {
 	return ( <div>
@@ -180,7 +182,6 @@ const mwfSession2Prework = () => {
 	</div>)
 }
 
-
 const SPRINT_PLANNING = 'sprint-planning' 
 const sprintPlanning = () => {
 	let sprint = getCurrentSprintBase1()
@@ -219,6 +220,16 @@ const headerClicked = (input) => {
 const renderHeader = (slideTitle, clickRoute) => {
 	const title = { fontSize:40	}
 	return ( <h1 style={title} onClick={() => headerClicked(clickRoute)}>{slideTitle}</h1> ) 
+}
+
+const renderTopicHeader = (topic) => {
+	const title = { textAlign:"center", fontSize:40	}
+	return ( <div><br /><br /><br /><br /><br /><br /><h1 style={title}>{topic}</h1> </div>)
+}
+
+export const endOfSession = () => {
+	const title = { textAlign:"center", fontSize:40	}
+	return ( <div style={{backgroundColor: '#d3d3d3'}} ><br /><br /><br /><br /><br /><br /><br /><br /><br /><h1 style={title}>End of Session</h1> <br /><br /><br /><br /><br /><br /><br /><br /><br /></div>)
 }
 
 const renderHeaderAndBulletList = (header, route, intro, list) => {
@@ -260,3 +271,56 @@ const renderListIntro = (intro) => { return ( <p style={styleListIntro}>{intro}<
 const styleListItem = { fontSize:20 }
 const renderListItem = (item) => { return (<li key={item} style={styleListItem}>{item}</li>) }
 const renderList = (itemList) => { return (<div>{itemList.map(renderListItem)}</div>) }
+
+// Slides for MWF Sprint 5 Session 4
+const agendaMWF5_4 = (sprint, breakoutSessionTopic) => {
+	return ( <div>
+		{renderLogo()}
+		{renderHeaderAndOrderedList(
+			'Agenda:', '', '', [
+			'Prework',
+			'Important Upcoming Dates',
+			`Breakout session on ${breakoutSessionTopic}`,
+			'Prework for Next Class',
+			'Programming Together' ]
+		)}
+		<br /><br />
+		{agendaFooter()}
+	</div>)
+}
+
+// Slides for MWF Sprint 5 Session 4 ICS
+export const agendaMWF5_4_ICS = (sprint) => {
+	return agendaMWF5_4(sprint, '“Computer Science Illuminate” Networks')
+}
+
+export const preworkMWF5_4ISC = () => {
+	return ( <div>
+		{renderHeader('Prework')}
+		<p>Complete through activity 9 prior to next class</p>
+		<p>Be prepared to discuss “Computer Science Illuminated” Networks</p>
+	</div> )
+}
+
+export const breakoutMWF5_4ICS = () => { return renderTopicHeader('Breakout Session on “Computer Science Illuminate” Networks') }
+export const MWF5_4_UpcomingDates = () => { return renderTopicHeader('Important Upcoming Dates') }
+
+export const MWF5_5ISCPrework = () => {
+	return ( <div>
+		{renderHeader('Prework')}
+		<p>Complete through activity 10 prior to next class</p>
+		<p>Be prepared for Quiz 5</p>
+	</div> )
+}
+
+// MWF Sprint 5 Session 4 Object-Oriented Programming
+/*
+const MWF_5_4_OOP_ROUTE = 'MWF_5_4_OOP'
+const mwf_5_4_OOP = () => {
+	return {
+		sprint: 5,
+		startingSlide: 2,
+		slideFunctionList: [ preflightChecklist, instructorChecklist, agendaMWF5_4_ICS, preworkMWF5_4ISC, MWF5_4_UpcomingDates, breakoutMWF5_4ICS, MWF5_5ISCPrework, endOfSession ]
+	}
+}
+*/

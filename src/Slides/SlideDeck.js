@@ -1,9 +1,10 @@
 import React from 'react'
 import { getCurrentSprintBase1 } from '../data/ClientDataAPIs'
-import { preflightChecklist, instructorChecklist, agendaSprintPlanning } from './Slide'
+import { preflightChecklist, instructorChecklist, agendaSprintPlanning, agendaMWF5_4_ICS, preworkMWF5_4ISC, breakoutMWF5_4ICS, MWF5_4_UpcomingDates,MWF5_5ISCPrework, endOfSession } from './Slide'
 
 export class SlideDeck extends React.Component {
 	deck = null
+	startingSlide = 0
 	sprint = getCurrentSprintBase1()
 
 	constructor(props) {
@@ -12,6 +13,7 @@ export class SlideDeck extends React.Component {
 		 switch(this.props.match.params.route) {
 			case CHECKLIST_ROUTE: this.deck = checklist(); break
 			case TODAY_ROUTE: this.deck = today(); break
+			case MWF_5_4_ROUTE: this.deck = mwf_5_4_ICS(); break
 			default: this.deck = checklist()
 		}
 
@@ -19,8 +21,12 @@ export class SlideDeck extends React.Component {
 			this.sprint = this.deck.sprint
 		}
 
+		if (this.deck.startingSlide !== undefined) {
+			this.startingSlide = this.deck.startingSlide
+		}
+
 		this.state = { 
-			currentSlide: 0
+			currentSlide: this.startingSlide
 		}
 	 }
 
@@ -58,5 +64,14 @@ const checklist = () => {
 	return {
 		sprint: 5,
 		slideFunctionList: [ preflightChecklist, instructorChecklist ]
+	}
+}
+
+const MWF_5_4_ROUTE = 'MWF_5_4_ICS'
+const mwf_5_4_ICS = () => {
+	return {
+		sprint: 5,
+		startingSlide: 2,
+		slideFunctionList: [ preflightChecklist, instructorChecklist, agendaMWF5_4_ICS, preworkMWF5_4ISC, MWF5_4_UpcomingDates, breakoutMWF5_4ICS, MWF5_5ISCPrework, endOfSession ]
 	}
 }

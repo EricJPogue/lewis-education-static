@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const daleDiscussion3Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion3) }
 export const daleDiscussion4Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion4) }
 export const daleDiscussion13Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion13) }
+export const daleDiscussion15Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion15) }
 export const designPrinciplesLink = () => { return makeBreakoutLink(breakoutSlides.designPrinciples) }
 
 const BASE_BREAKOUT_ROUTE = '/breakout/'
@@ -56,6 +57,17 @@ const breakoutSlides = {
 			'Robotics'
 		]
 	},
+	'daleDiscussion15': {
+		'route':'dale-discussion-15',
+		'title':'Networks',
+		'topics': [
+			'Network Types, Internet Connections, and Packet Switching',
+			'Open Systems, Network Protocols, TCP/IP, and High-Level Protocols',
+			'The Web, HTTP, Https, Encryption, and Domain Name System (DNS)',
+			'Cloud Computing and Web servers',
+			'Blockchain, Bitcoin, and Hashing'
+		]
+	},
 	'guisJava': {
 		'route':'guis-java',
 		'title':'Graphical User Interfaces (GUIs) - Java',
@@ -65,6 +77,18 @@ const breakoutSlides = {
 			'Layout Managers',
 			'Paint and paintComponent methods',
 			'Class extension, interface implementation, and action listeners'
+		]
+	},
+	'softwareTesting': {
+		'route':'software-testing',
+		'title':'Software Testing',
+		'topics': [
+			'Software development processes and how they impact testing',
+			'Verification and validation and the criticality of finding/fixing defects early',
+			'Types of testing including unit, integration, and user acceptance',
+			'Types of testing including performance, manual, and automated',
+			'Purpose and syntax of JUnit and JavaDoc',
+			'Software development process, associated testing priorities, and how they impact software development'
 		]
 	},
 	'desktopJava': {
