@@ -91,8 +91,6 @@ export const agendaSprintPlanning = (sprint) => {
 	</div> )
 } 
 
-
-
 const DISCUSSION_5_BREAKOUT_ROUTE = 'discussion-se-breakout'
 const discussionSE5Breakout = (sprint) => {
 	return ( <div>
@@ -143,7 +141,6 @@ const discussionFooter = () => {
 
 const AGENDA_SPRINT_REVIEW_ROUTE = 'agenda-sprint-review'
 const agendaSprintReview = (sprint) => {
-	
 	return ( <div>
 		{renderLogo()}
 		{renderHeaderAndOrderedList(
@@ -312,15 +309,3 @@ export const MWF5_5ISCPrework = () => {
 		<p>Be prepared for Quiz 5</p>
 	</div> )
 }
-
-// MWF Sprint 5 Session 4 Object-Oriented Programming
-/*
-const MWF_5_4_OOP_ROUTE = 'MWF_5_4_OOP'
-const mwf_5_4_OOP = () => {
-	return {
-		sprint: 5,
-		startingSlide: 2,
-		slideFunctionList: [ preflightChecklist, instructorChecklist, agendaMWF5_4_ICS, preworkMWF5_4ISC, MWF5_4_UpcomingDates, breakoutMWF5_4ICS, MWF5_5ISCPrework, endOfSession ]
-	}
-}
-*/

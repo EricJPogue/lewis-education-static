@@ -63,7 +63,7 @@ const breakoutSlides = {
 		'topics': [
 			'Network Types, Internet Connections, and Packet Switching',
 			'Open Systems, Network Protocols, TCP/IP, and High-Level Protocols',
-			'The Web, HTTP, Https, Encryption, and Domain Name System (DNS)',
+			'The Web, HTTP, HTTPs, Encryption, and Domain Name System (DNS)',
 			'Cloud Computing and Web servers',
 			'Blockchain, Bitcoin, and Hashing'
 		]
