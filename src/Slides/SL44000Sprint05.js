@@ -8,7 +8,7 @@ export const sd44000_5_TTh_4 = () => {
 	return {
 		sprint: 5,
 		startingSlide: 2,
-		slideFunctionList: [ preflightChecklist, instructorChecklist, agenda, prework, upcomingSprintPlanning, breakout, preworkForNextClass, quiz5, endOfSession ]
+		slideFunctionList: [ preflightChecklist, instructorChecklist, agenda, prework, upcomingSprintPlanning, breakoutMaintenanceAndSupport, preworkForNextClass, quiz5, endOfSession ]
 	}
 }
 
@@ -38,7 +38,7 @@ const prework = () => {
 }
 const upcomingSprintPlanning = () => { return renderTopicHeader('Upcoming Sprint Planning Sessions with Required Attendance') }
 
-const breakout = () => {
+const breakoutMaintenanceAndSupport = () => {
 	return renderBreakout({
 		'title':'Maintenance & Support',
 		'topics': [
@@ -131,7 +131,6 @@ const renderBreakout = (breakoutData) => {
 	const subList = { listStyleType:'lower-alpha' }
 	
 	return ( <div>
-		{console.log('testing 123')}
 		<h1 style={title}>{breakoutData.title} Breakout</h1>
 		<p style={defaultText}>In this breakout session your team will:</p>
 		<ol>
