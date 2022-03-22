@@ -1,8 +1,10 @@
 import React from 'react'
+
 import { getCurrentSprintBase1 } from '../data/ClientDataAPIs'
 import { preflightChecklist, instructorChecklist, agendaSprintPlanning, agendaMWF5_4_ICS, preworkMWF5_4ISC, breakoutMWF5_4ICS, MWF5_4_UpcomingDates,MWF5_5ISCPrework, endOfSession } from './Slide'
 
-import { SD44000_5_TTh_4_ROUTE, sd44000_5_TTh_4 } from './SL44000Sprint05'
+import { SD44000_5_3_of_4_ROUTE, sd44000Sprint5_3of4 } from './SL44000Sprint05'
+import { SD44000_5_4_of_4_ROUTE, sd44000Sprint5_4of4 } from './SL44000Sprint05'
 
 export class SlideDeck extends React.Component {
 	deck = null
@@ -11,9 +13,9 @@ export class SlideDeck extends React.Component {
 
 	constructor(props) {
 		 super(props)
-
 		 switch(this.props.match.params.route) {
-			case SD44000_5_TTh_4_ROUTE: this.deck = sd44000_5_TTh_4(); break
+			case SD44000_5_3_of_4_ROUTE: this.deck = sd44000Sprint5_3of4(); break
+			case SD44000_5_4_of_4_ROUTE: this.deck = sd44000Sprint5_4of4(); break
 			case CHECKLIST_ROUTE: this.deck = checklist(); break
 			case TODAY_ROUTE: this.deck = today(); break
 			case MWF_5_4_ROUTE: this.deck = mwf_5_4_ICS(); break
@@ -31,7 +33,8 @@ export class SlideDeck extends React.Component {
 		this.state = { 
 			currentSlide: this.startingSlide
 		}
-	 }
+	}
+	 
 
 	incrementSlide = () => {
 		if (this.state.currentSlide < (this.deck.slideFunctionList.length-1)) {

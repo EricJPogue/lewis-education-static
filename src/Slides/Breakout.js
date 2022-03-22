@@ -1,6 +1,45 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+export const breakoutMaintenanceAndSupport = () => {
+	return renderBreakout({
+		'title':'Maintenance & Support',
+		'topics': [
+			'Maintenance',
+			'Support',
+			'Maintenance in Waterfall and Iterative',
+			'Maintenance in Agile',
+			'Describe the daily activities of a support team and the impact of user base',
+			'Describe the daily activities of a maintenance team and how it differs from a development team' ]
+	})
+}
+
+const renderBreakout = (breakoutData) => { 
+	const processItem = (item) => { return (<li key={item} style={subListItem}>{item}</li>) }
+	const processItemList = (itemList) => {
+		return (<div>{itemList.map(processItem)}</div>)
+	}
+
+	const defaultText = { fontSize:24 }
+	const title = { fontSize:36 }
+	const listItem = { fontSize:24 }
+	const subListItem = { fontSize:20 }
+	const subList = { listStyleType:'lower-alpha' }
+	
+	return ( <div>
+		<h1 style={title}>{breakoutData.title} Breakout</h1>
+		<p style={defaultText}>In this breakout session your team will:</p>
+		<ol>
+			<li style={listItem}>Identify a presenter</li>
+			<li style={listItem}>Discuss the following topics while the presenter summarizes the conversation:</li>
+			<ol style={subList}>
+				{processItemList(breakoutData.topics)}
+			</ol>
+			<li style={listItem}>Sit back, relax, and acknowledge the bravery and dedication of the presenter</li>
+		</ol>
+	</div> ) 
+}
+
 export const daleDiscussion3Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion3) }
 export const daleDiscussion4Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion4) }
 export const daleDiscussion13Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion13) }

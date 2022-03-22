@@ -15,7 +15,10 @@ import { Credits } from './Info/Credits'
 import { Version } from './Info/Version'
 import { StudyTable } from './Activities/StudyTable'
 import { Slide } from './Slides/Slide'
-import { SlideDeck } from './Slides/SlideDeck';
+import { SlideDeck } from './Slides/SlideDeck'
+
+import { MyComponent} from './Slides/HotkeysDemo'
+
 import { Breakout } from './Slides/Breakout'
 import { Test } from './Test'
 
@@ -47,6 +50,8 @@ class Main extends Component {
 						<Route path='/version' component={Version}/>
 						<Route path={'/slide/:reference'} component={Slide}/>
 						<Route path={'/slide-deck/:route'} component={SlideDeck}/>
+
+						<Route path='/hotkey' component={MyComponent}/>
 
 						<Route path={'/breakout/:reference'} component={Breakout}/>
 						<Route path={'/test/:id'} component={Test}/>

@@ -2,17 +2,20 @@ import React from 'react'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
 import { preflightChecklist, instructorChecklist, endOfSession } from './Slide'
+import { breakoutMaintenanceAndSupport } from './Breakout'
 
-export const SD44000_5_TTh_4_ROUTE = 'SL-44000-5-TTh-4'
-export const sd44000_5_TTh_4 = () => {
+// Sprint 5 Session 3 of 4
+export const SD44000_5_3_of_4_ROUTE = '44000-5-3-of-4'
+export const sd44000Sprint5_3of4 = () => {
 	return {
 		sprint: 5,
 		startingSlide: 2,
-		slideFunctionList: [ preflightChecklist, instructorChecklist, agenda, prework, upcomingSprintPlanning, breakoutMaintenanceAndSupport, preworkForNextClass, quiz5, endOfSession ]
+		slideFunctionList: [ preflightChecklist, instructorChecklist, agenda3of4, prework3of4, 
+			upcomingSprintPlanning, breakoutMaintenanceAndSupport, prework4of4, quiz5, endOfSession ]
 	}
 }
 
-const agenda = (breakoutSessionTopic) => {
+const agenda3of4 = () => {
 	return ( <div>
 		{renderLogo()}
 		{renderHeaderAndOrderedList(
@@ -28,39 +31,15 @@ const agenda = (breakoutSessionTopic) => {
 	</div>)
 }
 
-const prework = () => {
+const prework3of4 = () => {
 	return ( <div>
-		{renderHeader('Prework')}
+		{renderHeader('Prework for Today')}
 		Complete through activity 8<br /><br />
 		Be prepared Breakout on Software Maintenance and Support and Fox Software Maintenance<br />
 		Be prepared for Quiz 5
 	</div> )
 }
 const upcomingSprintPlanning = () => { return renderTopicHeader('Upcoming Sprint Planning Sessions with Required Attendance') }
-
-const breakoutMaintenanceAndSupport = () => {
-	return renderBreakout({
-		'title':'Maintenance & Support',
-		'topics': [
-			'Maintenance',
-			'Support',
-			'Maintenance in Waterfall and Iterative',
-			'Maintenance in Agile',
-			'Describe the daily activities of a support team and the impact of user base',
-			'Describe the daily activities of a maintenance team and how it differs from a development team' ]
-	})
-}
-
-const preworkForNextClass = () => {
-	return ( <div>
-		{renderHeader('Prework for Next Class')}
-		Complete through activity 11 and working on 12<br /><br />
-
-		Be prepared for Sprint 6 Backlog Grooming<br />
-		Be prepared for Breakout Session on Software Metrics<br />
-		Be prepared for Lab<br />
-	</div> )
-}
 
 const quiz5 = () => {
 	return ( <div>		
@@ -69,7 +48,39 @@ const quiz5 = () => {
 	</div> )
 }
 
-// Share functions
+// Sprint 5 Session 4 of 4
+export const SD44000_5_4_of_4_ROUTE = '44000-5-4-of-4'
+export const sd44000Sprint5_4of4 = () => {
+	return {
+		sprint: 5,
+		startingSlide: 2,
+		slideFunctionList: [ preflightChecklist, instructorChecklist, agenda3of4, prework4of4, 
+			upcomingSprintPlanning, breakoutMaintenanceAndSupport, prework4of4, quiz5, endOfSession ]
+	}
+}
+
+const prework4of4 = () => {
+	return basicSlideWithTitle('Prework for Today', [
+		'Complete through activity 11 and working on 12', '',
+		'Be prepared for Sprint 6 Backlog Grooming',
+		'Be prepared for Breakout Session on Software Metrics', 
+		'Be prepared for Lab'
+	])
+}
+
+
+
+// Shared functions
+const basicSlideWithTitle = (title, lineList) => {
+	const renderBasicSlideLine = (item) => { return (<div>{item}<br /></div>) }
+	return ( <div><br />
+		{renderHeader(title)}
+		{lineList.map(renderBasicSlideLine)}
+	</div> )
+}
+
+
+
 const renderLogo = () => {
 	return (
 		<div style={{display: "flex", justifyContent: "right", alignItems: "center"}}>
@@ -117,28 +128,3 @@ const renderTopicHeader = (topic) => {
 	const title = { textAlign:"center", fontSize:40	}
 	return ( <div><br /><br /><br /><br /><br /><br /><h1 style={title}>{topic}</h1> </div>)
 }
-
-const renderBreakout = (breakoutData) => { 
-	const processItem = (item) => { return (<li key={item} style={subListItem}>{item}</li>) }
-	const processItemList = (itemList) => {
-		return (<div>{itemList.map(processItem)}</div>)
-	}
-
-	const defaultText = { fontSize:24 }
-	const title = { fontSize:36 }
-	const listItem = { fontSize:24 }
-	const subListItem = { fontSize:20 }
-	const subList = { listStyleType:'lower-alpha' }
-	
-	return ( <div>
-		<h1 style={title}>{breakoutData.title} Breakout</h1>
-		<p style={defaultText}>In this breakout session your team will:</p>
-		<ol>
-			<li style={listItem}>Identify a presenter</li>
-			<li style={listItem}>Discuss the following topics while the presenter summarizes the conversation:</li>
-			<ol style={subList}>
-				{processItemList(breakoutData.topics)}
-			</ol>
-			<li style={listItem}>Sit back, relax, and acknowledge the bravery and dedication of the presenter</li>
-		</ol>
-	</div> ) }
