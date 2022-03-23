@@ -19,8 +19,8 @@ export const breakoutIntroducingPython6Through9 = () => {
 		'title':'Loops, Tuples, Lists, Dictionaries, Sets, and Functions',
 		'topics': [
 			'Loops',
-			'Tuples',
-			'Lists',
+			'Tuples and Immutable',
+			'Lists, Arrays, and Mutable',
 			'Dictionaries and Sets',
 			'Functions' ]
 	})
