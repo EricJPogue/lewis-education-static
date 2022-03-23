@@ -6,6 +6,10 @@ import { preflightChecklist, instructorChecklist, agendaSprintPlanning, agendaMW
 import { SD44000_5_3_of_4_ROUTE, sd44000Sprint5_3of4 } from './SL44000Sprint05'
 import { SD44000_5_4_of_4_ROUTE, sd44000Sprint5_4of4 } from './SL44000Sprint05'
 
+import { SPRINT_5_INDEX_ROUTE, sprint5Index } from './SLSprint05'
+import { SD20000_5_5_of_6_ROUTE, sd20000Sprint5_5of6 } from './SLSprint05'
+import { SD24500_5_5_of_6_ROUTE, sd24500Sprint5_5of6 } from './SLSprint05'
+
 export class SlideDeck extends React.Component {
 	deck = null
 	startingSlide = 0
@@ -14,6 +18,9 @@ export class SlideDeck extends React.Component {
 	constructor(props) {
 		 super(props)
 		 switch(this.props.match.params.route) {
+			case SPRINT_5_INDEX_ROUTE: this.deck = sprint5Index(); break
+			case SD20000_5_5_of_6_ROUTE: this.deck = sd20000Sprint5_5of6(); break
+			case SD24500_5_5_of_6_ROUTE: this.deck = sd24500Sprint5_5of6(); break
 			case SD44000_5_3_of_4_ROUTE: this.deck = sd44000Sprint5_3of4(); break
 			case SD44000_5_4_of_4_ROUTE: this.deck = sd44000Sprint5_4of4(); break
 			case CHECKLIST_ROUTE: this.deck = checklist(); break

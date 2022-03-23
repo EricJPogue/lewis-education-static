@@ -14,15 +14,27 @@ export const breakoutMaintenanceAndSupport = () => {
 	})
 }
 
+export const breakoutIntroducingPython6Through9 = () => {
+	return renderBreakout({
+		'title':'Loops, Tuples, Lists, Dictionaries, Sets, and Functions',
+		'topics': [
+			'Loops',
+			'Tuples',
+			'Lists',
+			'Dictionaries and Sets',
+			'Functions' ]
+	})
+}
+
 const renderBreakout = (breakoutData) => { 
 	const processItem = (item) => { return (<li key={item} style={subListItem}>{item}</li>) }
 	const processItemList = (itemList) => {
 		return (<div>{itemList.map(processItem)}</div>)
 	}
 
-	const defaultText = { fontSize:24 }
+	const defaultText = { fontSize:20 }
 	const title = { fontSize:36 }
-	const listItem = { fontSize:24 }
+	const listItem = { fontSize:20 }
 	const subListItem = { fontSize:20 }
 	const subList = { listStyleType:'lower-alpha' }
 	

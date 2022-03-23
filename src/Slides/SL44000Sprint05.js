@@ -1,6 +1,5 @@
 import React from 'react'
-import LewisUniversityLogo from './LewisUniversityLogo.png'
-
+import { renderLogo, renderHeaderAndOrderedList, renderHeader, topic, basicSlideWithTitle } from './SL00000'
 import { preflightChecklist, instructorChecklist, endOfSession } from './Slide'
 import { breakoutMaintenanceAndSupport } from './Breakout'
 
@@ -39,7 +38,7 @@ const prework3of4 = () => {
 		Be prepared for Quiz 5
 	</div> )
 }
-const upcomingSprintPlanning = () => { return renderTopicHeader('Upcoming Sprint Planning Sessions with Required Attendance') }
+const upcomingSprintPlanning = () => { return topic('Upcoming Sprint Planning Sessions with Required Attendance') }
 
 const quiz5 = () => {
 	return ( <div>		
@@ -71,36 +70,6 @@ const prework4of4 = () => {
 
 
 // Shared functions
-const basicSlideWithTitle = (title, lineList) => {
-	const renderBasicSlideLine = (item) => { return (<div>{item}<br /></div>) }
-	return ( <div><br />
-		{renderHeader(title)}
-		{lineList.map(renderBasicSlideLine)}
-	</div> )
-}
-
-
-
-const renderLogo = () => {
-	return (
-		<div style={{display: "flex", justifyContent: "right", alignItems: "center"}}>
-		<img src={LewisUniversityLogo} alt='Lewis University' width= '256'/></div>
-	)
-}
-
-const renderHeaderAndOrderedList = (header, intro, list) => {
-	return ( <div>
-		{renderHeader(header)}
-		{renderOrderedList(intro, list)}
-	</div> )
-}
-
-const renderHeader = (slideTitle) => {
-	const title = { fontSize:40	}
-	return ( <h1 style={title}>{slideTitle}</h1> ) 
-}
-
-
 const agendaFooter = () => {
 	const styleBodyText = { fontSize:20 }
 	return (
@@ -109,22 +78,4 @@ const agendaFooter = () => {
 	)
 }
 
-const styleListIntro = { fontSize:20 }
-const renderListIntro = (intro) => { return ( <p style={styleListIntro}>{intro}</p> ) }
-const renderOrderedList = (intro, list) => {
-	return ( <div>
-		{renderListIntro(intro)}
-		<ol>
-			{renderList(list)}
-		</ol>
-	</div> )
-}
 
-const styleListItem = { fontSize:20 }
-const renderListItem = (item) => { return (<li key={item} style={styleListItem}>{item}</li>) }
-const renderList = (itemList) => { return (<div>{itemList.map(renderListItem)}</div>) }
-
-const renderTopicHeader = (topic) => {
-	const title = { textAlign:"center", fontSize:40	}
-	return ( <div><br /><br /><br /><br /><br /><br /><h1 style={title}>{topic}</h1> </div>)
-}
