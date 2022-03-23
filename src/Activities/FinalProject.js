@@ -162,8 +162,9 @@ website, and is “demo-able” by every member of the team.</p>
 <p>Create something that adds value and you can be proud of creating.</p>
 
 <h6>Requirement 1: Complete sprint 5 Review and Retrospective</h6>
-<h6>Requirement 2: Execute sprint 6</h6>
-<h6>Requirement 3: Complete sprint 7 planning</h6>
+<h6>Requirement 2: Complete sprint 6 Planning by the end of the first class session</h6>
+<h6>Requirement 3: Execute sprint 6</h6>
+<h6>Requirement 4: Complete sprint 6 backlog grooming in preparation for sprint 7 planning</h6>
 </div> )
 }
 
@@ -188,8 +189,9 @@ in sprint 6. Now it’s time to focus continuous improvement and living up sprin
 <p>Part of our rhythm should include:</p>
 <ul style={{listStyleType:'square'}}>
 	<li>Demo, release, and reflect on what was delivered in the previous sprint</li>
+	<li>Plan for the current sprint</li>
 	<li>Deliver committed stories in current sprint</li>
-	<li>Planning for the next sprint</li>
+	<li>Groom the story backlog for the next sprint</li>
 </ul>
 
 <p>High performing scrum teams are able to consistently allocate 80% or more of their effort to Delivery of current 
@@ -218,9 +220,10 @@ export const FinalProjectSprint8 = () => {
 
 <p>Our cadence should include:</p>
 <ul style={{listStyleType:'square'}}>
-	<li>Demo, release, and reflect on what was delivered in the previous sprint</li>
+<li>Demo, release, and reflect on what was delivered in the previous sprint</li>
+	<li>Plan for the current sprint</li>
 	<li>Deliver committed stories in current sprint</li>
-	<li>In the spirit of Agile we will not be planning for the next sprint</li>
+	<li>In the spirit of Agile we will not be grooming the backlog or planning for the next sprint</li>
 </ul>
 
 <p>Once again, high performing scrum teams are able to consistently allocate 80% or more of their effort to Delivery of 

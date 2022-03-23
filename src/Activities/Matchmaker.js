@@ -8,6 +8,11 @@ export const MATCHMAKER_PYTHON_ROUTE = 'matchmaker-python'
 export const matchmakerPythonLink = () => {return (<NavLink to={makeInternalURL(MATCHMAKER_PYTHON_ROUTE)}>{MATCHMAKER_PYTHON_NAME}</NavLink>)}
 export const matchmakerPython = () => { return Matchmaker(MatchmakerPythonProperties) }
 
+const MATCHMAKER_WEB_NAME = 'Matchmaker for the Web'
+export const MATCHMAKER_WEB_ROUTE = 'matchmaker-web'
+export const matchmakerWebLink = () => {return (<NavLink to={makeInternalURL(MATCHMAKER_WEB_ROUTE)}>{MATCHMAKER_WEB_NAME}</NavLink>)}
+export const matchmakerWeb = () => { return Matchmaker(MatchmakerWebProperties) }
+
 
 // export const MatchmakerPython = () => { return Matchmaker(MatchmakerPythonProperties) }
 export const MatchmakerWeb = ()    => { return Matchmaker(MatchmakerWebProperties) }

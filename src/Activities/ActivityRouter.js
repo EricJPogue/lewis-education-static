@@ -18,6 +18,7 @@ import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbb
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
 import { HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE, healthRiskCalculatorTeamWeb } from './HealthRiskCalculatorTeam'
 import { MATCHMAKER_PYTHON_ROUTE, matchmakerPython } from './Matchmaker'
+import { MATCHMAKER_WEB_ROUTE, matchmakerWeb } from './Matchmaker'
 import { MOSAIC_JAVA_ROUTE, mosaicJava } from './Mosaic'
 import { MUSTANG_ROUTE, mustang } from './MustangVersion1'
 import { NUMBERING_SYSTEMS_ROUTE, numberingSystems } from './PythonNumberingSystems'
@@ -56,6 +57,7 @@ export const routeActivity = (activityRoute) => {
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()
 		case HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE: return healthRiskCalculatorTeamWeb()
 		case MATCHMAKER_PYTHON_ROUTE: return matchmakerPython()
+		case MATCHMAKER_WEB_ROUTE: return matchmakerWeb()
 		case MOSAIC_JAVA_ROUTE: return mosaicJava()
 		case MUSTANG_ROUTE: return mustang()
 		case NUMBERING_SYSTEMS_ROUTE: return numberingSystems()

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { estimated } from './AL00000Sprint01'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
-import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing  } from './AL00000Sprint05'
+import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint05'
 
 import { oreillyPlaylistICS, introducingPythonCodeExamples, programmingTogether, PythonW3C } from '../Links'
 import { turtledrawLink } from '../Activities/PythonTurtleDraw'
@@ -51,4 +51,6 @@ This week we switch gears and move into graphical drawing using Python and the T
 // Status: Signed off SP22.
 
 // Todo: Remove the programming together tutorials from the activity list to the Turtledraw activity itself, and then 
-// remove the tutorials from the programming together.  
+// remove the tutorials from the programming together. 
+
+// Todo: Remove T/F question "Everything connected to the Internet has an IP address."
