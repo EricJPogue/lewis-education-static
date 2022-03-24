@@ -47,17 +47,6 @@ const quiz5 = () => {
 	</div> )
 }
 
-// Sprint 5 Session 4 of 4
-export const SD44000_5_4_of_4_ROUTE = '44000-5-4-of-4'
-export const sd44000Sprint5_4of4 = () => {
-	return {
-		sprint: 5,
-		startingSlide: 2,
-		slideFunctionList: [ preflightChecklist, instructorChecklist, agenda3of4, prework4of4, 
-			upcomingSprintPlanning, breakoutMaintenanceAndSupport, prework4of4, quiz5, endOfSession ]
-	}
-}
-
 const prework4of4 = () => {
 	return basicSlideWithTitle('Prework for Today', [
 		'Complete through activity 11 and working on 12', '',
@@ -66,8 +55,6 @@ const prework4of4 = () => {
 		'Be prepared for Lab'
 	])
 }
-
-
 
 // Shared functions
 const agendaFooter = () => {

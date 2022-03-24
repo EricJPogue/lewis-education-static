@@ -5,6 +5,7 @@ import { preflightChecklist, instructorChecklist } from './Slide'
 
 import { breakoutIntroducingPython6Through9 } from './Breakout'
 import { al24500Sprint05 } from '../ActivityLists/AL24500Sprint05'
+import { al44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 
 import { internalLink } from '../Links'
 
@@ -13,6 +14,8 @@ export const SPRINT_5_INDEX_ROUTE = 'index'
 export const sprint5Index = () => {
 	const index = () => {
 		return ( <div>
+			March 24, 2022:<br />
+			{internalLink('Software Engineering', `${SD44000_5_4_of_4_ROUTE}`)}<br />
 			March 23, 2022:<br />
 			{internalLink('Introduction to Computer Science', `${SD20000_5_5_of_6_ROUTE}`)}<br />
 			{internalLink('Object-Oriented ProgrammingMarch', `${SD24500_5_5_of_6_ROUTE}`)}
@@ -91,3 +94,44 @@ const preworkOOP6of6 = () => {
 		'Be prepared for Lab'])
 }
 
+// Software Engineering Sprint 5 Session 4 of 4
+export const SD44000_5_4_of_4_ROUTE = '44000-5-4-of-4'
+export const sd44000Sprint5_4of4 = () => {
+	const agenda4of4 = () => {
+		return agenda([
+			'Prework',
+			'Sprint 6 Planning Expectations', 
+			'Backlog Grooming in Preparation for Tuesday’s Sprint 6 Sprint Planning',
+			'Lab... as time allows',
+			'Prework for Next Class' ])
+	}
+	const planningExpectations = () => { return basicSlideWithTitle('Sprint 6 Planning Expectations', [
+			'Review Blackboard Announcement from this morning.' ]) 
+	}
+	const lab = () => { return basicSlideWithTitle('Lab', [
+			'Continue working in scrum teams on Sprint 5 assignments' ]) 
+	}
+	const backlogGrooming = () => {
+		return basicSlideWithTitle('Backlog Grooming', [
+			'Backlog Grooming in Preparation for Tuesday’s Sprint 6 Sprint Planning', '',
+			'** Goal: Each team member needs to provide Product Owner at least two valid user stories prior to class on Tuesday' ]) 
+	}
+	return { sprint: 5, startingSlide: 2,
+		slideFunctionList: [ preflightChecklist, instructorChecklist, 
+			agenda4of4, preworkSE4of4, al44000Sprint05, planningExpectations, backlogGrooming, lab, preworkSE5of1, end ]
+	}
+}
+
+const preworkSE4of4 = () => {
+	return basicSlideWithTitle('Prework for Today', [
+		'Complete through activity 11 and working on 12', '',
+		'Be prepared for Sprint 6 Backlog Grooming',
+		'Be prepared for Breakout Session on Software Metrics', 
+		'Be prepared for Lab' ])
+}
+
+const preworkSE5of1 = () => {
+	return basicSlideWithTitle('Prework for Today', [
+		'All Sprint 5 Assignments due Sunday!', '',
+		'** Be prepared for in-person Sprint 6 Planning on Tuesday' ])
+}
