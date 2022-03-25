@@ -62,3 +62,6 @@ const extras = () => {
 	</div>)
 }
 
+// Todo: Review backlog grooming and sprint planning expectation for sprint 5. Consider making mandatory attendance for 
+// sprint planning starting in sprint 5. Also, review expectations relative to MWF vs TTh classes.   
+

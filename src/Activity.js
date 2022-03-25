@@ -3,20 +3,18 @@ import ReactPlayer from 'react-player'
 
 import { getCourseTitle } from './data/ClientDataAPIs';
 import { routeActivity } from './Activities/ActivityRouter';
-// import { routeSlide } from './Slides/SlideRouter'
 
 import { SeatSelector } from './Activities/SeatSelector'
 import { StudyTable } from './Activities/StudyTable'
 import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './Activities/HelloWorld'
-import { /* MatchmakerPython, */ MatchmakerWeb, MatchmakerJava, MatchmakerGo, MatchmakerExamples } from './Activities/Matchmaker';
+import { MatchmakerWeb, MatchmakerJava, MatchmakerGo, MatchmakerExamples } from './Activities/Matchmaker';
 import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './Activities/HealthRiskCalculator'
-// import { HealthRiskCalculatorTeamWeb } from './Activities/HealthRiskCalculatorTeam'
 
 import { ExampleCode } from './Activities/ExampleCode'
-import { FaceDrawWeb, /* FaceDrawJava, */ FaceDrawReact } from './Activities/FaceDraw'
-import { MosaicWeb, /* MosaicJava, */ MosaicReact, MosaicV2React } from './Activities/Mosaic'
+import { FaceDrawWeb, FaceDrawReact } from './Activities/FaceDraw'
+import { MosaicWeb, MosaicReact, MosaicV2React } from './Activities/Mosaic'
 
-import { /* SwissArmyKnifeJava, */ SwissArmyKnifeJavaV2 } from './Activities/SwissArmyKnife'
+import { SwissArmyKnifeJavaV2 } from './Activities/SwissArmyKnife'
 import { ThunderbirdJava } from './Activities/Thunderbird'
 
 import { Tools } from './Activities/ToolsOfTheTrade'
@@ -25,10 +23,9 @@ import { Repository } from './Activities/Repository'
 import { CodingStandards, CodingStandardsValidator } from './Activities/CodingStandards'
 import { QuizMaster } from './Activities/QuizMaster'
 import { GitCommands } from './Activities/GitCommands'
-// import { FinalProjectProposal } from './Activities/FinalProjectProposal'
-import { FinalProject, FinalProjectDistributed, /* FinalProjectSprint5, */ FinalProjectSprint6, FinalProjectSprint7, FinalProjectSprint8 } from './Activities/FinalProject'
-// import { PythonNumberingSystems } from './Activities/PythonNumberingSystems'
-// import { PythonTurtleDraw } from './Activities/PythonTurtleDraw'
+
+import { FinalProject, FinalProjectDistributed, /* FinalProjectSprint5,  FinalProjectSprint6, */ FinalProjectSprint7, FinalProjectSprint8 } from './Activities/FinalProject'
+
 import { HTML } from './Activities/HTML'
 import { PythonW3C } from './Activities/PythonW3C'
 import { SuccessfulDeveloper } from './Activities/SuccessfulDeveloper'
@@ -39,7 +36,7 @@ import { gettingToKnowEachOther } from './Activities/WebGettingToKnowEachOther'
 import { WebCourseSchedule } from './Activities/WebCourseSchedule'
 import { WebMapManiaVersion1 } from './Activities/WebMapManiaVersion1'
 import { WebMapManiaVersion2 } from './Activities/WebMapManiaVersion2'
-// import { MustangVersion1 } from './Activities/MustangVersion1';
+
 import { MustangVersion2 } from './Activities/MustangVersion2';
 import { MustangVersion3 } from './Activities/MustangVersion2';
 
@@ -80,9 +77,6 @@ class Activity extends Component {
 		let routeActivityResponse = routeActivity(activityReference)
 		if (routeActivityResponse != null) return routeActivityResponse
 
-//		let routeSlideResponse = routeSlide(activityReference)
-//		if (routeSlideResponse != null) return routeSlideResponse
-
 		switch(activityReference) {
 			case 'seat-selector': return SeatSelector()
 
@@ -102,13 +96,10 @@ class Activity extends Component {
 			case 'coding-standards-validator': return CodingStandardsValidator()
 			case 'quiz-master': return QuizMaster()
 
-
-			// case 'final-project-proposal': return FinalProjectProposal()
-
 			case 'final-project': return FinalProject()
 			case 'final-project-distributed': return FinalProjectDistributed()
 			// case 'final-project-sprint-5': return FinalProjectSprint5()
-			case 'final-project-sprint-6': return FinalProjectSprint6()
+			// case 'final-project-sprint-6': return FinalProjectSprint6()
 			case 'final-project-sprint-7': return FinalProjectSprint7()
 			case 'final-project-sprint-8': return FinalProjectSprint8()
 

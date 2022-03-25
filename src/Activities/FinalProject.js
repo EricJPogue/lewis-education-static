@@ -137,7 +137,11 @@ test, and production environments?</p>
 </div> )
 }
 
-export const FinalProjectSprint6 = () => {
+const FINAL_PROJECT_SPRINT_6_NAME = 'Final Project Sprint 6'
+export const FINAL_PROJECT_SPRINT_6_ROUTE = 'final-project-sprint-6'
+export const finalProjectSprint6Link = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_SPRINT_6_ROUTE)}>{FINAL_PROJECT_SPRINT_6_NAME}</NavLink>)}
+
+export const finalProjectSprint6 = () => {
 	return (
 	
 <div>

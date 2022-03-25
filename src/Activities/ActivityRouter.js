@@ -13,6 +13,7 @@ import { FACEDRAW_JAVA_ROUTE, faceDrawJava } from './FaceDraw'
 import { FAVORITE_HOBBY_ROUTE, favoriteHobby} from './WebMyFavoriteHobby'
 import { FINAL_PROJECT_PROPOSAL_ROUTE, finalProjectProposal } from './FinalProjectProposal'
 import { FINAL_PROJECT_SPRINT_5_ROUTE, finalProjectSprint5 } from './FinalProject'
+import { FINAL_PROJECT_SPRINT_6_ROUTE, finalProjectSprint6 } from './FinalProject'
 import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebGettingToKnowEachOther'
 import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbbreviated } from './WebGettingToKnowEachOtherAbbreviated'
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
@@ -52,6 +53,7 @@ export const routeActivity = (activityRoute) => {
 		case FAVORITE_HOBBY_ROUTE: return favoriteHobby()
 		case FINAL_PROJECT_PROPOSAL_ROUTE: return finalProjectProposal()
 		case FINAL_PROJECT_SPRINT_5_ROUTE: return finalProjectSprint5()
+		case FINAL_PROJECT_SPRINT_6_ROUTE: return finalProjectSprint6()
 		case GETTING_TO_KNOW_EACH_OTHER_ROUTE: return gettingToKnowEachOther()
 		case GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE: return gettingToKnowEachOtherAbbreviated()
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()

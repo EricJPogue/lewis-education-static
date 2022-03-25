@@ -2,6 +2,7 @@ import React from 'react'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
+
 import { oreillyPlaylistICS, JavaScriptW3C, programmingTogether, internalLink } from '../Links'
 import { matchmakerWebLink } from '../Activities/Matchmaker'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
@@ -29,7 +30,7 @@ create a <em>Web</em> version of <span style={{color: "red"}}> &#10084;&#10084;&
 	<li>Update our Final Project proposals and host them on the Web</li>
 </ul>
 
-{ActivitiesListIntro()}
+{ActivitiesListIntro(sprint)}
 <ol>
 	{StandardActivitiesWithLinkAndSprint(sprint, matchmakerWebLink(), oreillyPlaylistICS())}
 	<li>Complete {programmingTogether()} MatchmakerLite for the Web - Part 1</li>
@@ -54,4 +55,4 @@ create a <em>Web</em> version of <span style={{color: "red"}}> &#10084;&#10084;&
 	</div> )
 }
 
-// Verified: March 23, 2022
+// Certified for SP22 (03/24/2022)

@@ -240,11 +240,13 @@ export const FinalProjectSprint5 = {
 }
 */
 
+/*
 export const FinalProjectSprint6 = {
 	'name':'Final Project Sprint 6',
 	'link':'/activity/final-project-sprint-6',
 	'estimate':'~8 hours per team member'
 }
+*/
 
 export const FinalProjectSprint7 = {
 	'name':'“Final Project Sprint 7”',

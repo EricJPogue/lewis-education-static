@@ -48,7 +48,7 @@ This week we switch gears and move into graphical drawing using Python and the T
 </div> )
 }
 
-// Status: Signed off SP22.
+
 
 // Todo: Remove the programming together tutorials from the activity list to the Turtledraw activity itself, and then 
 // remove the tutorials from the programming together. 

@@ -54,12 +54,13 @@ the work we do in scrum is essentially maintenance.</p>
 </div> )
 }
 
-// Status: Signed off SP22.
-
+// Todo: Consider moving Software Metrics to sprint 6
 // Todo: Add multiple-choice question on refactoring vs re-engineering.
 // Todo: Add multiple-choice question on “Describe the similarities and differences normally observed when maintaining a
 //     software product using a Waterfall vs an Agile process.”
 
+
+// Status: Signed off SP22.
 
 
 
