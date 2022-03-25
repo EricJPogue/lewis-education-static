@@ -1,7 +1,7 @@
 import React from 'react'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
-export const agenda = (agendaItems) => {
+export const agendaSlide = (agendaItems) => {
 	const styleBodyText = { fontSize:20 }
 	return ( <div>
 		{renderLogo()}
