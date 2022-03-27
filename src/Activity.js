@@ -14,7 +14,7 @@ import { ExampleCode } from './Activities/ExampleCode'
 import { FaceDrawWeb, FaceDrawReact } from './Activities/FaceDraw'
 import { MosaicWeb, MosaicReact, MosaicV2React } from './Activities/Mosaic'
 
-import { SwissArmyKnifeJavaV2 } from './Activities/SwissArmyKnife'
+// import { SwissArmyKnifeJavaV2 } from './Activities/SwissArmyKnife'
 import { ThunderbirdJava } from './Activities/Thunderbird'
 
 import { Tools } from './Activities/ToolsOfTheTrade'
@@ -130,7 +130,7 @@ class Activity extends Component {
 			case 'mosaic-v2-react': return MosaicV2React()
 
 			// case 'swiss-army-knife-java': return SwissArmyKnifeJava()
-			case 'swiss-army-knife-java-v2': return SwissArmyKnifeJavaV2()	
+			// case 'swiss-army-knife-java-v2': return SwissArmyKnifeJavaV2()	
 
 			case 'thunderbird-java': return ThunderbirdJava()
 

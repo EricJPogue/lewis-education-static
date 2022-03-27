@@ -86,7 +86,7 @@ const preworkICS6of6 = () => {
 const preworkICS7of6 = () => {
 	return prework([
 		'All Sprint 5 Assignments due Sunday!', '',
-		'Be prepared for Sprint 6 Planning on MondayTuesday' ])
+		'Be prepared for Sprint 6 Planning on Monday' ])
 }
 
 // Object-Oriented Programming Sprint 5 Session 5 of 6 for 
@@ -119,8 +119,9 @@ const preworkOOP5of6 = () => {
 		'Be prepared for Quiz 5'])
 }
 
+
 // Object-Oriented Programming Sprint 5 Session 6 of 6
-export const SD24500_5_6_of_6_ROUTE = '20000-5-6-of-6'
+export const SD24500_5_6_of_6_ROUTE = '24500-5-6-of-6'
 export const sd24500Sprint5_6of6 = () => {
 	const agenda = () => {
 		return agendaSlide([
@@ -135,9 +136,11 @@ export const sd24500Sprint5_6of6 = () => {
 			'More SwissArmyKnife lite',
 			'Review Lab 5 assignment' ]) 
 	}
+
+	console.log(SD24500_5_6_of_6_ROUTE)
 	return { sprint: 5, startingSlide: 2,
 		slideFunctionList: [ preflightChecklist, instructorChecklist, 
-			agenda, preworkICS6of6, al20000Sprint05, progressPolling, lab, preworkICS7of6, end ]
+			agenda, preworkOOP6of6, al24500Sprint05, progressPolling, lab, preworkOOP7of6, end ]
 	}
 }
 
@@ -145,6 +148,12 @@ const preworkOOP6of6 = () => {
 	return prework([
 		'Complete through activity 14', '',
 		'Be prepared for Lab'])
+}
+
+const preworkOOP7of6 = () => {
+	return prework([
+		'All Sprint 5 Assignments due Sunday!', '',
+		'Be prepared for Sprint 6 Planning on Monday' ])
 }
 
 // Software Engineering Sprint 5 Session 4 of 4

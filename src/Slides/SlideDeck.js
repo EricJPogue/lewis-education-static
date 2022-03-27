@@ -19,14 +19,19 @@ export class SlideDeck extends React.Component {
 
 	constructor(props) {
 		 super(props)
+		 console.log(this.props.match.params.route)
 		 switch(this.props.match.params.route) {
 			case SPRINT_5_INDEX_ROUTE: this.deck = sprint5Index(); break
+
 			case SD20000_5_6_of_6_ROUTE: this.deck = sd20000Sprint5_6of6(); break
-			case SD44000_5_4_of_4_ROUTE: this.deck = sd44000Sprint5_4of4(); break	
 			case SD20000_5_5_of_6_ROUTE: this.deck = sd20000Sprint5_5of6(); break
+
 			case SD24500_5_5_of_6_ROUTE: this.deck = sd24500Sprint5_5of6(); break
 			case SD24500_5_6_of_6_ROUTE: this.deck = sd24500Sprint5_6of6(); break
+
+			case SD44000_5_4_of_4_ROUTE: this.deck = sd44000Sprint5_4of4(); break	
 			case SD44000_5_3_of_4_ROUTE: this.deck = sd44000Sprint5_3of4(); break
+
 			case CHECKLIST_ROUTE: this.deck = checklist(); break
 			case TODAY_ROUTE: this.deck = today(); break
 			case MWF_5_4_ROUTE: this.deck = mwf_5_4_ICS(); break

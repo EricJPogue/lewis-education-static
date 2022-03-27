@@ -1,59 +1,52 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
-import { SwissArmyKnifeWithJavaV2, start, complete } from './ProgrammingAssignments'
-const programmingAssignment = SwissArmyKnifeWithJavaV2
+import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
+import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
+import { oreillyPlaylistOOP, internalLink } from '../Links'
+import { swissArmyKnifeV2Link } from '../Activities/SwissArmyKnife'
+import { azureWebsiteLink } from '../Activities/AzureWebsite'
 
 export const al24500Sprint06 = ( props ) => {
-	return (
+	const performanceAndMultithreading = () => { return internalLink('Performance and Multithreading', '/activity-oop/performance-and-multithreaded-programming') }
+	const personalInformationJSONFiles = () => { return internalLink('Personal Information JSON Files', '/activity-oop/personal-info-json-to-azure')}
+	const sleepFast = () => { return internalLink('SleepFast', '/activity-oop/java-sleep-fast')}
+	const objectOrientedProgrammingLanguagesAndPlatforms = () => { return internalLink('Object-Oriented Programming Languages and Platforms', '/activity-oop/languages-and-platforms')}
+	const bodyMassIndexWithJavaDocAndScanner = () => { return internalLink('BMI with JavaDoc and Scanner', '/activity-oop/bmi-calculator-add-javadoc-and-keyboard-input')}
+	const sprint = 6
+	return ( <div>
 
-<div>
-<h5>Sprint 6: Multithreaded Programming and Application Programming Interfaces</h5>
+<h5>Sprint 6: Application Programming Interfaces and Multithreaded Programming</h5>
 
-<p>Sprint 6! This sprint offers a mix of the old and the new. Some things like hosting JSON files on our Azure
-websites and enhancing our SwissArmyKnife application will be additions to what we have already learned. On the
-other hand, learning how to write multi-threaded Java applications will likely prove to be challenging.</p>
+<p>This sprint offers a mix of the old and the new. Some things like creating application programming interfaces (APIs) 
+on Microsoft Azure and enhancing the SwissArmyKnife application will build on what we have already learned. Other topic 
+like learning how to write multithreaded Java applications will be new and likely challenging.</p>
 
-<p>By the end of this sprint we will be able to:</p>
+{LearningObjectivesIntro()}
 <ul style={{ listStyleType: 'square' }}>
-	<li>Develop our first multi-threaded Java application</li>
-	<li>Create and update a web service by hosting JSON files in Azure</li>
-	<li>Enhance intermediate command line Java applications that span multiple Java files</li>
-	<li>Create an automated (api level) Java test client</li>
-
-	{/* BugBug: The following item was moved from sprint 5 and should be reviewed and placed properly */}
+	<li>Create and update application programming interfaces (APIs) on Microsoft Azure</li>
+	<li>Develop multithreaded Java applications</li>
+	<li>Create and automated API automated test applications in Java</li>
 	<li>Understand JavaDoc and how it can create self-documenting source code</li>
 </ul>
 
-<p>Below is the list of activities that we will need to complete this sprint.</p>
+{ActivitiesListIntro(sprint)}
 <ol>
-	<li>Stay focused on the due dates by reviewing our course calendar <NavLink to='/calendar/6'>[link]</NavLink></li>
-	<li><em>Review Lab 6, Quiz 6, Discussion 6, Reflection 6, and Lab Demo</em></li>
-	<li>{start(programmingAssignment)}</li>
-	{/* The above items should be consistent across classes. */}
+	{StandardActivitiesWithLinkAndSprint(sprint, swissArmyKnifeV2Link(), oreillyPlaylistOOP())}
+	<li>Review {performanceAndMultithreading()}</li>
+	<li>Review {azureWebsiteLink()}</li>
+	<li>Complete {personalInformationJSONFiles()}</li>
 
-	<li>Review “Performance and Multithreading” <NavLink to='/activity-oop/performance-and-multithreaded-programming'>[video]</NavLink></li>
-	<li>Review “Website Creation With GitHub and Microsoft Azure” <NavLink to='/activity/azure-website'>[link]</NavLink></li>
-	<li>Complete “Personal Information JSON Files” <NavLink to='/activity-oop/personal-info-json-to-azure'>[video]</NavLink></li>
-	<li><em>Complete your initial Discussion Board post by the middle of the sprint</em></li>
-
-	<li>Read “Learning Java, 5th Edition” chapter 9 <a href='https://learning.oreilly.com/library/view/learning-java-5th/9781492056263/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li>Complete “SleepFast” <NavLink to='/activity-oop/java-sleep-fast'>[video]</NavLink></li>
-	<li>Review Object-Oriented Programming Languages and Platforms <NavLink to='/activity-oop/languages-and-platforms'>[video]</NavLink></li>
-
-	{/* The items below should be consistent across classes. */}
-	<li>{complete(programmingAssignment)}</li>
-	<li><em>Complete Discussion 6, Lab 6, Quiz 6, and Reflection 6</em></li>
-
-	{/* BugBug: The following item was moved from sprint 5 and should be reviewed and placed properly */}
-	<li>Complete the BMI with JavaDoc and Scanner (keyboard input) <NavLink to='/activity-oop/bmi-calculator-add-javadoc-and-keyboard-input'>[video]</NavLink></li>
+	{InitialPost()}
+	<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 9 on Threads</li>
+	<li>Complete {sleepFast()}</li>
+	<li>Review {objectOrientedProgrammingLanguagesAndPlatforms()}</li>
+	<li>Complete {bodyMassIndexWithJavaDocAndScanner()}</li>
+	{StandardActivitiesClosingWithLinkAndSprint(sprint, swissArmyKnifeV2Link(), '8 hours')}
 </ol>
 
-<p>If you are struggling, remember to reach out to your Scrum teammates early and often for help. Also, be sure to 
-periodically check for new programming together tutorials <NavLink to='/activity/programming-together'>[link]</NavLink>.</p>
-{extras()}
-</div>
-	)
+{Closing()}
+
+	</div> )
 }
 
 // Todo: Fix quiz question, “If it cost $200 to fix a defect that was found in Unit Testing, how much would it likely cost to fix that same defect if it was found in Validation testing?”
@@ -61,16 +54,6 @@ periodically check for new programming together tutorials <NavLink to='/activity
 // Todo: Add review and update Final Project Proposal
 // Todo: Add Final Project proposals to assignments. 
 
-const extras = () => {
-	return (<div>	
-		<p>Additional suggested activities:</p>
-		<ul style={{listStyleType:'square'}}>
-			<li>Update the content of your “Final Project Proposal” <NavLink to='/activity/final-project-proposal'>[link]</NavLink> 
-				and host the updated web page in Azure</li>
-			<li>Review our class example code <NavLink to='/activity/example-code'>[link]</NavLink></li>
-			<li>Review “Learning Java, 5th Edition” example code <a href='https://github.com/l0y/learnjava5e.git' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-		</ul>
-	</div>)
-}
 
+// Todo: Simplify SwissArmyKnife and SwissArmyKnife V2 activities. 
 // Todo: In Lab 3 move Coding Standards to the top.

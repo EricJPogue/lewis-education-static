@@ -8,7 +8,11 @@ export const SWISS_ARMY_KNIFE_ROUTE = 'swiss-army-knife-java'
 export const swissArmyKnifeLink = () => {return (<NavLink to={makeInternalURL(SWISS_ARMY_KNIFE_ROUTE)}>{SWISS_ARMY_KNIFE_NAME}</NavLink>)}
 export const swissArmyKnife  = () => { return SwissArmyKnife(SwissArmyKnifeJavaProperties) }
 
-export const SwissArmyKnifeJavaV2  = () => { return SwissArmyKnifeV2(SwissArmyKnifeJavaV2Properties) }
+
+const SWISS_ARMY_KNIFE_V2_NAME = 'SwissArmyKnife version 2'
+export const SWISS_ARMY_KNIFE_V2_ROUTE = 'swiss-army-knife-v2-java'
+export const swissArmyKnifeV2Link = () => {return (<NavLink to={makeInternalURL(SWISS_ARMY_KNIFE_V2_ROUTE)}>{SWISS_ARMY_KNIFE_V2_NAME}</NavLink>)}
+export const swissArmyKnifeV2  = () => { return SwissArmyKnifeV2(SwissArmyKnifeJavaV2Properties) }
 
 const SwissArmyKnifeJavaProperties = {
 	'name': 'SwissArmyKnife', 
@@ -87,12 +91,10 @@ from immobility.</p>
 }
 
 const SwissArmyKnifeV2 = (appProps) => {
-	return (
-	
-<div>
+	return ( <div>
 <br />
 <h4>{appProps.name}</h4>
-<h5>Summary: Create SwissArmyKnife version 2 as a {appProps.language} application that builds on the original SwissArmyKnife <NavLink to='/activity/swiss-army-knife-java'>[link]</NavLink>
+<h5>Summary: Create SwissArmyKnife version 2 as a {appProps.language} application that builds on <NavLink to='/activity/swiss-army-knife-java'>SwissArmyKnife</NavLink>
 </h5>
 <h5>Prerequisites: {appProps.prerequisites}</h5>
 
