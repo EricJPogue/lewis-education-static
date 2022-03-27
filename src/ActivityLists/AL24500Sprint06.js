@@ -4,6 +4,7 @@ import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } fr
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
 import { oreillyPlaylistOOP, internalLink } from '../Links'
 import { swissArmyKnifeV2Link } from '../Activities/SwissArmyKnife'
+import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 
 export const al24500Sprint06 = ( props ) => {
@@ -32,6 +33,7 @@ like learning how to write multithreaded Java applications will be new and likel
 {ActivitiesListIntro(sprint)}
 <ol>
 	{StandardActivitiesWithLinkAndSprint(sprint, swissArmyKnifeV2Link(), oreillyPlaylistOOP())}
+	<li>Review and update {finalProjectProposalLink()}</li>
 	<li>Review {performanceAndMultithreading()}</li>
 	<li>Review {azureWebsiteLink()}</li>
 	<li>Complete {personalInformationJSONFiles()}</li>
@@ -49,11 +51,7 @@ like learning how to write multithreaded Java applications will be new and likel
 	</div> )
 }
 
-// Todo: Fix quiz question, “If it cost $200 to fix a defect that was found in Unit Testing, how much would it likely cost to fix that same defect if it was found in Validation testing?”
-// Todo: Review and/or fix all the texting questions. Particularly the money question. 
-// Todo: Add review and update Final Project Proposal
-// Todo: Add Final Project proposals to assignments. 
-
-
 // Todo: Simplify SwissArmyKnife and SwissArmyKnife V2 activities. 
-// Todo: In Lab 3 move Coding Standards to the top.
+
+// Certified for SP22 (03/26/2022)
+

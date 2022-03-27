@@ -255,10 +255,16 @@ export const classProductSprint5 = () => {
 	const sprint = 5
 	const effort = 14
 	return ( <div>
-		
-<h5>{name5Plus(5)}</h5>
-<p>Prerequisites: {classProductSprint4Link()} </p>
-<p><em>Summary:</em> Stay focused on delivering your team’s MVP.</p>
+		<h5>{name5Plus(5)}</h5>
+		<p>Prerequisites: {classProductSprint4Link()} </p>
+		{classProduct(sprint, effort)}
+	</div> )
+}
+
+const classProduct = (sprint, effort ) => {
+	return ( <div>
+
+<p><em>Summary:</em> Stay focused on delivering and enhancing your team’s MVP.</p>
 
 <p>In sprint {sprint} you and your team will continue to focus on implementing the most valuable features from your 
 MVP. <em>Value should always be viewed from a customer perspective</em> by constantly asking the question, ”What 
@@ -304,6 +310,20 @@ approximately {effort} hours to the activity.</p>
 	<li>Update CI/CD documentation so that it is verified current, maintained as MarkDown, and linked to README.md</li>
 	<li>Do <em>not</em> break the production environment</li>
 </ol>
+
+	</div>)
+}
+
+
+export const CLASS_PRODUCT_SPRINT_6_ROUTE = 'class-product-sprint-6'
+export const classProductSprint6Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_6_ROUTE)}>{name5Plus(6)}</NavLink>)}
+export const classProductSprint6 = () => {
+	const sprint = 6
+	const effort = 14
+	return ( <div>
+		<h5>{name5Plus(6)}</h5>
+		<p>Prerequisites: {classProductSprint4Link()} </p>
+		{classProduct(sprint, effort)}
 
 	</div> )
 }

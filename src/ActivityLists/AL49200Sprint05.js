@@ -5,7 +5,6 @@ import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL0
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint05'
 
 import { lectureRecordingPlaylist } from './AL49200Sprint04'
-
 import { classProductSprint5Link } from '../Activities/ClassProduct'
 
 export const al49200Sprint05 = () => {
