@@ -33,7 +33,7 @@ export const al44000Sprint06 = () => {
 		<li>Review and analyze {ServerlessAzure()}, {ServerlessGoogle()}, and {ServerlessAWS()}</li>
 		<li>Complete {AzureFunctionsWithVSCodeAndJavaScript()} and build your <em>personal</em> serverless function</li>
 		<li>Review “Deploying Node.js on Azure (2022 Edition)” and consider how it could be an alternative to serverless functions</li>
-		<li>{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectSprint6Link(), '8 hours')}</li>
+		{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectSprint6Link(), '8 hours')}
 	</ol>
 	{Closing()}
 </div> )

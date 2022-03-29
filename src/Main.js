@@ -14,8 +14,10 @@ import { InfoEricPogue } from './Info/InfoEricPogue'
 import { Credits } from './Info/Credits'
 import { Version } from './Info/Version'
 import { StudyTable } from './Activities/StudyTable'
+
 import { Slide } from './Slides/Slide'
 import { SlideDeck } from './Slides/SlideDeck'
+import { Deck } from './Slides/SlideDeck';
 
 import { MyComponent} from './Slides/HotkeysDemo'
 
@@ -48,8 +50,15 @@ class Main extends Component {
 						<Route path='/getting-help' component={UniversityResources}/>
 						<Route path='/study-table' component={StudyTable}/>
 						<Route path='/version' component={Version}/>
+
 						<Route path={'/slide/:reference'} component={Slide}/>
 						<Route path={'/slide-deck/:route'} component={SlideDeck}/>
+
+
+						<Route path='/deck/:route' component={Deck}/>
+
+
+
 
 						<Route path='/hotkey' component={MyComponent}/>
 

@@ -33,7 +33,7 @@ export const StandardActivitiesWithLinkAndSprint = (sprint, programmingAssignmen
 
 export const StandardActivitiesClosingWithLinkAndSprint = (sprint, programmingAssignmentLink, programmingAssignmentEstimate) => { 
 	return ( <div>
-	<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+		<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 		<li><em>Submit sprint {sprint} assignments including Discussion, Quiz, Lab, and Reflection</em></li>
 	</div> ) 
 }
