@@ -6,7 +6,7 @@ export const checklist = () => { return [ preflightChecklist, instructorChecklis
 export const preflightChecklist = () => {
 	return ( <div>
 		{renderLogo()}
-		{renderHeaderAndBulletList(
+		{bulletListSlide(
 			'Preflight Checklist',
 			'In preparation for class:', [
 			'Sign into our Blackboard course shell',
@@ -28,7 +28,7 @@ export const preflightChecklist = () => {
 export const instructorChecklist = () => {
 	return ( <div>
 		{renderLogo()}
-		{renderHeaderAndBulletList(
+		{bulletListSlide(
 			'Instructor Checklist',
 			'In preparation for class:', [
 			'Load polls as needed',
@@ -40,7 +40,8 @@ export const instructorChecklist = () => {
 	</div> )
 }
 
-const renderHeaderAndBulletList = (header, intro, list) => {
+
+export const bulletListSlide = (header, intro, list) => {
 	return ( <div>
 		{renderHeader(header)}
 		{renderBulletList(intro, list)}

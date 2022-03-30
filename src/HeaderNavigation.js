@@ -3,8 +3,6 @@ import { Nav } from 'react-bootstrap'
 import { Navbar } from 'react-bootstrap'
 import { NavDropdown } from 'react-bootstrap'
 
-
-
 export const showHeaderNavigation = () => {
 	// The 'hide-nav' URL parameter must be before the React routing parameters.
 	// For example: http://localhost:3000/?hide-nav=y&#/44000-sprint03
