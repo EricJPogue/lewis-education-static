@@ -40,7 +40,6 @@ export const instructorChecklist = () => {
 	</div> )
 }
 
-
 export const bulletListSlide = (header, intro, list) => {
 	return ( <div>
 		{renderHeader(header)}
@@ -69,7 +68,7 @@ export const agendaSlide = (agendaItems) => {
 	</div>)
 }
 
-export const prework = (preworkItems) => { return basicSlideWithTitle('Prework', preworkItems) }
+export const preworkSlide = (preworkItems) => { return basicSlideWithTitle('Prework', preworkItems) }
 export const preworkForNextClass = (preworkItems) => { return basicSlideWithTitle('Prework for Next Class', preworkItems) }
 
 export const progressPolling = () => {

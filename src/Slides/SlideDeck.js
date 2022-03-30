@@ -1,6 +1,5 @@
 import React, {useState } from 'react'
 import { useHotkeys } from 'react-hotkeys-hook';
-
 import { sprint6Router } from './SLSprint06'
 
 export function Deck(props) {
