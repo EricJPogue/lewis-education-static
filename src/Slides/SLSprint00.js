@@ -1,4 +1,5 @@
 import React from 'react'
+import Table from 'react-bootstrap/Table'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
 export const checklist = () => { return [ preflightChecklist, instructorChecklist ] }
@@ -138,3 +139,53 @@ const renderOrderedList = (intro, list) => {
 const styleListItem = { fontSize:20 }
 const renderListItem = (item) => { return (<li key={item} style={styleListItem}>{item}</li>) }
 const renderList = (itemList) => { return (<div>{itemList.map(renderListItem)}</div>) }
+
+// Submission Percentage
+export const submissionPercentageDeck = () => { return [ submissionPercentage ] }
+export const submissionPercentage = () => {
+	return (<div>
+		{renderHeader('Submission Percentage')}
+
+		<h5>Submission Percentage is calculated by dividing the total number of assignments submitted by the total 
+		number of assignments due. </h5> <br />
+		<p>Active Student Assignment Submission (%): <em>98%</em></p><br />
+		<Table striped bordered hover>
+			<thead>
+				<tr>
+					<th style={{textAlign:'center'}}>Assignment</th>
+					<th style={{textAlign:'center'}}>Total Due</th>
+					<th style={{textAlign:'center'}}>Submitted</th>
+					<th style={{textAlign:'center'}}>Missing</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Discussion</td>
+					<td style={{textAlign:'right'}}>20</td>
+					<td style={{textAlign:'right'}}>19</td>
+					<td style={{textAlign:'right'}}>1</td>
+				</tr>
+				<tr>
+					<td>Quiz</td>
+					<td style={{textAlign:'right'}}>20</td>
+					<td style={{textAlign:'right'}}>20</td>
+					<td style={{textAlign:'right'}}>0</td>
+				</tr>
+				<tr>
+					<td>Lab</td>
+					<td style={{textAlign:'right'}}>20</td>
+					<td style={{textAlign:'right'}}>20</td>
+					<td style={{textAlign:'right'}}>0</td>
+				</tr>
+				<tr>
+					<td>ReflectionMissing</td>
+					<td style={{textAlign:'right'}}>20</td>
+					<td style={{textAlign:'right'}}>19</td>
+					<td style={{textAlign:'right'}}>1</td>
+				</tr>
+			</tbody>
+		</Table>
+		
+		
+	</div> )
+}

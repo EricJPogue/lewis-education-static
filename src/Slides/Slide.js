@@ -309,3 +309,27 @@ export const MWF5_5ISCPrework = () => {
 		<p>Be prepared for Quiz 5</p>
 	</div> )
 }
+
+
+export const discussionSE6 = () => {
+	const sprint = 6
+	return ( <div>
+		{renderHeader(`Breakout for Discussion ${sprint}`, null)}
+		{discussionMetrics()}<br />
+		{breakoutNoteExample()}
+	</div> )
+}
+
+const discussionMetrics = () => {
+	return ( <div>
+	{renderOrderedList(`In order to assist us in completing our sprint 6 metrics in Lab 6 we will utilize this 
+	discussion time to complete the Capacity and Committed portions of your team’s “Sprint 6 Capacity, Committed, 
+	Effort, and Delivered Metric”:`, [
+	'Assign a note taker and presenter', 
+	'Complete Discussion 6 while note taker documents discussion',
+	'Share discussion notes with team',
+	'Each team member pastes and submits an exact copy of the notes into their discussion board',
+	'Team sits back, relaxes, and tells the note taker and presenter what I wonderful job the did' ])}
+	</div> )
+}
+
