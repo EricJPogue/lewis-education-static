@@ -310,7 +310,6 @@ export const MWF5_5ISCPrework = () => {
 	</div> )
 }
 
-
 export const discussionSE6 = () => {
 	const sprint = 6
 	return ( <div>

@@ -141,51 +141,56 @@ const renderListItem = (item) => { return (<li key={item} style={styleListItem}>
 const renderList = (itemList) => { return (<div>{itemList.map(renderListItem)}</div>) }
 
 // Submission Percentage
-export const submissionPercentageDeck = () => { return [ submissionPercentage ] }
-export const submissionPercentage = () => {
+export const submissionPercentage = (assignmentData) => {
+	const calculateSubmissionPercentage = (assignmentDataIn) => {
+		let totalAssignmentsDue = 0
+		let totalAssignmentSubmitted = 0
+		for (let index=0; index<assignmentDataIn.length; index++) {
+			totalAssignmentsDue += assignmentDataIn[index].due
+			totalAssignmentSubmitted += assignmentDataIn[index].submitted
+		}
+		return Math.floor(totalAssignmentSubmitted/totalAssignmentsDue*100)
+	}
+	const renderBody = (assignmentDataIn) => {
+		return assignmentDataIn.map((row, index) => {
+			const {name, due, submitted} = row
+				return (
+					<tr key={index+1}>
+						<td>{name}</td>
+						<td style={{textAlign:'right'}}>{due}</td>
+						<td style={{textAlign:'right'}}>{submitted}</td>
+						<td style={{textAlign:'right'}}>{due-submitted}</td>
+					</tr>
+				)
+		})
+	}
+
+	const sp = calculateSubmissionPercentage(assignmentData)
+
 	return (<div>
 		{renderHeader('Submission Percentage')}
+		<p>Submission Percentage is calculated by dividing the total number of assignments submitted by the 
+		total number of assignments due.</p>
+		<h5>Assignment Submission Percentage: <em><u>{sp}%</u></em></h5><br /><br />
 
-		<h5>Submission Percentage is calculated by dividing the total number of assignments submitted by the total 
-		number of assignments due. </h5> <br />
-		<p>Active Student Assignment Submission (%): <em>98%</em></p><br />
-		<Table striped bordered hover>
+		<h5>Summary:</h5>
+		<Table style={{width:'500px'}} striped bordered hover size='sm'>
 			<thead>
 				<tr>
 					<th style={{textAlign:'center'}}>Assignment</th>
-					<th style={{textAlign:'center'}}>Total Due</th>
-					<th style={{textAlign:'center'}}>Submitted</th>
-					<th style={{textAlign:'center'}}>Missing</th>
+					<th style={{width:'100px', textAlign:'center'}}>Due</th>
+					<th style={{width:'100px', textAlign:'center'}}>Submitted</th>
+					<th style={{width:'100px', textAlign:'center'}}>Missing</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<td>Discussion</td>
-					<td style={{textAlign:'right'}}>20</td>
-					<td style={{textAlign:'right'}}>19</td>
-					<td style={{textAlign:'right'}}>1</td>
-				</tr>
-				<tr>
-					<td>Quiz</td>
-					<td style={{textAlign:'right'}}>20</td>
-					<td style={{textAlign:'right'}}>20</td>
-					<td style={{textAlign:'right'}}>0</td>
-				</tr>
-				<tr>
-					<td>Lab</td>
-					<td style={{textAlign:'right'}}>20</td>
-					<td style={{textAlign:'right'}}>20</td>
-					<td style={{textAlign:'right'}}>0</td>
-				</tr>
-				<tr>
-					<td>ReflectionMissing</td>
-					<td style={{textAlign:'right'}}>20</td>
-					<td style={{textAlign:'right'}}>19</td>
-					<td style={{textAlign:'right'}}>1</td>
-				</tr>
-			</tbody>
+			<tbody>{renderBody(assignmentData)}</tbody>
 		</Table>
-		
-		
+
+		{/*
+		<br />
+		<Table style={{width:'160px'}} className="table-borderless table-sm">
+			<tbody><tr><td>Active Students:</td><td style={{textAlign:'left'}}>21</td></tr></tbody>
+		</Table><br />
+		*/}	
 	</div> )
 }

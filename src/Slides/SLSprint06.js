@@ -1,7 +1,6 @@
-import { basicSlide, bulletListSlide, orderedListSlide, end } from './SLSprint00'
+import { basicSlide, bulletListSlide, orderedListSlide, end, submissionPercentage } from './SLSprint00'
 import { agendaSlide, preworkSlide } from './SLSprint00'
 import { checklist, preflightChecklist, instructorChecklist } from './SLSprint00'
-import { submissionPercentageDeck } from './SLSprint00'
 import { al20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { al24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
 import { al44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
@@ -21,7 +20,6 @@ export const sprint6Router = (route) => {
 		case SE_6_1of4_ROUTE: return se6_1of4()
 		case SE_6_2of4_ROUTE: return se6_2of4()
 
-		case 'metric': return submissionPercentageDeck()
 		default: return null
 	}
 }
@@ -179,8 +177,7 @@ const se6_2of4 = () => {
 	}
 	const yourProcessYourDemos = () => {
 		return basicSlide('This is Your Process', [
-			'... and these are your sprint demos.'
-		])
+			'... and these are your sprint demos.' ])
 	}
 	const teamSprintDemos = () => {
 		return basicSlide('Your Sprint Demos', [
@@ -192,8 +189,14 @@ const se6_2of4 = () => {
 		return basicSlide('Sprint 5 Metrics', [
 			'Let’s take a minute and review our Sprint 5 Submission Percentage class metric.' ])
 	}
-
-	// Todo: Create and add slide for metrics.
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:21, submitted:20 },
+			{ name: 'Quiz', due:21, submitted:21 },
+			{ name: 'Lab', due:21, submitted:20},
+			{ name: 'Reflection', due: 21, submitted: 19}
+		])
+	}
 	const classRetrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
@@ -213,7 +216,7 @@ const se6_2of4 = () => {
 	}
 
 	return [ preflightChecklist, instructorChecklist, agenda, preworkSE6_2of4, al44000Sprint06,
-		sprintDemosIntro, sprintDemos, yourProcessYourDemos, teamSprintDemos, metrics, classRetrospective, teamRetrospective, 
+		sprintDemosIntro, sprintDemos, yourProcessYourDemos, teamSprintDemos, metrics, metricsSubmissionPercentage, classRetrospective, teamRetrospective, 
 		recallSprint6Planning, discussionSE6,
 		preworkSE6_3of4, al44000Sprint06, end ]
 }
