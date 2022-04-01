@@ -120,7 +120,11 @@ const discussionFinalProjects = () => {
 	</div>)
 }
 
-const breakoutNoteExample = (sprint) => {
+
+
+
+
+export const breakoutNoteExample = (sprint) => {
 	return ( <div>
 		<div style={styleBodyText}>
 		<em><u>Required Notes Format:</u></em><br />

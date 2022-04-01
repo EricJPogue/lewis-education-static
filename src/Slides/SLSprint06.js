@@ -6,6 +6,7 @@ import { al24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
 import { al44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
 
 import { discussionSE6 } from './Slide'
+import { discussionBreakout6 } from './SLSprint00'
 
 export const sprint6Router = (route) => {
 	switch(route) {
@@ -13,6 +14,7 @@ export const sprint6Router = (route) => {
 
 		case ICS_6_1of6_ROUTE: return ics6_1of6()
 		case ICS_6_2of6_ROUTE: return ics6_2of6()
+		case ICS_6_3of6_ROUTE: return ics6_3of6()
 
 		case OOP_6_1of6_ROUTE: return oop6_1of6()
 		case OOP_6_2of6_ROUTE: return oop6_2of6()
@@ -83,6 +85,24 @@ const ics6_2of6 = () => {
 		prework_6_3of6, end ]
 }
 
+const ICS_6_3of6_ROUTE = 'ics6-3of6'
+const ics6_3of6 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Breakout Session for Discussion 6',
+			'Programming Together with Matchmaker for the Web',
+			'Prework for Next Class' ])
+	}
+	const programmingTogether = () => {
+		return basicSlide('Programming Together', [
+			'Work on Matchmaker for the Web as a class.']) 
+	}
+	return [ preflightChecklist, instructorChecklist, agenda, prework_6_3of6, al20000Sprint06, 
+		discussionBreakout6, programmingTogether,
+		prework_6_4of6, al20000Sprint06, end ]
+}
+
 // Introduction to Computer Science shared slides used in multiple sessions
 const prework_6_1of6 = () => {
 	return preworkSlide([
@@ -99,6 +119,11 @@ const prework_6_3of6 = () => {
 		'Complete through activity 7', '',
 		'Be prepared for Discussion 6',
 		'Be prepared for Lab and programming together' ])
+}
+const prework_6_4of6 = () => {
+	return preworkSlide([
+		'Complete through activity 9', '',
+		'Be prepared to discuss “Computer Science Illuminated” The World Wide Web and review our associated lecture' ])
 }
 
 // Object-Oriented Programming
@@ -194,7 +219,7 @@ const se6_2of4 = () => {
 			{ name: 'Discussion', due:21, submitted:20 },
 			{ name: 'Quiz', due:21, submitted:21 },
 			{ name: 'Lab', due:21, submitted:20},
-			{ name: 'Reflection', due: 21, submitted: 19}
+			{ name: 'Reflection', due: 21, submitted: 19 }
 		])
 	}
 	const classRetrospective = () => {

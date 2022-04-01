@@ -167,7 +167,7 @@ export const submissionPercentage = (assignmentData) => {
 
 	const sp = calculateSubmissionPercentage(assignmentData)
 
-	return (<div>
+	return ( <div>
 		{renderHeader('Submission Percentage')}
 		<p>Submission Percentage is calculated by dividing the total number of assignments submitted by the 
 		total number of assignments due.</p>
@@ -193,4 +193,30 @@ export const submissionPercentage = (assignmentData) => {
 		</Table><br />
 		*/}	
 	</div> )
+}
+
+export const discussionBreakout6 = () => {
+	return ( <div>
+		{orderedListSlide('Breakout for Discussion 6', 
+			'Please complete this breakout session as a scrum team:', [
+			'Identify note taker and presenter roles',
+			'Review and discuss topic',
+			'Note take prepares notes and presenter prepares report out',
+			'Each team member pastes and submits an exact copy of notes to their discussion board',
+			'Team relaxes and tells note take and presenter how wonderful they are' ])}<br />
+		{breakoutNoteExample()}
+	</div> )
+}
+
+const styleBodyText = { fontSize:20 }
+const breakoutNoteExample = (sprint) => {
+	return ( <div>
+		<div style={styleBodyText}>
+		<em><u>Required Notes Format:</u></em><br />
+		Team: FluffyPenguins<br />
+		Discussion: {sprint}<br />
+		Participants: Eric Pogue (note taker), Chanda Rubin (presenter), and Ted Danson
+		</div>
+		{renderOrderedList('Key discussion points:', ['Discussion point 1', 'Discussion point 2', 'Discussion point 3'])}
+	</div>)
 }
