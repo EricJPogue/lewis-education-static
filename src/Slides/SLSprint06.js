@@ -18,6 +18,7 @@ export const sprint6Router = (route) => {
 
 		case OOP_6_1of6_ROUTE: return oop6_1of6()
 		case OOP_6_2of6_ROUTE: return oop6_2of6()
+		case OOP_6_3of6_ROUTE: return oop6_3of6()
 
 		case SE_6_1of4_ROUTE: return se6_1of4()
 		case SE_6_2of4_ROUTE: return se6_2of4()
@@ -126,6 +127,7 @@ const prework_6_4of6 = () => {
 		'Be prepared to discuss “Computer Science Illuminated” The World Wide Web and review our associated lecture' ])
 }
 
+
 // Object-Oriented Programming
 const OOP_6_1of6_ROUTE = 'oop6-1of6'
 const oop6_1of6 = () => { return ics6_1of6() }
@@ -157,6 +159,24 @@ const oop6_2of6 = () => {
 		sprintDemosIntro, sprintDemos, demoAssignment, retrospective, retrospectiveBreakout, 
 		prework_6_3of6, end ]
 	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
+}
+
+const OOP_6_3of6_ROUTE = 'oop6-3of6'
+const oop6_3of6 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Breakout Session for Discussion 6',
+			'Programming Together with SwissArmyKnife',
+			'Prework for Next Class' ])
+	}
+	const programmingTogether = () => {
+		return basicSlide('Programming Together', [
+			'Work on SwissArmKnife as a class.']) 
+	}
+	return [ preflightChecklist, instructorChecklist, agenda, prework_6_3of6, al24500Sprint06, 
+		discussionBreakout6, programmingTogether,
+		prework_6_4of6, al24500Sprint06, end ]
 }
 
 // Software Engineering
