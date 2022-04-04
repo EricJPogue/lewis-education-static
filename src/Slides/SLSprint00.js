@@ -3,6 +3,11 @@ import Table from 'react-bootstrap/Table'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
 export const checklist = () => { return [ preflightChecklist, instructorChecklist ] }
+export const defaultDeck = () => { return [ noSlidesFound ] }
+
+const noSlidesFound = () => {
+	return (<div>No slides found.</div> )
+}
 
 export const preflightChecklist = () => {
 	return ( <div>

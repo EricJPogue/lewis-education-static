@@ -26,7 +26,7 @@ export const breakoutIntroducingPython6Through9 = () => {
 	})
 }
 
-const renderBreakout = (breakoutData) => { 
+export const renderBreakout = (breakoutData) => { 
 	const processItem = (item) => { return (<li key={item} style={subListItem}>{item}</li>) }
 	const processItemList = (itemList) => {
 		return (<div>{itemList.map(processItem)}</div>)
@@ -39,15 +39,15 @@ const renderBreakout = (breakoutData) => {
 	const subList = { listStyleType:'lower-alpha' }
 	
 	return ( <div>
-		<h1 style={title}>{breakoutData.title} Breakout</h1>
+		<h1 style={title}>{breakoutData.title}</h1>
 		<p style={defaultText}>In this breakout session your team will:</p>
 		<ol>
-			<li style={listItem}>Identify a presenter</li>
+			<li style={listItem}>Identify a presenter</li><br />
 			<li style={listItem}>Discuss the following topics while the presenter summarizes the conversation:</li>
 			<ol style={subList}>
 				{processItemList(breakoutData.topics)}
-			</ol>
-			<li style={listItem}>Sit back, relax, and acknowledge the bravery and dedication of the presenter</li>
+			</ol><br />
+			<li style={listItem}>Sit back, relax, and thank your presenter for their bravery and dedication</li>
 		</ol>
 	</div> ) 
 }

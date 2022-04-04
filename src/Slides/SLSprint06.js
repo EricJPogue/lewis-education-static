@@ -1,5 +1,5 @@
 import { basicSlide, bulletListSlide, orderedListSlide, end, submissionPercentage } from './SLSprint00'
-import { agendaSlide, preworkSlide } from './SLSprint00'
+import { defaultDeck, agendaSlide, preworkSlide } from './SLSprint00'
 import { checklist, preflightChecklist, instructorChecklist } from './SLSprint00'
 import { al20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { al24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
@@ -7,6 +7,7 @@ import { al44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
 
 import { discussionSE6 } from './Slide'
 import { discussionBreakout6 } from './SLSprint00'
+import { renderBreakout } from './Breakout'
 
 export const sprint6Router = (route) => {
 	switch(route) {
@@ -15,15 +16,17 @@ export const sprint6Router = (route) => {
 		case ICS_6_1of6_ROUTE: return ics6_1of6()
 		case ICS_6_2of6_ROUTE: return ics6_2of6()
 		case ICS_6_3of6_ROUTE: return ics6_3of6()
+		case ICS_6_4of6_ROUTE: return ics6_4of6()
 
 		case OOP_6_1of6_ROUTE: return oop6_1of6()
 		case OOP_6_2of6_ROUTE: return oop6_2of6()
 		case OOP_6_3of6_ROUTE: return oop6_3of6()
+		case OOP_6_4of6_ROUTE: return oop6_4of6()
 
 		case SE_6_1of4_ROUTE: return se6_1of4()
 		case SE_6_2of4_ROUTE: return se6_2of4()
 
-		default: return null
+		default: return defaultDeck()
 	}
 }
 
@@ -54,7 +57,7 @@ const ics6_1of6 = () => {
 	}
 
 	return [ preflightChecklist, instructorChecklist, 
-		agenda, prework_6_1of6, sprintPlanning, activitiesReview, activitiesBreakout, prework_6_2of6, end ]
+		agenda, icsPrework_6_1of6, sprintPlanning, activitiesReview, activitiesBreakout, icsPrework_6_2of6, end ]
 }
 
 const ICS_6_2of6_ROUTE = 'ics6-2of6'
@@ -81,9 +84,9 @@ const ics6_2of6 = () => {
 			'What improvements should we make as a class, team, or individual going forward',
 			'What advice to you have for me relating to quizzes in future classes' ])
 	}
-	return [ preflightChecklist, instructorChecklist, agenda, prework_6_2of6, al20000Sprint06, 
+	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_6_2of6, al20000Sprint06, 
 		sprintDemosIntro, sprintDemos, demoAssignment, retrospective, retrospectiveBreakout, 
-		prework_6_3of6, end ]
+		icsPrework_6_3of6, end ]
 }
 
 const ICS_6_3of6_ROUTE = 'ics6-3of6'
@@ -95,38 +98,68 @@ const ics6_3of6 = () => {
 			'Programming Together with Matchmaker for the Web',
 			'Prework for Next Class' ])
 	}
-	const programmingTogether = () => {
-		return basicSlide('Programming Together', [
-			'Work on Matchmaker for the Web as a class.']) 
+
+	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_6_3of6, al20000Sprint06, 
+		discussionBreakout6, programmingTogetherWithMatchmaker,
+		icsPrework_6_4of6, al20000Sprint06, end ]
+}
+
+const ICS_6_4of6_ROUTE = 'ics6-4of6'
+const ics6_4of6 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Breakout Session for The World Wide Web chapter and lecture',
+			'Programming Together with Matchmaker for the Web',
+			'Prework for Next Class' ])
 	}
-	return [ preflightChecklist, instructorChecklist, agenda, prework_6_3of6, al20000Sprint06, 
-		discussionBreakout6, programmingTogether,
-		prework_6_4of6, al20000Sprint06, end ]
+	const wwwBreakout = () => {
+		return renderBreakout({
+			'title':'The World Wide Web Breakout',
+			'topics': [
+				'The Internet vs. The World Wide Web',
+				'HTML, CSS, and Javascript',
+				'Java Applets, Java Servlets, and Java Server Pages',
+				'XML, DTDs, and JSON',
+				'Search Engines, Social Networks, Cookies, Web Analytics, and Web 3.0' ]
+		})
+	}
+	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_6_4of6, al20000Sprint06, 
+		wwwBreakout, programmingTogetherWithMatchmaker,
+		icsPrework_6_5of6, al20000Sprint06, end ]
 }
 
 // Introduction to Computer Science shared slides used in multiple sessions
-const prework_6_1of6 = () => {
+const programmingTogetherWithMatchmaker = () => {
+	return basicSlide('Programming Together', [
+		'Work on Matchmaker for the Web as a class.']) 
+}
+const icsPrework_6_1of6 = () => {
 	return preworkSlide([
 		'All Sprint 5 Assignments due Sunday!', '',
 		'Be prepared for Sprint 6 Planning on Monday' ])
 }
-const prework_6_2of6 = () => {
+const icsPrework_6_2of6 = () => {
 	return preworkSlide([
 		'Complete through activity 4 and start on activity 5', '',
 		'Be prepared for sprint 5 demos' ])
 }
-const prework_6_3of6 = () => {
+const icsPrework_6_3of6 = () => {
 	return preworkSlide([
 		'Complete through activity 7', '',
 		'Be prepared for Discussion 6',
-		'Be prepared for Lab and programming together' ])
+		'Be prepared for Lab and programming together with Matchmaker for the Web' ])
 }
-const prework_6_4of6 = () => {
+const icsPrework_6_4of6 = () => {
 	return preworkSlide([
 		'Complete through activity 9', '',
 		'Be prepared to discuss “Computer Science Illuminated” The World Wide Web and review our associated lecture' ])
 }
-
+const icsPrework_6_5of6 = () => {
+	return preworkSlide([
+		'Complete through activity 11', '',
+		'Be prepared for Quiz 6' ])
+}
 
 // Object-Oriented Programming
 const OOP_6_1of6_ROUTE = 'oop6-1of6'
@@ -155,9 +188,9 @@ const oop6_2of6 = () => {
 			'What improvements should we make as a class, team, or individual going forward',
 			'How can I continue to evolve my quizzes to make them more meaningful in the future' ])
 	}
-	return [ preflightChecklist, instructorChecklist, agenda, prework_6_2of6, al24500Sprint06,
+	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_6_2of6, al24500Sprint06,
 		sprintDemosIntro, sprintDemos, demoAssignment, retrospective, retrospectiveBreakout, 
-		prework_6_3of6, end ]
+		icsPrework_6_3of6, end ]
 	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
 }
 
@@ -174,9 +207,52 @@ const oop6_3of6 = () => {
 		return basicSlide('Programming Together', [
 			'Work on SwissArmKnife as a class.']) 
 	}
-	return [ preflightChecklist, instructorChecklist, agenda, prework_6_3of6, al24500Sprint06, 
+	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_6_4of6, al24500Sprint06, 
 		discussionBreakout6, programmingTogether,
-		prework_6_4of6, al24500Sprint06, end ]
+		oopPrework6_4of6, al24500Sprint06, end ]
+}
+
+const OOP_6_4of6_ROUTE = 'oop6-4of6'
+const oop6_4of6 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Breakout Session for Performance and Multithreading',
+			'Programming Together with SwissArmyKnife',
+			'Prework for Next Class' ])
+	}
+	const performanceAndMultithreadingBreakout = () => {
+		return renderBreakout({
+			'title':'Performance and Multithreading Breakout',
+			'topics': [
+				'Performance Optimization including CPU, Memory, Disk IO, Network Bandwidth, Network Latency, User Interaction',
+				'Processors, Cores, and Threads to improve Disk IO, and Network Performance',
+				'Threads, Multithreaded Applications and Theory vs Reality',
+				'Prioritizing and Testing for Performance Enhancements', 
+				'Testing Multithreaded Applications' ]
+		})
+	}
+	const programmingTogether = () => {
+		return basicSlide('Programming Together', [
+			'Work on hosting JSON, SwissArmKnife, or SleepFast as a class.']) 
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, oopPrework6_4of6, al24500Sprint06, 
+		performanceAndMultithreadingBreakout, programmingTogether,
+		oopPrework_6_5of6, al24500Sprint06, end ]
+}
+
+// Object-Oriented Programming Shared Slides
+const oopPrework6_4of6 = () => {
+	return preworkSlide([
+		'Complete through activity 9', '',
+		'Be prepared to discuss Performance and Multithreading' ])
+}
+const oopPrework_6_5of6 = () => {
+	return preworkSlide([
+		'Complete through activity 12', '',
+		'Be prepared to discuss Object-Oriented Programming Languages and Platforms',
+		'Be prepared for Quiz 6' ])
 }
 
 // Software Engineering
@@ -319,6 +395,3 @@ const activitiesReview = () => {
 	return basicSlide('Review Activity List and Assignments', [
 		'Please open Blackboard and review our activity list and assignments together.' ])
 }
-
-
-

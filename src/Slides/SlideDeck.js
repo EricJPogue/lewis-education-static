@@ -13,18 +13,26 @@ export function Deck(props) {
 	useHotkeys('left, up', () => { decrementSlide() })
 
 	const displaySlide = (index) => {
-		if ((index >= 0) && (index < deck.length)) {
+		if (index < 0) { 
+			setCount(0)
+			return deck[0]()
+		} else if (index >= deck.length) { 
+			setCount(deck.length-1) 
+			return deck[deck.length-1]()
+		} else {
 			return deck[index]()
 		}
-		if (index < 0) { setCount(0) }
-		if (index >= deck.length) { setCount(deck.length-1) }
-		return null
+	}
+
+	const displayFooter = () => {
+		return ( <div>
+			<p style={{flex:1, position:"absolute", right:80, bottom:20}}><span onClick={()=>decrementSlide()}>&larr; </span>
+			{count+1} of {deck.length}<span onClick={()=>incrementSlide()}> &rarr;</span></p>
+		</div> )
 	}
 
 	return ( <div>
 		{displaySlide(count)}
-		<p style={{flex:1, position:"absolute", right:80, bottom:20}}><span onClick={()=>decrementSlide()}>&larr; </span>
-		{count+1} of {deck.length}
-		<span onClick={()=>incrementSlide()}> &rarr;</span></p>
+		{displayFooter()}
 	</div> )
   }
