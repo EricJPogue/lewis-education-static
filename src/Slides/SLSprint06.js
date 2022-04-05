@@ -1,5 +1,5 @@
 import { basicSlide, bulletListSlide, orderedListSlide, end, submissionPercentage } from './SLSprint00'
-import { defaultDeck, agendaSlide, preworkSlide } from './SLSprint00'
+import { defaultDeck, agendaSlide, preworkSlide, quiz } from './SLSprint00'
 import { checklist, preflightChecklist, instructorChecklist } from './SLSprint00'
 import { al20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { al24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
@@ -25,6 +25,7 @@ export const sprint6Router = (route) => {
 
 		case SE_6_1of4_ROUTE: return se6_1of4()
 		case SE_6_2of4_ROUTE: return se6_2of4()
+		case SE_6_3of4_ROUTE: return se6_3of4()
 
 		default: return defaultDeck()
 	}
@@ -284,7 +285,6 @@ const se6_1of4 = () => {
 		sprintPlanning, activitiesReview, preworkSE6_2of4, reviewBacklogGrooming, sprint6Planning, end ]
 }
 
-// Software Engineering
 const SE_6_2of4_ROUTE = 'se6-2of4'
 const se6_2of4 = () => {
 	const agenda = () => {
@@ -342,6 +342,44 @@ const se6_2of4 = () => {
 		preworkSE6_3of4, al44000Sprint06, end ]
 }
 
+// Software Engineering
+const SE_6_3of4_ROUTE = 'se6-3of4'
+const se6_3of4 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework',
+			'Breakout Session for Project Management, Scrum, Pairs, and Version Control',
+			'Azure Functions Progress',
+			'Practical Diversity and Global Software Development Teams',
+			'Prework for Next Class',
+			'Quiz 6' ])
+	}
+	const projectManagementScrumPairsAndVersionControlBreakout = () => {
+		return renderBreakout({
+			'title':'Project Management, Scrum, Pairs, and Version Control',
+			'topics': [
+				'Team sizes, SDLCs, and key Scrum Roles & Rituals',
+				'Project Managers, Project Management, and the Six Phases of a Project',
+				'Priority of specialized vs generalized skills in Agile vs Waterfall or Iterative',
+				'Configuration management, version control, merge conflicts, and branching',
+				'Reporting and fixing bugs: The five R’s', 
+				'The two most important books about managing people (according to the authors)',
+				'Paired Programming' ]
+		})
+	}
+	const azureFunctionsProgress = () => {
+		return basicSlide('Azure Functions Progress', [
+			'I‘ve have heard rumors of issues in creating Azure functions. What has been your experience with activity 11?' ])
+	}
+	const practicalDiversity = () => {
+		return basicSlide('Practical Diversity and Global Software Development', [
+			'As time allows, I would like to start a discussion about practical diversity and global software development teams.' ])
+	}
+	return [ preflightChecklist, instructorChecklist, agenda, preworkSE6_3of4, al44000Sprint06,
+		projectManagementScrumPairsAndVersionControlBreakout, azureFunctionsProgress, practicalDiversity,
+		preworkSE6_4of4, quiz6, end ]
+}
+
 // Software Engineering shared slides used in multiple sessions
 const preworkSE6_1of4 = () => {
 	return basicSlide('Prework', [
@@ -361,7 +399,12 @@ const preworkSE6_3of4 = () => {
 		'Be prepared Breakout on Project Management, Scrum, Pairs, and Version Control Systems',
 		'Be prepared for Quiz 6' ])
 }
-
+const preworkSE6_4of4 = () => {
+	return basicSlide('Prework', [
+		'Complete through activity 12', '',
+		'Be prepared Backlog Grooming in preparation for Sprint 7 Planning',
+		'Be prepared Lab' ])
+}
 // Shared slides used across multiple classes
 const sprintDemosIntro = () => {
 	return bulletListSlide('Sprint Demo Presenters', 
@@ -381,7 +424,6 @@ const demoAssignment = () => {
 	return basicSlide('Complete Demo Assignment', [
 		'If you have completed your sprint demo, please also submit your lab demo assignment in Blackboard.' ])
 }
-
 const sprintReviewAgendaMWF = (sprint) => {
 	return agendaSlide([
 		'Prework for Today',
@@ -395,3 +437,6 @@ const activitiesReview = () => {
 	return basicSlide('Review Activity List and Assignments', [
 		'Please open Blackboard and review our activity list and assignments together.' ])
 }
+
+const quiz6 = () => { return quiz(6) }
+

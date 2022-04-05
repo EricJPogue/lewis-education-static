@@ -1,9 +1,54 @@
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
+import { makeInternalURL } from './ActivityRouter'
 
 import BloodPressureImage from './HealthRiskCalculatorBloodPressure.png';
 import BodyMassIndexImage from './HealthRiskCalculatorBodyMassIndex.png';
+
+
+// const HEALTH_RISK_CALCULATOR_PYTHON_OR_WEB_NAME = HealthRiskCalculatorPythonProperties.name + ' or ' + HealthRiskCalculatorWebProperties.name
+
+
+const HealthRiskCalculatorPythonProperties = {
+	'name': 'Health Insurance Risk Calculator with Python', 
+	'language': 'Python',
+	'prerequisites': 'Python (v3), VS Code, and Terminal',
+	'type': 'command-line application written in the Python language',
+	'requirement1_1': 'Is implemented in a single Python (.py) file named “RiskCalculator.py”',
+	'requirement1_2': 'Successfully executes from the command line by typing “python3 RiskCalculator.py',
+	'internalLink': '/activity/health-risk-calculator-python'
+}
+const HEALTH_RISK_CALCULATOR_PYTHON_NAME = HealthRiskCalculatorPythonProperties.name
+export const HEALTH_RISK_CALCULATOR_PYTHON_ROUTE = 'health-risk-calculator-python'
+export const healthRiskCalculatorPythonLink = () => { return (<NavLink to={makeInternalURL(HEALTH_RISK_CALCULATOR_PYTHON_ROUTE)}>{HEALTH_RISK_CALCULATOR_PYTHON_NAME}</NavLink>) }
+export const healthRiskCalculatorPython = () => { return  HealthRiskCalculator(HealthRiskCalculatorPythonProperties) }
+
+const HealthRiskCalculatorWebProperties = {
+	'name': 'Health Insurance Risk Calculator for the Web', 
+	'language': 'Web',
+	'prerequisites': 'HTML, CSS, JavaScript, VS Code, and Terminal',
+	'type': 'Web application using HTML, CSS, and JavaScript',
+	'requirement1_1': 'Is implemented in a single file name “index.html”',
+	'requirement1_2': 'Is hosted as a public website in Microsoft Azure',
+	'internalLink': '/activity/health-risk-calculator-web'
+}
+const HEALTH_RISK_CALCULATOR_WEB_NAME = HealthRiskCalculatorWebProperties.name
+export const HEALTH_RISK_CALCULATOR_WEB_ROUTE = 'health-risk-calculator-web'
+export const healthRiskCalculatorWebLink = () => {return (<NavLink to={makeInternalURL(HEALTH_RISK_CALCULATOR_WEB_ROUTE)}>{HEALTH_RISK_CALCULATOR_WEB_NAME}</NavLink>)}
+export const healthRiskCalculatorWeb = () => { return  HealthRiskCalculator(HealthRiskCalculatorWebProperties) }
+
+export const healthRiskCalculatorWebOrPythonLink = () => { return HealthRiskCalculatorWebOrPython2()}
+const HealthRiskCalculatorWebOrPython2 = () => {
+	let nameWeb = HealthRiskCalculatorWebProperties.name
+	let linkWeb = HealthRiskCalculatorWebProperties.internalLink
+	let namePython = HealthRiskCalculatorPythonProperties.name
+	let linkPython = HealthRiskCalculatorPythonProperties.internalLink
+	return (<span><NavLink to={linkWeb}>{nameWeb}</NavLink> or <NavLink to={linkPython}>{namePython}</NavLink></span>)
+}
+
+//case 'health-risk-calculator-python': return HealthRiskCalculatorPython()
+//case 'health-risk-calculator-web': return HealthRiskCalculatorWeb()
 
 // Define exported activities. 
 const sup = (text) => { return (<sup>{text}</sup>)}
@@ -23,25 +68,9 @@ const HealthRiskCalculatorWebOrPython = (prefix, postfix) => {
 	return (<div>{prefix} <NavLink to={linkWeb}>{nameWeb}</NavLink> or <NavLink to={linkPython}>{namePython}</NavLink> {postfix}</div>)
 }
 
-const HealthRiskCalculatorWebProperties = {
-	'name': 'Health Insurance Risk Calculator for the Web', 
-	'language': 'Web',
-	'prerequisites': 'HTML, CSS, JavaScript, VS Code, and Terminal',
-	'type': 'Web application using HTML, CSS, and JavaScript',
-	'requirement1_1': 'Is implemented in a single file name “index.html”',
-	'requirement1_2': 'Is hosted as a public website in Microsoft Azure',
-	'internalLink': '/activity/health-risk-calculator-web'
-}
 
-const HealthRiskCalculatorPythonProperties = {
-	'name': 'Health Insurance Risk Calculator with Python', 
-	'language': 'Python',
-	'prerequisites': 'Python (v3), VS Code, and Terminal',
-	'type': 'command-line application written in the Python language',
-	'requirement1_1': 'Is implemented in a single Python (.py) file named “RiskCalculator.py”',
-	'requirement1_2': 'Successfully executes from the command line by typing “python3 RiskCalculator.py',
-	'internalLink': '/activity/health-risk-calculator-python'
-}
+
+
 
 const HealthRiskCalculatorJavaProperties = {
 	'name': 'Health Insurance Risk Calculator with Java', 
@@ -62,9 +91,8 @@ const HealthRiskCalculatorGoProperties = {
 }	
 	
 const HealthRiskCalculator = (appProps) => {
-	return (
-	
-<div>
+	return ( <div>
+		
 <br />
 <h4>{appProps.name}</h4>
 <h5>Summary: Create a {appProps.language} application that will calculate the health risk of a new insurance company customer.
@@ -164,8 +192,7 @@ improve on his design in any event.
 
 <em>Requirement 4</em>
 <p>Finally test and refactor the application so that it implements all appropriate <NavLink to='/activity/coding-standards'>coding standards </NavLink></p>
-</div> )
-
+	</div> )
 }
 
 export const HealthRiskCalculatorExamples = () => {

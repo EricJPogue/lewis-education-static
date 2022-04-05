@@ -69,4 +69,4 @@ export const StandardActivitiesClosingWithLink = (programmingAssignmentLink, pro
 }
 
 export const Closing = () => { return ( <p>Remember to tell your Scrum teammates how much you appreciate them and to 
-	regularly check for updates to our <NavLink to='/activity/programming-together'>programming together</NavLink> tutorials.</p> ) }
+	check for <NavLink to='/activity/programming-together'>programming together</NavLink> tutorials.</p> ) }
