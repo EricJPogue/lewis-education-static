@@ -140,7 +140,6 @@ test, and production environments?</p>
 const FINAL_PROJECT_SPRINT_6_NAME = 'Final Project Sprint 6'
 export const FINAL_PROJECT_SPRINT_6_ROUTE = 'final-project-sprint-6'
 export const finalProjectSprint6Link = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_SPRINT_6_ROUTE)}>{FINAL_PROJECT_SPRINT_6_NAME}</NavLink>)}
-
 export const finalProjectSprint6 = () => {
 	return (
 	
@@ -163,46 +162,35 @@ describe a story that is 100% complete. At a minimum, our definitions of <em>don
 includes that a story is fully implemented the story’s user centric functionality, deployed tou the team’s production 
 website, and is “demo-able” by every member of the team.</p>
 
-<p>Create something that adds value and you can be proud of creating.</p>
-
-<h6>Requirement 1: Complete sprint 5 Review and Retrospective</h6>
-<h6>Requirement 2: Complete sprint 6 Planning by the end of the first class session</h6>
-<h6>Requirement 3: Execute sprint 6</h6>
-<h6>Requirement 4: Complete sprint 6 backlog grooming in preparation for sprint 7 planning</h6>
+<p>Create something that adds value and that you can be proud of creating.</p>
+{sprintRequirements(6)}
 </div> )
 }
 
-export const Start_FinalProjectSprint7 = () => { return (<div>Start working on <NavLink to='/activity/final-project-sprint-7'>Final Project Sprint 7</NavLink></div>) }
-export const Complete_FinalProjectSprint7 = () => { return (<div>Complete <NavLink to='/activity/final-project-sprint-7'>Final Project Sprint 7</NavLink><sup>~10 hours per team member</sup></div>) }
-export const FinalProjectSprint7 = () => {
-	return (
-	
-<div>
-<br />
-<h4>Final Project Sprint 7</h4>
-<h5>Summary: Sprint 7. Let’s keep building on we have accomplished.</h5>
-<h5>Prerequisites:</h5>
-<ul style={{listStyleType:'square'}}>
-	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
-	<li><NavLink to='/activity/final-project-sprint-6'>Final Project Sprint 6</NavLink></li>
-</ul>
+const sprintRequirements = (sprint) => {
+	return ( <div>
+		<h6>Requirement 1: Complete sprint {sprint-1} Review and Retrospective</h6>
+		<h6>Requirement 2: Complete sprint {sprint} Planning by the end of the first class session</h6>
+		<h6>Requirement 3: Execute sprint {sprint}</h6>
+		<h6>Requirement 4: Complete sprint {sprint} backlog grooming in preparation for sprint {sprint+1} planning</h6>
+	</div> )
+}
 
-<p>We should be gaining a rhythm in our working together as a team by now. Hopefully we delivered something useful 
-in sprint 6. Now it’s time to focus continuous improvement and living up sprint 7 commitments.</p>
+const FINAL_PROJECT_SPRINT_7_NAME = 'Final Project Sprint 7'
+export const FINAL_PROJECT_SPRINT_7_ROUTE = 'final-project-sprint-7'
+export const finalProjectSprint7Link = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_SPRINT_7_ROUTE)}>{FINAL_PROJECT_SPRINT_7_NAME}</NavLink>)}
+export const finalProjectSprint7 = () => { 
+	return ( <div>
+		<br />
+		<h4>Final Project Sprint 7</h4>
+		<h5>Summary: Let’s keep building on we have already delivered.</h5>
 
-<p>Part of our rhythm should include:</p>
-<ul style={{listStyleType:'square'}}>
-	<li>Demo, release, and reflect on what was delivered in the previous sprint</li>
-	<li>Plan for the current sprint</li>
-	<li>Deliver committed stories in current sprint</li>
-	<li>Groom the story backlog for the next sprint</li>
-</ul>
+		<p>We should be gaining a rhythm as we continue to work together as a team by now. Hopefully we delivered something 
+		useful in sprint 6. Now it’s time to focus on continuous improvement and living up to our sprint 7 commitments.</p>
 
-<p>High performing scrum teams are able to consistently allocate 80% or more of their effort to Delivery of current 
-sprint stories while still effectively completing demo, release, reflect, and planning activities. We have 
-approximately 10 hours per person to allocate to delivering something special. How can we stay focused and deliver
-something special?</p>
-</div> )
+		<p>Part of that rhythm should include our requirements for the sprint.</p>
+		{sprintRequirements(7)}
+	</div> )
 }
 
 export const Start_FinalProjectSprint8 = () => { return (<div>Start working on <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink></div>) }
@@ -213,12 +201,7 @@ export const FinalProjectSprint8 = () => {
 <div>
 <br />
 <h4>Final Project Sprint 8</h4>
-<h5>Summary: Sprint 8. This is it. Let’s build something special.</h5>
-<h5>Prerequisites:</h5>
-<ul style={{listStyleType:'square'}}>
-	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
-	<li><NavLink to='/activity/final-project-sprint-7'>Final Project Sprint 7</NavLink></li>
-</ul>
+<h5>Summary: This is it our final sprint. Let’s build something special.</h5>
 
 <p>We should be working with a solid cadence. Now it’s time to focus all of our energy on building something special.</p>
 
@@ -234,5 +217,5 @@ export const FinalProjectSprint8 = () => {
 current sprint stories while still effectively completing demo, release, reflect, and planning activities. We don’t need 
 to plan for the next sprint because this is it. You should plan on each team member allocating approximately 12 this 
 sprint.</p>
-</div> )
+	</div> )
 }

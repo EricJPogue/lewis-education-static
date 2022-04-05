@@ -14,7 +14,6 @@ import { ExampleCode } from './Activities/ExampleCode'
 import { FaceDrawWeb, FaceDrawReact } from './Activities/FaceDraw'
 import { MosaicWeb, MosaicReact, MosaicV2React } from './Activities/Mosaic'
 
-// import { SwissArmyKnifeJavaV2 } from './Activities/SwissArmyKnife'
 import { ThunderbirdJava } from './Activities/Thunderbird'
 
 import { Tools } from './Activities/ToolsOfTheTrade'
@@ -24,7 +23,7 @@ import { CodingStandards, CodingStandardsValidator } from './Activities/CodingSt
 import { QuizMaster } from './Activities/QuizMaster'
 import { GitCommands } from './Activities/GitCommands'
 
-import { FinalProject, FinalProjectDistributed, /* FinalProjectSprint5,  FinalProjectSprint6, */ FinalProjectSprint7, FinalProjectSprint8 } from './Activities/FinalProject'
+import { FinalProject, FinalProjectDistributed, /* FinalProjectSprint5,  FinalProjectSprint6, FinalProjectSprint7, */ FinalProjectSprint8 } from './Activities/FinalProject'
 
 import { HTML } from './Activities/HTML'
 import { PythonW3C } from './Activities/PythonW3C'
@@ -100,7 +99,7 @@ class Activity extends Component {
 			case 'final-project-distributed': return FinalProjectDistributed()
 			// case 'final-project-sprint-5': return FinalProjectSprint5()
 			// case 'final-project-sprint-6': return FinalProjectSprint6()
-			case 'final-project-sprint-7': return FinalProjectSprint7()
+			// case 'final-project-sprint-7': return FinalProjectSprint7()
 			case 'final-project-sprint-8': return FinalProjectSprint8()
 
 			case 'git-commands': return GitCommands()

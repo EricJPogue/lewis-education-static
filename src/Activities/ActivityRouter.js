@@ -15,6 +15,7 @@ import { FAVORITE_HOBBY_ROUTE, favoriteHobby} from './WebMyFavoriteHobby'
 import { FINAL_PROJECT_PROPOSAL_ROUTE, finalProjectProposal } from './FinalProjectProposal'
 import { FINAL_PROJECT_SPRINT_5_ROUTE, finalProjectSprint5 } from './FinalProject'
 import { FINAL_PROJECT_SPRINT_6_ROUTE, finalProjectSprint6 } from './FinalProject'
+import { FINAL_PROJECT_SPRINT_7_ROUTE, finalProjectSprint7 } from './FinalProject'
 import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebGettingToKnowEachOther'
 import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbbreviated } from './WebGettingToKnowEachOtherAbbreviated'
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
@@ -33,10 +34,13 @@ import { PIT_HUB_ROUTE, pitHub } from './PitHub'
 import { QUIZ_MASTER_MERN_ROUTE, quizMasterMERN } from './QuizMasterMERN'
 import { WEB_RESUME_ROUTE, webResume } from './WebResume'
 
-const BASE_ACTIVITY_URL = '/activity/'
+import { introductionToReact } from './IntroductionToReact'
+
+// const BASE_ACTIVITY_URL = '/activity/'
 export const makeInternalURL = (activityRoute) => {
-	return BASE_ACTIVITY_URL + activityRoute
+	return BASE_ACTIVITY_ROUTE + activityRoute
 }
+export const BASE_ACTIVITY_ROUTE = '/activity/'
 
 export const routeActivity = (activityRoute) => {
 	switch(activityRoute) {
@@ -57,6 +61,7 @@ export const routeActivity = (activityRoute) => {
 		case FINAL_PROJECT_PROPOSAL_ROUTE: return finalProjectProposal()
 		case FINAL_PROJECT_SPRINT_5_ROUTE: return finalProjectSprint5()
 		case FINAL_PROJECT_SPRINT_6_ROUTE: return finalProjectSprint6()
+		case FINAL_PROJECT_SPRINT_7_ROUTE: return finalProjectSprint7()
 		case GETTING_TO_KNOW_EACH_OTHER_ROUTE: return gettingToKnowEachOther()
 		case GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE: return gettingToKnowEachOtherAbbreviated()
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()
@@ -74,6 +79,9 @@ export const routeActivity = (activityRoute) => {
 		case PIT_HUB_ROUTE: return pitHub()
 		case QUIZ_MASTER_MERN_ROUTE: return quizMasterMERN()
 		case WEB_RESUME_ROUTE: return webResume()
+
+		case introductionToReact.route: return introductionToReact.function()
+
 		default: return null
 	}
 }
