@@ -14,7 +14,7 @@ import { ExampleCode } from './Activities/ExampleCode'
 import { FaceDrawWeb, FaceDrawReact } from './Activities/FaceDraw'
 import { MosaicWeb, MosaicReact, MosaicV2React } from './Activities/Mosaic'
 
-import { ThunderbirdJava } from './Activities/Thunderbird'
+// import { ThunderbirdJava } from './Activities/Thunderbird'
 
 import { Tools } from './Activities/ToolsOfTheTrade'
 import { Repository } from './Activities/Repository'
@@ -131,7 +131,7 @@ class Activity extends Component {
 			// case 'swiss-army-knife-java': return SwissArmyKnifeJava()
 			// case 'swiss-army-knife-java-v2': return SwissArmyKnifeJavaV2()	
 
-			case 'thunderbird-java': return ThunderbirdJava()
+			// case 'thunderbird-java': return ThunderbirdJava()
 
 			case 'health-risk-calculator-python': return HealthRiskCalculatorPython()
 			case 'health-risk-calculator-web': return HealthRiskCalculatorWeb()

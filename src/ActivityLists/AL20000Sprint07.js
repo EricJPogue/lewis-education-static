@@ -7,22 +7,7 @@ import { oreillyPlaylistICS, internalLink } from '../Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
 
-const list20000Sprint07 = () => {
-	const daleSecurityLecture = () => { return internalLink('lecture', '/activity-dale/17' )}
-	const sprint = 7
-	return ( <div>
-		{ActivitiesListIntro(sprint)}
-		<ol>
-			{StandardActivitiesWithLinkAndSprint(sprint, healthRiskCalculatorWebOrPythonLink(), oreillyPlaylistICS())}
-			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Security and review our associated {daleSecurityLecture()}</li>
-		
-			{InitialPost()}	
-			<li>Verify that you will be presenting your Final Project on <em>{getFinalExamDateAndTime()}</em></li>
-			<li>Make and last updates to your {finalProjectProposalLink()}</li>
-			{StandardActivitiesClosingWithLinkAndSprint(sprint, healthRiskCalculatorWebOrPythonLink(), '8 hours')}
-		</ol>
-	</div>)
-}
+
 
 export const al20000Sprint07 = () => {
 	return ( <div>
@@ -52,6 +37,23 @@ export const al20000Sprint07 = () => {
 		{list20000Sprint07()}
 		{Closing()}
 	</div> )
+}
+
+const list20000Sprint07 = () => {
+	const daleSecurityLecture = () => { return internalLink('lecture', '/activity-dale/17' )}
+	const sprint = 7
+	return ( <div>
+		{ActivitiesListIntro(sprint)}
+		<ol>
+			{StandardActivitiesWithLinkAndSprint(sprint, healthRiskCalculatorWebOrPythonLink(), oreillyPlaylistICS())}
+			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Security and review our associated {daleSecurityLecture()}</li>
+		
+			{InitialPost()}	
+			<li>Verify that you will be presenting your Final Project on <em>{getFinalExamDateAndTime()}</em></li>
+			<li>Make and last updates to your {finalProjectProposalLink()}</li>
+			{StandardActivitiesClosingWithLinkAndSprint(sprint, healthRiskCalculatorWebOrPythonLink(), '8 hours')}
+		</ol>
+	</div>)
 }
 
 // Certified for SP22 (04/05/2022)
