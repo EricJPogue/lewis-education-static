@@ -32,8 +32,8 @@ const SwissArmyKnifeJavaV2Properties = {
 	'requirement1_2': 'Successfully compiles from the command line using “javac *.java” and executes by typing “java sak”'
 }
 
+let indexFileURL = externalLink('https://thunderbird-index-sp22.azurewebsites.net/index-w0a6zk195d', 'https://thunderbird-index-sp22.azurewebsites.net/index-w0a6zk195d')
 const SwissArmyKnife = (appProps) => {
-	let indexFileURL = externalLink('https://thunderbird-index-sp22.azurewebsites.net/index-w0a6zk195d', 'https://thunderbird-index-sp22.azurewebsites.net/index-w0a6zk195d')
 	return (
 	
 <div>
@@ -136,7 +136,7 @@ from immobility.</p>
 <p>Enhance your application by implementing an HTTPRequestIndex feature that it:</p>
 <ol>
 	<li>Responds to the “-HttpRequestIndex [URL]” command-line parameter assuming case insensitivity</li>
-	<li>Opens the following JSON index file <a href='https://thunderbird-index.azurewebsites.net/w0a6zk195d.json' target='_blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>Opens the following JSON index file {indexFileURL}</li>
 	<li>Parses the index file for the additional URLs</li>
 	<li>Retrieves the data from each additional URL</li>
 	<li>Prints the index data followed by each individual URL data elegantly to the command-line</li>
@@ -165,7 +165,7 @@ from immobility.</p>
 <em>Requirement 7</em>
 <p>Implement a HTTPValidateIndex feature that validates each personal information JSON files to make sure that:</p>
 <ol>
-	<li>Each personal information file referenced in the index file <a href='https://thunderbird-index.azurewebsites.net/w0a6zk195d.json' target='_blank' rel='noopener noreferrer'>[link]</a> exists</li>
+	<li>Each personal information file referenced in the index file {indexFileURL} exists</li>
 	<li>The "firstName" and "lastName" fields exist and have a length of 2 to 16 characters (inclusive)</li>
 	<li>If the optional "preferredName" field exists, it meets the same length requirements as "firstName" and "lastName"</li>
 	<li>Prints each personal information JSON file followed by a “passed” or “failed - [[error message]]” validation statement</li>
