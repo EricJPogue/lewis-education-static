@@ -2,6 +2,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import { BASE_ACTIVITY_ROUTE } from './ActivityRouter'
+
 export const ThunderbirdJava  = () => { return Thunderbird(ThunderbirdJavaProperties) }
 
 const ThunderbirdJavaProperties = {
@@ -85,4 +87,13 @@ to what you created in ThunderbirdLite), and then utilize the code as the starti
 		opposite direction</li>
 </ol>
 </div> )
+}
+
+
+export const thunderbird = { 'name':'Thunderbird', 'route':'thunderbird', 'function': ThunderbirdJava }
+export const thunderbirdLink = () => { return makeNavigationLink(thunderbird) }
+
+const makeNavigationLink = (activity) => {
+	console.log('activity='+activity)
+	return ( <NavLink to={BASE_ACTIVITY_ROUTE+activity.route}>{activity.name}</NavLink> )
 }

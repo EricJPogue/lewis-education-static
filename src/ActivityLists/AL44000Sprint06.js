@@ -41,4 +41,6 @@ export const al44000Sprint06 = () => {
 
 // Certified for SP22 (03/25/2022)
 
+// Todo: Consider moving the Sprint 5 Metric - Capacity, Committed, Effort, and Delivered to a sprint 6 delivery metric. 
+
 

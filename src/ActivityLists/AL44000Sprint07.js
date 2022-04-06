@@ -8,7 +8,7 @@ import { oreillyPlaylistSE, internalLink } from '../Links'
 
 export const al44000Sprint07 = () => {
 	return ( <div>
-		<h5>Sprint 7: Design Patterns, React, and Final Project</h5>
+		<h5>Sprint 7: Final Project, Design Patterns, and React</h5>
 
 		<p>Welcome to sprint 7. This sprint will see us continuing to work on our final project, optimizing your team’s 
 		Agile processes, leaning about React, and looking at Design Patterns.</p>
@@ -42,6 +42,3 @@ const list44000Sprint07 = () => {
 		</ol>
 	</div> )
 }
-
-// Todo: The following line was removed SP22. Consider if it should be re-add in some form. 
-// <li>Complete <NavLink to='/activity-architecture/application-architecture-part1'>Application Architectures, Object-Oriented Programming, and Databases - Part 1</NavLink></li>

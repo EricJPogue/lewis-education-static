@@ -29,6 +29,7 @@ import { OVAL_DRAW_PLUS_JAVA_ROUTE, ovalDrawPlusJava } from './OvalDrawPlus'
 import { SEAT_SELECTOR_MERN_ROUTE, seatSelectorMERN } from './SeatSelectorMERN'
 import { SWISS_ARMY_KNIFE_ROUTE, swissArmyKnife } from './SwissArmyKnife'
 import { SWISS_ARMY_KNIFE_V2_ROUTE, swissArmyKnifeV2 } from './SwissArmyKnife'
+import { thunderbird } from './Thunderbird'
 import { TURTLEDRAW_ROUTE, turtledraw } from './PythonTurtleDraw'
 import { PIT_HUB_ROUTE, pitHub } from './PitHub'
 import { QUIZ_MASTER_MERN_ROUTE, quizMasterMERN } from './QuizMasterMERN'
@@ -81,6 +82,7 @@ export const routeActivity = (activityRoute) => {
 		case WEB_RESUME_ROUTE: return webResume()
 
 		case introductionToReact.route: return introductionToReact.function()
+		case thunderbird.route: return thunderbird.function()
 
 		default: return null
 	}
