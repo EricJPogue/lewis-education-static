@@ -4,6 +4,7 @@ import { checklist, preflightChecklist, instructorChecklist } from './SLSprint00
 import { al20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { al24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
 import { al44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
+import { syllabus } from './syllabus'
 
 import { discussionSE6 } from './Slide'
 import { discussionBreakout6 } from './SLSprint00'
@@ -28,6 +29,9 @@ export const sprint6Router = (route) => {
 		case SE_6_1of4_ROUTE: return se6_1of4()
 		case SE_6_2of4_ROUTE: return se6_2of4()
 		case SE_6_3of4_ROUTE: return se6_3of4()
+		case SE_6_4of4_ROUTE: return se6_4of4()
+
+		case 'syllabus': return syllabus()
 
 		default: return defaultDeck()
 	}
@@ -378,7 +382,6 @@ const se6_2of4 = () => {
 		preworkSE6_3of4, al44000Sprint06, end ]
 }
 
-// Software Engineering
 const SE_6_3of4_ROUTE = 'se6-3of4'
 const se6_3of4 = () => {
 	const agenda = () => {
@@ -416,6 +419,36 @@ const se6_3of4 = () => {
 		preworkSE6_4of4, quiz6, end ]
 }
 
+const SE_6_4of4_ROUTE = 'se6-4of4'
+const se6_4of4 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Sprint 7 Planning Expectations', 
+			'Backlog Grooming in Preparation for Tuesday’s Sprint 7 Sprint Planning',
+			'Lab... as time allows',
+			'Practical Diversity and Global Software Development Teams... another day',
+			'Prework for Next Class' ])
+	}
+	const planningExpectations = () => { return basicSlide('Sprint 7 Planning Expectations', [
+		'Review Blackboard Announcement from this morning.' ]) 
+	}
+	const backlogGrooming = () => { return basicSlide('Backlog Grooming', [
+			'Backlog Grooming in Preparation for Tuesday’s Sprint 7 Sprint Planning', '',
+			'** Goal: Each team member needs to provide Product Owner at least two valid user stories estimated at ten or more story points prior to class on Tuesday' ]) 
+	}
+	const lab = () => { return basicSlide('Lab', [
+			'Continue working in scrum teams on Sprint 6 assignments', 
+			'And/or do we need to talk about Azure Functions?' ]) 
+	}
+	const practicalDiversity = () => { return basicSlide('Practical Diversity and Global Software Development', [
+			'As time allows, I would like to start a discussion about practical diversity and global software development teams.' ])
+	}
+	return [ preflightChecklist, instructorChecklist, agenda, preworkSE6_4of4, al44000Sprint06,
+		planningExpectations, backlogGrooming, lab, practicalDiversity,
+		preworkSE7_1of4, end ]
+}
+
 // Software Engineering shared slides used in multiple sessions
 const preworkSE6_1of4 = () => {
 	return basicSlide('Prework', [
@@ -441,6 +474,13 @@ const preworkSE6_4of4 = () => {
 		'Be prepared Backlog Grooming in preparation for Sprint 7 Planning',
 		'Be prepared Lab' ])
 }
+
+const preworkSE7_1of4 = () => {
+	return basicSlide('Prework for Today', [
+		'All Sprint 6 Assignments due Sunday!', '',
+		'** Be prepared for in-person Sprint 7 Planning on Tuesday' ])
+}
+
 // Shared slides used across multiple classes
 const sprintDemosIntro = () => {
 	return bulletListSlide('Sprint Demo Presenters', 
