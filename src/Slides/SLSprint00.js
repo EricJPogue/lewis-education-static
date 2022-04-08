@@ -190,13 +190,6 @@ export const submissionPercentage = (assignmentData) => {
 			</thead>
 			<tbody>{renderBody(assignmentData)}</tbody>
 		</Table>
-
-		{/*
-		<br />
-		<Table style={{width:'160px'}} className="table-borderless table-sm">
-			<tbody><tr><td>Active Students:</td><td style={{textAlign:'left'}}>21</td></tr></tbody>
-		</Table><br />
-		*/}	
 	</div> )
 }
 

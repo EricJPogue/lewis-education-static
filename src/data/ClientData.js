@@ -4,7 +4,8 @@ export const SCHEDULE_MWF = 'MWF'
 export const SCHEDULE_TTR = 'TTh'
 export const SCHEDULE_ONLINE = 'Online'
 
-export const classList = [																											 
+export const classList = [		
+	{ 'classID':'su22-cpsc-24700-LT1', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2022-05-09-08', 'schedule':'Online', 'time':'', 'finalExam':'Thursday, June 30 from 11:00 AM to 1:00 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-20000-002.pdf' },
 	{ 'classID':'sp22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'1-1:50 PM', 'finalExam':'Wednesday, May 4 from 1:30 PM to 3:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-20000-002.pdf' },
 	{ 'classID':'sp22-cpsc-24500-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'2-2:50 PM', 'finalExam':'Monday, May 2 from 4 PM to 6 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
 	{ 'classID':'sp22-cpsc-44000-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2022-01-10-16', 'schedule':'TTh', 'time':'11-12:15 PM', 'finalExam':'Tuesday, May 3 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-44000-001.pdf' },
@@ -19,10 +20,24 @@ export const classList = [
 	{ 'classID':'36000-spring-2021-001', 'title':'Applied Programming Languages', 'number':'36000', 'calendarID':'2021-01-18-16', 'schedule':'TTh', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/se3c5q62-syllabus-cpsc-36000-001.pdf' },
 	{ 'classID':'44000-spring-2021-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2021-01-18-16', 'schedule':'TTh', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/ps6xfphd-syllabus-cpsc-44000-001.pdf' }
 ]; 
-export const CURRENTCALENDARID = classList[0].calendarID
+
+export const UPCOMING_CALENDAR_ID = '2022-05-09-08'
+export const CURRENT_CALENDAR_ID = '2022-01-10-16'
 
 // Sprint Calendars
-// The following structure represents the sprint calendar for any class that starts on 2021-01-10 and is 16 weeks long. 
+// The following structure represents the sprint calendar for any class that starts on 2022-05-09 and is 8 weeks long. 
+export const sprintCalendarSummer_2022_05_09_08 = [																											 
+	{ 'start':'Mon May 09 2022 08:00:00 GMT-0600', 'end':'Sun May 15 2022 23:59:00 GMT-0600', 'notes':'' },
+	{ 'start':'Mon May 16 2022 08:00:00 GMT-0600', 'end':'Sun May 22 2022 23:59:00 GMT-0600', 'notes':'' },
+	{ 'start':'Mon May 23 2022 08:00:00 GMT-0600', 'end':'Sun May 29 2022 23:59:00 GMT-0600', 'notes':'' },
+	{ 'start':'Mon May 30 2022 08:00:00 GMT-0600', 'end':'Sun Jun 05 2022 23:59:00 GMT-0600', 'notes':'Memorial Day' },
+	{ 'start':'Mon Jun 06 2022 08:00:00 GMT-0600', 'end':'Sun Jun 12 2022 23:59:00 GMT-0600', 'notes':'' },
+	{ 'start':'Mon Jun 13 2022 08:00:00 GMT-0600', 'end':'Sun Jun 19 2022 23:59:00 GMT-0600', 'notes':'' },
+	{ 'start':'Mon Jun 20 2022 08:00:00 GMT-0600', 'end':'Sun Jun 26 2022 23:59:00 GMT-0600', 'notes':'Juneteenth' },
+	{ 'start':'Mon Jun 27 2022 08:00:00 GMT-0600', 'end':'Thu Jun 30 2022 23:59:00 GMT-0600', 'notes':'Final Exams' }
+]; 
+
+// The following structure represents the sprint calendar for any class that starts on 2022-01-10 and is 16 weeks long. 
 export const sprintCalendarSpring_2022_01_10_16 = [																											 
 	{ 'start':'Mon Jan 10 2022 08:00:00 GMT-0600', 'end':'Sun Jan 23 2022 23:59:00 GMT-0600', 'notes':'Martin Luther King Day' },
 	{ 'start':'Mon Jan 24 2022 08:00:00 GMT-0600', 'end':'Sun Feb 06 2022 23:59:00 GMT-0600', 'notes':'' },

@@ -435,7 +435,7 @@ const se6_4of4 = () => {
 	}
 	const backlogGrooming = () => { return basicSlide('Backlog Grooming', [
 			'Backlog Grooming in Preparation for Tuesday’s Sprint 7 Sprint Planning', '',
-			'** Goal: Each team member needs to provide Product Owner at least two valid user stories estimated at ten or more story points prior to class on Tuesday' ]) 
+			'** Goal: Each team member needs to provide Product Owner two or more valid user stories estimated at ten or more story points prior to class on Tuesday' ]) 
 	}
 	const lab = () => { return basicSlide('Lab', [
 			'Continue working in scrum teams on Sprint 6 assignments', 
