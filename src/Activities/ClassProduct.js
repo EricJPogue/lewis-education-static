@@ -314,18 +314,27 @@ approximately {effort} hours to the activity.</p>
 	</div>)
 }
 
-
 export const CLASS_PRODUCT_SPRINT_6_ROUTE = 'class-product-sprint-6'
 export const classProductSprint6Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_6_ROUTE)}>{name5Plus(6)}</NavLink>)}
 export const classProductSprint6 = () => {
 	const sprint = 6
 	const effort = 14
 	return ( <div>
-		<h5>{name5Plus(6)}</h5>
+		<h5>{name5Plus(sprint)}</h5>
 		<p>Prerequisites: {classProductSprint4Link()} </p>
 		{classProduct(sprint, effort)}
-
 	</div> )
 }
 
+export const CLASS_PRODUCT_SPRINT_7_ROUTE = 'class-product-sprint-7'
+export const classProductSprint7Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_7_ROUTE)}>{name5Plus(7)}</NavLink>)}
+export const classProductSprint7 = () => {
+	const sprint = 7
+	const effort = 14
+	return ( <div>
+		<h5>{name5Plus(sprint)}</h5>
+		<p>Prerequisites: {classProductSprint4Link()} </p>
+		{classProduct(sprint, effort)}
+	</div> )
+}
 
