@@ -19,12 +19,14 @@ export const sprint6Router = (route) => {
 		case ICS_6_3of6_ROUTE: return ics6_3of6()
 		case ICS_6_4of6_ROUTE: return ics6_4of6()
 		case ICS_6_5of6_ROUTE: return ics6_5of6()
+		case ICS_6_6of6_ROUTE: return ics6_6of6()
 
 		case OOP_6_1of6_ROUTE: return oop6_1of6()
 		case OOP_6_2of6_ROUTE: return oop6_2of6()
 		case OOP_6_3of6_ROUTE: return oop6_3of6()
 		case OOP_6_4of6_ROUTE: return oop6_4of6()
 		case OOP_6_5of6_ROUTE: return oop6_5of6()
+		case OOP_6_6of6_ROUTE: return oop6_6of6()
 
 		case SE_6_1of4_ROUTE: return se6_1of4()
 		case SE_6_2of4_ROUTE: return se6_2of4()
@@ -150,10 +152,24 @@ const ics6_5of6 = () => {
 		programmingTogetherWithMatchmaker, prework_6_6of6, al20000Sprint06, quiz6, end ]
 }
 
+const ICS_6_6of6_ROUTE = 'ics6-6of6'
+const ics6_6of6 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Lab Matchmaker for the Web',
+			'Prework for Next Class', 
+			'Practical Diversity and Global Software Development Teams' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework_6_6of6, al20000Sprint06, 
+		programmingTogetherWithMatchmaker, prework_7_1of6, al20000Sprint06, practicalDiversity, end ]
+}
+
 // Introduction to Computer Science shared slides used in multiple sessions
 const programmingTogetherWithMatchmaker = () => {
-	return basicSlide('Programming Together', [
-		'Work on Matchmaker for the Web as a class.']) 
+	return basicSlide('Lab', [
+		'Programming Together with Matchmaker for the Web.']) 
 }
 const icsPrework_6_1of6 = () => {
 	return preworkSlide([
@@ -181,7 +197,6 @@ const icsPrework_6_5of6 = () => {
 		'Complete through activity 11', '',
 		'Be prepared for Quiz 6' ])
 }
-
 
 // Object-Oriented Programming
 const OOP_6_1of6_ROUTE = 'oop6-1of6'
@@ -254,13 +269,10 @@ const oop6_4of6 = () => {
 				'Testing Multithreaded Applications' ]
 		})
 	}
-	const programmingTogether = () => {
-		return basicSlide('Programming Together', [
-			'Work on hosting JSON, SwissArmKnife, or SleepFast as a class.']) 
-	}
+
 
 	return [ preflightChecklist, instructorChecklist, agenda, oopPrework_6_4of6, al24500Sprint06, 
-		performanceAndMultithreadingBreakout, programmingTogether,
+		performanceAndMultithreadingBreakout, programmingTogetherSwissArmyKnife,
 		oopPrework_6_5of6, al24500Sprint06, end ]
 }
 
@@ -273,14 +285,23 @@ const oop6_5of6 = () => {
 			'Prework for Next Class', 
 			'Quiz 6' ])
 	}
-	const programmingTogether = () => {
-		return basicSlide('Programming Together', [
-			'Work on adding JSON files to index, hosting JSON, SwissArmKnife, or SleepFast as a class.']) 
-	}
 
 	return [ preflightChecklist, instructorChecklist, agenda, oopPrework_6_5of6, al24500Sprint06, 
-		programmingTogether,
-		prework_6_6of6, al24500Sprint06, end ]
+		programmingTogetherSwissArmyKnife, prework_6_6of6, al24500Sprint06, end ]
+}
+
+const OOP_6_6of6_ROUTE = 'oop6-6of6'
+const oop6_6of6 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Lab',
+			'Prework for Next Class', 
+			'Practical Diversity and Global Software Development Teams' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework_6_6of6, al24500Sprint06, 
+		programmingTogetherSwissArmyKnife, prework_7_1of6, al24500Sprint06, practicalDiversity, end ]
 }
 
 // Object-Oriented Programming Shared Slides
@@ -294,6 +315,11 @@ const oopPrework_6_5of6 = () => {
 		'Complete through activity 12', '',
 		'Be prepared to discuss Object-Oriented Programming Languages and Platforms',
 		'Be prepared for Quiz 6' ])
+}
+
+const programmingTogetherSwissArmyKnife = () => {
+	return basicSlide('Programming Together', [
+		'Work on hosting JSON, SwissArmKnife, or SleepFast as a class.']) 
 }
 
 // Software Engineering
@@ -410,10 +436,7 @@ const se6_3of4 = () => {
 		return basicSlide('Azure Functions Progress', [
 			'I‘ve have heard rumors of issues in creating Azure functions. What has been your experience with activity 11?' ])
 	}
-	const practicalDiversity = () => {
-		return basicSlide('Practical Diversity and Global Software Development', [
-			'As time allows, I would like to start a discussion about practical diversity and global software development teams.' ])
-	}
+
 	return [ preflightChecklist, instructorChecklist, agenda, preworkSE6_3of4, al44000Sprint06,
 		projectManagementScrumPairsAndVersionControlBreakout, azureFunctionsProgress, practicalDiversity,
 		preworkSE6_4of4, quiz6, end ]
@@ -474,7 +497,6 @@ const preworkSE6_4of4 = () => {
 		'Be prepared Backlog Grooming in preparation for Sprint 7 Planning',
 		'Be prepared Lab' ])
 }
-
 const preworkSE7_1of4 = () => {
 	return basicSlide('Prework for Today', [
 		'All Sprint 6 Assignments due Sunday!', '',
@@ -522,3 +544,13 @@ const prework_6_6of6 = () => {
 		'Be prepared for Lab' ])
 }
 
+const prework_7_1of6 = () => {
+	return preworkSlide([
+		'All Sprint 6 Assignments due Sunday!', '',
+		'** Be prepared for in-person Sprint 7 Planning on Monday' ])
+}
+
+const practicalDiversity = () => {
+	return basicSlide('Practical Diversity and Global Software Development', [
+		'As time allows, I would like to start a discussion about practical diversity and global software development teams.' ])
+}
