@@ -321,7 +321,7 @@ export const classProductSprint6 = () => {
 	const effort = 14
 	return ( <div>
 		<h5>{name5Plus(sprint)}</h5>
-		<p>Prerequisites: {classProductSprint4Link()} </p>
+		<p>Prerequisites: {classProductSprint5Link()} </p>
 		{classProduct(sprint, effort)}
 	</div> )
 }
@@ -333,7 +333,7 @@ export const classProductSprint7 = () => {
 	const effort = 14
 	return ( <div>
 		<h5>{name5Plus(sprint)}</h5>
-		<p>Prerequisites: {classProductSprint4Link()} </p>
+		<p>Prerequisites: {classProductSprint6Link()} </p>
 		{classProduct(sprint, effort)}
 	</div> )
 }
