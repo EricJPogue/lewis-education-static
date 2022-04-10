@@ -7,10 +7,10 @@ export function Deck(props) {
 	const [count, setCount ] = useState(0) 
 
 	const incrementSlide = () => { setCount(prevCount => prevCount + 1) }
-	useHotkeys('right, down', () => { incrementSlide() })
+	useHotkeys('right, down, pagedown', () => { incrementSlide() })
 
 	const decrementSlide = () => { setCount(prevCount => prevCount - 1) }
-	useHotkeys('left, up', () => { decrementSlide() })
+	useHotkeys('left, up, pageup', () => { decrementSlide() })
 
 	const displaySlide = (index) => {
 		if (index < 0) { 
