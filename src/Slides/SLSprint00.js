@@ -2,6 +2,7 @@ import React from 'react'
 import Table from 'react-bootstrap/Table'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
+export const CHECKLIST_ROUTE = 'checklist'
 export const checklist = () => { return [ preflightChecklist, instructorChecklist ] }
 export const defaultDeck = () => { return [ noSlidesFound ] }
 
@@ -76,6 +77,17 @@ export const agendaSlide = (agendaItems) => {
 
 export const preworkSlide = (preworkItems) => { return basicSlideWithTitle('Prework', preworkItems) }
 export const preworkForNextClass = (preworkItems) => { return basicSlideWithTitle('Prework for Next Class', preworkItems) }
+
+export const preworkWithActivityList = (preworkItems, activityListFunction) => {
+	const sprint = 7
+	return ( <div>
+		{preworkSlide(preworkItems)}
+		<br /><hr />
+		<p style={{fontSize:20}}>Sprint {sprint} Activities List</p>
+		{activityListFunction()}
+	</div> )
+}
+
 
 export const progressPolling = () => {
 	return basicSlideWithTitle('Sprint Progress Polling', [
@@ -217,4 +229,9 @@ const breakoutNoteExample = (sprint) => {
 		</div>
 		{renderOrderedList('Key discussion points:', ['Discussion point 1', 'Discussion point 2', 'Discussion point 3'])}
 	</div>)
+}
+
+export const activitiesReview = () => {
+	return basicSlide('Review Activity List and Assignments', [
+		'Please open Blackboard and review our activity list and assignments together.' ])
 }

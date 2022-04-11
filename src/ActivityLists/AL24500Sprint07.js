@@ -35,7 +35,7 @@ export const al24500Sprint07 = ( props ) => {
 	</div> )
 }
 
-const list24500Sprint07 = () => {
+export const list24500Sprint07 = () => {
 	const thunderbirdLite = () => { return internalLink('ThunderbirdLite', '/activity-oop/java-thunderbird-lite')}
 	const architecturePart1 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 1', 
 		'/activity-architecture/application-architecture-part1')}

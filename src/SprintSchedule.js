@@ -70,9 +70,9 @@ export class SprintClassActivities extends Component {
 
 	MWFScheduleSprint7 = {
 		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Thanksgiving Holiday",
-		"FirstFriday":     "Thanksgiving Holiday",
-		"SecondMonday":    "Demos, Retrospectives, and Discussion Board",
+		"FirstWednesday":  "Demos, Retrospectives, and Discussion Board",
+		"FirstFriday":     "Easter Holiday",
+		"SecondMonday":    "Easter Holiday",
 		"SecondWednesday": "Topic Discussion & Quiz",
 		"SecondFriday":    "Lab"
 	}
@@ -150,6 +150,13 @@ export class SprintClassActivities extends Component {
 		"SecondThursday": "Lab"
 	}
 
+	TTScheduleSprint7 = {
+		"FirstTuesday":   "Demos, Retrospective, Sprint Planning, and Discussion Board",
+		"FirstThursday":  "Easter Holiday",
+		"SecondTuesday":  "Topic Discussion, Lab & Quiz",
+		"SecondThursday": "Lab"
+	}
+
 	TTScheduleSprint8 = {
 		"FirstTuesday":   "Demos, Retrospective, and Sprint Planning",
 		"FirstThursday":  "Topic Discussion, Quiz, and Lab",
@@ -161,6 +168,7 @@ export class SprintClassActivities extends Component {
 		let schedule = null
 		switch(this.currentSprintBaseOne()) {
 			case 1: schedule = this.TTScheduleSprint1; break;
+			case 7: schedule = this.TTScheduleSprint7; break;
 			case 8: schedule = this.TTScheduleSprint8; break;
 			default: schedule = this.TTSchedule
 		}

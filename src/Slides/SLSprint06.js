@@ -1,6 +1,6 @@
 import { basicSlide, bulletListSlide, orderedListSlide, end, submissionPercentage } from './SLSprint00'
 import { defaultDeck, agendaSlide, preworkSlide, quiz } from './SLSprint00'
-import { checklist, preflightChecklist, instructorChecklist } from './SLSprint00'
+import { checklist, CHECKLIST_ROUTE, preflightChecklist, instructorChecklist } from './SLSprint00'
 import { al20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { al24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
 import { al44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
@@ -40,7 +40,7 @@ export const sprint6Router = (route) => {
 }
 
 // Checklist slide deck
-const CHECKLIST_ROUTE = 'checklist'
+// const CHECKLIST_ROUTE = 'checklist'
 
 // Introduction to Computer Science
 const ICS_6_1of6_ROUTE = 'ics6-1of6'
