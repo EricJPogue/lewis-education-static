@@ -330,7 +330,7 @@ export const CLASS_PRODUCT_SPRINT_7_ROUTE = 'class-product-sprint-7'
 export const classProductSprint7Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_7_ROUTE)}>{name5Plus(7)}</NavLink>)}
 export const classProductSprint7 = () => {
 	const sprint = 7
-	const effort = 14
+	const effort = 12
 	return ( <div>
 		<h5>{name5Plus(sprint)}</h5>
 		<p>Prerequisites: {classProductSprint6Link()} </p>

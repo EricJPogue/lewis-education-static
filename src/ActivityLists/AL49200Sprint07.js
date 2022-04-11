@@ -40,9 +40,13 @@ const list49200Sprint7 = (sprint) => {
 			<li>Within {oreillyPlaylistSC()} review “Essential Scrum” looking for topics that your team can focus on improving</li>
 
 			{InitialPost(sprint)}
-			{StandardActivitiesClosingWithLinkAndSprint(sprint, classProductSprint7Link(),'14 hours per team member')}
+			{StandardActivitiesClosingWithLinkAndSprint(sprint, classProductSprint7Link(),'12 hours per team member')}
 		</ol>
 	</div> )
 }
 
+// Certified for SP22 (04/11/2022)
 
+// Todo: Determine if 10, 12, or 14 hours would be the most appropriate to require on the final project. In SP22 I 
+// reduced it from 14 hours to 10 hours based on the fact that Easter Break was in sprint 7 and consumed Thursday, 
+// Friday, and Monday.

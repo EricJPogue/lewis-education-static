@@ -38,9 +38,12 @@ const list44000Sprint07 = () => {
 			{InitialPost()}		
 			<li>Complete Introduction to React {introductionToReactLink()}</li>	
 			<li>Complete {reactProgrammingTogether()} programming together tutorial</li>
-			{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectSprint7Link(), '10 hours')}
+			{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectSprint7Link(), '8 hours')}
 		</ol>
 	</div> )
 }
 
 // Certified for SP22 (04/08/2022)
+
+// Todo: Determine if 6, 8, or 10 hours would be the most appropriate to require on the final project. In SP22 I 
+// reduced it to 8 hours based on the fact that Easter Break was in sprint 7 and consumed Thursday, Friday, and Monday.
