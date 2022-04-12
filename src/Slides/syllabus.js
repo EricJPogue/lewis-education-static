@@ -32,10 +32,10 @@ const styleSmall = { fontSize:14 }
 export const syllabus = () => {
 	const syllabus24700 = () => {
 		const header = (itemArray) => {
-			return (<tr><td style={{width:'50px', textAlign:'left'}}>{itemArray[0]}</td><td style={{width:'200px', textAlign:'left'}}><b>{itemArray[1]}</b></td></tr>)
+			return (<tr><td style={{width:'50px', textAlign:'left' }}>{itemArray[0]}</td><td style={{width:'200px', textAlign:'left'}}><b>{itemArray[1]}</b></td></tr>)
 		} 
 		const row = (item) => {
-			return (<tr><td>{item[0]}</td><td style={{width:'200px', textAlign:'left'}}><i><b>{item[1]}</b></i></td><td>{item[2]}</td></tr>)
+			return (<tr><td>{item[0]}</td><td style={{width:'200px', textAlign:'left' }}><i><b>{item[1]}</b></i></td><td>{item[2]}</td></tr>)
 		}
 		const rowSpan = (label, text) => {
 			return (
@@ -206,6 +206,24 @@ export const syllabus = () => {
 							{renderGradingCriteriaTable()}
 						</td>
 					</tr>
+					<tr>
+						<td></td>
+						<td colSpan={2}>
+							<p><em>Grading Policies:</em> No late assignments will be accepted. It is vastly preferable 
+							to submit a partially complete assignment on time than to turn in a late assignment.</p>
+							<p>Similarly, it is vastly better to turn in a lab (programming) assignment that has 70% of the 
+							features fully implemented than to turn in a lab assignment that has all of the features 70% 
+							implemented.</p>
+							<p>Final course letter grade will be determined using the following scale:</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colSpan={2}>
+							{renderGradingScale()}
+						</td>
+					</tr>
 				</tbody>
 			</Table><br />			
 		</div> )
@@ -264,7 +282,6 @@ const renderCourseScheduleTable = () => {
 }
 
 const renderGradingCriteriaTable = () => {
-
 	const assignmentGrading = [
 		{ name: 'Discussion', points:8, number:7 },
 		{ name: 'Quiz', points:40, number:8 },
@@ -273,20 +290,6 @@ const renderGradingCriteriaTable = () => {
 		{ name: 'Demo', points:12, number:1 },
 		{ name: 'Final Project Presentation', points:20, number:1 }
 	]
-	/*
-	const renderRow = (assignment, points, number, totalPoints, percent) => {
-		return ( 
-			<tr>
-				<td>{assignment}</td>
-				<td style={{textAlign:'right'}}>{points}</td>
-				<td style={{textAlign:'right'}}>{number}</td>
-				<td style={{textAlign:'right'}}>{totalPoints}</td>
-				<td style={{textAlign:'right'}}>{percent}</td>
-			</tr> 
-		)
-	}
-*/
-
 
 	const renderBody = (assignmentGradingIn) => {
 		const calculateTotalPoints = (assignmentGradingIn) => {
@@ -312,35 +315,68 @@ const renderGradingCriteriaTable = () => {
 		})
 	}
 
-	const renderTotals = (label, totalAssignments, totalPoints, totalPercent) => {
+	const renderTotals = (assignmentGradingIn) => {
+		const calculateTotalAssignments = (assignmentGradingIn)  => {
+			let totalNumber = 0
+			for (let index=0; index < assignmentGradingIn.length; index++) {
+				totalNumber += assignmentGradingIn[index].number
+			}
+			return totalNumber
+		}
+		const calculateTotalPoints = (assignmentGradingIn)  => {
+			let totalPoints = 0
+			for (let index=0; index < assignmentGradingIn.length; index++) {
+				totalPoints += assignmentGradingIn[index].points  * assignmentGradingIn[index].number
+			}
+			return totalPoints
+		}
+		const calculateTotalPercent = (assignmentGradingIn)  => {
+			let totalPercent = 0
+			for (let index=0; index < assignmentGradingIn.length; index++) {
+				totalPercent += Math.round(assignmentGradingIn[index].points*assignmentGradingIn[index].number/calculateTotalPoints(assignmentGradingIn)*100)
+			}
+			return totalPercent
+		}
+
 		return ( 
 			<tr>
-				<td style={{textAlign:'right'}}>{label}</td>
+				<td style={{textAlign:'right'}}>Totals</td>
 				<td style={{textAlign:'right', borderTop:'solid'}}></td>
-				<td style={{textAlign:'right', borderTop:'solid'}}>{totalAssignments}</td>
-				<td style={{textAlign:'right', borderTop:'solid'}}>{totalPoints}</td>
-				<td style={{textAlign:'right', borderTop:'solid'}}>{totalPercent}</td>
+				<td style={{textAlign:'right', borderTop:'solid'}}>{calculateTotalAssignments(assignmentGradingIn)}</td>
+				<td style={{textAlign:'right', borderTop:'solid'}}>{calculateTotalPoints(assignmentGradingIn)}</td>
+				<td style={{textAlign:'right', borderTop:'solid'}}>{calculateTotalPercent(assignmentGradingIn)}%</td>
 			</tr> 
 		)
 	}
 
 	return ( 
 		<Table style={styleSmall} striped bordered hover>
-		<thead style={{fontWeight:'bold'}}>
-			<tr style={{backgroundColor:'#C0C0C0'}}>
-				<td style={{width:'200px'}}>Assignment</td>
-				<td style={{width:'100px', textAlign:'center'}}>Points</td>
-				<td style={{width:'100px', textAlign:'center'}}>#</td>
-				<td style={{width:'100px', textAlign:'center'}}>Total Points</td>
-				<td style={{width:'100px', textAlign:'center'}}>Percent of Grade</td>
-		</tr>
-		</thead>
-		<tbody>
-			{renderBody(assignmentGrading)}
-
-
-			{renderTotals('Totals:', '33', '1000', 'aadsfljkasfdjl;k%')}
-		</tbody>
-	</Table>
+			<thead style={{fontWeight:'bold'}}>
+				<tr style={{backgroundColor:'#C0C0C0'}}>
+					<td style={{width:'200px'}}>Assignment</td>
+					<td style={{width:'100px', textAlign:'center'}}>Points</td>
+					<td style={{width:'100px', textAlign:'center'}}>#</td>
+					<td style={{width:'100px', textAlign:'center'}}>Total Points</td>
+					<td style={{width:'100px', textAlign:'center'}}>% of Grade</td>
+			</tr>
+			</thead>
+			<tbody>
+				{renderBody(assignmentGrading)}
+				{renderTotals(assignmentGrading)}
+			</tbody>
+		</Table>
 	)
+}
+
+const renderGradingScale = () => {
+	return ( 
+		<Table style={styleSmall} className="table-borderless table-sm">
+			<tbody>
+				<tr><td style={{width:'120px'}}></td><td style={{width:'40px' }}>A</td><td style={{width:'160px' }}>100-93%</td><td style={{width:'40px' }}>C</td><td style={{width:'80px' }}>73-76.9</td><td></td><td></td></tr>
+				<tr><td></td><td>A-</td><td>90-92.9%</td><td>C-</td><td>70-72.9</td><td></td></tr>
+				<tr><td></td><td>B+</td><td>87-89.9%</td><td>C-</td><td>70-72.9</td><td></td></tr>
+			</tbody>
+		</Table>
+	)
+
 }
