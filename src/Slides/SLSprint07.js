@@ -1,6 +1,7 @@
 import { defaultDeck, checklist, CHECKLIST_ROUTE } from './SLSprint00' // Shared slide decks.
-import { preflightChecklist, instructorChecklist, activitiesReview, submissionPercentage, end } from './SLSprint00' // Shared slides.
+import { preflightChecklist, instructorChecklist, activitiesReview, submissionPercentage, discussionBreakout, end } from './SLSprint00' // Shared slides.
 import { agendaSlide, basicSlide, orderedListSlide, preworkSlide, preworkWithActivityList } from './SLSprint00' // Shared slide templates.
+import { sprintDemosIntro, sprintDemos, demoAssignment  } from './SLSprint00'
 import { syllabus } from './syllabus'
 
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
@@ -12,11 +13,14 @@ export const sprint7Router = (route) => {
 		case CHECKLIST_ROUTE: return checklist()
 
 		case ICS_7_1of6_ROUTE: return ics7_1of6()
+		case ICS_7_2of6_ROUTE: return ics7_2of6()
+
 		case OOP_7_1of6_ROUTE: return oop7_1of6()
+		case OOP_7_2of6_ROUTE: return oop7_2of6()
+
 		case SE_7_1of4_ROUTE: return se7_1of4()
 
 		case 'syllabus': return syllabus()
-
 		default: return defaultDeck()
 	}
 }
@@ -24,6 +28,54 @@ export const sprint7Router = (route) => {
 // Introduction to Computer Science
 const ICS_7_1of6_ROUTE = 'ics7-1of6'
 const ics7_1of6 = () => { return mwf_7_1of6(icsPrework_7_2of6) }
+
+const ICS_7_2of6_ROUTE = 'ics7-2of6'
+const ics7_2of6 = () => {
+	const sprint = 7
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			`Sprint ${sprint-1} Demos`,
+			`Sprint ${sprint-1} Retrospective`,
+			`Breakout for Sprint ${sprint-1} Retrospective and Discussion 7`,
+			'Prework for Next Class' ])
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:21, submitted:20 },
+			{ name: 'Quiz', due:21, submitted:21 },
+			{ name: 'Lab', due:21, submitted:20},
+			{ name: 'Reflection', due: 21, submitted: 20 }
+		])
+	}
+	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Excellent submission percentage',
+			'All assignments are graded and posted', 
+			'I have decided that Reflection Riddles are like Kryptonite for me :-)',
+			'Hang in there just a few more weeks',
+			'Submit you Lab Demo assignments' ])
+	}
+	// Todo: Create and add slide for metrics.
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward',
+			'What advice to you have for me relating to quizzes in future classes' ])
+	}
+	const discussion7 = () => {
+		return discussionBreakout(7)
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_7_2of6, 
+		sprintDemosIntro, sprintDemos, demoAssignment, metricsSubmissionPercentage, retrospective, retrospectiveBreakout, discussion7,
+		icsPrework_7_5of6, end ]
+}
+
 
 // Shared between ICS sessions:
 const icsPrework_7_2of6 = () => {
@@ -34,9 +86,64 @@ const icsPrework_7_2of6 = () => {
 		list20000Sprint07)
 }
 
+// Easter Break caused sessions 4 and 5 (Friday & Monday) to be canceled.
+const icsPrework_7_5of6 = () => {
+	return preworkWithActivityList([
+		'Complete through activity 8', '',
+		'Be prepared to discuss “Computer Science Illuminated” Security and associated lecture',
+		'Be prepared for Quiz 7' ], 
+		list20000Sprint07)
+}
+
 // Object-Oriented Programming
 const OOP_7_1of6_ROUTE = 'oop7-1of6'
 const oop7_1of6 = () => { return mwf_7_1of6(oopPrework_7_2of6) }
+
+const OOP_7_2of6_ROUTE = 'oop7-2of6'
+const oop7_2of6 = () => {
+	const sprint = 7
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			`Sprint ${sprint-1} Demos`,
+			`Sprint ${sprint-1} Retrospective`,
+			`Breakout for Sprint ${sprint-1} Retrospective and Discussion 7`,
+			'Prework for Next Class' ])
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:19, submitted:13 },
+			{ name: 'Quiz', due:19, submitted:19 },
+			{ name: 'Lab', due:19, submitted:18 },
+			{ name: 'Reflection', due: 19, submitted: 18 }
+		])
+	}
+	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Sprint 6 is hard and threading is hard', [
+			'Not very good submission percentage... how did we end up with 6 discussion not submitted?',
+			'All assignments are graded and posted', 
+			'I have decided that Reflection Riddles are like Kryptonite for me :-)',
+			'What could I do to change sprint 6 up and improve it for future classes?' ])
+	}
+	// Todo: Create and add slide for metrics.
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward',
+			'What advice to you have for me relating to quizzes in future classes' ])
+	}
+	const discussion7 = () => {
+		return discussionBreakout(7)
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, oopPrework_7_2of6, 
+		sprintDemosIntro, sprintDemos, demoAssignment, metricsSubmissionPercentage, retrospective, retrospectiveBreakout, discussion7,
+		oopPrework_7_5of6, end ]
+}
 
 // Shared between OOP sessions:
 const oopPrework_7_2of6 = () => {
@@ -47,11 +154,19 @@ const oopPrework_7_2of6 = () => {
 		list24500Sprint07)
 }
 
+// Easter Break caused sessions 4 and 5 (Friday & Monday) to be canceled.
+const oopPrework_7_5of6 = () => {
+	return preworkWithActivityList([
+		'Complete through activity 8', '',
+		'Be prepared to discuss “Application Architectures, Object-Oriented Programming, and Databases - Part 1”',
+		'Be prepared for Quiz 7' ], 
+		list20000Sprint07)
+}
+
 // Software Engineering
 const SE_7_1of4_ROUTE = 'se7-1of4'
 const se7_1of4 = () => {
 	const sprint = 7
-
 	const agenda = () => {
 		return agendaSlide([
 			'Prework for Today',

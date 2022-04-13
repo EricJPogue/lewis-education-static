@@ -218,6 +218,20 @@ export const discussionBreakout6 = () => {
 	</div> )
 }
 
+export const discussionBreakout = (sprint) => {
+	return ( <div>
+		{orderedListSlide(`Breakout for Discussion ${sprint}`, 
+			'Please complete this breakout session as a scrum team:', [
+			'Identify note taker and presenter roles',
+			'Review and discuss topic',
+			'Note take prepares notes and presenter prepares report out',
+			'Each team member pastes and submits an exact copy of notes to their discussion board',
+			'Team relaxes and tells note take and presenter how wonderful they are' ])}<br />
+		{breakoutNoteExample()}
+	</div> )
+}
+
+
 const styleBodyText = { fontSize:20 }
 const breakoutNoteExample = (sprint) => {
 	return ( <div>
@@ -234,4 +248,32 @@ const breakoutNoteExample = (sprint) => {
 export const activitiesReview = () => {
 	return basicSlide('Review Activity List and Assignments', [
 		'Please open Blackboard and review our activity list and assignments together.' ])
+}
+
+export const sprintReviewAgendaMWF = (sprint) => {
+	return agendaSlide([
+		'Prework for Today',
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakouts Session on Sprint ${sprint-1}`,
+		'Prework for Next Class' ])
+}
+
+export const sprintDemosIntro = () => {
+	return bulletListSlide('Sprint Demo Presenters', 
+		'Recall that as a presenter you should be prepared to:', [
+		'Show your application running and explain what it does',
+		'Talk about any challenges your faced',
+		'Be prepared to share your code with classmates upon request' ])
+}
+export const sprintDemos = () => {
+	return bulletListSlide('Sprint Demo Listeners', 
+		'As a demo listener your responsibilities include:', [
+		'Actively listening and watching what your classmate is demoing',
+		'Come up with a meaningful yet easy to answer question to ask',
+		'Clapping for the presenter when they have finished' ])
+}
+export const demoAssignment = () => {
+	return basicSlide('Complete Demo Assignment', [
+		'If you have completed your sprint demo, please also submit your lab demo assignment in Blackboard.' ])
 }
