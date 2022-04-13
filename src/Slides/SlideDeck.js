@@ -5,7 +5,6 @@ import { sprint7Router } from './SLSprint07'
 
 export function Deck(props) {
 	// const deck = sprint6Router(props.match.params.route)
-	console.log('deck')
 	const deck = sprint7Router(props.match.params.route)
 	const [count, setCount ] = useState(0) 
 

@@ -32,7 +32,7 @@ const styleSmall = { fontSize:14 }
 export const syllabus = () => {
 	const syllabus24700 = () => {
 		const header = (itemArray) => {
-			return (<tr><td style={{width:'50px', textAlign:'left' }}>{itemArray[0]}</td><td style={{width:'200px', textAlign:'left'}}><b>{itemArray[1]}</b></td></tr>)
+			return (<tr><td style={{width:'50px' }}><b>{itemArray[0]}</b></td><td style={{width:'200px' }} colSpan={2}><b>{itemArray[1]}</b></td></tr>)
 		} 
 		const row = (item) => {
 			return (<tr><td>{item[0]}</td><td style={{width:'200px', textAlign:'left' }}><i><b>{item[1]}</b></i></td><td>{item[2]}</td></tr>)
@@ -43,9 +43,6 @@ export const syllabus = () => {
 					<td colSpan={2}><p><em>{label}</em> {text}</p></td>
 				</tr>
 			)
-		}
-		const subHeader = (item) => {
-			return (<tr><td>{item[0]}</td><td style={{width:'200px', textAlign:'left'}} colSpan={2}><i><b>{item[1]}</b></i></td></tr>)
 		}
 		const courseName = (course) => {
 			return course.name + ' ('+course.id+'-'+course.section+')'
@@ -128,7 +125,7 @@ export const syllabus = () => {
 							</ol>
 						</td>
 					</tr>
-					{row(['III.', 'Mission Statement'])}
+					{header(['III.', 'Mission Statement'])}
 					<tr>
 						<td></td>
 						<td colSpan={2}>
@@ -145,7 +142,7 @@ export const syllabus = () => {
 						journey.</p>
 						</td>
 					</tr>
-					{row(['IV.', 'Course Materials'])}
+					{header(['IV.', 'Course Materials'])}
 					<tr>
 						<td></td>
 						<td colSpan={2}>
@@ -167,7 +164,7 @@ export const syllabus = () => {
 							sign up for the accounts.</p>
 						</td>
 					</tr>
-					{subHeader(['V.', 'Instructional Methods and Activities'])}
+					{header(['V.', 'Instructional Methods and Activities'])}
 					<tr>
 					<td></td>
 					<td colSpan={2}>
@@ -175,7 +172,7 @@ export const syllabus = () => {
 						blended learning instructional elements.</p>
 					</td>	
 					</tr>
-					{subHeader(['VI.', 'Course Schedule'])}
+					{header(['VI.', 'Course Schedule'])}
 					<tr>
 					<td></td>
 					<td colSpan={2}>
@@ -196,7 +193,7 @@ export const syllabus = () => {
 							through course lecture and/or Blackboard announcements. </p>
 						</td>
 					</tr>
-					{subHeader(['VII.', 'Grading Criteria and Course Policies'])}
+					{header(['VII.', 'Grading Criteria and Course Policies'])}
 					{rowSpan('Assignments and Course Requirements: ', 
 						'Assignments for this course will take the form of Labs, Quizzes, Discussion Boards, a class Demonstration, and a Final Project.')}
 					{rowSpan('Course Grade: ', 'The course grade will be based on the following.')}
@@ -224,6 +221,32 @@ export const syllabus = () => {
 							{renderGradingScale()}
 						</td>
 					</tr>
+					<tr>
+						<td></td>
+						<td colSpan={2}>
+							<p><em>Course Policies:</em> Class attendance is required unless otherwise specified. During our 
+							class time we will remain focused on the topics at hand, avoid utilizing phones or email, and 
+							be inclusive of our fellow classmates.</p>
+							<p><em>Changes to Course Assignments or Grades:</em> Changes to the 
+							course assignments or grades will be communicated through course lecture and/or Blackboard 
+							announcements</p>
+						</td>	
+					</tr>
+					{header(['VIII.', 'Practices and Policies during the Coronavirus Pandemic'])}
+					<tr>
+						<td></td>
+						<td colSpan={2}>
+							{renderPracticesCoronavirusPandemic()}
+						</td>	
+					</tr>
+					{header(['IX.', 'Information for Students'])}
+					<tr>
+						<td></td>
+						<td colSpan={2}>
+							{renderInformationForStudents()}
+						</td>	
+					</tr>
+
 				</tbody>
 			</Table><br />			
 		</div> )
@@ -369,14 +392,99 @@ const renderGradingCriteriaTable = () => {
 }
 
 const renderGradingScale = () => {
-	return ( 
-		<Table style={styleSmall} className="table-borderless table-sm">
+	return ( <div>
+		Final course letter grade will be determined by using the following scale:
+		<Table style={{fontSize:14}} className="table-borderless table-sm">
 			<tbody>
-				<tr><td style={{width:'120px'}}></td><td style={{width:'40px' }}>A</td><td style={{width:'160px' }}>100-93%</td><td style={{width:'40px' }}>C</td><td style={{width:'80px' }}>73-76.9</td><td></td><td></td></tr>
-				<tr><td></td><td>A-</td><td>90-92.9%</td><td>C-</td><td>70-72.9</td><td></td></tr>
-				<tr><td></td><td>B+</td><td>87-89.9%</td><td>C-</td><td>70-72.9</td><td></td></tr>
+				<tr><td style={{width:'120px' }}></td>
+					<td style={{width:'40px'}}>
+						A<br />A-<br />
+						B+<br />B<br />B-<br />
+						C+<br />C<br />C-
+					</td>
+					<td style={{width:'160px' }}>
+						93-100%<br />90-92.9%<br />
+						87-89.9%<br />83-86.9%<br />80-82.9%<br />
+						77-79.9%<br />73-76.9%<br />70-72.9			
+					</td><td style={{width:'40px' }}>
+						D+<br />D<br />D-<br />F
+					</td>
+					<td style={{width:'80px' }}>
+						67-69.9<br />63-66.9<br />60-62.9%<br />0-59.9%</td><td></td>
+				</tr>
 			</tbody>
 		</Table>
-	)
+	</div> )
 
+}
+
+const renderPracticesCoronavirusPandemic = () => {
+	return ( <div>
+		<p><em>Responsiveness to Change:</em> Understanding that the COVID-19 pandemic could influence the course of 
+		this semester, Lewis University will be guided by our Lasallian mission and the well-being of our community of 
+		students, faculty, and staff in respond and adapting to any sudden changes or circumstances. Based on the 
+		guidance of the State of Illinois and the Centers for Disease Control, it may be necessary to change the planned 
+		modality this course.</p>
+		<p><em>Flexibility, Accommodations, and Student Absences:</em> Because we are committed to student success, the 
+		University community is committed to academic standards while maintaining flexibility and empathy. Absences 
+		relating to the Coronavirus crisis will be recognized as excused. Students experiencing disruptions in their 
+		lives related to the Coronavirus that impact class attendance and participation should contact their instructor 
+		and/or college Dean’s Office for assistance. Students directly impacted by Coronavirus will have the ability to 
+		request alternative grading this semester. Requests will be evaluated on a case by case basis and will require 
+		documentation.</p>
+		<p>Students who require academic accommodations due to disability caused by COVID-19, or to limit risk of 
+		exposure to Coronavirus, can engage in an interactive process with the Learning Access Coordinator to explore 
+		all avenues for accommodations. Students can contact the Academic Services office at 815-836-5593 or 
+		learningaccess@lewisu.edu to request an appointment.</p>
+		<p><em>Face Coverings, Physical Distancing, and Surface Cleaning</em> Face coverings are required in classrooms. 
+		Students will be expected to maintain physical distancing in the classroom (6 ft minimum) and to keep their nose 
+		and mouth covered at all times. Faculty will require students without face covering to obtain a disposable mask 
+		at the nearest University office providing them. While the University will disinfect classrooms and common spaces 
+		throughout the day, cleaning supplies will be provided in classrooms and offices so that students and faculty 
+		can wipe down work surfaces before class begins.</p>
+	</div> )
+}
+
+const renderInformationForStudents = () => {
+	return ( <div>
+		<p><em>Requests for Reasonable Accommodations:</em> Lewis University is committed to providing equal access and 
+		opportunity for participation in all programs, services and activities. If you are a student with a disability 
+		who would like to request a reasonable accommodation, please speak with the Learning Access Coordinator at the 
+		Center for Academic Success and Enrichment (CASE). Please make an appointment by calling 815-836-5593 or 
+		emailing learningaccess@lewisu.edu. Since accommodations require early planning and are not provided 
+		retroactively, it is recommended that you make your request prior to or during the first week of class. It is 
+		not necessary to disclose the nature of your disability to your instructor. For more information about academic 
+		support services, visit the website at: www.lewisu.edu/CASE.</p> 
+
+		<p>Lewis University has adopted Blackboard Ally providing alternative formats for files uploaded by instructors. 
+		Students can click the down arrow next to any file, and select Alternative Formats.</p>
+
+		<p><em>Sanctified Zone:</em> Guided by its Catholic and Lasallian heritage, Lewis University is firmly committed 
+		to fostering a campus atmosphere that is permeated by its Mission values of Fidelity, Wisdom, Knowledge, 
+		Justice, and Association. Accordingly, we have declared the University campus to be a Sanctified Zone, a place 
+		and a people United in Diversity. The active promotion of diversity and the opposition to all forms of 
+		prejudice and bias are a powerful and healing expression of our desire to be Signs of Faith (Signum Fidei) to 
+		each other.  To learn more about the Sanctified Zone, please visit: http://www.lewisu.edu/sanctified zone</p>
+
+		<p><em>Academic Integrity:</em> Scholastic integrity lies at the heart of Lewis University. Plagiarism, 
+		collusion and other forms of cheating or scholastic dishonesty are incompatible with the principles of the 
+		University. Students engaging in such activities are subject to loss of credit and expulsion from the 
+		University. Cases involving academic dishonesty are initially considered and determined at the instructor level. 
+		If the student is not satisfied with the instructor’s explanation, the student may appeal at the 
+		department/program level. Appeal of the department /program decision must be made to the Dean of 
+		the college/school. The Dean reviews the appeal and makes the final decision in all cases except those in 
+		which suspension or expulsion is recommended, and in these cases the Provost makes the final decision.</p>
+
+		<p><em>University Student Complaint Policy:</em> The University Student Complaint Policy can be found at 
+		lewisu.edu/studentcomplaints</p>
+		
+		<p><em>University Grade Appeal Policy:</em> The University Grade Appeal Policy can be found at 
+		lewisuedu/studentcomplaints</p>
+
+		<p><em>Center for Health &amp; Counseling Services:</em> To support student success, all Lewis students are 
+		eligible for free health and mental health services on the Romeoville campus. This includes commuters and 
+		those living on campus, part-time and full-time students, graduate and undergraduate students, and those 
+		taking Lewis classes at other locations.  For more information, visit the Center for Health &amp; Counseling 
+		website at www.lewisu.edu/studentservices/health or call (815)836-5455.</p>
+	</div> )
 }
