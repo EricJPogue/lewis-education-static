@@ -2,6 +2,8 @@
 import React from 'react'
 import { estimated } from './AL00000Sprint01'
 import { programmingTogether, ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink } from '../Links'
+import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
+import { sprintEndDateWithoutTime } from '../SprintDates'
 
 export const FinalProjectsAndMoreResponsibility = () => {
 	return ( <div>
@@ -32,10 +34,20 @@ export const StandardActivitiesWithLinkAndSprint = (sprint, programmingAssignmen
 }
 
 export const StandardActivitiesClosingWithLinkAndSprint = (sprint, programmingAssignmentLink, programmingAssignmentEstimate) => { 
-	return ( <div>
-		<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
-		<li><em>Submit sprint {sprint} assignments including Discussion, Quiz, Lab, and Reflection</em></li>
-	</div> ) 
+	if (sprint === 8) {
+		return (<div>
+			<li>Submit your Final Project Presentation assignment at least two hours before to your scheduled presentation time</li>
+			<li><em style={{color:'red'}}>Deliver your Final Project Presentation <u>in person</u> on <u>{getFinalExamDateAndTime()}</u></em></li>
+			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+			<li><em style={{color:'red'}}>Submit <u>all assignments</u> by the end of the day <u>{sprintEndDateWithoutTime(sprint-1)}</u>... no late assignments</em></li> 
+		</div>)
+	}
+	else {
+		return (<div>
+			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+			<li><em>Submit sprint {sprint} assignments including Discussion, Quiz, Lab, and Reflection</em></li>
+		</div>)
+	}
 }
 
 export const Closing = () => { 
@@ -45,3 +57,5 @@ export const Closing = () => {
 		to see if we can make the course something special for you.</p> 
 	</div> ) 
 }
+
+export const ClosingSprint08 = () => { return ( <p>Let’s finish strong. It has been a sincere pleasure.</p>	) }

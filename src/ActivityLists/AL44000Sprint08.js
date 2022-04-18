@@ -1,6 +1,4 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { StandardActivities, StandardActivitiesClosing, Closing } from './AL00000Sprint08'
 
@@ -33,7 +31,7 @@ export const al44000Sprint08 = () => {
 		<li>Complete your team’s sprint 7 Review and Retrospective</li>
 		<li>Focus your energy on delivering and testing your team’s sprint 8 backlog stories</li>
 		<li>Make sure that your project is sustainable and well documented so that a future team could pick up where you left off</li>
-		<li>Complete <NavLink to='/activity-architecture/application-architecture-part2'>Application Architectures, Object-Oriented Programming, and Databases - Part 2</NavLink></li>
+
 
 		{StandardActivitiesClosing(Complete_FinalProjectSprint8())}
 	</ol>
@@ -44,4 +42,3 @@ export const al44000Sprint08 = () => {
 }
 
 // Todo: Update Final Project Presentation assignment to match other classes. Maybe update all the other assignments?
-// Todo: Consider having only one discussion topic in sprint 8. 

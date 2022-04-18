@@ -2,9 +2,15 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { makeInternalURL } from './ActivityRouter'
 
+import { makeNavigationLink } from './Thunderbird';
+
 import { agileAlliance, agileAllianceAgile101, backlogGrooming, epic, iNVEST, productBacklog, scrum, userStory, userStoryTemplate } from '../Links';
 
 import { finalProjectProposalLink /* FinalProjectProposalNavLink */ } from './FinalProjectProposal';
+
+
+
+
 
 export const Start_FinalProject = () => { return (<div>Start working on your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 export const Complete_FinalProject = () => { return (<div>Complete your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
@@ -219,3 +225,6 @@ to plan for the next sprint because this is it. You should plan on each team mem
 sprint.</p>
 	</div> )
 }
+
+export const finalProject = { 'name':'Final Project', 'route':'final-project', 'function': FinalProject }
+export const finalProjectLink = () => { return makeNavigationLink(finalProject) }

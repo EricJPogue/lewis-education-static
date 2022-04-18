@@ -7,8 +7,6 @@ import { oreillyPlaylistICS, internalLink } from '../Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
 
-
-
 export const al20000Sprint07 = () => {
 	return ( <div>
 		<h5>Sprint 7: Security, JavaScript, and you setting the direction</h5>

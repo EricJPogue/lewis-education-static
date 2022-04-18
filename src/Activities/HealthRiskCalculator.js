@@ -6,10 +6,7 @@ import { makeInternalURL } from './ActivityRouter'
 import BloodPressureImage from './HealthRiskCalculatorBloodPressure.png';
 import BodyMassIndexImage from './HealthRiskCalculatorBodyMassIndex.png';
 
-
 // const HEALTH_RISK_CALCULATOR_PYTHON_OR_WEB_NAME = HealthRiskCalculatorPythonProperties.name + ' or ' + HealthRiskCalculatorWebProperties.name
-
-
 const HealthRiskCalculatorPythonProperties = {
 	'name': 'Health Insurance Risk Calculator with Python', 
 	'language': 'Python',
@@ -67,10 +64,6 @@ const HealthRiskCalculatorWebOrPython = (prefix, postfix) => {
 	let linkPython = HealthRiskCalculatorPythonProperties.internalLink
 	return (<div>{prefix} <NavLink to={linkWeb}>{nameWeb}</NavLink> or <NavLink to={linkPython}>{namePython}</NavLink> {postfix}</div>)
 }
-
-
-
-
 
 const HealthRiskCalculatorJavaProperties = {
 	'name': 'Health Insurance Risk Calculator with Java', 

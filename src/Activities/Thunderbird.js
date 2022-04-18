@@ -93,7 +93,4 @@ to what you created in ThunderbirdLite), and then utilize the code as the starti
 export const thunderbird = { 'name':'Thunderbird', 'route':'thunderbird', 'function': ThunderbirdJava }
 export const thunderbirdLink = () => { return makeNavigationLink(thunderbird) }
 
-const makeNavigationLink = (activity) => {
-	console.log('activity='+activity)
-	return ( <NavLink to={BASE_ACTIVITY_ROUTE+activity.route}>{activity.name}</NavLink> )
-}
+export const makeNavigationLink = (activity) => { return ( <NavLink to={BASE_ACTIVITY_ROUTE+activity.route}>{activity.name}</NavLink> ) }

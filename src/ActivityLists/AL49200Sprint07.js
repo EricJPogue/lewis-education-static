@@ -50,3 +50,4 @@ const list49200Sprint7 = (sprint) => {
 // Todo: Determine if 10, 12, or 14 hours would be the most appropriate to require on the final project. In SP22 I 
 // reduced it from 14 hours to 10 hours based on the fact that Easter Break was in sprint 7 and consumed Thursday, 
 // Friday, and Monday.
+// Todo: Consider updating Lab 7 question 4 as no one ever provides valuable comments to this question. 

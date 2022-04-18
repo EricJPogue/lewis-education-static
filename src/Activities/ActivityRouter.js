@@ -37,6 +37,7 @@ import { QUIZ_MASTER_MERN_ROUTE, quizMasterMERN } from './QuizMasterMERN'
 import { WEB_RESUME_ROUTE, webResume } from './WebResume'
 
 import { introductionToReact } from './IntroductionToReact'
+import { finalProject } from './FinalProject'
 
 // const BASE_ACTIVITY_URL = '/activity/'
 export const makeInternalURL = (activityRoute) => {
@@ -85,6 +86,7 @@ export const routeActivity = (activityRoute) => {
 
 		case introductionToReact.route: return introductionToReact.function()
 		case thunderbird.route: return thunderbird.function()
+		case finalProject.route: return finalProject.function()
 
 		default: return null
 	}

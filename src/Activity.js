@@ -23,7 +23,7 @@ import { CodingStandards, CodingStandardsValidator } from './Activities/CodingSt
 import { QuizMaster } from './Activities/QuizMaster'
 import { GitCommands } from './Activities/GitCommands'
 
-import { FinalProject, FinalProjectDistributed, /* FinalProjectSprint5,  FinalProjectSprint6, FinalProjectSprint7, */ FinalProjectSprint8 } from './Activities/FinalProject'
+import { /*FinalProject,*/ FinalProjectDistributed, /* FinalProjectSprint5,  FinalProjectSprint6, FinalProjectSprint7, */ FinalProjectSprint8 } from './Activities/FinalProject'
 
 import { HTML } from './Activities/HTML'
 import { PythonW3C } from './Activities/PythonW3C'
@@ -95,7 +95,7 @@ class Activity extends Component {
 			case 'coding-standards-validator': return CodingStandardsValidator()
 			case 'quiz-master': return QuizMaster()
 
-			case 'final-project': return FinalProject()
+			// case 'final-project': return FinalProject()
 			case 'final-project-distributed': return FinalProjectDistributed()
 			// case 'final-project-sprint-5': return FinalProjectSprint5()
 			// case 'final-project-sprint-6': return FinalProjectSprint6()
