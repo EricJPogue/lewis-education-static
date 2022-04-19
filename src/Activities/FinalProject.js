@@ -199,30 +199,35 @@ export const finalProjectSprint7 = () => {
 	</div> )
 }
 
+const FINAL_PROJECT_SPRINT_8_NAME = 'Final Project Sprint 8'
+export const FINAL_PROJECT_SPRINT_8_ROUTE = 'final-project-sprint-8'
+export const finalProjectSprint8Link = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_SPRINT_8_ROUTE)}>{FINAL_PROJECT_SPRINT_8_NAME}</NavLink>)}
+export const finalProjectSprint8 = () => { return FinalProjectSprint8() }
+
 export const Start_FinalProjectSprint8 = () => { return (<div>Start working on <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink></div>) }
 export const Complete_FinalProjectSprint8 = () => { return (<div>Complete <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink><sup>~12 hours per team member</sup></div>) }
 export const FinalProjectSprint8 = () => {
-	return (
-	
-<div>
-<br />
-<h4>Final Project Sprint 8</h4>
-<h5>Summary: This is it our final sprint. Let’s build something special.</h5>
+	return ( <div>
+		<br />
+		<h4>Final Project Sprint 8</h4>
+		<h5>Summary: This is it our final sprint. Let’s build something special.</h5>
 
-<p>We should be working with a solid cadence. Now it’s time to focus all of our energy on building something special.</p>
+		<p>We should be working with a solid cadence. Now it’s time to focus all of our energy on building something 
+		special. It is also time to commit to making it sustainable so that you or someone else could pick up where
+		you left off with the product.</p>
 
-<p>Our cadence should include:</p>
-<ul style={{listStyleType:'square'}}>
-<li>Demo, release, and reflect on what was delivered in the previous sprint</li>
-	<li>Plan for the current sprint</li>
-	<li>Deliver committed stories in current sprint</li>
-	<li>In the spirit of Agile we will not be grooming the backlog or planning for the next sprint</li>
-</ul>
+		<p>Our cadence should include:</p>
+		<ul style={{listStyleType:'square'}}>
+		<li>Demo, release, and reflect on what was delivered in the previous sprint</li>
+			<li>Plan for the current sprint</li>
+			<li>Deliver committed stories in current sprint</li>
+			<li>In the spirit of Agile we will not be grooming the backlog or planning for the next sprint</li>
+		</ul>
 
-<p>Once again, high performing scrum teams are able to consistently allocate 80% or more of their effort to Delivery of 
-current sprint stories while still effectively completing demo, release, reflect, and planning activities. We don’t need 
-to plan for the next sprint because this is it. You should plan on each team member allocating approximately 12 this 
-sprint.</p>
+		<p>Once again, high performing scrum teams are able to consistently allocate 80% or more of their effort to Delivery of 
+		current sprint stories while still effectively completing demo, release, reflect, and planning activities. We don’t need 
+		to plan for the next sprint because this is it. You should plan on each team member allocating approximately 12 this 
+		sprint.</p>
 	</div> )
 }
 

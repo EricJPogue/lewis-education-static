@@ -17,6 +17,7 @@ import { FINAL_PROJECT_PROPOSAL_ROUTE, finalProjectProposal } from './FinalProje
 import { FINAL_PROJECT_SPRINT_5_ROUTE, finalProjectSprint5 } from './FinalProject'
 import { FINAL_PROJECT_SPRINT_6_ROUTE, finalProjectSprint6 } from './FinalProject'
 import { FINAL_PROJECT_SPRINT_7_ROUTE, finalProjectSprint7 } from './FinalProject'
+import { FINAL_PROJECT_SPRINT_8_ROUTE, finalProjectSprint8 } from './FinalProject'
 import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebGettingToKnowEachOther'
 import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbbreviated } from './WebGettingToKnowEachOtherAbbreviated'
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
@@ -66,6 +67,7 @@ export const routeActivity = (activityRoute) => {
 		case FINAL_PROJECT_SPRINT_5_ROUTE: return finalProjectSprint5()
 		case FINAL_PROJECT_SPRINT_6_ROUTE: return finalProjectSprint6()
 		case FINAL_PROJECT_SPRINT_7_ROUTE: return finalProjectSprint7()
+		case FINAL_PROJECT_SPRINT_8_ROUTE: return finalProjectSprint8()
 		case GETTING_TO_KNOW_EACH_OTHER_ROUTE: return gettingToKnowEachOther()
 		case GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE: return gettingToKnowEachOtherAbbreviated()
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()
