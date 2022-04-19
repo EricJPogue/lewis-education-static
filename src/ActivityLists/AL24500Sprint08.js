@@ -39,5 +39,6 @@ export const list24500Sprint08 = () => {
 	</div>)
 }
 
+// Certified for SP22 (Monday, April 18, 2022)
 
-// Todo: Lab question 2 needs to be updated for Java project. 
+

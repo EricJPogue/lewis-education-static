@@ -5,7 +5,7 @@ export const SCHEDULE_TTR = 'TTh'
 export const SCHEDULE_ONLINE = 'Online'
 
 export const classList = [		
-	{ 'classID':'su22-cpsc-24700-LT1', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2022-05-09-08', 'schedule':'Online', 'time':'', 'finalExam':'Thursday, June 30 from 11:00 AM to 1:00 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-20000-002.pdf' },
+	{ 'classID':'su22-cpsc-24700-lt1', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2022-05-09-08', 'schedule':'Online', 'time':'', 'finalExam':'Thursday, June 30 from 11:00 AM to 1:00 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-20000-002.pdf' },
 	{ 'classID':'sp22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'1-1:50 PM', 'finalExam':'Wednesday, May 4 from 1:30 PM to 3:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-20000-002.pdf' },
 	{ 'classID':'sp22-cpsc-24500-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'2-2:50 PM', 'finalExam':'Monday, May 2 from 4 PM to 6 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
 	{ 'classID':'sp22-cpsc-44000-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2022-01-10-16', 'schedule':'TTh', 'time':'11-12:15 PM', 'finalExam':'Tuesday, May 3 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-44000-001.pdf' },

@@ -6,6 +6,7 @@ import { HeaderNavigation } from './HeaderNavigation'
 
 import { Home } from './Home'
 import { Welcome } from './Welcome'
+import { Syllabus } from './Syllabus' 
 import { Sprint } from './Sprint'
 import { SprintCalendar } from './SprintCalendar'
 import { SprintClassActivities } from './SprintSchedule'
@@ -36,6 +37,7 @@ class Main extends Component {
 						<Route exact path='/' component={Home}/>
 						<Route exact path='/home' component={Home}/>
 						<Route path='/welcome' component={Welcome}/>
+						<Route path='/syllabus' component={Syllabus}/>
 						<Route path='/sprint/:reference' component={Sprint}/>
 						<Route path='/calendar/:reference' component={SprintCalendar}/>
 						<Route path='/schedule/:reference' component={SprintClassActivities}/>

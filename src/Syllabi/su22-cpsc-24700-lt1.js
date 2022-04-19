@@ -1,5 +1,5 @@
 import React from 'react'
-import LewisUniversityLogo from './LewisUniversityLogo.png'
+import LewisUniversityLogo from '../Slides/LewisUniversityLogo.png'
 import Table from 'react-bootstrap/Table'
 
 import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
@@ -27,8 +27,13 @@ const course = {
 
 }
 
+export const su22_cpsc_24700_lt1_B = () => {
+	return (<div><h1>TestSyllabus</h1></div>)
+
+}
+
 const styleSmall = { fontSize:14 }
-export const syllabus = () => {
+export const su22_cpsc_24700_lt1 = () => {
 	const syllabus24700 = () => {
 		const header = (itemArray) => {
 			return (<tr><td style={{width:'50px' }}><b>{itemArray[0]}</b></td><td style={{width:'200px' }} colSpan={2}><b>{itemArray[1]}</b></td></tr>)
@@ -250,7 +255,7 @@ export const syllabus = () => {
 			</Table><br />			
 		</div> )
 	}
-	return [ syllabus24700 ]
+	return syllabus24700()
 }
 
 export const renderLogo = () => {
