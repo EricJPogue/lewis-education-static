@@ -2,7 +2,7 @@ import { defaultDeck, checklist, CHECKLIST_ROUTE } from './SLSprint00' // Shared
 import { preflightChecklist, instructorChecklist, activitiesReview, submissionPercentage, discussionBreakout, end } from './SLSprint00' // Shared slides.
 import { agendaSlide, basicSlide, orderedListSlide, preworkSlide, preworkWithActivityList } from './SLSprint00' // Shared slide templates.
 import { sprintDemosIntro, sprintDemos, demoAssignment  } from './SLSprint00'
-import { syllabus } from './syllabus'
+import { renderBreakout } from './Breakout'
 
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
 import { list24500Sprint07 } from '../ActivityLists/AL24500Sprint07'
@@ -19,8 +19,8 @@ export const sprint7Router = (route) => {
 		case OOP_7_2of6_ROUTE: return oop7_2of6()
 
 		case SE_7_1of4_ROUTE: return se7_1of4()
-
-		case 'syllabus': return syllabus()
+		case SE_7_3of4_ROUTE: return se7_3of4()
+		
 		default: return defaultDeck()
 	}
 }
@@ -227,11 +227,56 @@ const se7_1of4 = () => {
 		reviewBacklogGrooming, sprintPlanning, activitiesReview, preworkSE7_3of4, sprint6Planning, end ]
 }
 
+
+// Session 2 of 4 was over Easter Break.
+
+const SE_7_3of4_ROUTE = 'se7-3of4'
+const se7_3of4 = () => {
+	const sprint = 7
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			`Recall Completing Sprint ${sprint} Planning & Discuss 7 on Tuesday before break`,
+			'Job and internship opportunities',
+			`Breakout on Design Patterns`,
+			'Prework for Next Class' ])
+	}
+	const recallTuesdayClass = () => {
+		return basicSlide(`Recall Sprint ${sprint} Planning & Discuss 7`, [
+			`Recall completing sprint ${sprint} planning including final team and individual sprint ${sprint} 
+			commitments plus Discussion 7.` ]) 
+	}
+	const jobOpportunities = () => {
+		return basicSlide('Job Opportunities', [
+			'Let’s spend a few minutes reviewing Job opportunities at John Deere and my announcement from this morning.' ]) 
+	}
+	const designPatternsBreakout = () => {
+		return renderBreakout({
+			'title':'Design Patterns (and Principles',
+			'topics': [
+				'Design Principles, SOLID, Single Responsibility Principle, Open/Close Principle', 
+				'Design Patterns, “Gang of Four (GoF)”, Prefer Composition and Delegation over Inheritance',
+				'Model-View-Controller and Singleton',
+				'UML plus Just Enough UML',
+				'The Plan-And-Document Perspective on Design Patterns (and Principles) plus UML',
+				'Frameworks' ]
+		})
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, preworkSE7_3of4, recallTuesdayClass, jobOpportunities, designPatternsBreakout, preworkSE7_4of4, end ]
+}
+
 const preworkSE7_3of4 = () => {
 	return basicSlide('Prework', [
 		'Complete through activity 8', '',
 		'Be prepared Breakout on Design Patterns',
 		'Be prepared for Quiz 7' ])
+}
+
+const preworkSE7_4of4 = () => {
+	return basicSlide('Prework', [
+		'Complete through activity 9', '',
+		'Be prepared Lab' ])
 }
 
 // Shared between classes:
