@@ -10,6 +10,7 @@ import { CLASS_PRODUCT_SPRINT_4_ROUTE, classProductSprint4 } from './ClassProduc
 import { CLASS_PRODUCT_SPRINT_5_ROUTE, classProductSprint5 } from './ClassProduct'
 import { CLASS_PRODUCT_SPRINT_6_ROUTE, classProductSprint6 } from './ClassProduct'
 import { CLASS_PRODUCT_SPRINT_7_ROUTE, classProductSprint7 } from './ClassProduct'
+import { CLASS_PRODUCT_SPRINT_8_ROUTE, classProductSprint8 } from './ClassProduct'
 import { DELIVERY_DRONE_ROUTE, deliveryDrone } from './DeliveryDrone'
 import { FACEDRAW_JAVA_ROUTE, faceDrawJava } from './FaceDraw'
 import { FAVORITE_HOBBY_ROUTE, favoriteHobby} from './WebMyFavoriteHobby'
@@ -60,6 +61,7 @@ export const routeActivity = (activityRoute) => {
 		case CLASS_PRODUCT_SPRINT_5_ROUTE: return classProductSprint5()
 		case CLASS_PRODUCT_SPRINT_6_ROUTE: return classProductSprint6()
 		case CLASS_PRODUCT_SPRINT_7_ROUTE: return classProductSprint7()
+		case CLASS_PRODUCT_SPRINT_8_ROUTE: return classProductSprint8()
 		case DELIVERY_DRONE_ROUTE: return deliveryDrone()
 		case FACEDRAW_JAVA_ROUTE: return faceDrawJava()
 		case FAVORITE_HOBBY_ROUTE: return favoriteHobby()
