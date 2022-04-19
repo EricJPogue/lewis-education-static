@@ -38,3 +38,5 @@ export const list44000Sprint08 = () => {
 
 // Todo: Update Final Project Presentation assignment to match other classes. Maybe update all the other assignments?
 // Remove quiz question relating to Software Architecture
+
+// Certified for SP22 (Monday, April 18, 2022)
