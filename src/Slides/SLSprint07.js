@@ -1,5 +1,5 @@
 import { defaultDeck, checklist, CHECKLIST_ROUTE } from './SLSprint00' // Shared slide decks.
-import { preflightChecklist, instructorChecklist, activitiesReview, submissionPercentage, discussionBreakout, end } from './SLSprint00' // Shared slides.
+import { preflightChecklist, instructorChecklist, activitiesReview, submissionPercentage, discussionBreakout, quiz, end } from './SLSprint00' // Shared slides.
 import { agendaSlide, basicSlide, orderedListSlide, preworkSlide, preworkWithActivityList } from './SLSprint00' // Shared slide templates.
 import { sprintDemosIntro, sprintDemos, demoAssignment  } from './SLSprint00'
 import { renderBreakout } from './Breakout'
@@ -14,9 +14,11 @@ export const sprint7Router = (route) => {
 
 		case ICS_7_1of6_ROUTE: return ics7_1of6()
 		case ICS_7_2of6_ROUTE: return ics7_2of6()
+		case ICS_7_5of6_ROUTE: return ics7_5of6()
 
 		case OOP_7_1of6_ROUTE: return oop7_1of6()
 		case OOP_7_2of6_ROUTE: return oop7_2of6()
+		case OOP_7_5of6_ROUTE: return oop7_5of6()
 
 		case SE_7_1of4_ROUTE: return se7_1of4()
 		case SE_7_3of4_ROUTE: return se7_3of4()
@@ -76,6 +78,32 @@ const ics7_2of6 = () => {
 		icsPrework_7_5of6, end ]
 }
 
+// ISC sessions 3 of 6 and 4 of 6 were over Easter Break.
+const ICS_7_5of6_ROUTE = 'ics7-5of6'
+const ics7_5of6 = () => {
+	const sprint = 7
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Security Breakout',
+			'Prework for Next Class',
+			`Quiz ${sprint}` ])
+	}
+	const securityBreakout = () => {
+		return renderBreakout({
+			'title':'Security',
+			'topics': [
+				'Information Security and Confidentiality, Availability, and Integrity',
+				'Access, Authentication, Authorization, CAPTCHA',
+				'Malicious Code /Malware, Worms, Trojan Horses, Phishing, and DoS',
+				'Cryptography, Encryption/Decryption, ciphers, public-key cryptography, and digital signatures',
+				'Protecting Online Information' ]
+		})
+	}
+	const quiz7 = () => { return quiz(7) }
+
+	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_7_5of6, securityBreakout, icsPrework_7_6of6, quiz7, end ]
+}
 
 // Shared between ICS sessions:
 const icsPrework_7_2of6 = () => {
@@ -92,6 +120,13 @@ const icsPrework_7_5of6 = () => {
 		'Complete through activity 8', '',
 		'Be prepared to discuss “Computer Science Illuminated” Security and associated lecture',
 		'Be prepared for Quiz 7' ], 
+		list20000Sprint07)
+}
+
+const icsPrework_7_6of6 = () => {
+	return preworkWithActivityList([
+		'Everything is due Sunday!', '',
+		'Be prepared for Lab' ], 
 		list20000Sprint07)
 }
 
@@ -145,6 +180,33 @@ const oop7_2of6 = () => {
 		oopPrework_7_5of6, end ]
 }
 
+// OOP sessions 3 of 6 and 4 of 6 were over Easter Break.
+const OOP_7_5of6_ROUTE = 'oop7-5of6'
+const oop7_5of6 = () => {
+	const sprint = 7
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Breakout for Application Architectures, Object-Oriented Programming, and Databases - Part 1',
+			'Prework for Next Class',
+			`Quiz ${sprint}` ])
+	}
+	const architecturePart1Breakout = () => {
+		return renderBreakout({
+			'title':'Application Architectures, Object-Oriented Programming, and Databases - Part 1',
+			'topics': [
+				'Object-Oriented Programming Concepts/Practices, Patterns, Principles',
+				'Threading, Shared Data, and Relational Databases',
+				'SQL, Schemas, Tables, and Views',
+				'Database Normalization, Joins, and Object-Relational Mapping',
+				'NoSQL Databases, SQL, Schema, Joins, and Horizontal Scaling' ]
+		})
+	}
+	const quiz7 = () => { return quiz(7) }
+
+	return [ preflightChecklist, instructorChecklist, agenda, oopPrework_7_5of6, architecturePart1Breakout, oopPrework_7_6of6, quiz7, end ]
+}
+
 // Shared between OOP sessions:
 const oopPrework_7_2of6 = () => {
 	return preworkWithActivityList([
@@ -160,7 +222,14 @@ const oopPrework_7_5of6 = () => {
 		'Complete through activity 8', '',
 		'Be prepared to discuss “Application Architectures, Object-Oriented Programming, and Databases - Part 1”',
 		'Be prepared for Quiz 7' ], 
-		list20000Sprint07)
+		list24500Sprint07)
+}
+
+const oopPrework_7_6of6 = () => {
+	return preworkWithActivityList([
+		'Everything is due Sunday!', '',
+		'Be prepared for Lab' ], 
+		list24500Sprint07)
 }
 
 // Software Engineering
@@ -229,7 +298,6 @@ const se7_1of4 = () => {
 
 
 // Session 2 of 4 was over Easter Break.
-
 const SE_7_3of4_ROUTE = 'se7-3of4'
 const se7_3of4 = () => {
 	const sprint = 7
@@ -313,5 +381,6 @@ const prework_7_1of6 = () => {
 		'** Be prepared for in-person Sprint 7 Planning on Monday' 
 	])
 }
+
 
 
