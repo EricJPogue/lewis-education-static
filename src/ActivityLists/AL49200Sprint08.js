@@ -43,4 +43,4 @@ const list49200Sprint8 = (sprint) => {
 	</div> )
 }
 
-// Todo: Consider updating Lab 7 question 4 as no one ever provides valuable comments to this question. 
+// Certified for SP22 (Tuesday, April 19, 2022)

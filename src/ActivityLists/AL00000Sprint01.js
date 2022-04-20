@@ -14,15 +14,11 @@ const sprintEndDate = (sprint) => {
 }
 
 export const ScrumIntro = () => {
-	return ( 
-
-<p>You likely noticed that I am using the term “sprint 1” to describe our first set of course activities. Sprints are 
-part of the scrum software development process. The term is used to describe a unit of work that we have committed to
-delivering by a given date. We will be learning more about sprints and scrum in the coming days. For now, it is 
-sufficient to know that our sprint 1 activities will take approximately 18 hours of focused effort to complete, and we 
-need to complete the activities by the end of sprint 1 which is <em>{sprintEndDate(1)}</em>.</p> 
-
-	)
+	return ( <p>You likely noticed that I am using the term “sprint 1” to describe our first set of course activities. 
+		Sprints are part of the scrum software development process and are used to describe a set of work that we have 
+		committed to deliver by a given date. We will be learning more about sprints and scrum. For now, it is 
+		sufficient to know that our sprint 1 activities will take approximately 18 hours of effort to complete, and that 
+		we are committed to completing the activities by the end of sprint 1 which is <em>{sprintEndDate(1)}</em>.</p> )
 }
 
 export const LearningObjectivesIntro = () => {

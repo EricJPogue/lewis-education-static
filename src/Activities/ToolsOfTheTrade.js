@@ -12,7 +12,7 @@ const chocolateyInstallApplicationTutorial = () => { return internalLink('Chocol
 const chocolateyScript = () => { return externalLink('script', 'https://lewiseducation.blob.core.windows.net/configuration/choco-install-packages.txt') }
 const homebrew = () => { return externalLink('Homebrew tutorial', 'https://lewiseducation.blob.core.windows.net/configuration/homebrew.mp4')}
 
-export const ToolsOfTheTradeLink = () => {return (<NavLink to={link}>{name}</NavLink>)}
+export const toolsOfTheTradeLink = () => {return (<NavLink to={link}>{name}</NavLink>)}
 const link = '/activity/tools'
 const name = 'Tools of the Trade'
 export const Tools = () => {

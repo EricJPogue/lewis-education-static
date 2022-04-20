@@ -6,7 +6,7 @@ import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, Initi
 
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { htmlLink } from '../Activities/HTML'
-import { ToolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
+import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { SequenceSelectionAndRepetition } from '../Links'
 import { oreillyPlaylistICS } from '../Links'
 
@@ -34,7 +34,7 @@ Sheets (CSS).</p>
 	{StandardActivities(gettingToKnowEachOtherLink())}
 
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The Information Layer and review our associated <NavLink to='/activity-dale/2'>lecture</NavLink></li>
-	<li>Review {ToolsOfTheTradeLink()}</li>
+	<li>Review {toolsOfTheTradeLink()}</li>
 	<li>Review {SequenceSelectionAndRepetition()}</li>
 	<li>{InitialDiscussionPost(2)}</li>
 

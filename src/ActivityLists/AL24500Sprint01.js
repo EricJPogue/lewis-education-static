@@ -5,7 +5,7 @@ import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, Initi
 import { oreillyPlaylistOOP } from '../Links';
 
 import { GetCommandsLink } from '../Activities/GitCommands';
-import { ToolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade';
+import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade';
 import { HelloWorldPythonLink, HelloWorldJavaLink } from '../Activities/HelloWorld';
 
 import { MatchmakerWithJava } from './ProgrammingAssignments'
@@ -39,7 +39,7 @@ additional skills are what object-oriented programming give us.</p>
 	<li>Within {oreillyPlaylistOOP()} read “Learning Java, 5th Edition” chapters 1, 2, and 3<sup> ~2 hours</sup></li>
 
 	{InitialPost()}
-	<li>Complete {ToolsOfTheTradeLink()}<sup> ~2 hours</sup></li>
+	<li>Complete {toolsOfTheTradeLink()}<sup> ~2 hours</sup></li>
 	<li>Review {GetCommandsLink()}</li>
 	<li>Complete {HelloWorldPythonLink()}</li>
 	<li>Complete {HelloWorldJavaLink()}</li>

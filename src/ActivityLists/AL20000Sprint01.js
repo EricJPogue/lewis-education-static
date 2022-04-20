@@ -7,9 +7,8 @@ import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, Initi
 import { ProgrammingActivity, ToolsOfTheTrade, HelloWorldWithPython } from './ProgrammingAssignments'
 import { oreillyPlaylistICS, CommandLine, IntroducingPythonSampleCode } from '../Links'
 
-const computerScienceIlluminated = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Computer Science Illuminated</a> ) }
-
 export const al20000Sprint01 = () => {
+	const computerScienceIlluminated = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Computer Science Illuminated</a> ) }
 	return ( <div>
 
 <h5>Sprint 1: Getting Started, The Big Picture, Files Systems, and Tools of the Trade</h5>
