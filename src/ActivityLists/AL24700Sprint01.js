@@ -7,7 +7,6 @@ import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActiv
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
-import { NavLink } from 'react-bootstrap'
 
 export const al24700Sprint01 = () => {
 	return ( <div>
@@ -26,8 +25,6 @@ export const al24700Sprint01 = () => {
 
 		{list24700Sprint01()}
 		{closing()}
-
-		<NavLink to='/deck/oop7-5of6'>Slides</NavLink>
 	</div> )
 }
 
@@ -54,7 +51,6 @@ export const list24700Sprint01 = () => {
 	</div>)
 }
 
-// Todo: Update syllabus introduction to better reflect topics and environments  
 // BugBug: Verify that second discussion board is removed from sprint 1.
 // Move Final Project Presentation assignment up so that it is between sprint 7 and sprint 8 (instead of after sprint 8).
 // Remove last question in Lab 8.

@@ -3,7 +3,7 @@ import React from 'react'
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, ClosingSprint08 } from './AL00000Sprint05'
 import { finalProjectSprint8Link } from '../Activities/FinalProject'
-import { oreillyPlaylistSE } from '../Links'
+import { oreillyPlaylistSE, architecturePart1, architecturePart2 } from '../Links'
 
 export const al44000Sprint08 = () => {
 	return ( <div>
@@ -31,9 +31,12 @@ export const list44000Sprint08 = () => {
 		{ActivitiesListIntro(sprint)}
 		<ol>
 			{StandardActivitiesWithLinkAndSprint(sprint, finalProjectSprint8Link(), oreillyPlaylistSE())}
+			<li>Complete {architecturePart1()}</li>
+			<li>Scan {architecturePart2()}</li>
 			{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectSprint8Link(), '12 hours')}
 		</ol>
 	</div>)
 }
 
 // Certified for SP22 (Monday, April 18, 2022)
+// 

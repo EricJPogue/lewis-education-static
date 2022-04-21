@@ -125,6 +125,11 @@ export const learningJavaExampleCode = () =>  { return internalLink('example cod
 
 export const done = () => { return externalLink('Done', 'https://www.agilealliance.org/glossary/definition-of-done')}
 
+export const architecturePart1 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 1', 
+'/activity-architecture/application-architecture-part1')}
+export const architecturePart2 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 2', 
+'/activity-architecture/application-architecture-part2')}
+
 export const externalLink = (displayName, url) => {
 	return (
 		<a href={url} target='_blank' rel='noopener noreferrer'>{displayName}</a>

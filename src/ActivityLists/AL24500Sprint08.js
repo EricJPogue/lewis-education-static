@@ -2,7 +2,7 @@ import React from 'react'
 
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, ClosingSprint08 } from './AL00000Sprint05'
-import { oreillyPlaylistOOP, internalLink } from '../Links'
+import { oreillyPlaylistOOP, architecturePart2 } from '../Links'
 import { finalProjectLink } from '../Activities/FinalProject'
 
 export const al24500Sprint08 = ( props ) => {
@@ -26,8 +26,7 @@ export const al24500Sprint08 = ( props ) => {
 }
 
 export const list24500Sprint08 = () => {
-	const architecturePart2 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 2', 
-		'/activity-architecture/application-architecture-part2')}
+
 	const sprint = 8
 	return ( <div>
 		{ActivitiesListIntro(sprint)}

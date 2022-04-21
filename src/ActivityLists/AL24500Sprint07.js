@@ -4,7 +4,7 @@ import { estimated } from './AL00000Sprint01'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
 import { finalProjectSprint7Link } from '../Activities/FinalProject'
-import { oreillyPlaylistOOP, internalLink } from '../Links'
+import { oreillyPlaylistOOP, architecturePart1, internalLink } from '../Links'
 import { thunderbirdLink } from '../Activities/Thunderbird'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
@@ -37,8 +37,6 @@ export const al24500Sprint07 = ( props ) => {
 
 export const list24500Sprint07 = () => {
 	const thunderbirdLite = () => { return internalLink('ThunderbirdLite', '/activity-oop/java-thunderbird-lite')}
-	const architecturePart1 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 1', 
-		'/activity-architecture/application-architecture-part1')}
 	const sprint = 7
 	return ( <div>
 		{ActivitiesListIntro(sprint)}

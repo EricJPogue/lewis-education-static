@@ -18,13 +18,12 @@ const course = {
 	id:'CPSC-24700',
 	section:'001',
 	creditHours:3,
-	prerequisites:'none',
+	prerequisites:'CPSC-20000 Introduction to Computer Science',
 	meetingTimes:'This course in online and asynchronous',
 	meetingDates:'This class starts Monday, May 9th and ends Thursday, June 30th',
 	meetingLocation:'Online',
 	finalExamTime: `${getFinalExamDateAndTime()}`,
 	textBook: 'Programming the World Wide Web 8th Edition, Robert W. Sebesta, Addison-Wesley, 2015 (ISBN 978-0-13-377598-3). This book is required for this course.'
-
 }
 
 const styleSmall = { fontSize:14 }
@@ -62,7 +61,6 @@ export const su22_cpsc_24700_lt1 = () => {
 				</tbody>
 			</Table>
 
-
 			<Table style={{width:'768px'}} className="table-borderless table-sm">
 				<tbody>
 					{header(['I.', 'Instructor Information'])}
@@ -82,11 +80,11 @@ export const su22_cpsc_24700_lt1 = () => {
 					{row(['', 'Description:'])}
 					<tr><td></td>
 						<td colSpan={2}>
-							This course explores the languages and technologies utilized to develop leading edge web 
-							and distributed software applications. Topics initially include utilizing HTML, CSS, and 
+							This course explores the languages and technologies utilized to develop leading edge web and 
+							distributed software applications. Topics initially include developing HTML, CSS, and 
 							JavaScript to develop browser based applications. Students will then continue to expand 
 							their skills by learning server-side web development, cloud hosting, web services, and 
-							databases.<br />
+							database basics.<br />
 						</td>
 					</tr>
 					{row(['', 'Prerequisites:', course.prerequisites])}
@@ -99,17 +97,15 @@ export const su22_cpsc_24700_lt1 = () => {
 						<td colSpan={2}>
 							<i><b>Student Learning Outcomes:</b></i>
 							<ol style={styleSmall}>
-								<li>understand the ideas of distributed computing and the World Wide Web / Internet</li>
-								<li>create web pages with HTML5 and CSS</li>
-								<li>utilize a cloud-based computing platform (Microsoft Azure) to host a basic website </li>
-								<li>understand the best Web design practices</li>
-								<li>create dynamic and interactive web sites using JavaScript</li>
-								<li>understand XML and Web services</li>
-								<li>understand basic database concepts and make simple SQL queries</li>
-								<li>write PHP scripts to process forms and interact with databases</li>
-								<li>understand the basics of the various software development lifecycle processes</li>
-								<li>provide an overview of Perl, Java, and Ruby</li>
-								<li>understand the Hadoop framework and MapReduce programs</li>
+								<li>understand the ideas of distributed computing, the World Wide Web, and theInternet</li>
+								<li>create web pages with HTML and CSS</li>
+								<li>utilize a cloud-based computing platforms to host websites</li>
+								<li>create interactive web sites using JavaScript</li>
+								<li>understand web design best practices</li>
+								<li>understand JSON, XML, and Web services</li>
+								<li>implement server-side application functionality utilizing Node.js</li>
+								<li>understand basic database concepts and make simple queries</li>
+								<li>conceptually understand server-side web software development with Python and Java</li>
 							</ol>
 							<i><b>Program student learning outcomes:</b></i>
 							<ol style={styleSmall}>
