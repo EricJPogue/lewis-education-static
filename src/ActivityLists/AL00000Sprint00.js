@@ -45,7 +45,7 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 		if (playlistLink !== '') return ( <li>From previous sprints review {ExampleCode()}, {gitCommands()}, {codingStandards()}, {tutoringOptions()}, and {playlistLink}</li> )
 	}
 	const sprint1StandardActivities = () => {
-		const syllabus = () => internalLink('Syllabus', '/syllabus')
+		const syllabus = () => internalLink('syllabus', '/syllabus')
 		const toolsOfTheTrade = () => internalLink('Tools of the Trade', '/activity/tools' )
 		return ( <div>
 			<li>Review our course {syllabus()}</li>

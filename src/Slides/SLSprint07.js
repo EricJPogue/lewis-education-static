@@ -6,7 +6,7 @@ import { renderBreakout } from './Breakout'
 
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
 import { list24500Sprint07 } from '../ActivityLists/AL24500Sprint07'
-// import { list44000Sprint07 } from '../ActivityLists/AL44000Sprint07'
+import { list44000Sprint07 } from '../ActivityLists/AL44000Sprint07'
 
 export const sprint7Router = (route) => {
 	switch(route) {
@@ -22,7 +22,8 @@ export const sprint7Router = (route) => {
 
 		case SE_7_1of4_ROUTE: return se7_1of4()
 		case SE_7_3of4_ROUTE: return se7_3of4()
-		
+		case SE_7_4of4_ROUTE: return se7_4of4()
+
 		default: return defaultDeck()
 	}
 }
@@ -296,7 +297,6 @@ const se7_1of4 = () => {
 		reviewBacklogGrooming, sprintPlanning, activitiesReview, preworkSE7_3of4, sprint6Planning, end ]
 }
 
-
 // Session 2 of 4 was over Easter Break.
 const SE_7_3of4_ROUTE = 'se7-3of4'
 const se7_3of4 = () => {
@@ -334,17 +334,51 @@ const se7_3of4 = () => {
 	return [ preflightChecklist, instructorChecklist, agenda, preworkSE7_3of4, recallTuesdayClass, jobOpportunities, designPatternsBreakout, preworkSE7_4of4, end ]
 }
 
+const SE_7_4of4_ROUTE = 'se7-4of4'
+const se7_4of4 = () => {
+	const sprint = 7
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			`Sprint ${sprint+1} Planning Expectations`, 
+			`Backlog Grooming in Preparation for Tuesday’s Sprint ${sprint+1} Sprint Planning`,
+			'Prework for Next Class',
+			`Lab and Quiz ${sprint} Review` ])
+	}
+	const planningExpectations = () => { return basicSlide(`Sprint ${sprint+1} Planning Expectations`, [
+		'Review Blackboard Announcement from this morning.' ]) 
+	}
+	const backlogGrooming = () => { return basicSlide('Backlog Grooming', [
+			`Backlog Grooming in Preparation for Tuesday’s Sprint ${sprint+1} Sprint Planning`, '',
+			'** Goal: Each team member needs to provide Product Owner two or more valid user stories estimated at ten or more story points prior to class on Tuesday' ]) 
+	}
+	const lab = () => { return basicSlide('Lab', [
+			`Quiz ${sprint} review including SQL questions`,
+			`Continue working in scrum teams on Sprint ${sprint} assignments` ]) 
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, planningExpectations, backlogGrooming, preworkSE8_1of4, lab, end ]
+}
+
 const preworkSE7_3of4 = () => {
-	return basicSlide('Prework', [
+	return preworkWithActivityList([
 		'Complete through activity 8', '',
 		'Be prepared Breakout on Design Patterns',
-		'Be prepared for Quiz 7' ])
+		'Be prepared for Quiz 7' ],
+		list44000Sprint07)
 }
 
 const preworkSE7_4of4 = () => {
-	return basicSlide('Prework', [
+	return preworkWithActivityList([
 		'Complete through activity 9', '',
-		'Be prepared Lab' ])
+		'Be prepared for Lab' ], 
+		list44000Sprint07)
+}
+
+const preworkSE8_1of4 = () => {
+	return basicSlide('Prework', [
+		`All Sprint 7 Assignments due Sunday!`, '',
+		`** Be prepared for in-person Sprint 8 Planning on Tuesday` ])
 }
 
 // Shared between classes:

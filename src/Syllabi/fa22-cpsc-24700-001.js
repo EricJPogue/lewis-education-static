@@ -1,6 +1,6 @@
 import React from 'react'
-import LewisUniversityLogo from '../Slides/LewisUniversityLogo.png'
 import Table from 'react-bootstrap/Table'
+import LewisUniversityLogo from '../Slides/LewisUniversityLogo.png'
 
 import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
 
@@ -28,7 +28,7 @@ const course = {
 }
 
 const styleSmall = { fontSize:14 }
-export const su22_cpsc_24700_lt1 = () => {
+export const fa22_cpsc_24700_001 = () => {
 	const syllabus24700 = () => {
 		const header = (itemArray) => {
 			return (<tr><td style={{width:'50px' }}><b>{itemArray[0]}</b></td><td style={{width:'200px' }} colSpan={2}><b>{itemArray[1]}</b></td></tr>)
@@ -56,7 +56,7 @@ export const su22_cpsc_24700_lt1 = () => {
 						<td style={{width:'468px', textAlign:'center'}}><br /><br />
 							<b><i>Web and Distributed Programming - 24700</i></b><br />
 							<b>Syllabus</b><br />
-							Summer 2022
+							Fall Semester 2021
 						</td>
 					</tr>
 				</tbody>

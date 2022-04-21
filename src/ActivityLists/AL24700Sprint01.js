@@ -7,6 +7,7 @@ import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActiv
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
+import { NavLink } from 'react-bootstrap'
 
 export const al24700Sprint01 = () => {
 	return ( <div>
@@ -25,6 +26,8 @@ export const al24700Sprint01 = () => {
 
 		{list24700Sprint01()}
 		{closing()}
+
+		<NavLink to='/deck/oop7-5of6'>Slides</NavLink>
 	</div> )
 }
 

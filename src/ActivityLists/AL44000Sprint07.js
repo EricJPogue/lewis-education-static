@@ -26,7 +26,7 @@ export const al44000Sprint07 = () => {
 	</div> )
 }
 
-const list44000Sprint07 = () => {
+export const list44000Sprint07 = () => {
 	const reactProgrammingTogether = () => { return internalLink('React on Azure', '/activity-config/react-on-azure')}
 	const sprint = 7
 	return ( <div>
@@ -47,3 +47,5 @@ const list44000Sprint07 = () => {
 
 // Todo: Determine if 6, 8, or 10 hours would be the most appropriate to require on the final project. In SP22 I 
 // reduced it to 8 hours based on the fact that Easter Break was in sprint 7 and consumed Thursday, Friday, and Monday.
+
+// Todo: Consider adding back in Architecture lecture or removing SQL questions from quiz.

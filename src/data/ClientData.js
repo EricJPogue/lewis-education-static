@@ -4,8 +4,10 @@ export const SCHEDULE_MWF = 'MWF'
 export const SCHEDULE_TTR = 'TTh'
 export const SCHEDULE_ONLINE = 'Online'
 
-export const classList = [		
-	{ 'classID':'su22-cpsc-24700-lt1', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2022-05-09-08', 'schedule':'Online', 'time':'', 'finalExam':'Thursday, June 30 from 11:00 AM to 1:00 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-20000-002.pdf' },
+export const classList = [
+	{ 'classID':'fa22-cpsc-24700-001', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2022-08-29', 'schedule':'MWF', 'time':'3-3:50 PM', 'finalExam':'Friday, December 16 from 4 PM to 6 PM CT', 'syllabusURL':'https://www.lewis.education/?cpsc=fa22-cpsc-24700-001&hide-nav=y#/syllabus' },
+		
+	{ 'classID':'su22-cpsc-24700-lt1', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2022-05-09-08', 'schedule':'Online', 'time':'', 'finalExam':'Thursday, June 30 from 11:00 AM to 1:00 PM CT', 'syllabusURL':'https://www.lewis.education/?cpsc=su22-cpsc-24700-lt1&hide-nav=y#/syllabus' },
 	{ 'classID':'sp22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'1-1:50 PM', 'finalExam':'Wednesday, May 4 from 1:30 PM to 3:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-20000-002.pdf' },
 	{ 'classID':'sp22-cpsc-24500-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'2-2:50 PM', 'finalExam':'Monday, May 2 from 4 PM to 6 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
 	{ 'classID':'sp22-cpsc-44000-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2022-01-10-16', 'schedule':'TTh', 'time':'11-12:15 PM', 'finalExam':'Tuesday, May 3 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-44000-001.pdf' },
@@ -21,10 +23,24 @@ export const classList = [
 	{ 'classID':'44000-spring-2021-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2021-01-18-16', 'schedule':'TTh', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/ps6xfphd-syllabus-cpsc-44000-001.pdf' }
 ]; 
 
+export const FUTURE_CALENDAR_ID = '2022-08-29'
 export const UPCOMING_CALENDAR_ID = '2022-05-09-08'
 export const CURRENT_CALENDAR_ID = '2022-01-10-16'
 
 // Sprint Calendars
+
+// The following structure represents the sprint calendar for any class that starts on 2022-08-29 and is 16 weeks long. 
+export const sprintCalendarFall_2022_08_29_16 = [																											 
+	{ 'start':'Mon Aug 29 2021 08:00:00 GMT-0600', 'end':'Sun Sep 11 2021 23:59:00 GMT-0600', 'notes':'Labor Day' },
+	{ 'start':'Mon Sep 12 2021 08:00:00 GMT-0600', 'end':'Sun Sep 25 2021 23:59:00 GMT-0600', 'notes':'' },
+	{ 'start':'Mon Sep 26 2021 08:00:00 GMT-0600', 'end':'Sun Oct 09 2021 23:59:00 GMT-0600', 'notes':'Fall Break' },
+	{ 'start':'Mon Oct 10 2021 08:00:00 GMT-0600', 'end':'Sun Oct 23 2021 23:59:00 GMT-0600', 'notes':'' },
+	{ 'start':'Mon Oct 24 2021 08:00:00 GMT-0600', 'end':'Sun Nov 06 2021 23:59:00 GMT-0600', 'notes':'' },
+	{ 'start':'Mon Nov 07 2021 08:00:00 GMT-0600', 'end':'Sun Nov 20 2021 23:59:00 GMT-0600', 'notes':'' },
+	{ 'start':'Mon Nov 21 2021 08:00:00 GMT-0600', 'end':'Sun Dec 04 2021 23:59:00 GMT-0600', 'notes':'Thanksgiving Break' },
+	{ 'start':'Mon Dec 05 2021 08:00:00 GMT-0600', 'end':'Thu Dec 15 2021 23:59:00 GMT-0600', 'notes':'Final Exams' }
+]; 
+
 // The following structure represents the sprint calendar for any class that starts on 2022-05-09 and is 8 weeks long. 
 export const sprintCalendarSummer_2022_05_09_08 = [																											 
 	{ 'start':'Mon May 09 2022 08:00:00 GMT-0600', 'end':'Sun May 15 2022 23:59:00 GMT-0600', 'notes':'' },
