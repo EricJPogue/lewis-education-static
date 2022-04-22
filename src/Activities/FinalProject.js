@@ -8,10 +8,6 @@ import { agileAlliance, agileAllianceAgile101, backlogGrooming, epic, iNVEST, pr
 
 import { finalProjectProposalLink /* FinalProjectProposalNavLink */ } from './FinalProjectProposal';
 
-
-
-
-
 export const Start_FinalProject = () => { return (<div>Start working on your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 export const Complete_FinalProject = () => { return (<div>Complete your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 

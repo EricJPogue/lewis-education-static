@@ -3,7 +3,8 @@ import React from 'react'
 import { estimated } from './AL00000Sprint01'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
-import { finalProjectSprint7Link } from '../Activities/FinalProject'
+import { finalProjectLink } from '../Activities/FinalProject'
+// import { finalProjectSprint7Link } from '../Activities/FinalProject'
 import { oreillyPlaylistOOP, architecturePart1, internalLink } from '../Links'
 import { thunderbirdLink } from '../Activities/Thunderbird'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
@@ -44,12 +45,12 @@ export const list24500Sprint07 = () => {
 			{StandardActivitiesWithLinkAndSprint(sprint, thunderbirdLink(), oreillyPlaylistOOP() )}
 			<li>Complete {thunderbirdLite()}{estimated('2 hours')}</li>
 			<li>Complete {architecturePart1()}</li>
-			<li>Complete {thunderbirdLink()}</li>
+			<li>Complete {thunderbirdLink()}{estimated('6 hours')}</li>
 
 			{InitialPost()}		
 			<li>Verify that you will be presenting your Final Project on <em>{getFinalExamDateAndTime()}</em></li>
 			<li>Review and update {finalProjectProposalLink()}</li>
-			{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectSprint7Link(), '10 hours')}
+			{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectLink(), '6 hours')}
 		</ol>
 	</div> )
 }
