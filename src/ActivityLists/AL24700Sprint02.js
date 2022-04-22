@@ -42,8 +42,8 @@ JavaScript.</p>
 	<li>{InitialDiscussionPost(2)}</li>
 
 	<li>Read chapter 4 of Sebesta on Basic JavaScript and review the associated {sebestaChapter4Lecture()}</li>
-	<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
-	<li>Complete {htmlLink()} - Parts 1 and 2{estimated('3 hours')}</li>
+	<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 3 and 4</li>
+	<li>Complete {htmlLink()} - Parts 2{estimated('2 hours')}</li>
 	{StandardActivitiesClosing(favoriteHobbyLink())}
 </ol>
 {Closing()}

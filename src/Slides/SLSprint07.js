@@ -15,10 +15,12 @@ export const sprint7Router = (route) => {
 		case ICS_7_1of6_ROUTE: return ics7_1of6()
 		case ICS_7_2of6_ROUTE: return ics7_2of6()
 		case ICS_7_5of6_ROUTE: return ics7_5of6()
+		case ICS_7_6of6_ROUTE: return ics7_6of6()
 
 		case OOP_7_1of6_ROUTE: return oop7_1of6()
 		case OOP_7_2of6_ROUTE: return oop7_2of6()
 		case OOP_7_5of6_ROUTE: return oop7_5of6()
+		case OOP_7_6of6_ROUTE: return oop7_6of6()
 
 		case SE_7_1of4_ROUTE: return se7_1of4()
 		case SE_7_3of4_ROUTE: return se7_3of4()
@@ -79,7 +81,7 @@ const ics7_2of6 = () => {
 		icsPrework_7_5of6, end ]
 }
 
-// ISC sessions 3 of 6 and 4 of 6 were over Easter Break.
+// ISC sessions 3 and 4 were over Easter Break.
 const ICS_7_5of6_ROUTE = 'ics7-5of6'
 const ics7_5of6 = () => {
 	const sprint = 7
@@ -106,6 +108,32 @@ const ics7_5of6 = () => {
 	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_7_5of6, securityBreakout, icsPrework_7_6of6, quiz7, end ]
 }
 
+const ICS_7_6of6_ROUTE = 'ics7-6of6'
+const ics7_6of6 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Lab with Health Insurance Risk Calculator for the Web or Health Insurance Risk Calculator with Python',
+			'Quiz 7 Review',
+			'Prework for Next Class', 
+			'Practical Diversity and Global Software Development Teams' ])
+	}
+	const programmingTogetherHealthRiskCalculator = () => {
+		return basicSlide('Lab', [
+			'Programming Together with Health Insurance Risk Calculator for the Web or Health Insurance Risk Calculator with Python.']) 
+	}
+	const quizReview = () => { return basicSlide('Quiz Review', [
+		'Quiz 7 review including “Phone A Friend” game.' ]) 
+	}
+	const practicalDiversity = () => {
+		return basicSlide('Practical Diversity and Global Software Development', [
+			'As time allows, I would like to start a discussion about practical diversity and global software development teams.' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_7_6of6, programmingTogetherHealthRiskCalculator, 
+		quizReview, icsPrework_8_1of6, practicalDiversity, end ]
+}
+
 // Shared between ICS sessions:
 const icsPrework_7_2of6 = () => {
 	return preworkWithActivityList([
@@ -128,6 +156,13 @@ const icsPrework_7_6of6 = () => {
 	return preworkWithActivityList([
 		'Everything is due Sunday!', '',
 		'Be prepared for Lab' ], 
+		list20000Sprint07)
+}
+
+const icsPrework_8_1of6 = () => {
+	return preworkWithActivityList([
+		'Everything is due Sunday!', '',
+		'Be prepared for Sprint 8 Planning' ], 
 		list20000Sprint07)
 }
 
@@ -208,6 +243,32 @@ const oop7_5of6 = () => {
 	return [ preflightChecklist, instructorChecklist, agenda, oopPrework_7_5of6, architecturePart1Breakout, oopPrework_7_6of6, quiz7, end ]
 }
 
+const OOP_7_6of6_ROUTE = 'oop7-6of6'
+const oop7_6of6 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Lab',
+			'Quiz 7 Review',
+			'Prework for Next Class', 
+			'Practical Diversity and Global Software Development Teams' ])
+	}
+	const programmingTogetherHealthRiskCalculator = () => {
+		return basicSlide('Lab', [
+			'Programming Together with Thunderbird or Final Projects.']) 
+	}
+	const quizReview = () => { return basicSlide('Quiz Review', [
+		'Quiz 7 review including “Phone A Friend” game.' ]) 
+	}
+	const practicalDiversity = () => {
+		return basicSlide('Practical Diversity and Global Software Development', [
+			'As time allows, I would like to start a discussion about practical diversity and global software development teams.' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, oopPrework_7_6of6, programmingTogetherHealthRiskCalculator, 
+		quizReview, oopPrework_8_1of6, practicalDiversity, end ]
+}
+
 // Shared between OOP sessions:
 const oopPrework_7_2of6 = () => {
 	return preworkWithActivityList([
@@ -230,6 +291,13 @@ const oopPrework_7_6of6 = () => {
 	return preworkWithActivityList([
 		'Everything is due Sunday!', '',
 		'Be prepared for Lab' ], 
+		list24500Sprint07)
+}
+
+const oopPrework_8_1of6 = () => {
+	return preworkWithActivityList([
+		'Everything is due Sunday!', '',
+		'Be prepared for Sprint 8 Planning' ], 
 		list24500Sprint07)
 }
 

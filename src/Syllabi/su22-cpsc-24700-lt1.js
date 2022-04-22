@@ -288,12 +288,12 @@ const renderCourseScheduleTable = () => {
 		</thead>
 		<tbody>
 			{renderModule(1, 'The Internet, World Wide Web, Web Browsers, Web Servers, and HTML')}
-			{renderModule(2, 'HTML, XHTML, JavaScript basics, Functions, Arrays, and Control Statements')}
-			{renderModule(3, 'JavaScript, Document Object Model, Event Handling, Buttons, Text boxes, and Canvas')}
+			{renderModule(2, 'CSS, JavaScript, Cloud Hosting')}
+			{renderModule(3, 'JavaScript, Document Object Model, Event Handling, and Controls')}
 			{renderModule(4, 'Dynamic Documents, Positioning and moving elements, and Dragging & Dropping')}
-			{renderModule(5, 'Ajax, Ajax Toolkits, Object-Oriented Programming, and Relational Databases')}
-			{renderModule(6, 'PHP, Node.js, plus Final Project Proposals with Proposed Teams')}
-			{renderModule(7, 'Cloud Computing & Map Reduce (or NoSQL Databases) plus Scheduling Final Project Presentations')}
+			{renderModule(5, 'Web Services, Ajax, Object-Oriented Programming, and Relational Databases')}
+			{renderModule(6, 'Node.js and Final Project Proposals')}
+			{renderModule(7, 'Cloud Computing, Databases, and Final Project')}
 			{renderModule(8, 'Final Project')}
 		</tbody>
 	</Table>

@@ -19,8 +19,8 @@ export const al24700Sprint01 = () => {
 		<ul style={{listStyleType:'square'}}>
 			<li>Effectively participate in a blended classroom environment and as part of a scrum team</li>
 			<li>Identify, define, and discuss the Internet and the Web</li>
-			<li>Develop browser based HTML5 applications that utilize common HTML elements</li>
-			<li>Utilize important developer tools to create and update basic software applications</li>
+			<li>Develop browser based HTML applications</li>
+			<li>Utilize important developer tools to create and update basic Web software applications</li>
 		</ul>
 
 		{list24700Sprint01()}
@@ -37,20 +37,20 @@ export const list24700Sprint01 = () => {
 		<ol>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
 			<li>Read chapter 2 of “Programming The World Wide Web” (Sebesta)</li>
-			<li>Review our “Programming The World Wide Web” (Sebesta) {sebestaChapter2Lecture()} and be prepared for a 
-			scrum team discussion</li>
+			<li>Review our “Programming The World Wide Web” (Sebesta) {sebestaChapter2Lecture()}</li>
 			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
-			<li>Complete {htmlLink()} - Part 1{estimated('2 hours')}</li>
+			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Preface, Chapter 1, and Chapter 2</li>
 
 			{initialPost()}
 			<li>Read chapter 1 of Sebesta and review the associated {sebestaChapter1Lecture()}</li>
-			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Preface through Chapter 2 while focusing 
-			on Command Line functions</li>
+			<li>Complete {htmlLink()} - Part 1</li>
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
 		</ol>
-	</div>)
+	</div> )
 }
 
+// Todo: Consider updating lectures to be topic specific (instead of Sebesta chapter specific) and removing Sebesta 
+// for the fall session. 
 // BugBug: Verify that second discussion board is removed from sprint 1.
 // Move Final Project Presentation assignment up so that it is between sprint 7 and sprint 8 (instead of after sprint 8).
 // Remove last question in Lab 8.

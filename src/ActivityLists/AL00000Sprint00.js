@@ -85,7 +85,7 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 
 export const closing = () => {
 	return (
-		<p>The best advise that I can give you is to start assignments early, submit something for each assignment, and to 
+		<p>The best advise that I can give you is to start assignments early, submit something on time for each assignment, and to 
 		attend class. If you do these things, I believe your success is virtually guaranteed. Finally, be sure to periodically 
 		check for updates to our {programmingTogether()} tutorials.</p>
 	) 
