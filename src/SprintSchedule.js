@@ -3,6 +3,7 @@ import Table from 'react-bootstrap/Table'
 
 import { CSTDate, incrementDate, isToday, pastDate, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
 import { getCalendar, getCourseTitle, getFinalExamDateAndTime, getIsScheduleTTr, getIsScheduleOnline } from './data/ClientDataAPIs'
+import { internalLink } from './Links'
 
 export class SprintClassActivities extends Component {
 	// Todo: Update 'currentSprint()+1' to 'currentSprintBaseOne()'.
@@ -79,8 +80,8 @@ export class SprintClassActivities extends Component {
 
 	MWFScheduleSprint8 = {
 		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Demos & Retrospectives",
-		"FirstFriday":     "Topic Discussion & Quiz",
+		"FirstWednesday":  "Demos, Retrospectives, & Quiz",
+		"FirstFriday":     "Topic Discussion & Lab",
 		"SecondMonday":    "No regular classes (final exams)",
 		"SecondWednesday": "No regular classes (final exams)",
 		"SecondFriday":    "No regular classes (final exams)"
@@ -95,8 +96,11 @@ export class SprintClassActivities extends Component {
 	}
 
 	renderScheduleRow = (activityDate,activity) => {
+		// Todo: Update slide deck link for TTh.
+		// Todo: Update slide deck link for each session.
+		const slideDeckLink = (activity) => { return internalLink(activity, `/deck/${this.currentSprintBaseOne()}-1of6`)}
 		if (isToday(activityDate)) {
-			return (<tr style={{backgroundColor:'#adebdb'}}><td>{CSTDate(activityDate,false,false)}</td><td>{activity}</td></tr>)
+			return (<tr style={{backgroundColor:'#adebdb'}}><td>{CSTDate(activityDate,false,false)}</td><td>{slideDeckLink(activity)}</td></tr>)
 		}
 		if (pastDate(activityDate)) {
 			return (<tr style={{backgroundColor:'#d3d3d3'}}><td>{CSTDate(activityDate,false,false)}</td><td>{activity}</td></tr>)

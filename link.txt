@@ -1,6 +1,0 @@
-https://www.youtube.com/playlist?list=PLtvmFy4Ed_DJDJ3_Fz0UEOyneemO5yVdH 
-https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/
-https://docs.microsoft.com/en-us/azure/active-directory/authentication/
-https://azure.microsoft.com/en-us/free/students/
-https://docs.microsoft.com/en-us/javascript/
-https://docs.microsoft.com/en-us/office365/customlearning/

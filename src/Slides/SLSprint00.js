@@ -1,5 +1,7 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
+
+import { getClassIDfromURL, getCourseTitle } from '../data/ClientDataAPIs'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
 export const CHECKLIST_ROUTE = 'checklist'
@@ -37,7 +39,8 @@ export const instructorChecklist = () => {
 		{renderLogo()}
 		{bulletListSlide(
 			'Instructor Checklist',
-			'In preparation for class:', [
+			`In preparation for class:`, [
+			`Verify “${getCourseTitle()} (${getClassIDfromURL()})”`,
 			'Load polls as needed',
 			'Set camera, microphone, and speakers',
 			'Share desktop in Zoom session',
@@ -78,8 +81,7 @@ export const agendaSlide = (agendaItems) => {
 export const preworkSlide = (preworkItems) => { return basicSlideWithTitle('Prework', preworkItems) }
 export const preworkForNextClass = (preworkItems) => { return basicSlideWithTitle('Prework for Next Class', preworkItems) }
 
-export const preworkWithActivityList = (preworkItems, activityListFunction) => {
-	const sprint = 7
+export const preworkWithActivityList = (preworkItems, activityListFunction, sprint=7) => {
 	return ( <div>
 		{preworkSlide(preworkItems)}
 		<br /><hr />
@@ -87,7 +89,6 @@ export const preworkWithActivityList = (preworkItems, activityListFunction) => {
 		{activityListFunction()}
 	</div> )
 }
-
 
 export const progressPolling = () => {
 	return basicSlideWithTitle('Sprint Progress Polling', [
