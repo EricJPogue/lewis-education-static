@@ -40,4 +40,5 @@ export const list24500Sprint08 = () => {
 
 // Certified for SP22 (Monday, April 18, 2022)
 
+// BugBug: Review activities list link to make sure that the course ID is correct in Blackboard.
 
