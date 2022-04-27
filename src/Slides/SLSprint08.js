@@ -54,7 +54,7 @@ const ics8_2of6 = () => {
 			'Feedback from Assignments & Reflections', [
 			'Solid if not great submission percentage',
 			'All assignments are graded and posted', 
-			'Although I have largely overcome Reflection Riddles, my new Kryptonite is Reflection “random” graphical patterns :-)',
+			'Although I have largely overcome riddles, my new Kryptonite is Reflection graphical patterns :-)',
 			'... Jarrod, please no more... and what does it mean?!?!',
 			'Be sure to submit your Lab Demo assignments' ])
 	}
@@ -117,8 +117,8 @@ const oop8_2of6 = () => {
 			'Feedback from Assignments & Reflections', [
 			'Excellent submission percentage',
 			'All assignments are graded and posted', 
-			'Although I have largely overcome Reflection Riddles, my new Kryptonite is Reflection “random” graphical patterns',
-			'... okay, and apparently humorous scrum videos... please no more Austin :-) (',
+			'Although I have largely overcome Riddles, my new Kryptonite is Reflection “random” graphical patterns',
+			'... okay, and apparently humorous scrum videos... please no more Austin :-)',
 			'Be sure to submit your Lab Demo assignments' ])
 	}
 
