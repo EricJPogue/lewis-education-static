@@ -2,6 +2,7 @@ import React from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { getCurrentClasses } from './data/ClientDataAPIs'
+import { getCurrentSprintByClassID } from './data/ClientDataAPIs'
 
 export class Home extends React.Component {
 	// This method of rendering multiple row is described at the following link:
@@ -12,7 +13,8 @@ export class Home extends React.Component {
 			const { classID, title, schedule, time } = currentClass
 			return (
 				<tr key={classID}>
-					<td><a href= {`/?cpsc=${classID}#/sprint/1`}>{title}</a></td>
+					<td><a href= {`/?cpsc=${classID}#/sprint/${getCurrentSprintByClassID(classID)}`}>{title}</a></td>
+					{/*<td><a href= {`/?cpsc=${classID}#/sprint/1`}>{title}</a></td>*/}
 					<td>{classID}</td>
 					<td>{schedule}</td>
 					<td>{time}</td>
