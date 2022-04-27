@@ -95,17 +95,17 @@ export class SprintClassActivities extends Component {
 			return null
 	}
 
-	renderScheduleRow = (activityDate,activity) => {
+	renderScheduleRow = (activityDate,activity,session) => {
 		// Todo: Update slide deck link for TTh.
 		// Todo: Update slide deck link for each session.
-		const slideDeckLink = (activity) => { return internalLink(activity, `/deck/${this.currentSprintBaseOne()}-1of6`)}
+		const slideDeckLink = (activity) => { return internalLink(activity, `/deck/${this.currentSprintBaseOne()}-${session}`)}
 		if (isToday(activityDate)) {
 			return (<tr style={{backgroundColor:'#adebdb'}}><td>{CSTDate(activityDate,false,false)}</td><td>{slideDeckLink(activity)}</td></tr>)
 		}
 		if (pastDate(activityDate)) {
-			return (<tr style={{backgroundColor:'#d3d3d3'}}><td>{CSTDate(activityDate,false,false)}</td><td>{activity}</td></tr>)
+			return (<tr style={{backgroundColor:'#d3d3d3'}}><td>{CSTDate(activityDate,false,false)}</td><td>{slideDeckLink(activity)}</td></tr>)
 		}
-		return (<tr><td>{CSTDate(activityDate,false,false)}</td><td>{activity}</td></tr>)
+		return (<tr><td>{CSTDate(activityDate,false,false)}</td><td>{slideDeckLink(activity)}</td></tr>)
 	}
 
 	renderMWFSchedule = () => {
@@ -126,12 +126,12 @@ export class SprintClassActivities extends Component {
 				<Table striped bordered hover>
 					<thead><tr><th style={{width:'300px'}}>Day</th><th>Schedule</th></tr></thead>
 					<tbody>
-						{this.renderScheduleRow(incrementDate(dates.start,0),schedule.FirstMonday)}
-						{this.renderScheduleRow(incrementDate(dates.start,2),schedule.FirstWednesday)}
-						{this.renderScheduleRow(incrementDate(dates.start,4),schedule.FirstFriday)}
-						{this.renderScheduleRow(incrementDate(dates.start,7),schedule.SecondMonday)}
-						{this.renderScheduleRow(incrementDate(dates.start,9),schedule.SecondWednesday)}
-						{this.renderScheduleRow(incrementDate(dates.start,11),schedule.SecondFriday)}
+						{this.renderScheduleRow(incrementDate(dates.start,0),schedule.FirstMonday,1)}
+						{this.renderScheduleRow(incrementDate(dates.start,2),schedule.FirstWednesday,2)}
+						{this.renderScheduleRow(incrementDate(dates.start,4),schedule.FirstFriday,3)}
+						{this.renderScheduleRow(incrementDate(dates.start,7),schedule.SecondMonday,4)}
+						{this.renderScheduleRow(incrementDate(dates.start,9),schedule.SecondWednesday,5)}
+						{this.renderScheduleRow(incrementDate(dates.start,11),schedule.SecondFriday,6)}
 					</tbody>
 				</Table>
 				{this.finalExamDateAndTimeTextForFinalSprint()}
@@ -185,10 +185,10 @@ export class SprintClassActivities extends Component {
 				<Table striped bordered hover>
 					<thead><tr><th>Day</th><th>Schedule</th></tr></thead>
 					<tbody>
-						{this.renderScheduleRow(incrementDate(dates.start,1),schedule.FirstTuesday)}
-						{this.renderScheduleRow(incrementDate(dates.start,3),schedule.FirstThursday)}
-						{this.renderScheduleRow(incrementDate(dates.start,8),schedule.SecondTuesday)}
-						{this.renderScheduleRow(incrementDate(dates.start,10),schedule.SecondThursday)}
+						{this.renderScheduleRow(incrementDate(dates.start,1),schedule.FirstTuesday,1)}
+						{this.renderScheduleRow(incrementDate(dates.start,3),schedule.FirstThursday,2)}
+						{this.renderScheduleRow(incrementDate(dates.start,8),schedule.SecondTuesday,3)}
+						{this.renderScheduleRow(incrementDate(dates.start,10),schedule.SecondThursday,4)}
 					</tbody>
 				</Table>
 			</div>

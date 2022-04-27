@@ -3,6 +3,7 @@ import { getCourseNumber } from '../data/ClientDataAPIs'
 import { checklist } from './SLSprint00' // Shared slide decks.
 import { preflightChecklist, instructorChecklist, activitiesReview, submissionPercentage, end } from './SLSprint00' // Shared slides.
 import { agendaSlide, basicSlide, orderedListSlide, preworkSlide, preworkWithActivityList } from './SLSprint00' // Shared slide templates.
+import { sprintDemosIntro, sprintDemos, demoAssignment, quiz  } from './SLSprint00'
 
 import { list20000Sprint08 } from '../ActivityLists/AL20000Sprint08'
 import { list24500Sprint08 } from '../ActivityLists/AL24500Sprint08'
@@ -11,18 +12,66 @@ export const sprint8Router = (route) => {
 	const courseNumberPlusRoute = getCourseNumber() + '-' + route
 	switch(courseNumberPlusRoute) {
 		case ICS_8_1of6_ROUTE: return ics8_1of6()
+		case ICS_8_2of6_ROUTE: return ics8_2of6()
 		case OOP_8_1of6_ROUTE: return oop8_1of6()
+		case OOP_8_2of6_ROUTE: return oop8_2of6()
 		case SE_8_1of4_ROUTE: return se8_1of4()
 
 		default: return checklist()
 	}
 }
 
+// The global sprint number.
 const sprint = 8
 
 // Introduction to Computer Science
-const ICS_8_1of6_ROUTE = '20000-8-1of6'
+const ICS_8_1of6_ROUTE = '20000-8-1'
 const ics8_1of6 = () => { return mwfSprint8Planning(sprint, icsPrework_8_2of6) }
+
+const ICS_8_2of6_ROUTE = '20000-8-2'
+const ics8_2of6 = () => {
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			`Sprint ${sprint-1} Demos`,
+			`Sprint ${sprint-1} Retrospective`,
+			`Breakout for Sprint ${sprint-1} Retrospective`,
+			'Prework for Next Class', 
+			`Quiz ${sprint}` ])
+	}
+	const prework = () => { return icsPrework_8_2of6() }
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:20, submitted:17 },
+			{ name: 'Quiz', due:20, submitted:20 },
+			{ name: 'Lab', due:20, submitted:19},
+			{ name: 'Reflection', due: 20, submitted: 18 }
+		])
+	}
+	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Solid if not great submission percentage',
+			'All assignments are graded and posted', 
+			'Although I have largely overcome Reflection Riddles, my new Kryptonite is Reflection “random” graphical patterns :-)',
+			'... Jarrod, please no more... and what does it mean?!?!',
+			'Be sure to submit your Lab Demo assignments' ])
+	}
+	// Todo: Create and add slide for metrics.
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better`,
+			'What improvements should I make for the class going forward' ])
+	}
+	const quiz8 = () => { return quiz(sprint) }
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, 
+		sprintDemosIntro, sprintDemos, demoAssignment, metricsSubmissionPercentage, retrospective, retrospectiveBreakout,
+		icsPrework_8_3of6, quiz8, end ]
+}
 
 // Shared between ICS sessions:
 const icsPrework_8_2of6 = () => {
@@ -33,9 +82,51 @@ const icsPrework_8_2of6 = () => {
 		list20000Sprint08, sprint)
 }
 
+const icsPrework_8_3of6 = () => {
+	return preworkWithActivityList([
+		'Complete through activity 6',
+		'Be actively working on activity 7', '',
+		'Be prepared for Lab' ], 
+		list20000Sprint08, sprint)
+}
+
 // Object-Oriented Programming
-const OOP_8_1of6_ROUTE = '24500-8-1of6'
+const OOP_8_1of6_ROUTE = '24500-8-1'
 const oop8_1of6 = () => { return mwfSprint8Planning(sprint, oopPrework_8_2of6) }
+
+const OOP_8_2of6_ROUTE = '24500-8-2'
+const oop8_2of6 = () => { 
+	const replaceSlideInDeck = (deck, slide) => {
+		for (let i = 0; i < deck.length; i++) {
+			if (deck[i].name === slide.name) {
+				deck[i] = slide
+				console.log('replacing slide: '+deck[i].name)
+			}
+		} 
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:18, submitted:17 },
+			{ name: 'Quiz', due:18, submitted:18 },
+			{ name: 'Lab', due:18, submitted:18},
+			{ name: 'Reflection', due: 18, submitted: 18 }
+		])
+	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Excellent submission percentage',
+			'All assignments are graded and posted', 
+			'Although I have largely overcome Reflection Riddles, my new Kryptonite is Reflection “random” graphical patterns',
+			'... okay, and apparently humorous scrum videos... please no more Austin :-) (',
+			'Be sure to submit your Lab Demo assignments' ])
+	}
+
+	let deck = ics8_2of6()
+	replaceSlideInDeck(deck, metricsSubmissionPercentage)
+	replaceSlideInDeck(deck, retrospective)
+	return deck
+}
 
 // Shared between ICS sessions:
 const oopPrework_8_2of6 = () => {
@@ -53,7 +144,7 @@ export const mwfSprint8Planning = (sprint, prework_2of6) => {
 			`Sprint ${sprint} Planning`,
 			`Breakout on Sprint ${sprint} Planning`,
 			'Review Demo Schedule',
-			'Prework for Next Class' ])
+			'Prework for Next Class', ])
 	}
 	const prework_1of6 = () => {
 		return preworkSlide([
@@ -81,7 +172,7 @@ export const mwfSprint8Planning = (sprint, prework_2of6) => {
 }
 
 // Software Engineering
-const SE_8_1of4_ROUTE = '44000-8-1of4'
+const SE_8_1of4_ROUTE = '44000-8-1'
 const se8_1of4 = () => {
 	const agenda = () => {
 		return agendaSlide([
