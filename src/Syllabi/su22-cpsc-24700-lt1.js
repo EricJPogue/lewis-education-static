@@ -292,7 +292,7 @@ const renderCourseScheduleTable = () => {
 			{renderModule(3, 'JavaScript, Document Object Model, Event Handling, and Controls')}
 			{renderModule(4, 'Dynamic Documents, Positioning and moving elements, and Dragging & Dropping')}
 			{renderModule(5, 'Web Services, Ajax, Object-Oriented Programming, and Relational Databases')}
-			{renderModule(6, 'Node.js and Final Project Proposals')}
+			{renderModule(6, 'Server-side programming, Node.js and Final Project Proposals')}
 			{renderModule(7, 'Cloud Computing, Databases, and Final Project')}
 			{renderModule(8, 'Final Project')}
 		</tbody>
@@ -421,23 +421,40 @@ const renderPracticesCoronavirusPandemic = () => {
 		students, faculty, and staff in respond and adapting to any sudden changes or circumstances. Based on the 
 		guidance of the State of Illinois and the Centers for Disease Control, it may be necessary to change the planned 
 		modality this course.</p>
-		<p><em>Flexibility, Accommodations, and Student Absences:</em> Because we are committed to student success, the 
-		University community is committed to academic standards while maintaining flexibility and empathy. Absences 
-		relating to the Coronavirus crisis will be recognized as excused. Students experiencing disruptions in their 
-		lives related to the Coronavirus that impact class attendance and participation should contact their instructor 
-		and/or college Dean’s Office for assistance. Students directly impacted by Coronavirus will have the ability to 
-		request alternative grading this semester. Requests will be evaluated on a case by case basis and will require 
-		documentation.</p>
+		<p><em>Flexibility, Accommodations, and Student Absences:</em>Because we are committed to student success, the 
+		University community is committed to academic standards while maintaining flexibility and empathy.</p>
+		<ul>
+			<li>Absences relating to the Coronavirus crisis will require documentation to be recognized as excused.  
+			Documentation should be submitted to academicservices@lewisu.edu .</li>
+			<li>Students experiencing disruptions in their lives related to the Coronavirus that impact class 
+			attendance and participation should:</li>
+			<ul>
+				<li>First, contact their instructor to make arrangements for completing missed work.</li>
+				<li>When this is not possible and when the absence from class is for three or more class meetings, 
+				students should contact Academic Services at academicservices@lewisu.edu. </li>
+			</ul>
+		</ul>
 		<p>Students who require academic accommodations due to disability caused by COVID-19, or to limit risk of 
 		exposure to Coronavirus, can engage in an interactive process with the Learning Access Coordinator to explore 
-		all avenues for accommodations. Students can contact the Academic Services office at 815-836-5593 or 
+		avenues for accommodations. Students can contact the Academic Services office at 815-836-5593 or 
 		learningaccess@lewisu.edu to request an appointment.</p>
-		<p><em>Face Coverings, Physical Distancing, and Surface Cleaning</em> Face coverings are required in classrooms. 
-		Students will be expected to maintain physical distancing in the classroom (6 ft minimum) and to keep their nose 
-		and mouth covered at all times. Faculty will require students without face covering to obtain a disposable mask 
-		at the nearest University office providing them. While the University will disinfect classrooms and common spaces 
-		throughout the day, cleaning supplies will be provided in classrooms and offices so that students and faculty 
-		can wipe down work surfaces before class begins.</p>
+		<p>Except in the case of unforeseen circumstances that require a university-wide shift in instructional 
+		modalities, courses will only be offered in the modality listed in the course schedule.  It is not possible 
+		to accommodate remote attendance in on-campus classes unless the course is listed as multi-option in the 
+		schedule.</p>
+
+		<p><em>Face Coverings and Surface Cleaning:</em> Lewis understands the benefits of wearing face coverings 
+		by encouraging and supporting all who choose to wear a face covering.</p>   
+		<ul>
+			<li>Face coverings may be required of all individuals, due to changing health and safety conditions, at 
+			the advice of state and local health authorities, or under certain campus circumstances. When face coverings 
+			are required, students will be informed in advance.</li>
+			<li>If conditions improve, face coverings will no longer be required of those who have submitted 
+			documentation of their fully vaccinated status.</li>
+			<li>While the University will disinfect classrooms and common spaces throughout the day, cleaning supplies 
+			will be provided in classrooms and offices so that students and faculty can wipe down work surfaces before 
+			class begins.</li>
+		</ul>
 	</div> )
 }
 
