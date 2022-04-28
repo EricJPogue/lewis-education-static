@@ -69,9 +69,8 @@ const ics8_2of6 = () => {
 	}
 	const quiz8 = () => { return quiz(sprint) }
 
-	return [ preflightChecklist, instructorChecklist, agenda, prework, 
-		sprintDemosIntro, sprintDemos, demoAssignment, metricsSubmissionPercentage, retrospective, retrospectiveBreakout,
-		icsPrework_8_3of6, quiz8, end ]
+	return [ preflightChecklist, instructorChecklist, agenda, prework, sprintDemosIntro, sprintDemos, demoAssignment, 
+		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, icsPrework_8_3of6, quiz8, end ]
 }
 
 // Shared between ICS sessions:
@@ -97,17 +96,8 @@ const oop8_1of6 = () => { return mwfSprint8Planning(sprint, oopPrework_8_2of6) }
 
 const OOP_8_2of6_ROUTE = '24500-8-2'
 const oop8_2of6 = () => { 
-	const replaceSlideInDeck = (deck, slide) => {
-		console.log('deck:')
-		console.log(deck)
-		console.log('slide:')
-		console.log(slide)
-		for (let i = 0; i < deck.length; i++) {
-			if (deck[i].name === slide.name) {
-				deck[i] = slide
-				console.log('replacing slide: '+deck[i].name)
-			}
-		} 
+	const replaceSlideInDeck = (deck, index, slide ) => {
+		deck[index] = slide 
 	}
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
@@ -128,9 +118,10 @@ const oop8_2of6 = () => {
 	}
 
 	let deck = ics8_2of6()
-	// BugBug: Something is very wrong based on class slides today!
-	replaceSlideInDeck(deck, metricsSubmissionPercentage)
-	replaceSlideInDeck(deck, retrospective)
+	// BugBug: Something is very wrong based on class slides today! Update: It works locally but not remotely and looks
+	// like a function naming issue. 
+	replaceSlideInDeck(deck, 7, metricsSubmissionPercentage)
+	replaceSlideInDeck(deck, 8, retrospective)
 	return deck
 }
 

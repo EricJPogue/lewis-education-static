@@ -96,9 +96,8 @@ export class SprintClassActivities extends Component {
 	}
 
 	renderScheduleRow = (activityDate,activity,session) => {
-		// Todo: Update slide deck link for TTh.
-		// Todo: Update slide deck link for each session.
 		const slideDeckLink = (activity) => { return internalLink(activity, `/deck/${this.currentSprintBaseOne()}-${session}`)}
+
 		if (isToday(activityDate)) {
 			return (<tr style={{backgroundColor:'#adebdb'}}><td>{CSTDate(activityDate,false,false)}</td><td>{slideDeckLink(activity)}</td></tr>)
 		}
