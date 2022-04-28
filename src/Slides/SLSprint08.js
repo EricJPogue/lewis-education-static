@@ -258,9 +258,12 @@ const se8_2of4 = () => {
 		'Thank you for you effort, dedication, and support.',
 		'Don’t hesitate to reach out to me if I can be of assistance in the future.' ])
 	}
-	const quiz = () => { return quiz(sprint) }
+	const quiz8 = () => { return quiz(sprint) }
+	const lab = () => { return basicSlide('Lab', [
+		'Work with your scrum team to make progress on your Final Project.'	])
+	}
 
-	return [ preflightChecklist, instructorChecklist, agenda, prework, thankYou, preworkForNextClass, quiz, preworkForNextClass, end ]
+	return [ preflightChecklist, instructorChecklist, agenda, prework, thankYou, preworkForNextClass, quiz8, lab, end ]
 }
 
 const preworkSE8_1of4 = (sprint) => {
