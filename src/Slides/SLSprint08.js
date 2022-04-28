@@ -97,6 +97,10 @@ const oop8_1of6 = () => { return mwfSprint8Planning(sprint, oopPrework_8_2of6) }
 const OOP_8_2of6_ROUTE = '24500-8-2'
 const oop8_2of6 = () => { 
 	const replaceSlideInDeck = (deck, slide) => {
+		console.log('deck:')
+		console.log(deck)
+		console.log('slide:')
+		console.log(slide)
 		for (let i = 0; i < deck.length; i++) {
 			if (deck[i].name === slide.name) {
 				deck[i] = slide
@@ -123,6 +127,7 @@ const oop8_2of6 = () => {
 	}
 
 	let deck = ics8_2of6()
+	// BugBug: Something is very wrong based on class slides today!
 	replaceSlideInDeck(deck, metricsSubmissionPercentage)
 	replaceSlideInDeck(deck, retrospective)
 	return deck
