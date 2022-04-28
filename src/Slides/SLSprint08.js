@@ -16,6 +16,7 @@ export const sprint8Router = (route) => {
 		case OOP_8_1of6_ROUTE: return oop8_1of6()
 		case OOP_8_2of6_ROUTE: return oop8_2of6()
 		case SE_8_1of4_ROUTE: return se8_1of4()
+		case SE_8_2of4_ROUTE: return se8_2of4()
 
 		default: return checklist()
 	}
@@ -241,6 +242,27 @@ const se8_1of4 = () => {
 		reviewBacklogGrooming, sprintPlanning, activitiesReview, preworkForNextClass, preworkSE8_2of4, teamSprintPlanning, end ]
 }
 
+const SE_8_2of4_ROUTE = '44000-8-2'
+const se8_2of4 = () => {
+	const agenda = () => {
+		return agendaSlide([
+			'Prework for Today',
+			'Thank you!',
+			'Prework for Next Class',
+			`Quiz ${sprint}`,
+			`Lab with sprint ${sprint} Final Project Lab` ])
+	}
+	const prework = () => { return preworkSE8_2of4(sprint) }
+	const preworkForNextClass = () => { return preworkSE8_3of4(sprint) }
+	const thankYou = () => { return basicSlide('Thank You', [ 
+		'Thank you for you effort, dedication, and support.',
+		'Don’t hesitate to reach out to me if I can be of assistance in the future.' ])
+	}
+	const quiz = () => { return quiz(sprint) }
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, thankYou, preworkForNextClass, quiz, preworkForNextClass, end ]
+}
+
 const preworkSE8_1of4 = (sprint) => {
 	return basicSlide('Prework', [
 		`All Sprint ${sprint-1} Assignments due Sunday!`, '',
@@ -251,6 +273,14 @@ const preworkSE8_2of4 = (sprint) => {
 	return preworkWithActivityList([
 		'Complete through activity 5', '',
 		'Be prepared for Quiz 8',
-		'Be prepared for Lab' ], 
+		'Be prepared for Lab Time' ], 
+		list20000Sprint08, sprint)
+}
+
+const preworkSE8_3of4 = (sprint) => {
+	return preworkWithActivityList([
+		'Complete through activity 6', '',
+		'Be prepared to present your final project as a team',
+		'Please be on time and ready to proceed with ScrumAndCoke and PasswordGenerator' ], 
 		list20000Sprint08, sprint)
 }
