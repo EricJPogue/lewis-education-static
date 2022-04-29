@@ -4,6 +4,7 @@ import { checklist } from './SLSprint00' // Shared slide decks.
 import { preflightChecklist, instructorChecklist, activitiesReview, submissionPercentage, end } from './SLSprint00' // Shared slides.
 import { agendaSlide, basicSlide, orderedListSlide, preworkSlide, preworkWithActivityList } from './SLSprint00' // Shared slide templates.
 import { sprintDemosIntro, sprintDemos, demoAssignment, quiz  } from './SLSprint00'
+import { renderBreakout } from './Breakout'
 
 import { list20000Sprint08 } from '../ActivityLists/AL20000Sprint08'
 import { list24500Sprint08 } from '../ActivityLists/AL24500Sprint08'
@@ -13,8 +14,10 @@ export const sprint8Router = (route) => {
 	switch(courseNumberPlusRoute) {
 		case ICS_8_1of6_ROUTE: return ics8_1of6()
 		case ICS_8_2of6_ROUTE: return ics8_2of6()
+		case ICS_8_3of6_ROUTE: return ics8_3of6()
 		case OOP_8_1of6_ROUTE: return oop8_1of6()
 		case OOP_8_2of6_ROUTE: return oop8_2of6()
+		case OOP_8_3of6_ROUTE: return oop8_3of6()
 		case SE_8_1of4_ROUTE: return se8_1of4()
 		case SE_8_2of4_ROUTE: return se8_2of4()
 
@@ -73,6 +76,36 @@ const ics8_2of6 = () => {
 		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, icsPrework_8_3of6, quiz8, end ]
 }
 
+const ICS_8_3of6_ROUTE = '20000-8-3'
+const ics8_3of6 = () => {
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Thank you!',
+			'Web Development Class and Course Evaluations',
+			'Prework for Next Class',
+			'Final Project Presentation Assignment',
+			'Lab' ])
+	}
+	const lab = () => { return basicSlide('Lab', [
+		'How can I help you be successful with your Final Projects?'	])
+	}
+	const webDevelopmentAndCourseEvaluation = () => {
+		return basicSlide('Web Development Class and Course Evaluations', [
+			'Special invitation to join my Web and Distributed programming next semester if you are interested',
+			'Please consider completing your Course Evaluations'
+		])
+	}
+	const finalProjectPresentationAssignment = () => {
+		return basicSlide('Final Project Presentation Assignment', [
+			'Let’s complete the Final Project presentation assignment together.'
+		])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_8_3of6, thankYou, webDevelopmentAndCourseEvaluation,
+		icsPrework_8_4of6, finalProjectPresentationAssignment, lab, end ]
+}
+
 // Shared between ICS sessions:
 const icsPrework_8_2of6 = () => {
 	return preworkWithActivityList([
@@ -84,9 +117,16 @@ const icsPrework_8_2of6 = () => {
 
 const icsPrework_8_3of6 = () => {
 	return preworkWithActivityList([
-		'Complete through activity 6',
+		'Complete through activity 5',
 		'Be actively working on activity 7', '',
 		'Be prepared for Lab' ], 
+		list20000Sprint08, sprint)
+}
+
+const icsPrework_8_4of6 = () => {
+	return preworkWithActivityList([
+		'Complete ready for activity 6', '',
+		'Be prepared for your Final Project presentation' ], 
 		list20000Sprint08, sprint)
 }
 
@@ -118,19 +158,78 @@ const oop8_2of6 = () => {
 	}
 
 	let deck = ics8_2of6()
-	// BugBug: Something is very wrong based on class slides today! Update: It works locally but not remotely and looks
-	// like a function naming issue. 
 	replaceSlideInDeck(deck, 7, metricsSubmissionPercentage)
 	replaceSlideInDeck(deck, 8, retrospective)
 	return deck
 }
 
-// Shared between ICS sessions:
+const OOP_8_3of6_ROUTE = '24500-8-3'
+const oop8_3of6 = () => { 
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Thank you!',
+			'Web Development Class and Course Evaluations',
+			'Breakout for Application Architectures, Object-Oriented Programming, and Databases - Part 2',
+			'Prework for Next Class',
+			'Final Project Presentation Assignment',
+			'Lab' ])
+	}
+	const prework = () => { return oopPrework_8_3of6(sprint) }
+	const preworkForNextClass = () => { return oopPrework_8_4of6(sprint) }
+	const lab = () => { return basicSlide('Lab', [
+		'How can I help you be successful with your Final Projects?'	])
+	}
+	const webDevelopmentAndCourseEvaluation = () => {
+		return basicSlide('Web Development Class and Course Evaluations', [
+			'Special invitation to join my Web and Distributed programming next semester if you are interested',
+			'Please consider completing your Course Evaluations'
+		])
+	}
+	const finalProjectPresentationAssignment = () => {
+		return basicSlide('Final Project Presentation Assignment', [
+			'Let’s complete the Final Project presentation assignment together.'
+		])
+	}
+	const architecturePart2Breakout = () => {
+		return renderBreakout({
+			'title':'Application Architecture - Part 2',
+			'topics': [
+				'Databases, Data Duplication, and Data Replication',
+				'Object-Oriented Programming and Inheritance Across Languages',
+				'Distributed Development and Server-Side Programming',
+				'Object-Oriented Programming and Inheritance Across Networked Computers',
+				'CORBA, DCOM, OpenDoc, and the Dark Ages',
+				'XML, JSON, and Web Services',
+				'SQL vs NoSQL Databases' ]
+		})
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, thankYou, webDevelopmentAndCourseEvaluation,
+		architecturePart2Breakout, preworkForNextClass, finalProjectPresentationAssignment, lab, end ]
+}
+
+// Shared between OOP sessions:
 const oopPrework_8_2of6 = () => {
 	return preworkWithActivityList([
 		'Complete through activity 4', '',
 		'Be prepared for sprint 7 demos and retrospective',
 		'Be prepared for quiz 8' ], 
+		list24500Sprint08, sprint)
+}
+
+const oopPrework_8_3of6 = (sprint) => {
+	return preworkWithActivityList([
+		'Complete through activity 5', '',
+		'Be prepared for Application Architecture discussion',
+		'Be prepared for Lab' ], 
+		list24500Sprint08, sprint)
+}
+
+const oopPrework_8_4of6 = (sprint) => {
+	return preworkWithActivityList([
+		'Complete ready for activity 6', '',
+		'Be prepared for your Final Project presentation' ], 
 		list24500Sprint08, sprint)
 }
 
@@ -245,10 +344,7 @@ const se8_2of4 = () => {
 	}
 	const prework = () => { return preworkSE8_2of4(sprint) }
 	const preworkForNextClass = () => { return preworkSE8_3of4(sprint) }
-	const thankYou = () => { return basicSlide('Thank You', [ 
-		'Thank you for you effort, dedication, and support.',
-		'Don’t hesitate to reach out to me if I can be of assistance in the future.' ])
-	}
+
 	const quiz8 = () => { return quiz(sprint) }
 	const lab = () => { return basicSlide('Lab', [
 		'Work with your scrum team to make progress on your Final Project.'	])
@@ -277,4 +373,11 @@ const preworkSE8_3of4 = (sprint) => {
 		'Be prepared to present your final project as a team',
 		'Please be on time and ready to proceed with ScrumAndCoke and PasswordGenerator' ], 
 		list20000Sprint08, sprint)
+}
+
+
+// Slides shared between multiple classes. 
+const thankYou = () => { return basicSlide('Thank You', [ 
+	'Thank you for you effort, dedication, and support.',
+	'Don’t hesitate to reach out to me if I can be of assistance in the future.' ])
 }
