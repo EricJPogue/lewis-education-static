@@ -223,7 +223,7 @@ const oop8_4of6 = () => {
 	const finalProjectPresentations = () => { return bulletListSlide('Final Project Presentations', 
 			'Recall that in presenting your Final Projects you should:', [
 			'Briefly review your Final Project proposal ',
-			'Show your application running and explain what it does',
+			'Show the standard and advanced features of your application running',
 			'Share some of the project source code',
 			'Explain if there is anything else you expect to complete by the end of the day Thursday' ])
 	}
