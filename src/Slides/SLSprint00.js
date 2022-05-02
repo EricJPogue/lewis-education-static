@@ -90,6 +90,7 @@ export const preworkWithActivityList = (preworkItems, activityListFunction, spri
 	</div> )
 }
 
+
 export const progressPolling = () => {
 	return basicSlideWithTitle('Sprint Progress Polling', [
 	'Please take a few minutes and complete our sprint progress poll.'])

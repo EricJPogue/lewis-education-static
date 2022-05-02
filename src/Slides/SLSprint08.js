@@ -2,7 +2,7 @@ import { getCourseNumber } from '../data/ClientDataAPIs'
 
 import { checklist } from './SLSprint00' // Shared slide decks.
 import { preflightChecklist, instructorChecklist, activitiesReview, submissionPercentage, end } from './SLSprint00' // Shared slides.
-import { agendaSlide, basicSlide, orderedListSlide, preworkSlide, preworkWithActivityList } from './SLSprint00' // Shared slide templates.
+import { agendaSlide, basicSlide, bulletListSlide, orderedListSlide, preworkSlide, preworkWithActivityList } from './SLSprint00' // Shared slide templates.
 import { sprintDemosIntro, sprintDemos, demoAssignment, quiz  } from './SLSprint00'
 import { renderBreakout } from './Breakout'
 
@@ -18,6 +18,7 @@ export const sprint8Router = (route) => {
 		case OOP_8_1of6_ROUTE: return oop8_1of6()
 		case OOP_8_2of6_ROUTE: return oop8_2of6()
 		case OOP_8_3of6_ROUTE: return oop8_3of6()
+		case OOP_8_4of6_ROUTE: return oop8_4of6()
 		case SE_8_1of4_ROUTE: return se8_1of4()
 		case SE_8_2of4_ROUTE: return se8_2of4()
 
@@ -209,6 +210,28 @@ const oop8_3of6 = () => {
 		architecturePart2Breakout, preworkForNextClass, finalProjectPresentationAssignment, lab, end ]
 }
 
+const OOP_8_4of6_ROUTE = '24500-8-4'
+const oop8_4of6 = () => { 
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Final Project Presentations',
+			'Next Steps',
+			'Thank you!' ])
+	}
+	const prework = () => { return oopPrework_8_4of6(sprint) }
+	const finalProjectPresentations = () => { return bulletListSlide('Final Project Presentations', 
+			'Recall that in presenting your Final Projects you should:', [
+			'Briefly review your Final Project proposal ',
+			'Show your application running and explain what it does',
+			'Share some of the project source code',
+			'Explain if there is anything else you expect to complete by the end of the day Thursday' ])
+	}
+	const nextSteps = () => { return oopPrework_8_5of6(sprint) }
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, finalProjectPresentations, nextSteps, thankYou, end ]
+}
+
 // Shared between OOP sessions:
 const oopPrework_8_2of6 = () => {
 	return preworkWithActivityList([
@@ -232,6 +255,12 @@ const oopPrework_8_4of6 = (sprint) => {
 		'Be prepared for your Final Project presentation' ], 
 		list24500Sprint08, sprint)
 }
+const oopPrework_8_5of6 = (sprint) => {
+	return preworkWithActivityList([
+		'Everything is due Thursday!' ], 
+		list24500Sprint08, sprint)
+}
+
 
 export const mwfSprint8Planning = (sprint, prework_2of6) => {
 	const agenda = () => {
