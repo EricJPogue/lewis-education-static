@@ -17,7 +17,7 @@ export const preflightChecklist = () => {
 		{renderLogo()}
 		{bulletListSlide(
 			'Preflight Checklist',
-			'In preparation for class:', [
+			`In preparation for ${getCourseTitle()}:`, [
 			'Sign into our Blackboard course shell',
 			'Sign into our Zoom session through the Zoom link in our Blackboard course shell',
 			'Make sure that you can hear the conversation, see shared desktops, and view chat topics',
@@ -39,8 +39,7 @@ export const instructorChecklist = () => {
 		{renderLogo()}
 		{bulletListSlide(
 			'Instructor Checklist',
-			`In preparation for class:`, [
-			`Verify “${getCourseTitle()} (${getClassIDfromURL()})”`,
+			`In preparation for ${getCourseTitle()} / ${getClassIDfromURL()}`, [
 			'Load polls as needed',
 			'Set camera, microphone, and speakers',
 			'Share desktop in Zoom session',

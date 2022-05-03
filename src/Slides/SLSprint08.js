@@ -21,6 +21,7 @@ export const sprint8Router = (route) => {
 		case OOP_8_4of6_ROUTE: return oop8_4of6()
 		case SE_8_1of4_ROUTE: return se8_1of4()
 		case SE_8_2of4_ROUTE: return se8_2of4()
+		case SE_8_3of4_ROUTE: return se8_3of4()
 
 		default: return checklist()
 	}
@@ -382,12 +383,33 @@ const se8_2of4 = () => {
 	return [ preflightChecklist, instructorChecklist, agenda, prework, thankYou, preworkForNextClass, quiz8, lab, end ]
 }
 
+const SE_8_3of4_ROUTE = '44000-8-3'
+const se8_3of4 = () => {
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Final Project Presentations',
+			'Next Steps',
+			'Thank you!' ])
+	}
+	const prework = () => { return preworkSE8_3of4(sprint) }
+	const finalProjectPresentations = () => { return bulletListSlide('Final Project Presentations', 
+			'Recall that in presenting your Final Projects you should:', [
+			'Briefly review your Final Project proposal',
+			'Have each team member describe and show a significant feature they personally developed',
+			'Share and review the related project source code',
+			'Explain if there is anything additional you expect to complete by the end of the day Thursday' ])
+	}
+	const nextSteps = () => { return preworkSE8_4of4(sprint) }
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, finalProjectPresentations, nextSteps, thankYou, end ]
+}
+
 const preworkSE8_1of4 = (sprint) => {
 	return basicSlide('Prework', [
 		`All Sprint ${sprint-1} Assignments due Sunday!`, '',
 		`** Be prepared for in-person Sprint ${sprint} Planning on Tuesday` ])
 }
-
 const preworkSE8_2of4 = (sprint) => {
 	return preworkWithActivityList([
 		'Complete through activity 5', '',
@@ -395,15 +417,18 @@ const preworkSE8_2of4 = (sprint) => {
 		'Be prepared for Lab Time' ], 
 		list20000Sprint08, sprint)
 }
-
 const preworkSE8_3of4 = (sprint) => {
 	return preworkWithActivityList([
-		'Complete through activity 6', '',
+		'Complete ready for activity 6', '',
 		'Be prepared to present your final project as a team',
 		'Please be on time and ready to proceed with ScrumAndCoke and PasswordGenerator' ], 
 		list20000Sprint08, sprint)
 }
-
+const preworkSE8_4of4 = (sprint) => {
+	return preworkWithActivityList([
+		'Everything is due Thursday!' ], 
+		list20000Sprint08, sprint)
+}
 
 // Slides shared between multiple classes. 
 const thankYou = () => { return basicSlide('Thank You', [ 
