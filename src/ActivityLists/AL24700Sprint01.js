@@ -49,6 +49,7 @@ export const list24700Sprint01 = () => {
 	</div> )
 }
 
+// Todo: Add zipped source code requirement to all Final Project presentation assignments.
 // Todo: Consider updating lectures to be topic specific (instead of Sebesta chapter specific) and removing Sebesta 
 // for the fall session. 
 // BugBug: Verify that second discussion board is removed from sprint 1.

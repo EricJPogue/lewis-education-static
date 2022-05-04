@@ -8,6 +8,7 @@ import { renderBreakout } from './Breakout'
 
 import { list20000Sprint08 } from '../ActivityLists/AL20000Sprint08'
 import { list24500Sprint08 } from '../ActivityLists/AL24500Sprint08'
+import { list44000Sprint08 } from '../ActivityLists/AL44000Sprint08'
 
 export const sprint8Router = (route) => {
 	const courseNumberPlusRoute = getCourseNumber() + '-' + route
@@ -15,6 +16,7 @@ export const sprint8Router = (route) => {
 		case ICS_8_1of6_ROUTE: return ics8_1of6()
 		case ICS_8_2of6_ROUTE: return ics8_2of6()
 		case ICS_8_3of6_ROUTE: return ics8_3of6()
+		case ICS_8_4of6_ROUTE: return ics8_4of6()
 		case OOP_8_1of6_ROUTE: return oop8_1of6()
 		case OOP_8_2of6_ROUTE: return oop8_2of6()
 		case OOP_8_3of6_ROUTE: return oop8_3of6()
@@ -106,6 +108,28 @@ const ics8_3of6 = () => {
 
 	return [ preflightChecklist, instructorChecklist, agenda, icsPrework_8_3of6, thankYou, webDevelopmentAndCourseEvaluation,
 		icsPrework_8_4of6, finalProjectPresentationAssignment, lab, end ]
+}
+
+const ICS_8_4of6_ROUTE = '20000-8-4'
+const ics8_4of6 = () => {
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Final Project Presentations',
+			'Next Steps',
+			'Thank you!' ])
+	}
+	const prework = () => { return icsPrework_8_4of6(sprint) }
+	const finalProjectPresentations = () => { return bulletListSlide('Final Project Presentations', 
+			'Recall that in presenting your Final Projects you should:', [
+			'Briefly review your Final Project proposal ',
+			'Show the standard and advanced features of your application running',
+			'Share some of the project source code',
+			'Explain if there is anything else you expect to complete by the end of the day Thursday' ])
+	}
+	const nextSteps = () => { return oopPrework_8_5of6(sprint) }
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, finalProjectPresentations, nextSteps, thankYou, end ]
 }
 
 // Shared between ICS sessions:
@@ -262,7 +286,6 @@ const oopPrework_8_5of6 = (sprint) => {
 		list24500Sprint08, sprint)
 }
 
-
 export const mwfSprint8Planning = (sprint, prework_2of6) => {
 	const agenda = () => {
 		return agendaSlide([
@@ -415,19 +438,19 @@ const preworkSE8_2of4 = (sprint) => {
 		'Complete through activity 5', '',
 		'Be prepared for Quiz 8',
 		'Be prepared for Lab Time' ], 
-		list20000Sprint08, sprint)
+		list44000Sprint08, sprint)
 }
 const preworkSE8_3of4 = (sprint) => {
 	return preworkWithActivityList([
 		'Complete ready for activity 6', '',
 		'Be prepared to present your final project as a team',
 		'Please be on time and ready to proceed with ScrumAndCoke and PasswordGenerator' ], 
-		list20000Sprint08, sprint)
+		list44000Sprint08, sprint)
 }
 const preworkSE8_4of4 = (sprint) => {
 	return preworkWithActivityList([
 		'Everything is due Thursday!' ], 
-		list20000Sprint08, sprint)
+		list44000Sprint08, sprint)
 }
 
 // Slides shared between multiple classes. 
