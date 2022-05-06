@@ -11,7 +11,7 @@ const panoptoWelcomeIFrameTag2022Summer = () => {
 export const welcome2022Summer = () => {
 	return ( <div>
 		<h4>{getCourseTitle()}</h4>
-		<h5>Welcome to Lewis University Summer 2022 term!</h5>
+		<h5>Welcome to Lewis University Summer 2022!</h5>
 		<p style={{marginTop:'20px'}}>Please take a few minutes to view your summer 2022 welcome message.</p>
 		<IFrameComponent iframe={panoptoWelcomeIFrameTag2022Summer()} />
 		<br />
