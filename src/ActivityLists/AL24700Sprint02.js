@@ -53,3 +53,7 @@ JavaScript.</p>
 }
 
 
+// Todo: Add zipped source code requirement to all Final Project presentation assignments.
+// Todo: Consider updating lectures to be topic specific (instead of Sebesta chapter specific) and removing Sebesta 
+// for the fall session. 
+// Todo: Add Git/GitHub activity / tutorial. 

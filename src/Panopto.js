@@ -2,7 +2,7 @@ import React from 'react'
 
 import { getCourseTitle, getSyllabusURL } from './data/ClientDataAPIs';
 import { getClassIDfromURL } from './data/ClientDataAPIs'
-import { Blended, scrumIn7Min } from './Links'
+import { Blended, externalLink, scrumIn7Min } from './Links'
 
 const panoptoWelcomeIFrameTag2022Summer = () => {
 	return '<iframe src="https://lewisu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1bd10fe6-8984-4a88-98a1-ae7f0107d260&autoplay=false&offerviewer=false&showtitle=false&showbrand=false&captions=false&interactivity=all" height="576" width="1024" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>'
@@ -11,17 +11,17 @@ const panoptoWelcomeIFrameTag2022Summer = () => {
 export const welcome2022Summer = () => {
 	return ( <div>
 		<h4>{getCourseTitle()}</h4>
-		<h5>Welcome to Lewis University Spring 2022 Semester!</h5>
-		<p style={{marginTop:'20px'}}>Please take a few minutes to view your spring 2022 welcome message.</p>
+		<h5>Welcome to Lewis University Summer 2022 term!</h5>
+		<p style={{marginTop:'20px'}}>Please take a few minutes to view your summer 2022 welcome message.</p>
 		<IFrameComponent iframe={panoptoWelcomeIFrameTag2022Summer()} />
 		<br />
-		<p>Prior to our first class session, please also take a few minutes to gain a better understand of 
-		Blended Learning and Scrum by reviewing the following videos.</p>
+		<p>Please also take a few minutes to gain a better understand of Blended Learning and Scrum by reviewing the 
+		following videos.</p>
 		<ul style={{listStyleType:'square'}}>
 			<li>{Blended()}</li>
 			<li>{scrumIn7Min()}</li> 
 		</ul>
-		Finally, you will want to take a look at our course <a href={getSyllabusURL() /* classSyllabusURL() */}>syllabus</a> and obtain the 
+		Finally, you will want to take a look at our course {externalLink('syllabus', 'https://www.lewis.education/?cpsc=su22-cpsc-24700-lt1&hide-nav=y#/syllabus')} and obtain the 
 		items identified in the “IV. Course Materials.”
 		</div> )
 }
