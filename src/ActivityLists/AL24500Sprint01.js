@@ -53,4 +53,5 @@ attend class. If you do these things, I believe your success is virtually guaran
 	)
 }
 
-// BugBug: Review activities list link to make sure that the course ID is correct in Blackboard.
+
+

@@ -49,3 +49,4 @@ export const list44000Sprint07 = () => {
 // reduced it to 8 hours based on the fact that Easter Break was in sprint 7 and consumed Thursday, Friday, and Monday.
 
 // Todo: Consider adding back in Architecture lecture or removing SQL questions from quiz.
+// Todo: Make sure that in sprints 7 & 8 that “individual” lab questions are identified. 

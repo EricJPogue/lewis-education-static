@@ -40,3 +40,4 @@ yourself.</p>
 // Update Lab 8 to remove final question.
 // Update Lab 8 to reference Final Project version 2 and to make sure that the students describe what they implemented 
 //     that meet the requirement.
+// Todo: Verify that all sprint 8 activities list pages have the programming together tutorials link in the closing.

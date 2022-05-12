@@ -21,19 +21,30 @@ export const scrumIntro = (sprint = 0) => {
 }
 
 export const learningObjectivesIntro = (sprint = 1) => {
-	return ( <p>Let’s start with our sprint {sprint} learning objectives. By the end of sprint {sprint} we will be able to:</p> )
+	switch(sprint) {
+		case 1: return ( <p>Let’s start with our sprint {sprint} learning objectives. By the end of sprint {sprint} we will be able to:</p> )
+		default: return ( <p>Let’s start with our Learning Objectives. By the end of sprint {sprint} we will be able to:</p> )
+	}
+	
 }
 
 export const activitiesListIntro = (sprint = 1) => {
-	return (
-		<p>Below is our sprint 1 activities list. Although you are welcome to pursue the activities in any order, they are
-		listed in the order I think will be the most efficient to complete. Expect each item to take 20 to 40 minutes of 
-		focused time unless otherwise noted. <em>Bold</em> items are graded assignments.</p>
-	)
+	switch(sprint) {
+		case 1: return (
+				<p>Below is our sprint 1 activities list. Although you are welcome to pursue the activities in any order, they are
+				listed in the order I think will be the most efficient to complete. Expect each item to take 20 to 40 minutes of 
+				focused time unless otherwise noted. <em>Bold</em> items are graded assignments.</p>
+		)
+		default: return (
+				<p>Below is our sprint {sprint} activities list. Activities are listed in the order that I think will be the most efficient 
+				for them to be completed, the <em>bold</em> items are graded assignments, and everything is by the end of the sprint 
+				which is <em>{sprintEndDateWithoutTime(sprint-1 /* base zero */)}</em>.</p>
+		)
+	}
 }
 
-export const initialPost = () => {
-	return ( <li><em>Make your initial Discussion 1 post by the middle of the sprint</em></li> )
+export const initialPost = (sprint=1) => {
+	return ( <li><em>Make your initial Discussion {sprint} post by the middle of the sprint</em></li> )
 }
 
 export const standardActivities = (sprint=1, programmingAssignmentLink='', playlistLink='') => { 
@@ -54,39 +65,81 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 			<li>Start working on {toolsOfTheTrade()} by setting up Discord and O’Reilly Books</li>
 		</div> )
 	}
+	const sprint2StandardActivities = () => {
+		return ( <div>
+			<li>Study and understand our {codingStandards()}</li>
+			<li>Review our class {ExampleCode()}</li>
+		</div> )
+	}
+	const sprintTopics = (sprint) =>  {
+		switch (sprint) {
+			case 1: return (sprint1StandardActivities())
+			case 2: return (sprint2StandardActivities())
+			default: return null
+		}
+	}
+	const currentAssignments = (sprint) => {
+		return ( <em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, Reflection {sprint}, and Lab Demo</em> )
+	}
 	
 	return ( <div>
 		<li>Maintain a laser focus on due dates by reviewing our {calendarLink(sprint)} and {scheduleLink(sprint)}</li>
-		<li><em>Review sprint {sprint} assignments including Discussion 1, Quiz 1, Lab 1, Reflection 1, and Lab Demo</em></li>
+		<li>{currentAssignments(sprint)}</li>
 		{previousSprintTopics()}
-		{sprint1StandardActivities()}
+		{sprintTopics(sprint)}
 		{programmingAssignmentActivityStart()}
 	</div> )
 }
 
 export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink='', programmingAssignmentEstimate='') => { 
-	if (sprint === 8) {
-		return (<div>
+	const standardActivitiesClosing = () => {
+		return ( <div>
+			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+			<li><em>Complete Discussion {sprint} by responding to at least two of your classmates’ posts</em></li>
+			<li><em>Submit sprint {sprint} assignments including Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
+		</div>)
+	}
+	const sprint1StandardActivitiesClosing = () => { return (<div>
+			<li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
+			{standardActivitiesClosing()}
+		</div>)
+	}
+	const sprint2StandardActivitiesClosing = () => { return (<div>
+		<li>Verify that you added a representative photo of yourself to {blackboardChangePhoto()} and Zoom</li>
+		{standardActivitiesClosing()}
+	</div>)
+}
+	const sprint8StandardActivitiesClosing = () => { return (<div>
 			<li>Submit your Final Project Presentation assignment at least two hours before to your scheduled presentation time</li>
 			<li><em style={{color:'red'}}>Deliver your Final Project Presentation <u>in person</u> on <u>{getFinalExamDateAndTime()}</u></em></li>
 			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 			<li><em style={{color:'red'}}>Submit <u>all assignments</u> by the end of the day <u>{sprintEndDateWithoutTime(sprint-1)}</u>... no late assignments</em></li> 
 		</div>)
 	}
-	else {
-		return (<div>
-			<li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
-			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
-			<li><em>Complete Discussion 1 by responding to at least two of your classmates’ posts</em></li>
-			<li><em>Submit sprint {sprint} assignments including Quiz 1, Lab 1, and Reflection 1</em></li>
-		</div>)
+	
+	switch (sprint) {
+		case 1: return sprint1StandardActivitiesClosing()
+		case 2: return sprint2StandardActivitiesClosing()
+		case 8: return sprint8StandardActivitiesClosing()
+		default: return null
 	}
 }
 
-export const closing = () => {
-	return (
+export const closing = (sprint) => {
+	const sprint1Closing = () => { return (
 		<p>The best advise that I can give you is to start assignments early, submit something on time for each assignment, and to 
 		attend class. If you do these things, I believe your success is virtually guaranteed. Finally, be sure to periodically 
-		check for updates to our {programmingTogether()} tutorials.</p>
-	) 
+		check for updates to our {programmingTogether()} tutorials.</p> ) 
+	}
+	const sprint2Closing = () => { return (
+		<p>If you are struggling, remember to reach out for help early. Also, be sure to periodically check for updates to 
+		our {programmingTogether()} tutorials.</p> ) 
+	}
+
+	switch (sprint) {
+		case 1: return sprint1Closing()
+		case 2: return sprint2Closing()
+
+		default: return null
+	}
 }

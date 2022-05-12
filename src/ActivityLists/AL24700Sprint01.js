@@ -49,4 +49,5 @@ export const list24700Sprint01 = () => {
 	</div> )
 }
 
-// Todo: Quiz 1 needs work including review chapter content and consider adding Tools of the Trade questions.
+// Certified for SU22 (05/09/2022)
+// Todo: Modify assignment order in Syllabus Course Schedule to be to match Activities List order (Discussion, Quiz, Lab, and Reflection).

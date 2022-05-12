@@ -51,3 +51,4 @@ const list49200Sprint7 = (sprint) => {
 // reduced it from 14 hours to 10 hours based on the fact that Easter Break was in sprint 7 and consumed Thursday, 
 // Friday, and Monday.
 // Todo: Consider updating Lab 7 question 4 as no one ever provides valuable comments to this question. 
+// Todo: Update final project presentation assignment. Maybe move it to an activity?
