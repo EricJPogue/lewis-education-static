@@ -33,7 +33,7 @@ export const al24700Sprint02 = () => {
 export const list24700Sprint02 = (sprint) => {
 	const typesOfSoftwareLicenses = () => { return externalLink('Types of Software Licenses', 'https://www.synopsys.com/blogs/software-security/5-types-of-software-licenses-you-need-to-understand/') }
 	const choosingASoftwareLicense = () => { return externalLink('Choosing A Software License', 'https://choosealicense.com/') }
-	const addGitHubSoftwareLicense = () => { return externalLink('Adding a Software License', 'https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repositoryy') }
+	const addGitHubSoftwareLicense = () => { return externalLink('Adding a Software License', 'https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository') }
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
@@ -52,6 +52,8 @@ export const list24700Sprint02 = (sprint) => {
 		</ol>
 	</div> )
 }
+
+// Certified for SU22 (05/13/2022)
 
 // Todo: Consider updating lectures to be topic specific (instead of Sebesta chapter specific) and removing Sebesta 
 // for the fall session. 
