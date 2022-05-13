@@ -126,9 +126,13 @@ export const learningJavaExampleCode = () =>  { return internalLink('example cod
 export const done = () => { return externalLink('Done', 'https://www.agilealliance.org/glossary/definition-of-done')}
 
 export const architecturePart1 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 1', 
-'/activity-architecture/application-architecture-part1')}
+	'/activity-architecture/application-architecture-part1')}
 export const architecturePart2 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 2', 
-'/activity-architecture/application-architecture-part2')}
+	'/activity-architecture/application-architecture-part2')}
+
+export const continuousIntegration = () => { return externalLink('What is CI/CD? Continuous integration and continuous delivery explained', 
+	'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
+
 
 export const externalLink = (displayName, url) => {
 	return (

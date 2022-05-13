@@ -7,6 +7,7 @@ import { oreillyPlaylistWeb, JavaScriptW3C, internalLink } from '../Links'
 import { MapManiaVersion1, AssignmentPortfolioWebsite, DiceRoller, complete, ReviewProgrammingActivity, MapManiaLite } from './ProgrammingAssignments'
 
 const googleMapsJavaScriptAPIOverview = () => { return internalLink('Google Maps JavaScript API', 'https://developers.google.com/maps/documentation/javascript/overview')}
+const sebestaChapter4Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-04')}
 
 export const al24700Sprint03 = () => {
 	let playlist = oreillyPlaylistWeb()
@@ -50,6 +51,10 @@ at first, I think you will enjoy what you are able to create using it.</p>
 	{ReviewProgrammingActivity(MapManiaLite)}
 
 	{StandardActivitiesClosing(MapManiaVersion1)}
+
+	<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapters 4</li>
+	<li>Read chapter 4 of Sebesta on Basic JavaScript and review the associated {sebestaChapter4Lecture()}</li>
+	<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 4</li>
 </ol>
 {Closing()}
 
