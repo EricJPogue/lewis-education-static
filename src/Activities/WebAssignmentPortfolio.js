@@ -18,10 +18,11 @@ export const assignmentPortfolio = () => {
 <em>Requirement</em>
 <p>Create website that:</p>
 <ol>
-	<li>Is hosted in Microsoft Azure and is globally available</li>
+	<li>Is hosted in Microsoft Azure and is globally accessible via an HTTPs link</li>
+	<li>Has a main file named index.html and utilizes an external linked CSS file</li>
 	<li>Has a simple yet an aesthetically pleasing user interface</li>
+	<li>Hosts all previous class assignments</li>
 	<li>Provides links to all previous, current, and future web-based class assignments</li>
-	<li>Has a main file named index.html and utilizes a separate linked CSS file</li>
 </ol>
 </div> )
 

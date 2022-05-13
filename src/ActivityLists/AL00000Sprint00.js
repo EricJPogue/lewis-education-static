@@ -25,7 +25,6 @@ export const learningObjectivesIntro = (sprint = 1) => {
 		case 1: return ( <p>Let’s start with our sprint {sprint} learning objectives. By the end of sprint {sprint} we will be able to:</p> )
 		default: return ( <p>Let’s start with our Learning Objectives. By the end of sprint {sprint} we will be able to:</p> )
 	}
-	
 }
 
 export const activitiesListIntro = (sprint = 1) => {
@@ -67,8 +66,7 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 	}
 	const sprint2StandardActivities = () => {
 		return ( <div>
-			<li>Study and understand our {codingStandards()}</li>
-			<li>Review our class {ExampleCode()}</li>
+			<li>Review our class {ExampleCode()} and study our {codingStandards()}</li>
 		</div> )
 	}
 	const sprintTopics = (sprint) =>  {

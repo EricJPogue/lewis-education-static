@@ -16,6 +16,7 @@ export const azureWebsite = () => {
 		the methods demonstrated below. Test your website and make certain that your index.html web page is working 
 		as expected.</p>
 		<ul style={{listStyleType:'square'}}>
+			<li>Complete <NavLink to='/activity-config/deploying-node-js-to-azure-2022.mp4'>Microsoft Azure Node.js Website Creation with GitHub</NavLink> (**required**)</li>
 			<li>Complete <NavLink to='/activity-config/hello-world-html-github-and-azure'>Website Creation with GitHub and Microsoft Azure</NavLink> (required)</li>
 			<li>Complete <NavLink to='/activity-config/git-deployment-to-azure-supplemental-2020'>Website Creation with GitHub and Microsoft Azure 2020 Edition</NavLink> (required)</li>
 			<li>Review <NavLink to='/activity-config/git-deployment-to-azure'>Git Deployment to Microsoft Azure</NavLink></li>
