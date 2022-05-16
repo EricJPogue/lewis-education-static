@@ -50,5 +50,7 @@ export const list24700Sprint01 = () => {
 }
 
 // Certified for SU22 (05/09/2022)
+
+// Todo: Review Quiz 1 as it may have wrong settings. I'm not certain.
 // Todo: Modify assignment order in Syllabus Course Schedule to be to match Activities List order (Discussion, Quiz, Lab, and Reflection).
 // Todo: Consider removing Sebesta book while recreating any required material that is only available from the book (i.e. Internet and Web). 
