@@ -2,6 +2,7 @@ import React from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { getClassIDfromURL, getCourseTitle } from '../data/ClientDataAPIs'
+import { externalLink } from '../Links'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
 export const CHECKLIST_ROUTE = 'checklist'
@@ -122,6 +123,14 @@ export const basicSlideWithTitle = (title, lineList) => {
 }
 export const basicSlide = (title, lineList) => { return basicSlideWithTitle(title, lineList)}
 
+export const basicSlideWithTitleLink = (title, link, lineList) => {
+	const renderBasicSlideLine = (item) => { return (<div key={item} style={styleBasic}>{item}<br /></div>) }
+	return ( <div>
+		{renderHeaderLink(title, link)}
+		{lineList.map(renderBasicSlideLine)}
+	</div> )
+}
+
 
 export const renderLogo = () => {
 	return (
@@ -138,9 +147,13 @@ export const orderedListSlide = (header, intro, list) => {
 }
 
 
+const title = { fontSize:40	}
 export const renderHeader = (slideTitle) => {
-	const title = { fontSize:40	}
 	return ( <h1 style={title}>{slideTitle}</h1> ) 
+}
+
+const renderHeaderLink  = (slideTitle, link) => {
+	return ( <h1 style={title}>{externalLink(slideTitle, link)}</h1> ) 
 }
 
 const styleListIntro = { fontSize:20 }
@@ -231,7 +244,6 @@ export const discussionBreakout = (sprint) => {
 		{breakoutNoteExample()}
 	</div> )
 }
-
 
 const styleBodyText = { fontSize:20 }
 const breakoutNoteExample = (sprint) => {

@@ -1,9 +1,9 @@
 import React, {useState } from 'react'
 import { useHotkeys } from 'react-hotkeys-hook'
-import { sprint8Router } from './SLSprint08'
+import { sprint2Router } from './SLSprint02'
 
 export function Deck(props) {
-	const deck = sprint8Router(props.match.params.route)
+	const deck = sprint2Router(props.match.params.route)
 	const [count, setCount ] = useState(0) 
 
 	const incrementSlide = () => { setCount(prevCount => prevCount + 1) }
