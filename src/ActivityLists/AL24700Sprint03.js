@@ -14,16 +14,17 @@ export const al24700Sprint03 = () => {
 	return ( <div>
 		<h5>Sprint 3: Interactive Web Applications, Distributed Programming, JavaScript, and Web Services</h5>
 
-		<p>Welcome to Sprint 3. We have covered a lot in our first two sprints. This sprint we will focus on creating 
-		interactive Web applications and utilizing Distributed Programming methods to create compelling software by 
-		leveraging remote content.</p>
+		<p>Welcome to Sprint 3. We have covered a lot in our first two sprints. This sprint we will focus on adding 
+		Javascript to our HTML and CSS to create interactive Web applications. We will also be honing our 
+		distributed programming skills by using public application programming interfaces (APIs) to create compelling 
+		software that leverages remote content.</p>
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Understand the importance and complexity of creating interactive programs</li>
 			<li>Create interactive browser-based (client-side) applications using HTML, CSS, and JavaScript</li>
 			<li>Understand Distributed Programming and the criticality of knowing where application code is executing</li>
-			<li>Utilize web services technology including HTTP(s) and JSON to access remote and functionality</li>
+			<li>Utilize web services technologies (APIs) including HTTP(s) and JSON to access remote content</li>
 		</ul>  
 
 		{list24700Sprint03(sprint)}
