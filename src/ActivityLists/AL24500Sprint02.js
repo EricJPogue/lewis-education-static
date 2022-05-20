@@ -2,13 +2,12 @@ import React from 'react'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialDiscussionPost, StandardActivitiesClosing } from './AL00000Sprint02'
 import { ovalDrawPlusJavaLink } from '../Activities/OvalDrawPlus';
-import { oreillyPlaylistOOP, umlClassDiagrams, gitCommands, internalLink } from '../Links';
+import { oreillyPlaylistOOP, umlClassDiagrams, gitCommands, successfulProgrammer, internalLink } from '../Links';
 
 const shapesPart1 = () => { return internalLink('Shapes - Part 1', '/activity-oop/java-shapes-step1') }
 const shapesPart2 = () => { return internalLink('Shapes - Part 2', '/activity-oop/java-shapes-step2') }
 const oopPatterns = () => { return internalLink('Object-Oriented Programming Patterns', '/activity-oop/patterns') }
 const oopPrinciples = () => { return internalLink('Object-Oriented Programming Principles', '/activity-oop/principles') }
-const successfulProgrammer = () => { return internalLink('How To Be A Successful Programmer', '/activity/successful-programmer') }
 
 export const al24500Sprint02 = () => {
 	return (

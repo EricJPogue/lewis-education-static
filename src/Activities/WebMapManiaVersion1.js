@@ -1,7 +1,14 @@
 
-import React from 'react';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { makeInternalURL } from './ActivityRouter'
 
-import WebMapManiaScreenShot from './WebMapManiaScreenShot.png';
+import WebMapManiaScreenShot from './WebMapManiaScreenShot.png'
+
+const NAME = 'Map Mania Version 1'
+export const MAP_MANIA_V1_ROUTE = 'map-mania-v1'
+export const mapManiaVersion1Link = () => {return (<NavLink to={makeInternalURL(MAP_MANIA_V1_ROUTE)}>{NAME}</NavLink>)}
+export const mapManiaVersion1 = () => { return WebMapManiaVersion1() }
 
 export const WebMapManiaVersion1 = () => {
 	return (

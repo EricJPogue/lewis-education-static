@@ -23,6 +23,8 @@ import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebG
 import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbbreviated } from './WebGettingToKnowEachOtherAbbreviated'
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
 import { HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE, healthRiskCalculatorTeamWeb } from './HealthRiskCalculatorTeam'
+import { LIONS_TIGERS_AND_BEARS_ROUTE, lionsTigersAndBears } from './LionsTigerAndBears'
+import { MAP_MANIA_V1_ROUTE, mapManiaVersion1 } from './WebMapManiaVersion1'
 import { MATCHMAKER_PYTHON_ROUTE, matchmakerPython } from './Matchmaker'
 import { MATCHMAKER_WEB_ROUTE, matchmakerWeb } from './Matchmaker'
 import { MOSAIC_JAVA_ROUTE, mosaicJava } from './Mosaic'
@@ -74,6 +76,8 @@ export const routeActivity = (activityRoute) => {
 		case GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE: return gettingToKnowEachOtherAbbreviated()
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()
 		case HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE: return healthRiskCalculatorTeamWeb()
+		case LIONS_TIGERS_AND_BEARS_ROUTE: return lionsTigersAndBears()
+		case MAP_MANIA_V1_ROUTE: return mapManiaVersion1()
 		case MATCHMAKER_PYTHON_ROUTE: return matchmakerPython()
 		case MATCHMAKER_WEB_ROUTE: return matchmakerWeb()
 		case MOSAIC_JAVA_ROUTE: return mosaicJava()

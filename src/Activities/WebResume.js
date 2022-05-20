@@ -1,7 +1,7 @@
 
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { makeInternalURL } from './ActivityRouter';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { makeInternalURL } from './ActivityRouter'
 
 import { ResumeFormat, ResumeReviewServices, internalLink } from '../Links'
 

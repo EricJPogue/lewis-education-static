@@ -105,7 +105,8 @@ export const wireless = () => { return externalLink('wireless', 'https://mylewis
 
 export const gitCommands = () => { return internalLink('Git commands', '/activity/git-commands')}
 
-export const jsonW3CTutorial = () => { return externalLink('JSON Tutorial', 'https://www.w3schools.com/js/js_json_intro.asp')}
+export const jsonW3CTutorial = () => { return externalLink('JSON', 'https://www.w3schools.com/js/js_json_intro.asp')}
+export const ajaxW3CTutorial = () => { return externalLink('AJAX', 'https://www.w3schools.com/js/js_ajax_intro.asp')}
 export const jsonArticle = () => { return externalLink('What is JSON? JavaScript Object Notation explained', 'https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html') }
 
 // Agile Alliance
@@ -132,6 +133,8 @@ export const architecturePart2 = () => { return internalLink('Application Archit
 
 export const continuousIntegration = () => { return externalLink('What is CI/CD? Continuous integration and continuous delivery explained', 
 	'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
+
+export const successfulProgrammer = () => { return internalLink('How To Be A Successful Programmer', '/activity/successful-programmer') }
 
 
 export const externalLink = (displayName, url) => {
