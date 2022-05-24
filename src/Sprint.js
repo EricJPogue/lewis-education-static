@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { getCourseTitle } from './data/ClientDataAPIs';
 import { getCourseNumber } from './data/ClientDataAPIs'
 import { al } from './ActivityLists/AL'
-import { DisplayPreviewStampIfNeeded } from './ActivityLists/ALPreviewStamp'
+import { displayPreviewStampIfNeeded } from './ActivityLists/ALPreviewStamp'
 
 export class Sprint extends Component {
 	render = () => {
@@ -14,7 +14,7 @@ export class Sprint extends Component {
 			<div>
 				<h4>{getCourseTitle()}</h4>
 				{al(number, activityListSprint)}
-				{DisplayPreviewStampIfNeeded(activityListSprint)}
+				{displayPreviewStampIfNeeded(activityListSprint)}
 			</div>
 		)
 

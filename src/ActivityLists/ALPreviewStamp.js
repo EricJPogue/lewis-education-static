@@ -5,8 +5,7 @@ import { getCalendar } from '../data/ClientDataAPIs'
 // Todo: Review licensing of preview stamp.
 import ALPreviewStamp from './ALPreviewStamp.png'
 
-
-export const DisplayPreviewStampIfNeeded = (activityListSprint) => {
+export const displayPreviewStampIfNeeded = (activityListSprint) => {
 	if ((activityListSprint > 8) || (activityListSprint < 2)) {
 		return (null)
 	}
@@ -16,11 +15,9 @@ export const DisplayPreviewStampIfNeeded = (activityListSprint) => {
 
 	// If the sprint has not started, place the preview stamp on the page.
 	if (!pastDate(dates.start)) {
-		return (
-			<div style={{position:"absolute", opacity:0.7, right:40, top:80}}>
-				<img src={ALPreviewStamp} alt='preview' width= '212'/>
-			</div>
-		)
+		return ( <div style={{position:"absolute", opacity:0.7, right:40, top:80}}>
+			<img src={ALPreviewStamp} alt='preview' width= '212'/>
+		</div> )
 	}
 
 	return (null)

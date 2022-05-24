@@ -55,6 +55,7 @@ export const list24700Sprint02 = (sprint) => {
 
 // Certified for SU22 (05/13/2022)
 
+// Todo: Add request for Web Resume direct link to Lab 2. 
 // Todo: Consider updating lectures to be topic specific (instead of Sebesta chapter specific) and removing Sebesta 
 // for the fall session. 
 // Todo: Figure out why when a link is clicked (i.e. Syllabus) the page scrolls to the same position on the page as

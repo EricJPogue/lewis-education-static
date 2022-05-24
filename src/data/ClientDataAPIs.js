@@ -1,8 +1,5 @@
-import { URLCLASSID, SCHEDULE_TTR, SCHEDULE_ONLINE, CURRENT_CALENDAR_ID, UPCOMING_CALENDAR_ID } from './ClientData'
+import { URLCLASSID, SCHEDULE_TTR, SCHEDULE_ONLINE, CURRENT_CALENDAR_ID_INDEX, CALENDAR_LIST } from './ClientData'
 import { classList } from './ClientData'
-import { sprintCalendarSummer_2022_05_09_08, sprintCalendarSpring_2022_01_10_16, 
-	sprintCalendarFall_2021_08_30_16, sprintCalendarSpring_2021_01_18_16 } from './ClientData'
-
 import { pastDate } from '../SprintDates'
 
 // Exported APIs
@@ -18,28 +15,24 @@ export const getSyllabusURL = () => {
 	return getClass().syllabusURL
 }
 
-export const getCalendar = () => {
-	// Todo: Consider updating calendar data so that it includes an array of calendars with a calendar ID.
-	switch(getClass().calendarID) {
-		case '2022-05-09-08': return sprintCalendarSummer_2022_05_09_08
-		case '2022-01-10-16': return sprintCalendarSpring_2022_01_10_16
-		case '2021-08-30-16': return sprintCalendarFall_2021_08_30_16
-		case '2021-01-18-16': return sprintCalendarSpring_2021_01_18_16
-		default: console.log('Error: Calendar not found.')
-	}
-}
-
-export const getCurrentSprintBase1 = () => { return getCurrentSprint() + 1}
-const getCurrentSprint = () => {
+export const getCurrentSprintBase1 = () => { return getCurrentSprintByCalendar(getCalendar())+1}
+const getCurrentSprintByCalendar = (calendar) => {
+	const minSprint = 0 
 	const maxSprint = 7
-	let calendar = getCalendar()
-	for (let sprint = 0; sprint < (maxSprint+1); sprint++) {
-		// If the start date is in the past and the end date is in the future, then today is in the current sprint.
+
+	// Start date of the first sprint is in the future so return minSprint (likely sprint 0).
+	if (!pastDate(calendar[0].start)) {
+		return minSprint
+	}
+
+	for (let sprint = 0; sprint <= (maxSprint); sprint++) {
+		// Start date of the sprint is in the past and the end date is in the future so this is the current sprint.
 		if ((pastDate(calendar[sprint].start)) && (!pastDate(calendar[sprint].end))) {
 			return sprint
 		}
 	}
 
+	// All dates are in the past so return maxSprint (likely sprint 7)
 	return maxSprint 
 }
 
@@ -68,7 +61,7 @@ export const getClassIDfromURL = () => {
 export const getCurrentClasses = () => {
 	const currentClasses = []
 	for (let i = 0; i < classList.length; i++) {
-		if ((classList[i].calendarID === CURRENT_CALENDAR_ID) || (classList[i].calendarID === UPCOMING_CALENDAR_ID))
+		if ((classList[i].calendarID === CALENDAR_LIST[CURRENT_CALENDAR_ID_INDEX].calendarID))
 			currentClasses.push(classList[i])
 	}
 	return currentClasses
@@ -77,7 +70,7 @@ export const getCurrentClasses = () => {
 export const getAllClasses = () => {
 	const currentClasses = []
 	for (let i = 0; i < classList.length; i++) {
-			currentClasses.push(classList[i])
+		currentClasses.push(classList[i])
 	}
 	return currentClasses
 }
@@ -86,14 +79,16 @@ const getClass = () => {
 	let classID = getClassIDfromURL()
 	for (let i = 0; i < classList.length; i++) {
 		if (classList[i].classID === classID) {
-			if (classList[i].calendarID !== CURRENT_CALENDAR_ID)
+			if (classList[i].calendarID !== CALENDAR_LIST[CURRENT_CALENDAR_ID_INDEX].calendarID) {
 				// It is likely an error that someone is utilizing content from old classes.
 				console.log('Warning: Class '+classList[i].classID+' not a current class.')
+			}
 			return classList[i]
 		}
 	}
 
-	console.log('Error: Class not found (class='+classID+').')
+	// This may or may not be an error. 
+	console.log('Warning: Class not found (class='+classID+').')
 	return classList[0]
 }
 
@@ -109,41 +104,25 @@ export const getCurrentSprintByClassID = (classID) => {
 const getClassByClassID = (classID) => {
 	for (let i = 0; i < classList.length; i++) {
 		if (classList[i].classID === classID) {
-			if (classList[i].calendarID !== CURRENT_CALENDAR_ID)
+			if (classList[i].calendarID !== CALENDAR_LIST[CURRENT_CALENDAR_ID_INDEX].calendarID)
 				// It is likely an error that someone is utilizing content from old classes.
 				console.log('Warning: Class '+classList[i].classID+' not a current class.')
 			return classList[i]
 		}
 	}
 
-	console.log('Error: Class not found (class='+classID+').')
+	console.log('Error: Class not found (class= '+classID+').')
 	return classList[0]
 }
 
+export const getCalendar = () => { return getCalendarByCalendarID(getClass().calendarID) }
 const getCalendarByCalendarID = (calendarID) => {
-	// Todo: Consider updating calendar data so that it includes an array of calendars with a calendar ID.
-	switch(calendarID) {
-		case '2022-05-09-08': return sprintCalendarSummer_2022_05_09_08
-		case '2022-01-10-16': return sprintCalendarSpring_2022_01_10_16
-		case '2021-08-30-16': return sprintCalendarFall_2021_08_30_16
-		case '2021-01-18-16': return sprintCalendarSpring_2021_01_18_16
-		default: console.log('Error: Calendar not found.')
+	for (let i = 0; i < CALENDAR_LIST.length; i++) {
+		if (CALENDAR_LIST[i].calendarID === calendarID)
+			return CALENDAR_LIST[i].calendar
 	}
+
+	console.log(`Warning: Calendar ID “${calendarID}” not found returning current calendar as default.`)
+	return CALENDAR_LIST[CURRENT_CALENDAR_ID_INDEX].calendar
 }
 
-const getCurrentSprintByCalendar = (calendar) => {
-	const maxSprint = 7
-	for (let sprint = 0; sprint < (maxSprint+1); sprint++) {
-		// If the start date is in the past and the end date is in the future, then today is in the current sprint.
-		if ((pastDate(calendar[sprint].start)) && (!pastDate(calendar[sprint].end))) {
-			return sprint
-		}
-	}
-
-	// If the start date of the first sprint is in the future, then return sprint zero.
-	if (!pastDate(calendar[0].start)) {
-		return 0
-	}
-
-	return maxSprint 
-}

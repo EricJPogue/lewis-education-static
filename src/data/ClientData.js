@@ -4,9 +4,8 @@ export const SCHEDULE_MWF = 'MWF'
 export const SCHEDULE_TTR = 'TTh'
 export const SCHEDULE_ONLINE = 'Online'
 
+// It is anticipated that a two year running list of classes will be maintained. 
 export const classList = [
-	{ 'classID':'fa22-cpsc-24700-001', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2022-08-29', 'schedule':'MWF', 'time':'3-3:50 PM', 'finalExam':'Friday, December 16 from 4 PM to 6 PM CT', 'syllabusURL':'https://www.lewis.education/?cpsc=fa22-cpsc-24700-001&hide-nav=y#/syllabus' },
-		
 	{ 'classID':'su22-cpsc-24700-lt1', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2022-05-09-08', 'schedule':'Online', 'time':'', 'finalExam':'Thursday, June 30 from 11:00 AM to 1:00 PM CT', 'syllabusURL':'https://www.lewis.education/?cpsc=su22-cpsc-24700-lt1&hide-nav=y#/syllabus' },
 	{ 'classID':'sp22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'1-1:50 PM', 'finalExam':'Wednesday, May 4 from 1:30 PM to 3:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-20000-002.pdf' },
 	{ 'classID':'sp22-cpsc-24500-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2022-01-10-16', 'schedule':'MWF', 'time':'2-2:50 PM', 'finalExam':'Monday, May 2 from 4 PM to 6 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
@@ -21,14 +20,13 @@ export const classList = [
 	{ 'classID':'24500-spring-2021-001', 'title':'Object-Oriented Programming', 'number':'24500', 'calendarID':'2021-01-18-16', 'schedule':'MWF', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/o2sla524-syllabus-cpsc-24500-001.pdf' },
 	{ 'classID':'36000-spring-2021-001', 'title':'Applied Programming Languages', 'number':'36000', 'calendarID':'2021-01-18-16', 'schedule':'TTh', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/se3c5q62-syllabus-cpsc-36000-001.pdf' },
 	{ 'classID':'44000-spring-2021-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':'2021-01-18-16', 'schedule':'TTh', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/ps6xfphd-syllabus-cpsc-44000-001.pdf' }
-]; 
+]
 
-export const FUTURE_CALENDAR_ID = '2022-08-29'
-export const UPCOMING_CALENDAR_ID = '2022-05-09-08'
-export const CURRENT_CALENDAR_ID = '2022-01-10-16'
+export const futureClassList = [
+	{ 'classID':'fa22-cpsc-24700-001', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':'2022-08-29-16', 'schedule':'MWF', 'time':'3-3:50 PM', 'finalExam':'Friday, December 16 from 4 PM to 6 PM CT', 'syllabusURL':'https://www.lewis.education/?cpsc=fa22-cpsc-24700-001&hide-nav=y#/syllabus' },
+]
 
 // Sprint Calendars
-
 // The following structure represents the sprint calendar for any class that starts on 2022-08-29 and is 16 weeks long. 
 export const sprintCalendarFall_2022_08_29_16 = [																											 
 	{ 'start':'Mon Aug 29 2021 08:00:00 GMT-0600', 'end':'Sun Sep 11 2021 23:59:00 GMT-0600', 'notes':'Labor Day' },
@@ -39,7 +37,7 @@ export const sprintCalendarFall_2022_08_29_16 = [
 	{ 'start':'Mon Nov 07 2021 08:00:00 GMT-0600', 'end':'Sun Nov 20 2021 23:59:00 GMT-0600', 'notes':'' },
 	{ 'start':'Mon Nov 21 2021 08:00:00 GMT-0600', 'end':'Sun Dec 04 2021 23:59:00 GMT-0600', 'notes':'Thanksgiving Break' },
 	{ 'start':'Mon Dec 05 2021 08:00:00 GMT-0600', 'end':'Thu Dec 15 2021 23:59:00 GMT-0600', 'notes':'Final Exams' }
-]; 
+]
 
 // The following structure represents the sprint calendar for any class that starts on 2022-05-09 and is 8 weeks long. 
 export const sprintCalendarSummer_2022_05_09_08 = [																											 
@@ -51,7 +49,7 @@ export const sprintCalendarSummer_2022_05_09_08 = [
 	{ 'start':'Mon Jun 13 2022 08:00:00 GMT-0600', 'end':'Sun Jun 19 2022 23:59:00 GMT-0600', 'notes':'' },
 	{ 'start':'Mon Jun 20 2022 08:00:00 GMT-0600', 'end':'Sun Jun 26 2022 23:59:00 GMT-0600', 'notes':'Juneteenth' },
 	{ 'start':'Mon Jun 27 2022 08:00:00 GMT-0600', 'end':'Thu Jun 30 2022 23:59:00 GMT-0600', 'notes':'Final Exams' }
-]; 
+]
 
 // The following structure represents the sprint calendar for any class that starts on 2022-01-10 and is 16 weeks long. 
 export const sprintCalendarSpring_2022_01_10_16 = [																											 
@@ -63,7 +61,7 @@ export const sprintCalendarSpring_2022_01_10_16 = [
 	{ 'start':'Mon Mar 28 2022 08:00:00 GMT-0600', 'end':'Sun Apr 10 2022 23:59:00 GMT-0600', 'notes':'' },
 	{ 'start':'Mon Apr 11 2022 08:00:00 GMT-0600', 'end':'Sun Apr 24 2022 23:59:00 GMT-0600', 'notes':'Easter Holiday' },
 	{ 'start':'Mon Apr 25 2022 08:00:00 GMT-0600', 'end':'Thu May 05 2022 23:59:00 GMT-0600', 'notes':'Final Exams' }
-]; 
+]
 
 export const sprintCalendarFall_2021_08_30_16 = [																											 
 	{ 'start':'Mon Aug 30 2021 08:00:00 GMT-0600', 'end':'Sun Sep 12 2021 23:59:00 GMT-0600', 'notes':'Labor Day' },
@@ -74,7 +72,7 @@ export const sprintCalendarFall_2021_08_30_16 = [
 	{ 'start':'Mon Nov 08 2021 08:00:00 GMT-0600', 'end':'Sun Nov 21 2021 23:59:00 GMT-0600', 'notes':'' },
 	{ 'start':'Mon Nov 22 2021 08:00:00 GMT-0600', 'end':'Sun Dec 05 2021 23:59:00 GMT-0600', 'notes':'Thanksgiving Break' },
 	{ 'start':'Mon Dec 06 2021 08:00:00 GMT-0600', 'end':'Thu Dec 16 2021 23:59:00 GMT-0600', 'notes':'Final Exams' }
-]; 
+]
 
 export const sprintCalendarSpring_2021_01_18_16 = [																											 
 	{ 'start':'Mon Jan 18 2021 08:00:00 GMT-0600', 'end':'Sun Jan 31 2021 23:59:00 GMT-0600', 'notes':'Martin Luther King Day' },
@@ -85,4 +83,15 @@ export const sprintCalendarSpring_2021_01_18_16 = [
 	{ 'start':'Mon Mar 29 2021 08:00:00 GMT-0600', 'end':'Sun Apr 11 2021 23:59:00 GMT-0600', 'notes':'Easter Holiday' },
 	{ 'start':'Mon Apr 12 2021 08:00:00 GMT-0600', 'end':'Sun Apr 25 2021 23:59:00 GMT-0600', 'notes':'' },
 	{ 'start':'Mon Apr 26 2021 08:00:00 GMT-0600', 'end':'Thu May 06 2021 23:59:00 GMT-0600', 'notes':'Final Exams' }
-]; 
+]
+
+// CALENDAR_LIST must be in sequential order with the largest starting date first so that future classes have an index
+//     less than CURRENT_CALENDAR_INDEX. 
+export const CURRENT_CALENDAR_ID_INDEX = 1
+export const CALENDAR_LIST =  [
+	{ 'calendarID':'2022-08-29-16', 'calendar': sprintCalendarFall_2022_08_29_16 },
+	{ 'calendarID':'2022-05-09-08', 'calendar': sprintCalendarSummer_2022_05_09_08 }, 
+	{ 'calendarID':'2022-01-10-16', 'calendar': sprintCalendarSpring_2022_01_10_16 },
+	{ 'calendarID':'2021-08-30-16', 'calendar': sprintCalendarFall_2021_08_30_16 },
+	{ 'calendarID':'2021-01-18-16', 'calendar': sprintCalendarSpring_2021_01_18_16 }
+]
