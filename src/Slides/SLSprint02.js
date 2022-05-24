@@ -6,6 +6,7 @@ import { sprintDemosIntro, sprintDemos, demoAssignment  } from './SLSprint00'
 
 export const sprint2Router = (route) => {
 	const courseNumberPlusRoute = getCourseNumber() + '-' + route
+	console.log(courseNumberPlusRoute)
 	switch(courseNumberPlusRoute) {
 		case WEB_8_2of6_ROUTE: return web8_2of6()
 
@@ -48,6 +49,7 @@ const web8_2of6 = () => {
 			'Sorry about Lab 1 Question 2 about scrum teams... I should have removed that question for an online class' ])
 	}
 
+	// BugBug: Something is wrong with metricsIntroductionWithLink as we have a warning in developer tools.
 	return [ preflightChecklist, instructorChecklist, agenda, sprintDemosIntro, sprintDemos, demoAssignment, 
 		metricsIntroductionWithLink,  metricsSubmissionPercentage, retrospective, end ]
 }
