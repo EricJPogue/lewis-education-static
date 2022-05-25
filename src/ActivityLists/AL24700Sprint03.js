@@ -61,5 +61,5 @@ export const list24700Sprint03 = (sprint) => {
 	</div> )
 }
 
-// Fix quiz 3. It’s bad.
-// Todo: Refocus to Node.js on Azure.
+// Certified for SU22 (05/20/2022)
+// Todo: Continue to refocus to Node.js on Azure for Azure Website activity.

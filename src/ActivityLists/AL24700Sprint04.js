@@ -1,66 +1,53 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
 
-import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
-import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint04'
-
-import { oreillyPlaylistWeb, successfulProgrammer, internalLink } from '../Links'
-import { MapManiaVersion2, complete, ReviewProgrammingActivity, MapManiaLite } from './ProgrammingAssignments'
-
-
-const googleMapsJavaScriptAPIOverview = () => { return internalLink('Google Maps JavaScript API', 'https://developers.google.com/maps/documentation/javascript/overview')}
+import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
+import { oreillyPlaylistWeb, jsonW3CTutorial, ajaxW3CTutorial } from '../Links'
+import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
+import { mapManiaVersion1Link } from '../Activities/WebMapManiaVersion1'
 
 export const al24700Sprint04 = () => {
-	return (
+	const sprint = 4
+	return ( <div>
+		<h5>Sprint 4: Application Programming Interfaces, sophisticated User Interfaces, and more JavaScript</h5>
 
-<div>
-<h5>Sprint 4: Map Mania, JavaScript, XML, and JSON, 
-	Google Maps API, and Map Mania</h5>
+		<p>This sprint will be focused on creating more sophisticated interactive Web applications. Specifically, we will be 
+		working on an application called Map Mania. In developing our <em>initial version of Map Mania</em> we and will be 
+		have our first exposure to utilizing the Google Maps Application Programming Interface (API). Although the Google 
+		Maps JavaScript API can be daunting at first, I think you will enjoy what you are able to create using the API.</p>
 
-<p>Sprint 4. Where does the time go? I hope you enjoyed Map Mania v1. This sprint we will be focused on
-delivering Map Mania v2. We will also be introducing two new topics this week “Dynamic Documents with
-JavaScript” and “Introduction to XML.” You will also notice that we start to depart from the text book in this
-sprint by focusing on JSON in additional to XML.</p>
+		<p>What’s the difference between an API and a Web Service you ask? You can think about a an API as being more
+		powerful and more complex method of implementing Distributed Programming. It would be fair to say that a Web Service 
+		is a relatively simple type of API.</p>
 
-<p>**I think that you will enjoy our Map Mania programming project. We will be completing Map Mania version 1 this
-sprint and completing Map Mania version 2 next sprint. Although the Google Maps JavaScript API can be daunting
-at first, I think you will enjoy what you are able to create using it.</p>
-
-{LearningObjectivesIntro()}
-<ul style={{listStyleType:'square'}}>
-	<li>**Effectively utilize the Google Maps JavaScript API</li>
-	<li>Build dynamic web applications using more sophisticated JavaScript</li>
-    <li>Add and change HTML elements on the fly utilizing JavaScript</li>
-	<li>Develop basic JSON and XML data </li>
-	<li>Understand drag-and-drop functionality</li>
-	<li>Create our own web service to publish information about ourselves</li>
-</ul>  
-
-<p>This week’s activity list remains focused on giving you time for version 2 of Map Mania. It's a challenging and 
-hopefully interesting project. Be sure to start early and you will likely need to experiment and look for outside 
-references and tutorials in order to create something you are proud of building. This is how real-world development 
-works.</p>
-
-{ActivitiesListIntro()}
-<ol>
-	<li>{/* Where should this activity go in sprint 3? */}Review the {googleMapsJavaScriptAPIOverview()}</li>
-	{ReviewProgrammingActivity(MapManiaLite)}
-	{StandardActivities(MapManiaVersion2, oreillyPlaylistWeb(), 4)}
-	<li>{complete(MapManiaLite)}</li>
-	<li>Read Sebesta chapter 6 on Dynamic Documents with JavaScript, review the associated <NavLink to='/activity/sebesta-chapter-06'>lecture</NavLink>, and review the <a href='http://sebesta-examples.azurewebsites.net/'>examples</a></li>
-
-	{InitialPost(4)}
-	<li>Read Sebesta chapter 7 on XML and Web Services and review the associated <NavLink to='/activity/sebesta-chapter-07'>lecture</NavLink></li>
-	<li>Read <a href='https://www.infoworld.com/article/3222851/javascript/what-is-json-javascript-object-notation-explained.html' target='_blank' rel='noopener noreferrer'>What is JSON? JavaScript Object Notation explained</a></li>
-    <li>Complete <a href='https://www.w3schools.com/js/js_json_intro.asp' target='_blank' rel='noopener noreferrer'>JSON Introduction</a></li>	
-
-	{StandardActivitiesClosing(MapManiaVersion2, 4)}
-	<li>Review {successfulProgrammer()}</li>
-</ol>
-{Closing()}
-</div>
-
-	)
+		{learningObjectivesIntro(sprint)}
+		<ul style={{listStyleType:'square'}}>
+			<li>Understand Application Programming Interfaces (APIs) and how the relate to Web Services</li>
+			<li>Effectively utilize the Google Maps JavaScript API</li>
+			<li>Build sophisticated interactive Web applications using JavaScript</li>
+			<li>Build server-side Web Services utilizing Node.js, JavaScript, and JSON</li>
+		</ul>  
+		{list24700Sprint04(sprint)}
+		{closing(sprint)}
+	</div> )
 }
+
+const list24700Sprint04 = (sprint) => {
+	return ( <div>
+		{activitiesListIntro(sprint)}
+		<ol>
+			{standardActivities(sprint, mapManiaVersion1Link(), oreillyPlaylistWeb())}
+			<li>Within {mapManiaVersion1Link()} complete Requirements 1 and 2 {estimated('6 hours')}</li>
+
+			{initialPost(sprint)}
+			<li>Continue to update and enhance your {assignmentPortfolioLink()}</li>
+			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapters 6 The Server</li>
+			<li>Review “Learning Web Development” Chapter 5 on JSON and AJAX from last sprint</li>
+			<li>Review {jsonW3CTutorial()} and {ajaxW3CTutorial()} tutorials from W3C from last sprint</li>
+			{standardActivitiesClosing(sprint, mapManiaVersion1Link(), '6 hours')}
+		</ol>
+	</div> )
+}
+
+// Certified for SU22 (05/25/2022)
 
 

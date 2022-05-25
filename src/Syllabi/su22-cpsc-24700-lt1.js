@@ -288,9 +288,9 @@ const renderCourseScheduleTable = () => {
 		</thead>
 		<tbody>
 			{renderModule(1, 'The Internet, World Wide Web, Web Browsers, Web Servers, and HTML')}
-			{renderModule(2, 'CSS, JavaScript, Cloud Hosting')}
-			{renderModule(3, 'JavaScript, Document Object Model, Event Handling, and Controls')}
-			{renderModule(4, 'Dynamic Documents, Positioning and moving elements, and Dragging & Dropping')}
+			{renderModule(2, 'Web Servers, Cloud Hosting, and Cascading Style Sheets')}
+			{renderModule(3, 'Distributed Programming, Web Services, Interactive Web Applications, and JavaScript')}
+			{renderModule(4, 'Application Programming Interfaces, sophisticated User Interfaces, and more JavaScript')}
 			{renderModule(5, 'Web Services, Ajax, Object-Oriented Programming, and Relational Databases')}
 			{renderModule(6, 'Server-side programming, Node.js and Final Project Proposals')}
 			{renderModule(7, 'Cloud Computing, Databases, and Final Project')}

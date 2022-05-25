@@ -5,76 +5,84 @@ import { makeInternalURL } from './ActivityRouter'
 
 import WebMapManiaScreenShot from './WebMapManiaScreenShot.png'
 
-const NAME = 'Map Mania Version 1'
+import { externalLink, internalLink } from '../Links'
+import { azureWebsiteLink } from './AzureWebsite'
+import { lionsTigersAndBearsLink } from './LionsTigerAndBears'
+
+const NAME = 'Map Mania'
 export const MAP_MANIA_V1_ROUTE = 'map-mania-v1'
 export const mapManiaVersion1Link = () => {return (<NavLink to={makeInternalURL(MAP_MANIA_V1_ROUTE)}>{NAME}</NavLink>)}
 export const mapManiaVersion1 = () => { return WebMapManiaVersion1() }
 
 export const WebMapManiaVersion1 = () => {
-	return (
+	const googleMapsPlatform = () => { return externalLink('Google Maps Platform', 'https://mapsplatform.google.com/') }
+	const googleMapsJavaScriptAPI = () => { return externalLink('Google Maps JavaScript API', 'https://developers.google.com/maps/documentation/javascript/')}
+	const googleMapsGettingStarted = () => { return externalLink('Getting started with Google Maps Platform', 'https://developers.google.com/maps/get-started' ) }
+	const googleMapsOverview = () => { return externalLink('Google Maps JavaScript Overview', 'https://developers.google.com/maps/documentation/javascript/overview') }
+	const googleMapsEvents = () => { return externalLink('Google Maps JavaScript API Events', 'https://developers.google.com/maps/documentation/javascript/events') }
+	const mapManiaLite = () => { return internalLink('Map Mania Lite', '/activity-web/map-mania-lite') }
+	const googleMapsJavaScriptAPITutorial = () => { return externalLink('Google Maps JavaScript API Tutorial', 'https://www.youtube.com/watch?v=Zxf1mnP5zcw') }
 	
-<div>
+	return ( <div>
+
 <br />
-<h4>Map Mania Version 1</h4>
+<h4>Map Mania version 1</h4>
 <h5>Summary: We will be creating a professional looking map based game</h5>
-<h5>Prerequisites: Windows 10 or MacOS, VS Code, HTML, CSS, JavaScript, Azure, and Google Maps API</h5>
+<h5>Prerequisites: Windows or MacOS, VS Code, HTML, CSS, JavaScript, Azure, and Google Maps API</h5>
 			
 <p>Ever wonder how organizations add the great looking maps to there websites? Well, this week we are going to utilize 
-the Google Maps JavaScript API to create a game where the player needs to search Google Maps to find at least eight of 
-our favorite places. Since this application is a substantial step up in complexity (and in coolness) from our previous 
+the Google Maps JavaScript API to create a game where a player needs to search Google Maps to find at least eight of 
+your favorite places. Since this application is a substantial step up in complexity (and in coolness) from our previous 
 programming assignments, we will  be dividing the development into two releases with version 1 being due this week and 
 version 2 due next sprint.</p>
 
-<p>When we are done at the end of the next sprint, you will have created an application that starts out looking something 
-like:</p>
+<p>Be sure to tackle these requirement gradually. Definitely pace yourself and do not attempt to do this in one night. 
+Good luck – and have fun. This is, indeed, supposed to be fun.</p>	
 
+<p>When we are done, you will have created an application that looks something like:</p>
 <img src={WebMapManiaScreenShot} alt='Eric Pogue' width= '1024' /><br /><br />
 
-<em>Requirement 1 - Getting Started with Google Maps JavaScript API</em>
-<p>The Google Maps JavaScript API is a broadly used and sophisticated Web API. It can be a little daunting at first. However, you can get started by:</p>
+<em>Requirement 1</em>
+<p>The Google Maps JavaScript API is a broadly used and sophisticated API. It can be daunting at first. 
+However, you can get started by:</p>
 <ol>
-	<li>completing Get Started with Google Maps Platform <a href='https://developers.google.com/maps/gmp-get-started' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li>completing the Google Maps JavaScript Getting Started tutorial <a href='https://developers.google.com/maps/documentation/javascript/overview' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li>focusing on the Google Maps "Hello, World" and "Get An API Key" sections of the above tutorial</li>
-	<li>reviewing the "Google Maps Garage: Where's My Map!" video <a href='https://www.youtube.com/watch?v=21PDd17dnnI&amp;feature=youtu.be' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li>reviewing how the Maps API works by looking at the API reference to see the possible properties, methods, and events you can use in your program
-		<a href='https://developers.google.com/maps/documentation/javascript/events' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-	<li>adding the "bounds_changed" event to your application and logging the result to the console</li>
-	<li>deploying your Google Maps "Hello, World" to your Azure website, test it,  and link it to your Landing Page</li>
+	<li>Casually exploring the {googleMapsPlatform()}</li>
+	<li>Completing the “Getting Started” tutorials on the {googleMapsJavaScriptAPI()} page</li>
+	<li>Reviewing {googleMapsOverview()} and completing the “Hello, World” tutorial</li>
+	<li>Review {googleMapsEvents()} to find API events that you could use in your application</li>
+
+</ol>
+<p>You may also find it beneficial to review {googleMapsGettingStarted()}</p>
+
+<em>Requirement 2</em>
+<p>Demonstrate the skills you learned previously by:</p>
+<ol>
+	<li>Completing {mapManiaLite()}</li>
+	<li>Adding the “bounds_changed” event to your application and logging the result to the Web browser console</li>
+	<li>Completing {googleMapsJavaScriptAPITutorial()} or an alternative comparable tutorial of your choice</li>
+	<li>Hosting {mapManiaLite()} as a Node.js based {azureWebsiteLink()}</li>
 </ol>
 
-<p>In response to this question, please provide the direct URL link to your Google Maps "Hello, World" and briefly describe how the above requirements were implemented.</p>
-    
-<em>Requirement 2 - Map Mania version 1</em>
-<p>Create a new  Map Mania application by copying and renaming the "Hello, World" Google Maps application from above. 
-The name of the new application should be "map-mania.html." For example, if I were creating a header section for 
-"map-mania.html" it would look something like:</p>
-<pre>{`<!--
-Author:  Eric Pogue
-Class:   Web & Distributed Programming
-Project: Map Mania v1
-Session: su18-cpsc-24700-lt1
-Description: This is the first version of Map Mania that I am creating for Programming Assignment 3.
--->
-`}</pre>
-
-<p>Enhance Map Mania by:</p>
+<em>Requirement 3</em>
+<p>Create version 1 of Map Mania that is <em>distinctly your own</em> by:</p>
 <ol>
-	<li>creating a new location using the LatLongconstructor similar to "var loc1 = new LatLng(12.432, 43.234);"</li>
-    <li>checking to see if the location is in the current map bounds by checking if a location is within the bounds by 
-		using the "map.getBounds().contains(loc);" method, where loc is the variable holding a LatLng object above</li>
-    <li>writing the results of the above bounds checking statement to the console so that you can verify that it is 
-		working correctly</li>
-	<li>getting the current zoom level using the "map.getZoom();" method</li>
-	<li>completing one additional Google Maps API tutorials from YouTube and add one or more additional interesting 
-		features to your implementation of Map Mania v1... if you are looking for an additional tutorial, you may want 
-		to consider "Google Maps JavaScript API Tutorial"
-			<a href='https://www.youtube.com/watch?v=Zxf1mnP5zcw' target='_blank' rel='noopener noreferrer'>[link]</a></li>
+	<li>Starting with new index.html, index.css, and index.js files and hosting them as a Node.js based {azureWebsiteLink()}</li>
+	<li>Leveraging what you have learned in {mapManiaLite()} and creating your version 1 of Map Mania with similar functionality</li>
+	<li>Creating a new location using the LatLong constructor (e.g. “var loc1 = new LatLng(12.432, 43.234)”)</li>
+    <li>Checking to see if the location is in the map bounds (e.g “map.getBounds().contains(loc1)”)</li>
+    <li>Writing the results of the above bounds checking to the Web browser console to verify that it is working</li>
+	<li>Writing the current zoom level (e.g. “map.getZoom()”) to the Web browser console</li>
 </ol>
-<p>Tackle these enhancements gradually, make sure that you alway have something that you could submit, and make sure that 
-you review the examples when you run into roadblocks.</p>
-<p>Definitely pace yourself. Do not attempt to do this in one night.</p>
-<p>Good luck – and have fun. This is, indeed, supposed to be fun.</p>			
-</div> )
+
+<em>Requirement 4</em>
+<p>Move your FavoritePlaces JSON structure from the Web browser JavaScript to Web Service by:</p>
+<ol>
+	<li>Verifying that you are utilizing a Node.js server on your {azureWebsiteLink()}</li>
+	<li>Implementing a JSON based Web Service that returns your FavoritePlaces JSON structure</li>
+	<li>Validating that the FavoritePlaces JSON is directly accessibly in a Web browser</li>
+	<li>Loading the FavoritePlaces JSON in the Web browser on application load similar to {lionsTigersAndBearsLink()}</li>
+</ol>
+		
+	</div> )
 
 }

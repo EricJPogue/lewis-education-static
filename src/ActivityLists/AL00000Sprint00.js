@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink, Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether } from '../Links'
+import { ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink, Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether, successfulProgrammer } from '../Links'
 import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
 import { sprintEndDateWithoutTime } from '../SprintDates'
 
@@ -83,8 +83,15 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 		return ( <em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, Reflection {sprint}, and Lab Demo</em> )
 	}
 	
+	const focusOnDueDates = (sprint) => {
+		if (sprint > 3) {
+			return ( <li>Focus on due dates by reviewing our {calendarLink(sprint)} and {scheduleLink(sprint)}</li> )			
+		}
+		return ( <li>Maintain a laser focus on due dates by reviewing our {calendarLink(sprint)} and {scheduleLink(sprint)}</li> )
+	}
+
 	return ( <div>
-		<li>Maintain a laser focus on due dates by reviewing our {calendarLink(sprint)} and {scheduleLink(sprint)}</li>
+		{focusOnDueDates(sprint)}
 		<li>{currentAssignments(sprint)}</li>
 		{previousSprintTopics()}
 		{sprintTopics(sprint)}
@@ -100,13 +107,6 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 			<li><em>Submit sprint {sprint} assignments including Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
 		</div>)
 	}
-	const standardActivitiesClosingSprint3 = () => {
-		return ( <div>
-			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
-			<li><em>Complete Discussion {sprint} by responding to at least two of your classmates’ posts</em></li>
-			<li><em>Submit Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
-		</div>)
-	}
 	const sprint1StandardActivitiesClosing = () => { return (<div>
 			<li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
 			{standardActivitiesClosing()}
@@ -118,9 +118,16 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 		</div>)
 	}
 	const sprint3StandardActivitiesClosing = () => { return (<div>
-		{standardActivitiesClosingSprint3()}
+			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+			<li><em>Complete Discussion {sprint} by responding to at least two of your classmates’ posts</em></li>
+			<li><em>Submit Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
 		</div>)
 	}
+	const sprint4StandardActivitiesClosing = () => { return (<div>
+		<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+		<li><em>Submit Discussion {sprint} responses, Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
+	</div>)
+}
 	const sprint8StandardActivitiesClosing = () => { return (<div>
 			<li>Submit your Final Project Presentation assignment at least two hours before to your scheduled presentation time</li>
 			<li><em style={{color:'red'}}>Deliver your Final Project Presentation <u>in person</u> on <u>{getFinalExamDateAndTime()}</u></em></li>
@@ -133,6 +140,7 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 		case 1: return sprint1StandardActivitiesClosing()
 		case 2: return sprint2StandardActivitiesClosing()
 		case 3: return sprint3StandardActivitiesClosing()
+		case 4: return sprint4StandardActivitiesClosing()
 		case 8: return sprint8StandardActivitiesClosing()
 		default: return null
 	}
@@ -148,6 +156,10 @@ export const closing = (sprint) => {
 		<p>If you are struggling, remember to reach out for help early. Also, be sure to periodically check for updates to 
 		our {programmingTogether()} tutorials.</p> ) 
 	}
+	const sprint4Closing = () => { return (
+		<p>It might be a good time to spend a few minutes checking out a few suggestion from {successfulProgrammer()}. Also, 
+		be sure to periodically check for updates to our {programmingTogether()} tutorials.</p> ) 
+	}
 	const defaultClosing = () => { return (
 		<p>Be sure to periodically check for updates to our {programmingTogether()} tutorials.</p> ) 
 	}
@@ -155,6 +167,7 @@ export const closing = (sprint) => {
 	switch (sprint) {
 		case 1: return sprint1Closing()
 		case 2: return sprint2Closing()
+		case 4: return sprint4Closing()
 
 		default: return defaultClosing()
 	}
