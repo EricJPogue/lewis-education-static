@@ -84,7 +84,7 @@ export const su22_cpsc_24700_lt1 = () => {
 							distributed software applications. Topics initially include developing HTML, CSS, and 
 							JavaScript to develop browser based applications. Students will then continue to expand 
 							their skills by learning server-side web development, cloud hosting, web services, and 
-							database basics.<br />
+							database programming.<br />
 						</td>
 					</tr>
 					{row(['', 'Prerequisites:', course.prerequisites])}
@@ -97,13 +97,13 @@ export const su22_cpsc_24700_lt1 = () => {
 						<td colSpan={2}>
 							<i><b>Student Learning Outcomes:</b></i>
 							<ol style={styleSmall}>
-								<li>understand the ideas of distributed computing, the World Wide Web, and theInternet</li>
-								<li>create web pages with HTML and CSS</li>
-								<li>utilize a cloud-based computing platforms to host websites</li>
-								<li>create interactive web sites using JavaScript</li>
-								<li>understand web design best practices</li>
-								<li>understand JSON, XML, and Web services</li>
-								<li>implement server-side application functionality utilizing Node.js</li>
+								<li>understand the Internet, the Web, Web programming, and distributed computing</li>
+								<li>create Web applications using HyperText Markup Language and Cascading Style Sheets</li>
+								<li>utilize cloud computing to host websites</li>
+								<li>create interactive Web applications using JavaScript</li>
+								<li>understand Web interface design and user experience best practices</li>
+								<li>understand web services, JSON, and XML</li>
+								<li>implement server-side application programming</li>
 								<li>understand basic database concepts and make simple queries</li>
 								<li>conceptually understand server-side web software development with Python and Java</li>
 							</ol>
@@ -259,7 +259,7 @@ export const renderLogo = () => {
 
 const renderCourseScheduleTable = () => {
 	const renderModule = (moduleNumber, topics) => {
-		if (moduleNumber < 5) {
+		if (moduleNumber < 4) {
 			return ( 
 				<tr><td style={{textAlign:'center'}}>{moduleNumber}</td><td>{topics}</td><td>Lab {moduleNumber}, 
 				Quiz {moduleNumber}, Discussion {moduleNumber}, and Reflection {moduleNumber}</td></tr> 
@@ -272,7 +272,7 @@ const renderCourseScheduleTable = () => {
 		} else if (moduleNumber === 7 ) {
 			return ( 
 				<tr><td style={{textAlign:'center'}}>{moduleNumber}</td><td>{topics}</td><td>Lab, 
-				Quiz, Discussion, Reflection, and Demo</td></tr> 
+				Quiz, Discussion, Reflection, and Lab Demo</td></tr> 
 			)
 		} else if (moduleNumber > 7 ) {
 			return ( 
@@ -287,13 +287,13 @@ const renderCourseScheduleTable = () => {
 			<tr style={{backgroundColor:'#C0C0C0'}}><td style={{width:'20px', textAlign:'center'}}><b>Module</b></td><td style={{width:'380px'}}><b>Topics</b></td><td><b>Assignments</b></td></tr>
 		</thead>
 		<tbody>
-			{renderModule(1, 'The Internet, World Wide Web, Web Browsers, Web Servers, and HTML')}
-			{renderModule(2, 'Web Servers, Cloud Hosting, and Cascading Style Sheets')}
-			{renderModule(3, 'Distributed Programming, Web Services, Interactive Web Applications, and JavaScript')}
-			{renderModule(4, 'Application Programming Interfaces, sophisticated User Interfaces, and more JavaScript')}
-			{renderModule(5, 'Web Services, Ajax, Object-Oriented Programming, and Relational Databases')}
-			{renderModule(6, 'Server-side programming, Node.js and Final Project Proposals')}
-			{renderModule(7, 'Cloud Computing, Databases, and Final Project')}
+			{renderModule(1, 'The Internet, World Wide Web, Web Applications, and HyperText Markup Language')}
+			{renderModule(2, 'Web Servers, Cloud Hosting, Cascading Style Sheets, and Continuous Integration / Continuous Delivery')}
+			{renderModule(3, 'Interactive Web Applications, JavaScript, Distributed Applications, and Web Services')}
+			{renderModule(4, 'User Interfaces, Application Programming Interfaces, and Intermediate JavaScript')}
+			{renderModule(5, 'User Experience, Advanced JavaScript, Final Project Proposals, and Relational Databases')}
+			{renderModule(6, 'Full Stack Development with Web Browser, Web Server, and NoSQL Database')}
+			{renderModule(7, 'Continuous Delivery / Continuous Delivery, Configuration Management, and Final Project')}
 			{renderModule(8, 'Final Project')}
 		</tbody>
 	</Table>

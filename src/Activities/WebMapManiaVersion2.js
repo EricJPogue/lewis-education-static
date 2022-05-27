@@ -20,7 +20,6 @@ programming assignments, we will  be dividing the development into two releases 
 version 2 due next sprint.</p>
 
 <p>When this project is complete, you will have created an game looks something like:</p>
-
 <img src={WebMapManiaScreenShot} alt='Eric Pogue' width= '1024' /><br /><br />
 
 <p>The game we are going to develop works by displaying the Google’s Maps interface on our web page and allowing the user 

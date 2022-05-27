@@ -3,12 +3,12 @@ import React from 'react'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
 import { oreillyPlaylistWeb, jsonW3CTutorial, ajaxW3CTutorial } from '../Links'
 import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
-import { mapManiaVersion1Link } from '../Activities/WebMapManiaVersion1'
+import { mapManiaVersion1Link } from '../Activities/MapMania'
 
 export const al24700Sprint04 = () => {
 	const sprint = 4
 	return ( <div>
-		<h5>Sprint 4: Application Programming Interfaces, sophisticated User Interfaces, and more JavaScript</h5>
+		<h5>Sprint 4: Application Programming Interfaces, Sophisticated User Interfaces, and more JavaScript</h5>
 
 		<p>This sprint will be focused on creating more sophisticated interactive Web applications. Specifically, we will be 
 		working on an application called Map Mania. In developing our <em>initial version of Map Mania</em> we and will be 
@@ -36,11 +36,11 @@ const list24700Sprint04 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, mapManiaVersion1Link(), oreillyPlaylistWeb())}
-			<li>Within {mapManiaVersion1Link()} complete Requirements 1 and 2 {estimated('6 hours')}</li>
+			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapters 6 The Server</li>
+			<li>Complete {mapManiaVersion1Link()} requirements 1 and 2 {estimated('6 hours')}</li>
 
 			{initialPost(sprint)}
 			<li>Continue to update and enhance your {assignmentPortfolioLink()}</li>
-			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapters 6 The Server</li>
 			<li>Review “Learning Web Development” Chapter 5 on JSON and AJAX from last sprint</li>
 			<li>Review {jsonW3CTutorial()} and {ajaxW3CTutorial()} tutorials from W3C from last sprint</li>
 			{standardActivitiesClosing(sprint, mapManiaVersion1Link(), '6 hours')}
@@ -48,6 +48,7 @@ const list24700Sprint04 = (sprint) => {
 	</div> )
 }
 
-// Certified for SU22 (05/25/2022)
+// Certified for SU22 (05/27/2022)
+
 
 

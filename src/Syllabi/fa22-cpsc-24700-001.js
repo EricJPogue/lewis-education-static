@@ -104,7 +104,7 @@ export const fa22_cpsc_24700_001 = () => {
 								<li>utilize a cloud-based computing platform (Microsoft Azure) to host a basic website </li>
 								<li>understand the best Web design practices</li>
 								<li>create dynamic and interactive web sites using JavaScript</li>
-								<li>understand XML and Web services</li>
+								<li>understand JSON, XML, and Web services</li>
 								<li>understand basic database concepts and make simple SQL queries</li>
 								<li>write PHP scripts to process forms and interact with databases</li>
 								<li>understand the basics of the various software development lifecycle processes</li>

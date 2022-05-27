@@ -33,11 +33,11 @@ export const al24700Sprint03 = () => {
 }
 
 export const list24700Sprint03 = (sprint) => {
-	const sebestaChapter4Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-04')}
-	const sebestaChapter5Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-05')}
-	const sebestaChapter6Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-06')}
-	const sebestaChapter7Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-07')}
-	const sebestaChapter10Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-10')}
+	const sebestaChapter4Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-04') }
+	const sebestaChapter5Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-05') }
+	const sebestaChapter6Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-06') }
+	const sebestaChapter7Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-07') }
+	const sebestaChapter10Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-10') }
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>

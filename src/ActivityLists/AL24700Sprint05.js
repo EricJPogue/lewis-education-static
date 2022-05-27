@@ -1,55 +1,46 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-
-import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
-import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing  } from './AL00000Sprint05'
-
+import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, 
+	finalProjectsAndMoreResponsibility, closing, estimated } from './AL00000Sprint00'
+import { oreillyPlaylistWeb, internalLink } from '../Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
-import { mustangLink } from '../Activities/MustangVersion1';
-
-import { oreillyPlaylistWeb } from '../Links'
-import { estimated } from './AL00000Sprint01';
+import { mapManiaVersion2Link } from '../Activities/MapMania'
 
 export const al24700Sprint05 = () => {
 	const sprint = 5
-	return (
+	return ( <div>
+		<h5>Sprint 5: User Experience, Advanced JavaScript, Final Project Proposals, and Relational Databases</h5>
+		<p>Wow! We made it to the halfway point. I hope you enjoyed creating our initial version Map Mania. This sprint 
+		we are going to focus on enhancing Map Mania by creating version 2 of the product that implements the remaining
+		game playing features. It is impressive what you can create with a powerful application programming interface (API) 
+		like Google Maps.</p>
 
-<div>
-<h5>Sprint 5: Distributed applications, JavaScript, Ajax, and JSON</h5>
+		{finalProjectsAndMoreResponsibility()}
+		{learningObjectivesIntro(sprint)}
+		<ul style={{listStyleType:'square'}}>
+			<li>Understand User Experience and how it relates to User Interface Design</li>
+			<li>Utilize advanced JavaScript to access Application Programming Interfaces (APIs)</li>
+			<li>Create sophisticated Web applications using the Google Maps API</li>
+			<li>Understand Relational Databases and the SQL language</li>
+		</ul>  
 
-<p><em>Wow!</em> We made it to the halfway point. I hope you enjoyed Map Mania. This week we switch gears and move into 
-writing Distributed applications using JavaScript, Ajax, and JSON.</p>
+		{list24700Sprint05(sprint)}
+	</div> )
+}
 
-{FinalProjectsAndMoreResponsibility()}
+const list24700Sprint05 = (sprint) => {
+	const sebestaChapter13Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-13') }
+	return ( <div>
+		{activitiesListIntro(sprint)}
+		<ol>
+			{standardActivities(sprint, mapManiaVersion2Link(), oreillyPlaylistWeb())}
+			<li>Read Sebesta chapter 13 and review our Database Access through the Web {sebestaChapter13Lecture()}</li>
+			<li>Complete {mapManiaVersion2Link()} requirement 5{estimated('6 hours')}</li>
 
-{LearningObjectivesIntro()}
-<ul style={{listStyleType:'square'}}>
-	<li>Develop and test shared JSON files</li>
-	<li>Implement Ajax calls utilizing JavaScript to access share JSON files</li>
-	<li>Create interactive web applications utilizing HTML, CSS, and JavaScript</li>
-    <li>Understand Relational Databases and the SQL language</li>
-</ul>  
+			{initialPost(sprint)}
 
-<p>This week’s  programming assignment is called Mustang and is a small contact manager will take several sprints to 
-complete. In Mustang version 1 we will be utilizing the Azure to host personal information JSON files that we can 
-utilize to create a simple distributed contact management web application.</p>
-
-{ActivitiesListIntro(sprint)}
-<ol>
-	{StandardActivitiesWithLinkAndSprint(sprint, finalProjectProposalLink(), oreillyPlaylistWeb())}
-	<li>Start working on {mustangLink()}</li>
-
-	{/* Todo: Double-check and consider creating if there is a Mustang lite tutorial?*/}
-	<li>Read Sebesta chapter 10 and review our Ajax <NavLink to='/activity/sebesta-chapter-10'>lecture</NavLink></li>
-
-	{InitialPost(sprint)}	
-	<li>Read Sebesta chapter 13 and review our Database Access through the Web <NavLink to='/activity/sebesta-chapter-13'>lecture</NavLink></li>
-
-	<li>Complete {finalProjectProposalLink()}{estimated('2 hours')}</li>
-	{StandardActivitiesClosingWithLinkAndSprint(sprint, mustangLink(), '8 hours' )}
-</ol>
-{Closing()}
-</div>
-
-	)
+			<li>Complete {finalProjectProposalLink()}{estimated('2 hours')}</li>
+			{standardActivitiesClosing(sprint, mapManiaVersion2Link(), '6 hours' )}
+		</ol>
+		{closing(sprint)}
+	</div> )
 }

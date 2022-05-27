@@ -80,6 +80,9 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 		}
 	}
 	const currentAssignments = (sprint) => {
+		if (sprint > 4) {
+			return ( <em>Review sprint {sprint} assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em> )			
+		}
 		return ( <em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, Reflection {sprint}, and Lab Demo</em> )
 	}
 	
@@ -126,8 +129,13 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 	const sprint4StandardActivitiesClosing = () => { return (<div>
 		<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 		<li><em>Submit Discussion {sprint} responses, Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
-	</div>)
-}
+		</div>)
+	}
+	const sprint5StandardActivitiesClosing = () => { return (<div>
+		<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+		<li><em>Submit sprint {sprint} assignments including Discussion, Quiz, Lab, and Reflection</em></li>
+		</div>)
+	}
 	const sprint8StandardActivitiesClosing = () => { return (<div>
 			<li>Submit your Final Project Presentation assignment at least two hours before to your scheduled presentation time</li>
 			<li><em style={{color:'red'}}>Deliver your Final Project Presentation <u>in person</u> on <u>{getFinalExamDateAndTime()}</u></em></li>
@@ -141,6 +149,7 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 		case 2: return sprint2StandardActivitiesClosing()
 		case 3: return sprint3StandardActivitiesClosing()
 		case 4: return sprint4StandardActivitiesClosing()
+		case 5: return sprint5StandardActivitiesClosing()
 		case 8: return sprint8StandardActivitiesClosing()
 		default: return null
 	}
@@ -157,8 +166,14 @@ export const closing = (sprint) => {
 		our {programmingTogether()} tutorials.</p> ) 
 	}
 	const sprint4Closing = () => { return (
-		<p>It might be a good time to spend a few minutes checking out a few suggestion from {successfulProgrammer()}. Also, 
-		be sure to periodically check for updates to our {programmingTogether()} tutorials.</p> ) 
+		<p>It might be a good time to spend a few minutes checking out our {successfulProgrammer()} activity and see if 
+		any of the suggestions resonate with you. Also, be sure to periodically check for updates to our {programmingTogether()} 
+		tutorials.</p> ) 
+	}
+	const sprint5Closing = () => { return (
+		<p>Remember to periodically check for new {programmingTogether()} tutorials. Also, take a minute to consider if 
+		you are you getting what you hoped to get out of this course. If not, let’s sit down and talk for a few minutes 
+		to see if we can make the course something special for you.</p> )
 	}
 	const defaultClosing = () => { return (
 		<p>Be sure to periodically check for updates to our {programmingTogether()} tutorials.</p> ) 
@@ -168,7 +183,19 @@ export const closing = (sprint) => {
 		case 1: return sprint1Closing()
 		case 2: return sprint2Closing()
 		case 4: return sprint4Closing()
-
+		case 5: return sprint5Closing()
 		default: return defaultClosing()
 	}
+}
+
+export const finalProjectsAndMoreResponsibility = () => {
+	return ( <div>
+		<p>We will also be creating our Final Project proposals this sprint. How would you like to finishing the course by 
+		creating something that makes you proud? What type of a final project would you enjoy creating? Is there a final project 
+		that would both be interesting to create and be something you could add to your professional portfolio as you are 
+		looking for internships or jobs? How can I help?</p>
+
+		<p>You will also notice a continuing trend this sprint where assignments will become less prescriptive and you
+		will have more control <em>and responsibility</em> in determining what is done and how it is implemented.</p>
+	</div> )
 }
