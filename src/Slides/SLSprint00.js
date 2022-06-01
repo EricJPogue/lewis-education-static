@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 
-import { sprint3Router } from './SLSprint03'
+import { sprint4Router } from './SLSprint04'
 
 import { getClassIDfromURL, getCourseTitle } from '../data/ClientDataAPIs'
 import { externalLink } from '../Links'
@@ -12,8 +12,7 @@ export const checklist = () => { return [ preflightChecklist, instructorChecklis
 export const defaultDeck = () => { return [ noSlidesFound ] }
 
 export const slideDeckRouter = (route) => {
-	
-	return sprint3Router(route)
+	return sprint4Router(route)
 }
 
 const noSlidesFound = () => {
