@@ -167,8 +167,8 @@ export const closing = (sprint) => {
 	}
 	const sprint4Closing = () => { return (
 		<p>It might be a good time to spend a few minutes checking out our {successfulProgrammer()} activity and see if 
-		any of the suggestions resonate with you. Also, be sure to periodically check for updates to our {programmingTogether()} 
-		tutorials.</p> ) 
+		any of the suggestions resonate with you. Also, be sure to periodically check for updates to our 
+		{programmingTogether()} tutorials.</p> ) 
 	}
 	const sprint5Closing = () => { return (
 		<p>Remember to periodically check for new {programmingTogether()} tutorials. Also, take a minute to consider if 
