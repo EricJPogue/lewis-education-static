@@ -14,7 +14,7 @@ export const sprint4Router = (route) => {
 }
 
 const sprint = 4
-// Todo: Conversation on “It’s okay not to be able to complete every activity...
+
 
 // Web & Distributed Programming
 const WEB_4_2of6_ROUTE = '24700-4-2'

@@ -125,7 +125,8 @@ const requirement1 = () => {
 			<li>Reviewing {googleMapsOverview()} and completing the “Hello, World” tutorial</li>
 			<li>Review {googleMapsEvents()} to find API events that you could use in your application</li>
 		</ol>
-		<p>You may also find it beneficial to review {googleMapsGettingStarted()}</p>
+		<p>I would not spend too much time on this requirement before you move on to Requirement 2 and Map Mania Lite. 
+		Finally, you may it beneficial to take a quick look at {googleMapsGettingStarted()}.</p>
 	</span> )
 }
 
