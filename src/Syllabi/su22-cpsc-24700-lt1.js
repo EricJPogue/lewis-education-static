@@ -292,7 +292,7 @@ const renderCourseScheduleTable = () => {
 			{renderModule(3, 'Interactive Web Applications, JavaScript, Distributed Applications, and Web Services')}
 			{renderModule(4, 'User Interfaces, Application Programming Interfaces, and Intermediate JavaScript')}
 			{renderModule(5, 'User Experience, Advanced JavaScript, Final Project Proposals, and Relational Databases')}
-			{renderModule(6, 'Full Stack Development with Web Browser, Web Server, and NoSQL Database')}
+			{renderModule(6, 'Full Stack Development with Web Browser, Web Server, and Database')}
 			{renderModule(7, 'Continuous Delivery / Continuous Delivery, Configuration Management, and Final Project')}
 			{renderModule(8, 'Final Project')}
 		</tbody>
