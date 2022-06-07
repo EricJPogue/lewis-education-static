@@ -24,7 +24,7 @@ export const learningObjectivesIntro = (sprint = 1) => {
 	switch(sprint) {
 		case 1: return ( <p>Let’s start with our sprint {sprint} learning objectives. By the end of sprint {sprint} we will be able to:</p> )
 		case 2: return ( <p>Let’s start with our Learning Objectives. By the end of sprint {sprint} we will be able to:</p> )
-		default: return ( <p>Our Learning Objectives for this sprint include::</p> )
+		default: return ( <p>Our Learning Objectives for this sprint include:</p> )
 	}
 }
 
@@ -42,12 +42,15 @@ export const activitiesListIntro = (sprint = 1) => {
 		)
 		default: return (
 			<p>Below is our activities list which needs to be completed by <em>{sprintEndDateWithoutTime(sprint-1 /* base zero */)}</em>:</p>
-	)
+		)
 	}
 }
 
 export const initialPost = (sprint=1) => {
-	return ( <li><em>Make your initial Discussion {sprint} post by the middle of the sprint</em></li> )
+	switch(sprint) {
+		case 6: return ( <li><em>Make your initial Discussion post by the middle of the sprint</em></li> )
+		default: return ( <li><em>Make your initial Discussion {sprint} post by the middle of the sprint</em></li> )
+	}
 }
 
 export const standardActivities = (sprint=1, programmingAssignmentLink='', playlistLink='', excludePreviousTopics) => { 
@@ -80,6 +83,9 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 		}
 	}
 	const currentAssignments = (sprint) => {
+		if (sprint > 5) {
+			return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em>)
+		}
 		if (sprint > 4) {
 			return ( <em>Review sprint {sprint} assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em> )			
 		}
@@ -136,6 +142,11 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 		<li><em>Submit sprint {sprint} assignments including Discussion, Quiz, Lab, and Reflection</em></li>
 		</div>)
 	}
+	const sprint6StandardActivitiesClosing = () => { return (<div>
+		<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+		<li><em>Submit Discussion, Quiz, Lab, and Reflection</em></li>
+		</div>)
+	}
 	const sprint8StandardActivitiesClosing = () => { return (<div>
 			<li>Submit your Final Project Presentation assignment at least two hours before to your scheduled presentation time</li>
 			<li><em style={{color:'red'}}>Deliver your Final Project Presentation <u>in person</u> on <u>{getFinalExamDateAndTime()}</u></em></li>
@@ -150,6 +161,7 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 		case 3: return sprint3StandardActivitiesClosing()
 		case 4: return sprint4StandardActivitiesClosing()
 		case 5: return sprint5StandardActivitiesClosing()
+		case 6: return sprint6StandardActivitiesClosing()
 		case 8: return sprint8StandardActivitiesClosing()
 		default: return null
 	}

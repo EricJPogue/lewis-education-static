@@ -1,63 +1,60 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
+import { oreillyPlaylistWeb, internalLink, externalLink } from '../Links'
+import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
+import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
-import { StandardActivities, StandardActivitiesClosing, Closing  } from './AL00000Sprint06'
-
-import { oreillyPlaylistWeb } from '../Links'
-import { MustangV2 } from './ProgrammingAssignments'
+import { mustangLink } from '../Activities/MustangVersion1'
 
 export const al24700Sprint06 = () => {
-	return (
+	const sprint = 6
+	return ( <div>
+		<h5>Sprint 6: Full Stack Web development including Web Browser, Web Server, and Database</h5>
 
-<div>
-<h5>Sprint 6: Server-side Programming with PHP or Node.js</h5>
+		<p>Welcome to Sprint 6! It’s time for us to focus on Web server and Database development. While Node.js and MongoDB 
+		will be the our tools of choice this sprint, it’s important for us to focus on the concepts of Web server and 
+		database development more than the specific tools. This way we can feel comfortable with whatever set of tools 
+		becomes important in the future.</p>   
 
-<p>Welcome to Sprint 6! Need I say more? I hope you enjoyed our first implementation Mustang. This week it’s
-time to work on Mustang version 2 and to start getting ready to do some server-side programming with PHP. 
-Yes, I know that many of you would like to get your hands dirty with Node.js and JavaScript server-side 
-programming. So would I, but we need to make sure that we are comfortable with PHP as well. Feel free to utilize 
-Node.js for your assignments if you would prefer.</p>
+		{learningObjectivesIntro(sprint)}
+		<ul style={{listStyleType:'square'}}>
+			<li>Understand the key concepts of Full Stack Web development including Web server and database software development</li>
+			<li>Implement Web server features utilizing Node.js and JavaScript</li>
+			<li>Develop databases functionality utilizing MongoDB</li>
+			<li>Utilize Full Stack Development to implement features that require client, server, and database development</li>
+		</ul>  
 
-{LearningObjectivesIntro()}
-<ul style={{listStyleType:'square'}}>
-	<li>Understand server-side web programming languages and platforms</li>
-	<li>Study the PHP language and platform</li>
-	<li>Develop and test our first PHP applications</li>
-	<li>Develop, test, and deploy HTML, CSS, JavaScript, and PHP based applications</li>
-</ul>  
+		{list24700Sprint06(sprint)}
+		{closing(sprint)}
+	</div> )
+}
 
-{ActivitiesListIntro()}
-<ol>
-	{StandardActivities(MustangV2, oreillyPlaylistWeb, 6 )}
-	<li>Review MustangLite version 2 in our example code</li>
-	<li>Read Sebesta chapter 9 and review our PHP <NavLink to='/activity/sebesta-chapter-09'>lecture</NavLink></li>
+const list24700Sprint06 = (sprint) => {
+	const sebestaChapter9Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-09') }
+	const fullStackW3C = () => { return externalLink('What is Full Stack?', 'https://www.w3schools.com/whatis/whatis_fullstack.asp') }
+	const fullStackJavaScriptW3C = () => { return externalLink('What is Full stack JavaScript?', 'https://www.w3schools.com/whatis/whatis_fullstack.asp') }
+	const nodeJS = () => { return externalLink('Node.js', 'https://www.w3schools.com/nodejs')}
+	const nodeJSAndMySQL = () => { return externalLink('Node.js and MySQL', 'https://www.w3schools.com/nodejs/nodejs_mysql.asp')}
+	const nodeJSAndMongoDB = () => { return externalLink('Node.js and MongoDB', 'https://www.w3schools.com/nodejs/nodejs_mongodb.asp')}
+	return ( <div>
+		{activitiesListIntro(sprint)}
+		<ol>
+			{standardActivities(sprint, mustangLink() /* The actual assignment was Mustang V2 */, oreillyPlaylistWeb())}
 
-	{InitialPost()}	
+			<li>Complete {fullStackW3C()} and {fullStackJavaScriptW3C()}</li>
+			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapters 7 The Data Store while updating Amazeriffic</li>
+			<li>Update your Azure hosted Amazeriffic with MongoDB Atlas *** Programming Assignment Amazeriffic on Azure ***</li>
 
-	<li>Explore  <NavLink to='/activity-architecture/application-architecture-part1'>Application Architecture - Part 1</NavLink></li>
-	{StandardActivitiesClosing(MustangV2, 6)}
-</ol>
 
-{Closing()}
-{al24700Sprint06Extras()}
-</div>
+			<li>Complete {nodeJS()}, {nodeJSAndMySQL()}, and {nodeJSAndMongoDB()}</li>
 
-	)
-};
+			{initialPost(sprint)}
+			<li>Continue to update and enhance your {assignmentPortfolioLink()}</li>
+			<li>Within {oreillyPlaylistWeb()} review “Learning Web Development” Chapters 6 The Server</li>
+			<li>Scan Sebesta chapter 9 and review our PHP {sebestaChapter9Lecture()}</li>
+			<li>Review and update {finalProjectProposalLink()}{estimated('2 hours')}</li>
 
-const al24700Sprint06Extras = () => {
-	return (
-
-<div>
-<br />
-<h5>Extras:</h5>
-<ul style={{listStyleType:'square'}}>
-	<li>Complete Programming Together with <a href='https://app.knowmia.com/lyyA' target='_blank' rel='noopener noreferrer'>Deploying Node.js on Microsoft Azure</a></li>		
-	<li>Optionally complete Programming Together with <a href='https://app.knowmia.com/bBVA' target='_blank' rel='noopener noreferrer'>React On Azure</a></li>
-	<li>Optionally review the video tutorial series available from O'Reilly <a href='React - The Complete Guide' target='_blank' rel='noopener noreferrer'>[link]</a></li>					
-</ul>
-</div>
-
-	)
+			{standardActivitiesClosing(sprint, mustangLink() /* The actual assignment was Mustang V2 */, '6 hours')}
+		</ol>
+	</div> )
 }

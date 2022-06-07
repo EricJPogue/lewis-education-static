@@ -1,33 +1,54 @@
-import React from 'react'
+import { getCourseNumber } from '../data/ClientDataAPIs'
 
-import { agendaSlide, prework, progressPolling, quiz, end, basicSlideWithTitle  } from './SL00000'
-import { preflightChecklist, instructorChecklist } from './Slide'
+import { preworkSlide, progressPolling, quiz, basicSlideWithTitle  } from './SLSprint00'
 
 import { breakoutIntroducingPython6Through9 } from './Breakout'
 import { al20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 import { al24500Sprint05 } from '../ActivityLists/AL24500Sprint05'
 import { al44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 
-import { internalLink } from '../Links'
+import { preflightChecklist, instructorChecklist, submissionPercentage, agendaSlide, orderedListSlide, 
+	sprintDemosIntro, sprintDemos, demoAssignment, end } from './SLSprint00' // Shared slides.
 
-// Index 
-export const SPRINT_5_INDEX_ROUTE = 'index'
-export const sprint5Index = () => {
-	const index = () => {
-		return ( <div>
-			March 25, 2022:<br />
-			{internalLink('Introduction to Computer Science', `${SD20000_5_6_of_6_ROUTE}`)}<br />
-			{internalLink('Object-Oriented Programming', `${SD24500_5_6_of_6_ROUTE}`)}<br />
-			March 24, 2022:<br />
-			{internalLink('Software Engineering', `${SD44000_5_4_of_4_ROUTE}`)}<br />
-			March 23, 2022:<br />
-			{internalLink('Introduction to Computer Science', `${SD20000_5_5_of_6_ROUTE}`)}<br />
-			{internalLink('Object-Oriented ProgrammingMarch', `${SD24500_5_5_of_6_ROUTE}`)}
-		</div> )
+export const sprint5Router = (route) => {
+	const courseNumberPlusRoute = getCourseNumber() + '-' + route
+	console.log(courseNumberPlusRoute)
+	switch(courseNumberPlusRoute) {
+		case WEB_5_2of6_ROUTE: return web5_2of6()
+		default: return null
 	}
-	return { sprint: 5, startingSlide: 0,
-		slideFunctionList: [ index, preflightChecklist, instructorChecklist ]
+}
+
+const sprint = 5
+
+// Web & Distributed Programming
+const WEB_5_2of6_ROUTE = '24700-5-2'
+const web5_2of6 = () => {
+	const agenda = () => { 
+		return agendaSlide([
+			`Sprint ${sprint-1} Foreshadowing Demos`,
+			`Sprint ${sprint-1} Retrospective` ])
 	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: `Discussion ${sprint-1}`, due:10, submitted:8 },
+			{ name: `Quiz ${sprint-1}`, due:10, submitted:10 },
+			{ name: `Lab ${sprint-1}`, due:10, submitted:10 },
+			{ name: `Reflection ${sprint-1}`, due: 10, submitted: 9 }
+		])
+	}
+	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			`Feedback from Sprint ${sprint-1} Assignments & Reflections`, [
+			'Very good submission percentage',
+			'All assignments are graded and posted', 
+			`You should be able to see your grades as well as correct Quiz ${sprint-1} answers`,
+			'Reminder that I do have a philosophy of trying challenge everyone in the class... but not taking away too many points if you are not able to get the most challenging elements' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, sprintDemosIntro, sprintDemos, demoAssignment, 
+		metricsSubmissionPercentage, retrospective, end ]
 }
 
 // Introduction to Computer Science Sprint 5 Session 5 of 6
@@ -50,7 +71,7 @@ export const sd20000Sprint5_5of6 = () => {
 }
 
 const preworkICS5of6 = () => {
-	return prework([
+	return preworkSlide([
 		'Complete through activity 10', '',
 		'Be prepared for Quiz 5'])
 }
@@ -78,13 +99,13 @@ export const sd20000Sprint5_6of6 = () => {
 }
 
 const preworkICS6of6 = () => {
-	return prework([
+	return preworkSlide([
 		'Complete through activity 11', '',
 		'Be prepared for Lab'])
 }
 
 const preworkICS7of6 = () => {
-	return prework([
+	return preworkSlide([
 		'All Sprint 5 Assignments due Sunday!', '',
 		'Be prepared for Sprint 6 Planning on Monday' ])
 }
@@ -114,7 +135,7 @@ export const sd24500Sprint5_5of6 = () => {
 }
 
 const preworkOOP5of6 = () => {
-	return prework([
+	return preworkSlide([
 		'Complete through activity 13', '',
 		'Be prepared for Quiz 5'])
 }
@@ -145,13 +166,13 @@ export const sd24500Sprint5_6of6 = () => {
 }
 
 const preworkOOP6of6 = () => {
-	return prework([
+	return preworkSlide([
 		'Complete through activity 14', '',
 		'Be prepared for Lab'])
 }
 
 const preworkOOP7of6 = () => {
-	return prework([
+	return preworkSlide([
 		'All Sprint 5 Assignments due Sunday!', '',
 		'Be prepared for Sprint 6 Planning on Monday' ])
 }

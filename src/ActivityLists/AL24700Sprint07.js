@@ -28,6 +28,7 @@ version 3 by implementing persistent storage. Second, we will be delivering vers
 
 {ActivitiesListIntro()}
 <ol>
+<li>???Explore  <NavLink to='/activity-architecture/application-architecture-part1'>Application Architecture - Part 1</NavLink></li>
 	{StandardActivities(Start_MustangVersion3(), oreillyPlaylistWeb(), sprint)}
     <li>Explore <NavLink to='/activity-web/cloud-computing-mapreduce'>Cloud Computing and Map Reduce</NavLink></li>
 	<li>{Complete_MustangVersion3()}</li>

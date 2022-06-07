@@ -63,3 +63,4 @@ export const list24700Sprint03 = (sprint) => {
 
 // Certified for SU22 (05/20/2022)
 // Todo: Continue to refocus to Node.js on Azure for Azure Website activity.
+// Todo: Consider simplifying and reducing activities list.

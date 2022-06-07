@@ -1,6 +1,6 @@
 import React, {useState } from 'react'
 import { useHotkeys } from 'react-hotkeys-hook'
-import { slideDeckRouter } from './SLSprint00'
+import { slideDeckRouter } from './SlideDeckRouter'
 
 export function Deck(props) {
 	const deck = slideDeckRouter(props.match.params.route)

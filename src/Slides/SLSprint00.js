@@ -1,8 +1,6 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 
-import { sprint4Router } from './SLSprint04'
-
 import { getClassIDfromURL, getCourseTitle } from '../data/ClientDataAPIs'
 import { externalLink } from '../Links'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
@@ -10,10 +8,6 @@ import LewisUniversityLogo from './LewisUniversityLogo.png'
 export const CHECKLIST_ROUTE = 'checklist'
 export const checklist = () => { return [ preflightChecklist, instructorChecklist ] }
 export const defaultDeck = () => { return [ noSlidesFound ] }
-
-export const slideDeckRouter = (route) => {
-	return sprint4Router(route)
-}
 
 const noSlidesFound = () => {
 	return (<div>No slides found.</div> )

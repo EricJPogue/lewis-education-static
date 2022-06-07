@@ -36,7 +36,7 @@ const list24700Sprint04 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, mapManiaVersion1Link(), oreillyPlaylistWeb())}
-			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapters 6 The Server</li>
+			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 6 The Server</li>
 			<li>Complete {mapManiaVersion1Link()} requirements 1 and 2 {estimated('6 hours')}</li>
 
 			{initialPost(sprint)}
@@ -49,6 +49,10 @@ const list24700Sprint04 = (sprint) => {
 }
 
 // Certified for SU22 (05/27/2022)
+
+// Todo: And MERN to Discussion Board. 
+// Todo: Consider updating wording in activities list so that everyone is sure that requirements 1-4 are all due.
+// Todo: Consider removing Review “Learning Web Development” Chapter 5 on JSON and AJAX.
 
 
 

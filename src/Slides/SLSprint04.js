@@ -1,5 +1,5 @@
 import { getCourseNumber } from '../data/ClientDataAPIs'
-import { checklist } from './SLSprint00' // Shared slide decks.
+
 import { preflightChecklist, instructorChecklist, submissionPercentage, end } from './SLSprint00' // Shared slides.
 import { agendaSlide, orderedListSlide } from './SLSprint00' // Shared slide templates.
 import { sprintDemosIntro, sprintDemos, demoAssignment  } from './SLSprint00'
@@ -9,12 +9,11 @@ export const sprint4Router = (route) => {
 	switch(courseNumberPlusRoute) {
 		case WEB_4_2of6_ROUTE: return web4_2of6()
 
-		default: return checklist()
+		default: return null
 	}
 }
 
 const sprint = 4
-
 
 // Web & Distributed Programming
 const WEB_4_2of6_ROUTE = '24700-4-2'
