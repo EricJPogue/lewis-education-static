@@ -1,4 +1,5 @@
 import React from 'react'
+import { estimated } from '../ActivityLists/AL00000Sprint00'
 import { externalLink } from '../Links'
 import { azureWebsiteLink } from './AzureWebsite'
 import { makeActivityLink } from './Activity'
@@ -37,7 +38,7 @@ export const amazerifficFullStack = () => {
 		<ol>
 			<li>Completing {fullStackW3C()} and {fullStackJavaScriptW3C()}</li>
 			<li>Completing {nodeJS()}, {nodeJSAndMongoDB()}, and {nodeJSAndMySQL()}</li>
-			<li>Completing {connectToAMongoDBDatabaseUsingNodeJSTutorialDBTutorial()} tutorial</li>
+			<li>Completing {connectToAMongoDBDatabaseUsingNodeJSTutorialDBTutorial()} tutorial{estimated('3 hours')}</li>
 			<li>Hosting part of the {connectToAMongoDBDatabaseUsingNodeJSTutorialDBTutorial()} tutorial as an {azureWebsiteLink()}</li>
 		</ol>
 

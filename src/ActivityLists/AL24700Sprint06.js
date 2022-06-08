@@ -12,10 +12,10 @@ export const al24700Sprint06 = () => {
 		<h5>Sprint 6: Full Stack Web development including Web Browser, Web Server, and Database</h5>
 
 		<p>Welcome to Sprint 6! We have done a lot of work creating interactive and sophisticated Web Browser client
-		applications. Now it’s time for us to focus on Web server and Database development. While Node.js and MongoDB 
-		will be the our tools of choice this sprint, it’s important for us to focus on the concepts of Web server and 
-		database development more than the specific tools. This way we can feel comfortable with whatever set of tools 
-		becomes important in the future.</p>   
+		applications. We have even done work in our Node.js Web server. Now it’s time for us to focus on Database 
+		development. And while Node.js and MongoDB will be the our tools of choice this sprint, it’s important for us 
+		to focus on the concepts of Web server and database development more than the specific tools. This way we can 
+		feel comfortable embracing whatever set of tools becomes important in the future.</p>   
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
