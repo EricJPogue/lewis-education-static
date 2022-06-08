@@ -1,4 +1,5 @@
 import { AIDAN_ROUTE, aidan } from './Aidan'
+import { AMAZERIFFIC_FULL_STACK_ROUTE, amazerifficFullStack } from './AmazerifficFullStack'
 import { ARDUINO_DRONE_ROUTE, arduinoDrone } from './ArduinoDrone'
 import { ASSIGNMENT_PORTFOLIO_ROUTE, assignmentPortfolio } from './WebAssignmentPortfolio'
 import { assignmentPortfolioWithNodeJS, ASSIGNMENT_PORTFOLIO_NODEJS_ROUTE } from './WebAssignmentPortfolioWithNodeJS'
@@ -53,6 +54,7 @@ export const makeInternalURL = (activityRoute) => {
 export const routeActivity = (activityRoute) => {
 	switch(activityRoute) {
 		case AIDAN_ROUTE: return aidan()
+		case AMAZERIFFIC_FULL_STACK_ROUTE: return amazerifficFullStack()
 		case ARDUINO_DRONE_ROUTE: return arduinoDrone()
 		case ASSIGNMENT_PORTFOLIO_ROUTE: return assignmentPortfolio()
 		case ASSIGNMENT_PORTFOLIO_NODEJS_ROUTE: return assignmentPortfolioWithNodeJS()
