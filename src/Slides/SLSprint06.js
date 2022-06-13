@@ -1,3 +1,5 @@
+import { getCourseNumber } from '../data/ClientDataAPIs'
+
 import { basicSlide, bulletListSlide, orderedListSlide, end, submissionPercentage } from './SLSprint00'
 import { defaultDeck, agendaSlide, preworkSlide, quiz } from './SLSprint00'
 import { checklist, CHECKLIST_ROUTE, preflightChecklist, instructorChecklist } from './SLSprint00'
@@ -11,6 +13,47 @@ import { discussionBreakout6 } from './SLSprint00'
 import { renderBreakout } from './Breakout'
 
 export const sprint6Router = (route) => {
+	const courseNumberPlusRoute = getCourseNumber() + '-' + route
+	console.log(courseNumberPlusRoute)
+	switch(courseNumberPlusRoute) {
+		case WEB_6_2of6_ROUTE: return web6_2of6()
+		default: return null
+	}
+}
+
+const sprint = 6
+
+// Web & Distributed Programming
+const WEB_6_2of6_ROUTE = '24700-6-2'
+const web6_2of6 = () => {
+	const agenda = () => { 
+		return agendaSlide([
+			`Sprint ${sprint-1} Foreshadowing Demos`,
+			`Sprint ${sprint-1} Retrospective` ])
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: `Discussion ${sprint-1}`, due:10, submitted:9 },
+			{ name: `Quiz ${sprint-1}`, due:10, submitted:10 },
+			{ name: `Lab ${sprint-1}`, due:10, submitted:10 },
+			{ name: `Reflection ${sprint-1}`, due: 10, submitted: 9 }
+		])
+	}
+	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			`Feedback from Sprint ${sprint-1} Assignments & Reflections`, [
+			'Very good submission percentage',
+			'All assignments are graded and posted', 
+			`You should be able to see your grades as well as correct Quiz ${sprint-1} answers`,
+			'In retrospect I can see that being asynchronous made Map Mania 2 more challenging' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, sprintDemosIntro, sprintDemos, demoAssignment, 
+		metricsSubmissionPercentage, retrospective, end ]
+}
+
+export const sprint6RouterSpring2022 = (route) => {
 	switch(route) {
 		case CHECKLIST_ROUTE: return checklist()
 
