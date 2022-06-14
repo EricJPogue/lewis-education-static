@@ -14,7 +14,6 @@ import { renderBreakout } from './Breakout'
 
 export const sprint6Router = (route) => {
 	const courseNumberPlusRoute = getCourseNumber() + '-' + route
-	console.log(courseNumberPlusRoute)
 	switch(courseNumberPlusRoute) {
 		case WEB_6_2of6_ROUTE: return web6_2of6()
 		default: return null
@@ -28,7 +27,7 @@ const WEB_6_2of6_ROUTE = '24700-6-2'
 const web6_2of6 = () => {
 	const agenda = () => { 
 		return agendaSlide([
-			`Sprint ${sprint-1} Foreshadowing Demos`,
+			`Sprint ${sprint-1} Review / Demos`,
 			`Sprint ${sprint-1} Retrospective` ])
 	}
 	const metricsSubmissionPercentage = () => {

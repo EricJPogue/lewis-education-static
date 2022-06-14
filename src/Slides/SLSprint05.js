@@ -12,7 +12,6 @@ import { preflightChecklist, instructorChecklist, submissionPercentage, agendaSl
 
 export const sprint5Router = (route) => {
 	const courseNumberPlusRoute = getCourseNumber() + '-' + route
-	console.log(courseNumberPlusRoute)
 	switch(courseNumberPlusRoute) {
 		case WEB_5_2of6_ROUTE: return web5_2of6()
 		default: return null

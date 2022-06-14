@@ -7,16 +7,26 @@ import { StandardActivities, StandardActivitiesClosing } from './AL00000Sprint07
 
 import { Start_MustangVersion3, Complete_MustangVersion3 } from '../Activities/MustangVersion2'
 import { Start_FinalProjectDistributedV1, Complete_FinalProjectDistributedV1 } from '../Activities/FinalProject'
-import { oreillyPlaylistWeb } from '../Links'
+import { oreillyPlaylistWeb, externalLink } from '../Links'
 
 export const al24700Sprint07 = () => {
 	let sprint = 7
+
+	const fullStackJavaScriptW3C = () => { return externalLink('Full stack JavaScript', 'https://www.w3schools.com/whatis/whatis_fullstack_js.asp') }
 	return (
 
 <div>
-<h5>Sprint 7: More Server-side Programming, Cloud Computing, and Map Reduce</h5>
+<h5>Sprint 7: Full Stack Final Project</h5>
 
-<p>Welcome to Sprint 7. We have two parts to our programming assignment this week. First, we need to wrap up Mustang 
+<p>Welcome to Sprint 7. The time has come for us to put what we have learned into action. This sprint we will be 
+focused on version 1 of our final project. We will spend our time implementing the initial version of our final 
+project with a {fullStackJavaScriptW3C()} architecture including an HTML, CSS, and JavaScript client application 
+running in the browser, a JavaScript based web server running in Node.js hosted in Microsoft Azure, and a MongoDB 
+database running in MongoDB Atlas.</p>
+
+<p>
+
+JavaScript. It time to put what we have learned into action. We have two parts to our programming assignment this week. First, we need to wrap up Mustang 
 version 3 by implementing persistent storage. Second, we will be delivering version 1 of our final projects.</p>
 
 {LearningObjectivesIntro()}
