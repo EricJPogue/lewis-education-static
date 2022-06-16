@@ -1,12 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { makeActivityLink } from './Activity'
 import { makeInternalURL } from './ActivityRouter'
 
 import { makeNavigationLink } from './Thunderbird';
 
-import { agileAlliance, agileAllianceAgile101, backlogGrooming, epic, iNVEST, productBacklog, scrum, userStory, userStoryTemplate } from '../Links';
+import { agileAlliance, agileAllianceAgile101, backlogGrooming, epic, iNVEST, productBacklog, scrum, userStory, userStoryTemplate, externalLink, fullStackJavaScriptW3C } from '../Links';
 
-import { finalProjectProposalLink /* FinalProjectProposalNavLink */ } from './FinalProjectProposal';
+import { finalProjectProposalLink } from './FinalProjectProposal'
+import { amazerifficFullStackLink } from './AmazerifficFullStack';
 
 export const Start_FinalProject = () => { return (<div>Start working on your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 export const Complete_FinalProject = () => { return (<div>Complete your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
@@ -59,51 +61,72 @@ are <em>greater in complexity</em> than features we delivered in previous applic
 </div> )
 }
 
+const FINAL_PROJECT_DISTRIBUTED_NAME = 'Final Project version 1'
+export const FINAL_PROJECT_DISTRIBUTED_ROUTE = 'final-project-distributed'
+export const finalProjectDistributedLink = () => { return makeActivityLink(FINAL_PROJECT_DISTRIBUTED_NAME, FINAL_PROJECT_DISTRIBUTED_ROUTE) }
+export const finalProjectDistributed = () => { return FinalProjectDistributed() }
+
+
 export const Start_FinalProjectDistributedV1 = () => { return (<div>Start working on version 1 of your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink></div>) }
 export const Complete_FinalProjectDistributedV1 = () => { return (<div>Complete version 1 of your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink><sup> ~5 hours</sup></div>) }
 export const Start_FinalProjectDistributed = () => { return (<div>Start working on your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink></div>) }
 export const Complete_FinalProjectDistributed = () => { return (<div>Complete your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink> <sup> ~12 hours</sup></div>) }
 
 export const FinalProjectDistributed = () => {
-	return (
-	
-<div>
-<br />
-<h4>Final Project</h4>
-<h5>Summary: Based on your final project proposal, you are going to deliver something uniquely your own.</h5>
-<h5>Prerequisites:</h5>
-<ul style={{listStyleType:'square'}}>
-	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
-</ul>
+	const continuousIntegration = () => { return externalLink('CI/CD', 'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
+	return ( <div>
+		<br />
+		<h4>{FINAL_PROJECT_DISTRIBUTED_NAME}</h4>
+		<h5>Summary: Based on your {finalProjectProposalLink()}, deliver version 1 of your final project while focusing on {continuousIntegration()}.</h5>
+		<h5>Prerequisites:</h5>
+		<ul style={{listStyleType:'square'}}>
+			<li>{finalProjectProposalLink()}</li>
+			<li>{amazerifficFullStackLink()}</li>
+		</ul>
+		<p>In this activity you will create something uniquely your own by delivering version 1 of your final project. 
+		What you create should leverage the concept of {continuousIntegration()} to implement key features identified 
+		in your final project proposal that demonstrate you have successfully implemented and deployed your
+		final project Web application utilizing a hosted {fullStackJavaScriptW3C()} architecture.</p>
 
-<p>In this activity you will deliver a final project that is uniquely your own. What you create should include the 
-features defined in your final project proposal. As much as possible the features should be implemented in the priority 
-order that you identified in your proposal.</p>
+		<em>Requirement 1</em>
+		<p>Create the initial version of your Web application by:</p>
+		<ol>
+			<li>Reviewing and updating your {finalProjectProposalLink()}</li>
+			<li>Creating a <em>public</em> GitHub repository for your final project</li>
+			<li>Creating a meaning README.md file that includes a link to your {finalProjectProposalLink()}</li>
+			<li>Implement user instructions in your application that comes up when the application starts</li>
+		</ol>
 
-<p>It’s understandable that you may not be able to implement all of the features that you identified. However, you will
-need to make sure that your finished product implements sufficient features to be a complete and usable product.</p>
+		<em>Requirement 2</em>
+		<p>Implement at least two (2) meaningful interactive client-side features from your {finalProjectProposalLink()} utilizing 
+		HTML, CSS, and JavaScript running in the browser.</p>
+		<ol>
+			<li>Utilizing HTML to lay out an intuitive user interface </li>
+			<li>Utilizing CSS to style the interface visually appealing</li>
+			<li>Utilizing JavaScript to make the features interactive</li>
+			<li>Testing the Web service running hosted in Microsoft Azure</li>
+		</ol>
 
-<em>Requirement 1</em>
-<p>Create a product based on your <NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink> by:</p>
-<ol>
-	<li>Successfully deploying your application to an appropriate production environment</li>
-	<li>Making the source code available for review</li>
-	<li>Creating a simple yet visually pleasing user interface</li>
-	<li>Including and help system and user instructions that succinctly describes the application and how it works</li>
-</ol>
+		<em>Requirement 3</em>
+		<p>Enhance your application by implementing a Web service to deliver at least one (1) meaningful server-side 
+		feature from your {finalProjectProposalLink()} by:</p>
+		<ol>
+			<li>Initiating a Web service request from the Web client utilizing JavaScript, Fetch, and AJAX</li>
+			<li>Responding to the Web service request on the Node.js Web server utilizing JavaScript and returning JSON</li>
+			<li>Testing the Web service running locally</li>
+			<li>Testing the Web service running hosted in Microsoft Azure</li>
+		</ol>
 
-<em>Requirement 2</em>
-<p>Implement at least four (4) meaningful features that are of <em>similar complexity</em> to 
-features we delivered in previous applications.</p>
-
-<em>Requirement 3</em>
-<p>Enhance your application so that it implements at least two (2) meaningful client features that 
-are <em>greater in complexity</em> than features we delivered in previous applications.</p>
-
-<em>Requirement 4</em>
-<p>Enhance your application so that it implements at least two (2) server-side features that 
-are <em>greater or equal in complexity</em> than features we delivered in previous applications.</p>
-</div> )
+		<em>Requirement 4</em>
+		<p>Enhance your application so that it implements at least one (1) meaningful database feature 
+		from your {finalProjectProposalLink()} by:</p>
+		<ol>
+			<li>Initiating a Web service request from the Web client utilizing JavaScript Fetch and AJAX</li>
+			<li>Responding to the Web service request on the Node.js server utilizing JavaScript and returning JSON</li>
+			<li>Accessing a MongoDB Atlas database from the Node.js server and return the MongoDB Atlas data to the client via JSON</li>
+			<li>Testing the Web service running locally and hosted in Microsoft Azure</li>
+		</ol>
+	</div> )
 }
 
 const FINAL_PROJECT_SPRINT_5_NAME = 'Final Project Sprint 5'

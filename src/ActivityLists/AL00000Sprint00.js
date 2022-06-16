@@ -47,8 +47,10 @@ export const activitiesListIntro = (sprint = 1) => {
 }
 
 export const initialPost = (sprint=1) => {
+	const initialPostSprint678 = () => { return ( <li><em>Make your initial Discussion post by the middle of the sprint</em></li> ) }
 	switch(sprint) {
-		case 6: return ( <li><em>Make your initial Discussion post by the middle of the sprint</em></li> )
+		case 6: return initialPostSprint678()
+		case 7: return initialPostSprint678()
 		default: return ( <li><em>Make your initial Discussion {sprint} post by the middle of the sprint</em></li> )
 	}
 }
@@ -162,6 +164,7 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 		case 4: return sprint4StandardActivitiesClosing()
 		case 5: return sprint5StandardActivitiesClosing()
 		case 6: return sprint6StandardActivitiesClosing()
+		case 7: return sprint6StandardActivitiesClosing()
 		case 8: return sprint8StandardActivitiesClosing()
 		default: return null
 	}

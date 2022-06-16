@@ -1,6 +1,6 @@
 import React from 'react'
 import { estimated } from '../ActivityLists/AL00000Sprint00'
-import { externalLink } from '../Links'
+import { fullStackJavaScriptW3C, externalLink } from '../Links'
 import { azureWebsiteLink } from './AzureWebsite'
 import { makeActivityLink } from './Activity'
 
@@ -10,7 +10,6 @@ export const amazerifficFullStackLink = () => { return makeActivityLink(NAME, AM
 export const amazerifficFullStack = () => {
 	const learnWebAppDevelopmentExampleCode = () => { return externalLink('example code', 'https://github.com/semmypurewal/LearningWebAppDev') }
 	const fullStackW3C = () => { return externalLink('What is Full Stack?', 'https://www.w3schools.com/whatis/whatis_fullstack.asp') }
-	const fullStackJavaScriptW3C = () => { return externalLink('What is Full stack JavaScript?', 'https://www.w3schools.com/whatis/whatis_fullstack_js.asp') }
 	const nodeJS = () => { return externalLink('Node.js', 'https://www.w3schools.com/nodejs')}
 	const nodeJSAndMongoDB = () => { return externalLink('Node.js and MongoDB', 'https://www.w3schools.com/nodejs/nodejs_mongodb.asp')}
 	const nodeJSAndMySQL = () => { return externalLink('Node.js and MySQL', 'https://www.w3schools.com/nodejs/nodejs_mysql.asp')}

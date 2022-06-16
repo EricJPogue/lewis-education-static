@@ -32,8 +32,6 @@ export const al24700Sprint06 = () => {
 
 const list24700Sprint06 = (sprint) => {
 	const sebestaChapter9Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-09') }
-
-
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>

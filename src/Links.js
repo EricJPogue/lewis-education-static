@@ -134,6 +134,8 @@ export const architecturePart2 = () => { return internalLink('Application Archit
 export const continuousIntegration = () => { return externalLink('What is CI/CD? Continuous integration and continuous delivery explained', 
 	'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
 
+export const fullStackJavaScriptW3C = () => { return externalLink('Full stack JavaScript', 'https://www.w3schools.com/whatis/whatis_fullstack_js.asp') }
+
 export const successfulProgrammer = () => { return internalLink('How To Be A Successful Programmer', '/activity/successful-programmer') }
 
 
