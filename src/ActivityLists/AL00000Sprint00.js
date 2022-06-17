@@ -85,6 +85,9 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 		}
 	}
 	const currentAssignments = (sprint) => {
+		if (sprint === 8) {
+			return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Final Project Presentation</em>)		
+		}
 		if (sprint > 5) {
 			return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em>)
 		}
@@ -151,9 +154,9 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 	}
 	const sprint8StandardActivitiesClosing = () => { return (<div>
 			<li>Submit your Final Project Presentation assignment at least two hours before to your scheduled presentation time</li>
-			<li><em style={{color:'red'}}>Deliver your Final Project Presentation <u>in person</u> on <u>{getFinalExamDateAndTime()}</u></em></li>
+			<li><em>Deliver your Final Project Presentation on <u>{getFinalExamDateAndTime()}</u></em></li>
 			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
-			<li><em style={{color:'red'}}>Submit <u>all assignments</u> by the end of the day <u>{sprintEndDateWithoutTime(sprint-1)}</u>... no late assignments</em></li> 
+			<li><em>Submit <u>all assignments</u> by the end of the day <u>{sprintEndDateWithoutTime(sprint-1)}</u>... no late assignments</em></li> 
 		</div>)
 	}
 	
@@ -189,15 +192,15 @@ export const closing = (sprint) => {
 		you are you getting what you hoped to get out of this course. If not, let’s sit down and talk for a few minutes 
 		to see if we can make the course something special for you.</p> )
 	}
-	const defaultClosing = () => { return (
-		<p>Be sure to periodically check for updates to our {programmingTogether()} tutorials.</p> ) 
-	}
+	const sprint8Closing = () => { return ( <p>Let’s finish strong. It has been a sincere pleasure.</p> ) }
+	const defaultClosing = () => { return (<p>Be sure to periodically check for updates to our {programmingTogether()} tutorials.</p> ) }
 
 	switch (sprint) {
 		case 1: return sprint1Closing()
 		case 2: return sprint2Closing()
 		case 4: return sprint4Closing()
 		case 5: return sprint5Closing()
+		case 8: return sprint8Closing()
 		default: return defaultClosing()
 	}
 }

@@ -14,16 +14,12 @@ import { ExampleCode } from './Activities/ExampleCode'
 import { FaceDrawWeb, FaceDrawReact } from './Activities/FaceDraw'
 import { MosaicWeb, MosaicReact, MosaicV2React } from './Activities/Mosaic'
 
-// import { ThunderbirdJava } from './Activities/Thunderbird'
-
 import { Tools } from './Activities/ToolsOfTheTrade'
 import { Repository } from './Activities/Repository'
 
 import { CodingStandards, CodingStandardsValidator } from './Activities/CodingStandards'
 import { QuizMaster } from './Activities/QuizMaster'
 import { GitCommands } from './Activities/GitCommands'
-
-import { /*FinalProject,*/ FinalProjectDistributed, /* FinalProjectSprint5,  FinalProjectSprint6, FinalProjectSprint7,  FinalProjectSprint8*/ } from './Activities/FinalProject'
 
 import { HTML } from './Activities/HTML'
 import { PythonW3C } from './Activities/PythonW3C'
@@ -33,7 +29,6 @@ import { WebAssignmentPortfolioWithNodeJS } from './Activities/WebAssignmentPort
 import { WebDiceRoller } from './Activities/WebDiceRoller'
 import { gettingToKnowEachOther } from './Activities/WebGettingToKnowEachOther'
 import { WebCourseSchedule } from './Activities/WebCourseSchedule'
-// import { WebMapManiaVersion1 } from './Activities/WebMapManiaVersion1'
 import { WebMapManiaVersion2 } from './Activities/WebMapManiaVersion2'
 
 import { MustangVersion2 } from './Activities/MustangVersion2';
@@ -95,13 +90,6 @@ class Activity extends Component {
 			case 'coding-standards-validator': return CodingStandardsValidator()
 			case 'quiz-master': return QuizMaster()
 
-			// case 'final-project': return FinalProject()
-			case 'final-project-distributed': return FinalProjectDistributed()
-			// case 'final-project-sprint-5': return FinalProjectSprint5()
-			// case 'final-project-sprint-6': return FinalProjectSprint6()
-			// case 'final-project-sprint-7': return FinalProjectSprint7()
-			// case 'final-project-sprint-8': return FinalProjectSprint8()
-
 			case 'git-commands': return GitCommands()
 			case 'successful-programmer': return SuccessfulDeveloper()
 			case 'study-table': return StudyTable()
@@ -111,7 +99,6 @@ class Activity extends Component {
 			case 'hello-world-go': return HelloWorldGo()
 			case 'hello-world-web': return HelloWorldWeb()
 
-			// case 'matchmaker-python': return MatchmakerPython()
 			case 'matchmaker-web': return MatchmakerWeb()
 			case 'matchmaker-java': return MatchmakerJava()
 			case 'matchmaker-go': return MatchmakerGo()
@@ -120,37 +107,25 @@ class Activity extends Component {
 			case 'example-code': return ExampleCode()
 
 			case 'facedraw-web': return FaceDrawWeb()
-			// case 'facedraw-java': return FaceDrawJava()
 			case 'facedraw-react': return FaceDrawReact()
 
 			case 'mosaic-web': return MosaicWeb()
-			// case 'mosaic-java': return MosaicJava()
 			case 'mosaic-react': return MosaicReact()
 			case 'mosaic-v2-react': return MosaicV2React()
-
-			// case 'swiss-army-knife-java': return SwissArmyKnifeJava()
-			// case 'swiss-army-knife-java-v2': return SwissArmyKnifeJavaV2()	
-
-			// case 'thunderbird-java': return ThunderbirdJava()
 
 			case 'health-risk-calculator-python': return HealthRiskCalculatorPython()
 			case 'health-risk-calculator-web': return HealthRiskCalculatorWeb()
 			case 'health-risk-calculator-java': return HealthRiskCalculatorJava()
 			case 'health-risk-calculator-go': return HealthRiskCalculatorGo()
 			case 'health-risk-calculator-examples': return HealthRiskCalculatorExamples()
-			// case 'health-risk-calculator-team-web': return HealthRiskCalculatorTeamWeb()
 
-			// case 'numbering-systems-python': return PythonNumberingSystems()
-			// case 'turtle-draw': return PythonTurtleDraw()
 			case 'html': return HTML()
 			case 'python-w3c': return PythonW3C()
 			case 'assignment-portfolio-with-node-js': return WebAssignmentPortfolioWithNodeJS()
 			case 'dice-roller': return WebDiceRoller()
 			case 'getting-to-know-each-other': return gettingToKnowEachOther()
 			case 'course-schedule': return WebCourseSchedule()
-			// case 'map-mania-v1': return WebMapManiaVersion1()
 			case 'map-mania-v2': return WebMapManiaVersion2()
-			// case 'mustang-v1': return MustangVersion1()
 			case 'mustang-v2': return MustangVersion2()
 			case 'mustang-v3': return MustangVersion3()
 			case 'programming-together': return ProgrammingTogether()

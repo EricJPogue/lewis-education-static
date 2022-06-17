@@ -14,9 +14,7 @@ export const Start_FinalProject = () => { return (<div>Start working on your <Na
 export const Complete_FinalProject = () => { return (<div>Complete your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 
 export const FinalProject = () => {
-	return (
-	
-<div>
+	return ( <div>
 <br />
 <h4>Final Project</h4>
 <h5>Summary: Based on your final project proposal, you are going to have the opportunity to deliver something uniquely 
@@ -64,15 +62,7 @@ are <em>greater in complexity</em> than features we delivered in previous applic
 const FINAL_PROJECT_DISTRIBUTED_NAME = 'Final Project version 1'
 export const FINAL_PROJECT_DISTRIBUTED_ROUTE = 'final-project-distributed'
 export const finalProjectDistributedLink = () => { return makeActivityLink(FINAL_PROJECT_DISTRIBUTED_NAME, FINAL_PROJECT_DISTRIBUTED_ROUTE) }
-export const finalProjectDistributed = () => { return FinalProjectDistributed() }
-
-
-export const Start_FinalProjectDistributedV1 = () => { return (<div>Start working on version 1 of your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink></div>) }
-export const Complete_FinalProjectDistributedV1 = () => { return (<div>Complete version 1 of your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink><sup> ~5 hours</sup></div>) }
-export const Start_FinalProjectDistributed = () => { return (<div>Start working on your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink></div>) }
-export const Complete_FinalProjectDistributed = () => { return (<div>Complete your <NavLink to='/activity/final-project-distributed'>Final Project</NavLink> <sup> ~12 hours</sup></div>) }
-
-export const FinalProjectDistributed = () => {
+export const finalProjectDistributed = () => { 
 	const continuousIntegration = () => { return externalLink('CI/CD', 'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
 	return ( <div>
 		<br />
@@ -128,6 +118,57 @@ export const FinalProjectDistributed = () => {
 		</ol>
 	</div> )
 }
+
+const FINAL_PROJECT_DISTRIBUTED_V2_NAME = 'Final Project version 2'
+export const FINAL_PROJECT_DISTRIBUTED_V2_ROUTE = 'final-project-distributed-v2'
+export const finalProjectDistributedV2Link = () => { return makeActivityLink(FINAL_PROJECT_DISTRIBUTED_V2_NAME, FINAL_PROJECT_DISTRIBUTED_V2_ROUTE) }
+export const finalProjectDistributedV2 = () => { 
+	const continuousIntegration = () => { return externalLink('CI/CD', 'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
+	return ( <div>
+		<br />
+		<h4>{FINAL_PROJECT_DISTRIBUTED_V2_NAME}</h4>
+		<h5>Summary: Continue to enhance your Final Project by delivering version 2.</h5>
+		<h5>Prerequisites:</h5>
+		<ul style={{listStyleType:'square'}}>
+			<li>{finalProjectProposalLink()}</li>
+			<li>{finalProjectDistributedLink()}</li>
+		</ul>
+		<p>In this activity you will continue to enhance your Final Project by delivering version 2 of the application. 
+		What you create should continue to leverage {continuousIntegration()} to implement key features from 
+		your {finalProjectProposalLink()} while utilizing a hosted {fullStackJavaScriptW3C()} architecture.</p>
+
+		<em>Requirement 1</em>
+		<p>Create the initial version of your Web application by:</p>
+		<ol>
+			<li>Reviewing and updating your {finalProjectProposalLink()}</li>
+			<li>Creating a <em>public</em> GitHub repository for your final project</li>
+			<li>Creating a meaning README.md file that includes a link to your {finalProjectProposalLink()}</li>
+			<li>Implement user instructions in your application that comes up when the application starts</li>
+		</ol>
+
+		<em>Requirement 2</em>
+		<p>Implement at least four (4) meaningful features that are of <em>similar complexity</em> to 
+		features we delivered in previous applications.</p>
+
+		<em>Requirement 3</em>
+		<p>Enhance your application so that it implements at least two (2) meaningful features that 
+		are <em>greater in complexity</em> than features we delivered in previous applications.</p>
+
+		<em>Requirement 4</em>
+		<p>Enhance your application so that it implements at least one (2) meaningful features that
+		utilize all elements of the {fullStackJavaScriptW3C()} architecture including the Web browser, 
+		server, and database by:</p>
+		<ol>
+			<li>Utilizing HTML, CSS, and JavaScript to create an interactive client interface</li>
+			<li>Utilizing AJAX, Node.js, and JSON to create a Web service</li>
+			<li>Utilizing MongoDB Atlas and Mongoose to create persistent storage a date</li>
+			<li>Deploying and testing the features across the client, server, and database in Microsoft Azure</li>
+		</ol>
+	</div> )
+}
+
+
+
 
 const FINAL_PROJECT_SPRINT_5_NAME = 'Final Project Sprint 5'
 export const FINAL_PROJECT_SPRINT_5_ROUTE = 'final-project-sprint-5'

@@ -128,7 +128,7 @@ export const done = () => { return externalLink('Done', 'https://www.agileallian
 
 export const architecturePart1 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 1', 
 	'/activity-architecture/application-architecture-part1')}
-export const architecturePart2 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 2', 
+export const architecturePart2 = () => { return internalLink('Application Architectures - Part 2', 
 	'/activity-architecture/application-architecture-part2')}
 
 export const continuousIntegration = () => { return externalLink('What is CI/CD? Continuous integration and continuous delivery explained', 

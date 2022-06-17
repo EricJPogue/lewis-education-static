@@ -16,6 +16,8 @@ import { DELIVERY_DRONE_ROUTE, deliveryDrone } from './DeliveryDrone'
 import { FACEDRAW_JAVA_ROUTE, faceDrawJava } from './FaceDraw'
 import { FAVORITE_HOBBY_ROUTE, favoriteHobby } from './WebMyFavoriteHobby'
 import { FINAL_PROJECT_PROPOSAL_ROUTE, finalProjectProposal } from './FinalProjectProposal'
+import { FINAL_PROJECT_DISTRIBUTED_ROUTE, finalProjectDistributed } from './FinalProject'
+import { FINAL_PROJECT_DISTRIBUTED_V2_ROUTE, finalProjectDistributedV2 } from './FinalProject'
 import { FINAL_PROJECT_SPRINT_5_ROUTE, finalProjectSprint5 } from './FinalProject'
 import { FINAL_PROJECT_SPRINT_6_ROUTE, finalProjectSprint6 } from './FinalProject'
 import { FINAL_PROJECT_SPRINT_7_ROUTE, finalProjectSprint7 } from './FinalProject'
@@ -71,6 +73,8 @@ export const routeActivity = (activityRoute) => {
 		case FACEDRAW_JAVA_ROUTE: return faceDrawJava()
 		case FAVORITE_HOBBY_ROUTE: return favoriteHobby()
 		case FINAL_PROJECT_PROPOSAL_ROUTE: return finalProjectProposal()
+		case FINAL_PROJECT_DISTRIBUTED_ROUTE: return finalProjectDistributed()
+		case FINAL_PROJECT_DISTRIBUTED_V2_ROUTE: return finalProjectDistributedV2()
 		case FINAL_PROJECT_SPRINT_5_ROUTE: return finalProjectSprint5()
 		case FINAL_PROJECT_SPRINT_6_ROUTE: return finalProjectSprint6()
 		case FINAL_PROJECT_SPRINT_7_ROUTE: return finalProjectSprint7()

@@ -38,8 +38,8 @@ export const amazerifficFullStack = () => {
 
 		<p><em>Update June 16, 2022:</em> If you are struggling with completing requirements 1-4 below with Amazeriffic, 
 		you may alternately complete MovieCRUD Full Stack such that it meets all of the following requirements while 
-		fully implementing Create, Read, Update, and Delete (CRUD). If you choose this path, you will likely find the 
-		{movieCRUDLite()} tutorial and related {movieCRUDLiteCode()} beneficial.</p>
+		fully implementing Create, Read, Update, and Delete (CRUD). If you choose this path, you will likely find 
+		the {movieCRUDLite()} tutorial and related {movieCRUDLiteCode()} beneficial.</p>
 
 		<em>Requirement 1</em>
 		<p>Gain an understanding of Full Stack Web development, Node.js, MongoDB, and MySQL by:</p>
