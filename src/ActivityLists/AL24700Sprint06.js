@@ -48,4 +48,5 @@ const list24700Sprint06 = (sprint) => {
 	</div> )
 }
 
+// Certified for SU22 (06/17/2022)
 // In lab 6 move Final Project Presentation time so that it is below Final Project Proposal Requirement. 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
-import { oreillyPlaylistWeb, architecturePart1, fullStackJavaScriptW3C, externalLink, internalLink } from '../Links'
+import { oreillyPlaylistWeb, architecturePart1, fullStackJavaScriptW3C, externalLink, internalLink, programmingTogether } from '../Links'
 import { finalProjectDistributedLink } from '../Activities/FinalProject';
 
 export const al24700Sprint07 = () => {
@@ -43,13 +43,16 @@ const list24700Sprint07 = (sprint) => {
 			<li>Review {reactJSOrg()} and the {reactW3C()} tutorial</li>
 			<li>Review the {hostingReactOnAzure()} programming together tutorial</li>	
 			{initialPost(sprint)}
+			<li>Review the MovieCRUDLite {programmingTogether()} tutorial</li>
 			<li>Explore {architecturePart1()}</li>
 			{standardActivitiesClosing(sprint, finalProjectDistributedLink(), '12 hours')}
 		</ol>
 	</div> )
 }
 
-// Todo: Add back “Complete Lab Demo if you have not already” to standardActivitiesClosing() for non-online classes.
+// Certified for SU22 (06/17/2022)
 
-// Following Coding Standards are graded twice. Consider updating programming assignment so that it does not have 
-//     coding standards as requirement 4.  
+// Todo: Add back “Complete Lab Demo if you have not already” to standardActivitiesClosing() for non-online classes as 
+// it was removed for a summer online class.
+
+
