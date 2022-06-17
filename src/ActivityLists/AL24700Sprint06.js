@@ -47,3 +47,5 @@ const list24700Sprint06 = (sprint) => {
 		</ol>
 	</div> )
 }
+
+// In lab 6 move Final Project Presentation time so that it is below Final Project Proposal Requirement. 

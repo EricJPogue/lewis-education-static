@@ -4,7 +4,7 @@ import { fullStackJavaScriptW3C, externalLink } from '../Links'
 import { azureWebsiteLink } from './AzureWebsite'
 import { makeActivityLink } from './Activity'
 
-const NAME = 'Amazeriffic Full Stack'
+const NAME = 'Amazeriffic Full Stack (or MovieCRUD Full Stack)'
 export const AMAZERIFFIC_FULL_STACK_ROUTE = 'amazeriffic-full-stack'
 export const amazerifficFullStackLink = () => { return makeActivityLink(NAME, AMAZERIFFIC_FULL_STACK_ROUTE) }
 export const amazerifficFullStack = () => {
@@ -15,6 +15,10 @@ export const amazerifficFullStack = () => {
 	const nodeJSAndMySQL = () => { return externalLink('Node.js and MySQL', 'https://www.w3schools.com/nodejs/nodejs_mysql.asp')}
 	const connectToAMongoDBDatabaseUsingNodeJSTutorialDBTutorial = () => { return externalLink('Connect to a MonoDB Database Using Node.js', 'https://www.mongodb.com/blog/post/quick-start-nodejs-mongodb-how-to-get-connected-to-your-database')}
 	const passport = () => { return externalLink('Passport', 'https://www.passportjs.org/')}
+
+	const movieCRUDLite = () => { return externalLink('MovieCRUDLite', 'https://lewisu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8e35daa6-863c-4620-9d58-aeb700336ccb') }
+	const movieCRUDLiteCode = () => { return externalLink('sample code', 'https://github.com/EricJPogue/MovieCRUDLite')}
+
 	return ( <div>
 		<br />
 		<h4>{NAME}</h4>
@@ -31,6 +35,11 @@ export const amazerifficFullStack = () => {
 		Azure. More specifically, it assumes that you have the “Learning Web Development” Chapter 7 version (or later)
 		version of Amazeriffic successfully running locally and successfully hosted in Azure. If this assumption is 
 		true for you, you have already completed a majority of requirement 1 below.</p>
+
+		<p><em>Update June 16, 2022:</em> If you are struggling with completing requirements 1-4 below with Amazeriffic, 
+		you may alternately complete MovieCRUD Full Stack such that it meets all of the following requirements while 
+		fully implementing Create, Read, Update, and Delete (CRUD). If you choose this path, you will likely find the 
+		{movieCRUDLite()} tutorial and related {movieCRUDLiteCode()} beneficial.</p>
 
 		<em>Requirement 1</em>
 		<p>Gain an understanding of Full Stack Web development, Node.js, MongoDB, and MySQL by:</p>

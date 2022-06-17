@@ -1,7 +1,6 @@
 import React from 'react'
-
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
-import { oreillyPlaylistWeb, architecturePart1, fullStackJavaScriptW3C } from '../Links'
+import { oreillyPlaylistWeb, architecturePart1, fullStackJavaScriptW3C, externalLink, internalLink } from '../Links'
 import { finalProjectDistributedLink } from '../Activities/FinalProject';
 
 export const al24700Sprint07 = () => {
@@ -32,11 +31,17 @@ export const al24700Sprint07 = () => {
 }
 
 const list24700Sprint07 = (sprint) => {
+	const angularReactVue = () => { return externalLink('Angular vs React vs Vue.js: Which is the Best Choice for 2022?', 'https://javascript.plainenglish.io/angular-vs-react-vs-vue-js-which-is-the-best-choice-for-2022-5ef83f2257ab') }
+	const reactJSOrg = () => { return externalLink('React', 'https://reactjs.org/') }
+	const reactW3C = () => { return externalLink('React W3C', 'https://www.w3schools.com/REACT/') }
+	const hostingReactOnAzure = () => { return internalLink('React Website Creation with Microsoft Azure', '/activity-config/react-on-azure') }
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, finalProjectDistributedLink(), oreillyPlaylistWeb())}
-			{/* React plus */}
+			<li>Read {angularReactVue()}</li>
+			<li>Review {reactJSOrg()} and the {reactW3C()} tutorial</li>
+			<li>Review the {hostingReactOnAzure()} programming together tutorial</li>	
 			{initialPost(sprint)}
 			<li>Explore {architecturePart1()}</li>
 			{standardActivitiesClosing(sprint, finalProjectDistributedLink(), '12 hours')}
@@ -44,16 +49,7 @@ const list24700Sprint07 = (sprint) => {
 	</div> )
 }
 
-// Todo:
-// https://javascript.plainenglish.io/angular-vs-react-vs-vue-js-which-is-the-best-choice-for-2022-5ef83f2257ab
-// https://reactjs.org/
-// <li>Review the React tutorial from W3C <a href='https://www.w3schools.com/react/' target='_blank' rel='noopener noreferrer'>[link]</a></li>
-// Add books from Applied Programming languages and tutorial video
-
-
 // Todo: Add back “Complete Lab Demo if you have not already” to standardActivitiesClosing() for non-online classes.
-
-
 
 // Following Coding Standards are graded twice. Consider updating programming assignment so that it does not have 
 //     coding standards as requirement 4.  
