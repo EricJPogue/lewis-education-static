@@ -1,7 +1,7 @@
 import React from 'react'
 import { externalLink, internalLink } from '../data/Links'
 import { azureWebsiteLink } from './AzureWebsite'
-import { makeActivityLink } from './Activity'
+import { makeActivityLink } from './ActivityLink'
 import { lionsTigersAndBearsLink } from './LionsTigerAndBears'
 
 import WebMapManiaScreenShot from './WebMapManiaScreenShot.png'

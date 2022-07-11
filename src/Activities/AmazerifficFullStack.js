@@ -2,7 +2,7 @@ import React from 'react'
 import { estimated } from '../ActivityLists/AL00000Sprint00'
 import { fullStackJavaScriptW3C, externalLink } from '../data/Links'
 import { azureWebsiteLink } from './AzureWebsite'
-import { makeActivityLink } from './Activity'
+import { makeActivityLink } from './ActivityLink'
 
 const NAME = 'Amazeriffic Full Stack (or MovieCRUD Full Stack)'
 export const AMAZERIFFIC_FULL_STACK_ROUTE = 'amazeriffic-full-stack'

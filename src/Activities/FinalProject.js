@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { makeActivityLink } from './Activity'
+import { makeActivityLink } from './ActivityLink'
 import { makeInternalURL } from './ActivityRouter'
 
 import { makeNavigationLink } from './Thunderbird';

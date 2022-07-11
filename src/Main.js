@@ -19,7 +19,7 @@ import { StudyTable } from './Activities/StudyTable'
 import { Deck } from './Slides/SlideDeck';
 import { Breakout } from './Slides/Breakout'
 
-import { Test } from './Test'
+import { Test } from './Test/Test'
 import { Activity } from './Activity'
 import { ActivityConfig } from './ActivityVideo/ActivityConfig'
 import { ActivityOOP } from './ActivityVideo/ActivityOOP'
