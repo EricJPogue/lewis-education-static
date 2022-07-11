@@ -5,27 +5,27 @@ import { Route, HashRouter } from 'react-router-dom';
 import { HeaderNavigation } from './HeaderNavigation'
 
 import { Home } from './Home'
-import { Welcome } from './ActivityVideo/Welcome'
-import { Syllabus } from './Syllabi/Syllabus' 
-import { Sprint } from './ActivityLists/Sprint'
-import { SprintCalendar } from './SprintCalendar'
-import { SprintClassActivities } from './SprintSchedule'
-import { UniversityResources } from './Info/UniversityResources'
-import { InfoEricPogue } from './Info/InfoEricPogue'
-import { Credits } from './Info/Credits'
-import { Version } from './Info/Version'
-import { StudyTable } from './Activities/StudyTable'
+import { Welcome } from '../ActivityVideo/Welcome'
+import { Syllabus } from '../Syllabi/Syllabus' 
+import { Sprint } from '../ActivityLists/Sprint'
+import { SprintCalendar } from '../CalendarAndSchedule/SprintCalendar'
+import { SprintClassActivities } from '../CalendarAndSchedule/SprintSchedule'
+import { UniversityResources } from '../Info/UniversityResources'
+import { InfoEricPogue } from '../Info/InfoEricPogue'
+import { Credits } from '../Info/Credits'
+import { Version } from '../Info/Version'
+import { StudyTable } from '../Activities/StudyTable'
 
-import { Deck } from './Slides/SlideDeck';
-import { Breakout } from './Slides/Breakout'
+import { Deck } from '../Slides/SlideDeck';
+import { Breakout } from '../Slides/Breakout'
 
-import { Test } from './Test/Test'
-import { Activity } from './Activity'
-import { ActivityConfig } from './ActivityVideo/ActivityConfig'
-import { ActivityOOP } from './ActivityVideo/ActivityOOP'
-import { ActivityWeb } from './ActivityVideo/ActivityWeb'
-import { ActivityDale } from './ActivityVideo/ActivityDale'
-import { ActivityArchitecture } from './ActivityVideo/ActivityArchitecture'
+import { Test } from '../Test/Test'
+import { Activity } from '../Activities/Activity'
+import { ActivityConfig } from '../ActivityVideo/ActivityConfig'
+import { ActivityOOP } from '../ActivityVideo/ActivityOOP'
+import { ActivityWeb } from '../ActivityVideo/ActivityWeb'
+import { ActivityDale } from '../ActivityVideo/ActivityDale'
+import { ActivityArchitecture } from '../ActivityVideo/ActivityArchitecture'
 
 class Main extends Component {
 	render() {

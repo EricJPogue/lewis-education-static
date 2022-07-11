@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { getClass } from '../data/Classes';
 
-import { baseLink, videoLink } from '../Activity'
+import { baseLink, videoLink } from '../Activities/Activity'
 
 const configLink = (fileName) => {
 	return baseLink()+'configuration/'+fileName

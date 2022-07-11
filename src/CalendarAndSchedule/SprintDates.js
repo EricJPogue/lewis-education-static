@@ -1,4 +1,4 @@
-import { getClassCalendar } from './data/Classes'
+import { getClassCalendar } from '../data/Classes'
 
 export const CSTDate = (dateIn, includeYear, includeTime) => {
 	var months = ['January','February','March','April','May','June','July', 'August',

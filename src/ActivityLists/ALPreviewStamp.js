@@ -1,5 +1,5 @@
 import React from 'react'
-import { pastDate } from '../SprintDates'
+import { pastDate } from '../CalendarAndSchedule/SprintDates'
 import { getClassCalendar } from '../data/Classes'
 
 // Todo: Review licensing of preview stamp.

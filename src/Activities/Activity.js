@@ -1,41 +1,41 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player'
 
-import { getClass } from './data/Classes';
+import { getClass } from '../data/Classes';
 
-import { routeActivity } from './Activities/ActivityRouter';
+import { routeActivity } from './ActivityRouter';
 
-import { SeatSelector } from './Activities/SeatSelector'
-import { StudyTable } from './Activities/StudyTable'
-import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './Activities/HelloWorld'
-import { MatchmakerWeb, MatchmakerJava, MatchmakerGo, MatchmakerExamples } from './Activities/Matchmaker';
-import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './Activities/HealthRiskCalculator'
+import { SeatSelector } from './SeatSelector'
+import { StudyTable } from './StudyTable'
+import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './HelloWorld'
+import { MatchmakerWeb, MatchmakerJava, MatchmakerGo, MatchmakerExamples } from './Matchmaker';
+import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './HealthRiskCalculator'
 
-import { ExampleCode } from './Activities/ExampleCode'
-import { FaceDrawWeb, FaceDrawReact } from './Activities/FaceDraw'
-import { MosaicWeb, MosaicReact, MosaicV2React } from './Activities/Mosaic'
+import { ExampleCode } from './ExampleCode'
+import { FaceDrawWeb, FaceDrawReact } from './FaceDraw'
+import { MosaicWeb, MosaicReact, MosaicV2React } from './Mosaic'
 
-import { Tools } from './Activities/ToolsOfTheTrade'
-import { Repository } from './Activities/Repository'
+import { Tools } from './ToolsOfTheTrade'
+import { Repository } from './Repository'
 
-import { CodingStandards, CodingStandardsValidator } from './Activities/CodingStandards'
-import { QuizMaster } from './Activities/QuizMaster'
-import { GitCommands } from './Activities/GitCommands'
+import { CodingStandards, CodingStandardsValidator } from './CodingStandards'
+import { QuizMaster } from './QuizMaster'
+import { GitCommands } from './GitCommands'
 
-import { HTML } from './Activities/HTML'
-import { PythonW3C } from './Activities/PythonW3C'
-import { SuccessfulDeveloper } from './Activities/SuccessfulDeveloper'
+import { HTML } from './HTML'
+import { PythonW3C } from './PythonW3C'
+import { SuccessfulDeveloper } from './SuccessfulDeveloper'
 
-import { WebAssignmentPortfolioWithNodeJS } from './Activities/WebAssignmentPortfolioWithNodeJS'
-import { WebDiceRoller } from './Activities/WebDiceRoller'
-import { gettingToKnowEachOther } from './Activities/WebGettingToKnowEachOther'
-import { WebCourseSchedule } from './Activities/WebCourseSchedule'
-import { WebMapManiaVersion2 } from './Activities/WebMapManiaVersion2'
+import { WebAssignmentPortfolioWithNodeJS } from './WebAssignmentPortfolioWithNodeJS'
+import { WebDiceRoller } from './WebDiceRoller'
+import { gettingToKnowEachOther } from './WebGettingToKnowEachOther'
+import { WebCourseSchedule } from './WebCourseSchedule'
+import { WebMapManiaVersion2 } from './WebMapManiaVersion2'
 
-import { MustangVersion2 } from './Activities/MustangVersion2';
-import { MustangVersion3 } from './Activities/MustangVersion2';
+import { MustangVersion2 } from './MustangVersion2';
+import { MustangVersion3 } from './MustangVersion2';
 
-import { ProgrammingTogether } from './ActivityVideo/Panopto'
+import { ProgrammingTogether } from '../ActivityVideo/Panopto'
 
 export const videoLink = (header, url) => {
 	return ( <div><h5>{header}</h5><ReactPlayer url={url} controls={true} width={1024} height={576} /></div> )

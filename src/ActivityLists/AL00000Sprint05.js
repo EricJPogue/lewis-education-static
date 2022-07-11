@@ -5,7 +5,7 @@ import React from 'react'
 import { estimated } from './AL00000Sprint01'
 import { programmingTogether, ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink } from '../data/Links'
 import { getFinalExamDateAndTime } from '../data/Classes'
-import { sprintEndDateWithoutTime } from '../SprintDates'
+import { sprintEndDateWithoutTime } from '../CalendarAndSchedule/SprintDates'
 
 export const FinalProjectsAndMoreResponsibility = () => {
 	return ( <div>

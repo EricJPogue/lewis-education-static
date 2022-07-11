@@ -4,7 +4,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { estimated } from './AL00000Sprint01'
-import { sprintEndDateWithoutTime } from '../SprintDates'
+import { sprintEndDateWithoutTime } from '../CalendarAndSchedule/SprintDates'
 
 import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
 import { calendarLink, scheduleLink, ExampleCode, codingStandards } from '../data/Links'

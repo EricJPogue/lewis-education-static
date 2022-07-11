@@ -1,6 +1,6 @@
 import { getCalendarByCalendarID } from './Calendars'
 import { getClassCalendar, getClassByClassID } from './Classes'
-import { pastDate } from '../SprintDates'
+import { pastDate } from '../CalendarAndSchedule/SprintDates'
 
 // Exported APIs
 export const getCurrentSprintBase1 = () => { return getCurrentSprintByCalendar(getClassCalendar())+1}
