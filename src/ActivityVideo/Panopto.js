@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { getClass, getClassIDfromURL } from '../data/Classes'
-import { Blended, externalLink, scrumIn7Min } from '../data/Links'
+import { getClass, getClassIDfromURL } from '../DataAndAPIs/Classes'
+import { Blended, externalLink, scrumIn7Min } from '../DataAndAPIs/Links'
 
 const panoptoWelcomeIFrameTag2022Summer = () => {
 	return '<iframe src="https://lewisu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1bd10fe6-8984-4a88-98a1-ae7f0107d260&autoplay=false&offerviewer=false&showtitle=false&showbrand=false&captions=false&interactivity=all" height="576" width="1024" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>'

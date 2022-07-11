@@ -5,7 +5,7 @@ import { makeInternalURL } from './ActivityRouter'
 
 import { makeNavigationLink } from './Thunderbird';
 
-import { agileAlliance, agileAllianceAgile101, backlogGrooming, epic, iNVEST, productBacklog, scrum, userStory, userStoryTemplate, externalLink, fullStackJavaScriptW3C } from '../data/Links';
+import { agileAlliance, agileAllianceAgile101, backlogGrooming, epic, iNVEST, productBacklog, scrum, userStory, userStoryTemplate, externalLink, fullStackJavaScriptW3C } from '../DataAndAPIs/Links';
 
 import { finalProjectProposalLink } from './FinalProjectProposal'
 import { amazerifficFullStackLink } from './AmazerifficFullStack';

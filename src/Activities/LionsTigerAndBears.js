@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import { makeInternalURL } from './ActivityRouter';
 import { azureWebsiteLink } from './AzureWebsite';
-import { JSONWebServicesTutorial, codingStandards, externalLink } from '../data/Links';
+import { JSONWebServicesTutorial, codingStandards, externalLink } from '../DataAndAPIs/Links';
 
 export const LIONS_TIGERS_AND_BEARS_ROUTE = 'lions-tigers-and-bears'
 const NAME = 'Lions and Tigers and Bears, Oh My!'

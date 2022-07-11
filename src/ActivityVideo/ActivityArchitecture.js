@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { getClass } from '../data/Classes';
+import { getClass } from '../DataAndAPIs/Classes';
 import { baseLink, videoLink } from '../Activities/Activity'
 
 const architectureLink = (fileName) => {

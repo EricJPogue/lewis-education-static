@@ -1,5 +1,5 @@
 import React from 'react'
-import { oreillyPlaylistSC } from '../data/Links'
+import { oreillyPlaylistSC } from '../DataAndAPIs/Links'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint05'

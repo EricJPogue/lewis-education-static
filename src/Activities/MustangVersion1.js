@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { makeInternalURL } from './ActivityRouter'
 
-import { JSONAndAJAXTutorial, JSONWebServicesTutorial, RandomStrings, JSONExamples, JSONHostingExample, JSONHostingWebConfigExample, JSONIndex } from '../data/Links'
+import { JSONAndAJAXTutorial, JSONWebServicesTutorial, RandomStrings, JSONExamples, JSONHostingExample, JSONHostingWebConfigExample, JSONIndex } from '../DataAndAPIs/Links'
 
 const MUSTANG_NAME = 'Mustang'
 export const MUSTANG_ROUTE = 'mustang'

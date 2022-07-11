@@ -7,9 +7,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { getClass } from '../data/Classes'
+import { getClass } from '../DataAndAPIs/Classes'
 import { ProgrammingAssignmentToLink, ProgrammingActivity } from './ProgrammingAssignments'
-import { Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether } from '../data/Links'
+import { Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether } from '../DataAndAPIs/Links'
 import { sprintEndDateWithoutTime } from '../CalendarAndSchedule/SprintDates'
 const sprintEndDate = (sprint) => {
 	// SprintEndDateWithoutTime is base zero.

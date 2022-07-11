@@ -1,4 +1,4 @@
-import { getCalendarByCalendarID, _FALL_2022_08_29_16, _SUMMER_2022_05_09_08, _CURRENT_CALENDAR } from "./Calendars"
+import { getCalendarByCalendarID, _FALL_2022_08_29_16, _CURRENT_CALENDAR } from "./Calendars"
 
 export const getIsScheduleTTr = () => {
 	return (getClass().schedule === _TTR)
@@ -55,7 +55,6 @@ export const _TTR = 'TTh'
 export const _ASYNCHRONOUS = 'Asynchronous' 
 
 export const classList = [
-	{ 'classID':'su22-cpsc-24700-lt1', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':_SUMMER_2022_05_09_08, 'schedule':_ASYNCHRONOUS, 'time':'', 'finalExam':'Thursday, June 30', 'syllabusURL':'https://www.lewis.education/?cpsc=su22-cpsc-24700-lt1&hide-nav=y#/syllabus' },
 	{ 'classID':'fa22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':_FALL_2022_08_29_16, 'schedule':'MWF', 'finalExam':'Monday, December 13 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lnt2ybs1-syllabus-cpsc-20000-002.pdf' },
 	{ 'classID':'fa22-cpsc-20000-003', 'title':'Introduction to Computer Science', 'number':'20000', 'calendarID':_FALL_2022_08_29_16, 'schedule':'MWF', 'finalExam':'Friday, December 17 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lonr2vt9-syllabus-cpsc-20000-003.pdf' },
 	{ 'classID':'fa22-cpsc-24700-001', 'title':'Web and Distributed Programming', 'number':'24700', 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'3-3:50 PM', 'finalExam':'Friday, December 16 from 4 PM to 6 PM CT', 'syllabusURL':'https://www.lewis.education/?cpsc=fa22-cpsc-24700-001&hide-nav=y#/syllabus' },

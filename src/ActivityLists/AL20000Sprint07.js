@@ -3,9 +3,9 @@ import React from 'react'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
 import { healthRiskCalculatorWebOrPythonLink } from '../Activities/HealthRiskCalculator'
-import { oreillyPlaylistICS, internalLink } from '../data/Links'
+import { oreillyPlaylistICS, internalLink } from '../DataAndAPIs/Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
-import { getFinalExamDateAndTime } from '../data/Classes'
+import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 
 export const al20000Sprint07 = () => {
 	return ( <div>

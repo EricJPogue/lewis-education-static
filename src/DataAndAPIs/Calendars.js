@@ -2,7 +2,8 @@ export const _FALL_2022_08_29_16   = '2022-08-29-16'
 export const _SUMMER_2022_05_09_08 = '2022-05-09-08'
 const _SPRING_2022_01_10_16 = '2022-01-10-16'
 
-export const _CURRENT_CALENDAR = _SUMMER_2022_05_09_08
+//  _CURRENT_CALENDAR should be consistently updated to reflect the current (possibly upcoming) calendar.
+export const _CURRENT_CALENDAR = _FALL_2022_08_29_16
 
 export const getCalendarByCalendarID = (calendarID) => {
 	for (let i = 0; i < CALENDAR_LIST.length; i++) {

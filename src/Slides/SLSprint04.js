@@ -1,4 +1,4 @@
-import { getClass } from '../data/Classes'
+import { getClass } from '../DataAndAPIs/Classes'
 import { preflightChecklist, instructorChecklist, submissionPercentage, end } from './SLSprint00' // Shared slides.
 import { agendaSlide, orderedListSlide } from './SLSprint00' // Shared slide templates.
 import { sprintDemosIntro, sprintDemos, demoAssignment  } from './SLSprint00'

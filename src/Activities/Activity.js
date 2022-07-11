@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player'
 
-import { getClass } from '../data/Classes';
+import { getClass } from '../DataAndAPIs/Classes';
 
 import { routeActivity } from './ActivityRouter';
 

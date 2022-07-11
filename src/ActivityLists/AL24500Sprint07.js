@@ -5,10 +5,10 @@ import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } fr
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
 import { finalProjectLink } from '../Activities/FinalProject'
 // import { finalProjectSprint7Link } from '../Activities/FinalProject'
-import { oreillyPlaylistOOP, architecturePart1, internalLink } from '../data/Links'
+import { oreillyPlaylistOOP, architecturePart1, internalLink } from '../DataAndAPIs/Links'
 import { thunderbirdLink } from '../Activities/Thunderbird'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
-import { getFinalExamDateAndTime } from '../data/Classes'
+import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 
 export const al24500Sprint07 = ( props ) => {
 	return ( <div>

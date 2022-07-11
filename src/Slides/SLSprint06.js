@@ -1,4 +1,4 @@
-import { getClass } from '../data/Classes'
+import { getClass } from '../DataAndAPIs/Classes'
 
 import { basicSlide, bulletListSlide, orderedListSlide, end, submissionPercentage } from './SLSprint00'
 import { defaultDeck, agendaSlide, preworkSlide, quiz } from './SLSprint00'

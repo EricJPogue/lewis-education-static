@@ -3,7 +3,7 @@ import React from 'react'
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, ClosingSprint08 } from './AL00000Sprint05'
 import { finalProjectLink } from '../Activities/FinalProject'
-import { oreillyPlaylistICS } from '../data/Links'
+import { oreillyPlaylistICS } from '../DataAndAPIs/Links'
 
 export const al20000Sprint08 = () => {
 	return ( <div>

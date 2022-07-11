@@ -2,8 +2,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { JSONAndAJAXTutorial, RandomStrings, JSONExamples, JSONHostingExample, JSONHostingWebConfigExample, JSONIndex } from '../data/Links'
-import { AutocompleteAwesomplete, AutocompleteJQuery, AutocompletePixabay, AutocompleteW3CSchools } from '../data/Links'
+import { JSONAndAJAXTutorial, RandomStrings, JSONExamples, JSONHostingExample, JSONHostingWebConfigExample, JSONIndex } from '../DataAndAPIs/Links'
+import { AutocompleteAwesomplete, AutocompleteJQuery, AutocompletePixabay, AutocompleteW3CSchools } from '../DataAndAPIs/Links'
 
 export const Start_MustangVersion2 = () => { return (<div>Start working on {MustangVersion2NavLink()}</div>) }
 export const Complete_MustangVersion2 = () => { return (<div>Complete {MustangVersion2NavLink()} <sup>~8 hours</sup></div>) }

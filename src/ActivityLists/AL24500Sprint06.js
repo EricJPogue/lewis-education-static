@@ -2,7 +2,7 @@ import React from 'react'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
-import { oreillyPlaylistOOP, internalLink } from '../data/Links'
+import { oreillyPlaylistOOP, internalLink } from '../DataAndAPIs/Links'
 import { swissArmyKnifeV2Link } from '../Activities/SwissArmyKnife'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'

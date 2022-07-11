@@ -1,8 +1,8 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 
-import { getClasses } from '../data/Classes'
-import { getCurrentSprintByClassID } from '../data/ClientDataAPIs'
+import { getClasses } from '../DataAndAPIs/Classes'
+import { getCurrentSprintByClassID } from '../DataAndAPIs/ClientDataAPIs'
 
 export class Home extends React.Component {
 	// This method of rendering multiple row is described at the following link:

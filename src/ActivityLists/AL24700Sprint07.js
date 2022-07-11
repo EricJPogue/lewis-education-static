@@ -1,6 +1,6 @@
 import React from 'react'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
-import { oreillyPlaylistWeb, architecturePart1, fullStackJavaScriptW3C, externalLink, internalLink, programmingTogether } from '../data/Links'
+import { oreillyPlaylistWeb, architecturePart1, fullStackJavaScriptW3C, externalLink, internalLink, programmingTogether } from '../DataAndAPIs/Links'
 import { finalProjectDistributedLink } from '../Activities/FinalProject';
 
 export const al24700Sprint07 = () => {

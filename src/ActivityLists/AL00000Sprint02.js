@@ -5,7 +5,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { estimated } from './AL00000Sprint01'
 import { sprintEndDateWithoutTime } from '../CalendarAndSchedule/SprintDates'
-import { ExampleCode, programmingTogether, calendarLink, scheduleLink, codingStandards } from '../data/Links'
+import { ExampleCode, programmingTogether, calendarLink, scheduleLink, codingStandards } from '../DataAndAPIs/Links'
 
 export const LearningObjectivesIntro = () => { return ( <p>Let’s start with our Learning Objectives. By the end of sprint 2 we will be able to:</p>	) }
 

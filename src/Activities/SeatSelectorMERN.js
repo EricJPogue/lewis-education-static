@@ -2,7 +2,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { mern, firebase } from '../data/Links'
+import { mern, firebase } from '../DataAndAPIs/Links'
 import { makeInternalURL } from './ActivityRouter';
 import SeatSelectorSketch from './SeatSelectorSketch.png'
 import SeatSelectorPhoto from './SeatSelectorPhoto.png'

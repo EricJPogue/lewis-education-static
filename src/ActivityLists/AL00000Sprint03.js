@@ -7,7 +7,7 @@ import { estimated } from './AL00000Sprint01'
 import { sprintEndDateWithoutTime } from '../CalendarAndSchedule/SprintDates'
 
 import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
-import { calendarLink, scheduleLink, ExampleCode, codingStandards } from '../data/Links'
+import { calendarLink, scheduleLink, ExampleCode, codingStandards } from '../DataAndAPIs/Links'
 
 // Todo: Update dependant code and remove following function.
 export const StandardActivities = (programmingAssignment, playlist) => { 

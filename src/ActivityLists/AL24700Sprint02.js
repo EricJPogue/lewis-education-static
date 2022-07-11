@@ -2,7 +2,7 @@ import React from 'react'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, 
 	closing, estimated } from './AL00000Sprint00'
 
-import { oreillyPlaylistWeb, continuousIntegration, CSSW3C, internalLink, externalLink } from '../data/Links'
+import { oreillyPlaylistWeb, continuousIntegration, CSSW3C, internalLink, externalLink } from '../DataAndAPIs/Links'
 import { webResumeLink } from '../Activities/WebResume'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'

@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 
-import { getClass } from '../data/Classes'
+import { getClass } from '../DataAndAPIs/Classes'
 import { al } from './AL'
 import { displayPreviewStampIfNeeded } from './ALPreviewStamp'
 

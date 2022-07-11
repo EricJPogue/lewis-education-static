@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { makeInternalURL } from './ActivityRouter';
-import { deliveryDronePowerpoint } from '../data/Links';
+import { deliveryDronePowerpoint } from '../DataAndAPIs/Links';
 
 import DeliveryDronePhoto from './DeliveryDrone.png'
 

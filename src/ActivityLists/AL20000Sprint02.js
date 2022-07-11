@@ -7,8 +7,8 @@ import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, Initi
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { htmlLink } from '../Activities/HTML'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
-import { SequenceSelectionAndRepetition } from '../data/Links'
-import { oreillyPlaylistICS } from '../data/Links'
+import { SequenceSelectionAndRepetition } from '../DataAndAPIs/Links'
+import { oreillyPlaylistICS } from '../DataAndAPIs/Links'
 
 export const al20000Sprint02 = () => {
 	return ( <div>

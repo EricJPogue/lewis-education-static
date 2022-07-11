@@ -1,6 +1,6 @@
 import React from 'react'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
-import { oreillyPlaylistWeb, internalLink } from '../data/Links'
+import { oreillyPlaylistWeb, internalLink } from '../DataAndAPIs/Links'
 import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 

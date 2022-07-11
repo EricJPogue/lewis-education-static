@@ -4,7 +4,7 @@ import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } fr
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
 import { finalProjectSprint7Link } from '../Activities/FinalProject'
 import { introductionToReactLink } from '../Activities/IntroductionToReact'
-import { oreillyPlaylistSE, internalLink } from '../data/Links'
+import { oreillyPlaylistSE, internalLink } from '../DataAndAPIs/Links'
 
 export const al44000Sprint07 = () => {
 	return ( <div>

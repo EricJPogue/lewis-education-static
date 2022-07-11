@@ -3,7 +3,7 @@ import { estimated } from './AL00000Sprint01'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing  } from './AL00000Sprint05'
-import { oreillyPlaylistOOP, learningJavaExampleCode, jsonArticle, jsonW3CTutorial, internalLink } from '../data/Links';
+import { oreillyPlaylistOOP, learningJavaExampleCode, jsonArticle, jsonW3CTutorial, internalLink } from '../DataAndAPIs/Links';
 
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { swissArmyKnifeLink } from '../Activities/SwissArmyKnife'

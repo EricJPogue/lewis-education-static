@@ -4,7 +4,7 @@ import { estimated } from './AL00000Sprint01'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint04'
 
-import { oreillyPlaylistSE, internalLink, JSONWebServicesTutorial } from '../data/Links'
+import { oreillyPlaylistSE, internalLink, JSONWebServicesTutorial } from '../DataAndAPIs/Links'
 import { healthRiskCalculatorTeamWebLink } from '../Activities/HealthRiskCalculatorTeam'
 
 export const al44000Sprint04 = () => {

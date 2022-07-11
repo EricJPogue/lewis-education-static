@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-import { getClass } from '../data/Classes';
+import { getClass } from '../DataAndAPIs/Classes';
 
 export const CodingStandards = () => {
 	if (getClass().number === '20000') return CodingStandardsAbbreviated()

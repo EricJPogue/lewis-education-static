@@ -5,7 +5,7 @@ import { estimated } from './AL00000Sprint01'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint05'
 
-import { oreillyPlaylistICS, introducingPythonCodeExamples, programmingTogether, PythonW3C } from '../data/Links'
+import { oreillyPlaylistICS, introducingPythonCodeExamples, programmingTogether, PythonW3C } from '../DataAndAPIs/Links'
 import { turtledrawLink } from '../Activities/PythonTurtleDraw'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 

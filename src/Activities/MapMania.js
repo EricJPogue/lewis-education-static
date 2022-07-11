@@ -1,5 +1,5 @@
 import React from 'react'
-import { externalLink, internalLink } from '../data/Links'
+import { externalLink, internalLink } from '../DataAndAPIs/Links'
 import { azureWebsiteLink } from './AzureWebsite'
 import { makeActivityLink } from './ActivityLink'
 import { lionsTigersAndBearsLink } from './LionsTigerAndBears'

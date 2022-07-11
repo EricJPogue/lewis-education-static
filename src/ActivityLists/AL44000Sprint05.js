@@ -7,7 +7,7 @@ import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { finalProjectSprint5Link } from '../Activities/FinalProject'
 import { healthRiskCalculatorTeamWebLink } from '../Activities/HealthRiskCalculatorTeam'
 
-import { oreillyPlaylistSE, externalLink } from '../data/Links'
+import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
 import { estimated } from './AL00000Sprint01'
 
 export const al44000Sprint05 = () => {

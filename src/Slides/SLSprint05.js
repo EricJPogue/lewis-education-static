@@ -1,4 +1,4 @@
-import { getClass } from '../data/Classes'
+import { getClass } from '../DataAndAPIs/Classes'
 import { preworkSlide, progressPolling, quiz, basicSlideWithTitle  } from './SLSprint00'
 
 import { breakoutIntroducingPython6Through9 } from './Breakout'

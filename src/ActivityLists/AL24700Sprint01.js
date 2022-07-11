@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { internalLink, oreillyPlaylistWeb } from '../data/Links'
+import { internalLink, oreillyPlaylistWeb } from '../DataAndAPIs/Links'
 import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, 
 	standardActivitiesClosing, estimated, closing } from './AL00000Sprint00'
 
