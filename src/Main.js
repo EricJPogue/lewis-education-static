@@ -6,7 +6,7 @@ import { HeaderNavigation } from './HeaderNavigation'
 
 import { Home } from './Home'
 import { Welcome } from './Welcome'
-import { Syllabus } from './Syllabus' 
+import { Syllabus } from './Syllabi/Syllabus' 
 import { Sprint } from './Sprint'
 import { SprintCalendar } from './SprintCalendar'
 import { SprintClassActivities } from './SprintSchedule'
