@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { makeInternalURL } from './ActivityRouter'
-import { externalLink, agileAlliance, scrum, agileAllianceAgile101, productBacklog, sprintPlanning, sprintBacklog, userStory, userStoryTemplate, iNVEST, done } from '../Links'
+import { externalLink, agileAlliance, scrum, agileAllianceAgile101, productBacklog, sprintPlanning, sprintBacklog, userStory, userStoryTemplate, iNVEST, done } from '../data/Links'
 
 import { aidanLink } from './Aidan'
 import { arduinoDroneLink } from './ArduinoDrone'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { estimated } from '../ActivityLists/AL00000Sprint00'
-import { fullStackJavaScriptW3C, externalLink } from '../Links'
+import { fullStackJavaScriptW3C, externalLink } from '../data/Links'
 import { azureWebsiteLink } from './AzureWebsite'
 import { makeActivityLink } from './Activity'
 

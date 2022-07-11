@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
-import { oreillyPlaylistWeb, jsonW3CTutorial, ajaxW3CTutorial } from '../Links'
+import { oreillyPlaylistWeb, jsonW3CTutorial, ajaxW3CTutorial } from '../data/Links'
 import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
 import { mapManiaVersion1Link } from '../Activities/MapMania'
 

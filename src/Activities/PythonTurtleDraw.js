@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'
 import { makeInternalURL } from './ActivityRouter'
 
-import { PythonTurtleLibrary } from '../Links'
+import { PythonTurtleLibrary } from '../data/Links'
 import PythonTurtleDrawScreenShot from './PythonTurtleDrawScreenShot.png';
 
 

@@ -3,7 +3,7 @@ import React from 'react'
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesPlus, InitialPost, StandardActivitiesClosingPlus, ScrumIntro } from './AL00000Sprint01'
 import { ProgrammingActivity, ToolsOfTheTrade } from './ProgrammingAssignments'
 import { classProductSprint1Link } from '../Activities/ClassProduct'
-import { oreillyPlaylistSC } from '../Links'
+import { oreillyPlaylistSC } from '../data/Links'
 import { gettingToKnowEachOtherAbbreviatedLink } from '../Activities/WebGettingToKnowEachOtherAbbreviated'
 
 export const al49200Sprint01 = () => { return (

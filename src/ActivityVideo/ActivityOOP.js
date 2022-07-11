@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import { getClass } from './data/Classes';
+import { getClass } from '../data/Classes';
 
-import { baseLink, videoLink } from './Activity'
-import { designPrinciplesLink } from './Slides/Breakout';
+import { baseLink, videoLink } from '../Activity'
+import { designPrinciplesLink } from '../Slides/Breakout';
 
 const oopLink = (fileName) => {
 	return baseLink()+'object-oriented-programming/'+fileName

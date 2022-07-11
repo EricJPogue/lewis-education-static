@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { makeInternalURL } from './ActivityRouter'
-import { externalLink } from '../Links'
+import { externalLink } from '../data/Links'
 
 const SWISS_ARMY_KNIFE_NAME = 'SwissArmyKnife'
 export const SWISS_ARMY_KNIFE_ROUTE = 'swiss-army-knife-java'

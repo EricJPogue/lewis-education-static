@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro, Closing } from './AL00000Sprint01'
 import { ProgrammingActivity, ToolsOfTheTrade, HelloWorldWithPython } from './ProgrammingAssignments'
-import { oreillyPlaylistICS, CommandLine, IntroducingPythonSampleCode } from '../Links'
+import { oreillyPlaylistICS, CommandLine, IntroducingPythonSampleCode } from '../data/Links'
 
 export const al20000Sprint01 = () => {
 	const computerScienceIlluminated = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Computer Science Illuminated</a> ) }

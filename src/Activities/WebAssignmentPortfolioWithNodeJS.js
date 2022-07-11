@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { makeInternalURL } from './ActivityRouter'
 
 import ReactPlayer from 'react-player'
-import { ExampleCode } from '../Links'
+import { ExampleCode } from '../data/Links'
 
 const NAME = 'Assignment Portfolio with Node.js'
 export const ASSIGNMENT_PORTFOLIO_NODEJS_ROUTE = 'assignment-portfolio-nodejs'

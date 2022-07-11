@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { makeInternalURL } from './ActivityRouter'
 
-import { internalLink } from '../Links'
+import { internalLink } from '../data/Links'
 
 import BloodPressureImage from './HealthRiskCalculatorBloodPressure.png';
 import BodyMassIndexImage from './HealthRiskCalculatorBodyMassIndex.png';

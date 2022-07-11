@@ -1,5 +1,5 @@
 import React from 'react'
-import { internalLink, externalLink } from '../Links'
+import { internalLink, externalLink } from '../data/Links'
 import photo from './InfoEricPoguePhoto.png'
 
 export const InfoEricPogue = () => {

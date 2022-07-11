@@ -3,7 +3,7 @@ import React from 'react'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
 import { healthRiskCalculatorWebOrPythonLink } from '../Activities/HealthRiskCalculator'
-import { oreillyPlaylistICS, internalLink } from '../Links'
+import { oreillyPlaylistICS, internalLink } from '../data/Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { getFinalExamDateAndTime } from '../data/Classes'
 

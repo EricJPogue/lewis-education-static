@@ -2,7 +2,7 @@ import React from 'react'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialDiscussionPost, StandardActivitiesClosing } from './AL00000Sprint02'
 import { ovalDrawPlusJavaLink } from '../Activities/OvalDrawPlus';
-import { oreillyPlaylistOOP, umlClassDiagrams, gitCommands, successfulProgrammer, internalLink } from '../Links';
+import { oreillyPlaylistOOP, umlClassDiagrams, gitCommands, successfulProgrammer, internalLink } from '../data/Links';
 
 const shapesPart1 = () => { return internalLink('Shapes - Part 1', '/activity-oop/java-shapes-step1') }
 const shapesPart2 = () => { return internalLink('Shapes - Part 2', '/activity-oop/java-shapes-step2') }

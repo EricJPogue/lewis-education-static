@@ -7,7 +7,7 @@ import { estimated } from './AL00000Sprint01'
 
 import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
 
-import { calendarLink, scheduleLink, ExampleCode, codingStandards, gitCommands, internalLink } from '../Links'
+import { calendarLink, scheduleLink, ExampleCode, codingStandards, gitCommands, internalLink } from '../data/Links'
 
 export const StandardActivitiesWithLinkAndSprint = (sprint, programmingAssignmentLink, playlist, excludePreviousTopics) => { 
 	const tutoringOptions = () => { return internalLink('tutoring options', '/activity/study-table') }

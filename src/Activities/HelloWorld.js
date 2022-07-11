@@ -3,7 +3,7 @@ import React from 'react';
 import ReactPlayer from 'react-player'
 import { NavLink } from 'react-router-dom';
 
-import { programmingTogetherHelloWorldPython } from './../Panopto'
+import { programmingTogetherHelloWorldPython } from '../ActivityVideo/Panopto'
 
 export const HelloWorldJavaLink = () => {return (<NavLink to={JavaProperties.internalLink}>{JavaProperties.name}</NavLink>)}
 export const HelloWorldPythonLink = () => {return (<NavLink to={PythonProperties.internalLink}>{PythonProperties.name}</NavLink>)}

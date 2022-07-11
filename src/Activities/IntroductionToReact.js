@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { BASE_ACTIVITY_ROUTE } from './ActivityRouter'
-import { oreillyPlaylistSE, externalLink } from '../Links'
+import { oreillyPlaylistSE, externalLink } from '../data/Links'
 
 const renderIntroductionToReact = () => {
 	const reactOrg = () => { return externalLink('React.org', 'https://reactjs.org/') }

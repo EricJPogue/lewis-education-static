@@ -1,7 +1,7 @@
 import React from 'react'
 import { estimated } from './AL00000Sprint01'
 
-import { oreillyPlaylistSC, continuousIntegration, externalLink } from '../Links'
+import { oreillyPlaylistSC, continuousIntegration, externalLink } from '../data/Links'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialDiscussionPost, StandardActivitiesClosing } from './AL00000Sprint02'
 import { gettingToKnowEachOtherAbbreviatedLink } from '../Activities/WebGettingToKnowEachOtherAbbreviated'
@@ -9,7 +9,7 @@ import { gettingToKnowEachOthersTeamsLink } from '../Activities/WebGettingToKnow
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 import { classProductSprint2Link } from '../Activities/ClassProduct'
 
-import { HTMLW3C, CSSW3C, JavaScriptW3C } from '../Links'
+import { HTMLW3C, CSSW3C, JavaScriptW3C } from '../data/Links'
 
 // const cICDArticle = () => { return externalLink('What is CI/CD? Continuous integration and continuous delivery explained', 'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
 const jira = () => { return externalLink('Jira', 'https://www.atlassian.com/software/jira/guides/getting-started' )}

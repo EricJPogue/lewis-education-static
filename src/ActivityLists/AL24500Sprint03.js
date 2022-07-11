@@ -2,7 +2,7 @@ import React from 'react'
 
 import { estimated } from './AL00000Sprint01'
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivitiesWithLink, InitialPost, StandardActivitiesClosingWithLink, Closing } from './AL00000Sprint03'
-import { oreillyPlaylistOOP, internalLink, jsonArticle, jsonW3CTutorial } from '../Links';
+import { oreillyPlaylistOOP, internalLink, jsonArticle, jsonW3CTutorial } from '../data/Links';
 import { faceDrawJavaLink } from '../Activities/FaceDraw';
 
 export const gUIsInJava = () => { return internalLink('Graphical User Interfaces (GUIs) in Java', '/activity-oop/java-gui-programming') }

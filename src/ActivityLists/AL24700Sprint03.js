@@ -3,7 +3,7 @@ import React from 'react'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, 
 	closing } from './AL00000Sprint00'
 
-import { oreillyPlaylistWeb, JavaScriptW3C, jsonArticle, jsonW3CTutorial, ajaxW3CTutorial, internalLink } from '../Links'
+import { oreillyPlaylistWeb, JavaScriptW3C, jsonArticle, jsonW3CTutorial, ajaxW3CTutorial, internalLink } from '../data/Links'
 import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 

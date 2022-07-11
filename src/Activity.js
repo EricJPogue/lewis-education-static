@@ -35,7 +35,7 @@ import { WebMapManiaVersion2 } from './Activities/WebMapManiaVersion2'
 import { MustangVersion2 } from './Activities/MustangVersion2';
 import { MustangVersion3 } from './Activities/MustangVersion2';
 
-import { ProgrammingTogether } from './Panopto'
+import { ProgrammingTogether } from './ActivityVideo/Panopto'
 
 export const videoLink = (header, url) => {
 	return ( <div><h5>{header}</h5><ReactPlayer url={url} controls={true} width={1024} height={576} /></div> )

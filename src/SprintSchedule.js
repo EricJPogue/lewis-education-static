@@ -7,7 +7,7 @@ import { getFinalExamDateAndTime } from './data/Classes'
 import { getIsScheduleTTr, getIsScheduleOnline } from './data/Classes'
 import { getClass } from './data/Classes'
 import { getClassCalendar } from './data/Classes'
-import { internalLink } from './Links'
+import { internalLink } from './data/Links'
 
 export class SprintClassActivities extends Component {
 	// Todo: Update 'currentSprint()+1' to 'currentSprintBaseOne()'.

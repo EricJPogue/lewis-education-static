@@ -1,7 +1,0 @@
-https://info.microsoft.com/US-AzureAppInno-CATALOG-FY22-08Aug-03-Develop-JavaScript-Applications-with-the-Microsoft-Identity-Platform-SRDEM81911_Catalog-Display-Page.html
-
-https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/
-https://docs.microsoft.com/en-us/azure/active-directory/authentication/
-https://azure.microsoft.com/en-us/free/students/
-https://docs.microsoft.com/en-us/javascript/
-https://docs.microsoft.com/en-us/office365/customlearning/

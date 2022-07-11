@@ -5,7 +5,7 @@ import { Route, HashRouter } from 'react-router-dom';
 import { HeaderNavigation } from './HeaderNavigation'
 
 import { Home } from './Home'
-import { Welcome } from './Welcome'
+import { Welcome } from './ActivityVideo/Welcome'
 import { Syllabus } from './Syllabi/Syllabus' 
 import { Sprint } from './ActivityLists/Sprint'
 import { SprintCalendar } from './SprintCalendar'
@@ -21,11 +21,11 @@ import { Breakout } from './Slides/Breakout'
 
 import { Test } from './Test'
 import { Activity } from './Activity'
-import { ActivityConfig } from './ActivityConfig'
-import { ActivityOOP } from './ActivityOOP'
-import { ActivityWeb } from './ActivityWeb'
-import { ActivityDale } from './ActivityDale'
-import { ActivityArchitecture } from './ActivityArchitecture'
+import { ActivityConfig } from './ActivityVideo/ActivityConfig'
+import { ActivityOOP } from './ActivityVideo/ActivityOOP'
+import { ActivityWeb } from './ActivityVideo/ActivityWeb'
+import { ActivityDale } from './ActivityVideo/ActivityDale'
+import { ActivityArchitecture } from './ActivityVideo/ActivityArchitecture'
 
 class Main extends Component {
 	render() {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { getClass } from './data/Classes';
 
-import { baseLink, videoLink } from './Activity'
+import { getClass } from '../data/Classes';
+import { baseLink, videoLink } from '../Activity'
 
 const architectureLink = (fileName) => {
 	return baseLink()+'web-and-distributed-programming/'+fileName

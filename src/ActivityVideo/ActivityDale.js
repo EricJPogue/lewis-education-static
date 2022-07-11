@@ -1,13 +1,12 @@
 // Dale chapter lecture sessions with embedded video and links to slides provided below.
 import React, { Component } from 'react'
 
-import { getClass } from './data/Classes'
+import { getClass } from '../data/Classes'
 
 import { daleLectureVideo } from './Panopto'
 import { daleLectureSlidesURL } from './AzureStorage'
-import { daleDiscussion3Link } from './Slides/Breakout'
-import { daleDiscussion4Link } from './Slides/Breakout'
-import { daleDiscussion13Link, daleDiscussion15Link } from './Slides/Breakout'
+
+import { daleDiscussion3Link, daleDiscussion4Link, daleDiscussion13Link, daleDiscussion15Link } from '../Slides/Breakout'
 
 export class ActivityDale extends Component {
 	getDiscussionLink = (chapter) => { 

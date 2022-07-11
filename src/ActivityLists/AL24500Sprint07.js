@@ -5,7 +5,7 @@ import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } fr
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
 import { finalProjectLink } from '../Activities/FinalProject'
 // import { finalProjectSprint7Link } from '../Activities/FinalProject'
-import { oreillyPlaylistOOP, architecturePart1, internalLink } from '../Links'
+import { oreillyPlaylistOOP, architecturePart1, internalLink } from '../data/Links'
 import { thunderbirdLink } from '../Activities/Thunderbird'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { getFinalExamDateAndTime } from '../data/Classes'

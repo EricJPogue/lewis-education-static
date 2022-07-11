@@ -2,7 +2,7 @@ import React from 'react'
 
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, ClosingSprint08 } from './AL00000Sprint05'
-import { oreillyPlaylistOOP, architecturePart2 } from '../Links'
+import { oreillyPlaylistOOP, architecturePart2 } from '../data/Links'
 import { finalProjectLink } from '../Activities/FinalProject'
 
 export const al24500Sprint08 = ( props ) => {

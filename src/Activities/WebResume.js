@@ -3,7 +3,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { makeInternalURL } from './ActivityRouter'
 
-import { ResumeFormat, ResumeReviewServices, internalLink } from '../Links'
+import { ResumeFormat, ResumeReviewServices, internalLink } from '../data/Links'
 
 const NAME = 'Web Resume'
 export const WEB_RESUME_ROUTE = 'web-resume'

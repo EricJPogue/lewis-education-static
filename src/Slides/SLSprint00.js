@@ -2,7 +2,7 @@ import React from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { getClass, getClassIDfromURL } from '../data/Classes'
-import { externalLink } from '../Links'
+import { externalLink } from '../data/Links'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
 export const CHECKLIST_ROUTE = 'checklist'

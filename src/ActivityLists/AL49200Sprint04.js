@@ -1,7 +1,7 @@
 import React from 'react'
 import { estimated } from './AL00000Sprint01'
 
-import { oreillyPlaylistSC, externalLink } from '../Links'
+import { oreillyPlaylistSC, externalLink } from '../data/Links'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint04'

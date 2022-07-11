@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink, Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether, successfulProgrammer } from '../Links'
+import { ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink, Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether, successfulProgrammer } from '../data/Links'
 import { getFinalExamDateAndTime } from '../data/Classes'
 import { sprintEndDateWithoutTime } from '../SprintDates'
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
-import { oreillyPlaylistSE, AzureFunctionsWithVSCodeAndJavaScript, ServerlessAzure, ServerlessGoogle, ServerlessAWS } from '../Links'
+import { oreillyPlaylistSE, AzureFunctionsWithVSCodeAndJavaScript, ServerlessAzure, ServerlessGoogle, ServerlessAWS } from '../data/Links'
 import { finalProjectSprint6Link } from '../Activities/FinalProject'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 

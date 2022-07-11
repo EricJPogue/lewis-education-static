@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { unrealEngine, unity, revit } from '../Links';
+import { unrealEngine, unity, revit } from '../data/Links';
 
 import AidanFlyer from './AidanFlyer.png'
 

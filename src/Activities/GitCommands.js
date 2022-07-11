@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { getClass } from '../data/Classes'
-import { Git, GitTutorial, GitHub } from '../Links'
+import { Git, GitTutorial, GitHub } from '../data/Links'
 
 export const GetCommandsLink = () => {return (<NavLink to={internalLink}>{name}</NavLink>)}
 const internalLink = '/activity/git-commands'

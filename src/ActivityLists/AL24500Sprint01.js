@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 import { LearningObjectivesIntro, ActivitiesListIntro, StandardActivities, InitialPost, StandardActivitiesClosing, ScrumIntro } from './AL00000Sprint01'
-import { oreillyPlaylistOOP } from '../Links';
+import { oreillyPlaylistOOP } from '../data/Links';
 
 import { GetCommandsLink } from '../Activities/GitCommands';
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade';
