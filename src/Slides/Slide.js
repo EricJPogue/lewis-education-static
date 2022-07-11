@@ -1,5 +1,5 @@
 import React from 'react'
-import { getClassIDfromURL } from '../data/ClientDataAPIs'
+import { getClassIDfromURL } from '../data/Classes'
 import { getCurrentSprintBase1 } from '../data/ClientDataAPIs'
 
 import LewisUniversityLogo from './LewisUniversityLogo.png'

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player'
 
-import { getCourseTitle } from './data/ClientDataAPIs';
+import { getClass } from './data/Classes';
+
 import { routeActivity } from './Activities/ActivityRouter';
 
 import { SeatSelector } from './Activities/SeatSelector'
@@ -200,7 +201,7 @@ class Activity extends Component {
 	render() {
 		return (
 			<div>
-				<h4>{getCourseTitle()}</h4>
+				<h4>{getClass().title}</h4>
 				{this.activity()}
 			</div>
 		)

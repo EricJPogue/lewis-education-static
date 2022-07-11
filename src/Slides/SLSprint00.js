@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 
-import { getClassIDfromURL, getCourseTitle } from '../data/ClientDataAPIs'
+import { getClass, getClassIDfromURL } from '../data/Classes'
 import { externalLink } from '../Links'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
@@ -18,7 +18,7 @@ export const preflightChecklist = () => {
 		{renderLogo()}
 		{bulletListSlide(
 			'Preflight Checklist',
-			`In preparation for ${getCourseTitle()}:`, [
+			`In preparation for ${getClass().title}:`, [
 			'Sign into our Blackboard course shell',
 			'Sign into our Zoom session through the Zoom link in our Blackboard course shell',
 			'Make sure that you can hear the conversation, see shared desktops, and view chat topics',
@@ -40,7 +40,7 @@ export const instructorChecklist = () => {
 		{renderLogo()}
 		{bulletListSlide(
 			'Instructor Checklist',
-			`In preparation for ${getCourseTitle()} / ${getClassIDfromURL()}`, [
+			`In preparation for ${getClass().title} / ${getClassIDfromURL()}`, [
 			'Load polls as needed',
 			'Set camera, microphone, and speakers',
 			'Share desktop in Zoom session',

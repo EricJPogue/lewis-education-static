@@ -2,7 +2,7 @@ import React from 'react'
 import Table from 'react-bootstrap/Table'
 import LewisUniversityLogo from '../Slides/LewisUniversityLogo.png'
 
-import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
+import { getFinalExamDateAndTime } from '../data/Classes'
 
 const instructor = { 
 	name:'Eric Pogue', 

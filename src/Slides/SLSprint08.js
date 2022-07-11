@@ -1,4 +1,4 @@
-import { getCourseNumber } from '../data/ClientDataAPIs'
+import { getClass } from '../data/Classes'
 
 import { checklist } from './SLSprint00' // Shared slide decks.
 import { preflightChecklist, instructorChecklist, activitiesReview, submissionPercentage, end } from './SLSprint00' // Shared slides.
@@ -11,7 +11,7 @@ import { list24500Sprint08 } from '../ActivityLists/AL24500Sprint08'
 import { list44000Sprint08 } from '../ActivityLists/AL44000Sprint08'
 
 export const sprint8Router = (route) => {
-	const courseNumberPlusRoute = getCourseNumber() + '-' + route
+	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
 		case ICS_8_1of6_ROUTE: return ics8_1of6()
 		case ICS_8_2of6_ROUTE: return ics8_2of6()

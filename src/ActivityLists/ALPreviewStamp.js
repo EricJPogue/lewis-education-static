@@ -1,6 +1,6 @@
 import React from 'react'
 import { pastDate } from '../SprintDates'
-import { getCalendar } from '../data/ClientDataAPIs'
+import { getClassCalendar } from '../data/Classes'
 
 // Todo: Review licensing of preview stamp.
 import ALPreviewStamp from './ALPreviewStamp.png'
@@ -10,7 +10,7 @@ export const displayPreviewStampIfNeeded = (activityListSprint) => {
 		return (null)
 	}
 
-	let calendar = getCalendar() 
+	let calendar = getClassCalendar() 
 	let dates = calendar[activityListSprint-1]
 
 	// If the sprint has not started, place the preview stamp on the page.

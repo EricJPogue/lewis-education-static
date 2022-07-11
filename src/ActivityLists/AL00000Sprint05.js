@@ -1,8 +1,10 @@
+// Depreciated: 06/27/2022
+// Update to utilize AL0000Sprint00.js
 
 import React from 'react'
 import { estimated } from './AL00000Sprint01'
 import { programmingTogether, ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink } from '../Links'
-import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
+import { getFinalExamDateAndTime } from '../data/Classes'
 import { sprintEndDateWithoutTime } from '../SprintDates'
 
 export const FinalProjectsAndMoreResponsibility = () => {

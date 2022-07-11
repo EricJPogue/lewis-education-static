@@ -1,7 +1,8 @@
 // Dale chapter lecture sessions with embedded video and links to slides provided below.
 import React, { Component } from 'react'
 
-import { getCourseTitle } from './data/ClientDataAPIs'
+import { getClass } from './data/Classes'
+
 import { daleLectureVideo } from './Panopto'
 import { daleLectureSlidesURL } from './AzureStorage'
 import { daleDiscussion3Link } from './Slides/Breakout'
@@ -24,7 +25,7 @@ export class ActivityDale extends Component {
 		const slidesURL = daleLectureSlidesURL(chapter)
 		return (
 			<div>
-				<h4>{getCourseTitle()}</h4>
+				<h4>{getClass().title}</h4>
 				<h5>“Computer Science Illuminated” Chapter {chapter} Lecture</h5>
 				{daleLectureVideo(chapter)}
 				<br />

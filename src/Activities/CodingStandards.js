@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-import { getCourseNumber } from '../data/ClientDataAPIs';
+import { getClass } from '../data/Classes';
 
 export const CodingStandards = () => {
-	if (getCourseNumber() === 20000) return CodingStandardsAbbreviated()
+	if (getClass().number === '20000') return CodingStandardsAbbreviated()
 	return (
 
 <div>

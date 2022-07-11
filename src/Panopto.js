@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { getCourseTitle, getSyllabusURL } from './data/ClientDataAPIs';
-import { getClassIDfromURL } from './data/ClientDataAPIs'
+import { getClass, getClassIDfromURL } from './data/Classes'
 import { Blended, externalLink, scrumIn7Min } from './Links'
 
 const panoptoWelcomeIFrameTag2022Summer = () => {
@@ -10,7 +9,7 @@ const panoptoWelcomeIFrameTag2022Summer = () => {
 
 export const welcome2022Summer = () => {
 	return ( <div>
-		<h4>{getCourseTitle()}</h4>
+		<h4>{getClass().title}</h4>
 		<h5>Welcome to Lewis University Summer 2022!</h5>
 		<p style={{marginTop:'20px'}}>Please take a few minutes to view your summer 2022 welcome message.</p>
 		<IFrameComponent iframe={panoptoWelcomeIFrameTag2022Summer()} />
@@ -32,7 +31,7 @@ const panoptoWelcomeIFrameTag2022Spring = () => {
 
 export const welcome2022Spring = () => {
 	return ( <div>
-		<h4>{getCourseTitle()}</h4>
+		<h4>{getClass().title}</h4>
 		<h5>Welcome to Lewis University Spring 2022 Semester!</h5>
 		<p style={{marginTop:'20px'}}>Please take a few minutes to view your spring 2022 welcome message.</p>
 		<IFrameComponent iframe={panoptoWelcomeIFrameTag2022Spring()} />
@@ -43,7 +42,7 @@ export const welcome2022Spring = () => {
 			<li>{Blended()}</li>
 			<li>{scrumIn7Min()}</li> 
 		</ul>
-		Finally, you will want to take a look at our course <a href={getSyllabusURL() /* classSyllabusURL() */}>syllabus</a> and obtain the 
+		Finally, you will want to take a look at our course <a href={getClass().syllabusURL}>syllabus</a> and obtain the 
 		items identified in the “IV. Course Materials.”
 		</div> )
 }

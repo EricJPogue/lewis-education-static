@@ -1,8 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { getCourseNumber } from '../data/ClientDataAPIs' 
-
-import { internalLink, externalLink } from '../Links';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { getClass } from '../data/Classes'
+import { internalLink, externalLink } from '../Links'
 
 import { Discord, OReillyBooks, Firefox, Chrome, VSCode, FileExplorer, Finder, ZipFiles, Office365, PowerShell, Terminal, ScreenCapture, Git, 
 	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, microsoftOpenJDK, JavaTutorial, Go, grammarly, mongoDBAtlas, firebase, CommandLine } from '../Links'
@@ -17,42 +16,42 @@ const link = '/activity/tools'
 const name = 'Tools of the Trade'
 export const Tools = () => {
 	const checkNodeJS = () => {
-		if ((getCourseNumber() === 24700) || (getCourseNumber() === 44000) || (getCourseNumber() === 49200)) {
+		if ((getClass().number === '24700') || (getClass().number === '44000') || (getClass().number === '49200')) {
 			return ( <li>{NodeJS()} development environment</li> )
 		}
 		return null
 	}
 
 	const checkJava = () => {
-		if (getCourseNumber() === 24500) {
+		if (getClass().number === '24500') {
 			return ( <li>{microsoftOpenJDK()} development environment reviewing the associated {JavaTutorial()}</li> )
 		}
 		return null
 	}
 
 	const checkGo = () => {
-		if (getCourseNumber() === 36000) {
+		if (getClass().number === '36000') {
 			return ( <li>{Go()} development environment</li> )
 		}
 		return null
 	}
 
 	const checkFirebase = () => {
-		if (getCourseNumber() === 49200) {
+		if (getClass().number === '49200') {
 			return ( <li>{firebase()} application hosting service</li> )
 		}
 		return null
 	}
 
 	const checkMongoDBAtlas = () => {
-		if (getCourseNumber() === 49200) {
+		if (getClass().number === '49200') {
 			return ( <li>{mongoDBAtlas()} database hosting service</li> )
 		}
 		return null
 	}
 
 	const checkGrammarly = () => {
-		if (getCourseNumber() === 49200) {
+		if (getClass().number === '49200') {
 			return ( <li>{grammarly()} writing assistant / validator</li> )
 		}
 		return null

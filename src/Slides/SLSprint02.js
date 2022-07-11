@@ -1,11 +1,11 @@
-import { getCourseNumber } from '../data/ClientDataAPIs'
+import { getClass } from '../data/Classes'
 import { checklist } from './SLSprint00' // Shared slide decks.
 import { preflightChecklist, instructorChecklist, submissionPercentage, end } from './SLSprint00' // Shared slides.
 import { basicSlideWithTitleLink, agendaSlide, orderedListSlide } from './SLSprint00' // Shared slide templates.
 import { sprintDemosIntro, sprintDemos, demoAssignment  } from './SLSprint00'
 
 export const sprint2Router = (route) => {
-	const courseNumberPlusRoute = getCourseNumber() + '-' + route
+	const courseNumberPlusRoute = getClass().number + '-' + route
 	console.log(courseNumberPlusRoute)
 	switch(courseNumberPlusRoute) {
 		case WEB_8_2of6_ROUTE: return web8_2of6()

@@ -1,10 +1,13 @@
+// Depreciated: 06/27/2022
+// Update to utilize AL0000Sprint00.js
+
 // Sprint 1 is focused on installing and configuring industry standard developer tools which is included in the  
 // “Tools of the Trade” programming activity.
 
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { getSyllabusURL } from '../data/ClientDataAPIs'
+import { getClass } from '../data/Classes'
 import { ProgrammingAssignmentToLink, ProgrammingActivity } from './ProgrammingAssignments'
 import { Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether } from '../Links'
 import { sprintEndDateWithoutTime } from '../SprintDates'
@@ -48,7 +51,7 @@ export const StandardActivitiesPlus = (programmingAssignmentLink) => {
 	return ( <div>
 
 <li>Maintain a laser focus on due dates by reviewing our class {sprint1Calendar(1)} and sprint 1 {sprint1Schedule()}</li>
-<li>Review our course <a href={getSyllabusURL()}>syllabus</a></li>
+<li>Review our course <a href={getClass().syllabusURL}>syllabus</a></li>
 <li>Understand blended learning by watching {Blended()}</li>
 <li>Be prepared to participate in your scrum team by watching {scrumIn7Min()}</li>
 <li><em>Review sprint 1 assignments including Lab 1, Quiz 1, Discussion 1, and Reflection 1</em></li>

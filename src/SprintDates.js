@@ -1,4 +1,4 @@
-import { getCalendar } from './data/ClientDataAPIs'
+import { getClassCalendar } from './data/Classes'
 
 export const CSTDate = (dateIn, includeYear, includeTime) => {
 	var months = ['January','February','March','April','May','June','July', 'August',
@@ -54,17 +54,17 @@ export const pastDate = (checkDate) => {
 }
 
 export const sprintStartDate = (sprintNumber) => {
-	let sprintCalendar = getCalendar()
+	let sprintCalendar = getClassCalendar()
 	return CSTDate(sprintCalendar[sprintNumber].start,false,false)
 }
 
 export const sprintEndDate = (sprintNumber) => {
-	let sprintCalendar = getCalendar()
+	let sprintCalendar = getClassCalendar()
 	return CSTDate(sprintCalendar[sprintNumber].end,false,true)
 }
 
 export const sprintEndDateWithoutTime = (sprintNumber) => {
-	let sprintCalendar = getCalendar()
+	let sprintCalendar = getClassCalendar()
 	return CSTDate(sprintCalendar[sprintNumber].end,false,false)
 }
 

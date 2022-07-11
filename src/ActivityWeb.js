@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { getCourseTitle } from './data/ClientDataAPIs';
-
-
+import { getClass } from './data/Classes';
 import { baseLink, videoLink } from './Activity'
 
 const webLink = (fileName) => {
@@ -17,7 +15,7 @@ export class ActivityWeb extends Component {
 	render() {
 		return (
 			<div>
-				<h4>{getCourseTitle()}</h4>
+				<h4>{getClass().title}</h4>
 				{this.activity()}
 			</div>
 		)

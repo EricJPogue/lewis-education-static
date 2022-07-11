@@ -1,3 +1,5 @@
+// Depreciated: 06/27/2022
+// Update to utilize AL0000Sprint00.js
 
 import React from 'react'
 import { NavLink } from 'react-router-dom'

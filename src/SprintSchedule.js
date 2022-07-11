@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { CSTDate, incrementDate, isToday, pastDate, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
-import { getCalendar, getCourseTitle, getFinalExamDateAndTime, getIsScheduleTTr, getIsScheduleOnline } from './data/ClientDataAPIs'
+import { getFinalExamDateAndTime } from './data/Classes'
+
+import { getIsScheduleTTr, getIsScheduleOnline } from './data/Classes'
+import { getClass } from './data/Classes'
+import { getClassCalendar } from './data/Classes'
 import { internalLink } from './Links'
 
 export class SprintClassActivities extends Component {
@@ -30,7 +34,7 @@ export class SprintClassActivities extends Component {
 		let sprint = this.currentSprint()+1
 		return( 
 		<div>
-			<h4>{getCourseTitle()}</h4>
+			<h4>{getClass().title}</h4>
 			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <u><em>{sprintEndDateWithoutTime(sprint-1)} at 11:59 PM CT.</em></u></p>
 			<h5 style={{marginTop:'32px', color: "grey"}} onClick={() => this.headerClicked(sprint)}>Calendar | <span style={{color: "black"}}>Schedule</span></h5>
 		</div>	
@@ -117,7 +121,7 @@ export class SprintClassActivities extends Component {
 			default: schedule = this.MWFSchedule
 		}
 
-		const calendar = getCalendar()
+		const calendar = getClassCalendar()
 		const dates = calendar[this.currentSprint()]
 		return (
 			<div>
@@ -176,7 +180,7 @@ export class SprintClassActivities extends Component {
 			default: schedule = this.TTSchedule
 		}
 
-		let calendar = getCalendar()
+		let calendar = getClassCalendar()
 		let dates = calendar[this.currentSprint()]
 		return (
 			<div>

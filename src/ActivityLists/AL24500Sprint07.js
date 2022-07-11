@@ -8,7 +8,7 @@ import { finalProjectLink } from '../Activities/FinalProject'
 import { oreillyPlaylistOOP, architecturePart1, internalLink } from '../Links'
 import { thunderbirdLink } from '../Activities/Thunderbird'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
-import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
+import { getFinalExamDateAndTime } from '../data/Classes'
 
 export const al24500Sprint07 = ( props ) => {
 	return ( <div>

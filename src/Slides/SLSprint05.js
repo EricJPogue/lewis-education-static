@@ -1,5 +1,4 @@
-import { getCourseNumber } from '../data/ClientDataAPIs'
-
+import { getClass } from '../data/Classes'
 import { preworkSlide, progressPolling, quiz, basicSlideWithTitle  } from './SLSprint00'
 
 import { breakoutIntroducingPython6Through9 } from './Breakout'
@@ -11,7 +10,7 @@ import { preflightChecklist, instructorChecklist, submissionPercentage, agendaSl
 	sprintDemosIntro, sprintDemos, demoAssignment, end } from './SLSprint00' // Shared slides.
 
 export const sprint5Router = (route) => {
-	const courseNumberPlusRoute = getCourseNumber() + '-' + route
+	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
 		case WEB_5_2of6_ROUTE: return web5_2of6()
 		default: return null

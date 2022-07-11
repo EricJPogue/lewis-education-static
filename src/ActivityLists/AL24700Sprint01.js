@@ -51,6 +51,7 @@ export const list24700Sprint01 = () => {
 
 // Certified for SU22 (05/09/2022)
 
+// Todo: Update and improve all Lab Demos to include more appropriate content.
 // Todo: Update syllabus with Activity List headers... or update Activity list headers. 
 // Todo: Review Quiz 1 as it may have wrong settings. I'm not certain.
 // Todo: Remove scrum team Lab question for online classes. Or better yet, modify the question so that it works for both types of classes. 

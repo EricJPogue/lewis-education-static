@@ -1,20 +1,19 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 
-import { getCurrentClasses } from './data/ClientDataAPIs'
+import { getClasses } from './data/Classes'
 import { getCurrentSprintByClassID } from './data/ClientDataAPIs'
 
 export class Home extends React.Component {
 	// This method of rendering multiple row is described at the following link:
 	//     https://dev.to/abdulbasit313/an-easy-way-to-create-a-customize-dynamic-table-in-react-js-3igg
-	renderTableBody = () => {
-		let currentClasses = getCurrentClasses()
+
+	renderTableBody = (currentClasses) => {
 		return currentClasses.map((currentClass, index) => {
 			const { classID, title, schedule, time } = currentClass
 			return (
 				<tr key={classID}>
 					<td><a href= {`/?cpsc=${classID}#/sprint/${getCurrentSprintByClassID(classID)}`}>{title}</a></td>
-					{/*<td><a href= {`/?cpsc=${classID}#/sprint/1`}>{title}</a></td>*/}
 					<td>{classID}</td>
 					<td>{schedule}</td>
 					<td>{time}</td>
@@ -23,12 +22,8 @@ export class Home extends React.Component {
 		})
 	}
 
-	render = () => {
-		return (
-			<div>
-			<h4>Lewis.education</h4>
-			<p>The following classes are currently available from Eric Pogue at Lewis.education.</p><br />
-
+	renderClassTable = (currentClasses) => {
+		return ( <div>
 			<h5>Classes</h5>
 			<Table striped bordered hover>
 				<thead>
@@ -40,12 +35,19 @@ export class Home extends React.Component {
 					</tr>
 				</thead>
 				<tbody>
-					{this.renderTableBody()}
+					{this.renderTableBody(currentClasses)}
 				</tbody>
 			</Table>
+		</div> 	)
+	}
 
-			Looking for classes from previous semesters, check <a href='https://www.lewis.education/#/test/me'>here</a>.
-			</div>
-		)
+	render = () => {
+		const classes = getClasses()
+		return ( <div>
+			<h4>Lewis.education</h4>
+			<p>The following classes are available from Eric Pogue at Lewis.education.</p>
+			{this.renderClassTable(classes)}<br />
+		</div> )
 	}
 }
+

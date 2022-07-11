@@ -5,7 +5,7 @@ import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkA
 import { healthRiskCalculatorWebOrPythonLink } from '../Activities/HealthRiskCalculator'
 import { oreillyPlaylistICS, internalLink } from '../Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
-import { getFinalExamDateAndTime } from '../data/ClientDataAPIs'
+import { getFinalExamDateAndTime } from '../data/Classes'
 
 export const al20000Sprint07 = () => {
 	return ( <div>
