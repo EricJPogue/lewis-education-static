@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react'
 
-import { getClass } from './data/Classes'
-import { al } from './ActivityLists/AL'
-import { displayPreviewStampIfNeeded } from './ActivityLists/ALPreviewStamp'
+import { getClass } from '../data/Classes'
+import { al } from './AL'
+import { displayPreviewStampIfNeeded } from './ALPreviewStamp'
 
 export class Sprint extends Component {
 	render = () => {
@@ -19,4 +19,3 @@ export class Sprint extends Component {
 
 	}
 }
-

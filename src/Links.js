@@ -148,8 +148,3 @@ export const externalLink = (displayName, url) => {
 export const internalLink = (displayName, url) => {
 	return ( <NavLink to={url}>{displayName}</NavLink> )
 }
-
-/* 
-Depreciated links:
-	<NavLink to='/activity-config/mscode-and-chrome-windows10-setup'>[video]</NavLink>
-*/
