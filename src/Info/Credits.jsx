@@ -8,13 +8,13 @@ class Credits extends React.Component {
 
 <div>
 	<h4>Lewis.education</h4>
-	<h5>Developed by Eric Pogue <NavLink to="/info">[link]</NavLink></h5>
+	<h5>Developed by <NavLink to="/info">Eric Pogue</NavLink></h5>
 
 	 <pre>{`
 
 	The MIT License
 
-	Copyright (c) 2021 Eric Pogue
+	Copyright (c) 2022 Eric Pogue
 
 	Permission is hereby granted, free of charge, 
 	to any person obtaining a copy of this software and 

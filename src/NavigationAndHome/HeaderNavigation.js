@@ -39,6 +39,8 @@ class HeaderNavigation extends Component {
 								<NavDropdown.Item href='#sprint/7'>Sprint 7</NavDropdown.Item>
 								<NavDropdown.Item href='#sprint/8'>Sprint 8</NavDropdown.Item>
 								<NavDropdown.Divider />
+								<NavDropdown.Item href='#syllabus'>Syllabus</NavDropdown.Item>
+								<NavDropdown.Divider />
 								<NavDropdown.Item href='#calendar/0'>Calendar</NavDropdown.Item>
 							</NavDropdown>
 							<NavDropdown title='Help' id='basic-nav-dropdown'>
@@ -51,7 +53,6 @@ class HeaderNavigation extends Component {
 								<NavDropdown.Divider />
 								<NavDropdown.Item href='#credits'>Credits</NavDropdown.Item>
 							</NavDropdown>
-						{/*<Nav.Link href='#credits'>Credits</Nav.Link>*/}
 						</Nav>
 						</Navbar.Collapse>
 					</Navbar>

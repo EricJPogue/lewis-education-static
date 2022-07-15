@@ -1,4 +1,4 @@
-import { _CPSC_20000, _CPSC_24700, _INSTRUCTOR } from './SyllabiData'
+import { _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_44000, _INSTRUCTOR } from './SyllabiData'
 import { syllabus } from './SyllabiShared'
 
 const _CPSC_SECTION_DEFAULT_FALL_22 = {
@@ -26,7 +26,15 @@ export const fa22_cpsc_24700_001 = () => {
 	return syllabus(_CPSC_24700, cpsc_24700_003, _INSTRUCTOR)
 }
 
+export const fa22_cpsc_44000_001 = () => {
+	let cpsc_44000_001 = _CPSC_SECTION_DEFAULT_FALL_22
+	cpsc_44000_001.section = '001'
+	return syllabus(_CPSC_44000, cpsc_44000_001, _INSTRUCTOR)
+}
 
-
-
+export const cpsc_24500 = () => {
+	let cpsc_24500 = _CPSC_SECTION_DEFAULT_FALL_22
+	cpsc_24500.section = 'XXX'
+	return syllabus(_CPSC_24500, cpsc_24500, _INSTRUCTOR)
+}
 
