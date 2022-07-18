@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-import { getClass } from '../DataAndAPIs/Classes';
+import { getClass } from '../DataAndAPIs/Classes'
+import { makeInternalURL } from './ActivityRouter';
 
 export const CodingStandards = () => {
 	if (getClass().number === '20000') return CodingStandardsAbbreviated()
@@ -90,6 +91,11 @@ software development.</p>
 
 	);
 }
+
+const CODING_STANDARDS_VALIDATOR_NAME = 'Coding Standards Validator - Part 1'
+export const CODING_STANDARDS_VALIDATOR_ROUTE = 'coding-standards-validator'
+export const codingStandardsValidatorLink = () => {return (<NavLink to={makeInternalURL(CODING_STANDARDS_VALIDATOR_ROUTE)}>{CODING_STANDARDS_VALIDATOR_NAME}</NavLink>)}
+export const codingStandardsValidator = () => { return CodingStandardsValidator() }
 
 export const CodingStandardsValidator = () => {
 	return (

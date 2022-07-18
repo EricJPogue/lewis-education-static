@@ -199,7 +199,7 @@ const sprintPlanning = () => {
 
 const CURRENT_SPRINT_ACTIVITY_LIST_ROUTE = 'current-sprint-activity-list'
 const currentSprintActivityList = () => {
-	window.location.assign(`?cpsc=${getClassIDfromURL()}#/sprint/${getCurrentSprintBase1()}`);
+	window.location.assign(`?cpsc=${getClassIDfromURL()}#/sprint/${getCurrentSprintBase1()}`)
 }
 
 const renderLogo = () => {

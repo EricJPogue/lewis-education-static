@@ -134,12 +134,6 @@ export const OvalDrawPlusWithJava = {
 	'estimate':'~4 hours'
 }
 
-export const CodingStandardsValidatorPart1 = {
-	'name':'“Coding Standards Validator - Part 1”',
-	'link':'/activity/coding-standards-validator',
-	'estimate':'~8 hours'
-}
-
 export const CodingStandardsValidatorPart2 = {
 	'name':'“Coding Standards Validator - Part 2”',
 	'link':'/activity/coding-standards-validator',

@@ -24,7 +24,7 @@ export const al24700Sprint01 = () => {
 		</ul>
 
 		{list24700Sprint01(sprint)}
-		{closing()}
+		{closing(sprint)}
 	</div> )
 }
 
@@ -40,7 +40,7 @@ export const list24700Sprint01 = (sprint) => {
 			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
 			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Preface, Chapter 1, and Chapter 2</li>
 
-			{initialPost()}
+			{initialPost(sprint)}
 			<li>Read chapter 1 of Sebesta and review the associated {sebestaChapter1Lecture()}</li>
 			<li>Complete {htmlLink()} - Part 1</li>
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}

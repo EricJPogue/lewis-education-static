@@ -18,7 +18,7 @@ import { MosaicWeb, MosaicReact, MosaicV2React } from './Mosaic'
 import { Tools } from './ToolsOfTheTrade'
 import { Repository } from './Repository'
 
-import { CodingStandards, CodingStandardsValidator } from './CodingStandards'
+import { CodingStandards /*, CodingStandardsValidator*/ } from './CodingStandards'
 import { QuizMaster } from './QuizMaster'
 import { GitCommands } from './GitCommands'
 
@@ -88,7 +88,7 @@ class Activity extends Component {
 			case 'tools': return Tools()
 			case 'repository': return Repository()
 			case 'coding-standards': return CodingStandards()
-			case 'coding-standards-validator': return CodingStandardsValidator()
+			// case 'coding-standards-validator': return CodingStandardsValidator()
 			case 'quiz-master': return QuizMaster()
 
 			case 'git-commands': return GitCommands()
