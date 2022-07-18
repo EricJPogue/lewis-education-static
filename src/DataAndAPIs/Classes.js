@@ -9,7 +9,11 @@ export const getIsScheduleOnline = () => {
 }
 
 export const getFinalExamDateAndTime = () => {
-	return getClass().finalExam
+	const course = getClass()
+	if (course === null) {
+		return ''
+	}
+	return course.finalExam
 }
 
 export const getClasses = () => {
@@ -34,6 +38,9 @@ export const getClassCalendar = () => { return getCalendarByCalendarID(getClass(
 
 export const getClass = () => {
 	const classID = getClassIDfromURL()
+	if (classID  === '') {
+		return null
+	}
 	return getClassByClassID(classID)
 }
 
@@ -44,7 +51,7 @@ export const getClassByClassID = (classID) => {
 		}
 	}
 
-	console.log('Error: Class not found (class= '+classID+').')
+	console.log('Error: Class not found (class= “'+classID+'”).')
 	return classList[0]
 }
 

@@ -110,12 +110,6 @@ export const MatchmakerForTheWeb = {
 	'estimate':'~6 hours'
 }
 
-export const MatchmakerWithGo = {
-	'name':'“Matchmaker with Go”',
-	'link':'/activity/matchmaker-go',
-	'estimate':'~6 hours'
-}
-
 export const HealthRiskCalculatorPython = {
 	'name':'Health Insurance Risk Calculator with Python',
 	'link':'/activity/health-risk-calculator-python',

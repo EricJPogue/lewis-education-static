@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { internalLink } from '../DataAndAPIs/Links'
 import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, estimated, closing } from './AL00000Sprint00'
+import { internalLink } from '../DataAndAPIs/Links'
+
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
@@ -58,7 +59,7 @@ export const list44000Sprint01 = (sprint) => {
 			{initialPost(sprint)}
 
 			<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated {foxChapter2Lecture()}</li>
-			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
+			<li>Complete {toolsOfTheTradeLink()}{estimated('2 hours')}</li>
 			<li>Complete {HelloWorldPythonLink()}{estimated('1 hour')}</li>
 
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}

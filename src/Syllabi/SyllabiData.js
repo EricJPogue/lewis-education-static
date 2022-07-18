@@ -179,6 +179,58 @@ export const _CPSC_24700 = {
 		'Final Project'
 	]
 }
+export const _CPSC_36000 = {
+	name:'Applied Programming Languages',
+	id:'CPSC-36000',
+	number: 36000,
+	creditHours:3,
+	description: 
+		`This course exposes students to a variety of current programming languages that are not the focus of other 
+		courses in the major. The goal of the course is to increase students' programming skills while helping them 
+		develop good programming methodology and style. This course also gives students experience using code management 
+		systems and working on open-source programming projects.`,
+	prerequisites:'CPSC-24500 Object-Oriented Programming',
+	meetingTimes:'This course in online and asynchronous',
+	meetingDates:'[[Update]] MWF 2-2:50 PM CT from Aug 30th through Dec 11th',
+	meetingLocation:'Online',
+	finalExamTime: `${getFinalExamDateAndTime()}`,
+	learningOutcomes:[
+		'create moderately complex applications using multiple programming languages and frameworks',
+		'improve programming style through effective coding standards', 
+		'optimizing programming, testing, enhancements, and fixes through modularization',
+		'write well-documented, easy-to-understand, clearly organized code that others may extend',
+		'use source code management tools to coordinate changes and create high quality releases',
+		'implement defect tracking to manage and prioritize a backlog of application improvements',
+		'use debuggers and profilers to analyze, troubleshoot, and enhance code',
+		'utilize scripting to automate build, testing, and deployment tasks',
+		'effectively work on software applications with small teams',
+		'develop and implement unit tests and integration tests',
+		'contribute to open-source programming projects'
+	],
+	programOutcomes:[
+		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
+		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
+		{'value':3, outcome:'work in a team to design and implement complex data processing systems collaboratively'},
+		{'value':7, outcome:'explain how programming languages are designed and implemented'}
+	],
+	baccalaureateCharacteristics:[
+		{'value':1, outcome:'Essential Skills'},
+		{'value':2, outcome:'Major Approaches to Knowledge'},
+		{'value':6, outcome:'Critical Thinking'},
+		{'value':7, outcome:'Lifelong Learning'}
+	],
+	textBook: 'Reading assignments well be made from the O’Reilly online book service which Lewis University provides to students at no cost.',
+	modules: [
+		'Programing Languages, Object-Oriented Programming (OOP) Concepts, Getting Started with Go',
+		'OOP Patterns and Principles, Functional Programming, Configuration Management, Structs, Interfaces, and Packages',
+		'Inheritance and Polymorphism, Classes (including Constructors and Destructors), Exceptions, Templates, Overloading, and Testing',
+		'Concurrency and Next Steps',
+		'Web Development with HTML, CSS, JavaScript, React plus Final Project Proposal',
+		'Cloud Computing with Microsoft Azure, Azure Functions, Final Project Proposal Review and Updates',
+		'Containers, More React, Final Project – Version 0',
+		'Application Architecture, Even More React, Final Project – Version 1'
+	]
+}
 
 export const _CPSC_44000 = {
 	name:'Software Engineering',
@@ -218,7 +270,7 @@ export const _CPSC_44000 = {
 		{'value':1, outcome:'Essential Skills'},
 		{'value':6, outcome:'Critical Thinking'}
 	],
-	textBook: 'Programming the World Wide Web 8th Edition, Robert W. Sebesta, Addison-Wesley, 2015 (ISBN 978-0-13-377598-3). This book is required for this course.',
+	textBook: 'Fox and Patterson. Engineering Software as a Service: An Agile Approach Using Cloud Computing.  ISBN: 978-0984881246.',
 	modules: [
 		'Introduction to Agile software development, Software as a Service, and Cloud Computing',
 		'Overview of Ruby, JavaScript, and Node.js',
@@ -228,5 +280,64 @@ export const _CPSC_44000 = {
 		'Project Management & Scaled Agile, Live Scrum Team adding Metrics, and Testing',
 		'Security and Live Scrum Team',
 		'Software Architecture, Final Project, Live Scrum Team'
+	]
+}
+
+export const _CPSC_49200 = {
+	name:'Software Engineering',
+	id:'CPSC-49200',
+	number: 49200,
+	creditHours:3,
+	description: 
+		`In this course, students will participate, as part of a team, in the design,
+		implementation and testing of a medium-to-large software project. Additionally, this
+		course will cover topics in professional ethics, intellectual properties, privacy and
+		professional communication.`,
+	prerequisites:'CPSC-44000 Software Engineering',
+	meetingTimes:'This course in online and asynchronous',
+	meetingDates:'[[Update]] MWF 2-2:50 PM CT from Aug 30th through Dec 11th',
+	meetingLocation:'Online',
+	finalExamTime: `${getFinalExamDateAndTime()}`,
+	learningOutcomes:[
+		'Conduct a review of software code for a software project',
+		'Write a software component that performs non-trivial tasks and is resilient to input and run-time errors',
+		'Identify the biases within software that runs within our institutions',
+		'Articulate the political ramifications of software that is used within our local and global communities',
+		'Collaborate in a team setting, in helping to develop a high-grade software product',
+		'Work with professional software development tools',
+		'Effectively document their role in the creation of a software product',
+		'Explain privacy and regulation issues relating to developing and using software',
+		'Explain the different kinds of software licenses and how they define and protect intellectual property',
+		'Provide examples of the role of ethics in code, and in how people use code',
+		'Apply code management skills within a team',
+		'Appropriately to share code within a repository',
+		'Apply software engineering concepts to a software work',
+		'Effectively present their product as a team',
+		'Document the usage of the product so partners can understand how to implement the product within their business/community',
+		'Write clear, concise and accurate technical documents following well defined standards'
+	],
+	programOutcomes:[
+		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
+		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
+		{'value':7, outcome:'explain how programming languages are designed and implemented'},
+		{'value':9, outcome:'Work in a team to design and implement complex data processing systems collaboratively.'}
+		// BugBug: Update value of 9 to reflect actual outcome number.
+	],
+	baccalaureateCharacteristics:[
+		{'value':1, outcome:'Essential Skills'},
+		{'value':2, outcome:'Major Approaches to Knowledge'},
+		{'value':6, outcome:'Critical Thinking'},
+		{'value':7, outcome:'Lifelong Learning'}
+	],
+	textBook: 'Various readings from O’Reilly Books which is available free to you through Lewis University. ',
+	modules: [
+		'Agile Software Development, Scrum Team Assignments, Product Development and Configuration Management',
+		'Continuous Integration / Continuous Delivery,Software as a Service (SaaS) / Cloud Computing, Product Development and Continuous Delivery',
+		'Testing and Test-Driven Development, MERN Stack or equivalent, Product Development and Testing-Driven Development',
+		'User Support and User Recruiting, Kanban, Product Development with Support and Users',
+		'Usability, Usability Testing, Product Development with User Led Demos',
+		'User and Team Metrics, Continuous Improvement, Full Product Development',
+		'Software Product Sustainability, Product Swap with Evaluation, Full Product Development',
+		'Full Product Development, Product Presentations, Product Handoff'
 	]
 }

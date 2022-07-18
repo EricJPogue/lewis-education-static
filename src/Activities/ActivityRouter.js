@@ -29,6 +29,7 @@ import { HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE, healthRiskCalculatorTeamWeb } fr
 import { LIONS_TIGERS_AND_BEARS_ROUTE, lionsTigersAndBears } from './LionsTigerAndBears'
 import { MAP_MANIA_V1_ROUTE, mapManiaVersion1 } from './MapMania'
 import { MAP_MANIA_V2_ROUTE, mapManiaVersion2 } from './MapMania'
+import { MATCHMAKER_GO_ROUTE, matchmakerGo } from './Matchmaker'
 import { MATCHMAKER_JAVA_ROUTE, matchmakerJava } from './Matchmaker'
 import { MATCHMAKER_PYTHON_ROUTE, matchmakerPython } from './Matchmaker'
 import { MATCHMAKER_WEB_ROUTE, matchmakerWeb } from './Matchmaker'
@@ -87,6 +88,7 @@ export const routeActivity = (activityRoute) => {
 		case LIONS_TIGERS_AND_BEARS_ROUTE: return lionsTigersAndBears()
 		case MAP_MANIA_V1_ROUTE: return mapManiaVersion1()
 		case MAP_MANIA_V2_ROUTE: return mapManiaVersion2()
+		case MATCHMAKER_GO_ROUTE: return matchmakerGo()
 		case MATCHMAKER_JAVA_ROUTE: return matchmakerJava()
 		case MATCHMAKER_PYTHON_ROUTE: return matchmakerPython()
 		case MATCHMAKER_WEB_ROUTE: return matchmakerWeb()

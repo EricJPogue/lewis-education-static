@@ -13,11 +13,16 @@ export const MATCHMAKER_WEB_ROUTE = 'matchmaker-web'
 export const matchmakerWebLink = () => {return (<NavLink to={makeInternalURL(MATCHMAKER_WEB_ROUTE)}>{MATCHMAKER_WEB_NAME}</NavLink>)}
 export const matchmakerWeb = () => { return Matchmaker(MatchmakerWebProperties) }
 
-
 const MATCHMAKER_JAVA_NAME = 'Matchmaker for Java'
 export const MATCHMAKER_JAVA_ROUTE = 'matchmaker-java'
 export const matchMakerJavaLink = () => {return (<NavLink to={makeInternalURL(MATCHMAKER_JAVA_ROUTE)}>{MATCHMAKER_JAVA_NAME}</NavLink>)}
 export const matchmakerJava = () => { return MatchmakerJava() }
+
+const MATCHMAKER_GO_NAME = 'Matchmaker for Go'
+export const MATCHMAKER_GO_ROUTE = 'matchmaker-java'
+export const matchMakerGoLink = () => {return (<NavLink to={makeInternalURL(MATCHMAKER_GO_ROUTE)}>{MATCHMAKER_GO_NAME}</NavLink>)}
+export const matchmakerGo = () => { return MatchmakerGo() }
+
 
 export const MatchmakerWeb = ()    => { return Matchmaker(MatchmakerWebProperties) }
 export const MatchmakerJava = ()   => { return Matchmaker(MatchmakerJavaProperties) }
