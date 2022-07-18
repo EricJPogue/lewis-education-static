@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { estimated } from './AL00000Sprint01'
+import { estimated } from './AL00000Sprint00'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
 import { finalProjectLink } from '../Activities/FinalProject'

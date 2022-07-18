@@ -27,8 +27,10 @@ class HeaderNavigation extends Component {
 						<Navbar.Collapse id='basic-navbar-nav'>
 						<Nav className='mr-auto'>
 						<Nav.Link href='#home'>Lewis.education</Nav.Link>
-							<NavDropdown title='Activity Lists' id='basic-nav-dropdown'>
+							<NavDropdown title='Course Content' id='basic-nav-dropdown'>
 								<NavDropdown.Item href='#welcome'>Welcome</NavDropdown.Item>
+								<NavDropdown.Divider />
+								<NavDropdown.Item href='#syllabus'>Syllabus</NavDropdown.Item>
 								<NavDropdown.Divider />
 								<NavDropdown.Item href='#sprint/1'>Sprint 1</NavDropdown.Item>
 								<NavDropdown.Item href='#sprint/2'>Sprint 2</NavDropdown.Item>
@@ -39,8 +41,7 @@ class HeaderNavigation extends Component {
 								<NavDropdown.Item href='#sprint/7'>Sprint 7</NavDropdown.Item>
 								<NavDropdown.Item href='#sprint/8'>Sprint 8</NavDropdown.Item>
 								<NavDropdown.Divider />
-								<NavDropdown.Item href='#syllabus'>Syllabus</NavDropdown.Item>
-								<NavDropdown.Divider />
+
 								<NavDropdown.Item href='#calendar/0'>Calendar</NavDropdown.Item>
 							</NavDropdown>
 							<NavDropdown title='Help' id='basic-nav-dropdown'>

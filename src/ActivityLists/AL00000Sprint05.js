@@ -2,7 +2,7 @@
 // Update to utilize AL0000Sprint00.js
 
 import React from 'react'
-import { estimated } from './AL00000Sprint01'
+import { estimated } from './AL00000Sprint00'
 import { programmingTogether, ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink } from '../DataAndAPIs/Links'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 import { sprintEndDateWithoutTime } from '../CalendarAndSchedule/SprintDates'

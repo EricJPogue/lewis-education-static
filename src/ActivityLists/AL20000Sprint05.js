@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { estimated } from './AL00000Sprint01'
+import { estimated } from './AL00000Sprint00'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { FinalProjectsAndMoreResponsibility, StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint05'
