@@ -83,9 +83,9 @@ export const syllabus = (course, courseSection, instructor) => {
 				{row(['', 'Description:'])}
 				<tr><td></td><td colSpan={2}>{course.description}</td></tr>
 				{row(['', 'Prerequisites:', course.prerequisites])}
-				{row(['', 'Course Meeting Times:', course.meetingTimes])}
-				{row(['', 'Course Meeting Dates:', course.meetingDates])}
-				{row(['', 'Meeting Location:', course.meetingLocation])}
+				{row(['', 'Course Meeting Times:', courseSection.meetingTimes])}
+				{row(['', 'Course Meeting Dates:', courseSection.meetingDates])}
+				{row(['', 'Meeting Location:', courseSection.meetingLocation])}
 				{row(['', 'Course Final:', course.finalExamTime])}
 				<tr>
 					<td></td>

@@ -57,6 +57,8 @@ export const list20000Sprint01 = (sprint) => {
 }
 
 // BugBug: Remove second Discussion Board from sprint 1.
-// Todo: Consider starting with Web development and then moving to Python. 
+
+// Todo: Review/update syllabus and verify office hours (maybe move them earlier on Thursday so that you could pick up Amelia)
+// Todo: Move Web development up to sprint 1 and move Python back to sprint 3 (including quiz questions and assignments). 
 // BugBug: Fix true/false and duplicate questions in Quiz 8.
 // Todo: Add zipped source code requirement to all Final Project presentation assignments.

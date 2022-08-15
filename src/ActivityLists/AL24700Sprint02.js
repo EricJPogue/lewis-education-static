@@ -52,6 +52,9 @@ export const list24700Sprint02 = (sprint) => {
 	</div> )
 }
 
+// Todo: Update and improve all Lab Demo assignments to include more appropriate content.
+
+
 // Certified for SU22 (05/13/2022)
 
 // Todo: Add request for Web Resume direct link to Lab 2. 

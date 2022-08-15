@@ -7,12 +7,6 @@ export const _INSTRUCTOR = {
 	lewisEmail:'epogue@lewisu.edu' 
 }
 
-export const _CALENDAR = {
-	officeHours:'Thursday 2:30 to 4 PM CT by appointment',
-	appointmentRequests:'Appointments can be requested via email',
-	description:'Fall 2022'
-}
-
 // BugBug: meetingLocation needs to be updated and possibly included in class data.
 // Todo: Figure out where the master list of program outcomes and baccalaureate characteristics reside. 
 
@@ -28,8 +22,6 @@ export const _CPSC_20000 = {
 		images, and sound. Students will learn the basics of programming and computational problem solving.`,
 	prerequisites:'none',
 	meetingTimes:'This course in online and asynchronous',
-	meetingDates:'This class starts Monday, May 9th and ends Thursday, June 30th',
-	meetingLocation:'Online',
 	finalExamTime: `${getFinalExamDateAndTime()}`,
 	learningOutcomes:[
 		'Use abstraction to simplify a problem to its essential elements',
@@ -81,8 +73,6 @@ export const _CPSC_24500 = {
 		manage threads and networking connections in software they write.`,
 	prerequisites:'CPSC-21000 Programming Fundamentals',
 	meetingTimes:'This course in online and asynchronous',
-	meetingDates:'This class starts Monday, May 9th and ends Thursday, June 30th',
-	meetingLocation:'Online',
 	finalExamTime: `${getFinalExamDateAndTime()}`,
 	learningOutcomes:[
 		'solve problems by writing programs using standard language elements',
@@ -144,8 +134,6 @@ export const _CPSC_24700 = {
 		cloud hosting, web services, and database programming.`,
 	prerequisites:'CPSC-20000 Introduction to Computer Science',
 	meetingTimes:'This course in online and asynchronous',
-	meetingDates:'This class starts Monday, May 9th and ends Thursday, June 30th',
-	meetingLocation:'Online',
 	finalExamTime: `${getFinalExamDateAndTime()}`,
 	learningOutcomes:[
 		'understand the Internet, the Web, Web programming, and distributed computing',
@@ -191,8 +179,6 @@ export const _CPSC_36000 = {
 		systems and working on open-source programming projects.`,
 	prerequisites:'CPSC-24500 Object-Oriented Programming',
 	meetingTimes:'This course in online and asynchronous',
-	meetingDates:'[[Update]] MWF 2-2:50 PM CT from Aug 30th through Dec 11th',
-	meetingLocation:'Online',
 	finalExamTime: `${getFinalExamDateAndTime()}`,
 	learningOutcomes:[
 		'create moderately complex applications using multiple programming languages and frameworks',
@@ -244,8 +230,6 @@ export const _CPSC_44000 = {
 		software project management.`,
 	prerequisites:'CPSC-24500 Object-Oriented Programming',
 	meetingTimes:'This course in online and asynchronous',
-	meetingDates:'[[Update]] MWF 2-2:50 PM CT from Aug 30th through Dec 11th',
-	meetingLocation:'Online',
 	finalExamTime: `${getFinalExamDateAndTime()}`,
 	learningOutcomes:[
 		'compare and contrast various software process models',
@@ -295,8 +279,6 @@ export const _CPSC_49200 = {
 		professional communication.`,
 	prerequisites:'CPSC-44000 Software Engineering',
 	meetingTimes:'This course in online and asynchronous',
-	meetingDates:'[[Update]] MWF 2-2:50 PM CT from Aug 30th through Dec 11th',
-	meetingLocation:'Online',
 	finalExamTime: `${getFinalExamDateAndTime()}`,
 	learningOutcomes:[
 		'Conduct a review of software code for a software project',
