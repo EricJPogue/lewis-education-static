@@ -86,7 +86,7 @@ export const syllabus = (course, courseSection, instructor) => {
 				{row(['', 'Course Meeting Times:', courseSection.meetingTimes])}
 				{row(['', 'Course Meeting Dates:', courseSection.meetingDates])}
 				{row(['', 'Meeting Location:', courseSection.meetingLocation])}
-				{row(['', 'Course Final:', course.finalExamTime])}
+				{row(['', 'Course Final:', courseSection.finalExam])}
 				<tr>
 					<td></td>
 					<td colSpan={2}>
@@ -259,13 +259,13 @@ const renderCourseScheduleTable = (modules) => {
 
 	const renderModule = (moduleNumber, topics) => {
 		if (moduleNumber < 4) { 
-			return renderModuleTableRow(moduleNumber, topics, `Lab ${moduleNumber}, Quiz ${moduleNumber}, Discussion ${moduleNumber}, and Reflection ${moduleNumber}`) 
+			return renderModuleTableRow(moduleNumber, topics, `Discussion ${moduleNumber}, Quiz ${moduleNumber}, Lab ${moduleNumber}, and Reflection ${moduleNumber}`) 
 		} else if (moduleNumber < 7 ) {
-			return renderModuleTableRow(moduleNumber, topics, 'Lab, Quiz, Discussion, and Reflection') 
+			return renderModuleTableRow(moduleNumber, topics, 'Discussion, Quiz, Lab, and Reflection') 
 		} else if (moduleNumber === 7 ) {
-			return renderModuleTableRow(moduleNumber, topics, 'Lab, Quiz, Discussion, Reflection, and Lab Demo') 
+			return renderModuleTableRow(moduleNumber, topics, 'Discussion, Quiz, Lab, Reflection, and Lab Demo') 
 		} else if (moduleNumber > 7 ) {
-			return renderModuleTableRow(moduleNumber, topics, 'Lab, Quiz, Discussion, Reflection, and Final Project Presentation') 
+			return renderModuleTableRow(moduleNumber, topics, 'Discussion, Quiz, Lab, Reflection, and Final Project Presentation') 
 		}
 	}
 	return ( <div>

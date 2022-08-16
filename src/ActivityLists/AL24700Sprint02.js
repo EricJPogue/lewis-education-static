@@ -53,6 +53,7 @@ export const list24700Sprint02 = (sprint) => {
 }
 
 // Todo: Update and improve all Lab Demo assignments to include more appropriate content.
+// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
 
 
 // Certified for SU22 (05/13/2022)

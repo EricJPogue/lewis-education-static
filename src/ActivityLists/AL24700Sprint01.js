@@ -6,10 +6,14 @@ import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOt
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
 
+import { getModuleDescription } from '../DataAndAPIs/Classes'
+
 export const al24700Sprint01 = () => {
 	const sprint = 1
+	const moduleDescription = getModuleDescription(sprint)
+
 	return ( <div>
-		<h5>Sprint 1: The Internet, the Web, HTML, and Tools of the Trade</h5>
+		<h5>Sprint 1: {moduleDescription}</h5>
 		<p><em>Welcome to Web and Distributed Programming!</em> I am looking forward to working with you in the coming 
 		weeks to deliver high quality and interesting software applications.</p>
 
@@ -29,8 +33,8 @@ export const al24700Sprint01 = () => {
 }
 
 export const list24700Sprint01 = (sprint) => {
-	const sebestaChapter1Lecture = () => internalLink('lecture', '/activity/sebesta-chapter-01')
-	const sebestaChapter2Lecture = () => internalLink('lecture', '/activity/sebesta-chapter-02')
+	const sebestaChapter1Lecture = () => internalLink('chapter 1 lecture', '/activity/sebesta-chapter-01')
+	const sebestaChapter2Lecture = () => internalLink('chapter 2 lecture', '/activity/sebesta-chapter-02')
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
@@ -38,18 +42,19 @@ export const list24700Sprint01 = (sprint) => {
 			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Preface, Chapter 1, and Chapter 2</li>
 			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
 			<li>Read chapter 2 of “Programming The World Wide Web” (Sebesta)</li>
-			<li>Review our “Programming The World Wide Web” (Sebesta) chapter 2 {sebestaChapter2Lecture()}</li>
+			<li>Review our “Programming The World Wide Web” (Sebesta) {sebestaChapter2Lecture()}</li>
 
 			{initialPost(sprint)}
-			<li>Read chapter 1 of Sebesta and review the associated chapter 1 {sebestaChapter1Lecture()}</li>
+			<li>Read chapter 1 of Sebesta and review the associated {sebestaChapter1Lecture()}</li>
 			<li>Complete {htmlLink()} - Part 1</li>
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
 		</ol>
 	</div> )
 }
 
-// Certified for SU22 (05/09/2022)
+// Certified for FA22 (08/16/22)
+// Todo: Consider removing Sebesta book by:
+//     (1) recreating required material that is only available from the book and 
+//     (2) by updating quizzes. 
 
-// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
-// Todo: Modify assignment order in Syllabus Course Schedule to be to match Activities List order (Discussion, Quiz, Lab, and Reflection).
-// Todo: Consider removing Sebesta book while recreating any required material that is only available from the book (i.e. Internet and Web). 
+

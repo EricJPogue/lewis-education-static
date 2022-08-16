@@ -1,6 +1,4 @@
-
-import { getClass } from '../DataAndAPIs/Classes'
-import { _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from './SyllabiData'
+import { getClassSection, _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from '../DataAndAPIs/Classes'
 import { syllabus } from './SyllabiShared'
 
 const makeDefaultClassSection = () => {
@@ -12,9 +10,10 @@ const makeDefaultClassSection = () => {
 		meetingLocation:'Arts and Sciences AS 104A' // The meetingLocation value may need to be overridden.
 	}
 
-	const classSection = getClass()
+	const classSection = getClassSection()
 	defaultClassSection.section = classSection.section
 	defaultClassSection.meetingTimes = `${classSection.schedule} ${classSection.time}`
+	defaultClassSection.finalExam = classSection.finalExam
 	return defaultClassSection
 }
 

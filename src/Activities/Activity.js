@@ -8,7 +8,7 @@ import { routeActivity } from './ActivityRouter';
 import { SeatSelector } from './SeatSelector'
 import { StudyTable } from './StudyTable'
 import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './HelloWorld'
-import { /*MatchmakerWeb, MatchmakerJava, MatchmakerGo,*/ MatchmakerExamples } from './Matchmaker';
+import { MatchmakerExamples } from './Matchmaker';
 import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './HealthRiskCalculator'
 
 import { ExampleCode } from './ExampleCode'
@@ -18,7 +18,7 @@ import { MosaicWeb, MosaicReact, MosaicV2React } from './Mosaic'
 import { Tools } from './ToolsOfTheTrade'
 import { Repository } from './Repository'
 
-import { CodingStandards /*, CodingStandardsValidator*/ } from './CodingStandards'
+import { CodingStandards } from './CodingStandards'
 import { QuizMaster } from './QuizMaster'
 import { GitCommands } from './GitCommands'
 
@@ -88,7 +88,6 @@ class Activity extends Component {
 			case 'tools': return Tools()
 			case 'repository': return Repository()
 			case 'coding-standards': return CodingStandards()
-			// case 'coding-standards-validator': return CodingStandardsValidator()
 			case 'quiz-master': return QuizMaster()
 
 			case 'git-commands': return GitCommands()
@@ -100,9 +99,6 @@ class Activity extends Component {
 			case 'hello-world-go': return HelloWorldGo()
 			case 'hello-world-web': return HelloWorldWeb()
 
-			// case 'matchmaker-web': return MatchmakerWeb()
-			// case 'matchmaker-java': return MatchmakerJava()
-			// case 'matchmaker-go': return MatchmakerGo()
 			case 'matchmaker-examples': return MatchmakerExamples()
 
 			case 'example-code': return ExampleCode()
