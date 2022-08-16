@@ -35,13 +35,13 @@ export const list24700Sprint01 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
-			<li>Read chapter 2 of “Programming The World Wide Web” (Sebesta)</li>
-			<li>Review our “Programming The World Wide Web” (Sebesta) {sebestaChapter2Lecture()}</li>
-			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
 			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Preface, Chapter 1, and Chapter 2</li>
+			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
+			<li>Read chapter 2 of “Programming The World Wide Web” (Sebesta)</li>
+			<li>Review our “Programming The World Wide Web” (Sebesta) chapter 2 {sebestaChapter2Lecture()}</li>
 
 			{initialPost(sprint)}
-			<li>Read chapter 1 of Sebesta and review the associated {sebestaChapter1Lecture()}</li>
+			<li>Read chapter 1 of Sebesta and review the associated chapter 1 {sebestaChapter1Lecture()}</li>
 			<li>Complete {htmlLink()} - Part 1</li>
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
 		</ol>
@@ -51,10 +51,5 @@ export const list24700Sprint01 = (sprint) => {
 // Certified for SU22 (05/09/2022)
 
 // Todo: Update syllabus with Activity List headers... or update Activity list headers. 
-// Todo: Review Quiz 1 as it may have wrong settings. I'm not certain.
-// Todo: Remove scrum team Lab question for online classes. Or better yet, modify the question so that it works for both types of classes. 
-// Todo: Update Lab example cut/past to reflect actual requirement.
-// Todo: Add copy/paste requirement to lab questions. 
-// Todo: Remove 'part1' from the zip file name.
 // Todo: Modify assignment order in Syllabus Course Schedule to be to match Activities List order (Discussion, Quiz, Lab, and Reflection).
 // Todo: Consider removing Sebesta book while recreating any required material that is only available from the book (i.e. Internet and Web). 
