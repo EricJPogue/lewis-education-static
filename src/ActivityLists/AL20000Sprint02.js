@@ -57,3 +57,5 @@ const list20000Sprint02 = (sprint) => {
 // Todo: Move “Learning Web Development” above Part 1 of the HTML tutorial.
 // Todo: Consider adding Git/GitHub activity / tutorial. 
 // Todo: Consider lining up certain discussion topics with Friendly Conversation Topics.
+// BugBug: Fix true/false and duplicate questions in Quiz 8.
+// Todo: Add zipped source code requirement to all Final Project presentation assignments.

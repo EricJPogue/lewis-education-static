@@ -56,12 +56,6 @@ export const list20000Sprint01 = (sprint) => {
 	</div> )
 }
 
-// BubBug: Review Programming Together playlists "https://www.lewis.education/?cpsc=20000-fall-2021-002#/activity/programming-together"
 // Todo: Update Lab example cut/past to reflect actual requirement.
-
-// BugBug: Remove second Discussion Board from sprint 1.
-
-// Todo: Review/update syllabus and verify office hours (maybe move them earlier on Thursday so that you could pick up Amelia)
 // Todo: Move Web development up to sprint 1 and move Python back to sprint 3 (including quiz questions and assignments). 
-// BugBug: Fix true/false and duplicate questions in Quiz 8.
-// Todo: Add zipped source code requirement to all Final Project presentation assignments.
+
