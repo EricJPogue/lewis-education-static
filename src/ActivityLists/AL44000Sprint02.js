@@ -9,6 +9,7 @@ import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 import { webResumeLink } from '../Activities/WebResume'
 
+const foxChapter2Lecture = () => internalLink('lecture', '/activity/fox-chapter-02')
 const foxChapter3Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-03')}
 const foxChapter6Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-06')}
 
@@ -31,6 +32,7 @@ much code. This sprint get your text editors out. We are going to start practici
 {ActivitiesListIntro()}
 <ol>
 	{StandardActivities(assignmentPortfolioLink())}
+	<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated {foxChapter2Lecture()}</li>
 	<li>Read “Engineering Software as a Service” chapter 6 and review our chapter 6 {foxChapter6Lecture()}</li>
 	<li>Complete {azureWebsiteLink()}{estimated('2 hours')}</li>
 	<li>Scan “Engineering Software as a Service” chapters 3 through 5 and review the associated {foxChapter3Lecture()}</li>
@@ -47,6 +49,7 @@ much code. This sprint get your text editors out. We are going to start practici
 </div> )
 }
 
+// Todo: After moving chapter 2 to sprint to we need to reconsider moving other readings back
 // Todo: Remove all multiple selection multiple choice questions for quiz 2 and any other quizzes.
 // Todo: Add lots of links from the Agile Alliance to various activity lists.
 // Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.

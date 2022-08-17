@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, estimated, closing } from './AL00000Sprint00'
+import { getModuleDescription } from '../DataAndAPIs/Classes'
 import { internalLink } from '../DataAndAPIs/Links'
-
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
@@ -11,11 +11,11 @@ import { HelloWorldPythonLink } from '../Activities/HelloWorld'
 export const al44000Sprint01 = () => {
 	const sprint = 1
 	return ( <div>
-		<h5>Sprint 1: Getting Started, Software Engineering Life Cycles, Software as a Service, and Tools of the Trade</h5>
+		<h5>Sprint 1: {getModuleDescription(sprint)}</h5>
 		<p><em>Welcome to Software Engineering!</em> By this point in your software development journey I'm sure you are 
 		confident in writing moderately complicated software programs. You’ve learned about structured programming techniques 
 		like sequence, selection, and repetition. You've learned how to break complicated programs down into more manageable 
-		pieces by using functions. You even understand how Object-Oriented Programming can help you develop more complex
+		pieces by using functions. You even understand how Object-Oriented programming can help you develop more complex
 		applications by utilizing encapsulation, inheritance, and polymorphism.</p>
 
 		<p>That’s wonderful, however to create sophisticated modern programs we need to master some additional skills that 
@@ -37,7 +37,6 @@ export const al44000Sprint01 = () => {
 		</ul>
 
 		{list44000Sprint01(sprint)}
-		
 		{closing(sprint)}
 	</div> )
 }
@@ -45,7 +44,7 @@ export const al44000Sprint01 = () => {
 export const list44000Sprint01 = (sprint) => {
 	const foxChapter0Lecture = () => internalLink('lecture', '/activity/fox-chapter-00')
 	const foxChapter1Lecture = () => internalLink('lecture', '/activity/fox-chapter-01')
-	const foxChapter2Lecture = () => internalLink('lecture', '/activity/fox-chapter-02')
+
 
 	return ( <div>
 		{activitiesListIntro(sprint)}
@@ -58,7 +57,7 @@ export const list44000Sprint01 = (sprint) => {
 
 			{initialPost(sprint)}
 
-			<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated {foxChapter2Lecture()}</li>
+
 			<li>Complete {toolsOfTheTradeLink()}{estimated('2 hours')}</li>
 			<li>Complete {HelloWorldPythonLink()}{estimated('1 hour')}</li>
 
@@ -67,8 +66,8 @@ export const list44000Sprint01 = (sprint) => {
 	</div> )
 }
 
-// Todo: Consider moving chapter 2 to sprint 2 so that we can focus more on chapter 1 (review the very good chapter 1 video for more insights.)
-// Todo: Consider adding something about Oreilly playlist. 
+// Todo: After moving chapter 2 to sprint 2 so that we can focus more on chapter 1 (review the very good chapter 1 video for more insights.) we need to review lab 1 and quiz 1 to remove chapter 2 dependencies.
+// Todo: Add Oreilly playlist. 
 
 
 

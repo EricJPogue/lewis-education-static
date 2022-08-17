@@ -62,3 +62,4 @@ export const list36000Sprint01 = (sprint) => {
 }
 
 // Todo: Add Git/GitHub activity / tutorial. 
+// BugBug: There is no Programming Together playlist for this class so the closing link does not work. 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getClass, getClassIDfromURL } from '../DataAndAPIs/Classes'
+import { getClass, getClassNumber } from '../DataAndAPIs/Classes'
 import { Blended, externalLink, scrumIn7Min } from '../DataAndAPIs/Links'
 
 const panoptoWelcomeIFrameTag2022Summer = () => {
@@ -71,19 +71,14 @@ const programmingTogether49200ID = '97acc02f-11c9-46ca-8993-ae4d00f84450'
 
 // BugBug: This should be based on the class number (i.e. 20000 or 44000) and not the full class ID.
 export const ProgrammingTogether = () => {
-	let classReference = getClassIDfromURL()
-	switch(classReference) {
-		case 'su22-cpsc-24700-lt1': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether24700ID)} /></div>)
-
-		case 'sp22-cpsc-20000-002': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
-		case 'sp22-cpsc-24500-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether24500ID)} /></div>)
-		case 'sp22-cpsc-44000-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether44000ID)} /></div>)
-		case 'sp22-cpsc-49200-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether49200ID)} /></div>)
-
-		case '20000-fall-2021-002': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
-		case '20000-fall-2021-003': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
-		case '24700-fall-2021-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether24700ID)} /></div>)
-		case '44000-fall-2021-001': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether44000ID)} /></div>)
+	const classNumber = getClassNumber()
+	console.log('classSectionNumber='+classNumber)
+	switch(classNumber) {
+		case '20000': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether20000ID)} /></div>)
+		case '24500': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether24500ID)} /></div>)
+		case '24700': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether24700ID)} /></div>)
+		case '44000': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether44000ID)} /></div>)
+		case '49200': return (<div><PanoptoIFrameComponent iframe={embedCodePlaylist(programmingTogether49200ID)} /></div>)
 		default: return (null)
 	}
 }

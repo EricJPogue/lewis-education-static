@@ -49,6 +49,10 @@ export const getClassSection = () => {
 	return getClass()
 }
 
+export  const getClassNumber = () => {
+	return getClass().number
+}
+
 export const getClassByClassID = (classID) => {
 	for (let i = 0; i < classSectionList.length; i++) {
 		if (classSectionList[i].classID === classID) {
@@ -118,6 +122,53 @@ export const _CPSC_24700 = {
 	]
 }
 
+export const _CPSC_44000 = {
+	name:'Software Engineering',
+	id:'CPSC-44000',
+	number: 44000,
+	creditHours:3,
+	description: 
+		`Methods, strategies, and tools for implementing software systems, particularly as part of a development team. 
+		Topics include the software development life cycle, Unified Modeling Language, software testing techniques, 
+		software security, open-source development, requirements gathering and documentation, maintenance, and basic
+		software project management.`,
+	prerequisites:'CPSC-24500 Object-Oriented Programming',
+	meetingTimes:'This course in online and asynchronous',
+	learningOutcomes:[
+		'compare and contrast various software process models',
+		'be able to elicit and analyze requirements of a proposed application',
+		'write clear and complete requirements documents',
+		'identify the events to which the software must respond and document them as a set of use cases',
+		'identify security issues in a software projects requirements and design',
+		'use techniques to produce self-documenting code',
+		'use coding strategy to produce secure code',
+		'draw diagrams to model workflows',
+		'develop and use diagrams to model classes and the interaction of classes',
+		'understand and practice unit testing and functional testing',
+		'understand the techniques used to test non-functional requirements such as performance and security',
+		'develop a project schedule'
+	],
+	programOutcomes:[
+		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
+		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
+		{'value':7, outcome:'explain how programming languages are designed and implemented'}
+	],
+	baccalaureateCharacteristics:[
+		{'value':1, outcome:'Essential Skills'},
+		{'value':6, outcome:'Critical Thinking'}
+	],
+	textBook: 'Fox and Patterson. Engineering Software as a Service: An Agile Approach Using Cloud Computing.  ISBN: 978-0984881246.',
+	modules: [
+		'Software Engineering Life Cycles, Software as a Service, and Cloud Computing',
+		'Overview of Ruby, JavaScript, and Node.js',
+		'Behavior Driven Development, Plan and Document Requirements, and hosting Node.js in the cloud',
+		'Testing and Test-Driven Development, HTML, CSS, and JavaScript, Node.js, and Express',
+		'Maintenance and Metrics, Live Scrum Team with Requirements, Planning, Environment, and Demos',
+		'Project Management & Scaled Agile, Live Scrum Team adding Metrics, and Testing',
+		'Security and Live Scrum Team',
+		'Software Architecture, Final Project, Live Scrum Team'
+	]
+}
 
 // Application Constants
 export const URLCLASSID = 'cpsc'
@@ -128,8 +179,8 @@ export const _ASYNCHRONOUS = 'Asynchronous'
 export const classSectionList = [
 	{ 'classID':'fa22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'002', 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'10-10:50 AM', 'finalExam':'Monday, December 13 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lnt2ybs1-syllabus-cpsc-20000-002.pdf' },
 	{ 'classID':'fa22-cpsc-20000-003', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'003', 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'11-11:50 AM', 'finalExam':'Friday, December 17 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lonr2vt9-syllabus-cpsc-20000-003.pdf' },
-	{ 'classID':'fa22-cpsc-44000-001', 'title':'Software Engineering', 'number':'44000', 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'2-2:50 PM', 'finalExam':'Monday, December 13 from 4 PM to 6 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/zj5cvkl3-syllabus-cpsc-44000-001.pdf' },
-	{ 'classID':'fa22-cpsc-24700-001', 'title':'Web and Distributed Programming', 'number':'24700', 'section':'001', 'class':_CPSC_24700, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'3-3:50 PM CT', 'finalExam':'Friday, December 16 from 4 PM to 6 PM CT', 'syllabusURL':'https://www.espn.com' },
+	{ 'classID':'fa22-cpsc-44000-001', 'title':'Software Engineering', 'number':'44000', 'section':'001', 'class':_CPSC_44000, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'2-2:50 PM', 'finalExam':'Monday, December 12 from 4 PM to 6 PM CT' },
+	{ 'classID':'fa22-cpsc-24700-001', 'title':'Web and Distributed Programming', 'number':'24700', 'section':'001', 'class':_CPSC_24700, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'3-3:50 PM CT', 'finalExam':'Friday, December 16 from 4 PM to 6 PM CT' },
 	{ 'classID':'cpsc-24500', 'title':'Object-Oriented Programming', 'number':'24500', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'time':'', 'finalExam':'', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
 	{ 'classID':'cpsc-36000', 'title':'Applied Programming Languages', 'number':'36000', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/se3c5q62-syllabus-cpsc-36000-001.pdf' },
 	{ 'classID':'cpsc-49200', 'title':'Software Systems Capstone', 'number':'49200', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'time':'', 'finalExam':'', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' }
@@ -300,54 +351,7 @@ export const _CPSC_36000 = {
 	]
 }
 
-export const _CPSC_44000 = {
-	name:'Software Engineering',
-	id:'CPSC-44000',
-	number: 44000,
-	creditHours:3,
-	description: 
-		`Methods, strategies, and tools for implementing software systems, particularly as part of a development team. 
-		Topics include the software development life cycle, Unified Modeling Language, software testing techniques, 
-		software security, open-source development, requirements gathering and documentation, maintenance, and basic
-		software project management.`,
-	prerequisites:'CPSC-24500 Object-Oriented Programming',
-	meetingTimes:'This course in online and asynchronous',
-	finalExamTime: `${getFinalExamDateAndTime()}`,
-	learningOutcomes:[
-		'compare and contrast various software process models',
-		'be able to elicit and analyze requirements of a proposed application',
-		'write clear and complete requirements documents',
-		'identify the events to which the software must respond and document them as a set of use cases',
-		'identify security issues in a software projects requirements and design',
-		'use techniques to produce self-documenting code',
-		'use coding strategy to produce secure code',
-		'draw diagrams to model workflows',
-		'develop and use diagrams to model classes and the interaction of classes',
-		'understand and practice unit testing and functional testing',
-		'understand the techniques used to test non-functional requirements such as performance and security',
-		'develop a project schedule'
-	],
-	programOutcomes:[
-		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
-		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
-		{'value':7, outcome:'explain how programming languages are designed and implemented'}
-	],
-	baccalaureateCharacteristics:[
-		{'value':1, outcome:'Essential Skills'},
-		{'value':6, outcome:'Critical Thinking'}
-	],
-	textBook: 'Fox and Patterson. Engineering Software as a Service: An Agile Approach Using Cloud Computing.  ISBN: 978-0984881246.',
-	modules: [
-		'Introduction to Agile software development, Software as a Service, and Cloud Computing',
-		'Overview of Ruby, JavaScript, and Node.js',
-		'Behavior Driven Development, Plan and Document Requirements, and hosting Node.js in the cloud',
-		'Testing and Test-Driven Development, HTML, CSS, and JavaScript, Node.js, and Express',
-		'Maintenance and Metrics, Live Scrum Team with Requirements, Planning, Environment, and Demos',
-		'Project Management & Scaled Agile, Live Scrum Team adding Metrics, and Testing',
-		'Security and Live Scrum Team',
-		'Software Architecture, Final Project, Live Scrum Team'
-	]
-}
+
 
 export const _CPSC_49200 = {
 	name:'Software Engineering',
