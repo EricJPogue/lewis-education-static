@@ -56,6 +56,6 @@ export const list20000Sprint01 = (sprint) => {
 	</div> )
 }
 
-// Todo: Update Lab example cut/past to reflect actual requirement.
-// Todo: Move Web development up to sprint 1 and move Python back to sprint 3 (including quiz questions and assignments). 
+// Certified for FA22 (08/27/2022)
+
 

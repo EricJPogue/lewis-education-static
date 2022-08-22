@@ -2,7 +2,7 @@ import React from 'react'
 
 import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, estimated, closing } from './AL00000Sprint00'
 import { getModuleDescription } from '../DataAndAPIs/Classes'
-import { internalLink } from '../DataAndAPIs/Links'
+import { oreillyPlaylistSE, internalLink, externalLink } from '../DataAndAPIs/Links'
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
@@ -38,13 +38,13 @@ export const al44000Sprint01 = () => {
 
 		{list44000Sprint01(sprint)}
 		{closing(sprint)}
+		{extras()}
 	</div> )
 }
 
 export const list44000Sprint01 = (sprint) => {
 	const foxChapter0Lecture = () => internalLink('lecture', '/activity/fox-chapter-00')
 	const foxChapter1Lecture = () => internalLink('lecture', '/activity/fox-chapter-01')
-
 
 	return ( <div>
 		{activitiesListIntro(sprint)}
@@ -56,9 +56,8 @@ export const list44000Sprint01 = (sprint) => {
 			<li>Complete {htmlLink()} - Part 1{estimated('2 hours')}</li>
 
 			{initialPost(sprint)}
-
-
 			<li>Complete {toolsOfTheTradeLink()}{estimated('2 hours')}</li>
+			<li>Within {oreillyPlaylistSE()} read “Essential Scrum” Chapters 1 and 2</li>
 			<li>Complete {HelloWorldPythonLink()}{estimated('1 hour')}</li>
 
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
@@ -66,9 +65,19 @@ export const list44000Sprint01 = (sprint) => {
 	</div> )
 }
 
+const extras = () => {
+	const foxBetaOnlinePDF = () => externalLink('Engineering Software as a Service, Second Edition','https://learning.oreilly.com/playlists/b2510780-81f1-404e-975d-4354219ff894')
+	return (<div>	
+		<br />
+		<p>Additional suggested activities:</p>
+		<ul style={{listStyleType:'square'}}>
+			<li>Review the prerelease online version of {foxBetaOnlinePDF()}</li>
+		</ul>
+	</div>)
+}
+
+// BugBug: Fix the end of the Fox Preface video.
 // Todo: After moving chapter 2 to sprint 2 so that we can focus more on chapter 1 (review the very good chapter 1 video for more insights.) we need to review lab 1 and quiz 1 to remove chapter 2 dependencies.
-// Todo: Add Oreilly playlist. 
-// Todo: Add reference to https://drive.google.com/file/d/19dqWms9qUQ2Bi8JfsBhC5Q6zDeJd0s5o/view and CHIPs definition.
 
 
 
