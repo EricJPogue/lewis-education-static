@@ -73,8 +73,56 @@ export const _INSTRUCTOR = {
 	lewisEmail:'epogue@lewisu.edu' 
 }
 
-// BugBug: meetingLocation needs to be updated and possibly included in class data.
 // Todo: Figure out where the master list of program outcomes and baccalaureate characteristics reside. 
+// Todo: Remove course 'title' from classSectionList and use 'name' from _CPSC data.
+
+export const _CPSC_20000 = {
+	name:'Introduction to Computer Science',
+	id:'CPSC-20000',
+	number: 20000,
+	creditHours:3,
+	description: 
+		`This course explores the field of computer science. It provides an overview of computer architecture, 
+		networking, data organization and computational theory. Students will be introduced to fundamental concepts 
+		underlying all of computing, such as algorithms, abstractions, and how computers represent numbers, text, 
+		images, and sound. Students will learn the basics of programming and computational problem solving.`,
+	prerequisites:'none',
+	learningOutcomes:[
+		'Use abstraction to simplify a problem to its essential elements',
+		'Develop algorithms to describe that solve a problem step-by-step',
+		'Write computer programs to implement algorithms using sequence, selection, and repetition',
+		'Identify the parts of a computer and explain how each is involved in processing a computer program',
+		'Represent data the way a computer program would using binary and hexadecimal representations',
+		'Demonstrate how transistors and logical operations allow a computer execute a computer program',
+		'Research seminal works in computer science and describe their relevance',
+		'Explain how computer networks communicate data across and between networks',
+		'Explain computer security and how encryption and hashing protect our networks and online privacy',
+		'Utilize multiple computer programming tools and paradigms to create computer programs'
+	],
+	programOutcomes:[
+		{'value':1, outcome:'develop programs using languages having different programming tools and paradigms'}, // I modified the wording.
+		{'value':2, outcome:'select the most appropriate tools, data structures, and algorithms for the given problem'},
+		{'value':4, outcome:'describe how computer systems can communicate securely with each other and form networks'}, // BugBug: Fix this value as 4 is a guess. 
+		{'value':7, outcome:'explain how programming languages are designed and implemented'}
+	],
+	baccalaureateCharacteristics:[
+		{'value':1, outcome:'Essential Skills'},
+		{'value':2, outcome:'Major Approaches to Knowledge'},
+		{'value':6, outcome:'Critical Thinking'},
+		{'value':7, outcome:'Lifelong Learning'}
+	],
+	textBook: 'Computer Science Illuminated, Nell Dale and John Lewis, Jones & Bartlett Learning. This book is required for this course.',
+	modules: [
+		'File Systems and Directories, Computer Science – The Big Picture, and Introduction to Python',
+		'Binary Values and Number Systems, Data Representation, and Introduction to HTML and CSS',
+		'Gates and Circuits, Computing Components, and Cloud Computing with HTML and CSS',
+		'Artificial Intelligence, Functions, and Objects and Drawing',
+		'Networks, Final Project Proposal, and Objects and Drawing with Python',
+		'Full Stack Development with Web Browser, Web Server, and NoSQL Database',
+		'Security, More HTML, CSS, and more JavaScript or more Python',
+		'Final Project'
+	]
+}
 
 export const _CPSC_24700 = {
 	name:'Web and Distributed Programming',
@@ -88,7 +136,6 @@ export const _CPSC_24700 = {
 		cloud hosting, web services, and database programming.`,
 	prerequisites:'CPSC-20000 Introduction to Computer Science',
 	meetingTimes:'This course in online and asynchronous',
-	finalExamTime: '*** finalExamTime ***', // BugBug: Need to fix this!
 	learningOutcomes:[
 		'understand the Internet, the Web, Web programming, and distributed computing',
 		'create Web applications using HyperText Markup Language and Cascading Style Sheets',
@@ -133,7 +180,6 @@ export const _CPSC_44000 = {
 		software security, open-source development, requirements gathering and documentation, maintenance, and basic
 		software project management.`,
 	prerequisites:'CPSC-24500 Object-Oriented Programming',
-	meetingTimes:'This course in online and asynchronous',
 	learningOutcomes:[
 		'compare and contrast various software process models',
 		'be able to elicit and analyze requirements of a proposed application',
@@ -177,8 +223,8 @@ export const _TTR = 'TTh'
 export const _ASYNCHRONOUS = 'Asynchronous' 
 
 export const classSectionList = [
-	{ 'classID':'fa22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'002', 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'10-10:50 AM', 'finalExam':'Monday, December 13 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lnt2ybs1-syllabus-cpsc-20000-002.pdf' },
-	{ 'classID':'fa22-cpsc-20000-003', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'003', 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'11-11:50 AM', 'finalExam':'Friday, December 17 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lonr2vt9-syllabus-cpsc-20000-003.pdf' },
+	{ 'classID':'fa22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'002', 'class':_CPSC_20000, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'10-10:50 AM', 'finalExam':'Monday, December 13 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lnt2ybs1-syllabus-cpsc-20000-002.pdf' },
+	{ 'classID':'fa22-cpsc-20000-003', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'003', 'class':_CPSC_20000, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'11-11:50 AM', 'finalExam':'Friday, December 17 from 10:30 AM to 12:30 PM CT', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/lonr2vt9-syllabus-cpsc-20000-003.pdf' },
 	{ 'classID':'fa22-cpsc-44000-001', 'title':'Software Engineering', 'number':'44000', 'section':'001', 'class':_CPSC_44000, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'2-2:50 PM', 'finalExam':'Monday, December 12 from 4 PM to 6 PM CT' },
 	{ 'classID':'fa22-cpsc-24700-001', 'title':'Web and Distributed Programming', 'number':'24700', 'section':'001', 'class':_CPSC_24700, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'3-3:50 PM CT', 'finalExam':'Friday, December 16 from 4 PM to 6 PM CT' },
 	{ 'classID':'cpsc-24500', 'title':'Object-Oriented Programming', 'number':'24500', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'time':'', 'finalExam':'', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
@@ -186,57 +232,7 @@ export const classSectionList = [
 	{ 'classID':'cpsc-49200', 'title':'Software Systems Capstone', 'number':'49200', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'time':'', 'finalExam':'', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' }
 ]
 
-export const _CPSC_20000 = {
-	name:'Introduction to Computer Science',
-	id:'CPSC-20000',
-	number: 20000,
-	creditHours:3,
-	description: 
-		`This course explores the field of computer science. It provides an overview of computer architecture, 
-		networking, data organization and computational theory. Students will be introduced to fundamental concepts 
-		underlying all of computing, such as algorithms, abstractions, and how computers represent numbers, text, 
-		images, and sound. Students will learn the basics of programming and computational problem solving.`,
-	prerequisites:'none',
-	meetingTimes:'This course in online and asynchronous',
-	finalExamTime: `${getFinalExamDateAndTime()}`,
-	learningOutcomes:[
-		'Use abstraction to simplify a problem to its essential elements',
-		'Write algorithms to describe how to solve a problem step-by-step',
-		'Write computer programs involving sequence, selection, and repetition that enable a computer to follow the steps of an algorithm',
-		'Identify the parts of a computer and explain how each is involved in processing a set of instructions',
-		'Represent data the way a computer would, in binary and hexadecimal',
-		'Demonstrate how logical operations enable a computer to perform arithmetic and explain how they are implemented at the transistor level',
-		'Research seminal works in computer science and describe their relevance',
-		'Explain how computer networks communicate data across and between networks',
-		'Design a website and post it online so that it can be accessed over the Internet',
-		'Explain how various encryption and hashing routines protect our online privacy'
-	],
-	programOutcomes:[
-		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
-		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
-		{'value':4, outcome:'describe how computer systems can communicate securely with each other and form networks'}, // BugBug: Fix this value as 4 is a guess. 
-		{'value':7, outcome:'explain how programming languages are designed and implemented'}
-	],
-	baccalaureateCharacteristics:[
-		{'value':1, outcome:'Essential Skills'},
-		{'value':2, outcome:'Major Approaches to Knowledge'},
-		{'value':6, outcome:'Critical Thinking'},
-		{'value':7, outcome:'Lifelong Learning'}
-	],
-	textBook: 'Computer Science Illuminated, Nell Dale and John Lewis, Jones & Bartlett Learning. This book is required for this course.',
-	modules: [
-		'File Systems and Directories, Computer Science – The Big Picture, and Introduction to Python',
-		'Binary Values and Number Systems, Data Representation, and Introduction to HTML and CSS',
-		'Gates and Circuits, Computing Components, and Cloud Computing with HTML and CSS',
-		'Artificial Intelligence, Functions, and Objects and Drawing',
-		'Networks, Final Project Proposal, and Objects and Drawing with Python',
-		'Full Stack Development with Web Browser, Web Server, and NoSQL Database',
-		'Security, More HTML, CSS, and more JavaScript or more Python',
-		'Final Project'
-	]
-}
-
-
+// Non-current courses.
 export const _CPSC_24500 = {
 	name:'Object-Oriented Programming',
 	id:'CPSC-24500',
@@ -249,8 +245,6 @@ export const _CPSC_24500 = {
 		provide data processing and visualization services. Students will also learn how to
 		manage threads and networking connections in software they write.`,
 	prerequisites:'CPSC-21000 Programming Fundamentals',
-	meetingTimes:'This course in online and asynchronous',
-	finalExamTime: `${getFinalExamDateAndTime()}`,
 	learningOutcomes:[
 		'solve problems by writing programs using standard language elements',
 		'list and explain the key concepts of object-oriented development',
@@ -299,7 +293,6 @@ export const _CPSC_24500 = {
 	]
 }
 
-
 export const _CPSC_36000 = {
 	name:'Applied Programming Languages',
 	id:'CPSC-36000',
@@ -311,8 +304,6 @@ export const _CPSC_36000 = {
 		develop good programming methodology and style. This course also gives students experience using code management 
 		systems and working on open-source programming projects.`,
 	prerequisites:'CPSC-24500 Object-Oriented Programming',
-	meetingTimes:'This course in online and asynchronous',
-	finalExamTime: `${getFinalExamDateAndTime()}`,
 	learningOutcomes:[
 		'create moderately complex applications using multiple programming languages and frameworks',
 		'improve programming style through effective coding standards', 
@@ -351,8 +342,6 @@ export const _CPSC_36000 = {
 	]
 }
 
-
-
 export const _CPSC_49200 = {
 	name:'Software Engineering',
 	id:'CPSC-49200',
@@ -364,8 +353,6 @@ export const _CPSC_49200 = {
 		course will cover topics in professional ethics, intellectual properties, privacy and
 		professional communication.`,
 	prerequisites:'CPSC-44000 Software Engineering',
-	meetingTimes:'This course in online and asynchronous',
-	finalExamTime: `${getFinalExamDateAndTime()}`,
 	learningOutcomes:[
 		'Conduct a review of software code for a software project',
 		'Write a software component that performs non-trivial tasks and is resilient to input and run-time errors',

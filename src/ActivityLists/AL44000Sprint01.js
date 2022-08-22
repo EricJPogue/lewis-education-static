@@ -68,6 +68,7 @@ export const list44000Sprint01 = (sprint) => {
 
 // Todo: After moving chapter 2 to sprint 2 so that we can focus more on chapter 1 (review the very good chapter 1 video for more insights.) we need to review lab 1 and quiz 1 to remove chapter 2 dependencies.
 // Todo: Add Oreilly playlist. 
+// Todo: Add reference to https://drive.google.com/file/d/19dqWms9qUQ2Bi8JfsBhC5Q6zDeJd0s5o/view and CHIPs definition.
 
 
 
