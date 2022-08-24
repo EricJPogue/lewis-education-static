@@ -1,7 +1,5 @@
-// import { welcome2022Spring } from './Panopto'
-import { welcome2022Summer } from './Panopto'
+import { welcome2022Fall } from './Panopto'
 
 export const Welcome = () => {
-	// return welcome2022Spring()
-	return welcome2022Summer()
+	return welcome2022Fall()
 }

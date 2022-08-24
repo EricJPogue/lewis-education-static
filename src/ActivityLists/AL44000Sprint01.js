@@ -76,8 +76,10 @@ const extras = () => {
 	</div>)
 }
 
-// BugBug: Fix the end of the Fox Preface video.
-// Todo: After moving chapter 2 to sprint 2 so that we can focus more on chapter 1 (review the very good chapter 1 video for more insights.) we need to review lab 1 and quiz 1 to remove chapter 2 dependencies.
+// Todo: Review and update lab 1 to make it more clear and concise.
+
+// Todo: Fix the end of the Fox Preface video.
+
 
 
 

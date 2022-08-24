@@ -28,7 +28,7 @@ class HeaderNavigation extends Component {
 						<Nav className='mr-auto'>
 						<Nav.Link href='#home'>Lewis.education</Nav.Link>
 							<NavDropdown title='Course Content' id='basic-nav-dropdown'>
-								<NavDropdown.Item href='#welcome'>Welcome</NavDropdown.Item>
+								<NavDropdown.Item href='#welcome'>Welcome Message</NavDropdown.Item>
 								<NavDropdown.Divider />
 								<NavDropdown.Item href='#syllabus'>Syllabus</NavDropdown.Item>
 								<NavDropdown.Divider />
