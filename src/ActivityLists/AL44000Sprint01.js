@@ -50,15 +50,14 @@ export const list44000Sprint01 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
-
-			<li>Read “Engineering Software as a Service” Chapter 1 by Armando Fox and David Patterson and review the associated {foxChapter1Lecture()}</li>
-			<li>Read “Engineering Software as a Service” Preface and review associated {foxChapter0Lecture()}</li>
+			<li>Read “Engineering Software as a Service” Chapter 1 by Armando Fox and David Patterson and review the associated {foxChapter1Lecture()}{estimated('2 hours')}</li>
 			<li>Complete {htmlLink()} - Part 1{estimated('2 hours')}</li>
 
 			{initialPost(sprint)}
 			<li>Complete {toolsOfTheTradeLink()}{estimated('2 hours')}</li>
+			<li>Read “Engineering Software as a Service” Preface and review associated {foxChapter0Lecture()}</li>
 			<li>Within {oreillyPlaylistSE()} read “Essential Scrum” Chapters 1 and 2</li>
-			<li>Complete {HelloWorldPythonLink()}{estimated('1 hour')}</li>
+			<li>Complete {HelloWorldPythonLink()}</li>
 
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
 		</ol>
