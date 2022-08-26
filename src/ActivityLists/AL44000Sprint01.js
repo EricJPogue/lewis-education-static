@@ -76,9 +76,8 @@ const extras = () => {
 	</div>)
 }
 
-// Todo: Review and update lab 1 to make it more clear and concise.
-
 // Todo: Fix the end of the Fox Preface video.
+// Certified for FA22 (08/26/22)
 
 
 
