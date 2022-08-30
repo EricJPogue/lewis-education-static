@@ -1,3 +1,5 @@
+// BugBug: Update syllabus sections on COVID, etc.
+
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 

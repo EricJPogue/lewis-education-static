@@ -81,6 +81,7 @@ export const agendaSlide = (agendaItems) => {
 export const preworkSlide = (preworkItems) => { return basicSlideWithTitle('Prework', preworkItems) }
 export const preworkForNextClass = (preworkItems) => { return basicSlideWithTitle('Prework for Next Class', preworkItems) }
 
+// Todo: Remove default spring 7 as last parameter.
 export const preworkWithActivityList = (preworkItems, activityListFunction, sprint=7) => {
 	return ( <div>
 		{preworkSlide(preworkItems)}
@@ -90,6 +91,21 @@ export const preworkWithActivityList = (preworkItems, activityListFunction, spri
 	</div> )
 }
 
+// Todo: Replace all other prework slides with this slide.
+export const prework = (title, preworkItems, sprint=null, activityListFunction=null) => {
+	const preworkList = (sprint, activityListFunction) => {
+		if ((sprint === null) || (activityListFunction === null)) return null
+		return ( <div><br /><hr />
+			<p style={{fontSize:20}}>Sprint {sprint} Activities List</p>
+			{activityListFunction()}
+		</div> )	
+	}
+
+	return ( <div>
+		{basicSlideWithTitle(title, preworkItems)}
+		{preworkList(sprint, activityListFunction)}
+	</div> )
+}
 
 export const progressPolling = () => {
 	return basicSlideWithTitle('Sprint Progress Polling', [
@@ -131,7 +147,6 @@ export const basicSlideWithTitleLink = (title, link, lineList) => {
 	</div> )
 }
 
-
 export const renderLogo = () => {
 	return (
 		<div style={{display: "flex", justifyContent: "right", alignItems: "center"}}>
@@ -145,7 +160,6 @@ export const orderedListSlide = (header, intro, list) => {
 		{renderOrderedList(intro, list)}
 	</div> )
 }
-
 
 const title = { fontSize:40	}
 export const renderHeader = (slideTitle) => {
@@ -244,6 +258,14 @@ export const discussionBreakout = (sprint) => {
 		{breakoutNoteExample()}
 	</div> )
 }
+
+export const breakout = (slideTitle, introduction, orderedList, sectionTitle, unorderedList ) => {
+	return ( <div>
+		{orderedListSlide(slideTitle, introduction, orderedList)}<br />
+		{renderBulletList(sectionTitle, unorderedList )}
+	</div> )
+}
+
 
 const styleBodyText = { fontSize:20 }
 const breakoutNoteExample = (sprint) => {

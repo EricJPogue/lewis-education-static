@@ -42,7 +42,7 @@ export const list20000Sprint01 = (sprint) => {
 		<ol>
 			{standardActivities(sprint, HelloWorldPythonLink())}
 
-			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” chapter 11 File Systems and Directories</li>
+			<li>Read “Computer Science Illuminated” chapter 11 File Systems and Directories</li>
 			<li>Review our “Computer Science Illuminated” <NavLink to='/activity-dale/11'>chapter 11 lecture</NavLink> and be prepared for a scrum team discussion</li>
 			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
 
