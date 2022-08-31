@@ -24,7 +24,8 @@ export const preflightChecklist = () => {
 			'Make sure that you can hear the conversation, see shared desktops, and view chat topics',
 			'Be prepared to share your computer screen',
 			'Be prepared to utilize a headset with a microphone',
-			'Optionally leave your camera on to help make our class more interactive']
+			'Optionally leave your camera on to help make our class more interactive',
+			'Verify that class is being recorded**']
 		)}
 		{renderBulletList(
 			'In-person participants also:', [
@@ -41,11 +42,13 @@ export const instructorChecklist = () => {
 		{bulletListSlide(
 			'Instructor Checklist',
 			`In preparation for ${getClass().title} / ${getClassIDfromURL()}`, [
-			'Load polls as needed',
+			'Share slides with ”&hide-nav=y” option',
+			'Access Zoom series and load/update polls as needed',
+			'Start Zoom session',
 			'Set camera, microphone, and speakers',
 			'Share desktop in Zoom session',
-			'Review that recordings are opportunistic and available in our Blackboard shell',
-			'Open the Activity List, open the Agenda, and Start recording' ]
+			'Consider reviewing that recordings are opportunistic and available in our Blackboard shell',
+			'Be prepared to start recording' ]
 		)}
 	</div> )
 }
@@ -138,6 +141,14 @@ export const basicSlideWithTitle = (title, lineList) => {
 	</div> )
 }
 export const basicSlide = (title, lineList) => { return basicSlideWithTitle(title, lineList)}
+
+export const basicSlideWithLogo = (title, lineList) => { 
+	return ( <div>
+		{renderLogo()}
+		{basicSlideWithTitle(title, lineList)}
+	</div>) 
+}
+
 
 export const basicSlideWithTitleLink = (title, link, lineList) => {
 	const renderBasicSlideLine = (item) => { return (<div key={item} style={styleBasic}>{item}<br /></div>) }
