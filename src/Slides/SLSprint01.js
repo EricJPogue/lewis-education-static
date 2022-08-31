@@ -2,6 +2,7 @@ import { getClass } from '../DataAndAPIs/Classes'
 import { preflightChecklist, instructorChecklist, basicSlide, basicSlideWithLogo, orderedListSlide, end, breakout } from './SLSprint00' // Shared slides.
 import { prework } from './SLSprint00'
 import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
+import { list24700Sprint01 } from '../ActivityLists/AL24700Sprint01'
 import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
 import { agendaSlide } from './SLSprint00' // Shared slide templates.
 
@@ -21,6 +22,7 @@ export const sprint1Router = (route) => {
 		case '20000-1-2': return ics1_2of6()
 
 		case '24700-1-1': return web1_1of6()
+		case '24700-1-2': return web1_2of6()
 
 		case '44000-1-1': return se1_1of6()
 		case '44000-1-2': return se1_2of6()
@@ -97,14 +99,28 @@ const ics_prework_1_2of6 = () => {
 
 // Web & Distributed Programming (WEB)
 const web1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
+const web1_2of6 = () => { 
+	const announcement =  () => { return basicSlideWithLogo('Announcements', ['Dr. Martinez is looking for someone to do some Web development work for her research project.']) }
+	const sprintProgressPolling = () => { return prework('Sprint Progress Polling', prework_1_1of6_list, sprint, list44000Sprint01) }
 
+	return mwf_1_2of6(announcement, prework_1_1of6, sprintProgressPolling, web_prework_1_2of6)
+}
+
+// Shared between SE sessions:
+const web_prework_1_2of6 = () => {
+	return prework('Prework', [
+		'Complete through activity 10 prior to next class', '',
+		'Be ready for a fully remote Friday class where will need a working microphone and headset**', 		
+		'Be prepared for a breakout session on “Engineering Software as a Service” Chapter 1 and the associated lecture',
+		'Be sure to take screenshots when completing Tools of the Trade' ],
+		sprint, list24700Sprint01)
+}
 
 // Software Engineering (SE)
 const se1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
 const se1_2of6 = () => { 
 	const announcement =  () => { return basicSlideWithLogo('Announcements', ['Dr. Martinez is looking for someone to do some Web development work for her research project.']) }
 	const sprintProgressPolling = () => { return prework('Sprint Progress Polling', prework_1_1of6_list, sprint, list44000Sprint01) }
-
 	return mwf_1_2of6(announcement, prework_1_1of6, sprintProgressPolling, se_prework_1_2of6)
 }
 
@@ -117,8 +133,6 @@ const se_prework_1_2of6 = () => {
 		'Be sure to take screenshots when completing Tools of the Trade' ],
 		sprint, list44000Sprint01)
 }
-
-
 
 // Shared between classes:
 const prework_1_1of6_list = [

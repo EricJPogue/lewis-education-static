@@ -38,9 +38,9 @@ export const list24700Sprint01 = (sprint) => {
 		<ol>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
 			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Preface, Chapter 1, and Chapter 2</li>
-			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
 			<li>Read chapter 2 of “Programming The World Wide Web” (Sebesta)</li>
 			<li>Review our “Programming The World Wide Web” (Sebesta) {sebestaChapter2Lecture()}</li>
+			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
 
 			{initialPost(sprint)}
 			<li>Read chapter 1 of Sebesta and review the associated {sebestaChapter1Lecture()}</li>
@@ -51,7 +51,7 @@ export const list24700Sprint01 = (sprint) => {
 }
 
 // Certified for FA22 (08/16/22)
-// Todo: Consider removing Sebesta book by:
+// Todo: Strongly consider removing Sebesta book by:
 //     (1) recreating required material that is only available from the book and 
 //     (2) by updating quizzes. 
 

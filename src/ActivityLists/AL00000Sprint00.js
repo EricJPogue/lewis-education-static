@@ -85,6 +85,10 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 		}
 	}
 	const currentAssignments = (sprint) => {
+		console.log('sprint='+sprint)
+		if (sprint === 1) {
+			return ( <em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em> )	
+		}
 		if (sprint === 8) {
 			return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Final Project Presentation</em>)		
 		}
