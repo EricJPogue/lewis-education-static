@@ -1,5 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+// Depreciated: Move content to SLSprint00.js
+
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export const breakoutMaintenanceAndSupport = () => {
 	return renderBreakout({

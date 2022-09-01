@@ -323,3 +323,22 @@ export const demoAssignment = () => {
 	return basicSlide('Complete Demo Assignment', [
 		'If you have completed your sprint demo, please also submit your lab demo assignment in Blackboard.' ])
 }
+
+// Beta 
+// Review code Breakout.js
+export const breakoutStandard = (breakoutTitle, introduction, topicList) => {
+	const styleSubListItem = { fontSize:20, listStyleType:'lower-alpha' }
+	const processItem = (item) => { return (<li key={item} style={styleSubListItem}>{item}</li>) }
+	const processTopicList = (itemList) => { return (<div><ol>{itemList.map(processItem)}</ol></div>) }
+
+	return ( <div>
+		<h1 style={title}>{breakoutTitle}</h1>
+		<p style={styleListIntro}>{introduction}</p>
+		<ol style={styleListItem}>
+			<li>Assign a presenter</li>
+			<li>Discuss the following topics while the presenter summarizes the conversation:</li>
+			{processTopicList(topicList)}
+			<li>Sit back, relax, and thank your presenter for their bravery and dedication</li>
+		</ol>
+	</div>)
+}
