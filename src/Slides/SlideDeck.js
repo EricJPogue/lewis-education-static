@@ -2,6 +2,7 @@ import React, {useState } from 'react'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { slideDeckRouter } from './SlideDeckRouter'
 
+// BugBug: The slide number should not be reset after a link is followed and the back button is pressed?
 export function Deck(props) {
 	const deck = slideDeckRouter(props.match.params.route)
 	const [count, setCount ] = useState(0) 

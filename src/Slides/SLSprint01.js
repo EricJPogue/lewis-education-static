@@ -24,6 +24,7 @@ export const sprint1Router = (route) => {
 
 		case '24700-1-1': return web1_1of6()
 		case '24700-1-2': return web1_2of6()
+		case '24700-1-3': return web1_3of6()
 
 		case '44000-1-1': return se1_1of6()
 		case '44000-1-2': return se1_2of6()
@@ -60,7 +61,7 @@ const ics1_3of6 = () => {
 			'Prework for Next Class',
 			'Breakout: File Systems, Directories, and Files' ])
 	}
-	const lab = () => {
+	const programmingTogether = () => {
 		return bulletListSlide('Programming Together', 
 			'Let’s spend a few minutes programming together utilizing our Command Line Interface (CLI) to explore Directories and Files by:', [
 			'Launching PowerShell or Terminal', 
@@ -81,7 +82,7 @@ const ics1_3of6 = () => {
 			'What would be a good answer to the lab question on where to store files for this class?' ])
 	}
 
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_2of6, poll, lab, ics_prework_1_3of6, breakout, end ]
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_2of6, poll, programmingTogether, ics_prework_1_3of6, breakout, end ]
 }
 
 // Shared between ICS sessions:
@@ -109,6 +110,39 @@ const web1_2of6 = () => {
 	const sprintProgressPolling = () => { return prework('Sprint Progress Polling', prework_1_1of6_list, sprint, list24700Sprint01) }
 
 	return mwf_1_2of6(announcements, prework_1_1of6, sprintProgressPolling, web_prework_1_2of6)
+}
+
+const web1_3of6 = () => {
+	const announcements =  () => {
+		return basicSlideWithLogo('Announcements', [ 'Reminder that Monday is the Labor Day holiday with no classes.' ]) }
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Polling: Sprint Progress',
+			'Programming Together: Azure Website with PHP',
+			'Prework for Next Class',
+			'Breakout: Web Development Workflows and HTML' ])
+	}
+	const programmingTogether = () => {
+		return bulletListSlide('Programming Together', 
+			'Let’s spend a few minutes programming together utilizing command line and graphical tools to create a basic web application by:', [
+			'Launching PowerShell or Terminal', 
+			'Executing pwd, cd, ls, ls -l, ls -a, mkdir, and clear', 
+			'Identifying an optimal location to work on our files',
+			'Utilizing VS Code and a Web browser to create a web page' ])
+	}
+	const poll = () => { return prework('Poll', [ 'Sprint Progress' ], sprint, list44000Sprint01) }
+	const breakout = () => { 
+		return breakoutStandard(
+		'Breakout: Web Development Workflows and HTML', 
+		'In this breakout session on Web development workflows and HTML your team will:', [
+		'Web Development Workflow... What is our web development workflow and tooling?',
+		'HTML history and evolution... What HTML standard will we use?',
+		'Syntax and basic structure... What are other popular markup languages?',
+		'How do we Verify correct HTML syntax... Can you demo this activity?' ])
+	}
+
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_2of6, poll, programmingTogether, se_prework_1_3of6, breakout, end ] 
 }
 
 // Shared between WEB sessions:
@@ -167,7 +201,7 @@ const se1_3of6 = () => {
 		'Testing including Verification and Validation... How does Waterfall accomplish Validation?' ])
 	}
 
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_2of6, poll, programmingTogether, ics_prework_1_3of6, breakout, breakout2, end ] 
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_2of6, poll, programmingTogether, se_prework_1_3of6, breakout, breakout2, end ] 
 }
 
 // Shared between SE sessions:
@@ -177,6 +211,14 @@ const se_prework_1_2of6 = () => {
 		'Be ready for a fully remote Friday class where will need a working microphone and headset**', 		
 		'Be prepared for a breakout session on “Engineering Software as a Service” Chapter 1 and the associated lecture',
 		'Be sure to take screenshots when completing Tools of the Trade' ],
+		sprint, list44000Sprint01)
+}
+
+const se_prework_1_3of6 = () => {
+	return prework('Prework', [
+		'Complete through activity 12 prior to next class', '', 		
+		'Be prepared for a breakout session on “Engineering Software as a Service”',
+		'Be prepared for Quiz 1' ],
 		sprint, list44000Sprint01)
 }
 
