@@ -49,7 +49,8 @@ const ics1_3of6 = () => {
 	const announcements =  () => {
 		return basicSlideWithLogo('Announcements', [ 
 			'Reminder that Monday is the Labor Day holiday with no classes.',
-			'I received a request for an “Introduction to Computer Science” note-taker. Is anyone be interested?' ])
+			'I received a request for an “Introduction to Computer Science” note-taker. Is anyone be interested?',
+			'Please email me directly rather than using the Blackboard messages.' ])
 	}
 	const agenda = () => { 
 		return agendaSlide([
