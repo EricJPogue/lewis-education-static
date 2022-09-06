@@ -1,6 +1,6 @@
 import { getClass } from '../DataAndAPIs/Classes'
 import { preflightChecklist, instructorChecklist, basicSlide, basicSlideWithLogo, orderedListSlide, end, breakout, bulletListSlide } from './SLSprint00' // Shared slides.
-import { prework, breakoutStandard } from './SLSprint00'
+import { prework, breakoutStandard, quiz } from './SLSprint00'
 import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
 import { list24700Sprint01 } from '../ActivityLists/AL24700Sprint01'
 import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
@@ -21,6 +21,8 @@ export const sprint1Router = (route) => {
 		case '20000-1-1': return ics1_1of6()
 		case '20000-1-2': return ics1_2of6()
 		case '20000-1-3': return ics1_3of6()
+		case '20000-1-4': return ics1_4of6()
+		case '20000-1-5': return ics1_5of6()
 
 		case '24700-1-1': return web1_1of6()
 		case '24700-1-2': return web1_2of6()
@@ -34,8 +36,18 @@ export const sprint1Router = (route) => {
 }
 
 // Introduction to Computer Science (ICS)
-const ics1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
+// Todo: Move session 1 from PowerPoint slides to integrated slides.
+const ics_prework_1_1of6 = () => { return prework_1_1of6() } 
+const ics1_1of6 = () => { return mwf_1_1of6(ics_prework_1_1of6) }
 
+const ics_prework_1_2of6 = () => {
+	return prework('Prework', [
+		'Complete through activity 10 prior to next class', '',
+		'Be ready for a fully remote Friday class where will need a working microphone and headset**', 		
+		'Be prepared for a breakout session on “Computer Science Illuminated” chapter 11 File Systems and Directories',
+		'Be sure to take screenshots when completing Tools of the Trade' ],
+		sprint, list20000Sprint01)
+}
 const ics1_2of6 = () => {
 	const announcement =  () => {
 		return basicSlideWithLogo('Announcements', [
@@ -85,20 +97,69 @@ const ics1_3of6 = () => {
 	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_2of6, poll, programmingTogether, ics_prework_1_3of6, breakout, end ]
 }
 
-// Shared between ICS sessions:
-const ics_prework_1_2of6 = () => {
-	return prework('Prework', [
-		'Complete through activity 10 prior to next class', '',
-		'Be ready for a fully remote Friday class where will need a working microphone and headset**', 		
-		'Be prepared for a breakout session on “Computer Science Illuminated” chapter 11 File Systems and Directories',
-		'Be sure to take screenshots when completing Tools of the Trade' ],
-		sprint, list20000Sprint01)
-}
 const ics_prework_1_3of6 = () => {
 	return prework('Prework', [
 		'Complete through activity 13 prior to next class', '',
 		'Be prepared to discuss “Computer Science Illuminated” Chapter 1 The Big Picture',
 		'Be prepared for Quiz 1' ],
+		sprint, list20000Sprint01)
+}
+
+/* No class due to Labor Day. */
+const ics1_4of6 = () => { 
+	const laborDayAnnouncements =  () => { return basicSlideWithLogo('Announcements', [ 
+		'In recognition of Labor day there is no class.']) }
+	return [ laborDayAnnouncements ]
+}
+// Todo: ICS session 1-4of6 needs to continue to the breakout session with team 2 topic (b).
+// Start Here!
+
+
+
+// BugBug: Prework number needs to be updated so that it reflects the prework assigned for the given session. For 
+//     example, ics_prework_1_2of6 should be the prework that needed to be completed prior to sprint 1 session 2.
+
+const ics_prework_1_5of6 = () => {
+	return prework('Prework', [
+		'Complete through activity 13 prior to next class', '',
+		'Be prepared to discuss “Computer Science Illuminated” Chapter 1 The Big Picture',
+		'Be prepared for Quiz 1' ],
+		sprint, list20000Sprint01)
+}
+const ics1_5of6 = () => {
+	const announcements =  () => {
+		return basicSlideWithLogo('Announcements', [ 
+			'I hope you had a wonderful three day weekend', 
+			'Installing Git on a Mac is crazy easy with “git --version”.' ])
+	}
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Polling: Sprint Progress',
+			'Breakout: File Systems, Directories, and Files (continued)',
+			'Prework for Next Class',
+			'Quiz 1' ])
+	}
+	const breakout = () => { 
+		return breakoutStandard(
+		'Breakout: File Systems, Directories, and Files (continued)', 
+		'In this breakout session on File Systems, Directories, and Files (including Dale chapter 11 content) your team will:', [
+			'File Systems, Directories, and Hidden Directories... Do hidden folders keep information safe? ',
+			'Files, Hidden Files, File Types, and File Extensions... How do we see hidden files and file extensions?', 
+			'How would we utilize graphical and command line tools to view and update File Systems?',
+			'Where would be a good place to store files for this class? Why?', 
+			'What would be a good answer to the lab question on where to store files for this class?' ])
+	}
+	const quizSlide = () => { return quiz(sprint) }
+
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_5of6, breakout, ics_prework_1_6of6, quizSlide, end ]
+}
+
+const ics_prework_1_6of6 = () => {
+	return prework('Prework', [
+		'Everything is due Sunday!', '',
+		'I am not planning on having a breakout session on “Computer Science Illuminated” Chapter 1 The Big Picture', 
+		'Be prepared for Lab' ], 
 		sprint, list20000Sprint01)
 }
 
@@ -131,7 +192,7 @@ const web1_3of6 = () => {
 			'Identifying an optimal location to work on our files',
 			'Utilizing VS Code and a Web browser to create a web page' ])
 	}
-	const poll = () => { return prework('Poll', [ 'Sprint Progress' ], sprint, list44000Sprint01) }
+	const poll = () => { return prework('Poll', [ 'Sprint Progress' ], sprint, list24700Sprint01) }
 	const breakout = () => { 
 		return breakoutStandard(
 		'Breakout: Web Development Workflows and HTML', 
@@ -142,7 +203,7 @@ const web1_3of6 = () => {
 		'How do we Verify correct HTML syntax... Can you demo this activity?' ])
 	}
 
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_2of6, poll, programmingTogether, se_prework_1_3of6, breakout, end ] 
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, web_prework_1_2of6, poll, programmingTogether, web_prework_1_3of6, breakout, end ] 
 }
 
 // Shared between WEB sessions:
@@ -154,6 +215,14 @@ const web_prework_1_2of6 = () => {
 		'Be sure to take screenshots when completing Tools of the Trade' ],
 		sprint, list24700Sprint01)
 }
+const web_prework_1_3of6 = () => {
+	return prework('Prework', [
+		'Complete through activity 13 prior to next class', '',
+		'Be prepared to continue breakout session',
+		'Be prepared for Quiz 1' ],
+		sprint, list24700Sprint01)
+}
+
 
 // Software Engineering (SE)
 const se1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
@@ -201,7 +270,7 @@ const se1_3of6 = () => {
 		'Testing including Verification and Validation... How does Waterfall accomplish Validation?' ])
 	}
 
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_2of6, poll, programmingTogether, se_prework_1_3of6, breakout, breakout2, end ] 
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, se_prework_1_2of6, poll, programmingTogether, se_prework_1_3of6, breakout, breakout2, end ] 
 }
 
 // Shared between SE sessions:
