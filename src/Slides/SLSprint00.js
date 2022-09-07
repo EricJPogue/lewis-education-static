@@ -123,7 +123,7 @@ export const topic = (topic) => {
 export const quiz = (sprint) => {
 	return ( <div>		
 		{renderHeader(`Quiz ${sprint}`)}
-		<p style={styleBasic} >A sincere attempt at quiz {sprint} is due before you leave class today.</p>
+		<p style={styleBasic} >A sincere attempt at quiz {sprint} is due before the end of class today.</p>
 	</div> )
 }
 

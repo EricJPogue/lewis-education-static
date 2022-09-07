@@ -152,9 +152,18 @@ const ics1_5of6 = () => {
 			'Where would be a good place to store files for this class? Why?', 
 			'What would be a good answer to the lab question on where to store files for this class?' ])
 	}
+	const quizExpectations = () => {
+		return orderedListSlide('Quiz Expectation', 
+			'Quiz Expectations include:', [
+			'You may use any naturally available documentation including books, notes, and web browser',
+			'You may not use quiz specific content like question banks',
+			'The quiz is an individual assignment so asking others would be inappropriate**',
+			'You are welcome to ask me quiz or non-quiz related questions',
+			'Your first sincere attempt at the quiz is expected by the end of class']) 
+	}
 	const quizSlide = () => { return quiz(sprint) }
 
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_5of6, breakout, ics_prework_1_6of6, quizSlide, end ]
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_5of6, breakout, ics_prework_1_6of6, quizExpectations, quizSlide, end ]
 }
 
 const ics_prework_1_6of6 = () => {
