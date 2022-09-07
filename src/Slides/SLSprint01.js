@@ -27,10 +27,15 @@ export const sprint1Router = (route) => {
 		case '24700-1-1': return web1_1of6()
 		case '24700-1-2': return web1_2of6()
 		case '24700-1-3': return web1_3of6()
+		case '24700-1-4': return web1_4of6()
+		case '24700-1-5': return web1_5of6()
 
 		case '44000-1-1': return se1_1of6()
 		case '44000-1-2': return se1_2of6()
 		case '44000-1-3': return se1_3of6()
+		case '44000-1-4': return se1_4of6()
+		case '44000-1-5': return se1_5of6()
+
 		default: return null
 	}
 }
@@ -106,15 +111,12 @@ const ics_prework_1_3of6 = () => {
 }
 
 /* No class due to Labor Day. */
-const ics1_4of6 = () => { 
+const ics1_4of6 = () => { return shared1_4of6() }
+const shared1_4of6 = () => { 
 	const laborDayAnnouncements =  () => { return basicSlideWithLogo('Announcements', [ 
 		'In recognition of Labor day there is no class.']) }
 	return [ laborDayAnnouncements ]
 }
-// Todo: ICS session 1-4of6 needs to continue to the breakout session with team 2 topic (b).
-// Start Here!
-
-
 
 // BugBug: Prework number needs to be updated so that it reflects the prework assigned for the given session. For 
 //     example, ics_prework_1_2of6 should be the prework that needed to be completed prior to sprint 1 session 2.
@@ -173,6 +175,14 @@ const web1_2of6 = () => {
 	return mwf_1_2of6(announcements, prework_1_1of6, sprintProgressPolling, web_prework_1_2of6)
 }
 
+const web_prework_1_2of6 = () => {
+	return prework('Prework', [
+		'Complete through activity 10 prior to next class', '',
+		'Be ready for a fully remote Friday class where will need a working microphone and headset**', 		
+		'Be prepared for a breakout session on Web Development Workflows and HTML',
+		'Be sure to take screenshots when completing Tools of the Trade' ],
+		sprint, list24700Sprint01)
+}
 const web1_3of6 = () => {
 	const announcements =  () => {
 		return basicSlideWithLogo('Announcements', [ 'Reminder that Monday is the Labor Day holiday with no classes.' ]) }
@@ -180,12 +190,12 @@ const web1_3of6 = () => {
 		return agendaSlide([
 			'Prework for Today',
 			'Polling: Sprint Progress',
-			'Programming Together: Azure Website with PHP',
+			'Programming Together: Lew Alcindor and Web Programming',
 			'Prework for Next Class',
 			'Breakout: Web Development Workflows and HTML' ])
 	}
 	const programmingTogether = () => {
-		return bulletListSlide('Programming Together', 
+		return bulletListSlide('Programming Together: Lew Alcindor and Web Programming', 
 			'Let’s spend a few minutes programming together utilizing command line and graphical tools to create a basic web application by:', [
 			'Launching PowerShell or Terminal', 
 			'Executing pwd, cd, ls, ls -l, ls -a, mkdir, and clear', 
@@ -203,26 +213,52 @@ const web1_3of6 = () => {
 		'How do we Verify correct HTML syntax... Can you demo this activity?' ])
 	}
 
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, web_prework_1_2of6, poll, programmingTogether, web_prework_1_3of6, breakout, end ] 
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, web_prework_1_2of6, poll, programmingTogether, web_prework_1_5of6, breakout, end ] 
 }
 
-// Shared between WEB sessions:
-const web_prework_1_2of6 = () => {
-	return prework('Prework', [
-		'Complete through activity 10 prior to next class', '',
-		'Be ready for a fully remote Friday class where will need a working microphone and headset**', 		
-		'Be prepared for a breakout session on “Engineering Software as a Service” Chapter 1 and the associated lecture',
-		'Be sure to take screenshots when completing Tools of the Trade' ],
-		sprint, list24700Sprint01)
-}
-const web_prework_1_3of6 = () => {
+const web1_4of6 = () => { return shared1_4of6() }
+
+const web_prework_1_5of6 = () => {
 	return prework('Prework', [
 		'Complete through activity 13 prior to next class', '',
 		'Be prepared to continue breakout session',
 		'Be prepared for Quiz 1' ],
 		sprint, list24700Sprint01)
 }
+const web1_5of6 = () => {
+	const announcements =  () => {
+		return basicSlideWithLogo('Announcements', [ 'I hope you had a wonderful three day weekend' ])
+	}
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Polling: Sprint Progress',
+			'Breakout: Web Development Workflows and HTML (continued)',
+			'Prework for Next Class',
+			'Quiz 1' ])
+	}
+	const breakout = () => { 
+		return breakoutStandard(
+		'Breakout: Web Development Workflows and HTML (continued)', 
+		'In this breakout session on Web development workflows and HTML your team will:', [
+		'Web Development Workflow... What is our web development workflow and tooling?',
+		'HTML history and evolution... What HTML standard will we use?',
+		'Syntax and basic structure... What are other popular markup languages?',
+		'How do we Verify correct HTML syntax... Can you demo this activity?' ])
+	}
 
+	const quizSlide = () => { return quiz(sprint) }
+
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, web_prework_1_5of6, breakout, web_prework_1_6of6, quizSlide, end ]
+}
+
+const web_prework_1_6of6 = () => { return shared_prework_1_6of6() }
+const shared_prework_1_6of6 = () => {
+	return prework('Prework', [
+		'Everything is due Sunday!', '',
+		'Be prepared for Lab' ], 
+		sprint, list20000Sprint01)
+}
 
 // Software Engineering (SE)
 const se1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
@@ -230,6 +266,15 @@ const se1_2of6 = () => {
 	const announcement =  () => { return basicSlideWithLogo('Announcements', ['Dr. Martinez is looking for someone to do some Web development work for her research project.']) }
 	const sprintProgressPolling = () => { return prework('Sprint Progress Polling', prework_1_1of6_list, sprint, list44000Sprint01) }
 	return mwf_1_2of6(announcement, prework_1_1of6, sprintProgressPolling, se_prework_1_2of6)
+}
+
+const se_prework_1_2of6 = () => {
+	return prework('Prework', [
+		'Complete through activity 8 prior to next class', '',
+		'Be ready for a fully remote Friday class where will need a working microphone and headset**', 		
+		'Be prepared for a breakout session on “Engineering Software as a Service” Chapter 1 and the associated lecture',
+		'Be sure to take screenshots when completing Tools of the Trade' ],
+		sprint, list44000Sprint01)
 }
 const se1_3of6 = () => {
 	const announcements =  () => {
@@ -270,26 +315,61 @@ const se1_3of6 = () => {
 		'Testing including Verification and Validation... How does Waterfall accomplish Validation?' ])
 	}
 
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, se_prework_1_2of6, poll, programmingTogether, se_prework_1_3of6, breakout, breakout2, end ] 
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, se_prework_1_2of6, poll, programmingTogether, se_prework_1_5of6, breakout, breakout2, end ] 
 }
+
+/* No class due to Labor Day. */
+const se1_4of6 = () => { return shared1_4of6() }
 
 // Shared between SE sessions:
-const se_prework_1_2of6 = () => {
-	return prework('Prework', [
-		'Complete through activity 8 prior to next class', '',
-		'Be ready for a fully remote Friday class where will need a working microphone and headset**', 		
-		'Be prepared for a breakout session on “Engineering Software as a Service” Chapter 1 and the associated lecture',
-		'Be sure to take screenshots when completing Tools of the Trade' ],
-		sprint, list44000Sprint01)
-}
 
-const se_prework_1_3of6 = () => {
+
+const se_prework_1_5of6 = () => {
 	return prework('Prework', [
 		'Complete through activity 12 prior to next class', '', 		
 		'Be prepared for a breakout session on “Engineering Software as a Service”',
 		'Be prepared for Quiz 1' ],
 		sprint, list44000Sprint01)
 }
+const se1_5of6 = () => {
+	const announcements =  () => {
+		return basicSlideWithLogo('Announcements', [ 'I hope you had a wonderful three day weekend' ])
+	}
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Polling: Sprint Progress',
+			'Breakout: ',
+			'Prework for Next Class',
+			'Quiz 1' ])
+	}
+	const breakout = () => { 
+		return breakoutStandard(
+		'Breakout: Software Development Life Cycles', 
+		'In this breakout session on Software Development Life Cycles (SDLCs), Software as a Service, Cloud Computing, and Highly Productive Frameworks & Tools your team will:', [
+		'Virtuous Triangle... Could Saas on Cloud Computing and Frameworks and Tools be combined?',
+		'SDLCs including Plan and Document, Iterative, and Agile',
+		'SDLCs including Waterfall, Spiral, RUP, Agile, and Scrum',
+		'Agile Manifesto',
+		'Agile methodologies including Kanban, XP (formerly Extreme Programming), and Test-Driven Development' ])
+	}
+	const breakout2 = () => { 
+		return breakoutStandard(
+		'Breakout: SaaS, Cloud, and Frameworks & Tools', 
+		'In this breakout session on Software Development Life Cycles (SDLCs), Software as a Service, Cloud Computing, and Highly Productive Frameworks & Tools your team will:', [
+		'SaaService architectures including SOA, APIs, and Web Services',
+		'Cloud Computing including Azure, AWS, Google, GoDaddy, and Cloud9... How have costs evolved?',
+		'Highly Effective Frameworks including Ruby, React, MERN, Flask, MERN, and many more', 
+		'Highly Effective Tools Git, GitHub, JUnit,  and many more',
+		'Testing including Verification and Validation... How does Waterfall accomplish Validation?' ])
+	}
+
+	const quizSlide = () => { return quiz(sprint) }
+
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, se_prework_1_5of6, breakout, breakout2, se_prework_1_6of6, quizSlide, end ]
+}
+
+const se_prework_1_6of6 = () => { return shared_prework_1_6of6() }
 
 // Shared between classes:
 const prework_1_1of6_list = [
