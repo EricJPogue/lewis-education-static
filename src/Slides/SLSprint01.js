@@ -152,15 +152,7 @@ const ics1_5of6 = () => {
 			'Where would be a good place to store files for this class? Why?', 
 			'What would be a good answer to the lab question on where to store files for this class?' ])
 	}
-	const quizExpectations = () => {
-		return orderedListSlide('Quiz Expectation', 
-			'Quiz Expectations include:', [
-			'You may use any naturally available documentation including books, notes, and web browser',
-			'You may not use quiz specific content like question banks',
-			'The quiz is an individual assignment so asking others would be inappropriate**',
-			'You are welcome to ask me quiz or non-quiz related questions',
-			'Your first sincere attempt at the quiz is expected by the end of class']) 
-	}
+
 	const quizSlide = () => { return quiz(sprint) }
 
 	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_5of6, breakout, ics_prework_1_6of6, quizExpectations, quizSlide, end ]
@@ -248,17 +240,17 @@ const web1_5of6 = () => {
 	}
 	const breakout = () => { 
 		return breakoutStandard(
-		'Breakout: Web Development Workflows and HTML (continued)', 
-		'In this breakout session on Web development workflows and HTML your team will:', [
-		'Web Development Workflow... What is our web development workflow and tooling?',
-		'HTML history and evolution... What HTML standard will we use?',
-		'Syntax and basic structure... What are other popular markup languages?',
-		'How do we Verify correct HTML syntax... Can you demo this activity?' ])
+			'Breakout: Web Development Workflows and HTML (continued)', 
+			'In this breakout session on Web development workflows and HTML your team will:', [
+			'Web Development Workflow... What is our web development workflow and tooling?',
+			'HTML history and evolution... What HTML standard will we use?',
+			'Syntax and basic structure... What are other popular markup languages?',
+			'How do we Verify correct HTML syntax... Can you demo this activity?' ])
 	}
 
 	const quizSlide = () => { return quiz(sprint) }
 
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, web_prework_1_5of6, breakout, web_prework_1_6of6, quizSlide, end ]
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, web_prework_1_5of6, breakout, web_prework_1_6of6, quizExpectations, quizSlide, end ]
 }
 
 const web_prework_1_6of6 = () => { return shared_prework_1_6of6() }
@@ -319,7 +311,7 @@ const se1_3of6 = () => {
 		'In this breakout session on Software Development Life Cycles (SDLCs), Software as a Service, Cloud Computing, and Highly Productive Frameworks & Tools your team will:', [
 		'SaaService architectures including SOA, APIs, and Web Services',
 		'Cloud Computing including Azure, AWS, Google, GoDaddy, and Cloud9... How have costs evolved?',
-		'Highly Effective Frameworks including Ruby, React, MERN, Flask, MERN, and many more', 
+		'Highly Effective Frameworks including Ruby/Rails, React, MERN, Flask and many more', 
 		'Highly Effective Tools Git, GitHub, JUnit,  and many more',
 		'Testing including Verification and Validation... How does Waterfall accomplish Validation?' ])
 	}
@@ -329,9 +321,6 @@ const se1_3of6 = () => {
 
 /* No class due to Labor Day. */
 const se1_4of6 = () => { return shared1_4of6() }
-
-// Shared between SE sessions:
-
 
 const se_prework_1_5of6 = () => {
 	return prework('Prework', [
@@ -348,7 +337,8 @@ const se1_5of6 = () => {
 		return agendaSlide([
 			'Prework for Today',
 			'Polling: Sprint Progress',
-			'Breakout: ',
+			'Breakout: Software Development Life Cycles',
+			'Breakout: SaaS, Cloud, and Frameworks & Tools (optional)',
 			'Prework for Next Class',
 			'Quiz 1' ])
 	}
@@ -366,16 +356,15 @@ const se1_5of6 = () => {
 		return breakoutStandard(
 		'Breakout: SaaS, Cloud, and Frameworks & Tools', 
 		'In this breakout session on Software Development Life Cycles (SDLCs), Software as a Service, Cloud Computing, and Highly Productive Frameworks & Tools your team will:', [
-		'SaaService architectures including SOA, APIs, and Web Services',
+		'SaaS architectures including SOA, APIs, and Web Services',
 		'Cloud Computing including Azure, AWS, Google, GoDaddy, and Cloud9... How have costs evolved?',
-		'Highly Effective Frameworks including Ruby, React, MERN, Flask, MERN, and many more', 
-		'Highly Effective Tools Git, GitHub, JUnit,  and many more',
-		'Testing including Verification and Validation... How does Waterfall accomplish Validation?' ])
+		'Highly Effective Frameworks including Ruby/Rails, React, MERN, Flask, and many more', 
+		'Highly Effective Tools Git, GitHub, JUnit, and many more',
+		'Testing Frameworks & Tools... Do testing tools support Validation? How does Waterfall accomplish Validation?' ])
 	}
-
 	const quizSlide = () => { return quiz(sprint) }
 
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, se_prework_1_5of6, breakout, breakout2, se_prework_1_6of6, quizSlide, end ]
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, se_prework_1_5of6, breakout, breakout2, se_prework_1_6of6, quizExpectations, quizSlide, end ]
 }
 
 const se_prework_1_6of6 = () => { return shared_prework_1_6of6() }
@@ -455,4 +444,13 @@ const mwf_1_2of6 = (announcements, prework, poll, preworkForNextClass) => {
 		activitiesReview, preworkForNextClass, breakoutTeamDiscordAndPlanning, end ]
 }
 
+const quizExpectations = () => {
+	return orderedListSlide('Quiz Expectation', 
+		'Quiz Expectations include:', [
+		'You may use any naturally available documentation including books, notes, and web browser',
+		'You may not use quiz specific content like question banks',
+		'The quiz is an individual assignment so asking others would be inappropriate**',
+		'You are welcome to ask me quiz or non-quiz related questions',
+		'Your first sincere attempt at the quiz is expected by the end of class']) 
+}
 
