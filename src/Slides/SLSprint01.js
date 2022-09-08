@@ -23,18 +23,21 @@ export const sprint1Router = (route) => {
 		case '20000-1-3': return ics1_3of6()
 		case '20000-1-4': return ics1_4of6()
 		case '20000-1-5': return ics1_5of6()
+		case '20000-1-6': return ics1_6of6()
 
 		case '24700-1-1': return web1_1of6()
 		case '24700-1-2': return web1_2of6()
 		case '24700-1-3': return web1_3of6()
 		case '24700-1-4': return web1_4of6()
 		case '24700-1-5': return web1_5of6()
+		case '24700-1-6': return ics1_6of6() // Reusing ics slides. 
 
 		case '44000-1-1': return se1_1of6()
 		case '44000-1-2': return se1_2of6()
 		case '44000-1-3': return se1_3of6()
 		case '44000-1-4': return se1_4of6()
 		case '44000-1-5': return se1_5of6()
+		case '44000-1-6': return ics1_6of6() // Reusing ics slides. 
 
 		default: return null
 	}
@@ -165,6 +168,33 @@ const ics_prework_1_6of6 = () => {
 		'Be prepared for Lab' ], 
 		sprint, list20000Sprint01)
 }
+const ics1_6of6 = () => {
+	const announcements =  () => {
+		return basicSlideWithLogo('Announcements', [ 
+			'Reminder that all sprint 1 assignments are due Sunday... you have a grace period until 6 AM Monday to hit the submit button' ])
+	}
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			'Polling: Sprint Progress',
+			'Prework for Next Class',
+			'Lab' ])
+	}
+	const lab = () => { return basicSlide('Lab', [
+		'How can we best work together to help you be successful in sprint 1?', 
+		'“Phone a Friend” quiz question review?', 
+		'Working together on programming assignments?' ]) 
+}
+
+	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_6of6, ics_prework_2_1of6, lab, end ]
+}
+const ics_prework_2_1of6 = () => {
+	return prework('Prework for Next Class', [
+		'Everything is due Sunday!', '',
+		'Be prepared for 100% focus on Sprint 2 Planning' ], 
+		sprint, list20000Sprint01)
+}
+
 
 // Web & Distributed Programming (WEB)
 const web1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
