@@ -47,15 +47,15 @@ const list20000Sprint02 = (sprint) => {
 			{initialPost(sprint)}
 
 			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Data Representation and review our associated {daleChapter3Lecture()}</li>
-			<li>Complete {htmlLink()} - Part 1{estimated('3 hours')}</li>
 			<li>Within {oreillyPlaylistICS()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
+			<li>Complete {htmlLink()} - Part 1{estimated('3 hours')}</li>
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
 		</ol>
 	</div> )
 }
 
-// Todo: Move “Learning Web Development” above Part 1 of the HTML tutorial.
 // Todo: Consider adding Git/GitHub activity / tutorial. 
 // Todo: Consider lining up certain discussion topics with Friendly Conversation Topics.
-// BugBug: Fix true/false and duplicate questions in Quiz 8.
-// Todo: Add zipped source code requirement to all Final Project presentation assignments.
+
+// Certified for FA22 (08/27/2022)
+

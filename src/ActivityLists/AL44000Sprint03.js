@@ -7,6 +7,8 @@ import { oreillyPlaylistSE, internalLink, externalLink, gitCommands, jsonArticle
 import { assignmentPortfolioWithNodeJSLink } from '../Activities/WebAssignmentPortfolioWithNodeJS'
 import { gettingToKnowEachOthersTeamsLink } from '../Activities/WebGettingToKnowEachOthersTeams'
 
+const foxChapter3Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-03')}
+
 export const al44000Sprint03 = () => {
 	const foxChapter7Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-07') }
 	const nodeJSW3CTutorial = () => { return externalLink('Node.js Tutorial', 'https://www.w3schools.com/nodejs/') }
@@ -40,6 +42,7 @@ with your classmates and scrum team members as you work through some of the open
 
 	{InitialPost(sprint)}
 	<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapters 3 and 4 while completing each of the exercises</li>
+	<li>Scan “Engineering Software as a Service” chapters 3 through 5 and review the associated {foxChapter3Lecture()}</li>
 	<li>Complete the W3C {nodeJSW3CTutorial()}</li>
 	<li>Complete {gettingToKnowEachOthersTeamsLink()}{estimated('4 hours')}</li>
 	<li>Read {jsonArticle()}</li>
@@ -52,6 +55,9 @@ with your classmates and scrum team members as you work through some of the open
 </div> )
 }
 
-
+// Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
+// Todo: Consider doing the same thing for testing.
+// Todo: Add lots of links from the Agile Alliance to various activity lists.
+// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
 
 

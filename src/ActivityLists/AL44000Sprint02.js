@@ -10,7 +10,7 @@ import { azureWebsiteLink } from '../Activities/AzureWebsite'
 import { webResumeLink } from '../Activities/WebResume'
 
 const foxChapter2Lecture = () => internalLink('lecture', '/activity/fox-chapter-02')
-const foxChapter3Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-03')}
+
 const foxChapter6Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-06')}
 
 export const al44000Sprint02 = () => {
@@ -33,25 +33,23 @@ much code. This sprint get your text editors out. We are going to start practici
 <ol>
 	{StandardActivities(assignmentPortfolioLink())}
 	<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated {foxChapter2Lecture()}</li>
-	<li>Read “Engineering Software as a Service” chapter 6 and review our chapter 6 {foxChapter6Lecture()}</li>
 	<li>Complete {azureWebsiteLink()}{estimated('2 hours')}</li>
-	<li>Scan “Engineering Software as a Service” chapters 3 through 5 and review the associated {foxChapter3Lecture()}</li>
-	<li>Read “Engineering Software as a Service” sections A.6 and A.7</li>
 	<li>Within {oreillyPlaylistSE()} scan “Learning Web Development” Preface through Chapter 4</li>
 	<li>Implement your {webResumeLink()} while completing the W3Schools {HTMLW3C()} and {CSSW3C()} tutorials{estimated('6 hours')}</li>
 	<li>{InitialDiscussionPost(2)}</li>
-
+	<li>Read “Engineering Software as a Service” chapter 6 and review our chapter 6 {foxChapter6Lecture()}</li>
+	<li>Read “Engineering Software as a Service” sections A.6 and A.7</li>
 	<li>Complete {JavaScriptW3C()} tutorial including {RegularExpressionsW3C()}</li>
-	<li>Scan the following “Engineering Software as a Service” videos on {FoxHTML()}, {FoxCSS()}, {FoxCookies()}, {FoxAttributes()}, and {FoxRubyMVC()}</li>
+	<li>Briefly Scan the following “Engineering Software as a Service” videos on {FoxHTML()}, {FoxCSS()}, {FoxCookies()}, {FoxAttributes()}, and {FoxRubyMVC()}</li>
 	{StandardActivitiesClosing(assignmentPortfolioLink(), '2 hours')}
 </ol>
 {Closing()}
 </div> )
 }
 
-// Todo: After moving chapter 2 to sprint to we need to reconsider moving other readings back
-// Todo: Remove all multiple selection multiple choice questions for quiz 2 and any other quizzes.
-// Todo: Add lots of links from the Agile Alliance to various activity lists.
-// Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
-// Todo: Consider doing the same thing for testing.
-// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
+// Certified for FA22 (08/27/2022)
+// Todo: Keep improving Quiz 2.
+
+
+
+

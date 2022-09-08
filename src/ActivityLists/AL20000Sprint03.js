@@ -50,6 +50,7 @@ gates, circuits, and computing components.</p>
 </div> )
 }
 
-
+// BugBug: Fix true/false and duplicate questions in Quiz 8.
+// Todo: Add zipped source code requirement to all Final Project presentation assignments.
 
 
