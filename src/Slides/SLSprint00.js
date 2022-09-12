@@ -307,7 +307,7 @@ export const sprintReviewAgendaMWF = (sprint) => {
 
 export const sprintDemosIntro = () => {
 	return bulletListSlide('Sprint Demo Presenters', 
-		'Recall that as a presenter you should be prepared to:', [
+		'As a presenter you should be prepared to:', [
 		'Show your application running and explain what it does',
 		'Talk about any challenges your faced',
 		'Be prepared to share your code with classmates upon request' ])

@@ -33,7 +33,7 @@ export const al20000Sprint02 = () => {
 	</div> )
 }
 
-const list20000Sprint02 = (sprint) => {
+export const list20000Sprint02 = (sprint) => {
 	const daleChapter2Lecture = () => { return internalLink('lecture', '/activity-dale/2') }
 	const daleChapter3Lecture = () => { return internalLink('lecture', '/activity-dale/3') }
 

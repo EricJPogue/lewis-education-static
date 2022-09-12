@@ -31,6 +31,8 @@ export const sprint1Router = (route) => {
 		case '24700-1-4': return web1_4of6()
 		case '24700-1-5': return web1_5of6()
 		case '24700-1-6': return ics1_6of6() // Reusing ics slides. 
+		// BugBug: Reusing ics slides incorrectly has ics activity lists!
+
 
 		case '44000-1-1': return se1_1of6()
 		case '44000-1-2': return se1_2of6()
@@ -38,6 +40,7 @@ export const sprint1Router = (route) => {
 		case '44000-1-4': return se1_4of6()
 		case '44000-1-5': return se1_5of6()
 		case '44000-1-6': return ics1_6of6() // Reusing ics slides. 
+		// BugBug: Reusing ics slides incorrectly has ics activity lists!
 
 		default: return null
 	}
@@ -188,8 +191,8 @@ const ics1_6of6 = () => {
 
 	return [ instructorChecklist, preflightChecklist, announcements, agenda, ics_prework_1_6of6, ics_prework_2_1of6, lab, end ]
 }
-const ics_prework_2_1of6 = () => {
-	return prework('Prework for Next Class', [
+export const ics_prework_2_1of6 = () => {
+	return prework('Prework', [
 		'Everything is due Sunday!', '',
 		'Be prepared for 100% focus on Sprint 2 Planning' ], 
 		sprint, list20000Sprint01)
@@ -288,7 +291,7 @@ const shared_prework_1_6of6 = () => {
 	return prework('Prework', [
 		'Everything is due Sunday!', '',
 		'Be prepared for Lab' ], 
-		sprint, list20000Sprint01)
+		sprint, list24700Sprint01)
 }
 
 // Software Engineering (SE)

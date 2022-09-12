@@ -1,56 +1,72 @@
-import { getClass } from '../data/Classes'
-import { checklist } from './SLSprint00' // Shared slide decks.
-import { preflightChecklist, instructorChecklist, submissionPercentage, end } from './SLSprint00' // Shared slides.
-import { basicSlideWithTitleLink, agendaSlide, orderedListSlide } from './SLSprint00' // Shared slide templates.
-import { sprintDemosIntro, sprintDemos, demoAssignment  } from './SLSprint00'
+import { getClass } from '../DataAndAPIs/Classes'
+
+import { preflightChecklist, instructorChecklist, agendaSlide, activitiesReview, orderedListSlide, prework, bulletListSlide, end, } from './SLSprint00'
+import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+
+import { ics_prework_2_1of6 } from './SLSprint01'
+import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02' 
 
 export const sprint2Router = (route) => {
 	const courseNumberPlusRoute = getClass().number + '-' + route
-	console.log(courseNumberPlusRoute)
 	switch(courseNumberPlusRoute) {
-		case WEB_8_2of6_ROUTE: return web8_2of6()
+		case '20000-2-1': return ics2_1of6()
 
-		default: return checklist()
+		default: return null
 	}
 }
 
 const sprint = 2
+const ics2_1of6 = () => {
+	const preworkToday = () => { return ics_prework_2_1of6() } 
+	const preworkNextClass = () => { return ics_prework_2_2of6() }
 
-// Web & Distributed Programming
-const WEB_8_2of6_ROUTE = '24700-2-2'
-const web8_2of6 = () => {
-	const agenda = () => { 
+	const agenda = () => {
 		return agendaSlide([
-			`Sprint ${sprint-1} Demos`,
-			`Sprint ${sprint-1} Retrospective` ])
+			'Prework for Today',
+			`Sprint ${sprint} Planning`,
+			`Breakout on Sprint ${sprint} Planning`,
+			'Review Demo Schedule',
+			'Prework for Next Class' ])
 	}
-	const metricsIntroductionWithLink = () => {
-		return basicSlideWithTitleLink('Rule #9 (Metrics)', 'https://bobparsons.com/16-rules/', [ '',
-			'“Measure Everything of Significance. Anything that is measured and watched, improves.',
-			'I swear this is true. Anything that is measured and watched, improves.”', '',
-			'- Bob Parsons'
+	const sprintPlanning = () => {
+		return orderedListSlide(`Sprint Planning`, `Sprint ${sprint} Changes:`, [
+			'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
+			'We have a new Demo assignment that will need to be submitted when you complete your lab demo',
+			`We will have sprint ${sprint-1} Demos and Retrospectives on Wednesday`,
+			'We will complete our first Scrum Team Breakout Discussion on Friday',
+			'Should be a little easier since we don’t have a holiday during the sprint',
+			'Easter break and no classes Thursday through Monday will make the sprint a bit challenging'
 		])
 	}
-	const metricsSubmissionPercentage = () => {
-		return submissionPercentage([
-			{ name: 'Discussion', due:12, submitted:12 },
-			{ name: 'Quiz', due:12, submitted:12 },
-			{ name: 'Lab', due:12, submitted:11},
-			{ name: 'Reflection', due: 12, submitted: 12 }
-		])
+	const activitiesBreakout = () => {
+		return orderedListSlide('Scrum Team Planning Review', 'As a scrum team:', [
+			`Review sprint ${sprint} activity list & assignments in detail`,
+			'Discuss and identify questions/concerns',
+			'Scrum master share your team’s top 2 questions/concerns during report out' ])
 	}
-	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
-	const retrospective = () => {
-		return orderedListSlide('Class Retrospective',
-			`Feedback from Sprint ${sprint-1} Assignments & Reflections`, [
-			'Rockstar submission percentage!',
-			'All assignments are graded and posted', 
-			'You should be able to see your grades as well as correct answers to Quiz 1 questions', 
-			'Sorry about Lab 1 Question 2 about scrum teams... I should have removed that question for an online class' ])
+	const introducingDemos = () => {
+		return bulletListSlide('Foreshadowing Wednesday’s Sprint Demos', 
+			'Sprint demos are a key part of Agile software development and Scrum.', [
+			'They occur at the beginning of each new sprint ',
+			'They are an opportunity to show what was completed in the previous sprint',
+			'They are intended to be an **easy** and rewarding experience to show off your work',
+			'Also a chance to see how others solved a problem and to see some of the challenges they faces',
+			'We will each be doing at least on sprint demo during the semester during class' ])
 	}
 
-	// BugBug: Something is wrong with metricsIntroductionWithLink as we have a warning in developer tools.
-	return [ preflightChecklist, instructorChecklist, agenda, sprintDemosIntro, sprintDemos, demoAssignment, 
-		metricsIntroductionWithLink,  metricsSubmissionPercentage, retrospective, end ]
+	return [ instructorChecklist, preflightChecklist, agenda, preworkToday, sprintPlanning, activitiesReview, 
+		activitiesBreakout, preworkNextClass, introducingDemos, sprintDemosIntro, sprintDemos, demoAssignment, end ]
 }
+
+const ics_prework_2_2of6 = () => {
+	const activityList = () => { return list20000Sprint02(sprint) }
+	return prework('Prework', [
+		'Complete through activity 5 prior to next class', '',
+		'Be prepared for sprint 1 demos and retrospectives',
+		'Those scheduled to demo on Wednesday please be a couple of minutes early to class' ], 
+		sprint, activityList)
+}
+
+
+
 
