@@ -294,6 +294,13 @@ const shared_prework_1_6of6 = () => {
 		sprint, list24700Sprint01)
 }
 
+export const web_prework_2_1of6 = () => {
+	return prework('Prework', [
+		'Everything is due Sunday!', '',
+		'Be prepared for 100% focus on Sprint 2 Planning' ], 
+		sprint, list24700Sprint01)
+}
+
 // Software Engineering (SE)
 const se1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
 const se1_2of6 = () => { 
