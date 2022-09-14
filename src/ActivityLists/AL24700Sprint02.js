@@ -52,6 +52,7 @@ export const list24700Sprint02 = (sprint) => {
 	</div> )
 }
 
-
 // Certified for SU22 (05/13/2022)
 // Certified for FA22 (08/27/2022)
+
+// Todo: Move sprint 2 programming assignments from Lab 2 to the sprint 2 activities list for consistency. 

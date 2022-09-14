@@ -1,6 +1,6 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
-import { preflightChecklist, instructorChecklist, agendaSlide, activitiesReview, orderedListSlide, prework, bulletListSlide, end, } from './SLSprint00'
+import { preflightChecklist, instructorChecklist, agendaSlide, basicSlide, activitiesReview, orderedListSlide, prework, bulletListSlide, submissionPercentage, end, } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
 import { ics_prework_2_1of6, web_prework_2_1of6 } from './SLSprint01'
@@ -13,6 +13,7 @@ export const sprint2Router = (route) => {
 	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
 		case '20000-2-1': return ics2_1of6()
+		case '20000-2-2': return ics2_2of6()
 
 		case '24700-2-1': return web2_1of6()
 
@@ -81,6 +82,55 @@ const ics_prework_2_2of6 = () => {
 		'Be prepared for sprint 1 demos and retrospectives',
 		'Those scheduled to demo on Wednesday please be a couple of minutes early to class' ], 
 		sprint, activityList)
+}
+
+const ics2_2of6 = () => {
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			`Sprint ${sprint-1} Demos`,
+			`Sprint ${sprint-1} Retrospective`,
+			`Breakout for Sprint ${sprint-1} Retrospective`,
+			'Prework for Next Class' ])
+	}
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:27, submitted:27 },
+			{ name: 'Quiz', due:27, submitted:27 },
+			{ name: 'Lab', due:27, submitted:26},
+			{ name: 'Reflection', due: 27, submitted: 26 }
+		])
+	}
+	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Excellent submission percentage',
+			'All assignments are graded and posted', 
+			'Thank you for your reflection comments',
+			'Several requests for more time to work with your scrum teams',
+			'Be sure to put something in for each question so that I can give you at least a point or two',
+			'Riddles are still like Kryptonite for me :-) ... Why Michael Griffin? What is “eiπ+1 = ?”'])
+	}
+	// Todo: Create and add slide for metrics.
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
+
+
+	const prework = ics_prework_2_2of6
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, 
+		sprintDemosIntro, sprintDemos, demoAssignment,  
+		metrics, metricsSubmissionPercentage, retrospective, retrospectiveBreakout, end ]
 }
 
 

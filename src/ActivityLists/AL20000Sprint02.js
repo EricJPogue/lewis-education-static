@@ -59,3 +59,4 @@ export const list20000Sprint02 = (sprint) => {
 
 // Certified for FA22 (08/27/2022)
 
+// Todo: Review and possibly reword Lab 2 questions relating to zipping and submitting tools of the trade.
