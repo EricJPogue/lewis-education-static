@@ -16,8 +16,10 @@ export const sprint2Router = (route) => {
 		case '20000-2-2': return ics2_2of6()
 
 		case '24700-2-1': return web2_1of6()
+		case '24700-2-2': return web2_2of6()
 
 		case '44000-2-1': return se2_1of6()
+		case '44000-2-2': return se2_2of6()
 
 		default: return null
 	}
@@ -125,7 +127,6 @@ const ics2_2of6 = () => {
 			'What improvements should we make as a class, team, or individual going forward' ])
 	}
 
-
 	const prework = ics_prework_2_2of6
 
 	return [ preflightChecklist, instructorChecklist, agenda, prework, 
@@ -136,10 +137,10 @@ const ics2_2of6 = () => {
 
 // Web & Distributed Programming (WEB)
 const web2_1of6 = () => {
-	return ics2_1of6(web_prework_2_1of6(), web_prework_2_2of6())
+	return ics2_1of6(web_prework_2_1of6(), web2_2of6_prework())
 }
 
-const web_prework_2_2of6 = () => {
+const web2_2of6_prework = () => {
 	const activityList = () => { return list24700Sprint02(sprint) }
 	return prework('Prework', [
 		'Complete through activity 5 prior to next class', '',
@@ -147,23 +148,133 @@ const web_prework_2_2of6 = () => {
 		'Those scheduled to demo on Wednesday please be a couple of minutes early to class' ], 
 		sprint, activityList)
 }
+const web2_2of6 = () => {
+	const prework = web2_2of6_prework
+	const preworkNext = web2_3of6_prework
+
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			`Sprint ${sprint-1} Demos`,
+			`Sprint ${sprint-1} Retrospective`,
+			`Breakout for Sprint ${sprint-1} Retrospective`,
+			'Prework for Next Class' ])
+	}
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:14, submitted:13 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:14},
+			{ name: 'Reflection', due: 14, submitted: 13 }
+		])
+	}
+	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Excellent submission percentage',
+			'Quiz 1 and Reflection 1 are posted... still working on other assignments', 
+			'Thank you for your reflection comments',
+			'Feel free to leverage a library or other appropriate code in your assignments' ])
+	}
+	// Todo: Create and add slide for metrics.
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, 
+		sprintDemosIntro, sprintDemos, demoAssignment,  
+		metrics, metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext, end ]
+}
+
+const web2_3of6_prework = () => {
+	const activityList = () => { return list24700Sprint02(sprint) }
+	return prework('Prework', [
+		'Complete partially complete with activity 6 prior to next class', '',
+		`Be prepared for discussion ${sprint}`,
+		'Be prepared for Lab' ], 
+		sprint, activityList)
+}
 
 // Software Engineering (SE)
 // Todo: Switch to "_prework" naming for Sprint 2 prework slide functions. 
-export const se_2_1of6_prework = () => {
+export const se2_1of6_prework = () => {
 	return prework('Prework', [
 		'Everything is due Sunday!', '',
 		'Be prepared to focus 100% on Sprint 2 Planning' ])
 }
 const se2_1of6 = () => {
-	return ics2_1of6(se_2_1of6_prework(), se_2_2of6_prework())
+	return ics2_1of6(se2_1of6_prework(), se2_2of6_prework())
 }
 
-const se_2_2of6_prework = () => {
+const se2_2of6_prework = () => {
 	const activityList = () => { return list44000Sprint02(sprint) }
 	return prework('Prework', [
 		'Complete through activity 6 prior to next class', '',
 		'Be prepared for sprint 1 demos and retrospectives',
 		'Those scheduled to demo on Wednesday please be a couple of minutes early to class' ], 
+		sprint, activityList)
+}
+const se2_2of6 = () => {
+	const prework = se2_2of6_prework
+	const preworkNext = se2_3of6_prework
+
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			`Sprint ${sprint-1} Demos`,
+			`Sprint ${sprint-1} Retrospective`,
+			`Breakout for Sprint ${sprint-1} Retrospective`,
+			'Prework for Next Class' ])
+	}
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:14, submitted:13 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:13 },
+			{ name: 'Reflection', due: 14, submitted: 12 }
+		])
+	}
+	// Todo: Add pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Excellent submission percentage',
+			'Quiz 1 and Reflection 1 are posted... still working on other assignments', 
+			'Thank you for your reflection comments',
+			'Feel free to leverage a library or other appropriate code in your assignments' ])
+	}
+	// Todo: Create and add slide for metrics.
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, 
+		sprintDemosIntro, sprintDemos, demoAssignment,  
+		metrics, metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext, end ]
+}
+
+const se2_3of6_prework = () => {
+	const activityList = () => { return list24700Sprint02(sprint) }
+	return prework('Prework', [
+		'Complete partially complete with activity 6 prior to next class', '',
+		`Be prepared for discussion ${sprint}`,
+		'Be prepared for Lab' ], 
 		sprint, activityList)
 }
