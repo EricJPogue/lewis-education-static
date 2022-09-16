@@ -3,6 +3,8 @@ import { getClass } from '../DataAndAPIs/Classes'
 import { preflightChecklist, instructorChecklist, agendaSlide, basicSlide, activitiesReview, orderedListSlide, prework, bulletListSlide, submissionPercentage, basicSlideWithLogo, end, } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
+import { discussionBreakout } from './SLSprint00'
+
 import { ics_prework_2_1of6, web_prework_2_1of6 } from './SLSprint01'
 
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02' 
@@ -18,9 +20,11 @@ export const sprint2Router = (route) => {
 
 		case '24700-2-1': return web2_1of6()
 		case '24700-2-2': return web2_2of6()
+		case '24700-2-3': return web2_3of6()
 
 		case '44000-2-1': return se2_1of6()
 		case '44000-2-2': return se2_2of6()
+		case '44000-2-3': return se2_3of6()
 
 		default: return null
 	}
@@ -240,9 +244,44 @@ const web2_2of6 = () => {
 const web2_3of6_prework = () => {
 	const activityList = () => { return list24700Sprint02(sprint) }
 	return prework('Prework', [
-		'Complete partially complete with activity 6 prior to next class', '',
+		'Complete through activity 6 prior to next class', '',
 		`Be prepared for discussion ${sprint}`,
 		'Be prepared for Lab' ], 
+		sprint, activityList)
+}
+const web2_3of6 = () => {
+	const prework = web2_3of6_prework
+	const preworkNext = web2_4of6_prework
+
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			`Discussion Board ${sprint} as a Scrum Team`,
+			'Prework for Next Class',
+			'Lab' ])
+	}
+
+	const discussionBoard = () => {
+		return discussionBreakout(sprint)
+	} 
+
+	const programmingTogether = () => {
+		return bulletListSlide('Lab & Programming Together', 
+			'Let’s implement CI/CD for our Assignment Portfolio by:', [
+			'Discussing Continuous Integration / Continuous Delivery (CI/CD)', 
+			'Implementing a Assignment Portfolio website utilizing GitHub and Azure', 
+			'Locally updating and testing your Web Resume',
+			'Completing the CI/CD workflow with automatically pushing our changes through GitHub to Azure ' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, discussionBoard, preworkNext, programmingTogether, end ]
+}
+
+const web2_4of6_prework = () => {
+	const activityList = () => { return list44000Sprint02(sprint) }
+	return prework('Prework', [
+		'Complete through activity 10 prior to next class', '',
+		`Be prepared for breakout discussion on Engineering Software as a Service” Chapter 2 reading and lecture` ], 
 		sprint, activityList)
 }
 
@@ -313,10 +352,47 @@ const se2_2of6 = () => {
 }
 
 const se2_3of6_prework = () => {
-	const activityList = () => { return list24700Sprint02(sprint) }
+	const activityList = () => { return list44000Sprint02(sprint) }
 	return prework('Prework', [
-		'Complete partially complete with activity 6 prior to next class', '',
+		'Complete through activity 6 prior to next class', '',
 		`Be prepared for discussion ${sprint}`,
 		'Be prepared for Lab' ], 
+		sprint, activityList)
+}
+
+const se2_3of6 = () => {
+	const prework = se2_3of6_prework
+	const preworkNext = se2_4of6_prework
+
+	const agenda = () => { 
+		return agendaSlide([
+			'Prework for Today',
+			`Discussion Board ${sprint} as a Scrum Team`,
+			'Prework for Next Class',
+			'Lab' ])
+	}
+
+	const discussionBoard = () => {
+		return discussionBreakout(sprint)
+	} 
+
+	const programmingTogether = () => {
+		return bulletListSlide('Lab & Programming Together', 
+			'Let’s implement CI/CD for our Assignment Portfolio by:', [
+			'Discussing Continuous Integration / Continuous Delivery (CI/CD)', 
+			'Implementing a Assignment Portfolio website utilizing GitHub, Azure, and Node.js', 
+			'Locally updating and testing your Assignment Portfolio',
+			'Completing the CI/CD workflow with automatically pushing our changes through GitHub to Azure ' ])
+	}
+
+	return [ preflightChecklist, instructorChecklist, agenda, prework, 
+		discussionBoard, preworkNext, programmingTogether, end ]
+}
+
+const se2_4of6_prework = () => {
+	const activityList = () => { return list44000Sprint02(sprint) }
+	return prework('Prework', [
+		'Complete through activity 10 prior to next class', '',
+		`Be prepared for breakout discussion on Engineering Software as a Service” Chapter 2 reading and lecture` ], 
 		sprint, activityList)
 }
