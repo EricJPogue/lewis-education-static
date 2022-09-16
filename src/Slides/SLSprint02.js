@@ -122,7 +122,8 @@ const ics2_2of6 = () => {
 			'Several requests for more time to work with your scrum teams',
 			'Be **sure** to put something in for each question so that I can give you at least a point or two',
 			'Riddles are still like Kryptonite for me :-) ... Why Michael? What is “eiπ+1 = ?”', 
-			'Why Sami? ... What has cities with no people, mountains with no trees, and water with no ocean?'])
+			'Why Sami? ... What has cities with no people, mountains with no trees, and water with no ocean?', 
+			'**If you are not where you want to be in the class after sprint 1, I highly encourage you to come and talk with me' ])
 	}
 	// Todo: Create and add slide for metrics.
 	const retrospectiveBreakout = () => {
