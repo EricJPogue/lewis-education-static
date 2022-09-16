@@ -58,4 +58,10 @@ export const list20000Sprint01 = (sprint) => {
 
 // Certified for FA22 (08/27/2022)
 
+// Todo: Update quiz 1 so that they can not see specific answers during the sprint. 
+// Todo: Update lab 1 questions 8 and 9 to be more clear. 
+// Todo: Add good feedback answer to lab 1 question 5 to see if we can do this on other important questions. 
+// Todo: Remove "part-1" reference to lab 1 question 8.
+// Todo: Consider removing Office 365 from Tools of the Trade.
+
 

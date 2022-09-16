@@ -114,9 +114,11 @@ const ics2_2of6 = () => {
 			'Excellent submission percentage',
 			'All assignments are graded and posted', 
 			'Thank you for your reflection comments',
+			'Lots of nice comments about scrum teammates', 
 			'Several requests for more time to work with your scrum teams',
 			'Be sure to put something in for each question so that I can give you at least a point or two',
-			'Riddles are still like Kryptonite for me :-) ... Why Michael Griffin? What is “eiπ+1 = ?”'])
+			'Riddles are still like Kryptonite for me :-) ... Why Michael? What is “eiπ+1 = ?”', 
+			'Why Sami? ... What has cities with no people, mountains with no trees, and water with no ocean?'])
 	}
 	// Todo: Create and add slide for metrics.
 	const retrospectiveBreakout = () => {
