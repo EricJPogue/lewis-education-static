@@ -1,6 +1,6 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
-import { preflightChecklist, instructorChecklist, agendaSlide, basicSlide, activitiesReview, orderedListSlide, prework, bulletListSlide, submissionPercentage, end, } from './SLSprint00'
+import { preflightChecklist, instructorChecklist, agendaSlide, basicSlide, activitiesReview, orderedListSlide, prework, bulletListSlide, submissionPercentage, basicSlideWithLogo, end, } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
 import { ics_prework_2_1of6, web_prework_2_1of6 } from './SLSprint01'
@@ -14,6 +14,7 @@ export const sprint2Router = (route) => {
 	switch(courseNumberPlusRoute) {
 		case '20000-2-1': return ics2_1of6()
 		case '20000-2-2': return ics2_2of6()
+		case '20000-2-3': return ics2_3of6()
 
 		case '24700-2-1': return web2_1of6()
 		case '24700-2-2': return web2_2of6()
@@ -86,6 +87,9 @@ const ics_prework_2_2of6 = () => {
 		sprint, activityList)
 }
 
+// Todo: Review slides and check for class conflict relating to “Mass of the Holy Spirit” as FA22 university schedule
+//     cancelled 11 AM classes cause us to reschedule Wednesday (ics2_2of6) activities to Friday.
+// Todo: Consider prerecording class for both FA22 sections if one is canceled.
 const ics2_2of6 = () => {
 	const agenda = () => { 
 		return agendaSlide([
@@ -116,7 +120,7 @@ const ics2_2of6 = () => {
 			'Thank you for your reflection comments',
 			'Lots of nice comments about scrum teammates', 
 			'Several requests for more time to work with your scrum teams',
-			'Be sure to put something in for each question so that I can give you at least a point or two',
+			'Be **sure** to put something in for each question so that I can give you at least a point or two',
 			'Riddles are still like Kryptonite for me :-) ... Why Michael? What is “eiπ+1 = ?”', 
 			'Why Sami? ... What has cities with no people, mountains with no trees, and water with no ocean?'])
 	}
@@ -136,6 +140,41 @@ const ics2_2of6 = () => {
 		metrics, metricsSubmissionPercentage, retrospective, retrospectiveBreakout, end ]
 }
 
+/* Due to change in plans on Wednesday, the Friday prework was not implemented. 
+const ics_prework_2_3of6 = () => {
+	const activityList = () => { return list20000Sprint02(sprint) }
+	return prework('Prework', [
+		'Complete through activity 5 prior to next class', '',
+		'Be prepared for sprint 1 demos and retrospectives',
+		'Those scheduled to demo on Wednesday please be a couple of minutes early to class' ], 
+		sprint, activityList)
+}
+*/
+
+const ics2_3of6 = () => {
+	const announcements =  () => { return basicSlideWithLogo(
+		'Announcements', 
+		['Our change of plans on Wednesday has us completing Wednesday’s activities today.']) }
+
+	const slides = [ preflightChecklist, instructorChecklist, announcements ].concat(ics2_2of6())
+	
+	// Todo: Rewrite this section of code.
+	// Remove duplicate checklists.
+	slides.splice(3, 2)
+	slides.splice(12, 0, ics_prework_2_4of6)
+
+	return slides
+}
+
+const ics_prework_2_4of6 = () => {
+	const activityList = () => { return list20000Sprint02(sprint) }
+	return prework('Prework', [
+		'Complete through activity 9 prior to next class', '',
+		'Complete your initial Discussion 2 post by the end of the day Sunday',
+		'Be prepared for breakout on The Information Layer reading and lecture',
+		'Be prepared for programming together with Getting to Know Each Other' ], 
+		sprint, activityList)
+}
 
 // Web & Distributed Programming (WEB)
 const web2_1of6 = () => {
