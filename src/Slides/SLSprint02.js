@@ -1,7 +1,8 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
-import { preflightChecklist, instructorChecklist, agendaSlide, basicSlide, activitiesReview, orderedListSlide, prework, bulletListSlide, submissionPercentage, basicSlideWithLogo, end, } from './SLSprint00'
+import { preflightChecklist, instructorChecklist, agendaSlide, basicSlide, breakoutStandard, activitiesReview, orderedListSlide, prework, bulletListSlide, submissionPercentage, basicSlideWithLogo, end, tPrework } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+import { tPreworkWithLogo } from './SLSprint00'
 
 import { discussionBreakout } from './SLSprint00'
 
@@ -17,6 +18,9 @@ export const sprint2Router = (route) => {
 		case '20000-2-1': return ics2_1of6()
 		case '20000-2-2': return ics2_2of6()
 		case '20000-2-3': return ics2_3of6()
+		case '20000-2-4': return ics_2_4of6()
+		case '20000-2-5': return ics_2_5of6()
+		case '20000-2-6': return ics_2_6of6()
 
 		case '24700-2-1': return web2_1of6()
 		case '24700-2-2': return web2_2of6()
@@ -158,27 +162,79 @@ const ics_prework_2_3of6 = () => {
 
 const ics2_3of6 = () => {
 	const announcements =  () => { return basicSlideWithLogo(
-		'Announcements', 
-		['Our change of plans on Wednesday has us completing Wednesday’s activities today.']) }
+		'Announcements', ['Our change of plans on Wednesday has us completing Wednesday’s activities today.']) }
 
 	const slides = [ preflightChecklist, instructorChecklist, announcements ].concat(ics2_2of6())
 	
 	// Todo: Rewrite this section of code.
 	// Remove duplicate checklists.
 	slides.splice(3, 2)
-	slides.splice(12, 0, ics_prework_2_4of6)
+	slides.splice(12, 0, ics_2_4of6_prework)
 
 	return slides
 }
 
-const ics_prework_2_4of6 = () => {
+const ics_2_4of6_prework = () => {
 	const activityList = () => { return list20000Sprint02(sprint) }
-	return prework('Prework', [
-		'Complete through activity 9 prior to next class', '',
-		'Complete your initial Discussion 2 post by the end of the day Sunday',
-		'Be prepared for breakout on The Information Layer reading and lecture',
-		'Be prepared for programming together with Getting to Know Each Other' ], 
-		sprint, activityList)
+	return prework('Prework', ics_2_4of6_prework_list, sprint, activityList)
+}
+
+const ics_2_4of6_prework_list = [ 
+	'Complete through activity 9 prior to next class', '',
+	'Complete your initial Discussion 2 post by the end of the day Sunday',
+	'Be prepared for breakout on The Information Layer reading and lecture',
+	'Be prepared for programming together with Getting to Know Each Other' 
+]
+const ics_2_4of6 = () => {
+	const activityList = () => { return list20000Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_4of6_prework_list, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_5of6_prework_list, sprint, activityList) }
+	const agenda = () => { 
+		return agendaSlide([
+			'Breakout: The Information Layer',
+			'Data Representation and The Humble Text File',
+			'Prework for Next Class' ])
+	}
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: The Information Layer', 
+			'In this breakout session on The Information Layer (reading and lecture) your team will:', [
+			'Numbers and Computing', 
+			'Positional Notation', 
+			'Binary, Octal, and Hexadecimal',
+			'Why Hex?',
+			'How does this relate to files?' ])
+	}
+	const theHumbleTextFile = () => {
+		return bulletListSlide('Thus Humble Text File', 
+			'Let’s explore Binary Values and the Data Representation of text files including', [
+			'ASCII Text Files', 
+			'Unicode',
+			'UTF-16 and UTF-8 '])
+	}
+
+	return [ preflightChecklist, instructorChecklist, prework, agenda, breakout, preworkNext, theHumbleTextFile, end ]
+}
+
+const ics_2_5of6_prework_list = [
+	'Complete through activity 10 prior to next class', '',
+	'Be prepared for breakout on Data Representation reading and lecture',
+	'Be prepared for Quiz 2' ]
+	const ics_2_5of6 = () => {
+		const activityList = () => { return list20000Sprint02(sprint) }
+		const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_5of6_prework_list, sprint, activityList) }
+	
+		return [ prework ]
+	}
+
+const ics_2_6of6_prework_list = [
+	'Complete through activity 12 prior to next class', '',
+	'Be prepared for Lab and Programming Together' ]
+const ics_2_6of6 = () => {
+	const activityList = () => { return list20000Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_6of6_prework_list, sprint, activityList) }
+
+	return [ prework ]
 }
 
 // Web & Distributed Programming (WEB)

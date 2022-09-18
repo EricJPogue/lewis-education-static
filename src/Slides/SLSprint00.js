@@ -94,6 +94,28 @@ export const preworkWithActivityList = (preworkItems, activityListFunction, spri
 	</div> )
 }
 
+export const tPrework = (title, preworkItems, sprint=null, activityListFunction=null) => {
+	const preworkList = (sprint, activityListFunction) => {
+		if ((sprint === null) || (activityListFunction === null)) return null
+		return ( <div><br /><hr />
+			<p style={{fontSize:20}}>Sprint {sprint} Activities List</p>
+			{activityListFunction()}
+		</div> )	
+	}
+
+	return ( <div>
+		{basicSlideWithTitle(title, preworkItems)}
+		{preworkList(sprint, activityListFunction)}
+	</div> )
+}
+
+export const tPreworkWithLogo = (title, preworkItems, sprint=null, activityListFunction=null) => {
+	return ( <div>
+		{renderLogo()}
+		{prework(title, preworkItems, sprint, activityListFunction)}
+	</div> )
+}
+
 // Todo: Replace all other prework slides with this slide.
 export const prework = (title, preworkItems, sprint=null, activityListFunction=null) => {
 	const preworkList = (sprint, activityListFunction) => {
