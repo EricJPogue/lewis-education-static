@@ -207,10 +207,12 @@ const ics_2_4of6 = () => {
 	}
 	const theHumbleTextFile = () => {
 		return bulletListSlide('Thus Humble Text File', 
-			'Let’s explore Binary Values and the Data Representation of text files including', [
+			'Let’s explore Binary Values and the Data Representation of text files including:', [
 			'ASCII Text Files', 
 			'Unicode',
-			'UTF-16 and UTF-8 '])
+			'UTF-16 and UTF-8 ',
+			'What is a local',
+			'What is received when a US-English ASCII email is sent to a CA-French recipient?'])
 	}
 
 	return [ preflightChecklist, instructorChecklist, prework, agenda, breakout, preworkNext, theHumbleTextFile, end ]
