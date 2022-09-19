@@ -25,15 +25,18 @@ export const sprint2Router = (route) => {
 		case '24700-2-1': return web2_1of6()
 		case '24700-2-2': return web2_2of6()
 		case '24700-2-3': return web2_3of6()
+		case '24700-2-4': return web_2_4of6()
 
 		case '44000-2-1': return se2_1of6()
 		case '44000-2-2': return se2_2of6()
 		case '44000-2-3': return se2_3of6()
+		case '44000-2-4': return se_2_4of6()
 
 		default: return null
 	}
 }
 
+const makeSlideDeck = (slides) => {	return [ preflightChecklist, instructorChecklist ].concat(slides).concat(end) }
 const sprint = 2
 const ics2_1of6 = (preworkTodayIn, preworkNextClassIn) => {
 	const preworkToday = () => { 
@@ -48,7 +51,6 @@ const ics2_1of6 = (preworkTodayIn, preworkNextClassIn) => {
 		}
 		return preworkNextClassIn
 	}
-
 	const agenda = () => {
 		return agendaSlide([
 			'Prework for Today',
@@ -348,6 +350,53 @@ const web2_4of6_prework = () => {
 		sprint, activityList)
 }
 
+const web_2_4of6_prework_list = [
+	'Complete through activity 10 prior to next class', '',
+	'Be prepared for breakout discussion on Engineering Software as a Service” Chapter 2 reading and lecture' ]
+const web_2_4of6 = () => {
+	const activityList = () => { return list24700Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', web_2_4of6_prework_list, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_2_5of6_prework_list, sprint, activityList) }
+
+	const agenda = () => { 
+		return agendaSlide([
+			'Breakout: Cascading Style Sheets (CSS)',
+			'The Humble Text File',
+			'Prework for Next Class',
+			'Lab & Programming Together (as time allows)' ])
+	}
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Cascading Style Sheets (CSS)', 
+			'In this breakout session on Cascading Style Sheets (CSS) including the Sebesta chapter 3 reading and lecture your team will discuss:', [
+			'Introduction plus levels including Inline, Internal, and External', 
+			'Selectors, Properties, and Pseudo classes', 
+			'Font, Color, and List Properties',
+			'<span> and <div> tags',
+			'Toolkits and Libraries' ])
+	}
+	const theHumbleTextFile = () => {
+		return bulletListSlide('Thus Humble Text File', 
+			'Let’s explore text files including:', [
+			'ASCII Text Files', 
+			'Unicode',
+			'UTF-16 and UTF-8 ',
+			'HTML Implications', 
+			'Curly Double Quotes' ])
+	}
+	const lab = () => { 
+		return basicSlide( 'Lab & Programming Together (as time allows)', [
+			'Tools of the Trade installation and configuration',
+			'Current programming assignments' ]) 
+	}
+
+	return makeSlideDeck ([ prework, agenda, breakout, theHumbleTextFile, preworkNext, lab ])
+}
+
+const web_2_5of6_prework_list = [
+	'Complete through activity 10 prior to next class', '',
+	'Be prepared for breakout discussion on Engineering Software as a Service” Chapter 2 reading and lecture' ]
+
 // Software Engineering (SE)
 // Todo: Switch to "_prework" naming for Sprint 2 prework slide functions. 
 export const se2_1of6_prework = () => {
@@ -459,3 +508,63 @@ const se2_4of6_prework = () => {
 		`Be prepared for breakout discussion on Engineering Software as a Service” Chapter 2 reading and lecture` ], 
 		sprint, activityList)
 }
+
+const se_2_4of6_prework_list = [
+	'Complete through activity 10 prior to next class', '',
+	'Be prepared for breakout discussion on “Engineering Software as a Service” Chapter 2 The Architecture os Saas Applications'
+]
+const se_2_4of6 = () => {
+	const activityList = () => { return list44000Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', se_2_4of6_prework_list, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_5of6_prework_list, sprint, activityList) }
+
+
+	const agenda = () => { 
+		return agendaSlide([
+			'Breakout: The Architecture of Saas Applications',
+			'Prework for Next Class',
+			'Lab & Programming Together (as time allows)' ])
+	}
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: The Architecture of Saas Applications', 
+			'In this breakout session on The Architecture of Saas Applications reading and lecture your team will discuss:', [
+			'SaaS Architecture elements and the specific tools in the Author’s SaaS Architecture including database', 
+			'The required components of our SaaS architecture... and exceptions', 
+			'Suggested additional components including Bootstrap, Mongoose, Web Services/REST, and React' ])
+	}
+	const lab = () => { 
+		return basicSlide( 'Lab & Programming Together (as time allows)', [
+			'Tools of the Trade installation and configuration',
+			'Current programming assignments' ]) 
+	}
+
+	return makeSlideDeck([ prework, agenda, breakout, preworkNext, lab ])
+}
+
+const se_2_5of6_prework_list = [
+	'Complete through activity 12 prior to next class', '',
+	'Be prepared for breakout on “Engineering Software as a Service” Chapter 6 Client Framework: JavaScript',
+	'Be prepared for Quiz 2' 
+]
+
+/*
+Team discusses topics while the presenter summarizes the 5 topics below:
+JavaScript and JavaScript with Ruby
+AJAX and XML/JSON
+Single-Page Web Applications
+Angular, React, other single-page web application environments
+Where does Ruby fit? Where does Jamstack fit?
+Where does Node.js and MongoDB fit?
+*/
+
+
+
+/*
+Team discusses topics while the presenter summarizes the topics below:
+Chapter 3 Introduction to Ruby… how do we create non-objects in Ruby?
+Chapter 4 Introduction to Rails… how do we create a non-model-view-controller Rails application?
+Chapter 5 Advanced Rails… authentication? Is the Ruby/Rails framework opinionated? Is that good or bad?
+A.6 Git and Version Control and A.7 GitHub
+ORM (Object-Relational-Mapper) and NoSQL Databases
+*/
