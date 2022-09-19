@@ -193,7 +193,8 @@ const ics_2_4of6 = () => {
 		return agendaSlide([
 			'Breakout: The Information Layer',
 			'Data Representation and The Humble Text File',
-			'Prework for Next Class' ])
+			'Prework for Next Class',
+			'Lab & Programming Together (as time allows)' ])
 	}
 	const breakout = () => { 
 		return breakoutStandard( 
@@ -202,8 +203,7 @@ const ics_2_4of6 = () => {
 			'Numbers and Computing', 
 			'Positional Notation', 
 			'Binary, Octal, and Hexadecimal',
-			'Why Hex?',
-			'How does this relate to files?' ])
+			'Why Hex? How does this relate to files?' ])
 	}
 	const theHumbleTextFile = () => {
 		return bulletListSlide('Thus Humble Text File', 
@@ -214,8 +214,13 @@ const ics_2_4of6 = () => {
 			'What is a local',
 			'What is received when a US-English ASCII email is sent to a CA-French recipient?'])
 	}
+	const lab = () => { 
+		return basicSlide( 'Lab & Programming Together (as time allows)', [
+			'Tools of the Trade installation and configuration',
+			'Current programming assignments' ]) 
+	}
 
-	return [ preflightChecklist, instructorChecklist, prework, agenda, breakout, preworkNext, theHumbleTextFile, end ]
+	return [ preflightChecklist, instructorChecklist, prework, agenda, breakout, preworkNext, theHumbleTextFile, lab, end ]
 }
 
 const ics_2_5of6_prework_list = [
