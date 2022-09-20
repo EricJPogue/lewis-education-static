@@ -75,17 +75,6 @@ const breakoutSlides = {
 			'Robotics'
 		]
 	},
-	'daleDiscussion3': {
-		'route':'dale-discussion-3',
-		'title':'Data Representation',
-		'topics': [
-			'Analog and Digital Data',
-			'Binary Representation of Numeric Data',
-			'Unicode including UTF-8 and UTF-16 Representations',
-			'Photo and Audio Representation Priorities',
-			'Video Representation priorities'
-		]
-	},
 	'daleDiscussion4': {
 		'route':'dale-discussion-4',
 		'title':'Gates and Circuits',

@@ -142,6 +142,7 @@ export const topic = (topic) => {
 	return ( <div><br /><br /><br /><br /><br /><br /><h1 style={title}>{topic}</h1> </div>)
 }
 
+export const tQuiz = (sprint) => { return quiz(sprint) } 
 export const quiz = (sprint) => {
 	return ( <div>		
 		{renderHeader(`Quiz ${sprint}`)}

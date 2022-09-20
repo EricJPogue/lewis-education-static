@@ -1,6 +1,6 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
-import { preflightChecklist, instructorChecklist, agendaSlide, basicSlide, breakoutStandard, activitiesReview, orderedListSlide, prework, bulletListSlide, submissionPercentage, basicSlideWithLogo, end, tPrework } from './SLSprint00'
+import { preflightChecklist, instructorChecklist, agendaSlide, basicSlide, breakoutStandard, activitiesReview, orderedListSlide, prework, bulletListSlide, submissionPercentage, basicSlideWithLogo, end, tPrework, tQuiz } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 import { tPreworkWithLogo } from './SLSprint00'
 
@@ -31,6 +31,7 @@ export const sprint2Router = (route) => {
 		case '44000-2-2': return se2_2of6()
 		case '44000-2-3': return se2_3of6()
 		case '44000-2-4': return se_2_4of6()
+		case '44000-2-5': return se_2_5of6()
 
 		default: return null
 	}
@@ -187,6 +188,17 @@ const ics_2_4of6_prework_list = [
 	'Be prepared for breakout on The Information Layer reading and lecture',
 	'Be prepared for programming together with Getting to Know Each Other' 
 ]
+
+const theHumbleTextFile = () => {
+	return bulletListSlide('Thus Humble Text File', 
+		'Let’s explore Binary Values and the Data Representation of text files including:', [
+		'ASCII Text Files', 
+		'Unicode',
+		'UTF-16 and UTF-8 ',
+		'What is a local',
+		'What is received when a US-English ASCII email is sent to a CA-French recipient?'])
+}
+
 const ics_2_4of6 = () => {
 	const activityList = () => { return list20000Sprint02(sprint) }
 	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_4of6_prework_list, sprint, activityList) }
@@ -207,15 +219,6 @@ const ics_2_4of6 = () => {
 			'Binary, Octal, and Hexadecimal',
 			'Why Hex? How does this relate to files?' ])
 	}
-	const theHumbleTextFile = () => {
-		return bulletListSlide('Thus Humble Text File', 
-			'Let’s explore Binary Values and the Data Representation of text files including:', [
-			'ASCII Text Files', 
-			'Unicode',
-			'UTF-16 and UTF-8 ',
-			'What is a local',
-			'What is received when a US-English ASCII email is sent to a CA-French recipient?'])
-	}
 	const lab = () => { 
 		return basicSlide( 'Lab & Programming Together (as time allows)', [
 			'Tools of the Trade installation and configuration',
@@ -229,12 +232,32 @@ const ics_2_5of6_prework_list = [
 	'Complete through activity 10 prior to next class', '',
 	'Be prepared for breakout on Data Representation reading and lecture',
 	'Be prepared for Quiz 2' ]
-	const ics_2_5of6 = () => {
-		const activityList = () => { return list20000Sprint02(sprint) }
-		const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_5of6_prework_list, sprint, activityList) }
-	
-		return [ prework ]
+const ics_2_5of6 = () => {
+	const activityList = () => { return list20000Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_5of6_prework_list, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_6of6_prework_list, sprint, activityList) }
+	const agenda = () => { 
+		return agendaSlide([
+			'Data Representation and The Humble Text File (continued)',
+			'Breakout: Data Representation',
+			'Prework for Next Class',
+			'Quiz 2' ])
 	}
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Data Representation', 
+			'In this breakout session on Data Representation (reading and lecture) your team will:', [
+			'Analog and Digital Data',
+			'Binary Representation of Numeric Data',
+			'Text including ASCII, Unicode, UTF-8, UTF-16 Representations, and PDF',
+			'Photo and Audio Representation Priorities',
+			'Video Representation priorities' ]
+		)
+	}
+	const quiz = () => { return tQuiz(sprint) }
+
+	return makeSlideDeck( [ prework, agenda, theHumbleTextFile, breakout, preworkNext, quiz  ] )
+}
 
 const ics_2_6of6_prework_list = [
 	'Complete through activity 12 prior to next class', '',
@@ -547,19 +570,43 @@ const se_2_5of6_prework_list = [
 	'Be prepared for breakout on “Engineering Software as a Service” Chapter 6 Client Framework: JavaScript',
 	'Be prepared for Quiz 2' 
 ]
+const se_2_5of6 = () => {
+	const activityList = () => { return list44000Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', se_2_5of6_prework_list, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_6of6_prework_list, sprint, activityList) }
 
-/*
-Team discusses topics while the presenter summarizes the 5 topics below:
-JavaScript and JavaScript with Ruby
-AJAX and XML/JSON
-Single-Page Web Applications
-Angular, React, other single-page web application environments
-Where does Ruby fit? Where does Jamstack fit?
-Where does Node.js and MongoDB fit?
-*/
+	const agenda = () => { 
+		return agendaSlide([
+			'Breakout: SaaS Client Framework: Introduction to JavaScript',
+			'Prework for Next Class',
+			'Lab & Programming Together (as time allows)',
+			'Quiz 2' ])
+	}
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: SaaS Client Framework: Introduction to JavaScript', 
+			'In this breakout session on the SaaS Client Framework: Introduction to JavaScript your team will discuss:', [
+			'JavaScript and it’s relationship to Ruby, Node.js, and JSON', 
+			'AJAX, REST, Web Services, XML, and JSON', 
+			'JavaScript libraries including JQuery, Bootstrap, and reactive applications',
+			'Single-page web applications, static web sites, REACT, and Jamstack' ])
+	}
+	const lab = () => { 
+		return basicSlide( 'Lab & Programming Together (as time allows)', [
+			'Tools of the Trade installation and configuration',
+			'Current programming assignments' ]) 
+	}
+	const quiz = () => { return tQuiz(sprint) }
 
+	return makeSlideDeck([ prework, agenda, breakout, preworkNext, lab, quiz ])
+}
 
+const se_2_6of6_prework_list = [
+	'Complete through activity 14 prior to next class', '',
+	'Be prepared for Lab and Programming Together' 
+]
 
+// Todo: Where do these topics fit?
 /*
 Team discusses topics while the presenter summarizes the topics below:
 Chapter 3 Introduction to Ruby… how do we create non-objects in Ruby?
