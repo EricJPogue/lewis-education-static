@@ -55,12 +55,15 @@ export const initialPost = (sprint=1) => {
 	}
 }
 
-export const standardActivities = (sprint=1, programmingAssignmentLink='', playlistLink='', excludePreviousTopics) => { 
+export const standardActivities = (sprint=1, programmingAssignmentLink='', playlistLink='', includeTutoring=true) => { 
 	const programmingAssignmentActivityStart = () => {
 		if (programmingAssignmentLink !== '') return ( <li>Start working on {programmingAssignmentLink}</li> ) 
 	}
 	const previousSprintTopics = () => { 
-		if (playlistLink !== '') return ( <li>From previous sprints review {ExampleCode()}, {gitCommands()}, {codingStandards()}, and {playlistLink}</li> )
+		const checkIncludeTutoring = () => { if (includeTutoring) { return ( <span>{tutoringOptions()},</span> ) }}
+		const tutoringOptions = () => internalLink('tutoring options', '/activity/study-table')
+
+		if (playlistLink !== '') return ( <li>From previous sprints review {checkIncludeTutoring()} {ExampleCode()}, {gitCommands()}, {codingStandards()}, and {playlistLink}</li> )
 	}
 	const sprint1StandardActivities = () => {
 		const syllabus = () => internalLink('syllabus', '/syllabus')
@@ -85,21 +88,19 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 		}
 	}
 	const currentAssignments = (sprint) => {
-			if (sprint === 1) {
-			return ( <em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em> )	
+		switch (sprint) {
+			case 1: return ( <em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em> )
+			case 2: return ( <em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, Reflection {sprint}, and Lab Demo</em> )
+			case 3: return ( <em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, Reflection {sprint}, and Lab Demo</em> )
+			case 4: return ( <em>Review sprint {sprint} assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em> )
+			case 5: return ( <em>Review sprint {sprint} assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em> )
+			case 6: return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em>)
+			case 7: return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em>)
+			case 8: return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Final Project Presentation</em>)
+			default: return null
 		}
-		if (sprint === 8) {
-			return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Final Project Presentation</em>)		
-		}
-		if (sprint > 5) {
-			return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em>)
-		}
-		if (sprint > 4) {
-			return ( <em>Review sprint {sprint} assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em> )			
-		}
-		return ( <em>Review sprint {sprint} assignments including Discussion {sprint}, Quiz {sprint}, Lab {sprint}, Reflection {sprint}, and Lab Demo</em> )
 	}
-	
+
 	const focusOnDueDates = (sprint) => {
 		if (sprint > 3) {
 			return ( <li>Focus on due dates by reviewing our {calendarLink(sprint)} and {scheduleLink(sprint)}</li> )			
@@ -117,45 +118,57 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 }
 
 export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink='', programmingAssignmentEstimate='') => { 
-	const standardActivitiesClosing = () => {
-		return ( <div>
+
+	
+	const sprint1StandardActivitiesClosing = () => { 
+		return (<div>
+			<li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
 			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 			<li><em>Complete Discussion {sprint} by responding to at least two of your classmates’ posts</em></li>
 			<li><em>Submit sprint {sprint} assignments including Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
-		</div>)
+		</div>) 
 	}
-	const sprint1StandardActivitiesClosing = () => { return (<div>
-			<li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
-			{standardActivitiesClosing()}
-		</div>)
-	}
-	const sprint2StandardActivitiesClosing = () => { return (<div>
-		<li>Verify that you added a representative photo of yourself to {blackboardChangePhoto()} and Zoom</li>
-		{standardActivitiesClosing()}
-		</div>)
-	}
-	const sprint3StandardActivitiesClosing = () => { return (<div>
+	const sprint2StandardActivitiesClosing = () => { 
+		return (<div>
+			<li>Verify that you added a representative photo of yourself to {blackboardChangePhoto()} and Zoom</li>
 			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+			<li><em>Complete Discussion {sprint} by responding to at least two of your classmates’ posts</em></li>
+			<li><em>Submit sprint {sprint} assignments including Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
+		</div>) 
+	}
+	const sprint3StandardActivitiesClosing = () => { 
+		const checkProgrammingAssignment = () => {
+			if (programmingAssignmentLink === '') 
+				return null
+			else
+				return ( <li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li> ) 
+		}
+		return (<div>
+			{checkProgrammingAssignment()}
 			<li><em>Complete Discussion {sprint} by responding to at least two of your classmates’ posts</em></li>
 			<li><em>Submit Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
 		</div>)
 	}
-	const sprint4StandardActivitiesClosing = () => { return (<div>
-		<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
-		<li><em>Submit Discussion {sprint} responses, Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
+	const sprint4StandardActivitiesClosing = () => { 
+		return (<div>
+			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+			<li><em>Submit Discussion {sprint} responses, Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
 		</div>)
 	}
-	const sprint5StandardActivitiesClosing = () => { return (<div>
-		<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
-		<li><em>Submit sprint {sprint} assignments including Discussion, Quiz, Lab, and Reflection</em></li>
+	const sprint5StandardActivitiesClosing = () => { 
+		return (<div>
+			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+			<li><em>Submit sprint {sprint} assignments including Discussion, Quiz, Lab, and Reflection</em></li>
 		</div>)
 	}
-	const sprint6StandardActivitiesClosing = () => { return (<div>
-		<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
-		<li><em>Submit Discussion, Quiz, Lab, and Reflection</em></li>
+	const sprint6StandardActivitiesClosing = () => { 
+		return (<div>
+			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
+			<li><em>Submit Discussion, Quiz, Lab, and Reflection</em></li>
 		</div>)
 	}
-	const sprint8StandardActivitiesClosing = () => { return (<div>
+	const sprint8StandardActivitiesClosing = () => { 
+		return (<div>
 			<li>Submit your Final Project Presentation assignment at least two hours before to your scheduled presentation time</li>
 			<li><em>Deliver your Final Project Presentation on <u>{getFinalExamDateAndTime()}</u></em></li>
 			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
