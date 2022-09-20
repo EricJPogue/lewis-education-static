@@ -13,7 +13,6 @@ export const al24500Sprint02 = () => {
 	const sprint = 2
 	return ( <div>
 		<h5>Sprint 2: Patterns, Principles, UML, and more Java Programming</h5>
-
 		<p><em>Welcome to sprint 2.</em> We covered a lot of material in sprint 1. We even did some programming by completing
 		Matchmaker with Java. How did Matchmaker go? Keep your Java compilers out for this sprint. We are going to start 
 		practicing some of the concepts we learned while we continue to learn more about object-oriented programming (OOP) as 

@@ -59,4 +59,6 @@ export const list20000Sprint02 = (sprint) => {
 
 // Certified for FA22 (08/27/2022)
 
-// Todo: Review and possibly reword Lab 2 questions relating to zipping and submitting tools of the trade.
+// Todo: Review and possibly reword Lab 2 questions relating to zipping and submitting tools of the trade. Be sure to 
+//     update "Part 1" naming as there is no longer a part 1 and part 2.
+// Todo: Consider removing Office 365 from the tools of the trade? Maybe it should be left for any writing assignments?
