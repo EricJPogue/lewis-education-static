@@ -26,6 +26,8 @@ export const sprint2Router = (route) => {
 		case '24700-2-2': return web2_2of6()
 		case '24700-2-3': return web2_3of6()
 		case '24700-2-4': return web_2_4of6()
+		case '24700-2-5': return web_2_5of6()
+
 
 		case '44000-2-1': return se2_1of6()
 		case '44000-2-2': return se2_2of6()
@@ -190,7 +192,7 @@ const ics_2_4of6_prework_list = [
 ]
 
 const theHumbleTextFile = () => {
-	return bulletListSlide('Thus Humble Text File', 
+	return bulletListSlide('The Humble Text File', 
 		'Let’s explore Binary Values and the Data Representation of text files including:', [
 		'ASCII Text Files', 
 		'Unicode',
@@ -236,6 +238,9 @@ const ics_2_5of6 = () => {
 	const activityList = () => { return list20000Sprint02(sprint) }
 	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_5of6_prework_list, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_6of6_prework_list, sprint, activityList) }
+
+	const announcements =  () => { return basicSlideWithLogo(
+		'Announcements', ['ECaMS Study Table is available and fantastic!']) }
 	const agenda = () => { 
 		return agendaSlide([
 			'Data Representation and The Humble Text File (continued)',
@@ -256,7 +261,7 @@ const ics_2_5of6 = () => {
 	}
 	const quiz = () => { return tQuiz(sprint) }
 
-	return makeSlideDeck( [ prework, agenda, theHumbleTextFile, breakout, preworkNext, quiz  ] )
+	return makeSlideDeck([ announcements, prework, agenda, theHumbleTextFile, breakout, preworkNext, quiz  ] )
 }
 
 const ics_2_6of6_prework_list = [
@@ -369,7 +374,7 @@ const web2_4of6_prework = () => {
 	const activityList = () => { return list44000Sprint02(sprint) }
 	return prework('Prework', [
 		'Complete through activity 10 prior to next class', '',
-		`Be prepared for breakout discussion on Engineering Software as a Service” Chapter 2 reading and lecture` ], 
+		`Be prepared for breakout discussion on Cascading Style Sheets (CSS) reading and lecture` ], 
 		sprint, activityList)
 }
 
@@ -398,8 +403,9 @@ const web_2_4of6 = () => {
 			'<span> and <div> tags',
 			'Toolkits and Libraries' ])
 	}
+	// Todo: Remove the following function as it is already available "globally" in the file. 
 	const theHumbleTextFile = () => {
-		return bulletListSlide('Thus Humble Text File', 
+		return bulletListSlide('The Humble Text File', 
 			'Let’s explore text files including:', [
 			'ASCII Text Files', 
 			'Unicode',
@@ -418,7 +424,41 @@ const web_2_4of6 = () => {
 
 const web_2_5of6_prework_list = [
 	'Complete through activity 10 prior to next class', '',
-	'Be prepared for breakout discussion on Engineering Software as a Service” Chapter 2 reading and lecture' ]
+	'Be prepared for breakout discussion on “Learning Web Development” Chapter 3 on CSS plus Software Licenses' ]
+const web_2_5of6 = () => {
+	const activityList = () => { return list24700Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', web_2_5of6_prework_list, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_2_6of6_prework_list, sprint, activityList) }
+
+	const announcements =  () => { return basicSlideWithLogo(
+		'Announcements', ['ECaMS Study Table is available and fantastic!']) }
+	const agenda = () => { 
+		return agendaSlide([
+			'Data Representation and The Humble Text File (continued)',
+			'Breakout: “Learning Web Development” Chapter 3 on CSS plus Software Licenses',
+			'Prework for Next Class',
+			'Quiz 2' ])
+	}
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: “Learning Web Development” Chapter 3 on CSS plus Software Licenses', 
+			'In this breakout session on Cascading Style Sheets (CSS) and Software Licenses your team will discuss:', [
+			'Selectors, classes, and pseudoclasses', // Only properties is missing from previous breakout
+			'Cascading rules and CSS levels', 
+			'Font, Color, and List Properties',
+			'Could “Learning Web Development” chapter 3 replace “Programming the World Wide Web” chapter 3?',
+			'Describe three types of software license and explain which one would be most appropriate for class work' ])
+	}
+	const quiz = () => { return tQuiz(sprint) }
+
+	return makeSlideDeck([ announcements, prework, agenda, theHumbleTextFile, breakout, preworkNext, quiz ])
+}
+
+const web_2_6of6_prework_list = [
+	'Complete through activity 13 prior to next class', '',
+	'Be prepared for Lab and Programming Together' 
+]
+
 
 // Software Engineering (SE)
 // Todo: Switch to "_prework" naming for Sprint 2 prework slide functions. 
@@ -427,6 +467,15 @@ export const se2_1of6_prework = () => {
 		'Everything is due Sunday!', '',
 		'Be prepared to focus 100% on Sprint 2 Planning' ])
 }
+
+
+
+
+
+
+
+
+
 const se2_1of6 = () => {
 	return ics2_1of6(se2_1of6_prework(), se2_2of6_prework())
 }
