@@ -1,5 +1,7 @@
 import { getCalendarByCalendarID, _FALL_2022_08_29_16, _CURRENT_CALENDAR } from "./Calendars"
 
+import { al44000Sprint3Topics } from "../ActivityLists/AL44000Sprint03"
+
 export const getIsScheduleTTr = () => {
 	return (getClass().schedule === _TTR)
 }
@@ -207,7 +209,7 @@ export const _CPSC_44000 = {
 	modules: [
 		'Software Engineering Life Cycles, Software as a Service, and Cloud Computing',
 		'Overview of Ruby, JavaScript, and Node.js',
-		'Behavior Driven Development, Plan and Document Requirements, and hosting Node.js in the cloud',
+		`${al44000Sprint3Topics}`, // Previously: Behavior Driven Development, Plan and Document Requirements, and hosting Node.js in the cloud
 		'Testing and Test-Driven Development, HTML, CSS, and JavaScript, Node.js, and Express',
 		'Maintenance and Metrics, Live Scrum Team with Requirements, Planning, Environment, and Demos',
 		'Project Management & Scaled Agile, Live Scrum Team adding Metrics, and Testing',

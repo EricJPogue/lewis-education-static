@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { activitiesListIntro, learningObjectivesIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
+import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
 import { oreillyPlaylistSE, HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C, internalLink } from '../DataAndAPIs/Links'
 import { FoxHTML, FoxCSS, FoxCookies, FoxAttributes, FoxRubyMVC } from '../DataAndAPIs/Links'
 
@@ -53,6 +53,7 @@ export const list44000Sprint02 = (sprint) => {
 
 // Certified for FA22 (08/27/2022)
 // Todo: Keep improving Quiz 2.
+// Todo: Strongly consider getting rid of "Briefly Scan the following “Engineering Software as a Service” videos..."
 
 
 
