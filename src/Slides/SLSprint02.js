@@ -12,6 +12,10 @@ import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02'
 import { list24700Sprint02 } from '../ActivityLists/AL24700Sprint02'
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02'
 
+import { ics_3_1of6_prework_list } from './SL20000Sprint03'
+import { web_3_1of6_prework_list } from './SL24700Sprint03'
+import { se_3_1of6_prework_list } from './SL44000Sprint03'
+
 export const sprint2Router = (route) => {
 	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
@@ -27,13 +31,14 @@ export const sprint2Router = (route) => {
 		case '24700-2-3': return web2_3of6()
 		case '24700-2-4': return web_2_4of6()
 		case '24700-2-5': return web_2_5of6()
-
+		case '24700-2-6': return web_2_6of6()
 
 		case '44000-2-1': return se2_1of6()
 		case '44000-2-2': return se2_2of6()
 		case '44000-2-3': return se2_3of6()
 		case '44000-2-4': return se_2_4of6()
 		case '44000-2-5': return se_2_5of6()
+		case '44000-2-6': return se_2_6of6()
 
 		default: return null
 	}
@@ -264,14 +269,30 @@ const ics_2_5of6 = () => {
 	return makeSlideDeck([ announcements, prework, agenda, theHumbleTextFile, breakout, preworkNext, quiz  ] )
 }
 
+const lab = () => { return basicSlide('Lab and Programming Together', [
+	`How can we best work together to help you be successful in sprint ${sprint}?`, 
+	'“Phone a Friend” quiz question review?', 
+	'Programming together on assignments?' ]) }
+
 const ics_2_6of6_prework_list = [
 	'Complete through activity 12 prior to next class', '',
 	'Be prepared for Lab and Programming Together' ]
+const ics_2_6of6_agenda = [
+	'Sprint Progress Polling',
+	'Prework for Next Class',
+	'Lab and Programming Together']
 const ics_2_6of6 = () => {
 	const activityList = () => { return list20000Sprint02(sprint) }
 	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_6of6_prework_list, sprint, activityList) }
+	const agenda = () => { return agendaSlide(ics_2_6of6_agenda) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_1of6_prework_list, sprint, activityList) }
 
-	return [ prework ]
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Everything is due Sunday!']) }
+	const polling = () => { return tPrework('Sprint Progress Polling', [], sprint, activityList) }
+
+
+
+	return makeSlideDeck([ announcements, prework, agenda, polling, preworkNext, lab ])
 }
 
 // Web & Distributed Programming (WEB)
@@ -456,9 +477,32 @@ const web_2_5of6 = () => {
 
 const web_2_6of6_prework_list = [
 	'Complete through activity 13 prior to next class', '',
-	'Be prepared for Lab and Programming Together' 
-]
+	'Be prepared for Lab and Programming Together' ]
+const web_2_6of6_agenda = ics_2_6of6_agenda
+const web_2_6of6 = () => {
+	const activityList = () => { return list24700Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', web_2_6of6_prework_list, sprint, activityList) }
+	const agenda = () => { return agendaSlide(web_2_6of6_agenda) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_3_1of6_prework_list, sprint, activityList) }
 
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Everything is due Sunday!']) }
+	const polling = () => { return tPrework('Sprint Progress Polling', [], sprint, activityList) }
+
+	return makeSlideDeck([ announcements, prework, agenda, polling, preworkNext, lab ])
+}
+
+
+/*
+const ics_2_6of6_agenda = [
+	'Sprint Progress Polling',
+	'Prework for Next Class',
+	'Lab and Programming Together']
+const ics_2_6of6 = () => {
+	const activityList = () => { return list20000Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_6of6_prework_list, sprint, activityList) }
+	const agenda = () => { return agendaSlide(ics_2_6of6_agenda) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_1of6_prework_list, sprint, activityList) }
+*/
 
 // Software Engineering (SE)
 // Todo: Switch to "_prework" naming for Sprint 2 prework slide functions. 
@@ -467,14 +511,6 @@ export const se2_1of6_prework = () => {
 		'Everything is due Sunday!', '',
 		'Be prepared to focus 100% on Sprint 2 Planning' ])
 }
-
-
-
-
-
-
-
-
 
 const se2_1of6 = () => {
 	return ics2_1of6(se2_1of6_prework(), se2_2of6_prework())
@@ -652,15 +688,17 @@ const se_2_5of6 = () => {
 
 const se_2_6of6_prework_list = [
 	'Complete through activity 14 prior to next class', '',
-	'Be prepared for Lab and Programming Together' 
-]
+	'Be prepared for Lab and Programming Together' ]
+const se_2_6of6_agenda = ics_2_6of6_agenda
+const se_2_6of6 = () => {
+	const activityList = () => { return list44000Sprint02(sprint) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', se_2_6of6_prework_list, sprint, activityList) }
+	const agenda = () => { return agendaSlide(se_2_6of6_agenda) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_3_1of6_prework_list, sprint, activityList) }
 
-// Todo: Where do these topics fit?
-/*
-Team discusses topics while the presenter summarizes the topics below:
-Chapter 3 Introduction to Ruby… how do we create non-objects in Ruby?
-Chapter 4 Introduction to Rails… how do we create a non-model-view-controller Rails application?
-Chapter 5 Advanced Rails… authentication? Is the Ruby/Rails framework opinionated? Is that good or bad?
-A.6 Git and Version Control and A.7 GitHub
-ORM (Object-Relational-Mapper) and NoSQL Databases
-*/
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Everything is due Sunday!']) }
+	const polling = () => { return tPrework('Sprint Progress Polling', [], sprint, activityList) }
+
+	return makeSlideDeck([ announcements, prework, agenda, polling, preworkNext, lab ])
+}
+

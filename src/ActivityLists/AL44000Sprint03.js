@@ -34,7 +34,7 @@ export const al44000Sprint03 = () => {
 	</div> )
 }
 
-const list44000Sprint03 = (sprint) => {
+export const list44000Sprint03 = (sprint) => {
 	const foxChapter3Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-03')}
 	const foxChapter7Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-07') }
 	const nodeJSW3CTutorial = () => { return externalLink('Node.js Tutorial', 'https://www.w3schools.com/nodejs/') }
