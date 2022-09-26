@@ -64,13 +64,14 @@ export class SprintClassActivities extends Component {
 		"SecondFriday":    "Lab"
 	}
 
+	// Todo: Review fall break schedule.
 	MWFScheduleSprint3 = {
 		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Demos & Retrospectives",
-		"FirstFriday":     "Discussion Board & Topic Discussion",
+		"FirstWednesday":  "Discussion Board & Lab (switching Wednesday and Friday this sprint)",
+		"FirstFriday":     "Demos, Retrospectives, and Topic Discussion",
 		"SecondMonday":    "Topic Discussion",
 		"SecondWednesday": "Quiz & Lab",
-		"SecondFriday":    "Lab"
+		"SecondFriday":    "Fall Break"
 	}
 
 	MWFScheduleSprint7 = {

@@ -170,38 +170,11 @@ export const MosaicV2WithReact = {
 	'estimate':'~6 hours'
 }
 
-/*
-export const SwissArmyKnifeWithJava = {
-	'name':'“SwissArmyKnife”',
-	'link':'/activity/swiss-army-knife-java',
-	'estimate':'~8 hours'
-}
-
-export const SwissArmyKnifeWithJavaV2 = {
-	'name':'“SwissArmyKnife version 2”',
-	'link':'/activity/swiss-army-knife-java-v2',
-	'estimate':'~8 hours'
-}
-
-export const ThunderbirdWithJava = {
-	'name':'“Thunderbird”',
-	'link':'/activity/thunderbird-java',
-	'estimate':'~6 hours'
-}
-*/
 export const TurtleDraw = {
 	'name':'TurtleDraw',
 	'link':'/activity/turtle-draw',
 	'estimate':'~8 hours'
 }
-
-/*
-export const MustangV1 = {
-	'name':'Mustang version 1',
-	'link':'/activity/mustang-v1',
-	'estimate':'~8 hours'
-}
-*/
 
 export const MustangV2 = {
 	'name':'Mustang version 2',
@@ -220,22 +193,6 @@ export const FinalProject = {
 	'link':'/activity/final-project',
 	'estimate':'~12 hours per team member'
 }
-
-/*
-export const FinalProjectSprint5 = {
-	'name':'Final Project Sprint 5',
-	'link':'/activity/final-project-sprint-5',
-	'estimate':'~4 hours'
-}
-*/
-
-/*
-export const FinalProjectSprint6 = {
-	'name':'Final Project Sprint 6',
-	'link':'/activity/final-project-sprint-6',
-	'estimate':'~8 hours per team member'
-}
-*/
 
 export const FinalProjectSprint7 = {
 	'name':'“Final Project Sprint 7”',

@@ -58,4 +58,4 @@ export const list44000Sprint03 = (sprint) => {
 	</div> )
 }
 
-// BugBug: Fix Quiz 3.
+// Todo: Enhance Quiz 3.
