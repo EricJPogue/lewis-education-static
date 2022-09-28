@@ -55,6 +55,23 @@ export const list44000Sprint02 = (sprint) => {
 // Todo: Keep improving Quiz 2.
 // Todo: Strongly consider getting rid of "Briefly Scan the following “Engineering Software as a Service” videos..."
 
+/* z
+Fix Quiz 2 Question by verifying that the question should be "is TRUE":
+
+
+Which of the following statements relating Service-Oriented Architecture (SOA) and Software Development Lifecycles is FALSE?
+
+    SOA is desirable in Waterfall, RUP, and Agile
+    Correct answer
+
+    SOA is desirable in Waterfall and RUP but not in Agile
+
+    SOA is desirable in Waterfall and Agile but not in RUP
+
+    SOA is desirable in RUP and Agile but not in Waterfall
+	
+*/
+
 
 
 

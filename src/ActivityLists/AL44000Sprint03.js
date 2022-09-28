@@ -59,3 +59,5 @@ export const list44000Sprint03 = (sprint) => {
 }
 
 // Todo: Enhance Quiz 3.
+
+// Todo: Review and update activities and assignments with the understanding that we already did Assignment Portfolio in Node.js in sprint 2. 

@@ -290,8 +290,6 @@ const ics_2_6of6 = () => {
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Everything is due Sunday!']) }
 	const polling = () => { return tPrework('Sprint Progress Polling', [], sprint, activityList) }
 
-
-
 	return makeSlideDeck([ announcements, prework, agenda, polling, preworkNext, lab ])
 }
 
