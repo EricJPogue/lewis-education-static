@@ -40,7 +40,7 @@ export const ics_3_2of6 = () => {
 	const discussion3Breakout = () => { return discussionBreakout(sprint) } 
 	const programmingTogether = () => {
 		return bulletListSlide('Lab & Programming Together', 
-			'Let’s commit commit to making 30 minutes of focused effort to our Lab assignment by:', [
+			'Let’s commit to making 30 minutes of focused effort to our Lab assignment by:', [
 			'Implementing our README.md and LICENSE file in GitHub as the first step of Continuous Integration / Continuous Delivery (CI/CD)', 
 			'Adding a index.html file', 
 			'Pushing the index.html file to GitHub' ])

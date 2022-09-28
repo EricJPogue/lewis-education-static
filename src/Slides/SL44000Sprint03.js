@@ -1,5 +1,6 @@
-import { xyz_n_1of6 } from './SL00000Sprint00'
-import { tPreworkWithLogo, submissionPercentage } from './SLSprint00'
+import { makeSlideDeck, xyz_n_1of6 } from './SL00000Sprint00'
+
+import { tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, submissionPercentage } from './SLSprint00'
 
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02' 
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
@@ -18,16 +19,32 @@ export const se_3_1of6 = () => { return xyz_n_1of6(sprint, se_3_1of6_prework_lis
 const se_3_2of6_prework_list = [
 	'Complete through activity 4 prior to next class', '',
 	'Be prepared for team Discussion 2 and Lab' ]
+const se_3_2of6_agenda_list = [
+	`Discussion Board ${sprint} as a Scrum Team`,
+	'Prework for Next Class',
+	'Lab & Programming Together' ]
 export const se_3_2of6 = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', se_3_2of6_prework_list, sprint, activityList) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Any announcements?']) }
+	const agenda = () => { return agendaSlide(se_3_2of6_agenda_list) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_3_3of6_prework_list, sprint, activityList) }
 
-	return [ prework ]
+	const discussion3Breakout = () => { return discussionBreakout(sprint) } 
+	const programmingTogether = () => {
+		return bulletListSlide('Lab & Programming Together', 
+			'Let’s commit to making 30 minutes of focused effort to our Lab assignment by:', [
+			'Understanding and setting up a GitHub organization for your scrum team',
+			'Setting up and hosting a public “Getting to Know Each Other Teams” repository',
+			'Successfully adding all team members to your “Getting to Know Each Other Teams” repository',
+			'Having each team member individually update the README.md file with their name and email address',
+			'Reviewing the repository commit history to see everyone’s commit'])
+	}
+
+	return makeSlideDeck([ prework, announcements, agenda, discussion3Breakout, preworkNext, programmingTogether ])
 }
 
-
-
 const se_3_3of6_prework_list = [
-	'Complete through activity 7 prior to next class', '',
+	'Complete through activity 8 prior to next class', '',
 	`Be prepared for sprint ${sprint-1} demos and retrospectives`,
 	'Those scheduled to demo on Wednesday please be a couple of minutes early to class' ]
 export const se_3_3of6 = () => {
