@@ -69,14 +69,15 @@ export const web_3_3of6 = () => {
 			return orderedListSlide('Class Retrospective',
 				'Feedback from Assignments & Reflections', [
 				'Okay submission percentage... it does’t feel good to have multiple Labs not submitted',
-				'I “don’t allow” for late assignments because historically it makes a difficult situation worse',
-				'All assignments are graded and posted' ])
+				'Why I “don’t allow” for late assignments... because it often makes a difficult situation worse',
+				'Why I don’t provide detailed quiz information between attempts', 
+				'All assignments are graded and posted... maybe?', 
+				'Still some difficulties creating and attaching zip files' ])
 		}
 		const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	
-		return [ prework, announcements, agenda, 
-			sprintDemosIntro, sprintDemos, demoAssignment, 
-			metricsSubmissionPercentage, retrospective, breakout, preworkNext ]
+		return makeSlideDeck([ prework, announcements, agenda, sprintDemosIntro, sprintDemos, demoAssignment, 
+			metricsSubmissionPercentage, retrospective, breakout, preworkNext ])
 	}
 	
 	const web_3_4of6_prework_list = [

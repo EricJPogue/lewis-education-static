@@ -1,12 +1,11 @@
+import { getClass } from '../DataAndAPIs/Classes'
 
 import { makeSlideDeck, xyz_n_1of6 } from './SL00000Sprint00'
-
 import { tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } from './SLSprint00'
 
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02' 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
-import { getClass } from '../DataAndAPIs/Classes'
 
 const sprint = 3
 const activityList = () => { return list20000Sprint03(sprint) }
@@ -55,7 +54,7 @@ const ics_3_3of6_prework_list = [
 	'Complete through activity 9 prior to next class', '',
 	`Be prepared for sprint ${sprint-1} demos and retrospectives`,
 	'Those scheduled to demo please be a couple of minutes early to class' ]
-const ics_3_3of6_agenda_list = [
+export const ics_3_3of6_agenda_list = [
 	`Sprint ${sprint-1} Demos`,
 	`Sprint ${sprint-1} Retrospective`,
 	`Breakout for Sprint ${sprint-1} Retrospective`,
@@ -93,9 +92,8 @@ export const ics_3_3of6 = () => {
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 
-	return [ prework, announcements, agenda, 
-		sprintDemosIntro, sprintDemos, demoAssignment, 
-		metricsSubmissionPercentage, retrospective, breakout, preworkNext ]
+	return makeSlideDeck([ prework, announcements, agenda, sprintDemosIntro, sprintDemos, demoAssignment, 
+		metricsSubmissionPercentage, retrospective, breakout, preworkNext ])
 }
 
 const ics_3_4of6_prework_list = [
