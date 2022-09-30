@@ -365,3 +365,11 @@ export const breakoutStandard = (breakoutTitle, introduction, topicList) => {
 		</ol>
 	</div>)
 }
+
+export const retrospectiveBreakout = (sprint) => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+}
