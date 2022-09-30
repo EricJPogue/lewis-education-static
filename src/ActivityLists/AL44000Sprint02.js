@@ -52,6 +52,9 @@ export const list44000Sprint02 = (sprint) => {
 }
 
 // Certified for FA22 (08/27/2022)
+
+// BugBug: All Lab 2 applications need to be added to the activities list! 
+
 // Todo: Keep improving Quiz 2.
 // Todo: Strongly consider getting rid of "Briefly Scan the following “Engineering Software as a Service” videos..."
 

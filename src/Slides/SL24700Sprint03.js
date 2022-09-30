@@ -82,5 +82,5 @@ export const web_3_3of6 = () => {
 	
 	const web_3_4of6_prework_list = [
 		'Complete through activity 11 prior to next class', '',
-		'Focus on “Gates and Circuits” and “Computing Components” chapters and lectures',
+		'Focus on reading assignments and associated lectures',
 		'Be prepared for Lab and Programming Together**' ]
