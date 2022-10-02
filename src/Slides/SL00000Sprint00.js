@@ -4,6 +4,17 @@ import { agendaSlide, orderedListSlide, bulletListSlide, basicSlideWithLogo, tPr
 
 export const makeSlideDeck = (slides) => { return [ preflightChecklist, instructorChecklist ].concat(slides).concat(end) }
 
+export const xyz_n_1of6_agenda_list = (sprint) => { 
+	return [ `Sprint ${sprint} Planning`,
+	`Sprint ${sprint} Planning Breakout`,
+	'Prework for Next Class' ]
+}
+
+export const xyz_n_1of6_prework_list = (sprint) => {
+	return [ 'Everything is due Sunday!', '',
+		`Be prepared for Sprint ${sprint} Planning` ]
+}
+
 export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList, preworkListNext, activityList) => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', preworkList, sprint-1, activityListPrevious) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Let’s stay 100% focused on sprint planning today']) }

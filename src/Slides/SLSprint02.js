@@ -220,7 +220,7 @@ const ics_2_4of6 = () => {
 	const breakout = () => { 
 		return breakoutStandard( 
 			'Breakout: The Information Layer', 
-			'In this breakout session on The Information Layer (reading and lecture) your team will:', [
+			'In this breakout session on The Information Layer (reading and lecture) your team will discuss:', [
 			'Numbers and Computing', 
 			'Positional Notation', 
 			'Binary, Octal, and Hexadecimal',

@@ -83,6 +83,8 @@ const se_3_4of6_prework_list = [
 	'Focus on reading assignments and associated lectures',
 	'Be prepared for Lab and Programming Together**' ]
 
+
+
 // Todo: Where do these topics fit?
 /*
 Team discusses topics while the presenter summarizes the topics below:

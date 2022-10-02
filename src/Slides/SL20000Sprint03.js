@@ -1,11 +1,13 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
 import { makeSlideDeck, xyz_n_1of6 } from './SL00000Sprint00'
-import { tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage } from './SLSprint00'
+import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } from './SLSprint00'
 
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02' 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
+
+import { ics_4_1of6_prework_list } from './SL20000Sprint04'
 
 const sprint = 3
 const activityList = () => { return list20000Sprint03(sprint) }
@@ -100,3 +102,68 @@ const ics_3_4of6_prework_list = [
 	'Complete through activity 11 prior to next class', '',
 	'Focus on “Gates and Circuits” and “Computing Components” chapters and lectures',
 	'Be prepared for Lab and Programming Together**' ]
+const ics_3_4of6_agenda_list = [
+	'Gates and Circuits Breakout (abbreviated)',
+	'Prework for Next Class',
+	'Lab & Programming Together' ]
+export const ics_3_4of6 = () => {
+	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_4of6_prework_list, sprint, activityList) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
+		'No class Friday', 
+		'No Computing Components Breakout this sprint (you are still responsible for the content)']) 
+	}
+	const agenda = () => { return agendaSlide(ics_3_4of6_agenda_list) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_5of6_prework_list, sprint, activityList) }
+
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Gates and Circuits', 
+			'In this breakout session on Gates and Circuits (reading and lecture) your team will discuss:', [
+			'Gates', 
+			'Circuits and how they relate to Gates', 
+			'NOT and AND gates',
+			'OR, XOR, NAND, and NOR gates and share which one is consistent with English language "or"',
+			'Integrated Circuits, CPU Chips, and how much does it cost to buy 100,000,000 (100 million) gates',
+			'Computing Component: Can you identify one computing component?' ])
+	}
+
+	return makeSlideDeck([ announcements, prework, agenda, breakout, preworkNext ])
+}
+
+const ics_3_5of6_prework_list = [
+	'Complete through activity 13 prior to next class', '',
+	'Focus on reading assignments and associated lectures',
+	'Be prepared for Lab and Programming Together',
+	'Be prepared for Quiz 3' ]
+const ics_3_5of6_agenda_list = [
+	'Lab and Programming Together',
+	'Prework for Next Class',
+	'Quiz 3' ]
+export const ics_3_5of6 = () => {
+	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_5of6_prework_list, sprint, activityList) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
+		'No class Friday', 
+		`All sprint ${sprint} assignments are due Sunday!`]) 
+	}
+	const agenda = () => { return agendaSlide(ics_3_5of6_agenda_list) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_1of6_prework_list, sprint, activityList) }
+
+	const programmingTogether = () => {
+		return bulletListSlide('Lab & Programming Together', 
+			'Let’s focus on completing our activities and assignments by:', [
+			'Deciding how we can best utilize our time today in class', 
+			'Completing the most important activities and assignments together' ])
+	}
+
+	return makeSlideDeck([ announcements, prework, agenda, preworkNext, programmingTogether ])
+}
+
+// No “ics_3_6of6...” prework or agenda structures as there is no class Friday due to Fall Break.
+export const ics_3_6of6 = () => {
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
+		'No class', 
+		`All sprint ${sprint} assignments are due Sunday!`]) 
+	}
+
+	return [ announcements ]
+}
