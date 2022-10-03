@@ -110,6 +110,7 @@ export const ics_3_4of6 = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_4of6_prework_list, sprint, activityList) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
 		'No class Friday', 
+		'Recall ECaMS tutoring',
 		'No Computing Components Breakout this sprint (you are still responsible for the content)']) 
 	}
 	const agenda = () => { return agendaSlide(ics_3_4of6_agenda_list) }

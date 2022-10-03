@@ -13,7 +13,7 @@ import { ics_3_1of6, ics_3_2of6, ics_3_3of6, ics_3_4of6, ics_3_5of6, ics_3_6of6 
 import { ics_4_1of6 } from './SL20000Sprint04'
 
 
-import { web_3_1of6, web_3_2of6, web_3_3of6 } from './SL24700Sprint03'
+import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6 } from './SL24700Sprint03'
 import { se_3_1of6, se_3_2of6, se_3_3of6 } from './SL44000Sprint03'
 
 export const slideDeckRouter = (route) => {
@@ -57,6 +57,7 @@ const sprint3Router = (route) => {
 		case '24700-3-1': return web_3_1of6()
 		case '24700-3-2': return web_3_2of6()
 		case '24700-3-3': return web_3_3of6()
+		case '24700-3-4': return web_3_4of6()
 
 		case '44000-3-1': return se_3_1of6()
 		case '44000-3-2': return se_3_2of6()

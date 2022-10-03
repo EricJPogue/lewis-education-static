@@ -27,7 +27,7 @@ and manual tests.</p>
 	<li>Stay focused on the due dates by reviewing our course calendar <NavLink to='/calendar/3'>[link]</NavLink></li>
 	<li><em>Review sprint 3 assignments including Lab 3, Quiz 3, Discussion 3, Reflection 3, and Lab Demo</em></li>
 	<li>{start(programmingAssignment)}</li>
-	<li>Review the CAMS Study Table tutoring options <NavLink to='/activity/study-table'>[link]</NavLink></li>
+	<li>Review the ECaMS Study Table tutoring options <NavLink to='/activity/study-table'>[link]</NavLink></li>
 	<li>Review our class example code <NavLink to='/activity/example-code'>[link]</NavLink></li>
 	<li>Review our coding standards <NavLink to='/activity/coding-standards'>[link]</NavLink></li>
 	{/* The above items should be consistent across classes. */ }

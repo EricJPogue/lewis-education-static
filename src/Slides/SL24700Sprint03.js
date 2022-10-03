@@ -1,6 +1,6 @@
 import { makeSlideDeck, xyz_n_1of6 } from './SL00000Sprint00'
 
-import { tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage } from './SLSprint00'
+import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } from './SLSprint00'
 
 import { list24700Sprint02 } from '../ActivityLists/AL24700Sprint02' 
@@ -84,3 +84,36 @@ export const web_3_3of6 = () => {
 		'Complete through activity 11 prior to next class', '',
 		'Focus on reading assignments and associated lectures',
 		'Be prepared for Lab and Programming Together**' ]
+	const web_3_4of6_agenda_list = [
+		'TBD',
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
+	export const web_3_4of6 = () => {
+		const prework = () => { return tPreworkWithLogo('Prework For Today', web_3_4of6_prework_list, sprint, activityList) }
+		const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
+			'No class Friday', 
+			'!!!No Computing Components Breakout this sprint (you are still responsible for the content)']) 
+		}
+		const agenda = () => { return agendaSlide(web_3_4of6_agenda_list) }
+		const preworkNext = () => { return tPrework('Prework For Next Class', web_3_5of6_prework_list, sprint, activityList) }
+	
+		const breakout = () => { 
+			return breakoutStandard( 
+				'!!!Breakout: Gates and Circuits', 
+				'In this breakout session on Gates and Circuits (reading and lecture) your team will discuss:', [
+				'Gates', 
+				'Circuits and how they relate to Gates', 
+				'NOT and AND gates',
+				'OR, XOR, NAND, and NOR gates and share which one is consistent with English language "or"',
+				'Integrated Circuits, CPU Chips, and how much does it cost to buy 100,000,000 (100 million) gates',
+				'Computing Component: Can you identify one computing component?' ])
+		}
+	
+		return makeSlideDeck([ announcements, prework, agenda, breakout, preworkNext ])
+	}
+	
+	const web_3_5of6_prework_list = [
+		'!!!Complete through activity 13 prior to next class', '',
+		'Focus on reading assignments and associated lectures',
+		'Be prepared for Lab and Programming Together',
+		'Be prepared for Quiz 3' ]

@@ -9,7 +9,7 @@ export const UniversityResources = () => {
 <div>
 <h4>University Resources</h4>
 <h5>Are you in need of help?</h5>
-<p>Stop by our <NavLink to='/activity/study-table'><em>CAMS virtual study table</em></NavLink> and get tutoring help with your Computer Science classes.</p>
+<p>Stop by our <NavLink to='/activity/study-table'><em>ECaMS virtual study table</em></NavLink> and get tutoring help with your Computer Science classes.</p>
 
 <p>Below are some of the additional Lewis University organizations that are available to assist you:</p>
 <ul style={{listStyleType:'square'}}>
