@@ -52,3 +52,10 @@ export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList
 
 	return makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, reviewDemoSchedule, preworkNext ])
 }
+
+export const tLab = () => {
+	return bulletListSlide('Lab & Programming Together', 
+		'Let’s focus on completing our activities and assignments by:', [
+		'Deciding how we can best utilize our time today', 
+		'Completing the most important activities and assignments together' ])
+}

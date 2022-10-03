@@ -1,4 +1,4 @@
-import { makeSlideDeck, xyz_n_1of6 } from './SL00000Sprint00'
+import { makeSlideDeck, xyz_n_1of6, tLab } from './SL00000Sprint00'
 
 import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } from './SLSprint00'
@@ -85,35 +85,34 @@ export const web_3_3of6 = () => {
 		'Focus on reading assignments and associated lectures',
 		'Be prepared for Lab and Programming Together**' ]
 	const web_3_4of6_agenda_list = [
-		'TBD',
+		'JavaScript Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 	export const web_3_4of6 = () => {
 		const prework = () => { return tPreworkWithLogo('Prework For Today', web_3_4of6_prework_list, sprint, activityList) }
 		const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
 			'No class Friday', 
-			'!!!No Computing Components Breakout this sprint (you are still responsible for the content)']) 
+			'No Computing XML or AJAX breakout sessions this sprint (you are still responsible for the content)']) 
 		}
 		const agenda = () => { return agendaSlide(web_3_4of6_agenda_list) }
 		const preworkNext = () => { return tPrework('Prework For Next Class', web_3_5of6_prework_list, sprint, activityList) }
 	
 		const breakout = () => { 
 			return breakoutStandard( 
-				'!!!Breakout: Gates and Circuits', 
-				'In this breakout session on Gates and Circuits (reading and lecture) your team will discuss:', [
-				'Gates', 
-				'Circuits and how they relate to Gates', 
-				'NOT and AND gates',
-				'OR, XOR, NAND, and NOR gates and share which one is consistent with English language "or"',
-				'Integrated Circuits, CPU Chips, and how much does it cost to buy 100,000,000 (100 million) gates',
-				'Computing Component: Can you identify one computing component?' ])
+				'Breakout: JavaScript', 
+				'In this breakout session on JavaScript your team will discuss:', [
+				'Origins and History', 
+				'Recent Evolution including Babble and React', 
+				'HTML, JavaScript, Events, and Document Object Modal (DOM)',
+				'Dynamically typed and call-by-value',
+				'Input validation and regular expressions',
+				'3-Tier architecture relevance' ])
 		}
 	
-		return makeSlideDeck([ announcements, prework, agenda, breakout, preworkNext ])
+		return makeSlideDeck([ announcements, prework, agenda, breakout, preworkNext, tLab ])
 	}
 	
 	const web_3_5of6_prework_list = [
-		'!!!Complete through activity 13 prior to next class', '',
-		'Focus on reading assignments and associated lectures',
+		'Complete through activity 14 prior to next class', '',
 		'Be prepared for Lab and Programming Together',
 		'Be prepared for Quiz 3' ]

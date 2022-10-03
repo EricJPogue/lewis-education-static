@@ -83,42 +83,37 @@ const se_3_4of6_prework_list = [
 	'Focus on reading assignments and associated lectures',
 	'Be prepared for Lab and Programming Together**' ]
 const se_3_4of6_agenda_list = [
-	'!!!Gates and Circuits Breakout (abbreviated)',
+	'Requirements Breakout',
 	'Prework for Next Class',
 	'Lab & Programming Together' ]
 export const se_3_4of6 = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', se_3_4of6_prework_list, sprint, activityList) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
 		'No class Friday', 
-		'!!!No Computing Components Breakout this sprint (you are still responsible for the content)']) 
+		'No Node.js or JSON Breakout this sprint (you are still responsible for the content)']) 
 	}
 	const agenda = () => { return agendaSlide(se_3_4of6_agenda_list) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_3_5of6_prework_list, sprint, activityList) }
 
 	const breakout = () => { 
 		return breakoutStandard( 
-			'!!!Breakout: Gates and Circuits', 
-			'In this breakout session on Gates and Circuits (reading and lecture) your team will discuss:', [
-			'Gates', 
-			'Circuits and how they relate to Gates', 
-			'NOT and AND gates',
-			'OR, XOR, NAND, and NOR gates and share which one is consistent with English language "or"',
-			'Integrated Circuits, CPU Chips, and how much does it cost to buy 100,000,000 (100 million) gates',
-			'Computing Component: Can you identify one computing component?' ])
+			'Requirements Breakout', 
+			'In this breakout session on Requirements (reading and lecture) your team will discuss:', [
+			'Behavior-Driven Design, Gemba (or Genba), Requirements, Use Cases, and User Stories',
+			'Points, velocity, SMART, and MVP',
+			'Story Points, Use Case Points, Function Points, and measuring productivity across teams',
+			'User Experience / User Interface Design, Interface Sketches, and Storyboards',
+			'Requirements Gathering Waterfall (Requirements) vs. Iterative (Use Cases) vs. Agile (Stories)' ])
 	}
 
 	return makeSlideDeck([ announcements, prework, agenda, breakout, preworkNext ])
 }
 
 const se_3_5of6_prework_list = [
-	'!!!Complete through activity 13 prior to next class', '',
+	'Complete through activity 14 prior to next class', '',
 	'Focus on reading assignments and associated lectures',
 	'Be prepared for Lab and Programming Together',
 	'Be prepared for Quiz 3' ]
-
-
-
-
 
 
 // Todo: Where do these topics fit?
