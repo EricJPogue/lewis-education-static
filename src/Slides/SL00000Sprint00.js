@@ -59,3 +59,9 @@ export const tLab = () => {
 		'Deciding how we can best utilize our time today', 
 		'Completing the most important activities and assignments together' ])
 }
+
+export const tAnnouncementPreworkOrAgenda = (titleAndList, sprint=null, activityList=null) => {
+	return tPreworkWithLogo(titleAndList[0], titleAndList.slice(1), sprint, activityList )
+}
+
+// Todo: Create checklistAnnouncementsPreworkAndAgenda = (announcementPreworkAndAgendaLists) => {...}
