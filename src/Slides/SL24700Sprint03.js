@@ -1,12 +1,14 @@
-import { makeSlideDeck, xyz_n_1of6, tLab } from './SL00000Sprint00'
+import { makeSlideDeck, xyz_n_1of6, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
 
-import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage } from './SLSprint00'
+import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage, tQuiz } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } from './SLSprint00'
 
 import { list24700Sprint02 } from '../ActivityLists/AL24700Sprint02' 
 import { list24700Sprint03 } from '../ActivityLists/AL24700Sprint03'
 
 import { ics_3_1of6_prework_list, ics_3_1of6_agenda_list  } from './SL20000Sprint03'
+
+import { web_4_1of6_prework_list } from './SL24700Sprint04'
 
 const sprint = 3
 const activityListPrevious = () => { return list24700Sprint02(sprint-1) }
@@ -112,7 +114,37 @@ export const web_3_3of6 = () => {
 		return makeSlideDeck([ announcements, prework, agenda, breakout, preworkNext, tLab ])
 	}
 	
+	const web_3_5of6_announcement_list = [
+		'Announcements', 
+		'No class Friday', 
+		`All sprint ${sprint} assignments are due Sunday!`]
 	const web_3_5of6_prework_list = [
+		'Prework For Today', 
 		'Complete through activity 14 prior to next class', '',
 		'Be prepared for Lab and Programming Together',
 		'Be prepared for Quiz 3' ]
+	const web_3_5of6_agenda_list = [
+		'Agenda', 
+		'Lab and Programming Together',
+		'Prework for Next Class',
+		'Quiz 3' ]
+	export const web_3_5of6 = () => {
+		const announcements =  () => { return tAnnouncementPreworkOrAgenda(web_3_5of6_announcement_list) }
+		const prework = () => { return tAnnouncementPreworkOrAgenda(web_3_5of6_prework_list, sprint, activityList) }
+		const agenda = () => { return tAnnouncementPreworkOrAgenda(web_3_5of6_agenda_list) }
+	
+		const preworkNext = () => { return tPrework('Prework For Next Class', web_4_1of6_prework_list, sprint, activityList) }
+		const quiz = () => { return tQuiz(sprint) }
+	
+		return makeSlideDeck([ announcements, prework, agenda, tLab, preworkNext, quiz ])
+	}
+	
+	// No “web_3_6of6...” prework or agenda structures as there is no class Friday due to Fall Break.
+	export const web_3_6of6 = () => {
+		const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
+			'No class', 
+			`All sprint ${sprint} assignments are due Sunday!`]) 
+		}
+	
+		return [ announcements ]
+	}
