@@ -58,6 +58,7 @@ export const list44000Sprint03 = (sprint) => {
 	</div> )
 }
 
-// Todo: Enhance Quiz 3.
-
+// Certified for SU22 (05/20/2022)
+// Todo: Consider reviewing and enhancing Quiz 3.
 // Todo: Review and update activities and assignments with the understanding that we already did Assignment Portfolio in Node.js in sprint 2. 
+// BugBug: Update activity list with everything that is included in Lab 3. 

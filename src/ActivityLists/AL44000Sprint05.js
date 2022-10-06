@@ -62,5 +62,10 @@ the work we do in scrum is essentially maintenance.</p>
 
 // Status: Signed off SP22.
 
+// Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
+// Todo: Consider doing the same thing for testing.
+// Todo: Add lots of links from the Agile Alliance to various activity lists.
+// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
+
 
 

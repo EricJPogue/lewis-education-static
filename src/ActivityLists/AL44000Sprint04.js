@@ -9,7 +9,7 @@ export const al44000Sprint04 = () => {
 	const foxChapter8Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-08') }
 	let sprint = 4
 	return ( <div>
-		<h5>Sprint 4: Testing, Test-Driven Development, Express, Server-side Node.js, and working in teams</h5>
+		<h5>Sprint 4: Testing, Test-Driven Development, Application Programming Interfaces, and working in teams</h5>
 
 		<p>Welcome to sprint 4. This sprint we are will be focused on learning about Testing and Test-Driven Development while 
 		we practice server-side Node.js programming. Although the features of {healthRiskCalculatorTeamWebLink()} are not 
@@ -21,10 +21,10 @@ export const al44000Sprint04 = () => {
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
-			<li>Utilize client-side HTML, CSS, and JavaScript to create client applications</li>
-			<li>Create and modify basic Node.js, Express, and JavaScript to create server-side applications</li>
-			<li>Effectively utilize Microsoft Azure to host Node.js applications</li>
-			<li>Work as part of a team utilizing GitHub, Azure, Node.js, and Express</li>
+			<li>Understand testing and test-driven development</li>
+			<li>Implement HTML, CSS, and JavaScript based client web applications that consume Application Programming Interfaces (APIs)</li>
+			<li>Create Node.js base server-side applications that implement Application Programming Interfaces (APIs)</li>
+			<li>Work as part of a software development team utilizing GitHub, Azure, and Node.js</li>
 		</ul>
 
 		{activitiesListIntro(sprint)}
@@ -35,24 +35,18 @@ export const al44000Sprint04 = () => {
 			<li>Complete {JSONWebServicesTutorial()}</li>
 
 			{initialPost(sprint)}
-			<li>Migrate all previous HTML, CSS, and JavaScript applications to a personal Node.js website in Azure<sup>~3 hours</sup></li>
 			<li>Within {oreillyPlaylistSE()} watch “Project Management” by Jeffrey Pinto Lessons 1 through 5 focussing on:{estimated('2 hours')}</li>
 			<ul style={{listStyleType:'square'}}>
 					<li>Lesson 1: Why Projects?</li>
 					<li>Lesson 4: Creating the Project Network</li>
 					<li>Lesson 5: Duration Estimation and Critical Path</li>
 			</ul>
+			<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapter 15</li>
 			{standardActivitiesClosing(sprint, healthRiskCalculatorTeamWebLink(), '6 hours per team member')}
 		</ol>
 		{closing(sprint)}
 	</div> )
 }
 
-// Todo: Consider sprint planning for sprint 5 and when is should occur.
-// Todo: Review backlog grooming and sprint planning expectation for sprint 5. Consider making mandatory attendance for 
-// sprint planning starting in sprint 5. Also, review expectations relative to MWF vs TTh classes.   
+// Certified for FA22 (10/06/2022) 
 
-// Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
-// Todo: Consider doing the same thing for testing.
-// Todo: Add lots of links from the Agile Alliance to various activity lists.
-// Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
