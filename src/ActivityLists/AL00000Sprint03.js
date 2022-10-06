@@ -6,10 +6,11 @@ import { NavLink } from 'react-router-dom'
 import { estimated } from './AL00000Sprint00'
 import { sprintEndDateWithoutTime } from '../CalendarAndSchedule/SprintDates'
 
-import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
+// import { StartProgrammingActivity, ProgrammingActivity } from './ProgrammingAssignments'
 import { calendarLink, scheduleLink, ExampleCode, codingStandards } from '../DataAndAPIs/Links'
 
 // Todo: Update dependant code and remove following function.
+/*
 export const StandardActivities = (programmingAssignment, playlist) => { 
 	return ( <div>
 
@@ -20,10 +21,12 @@ export const StandardActivities = (programmingAssignment, playlist) => {
 
 	</div> )
 }
+*/
 
 // Todo: Update dependant code and remove following function.
 export const InitialPost = (sprint) => { return ( <li><em>Make your initial Discussion {sprint} post by the middle of the sprint</em></li> ) }
 
+/*
 // Todo: Update dependant code and remove following function.
 export const StandardActivitiesClosing = (programmingAssignment) => { 
 	return ( <div>
@@ -34,8 +37,10 @@ export const StandardActivitiesClosing = (programmingAssignment) => {
 
 	</div> ) 
 }
+*/
 
 export const LearningObjectivesIntro = () => { return (<p>Our Learning Objectives for this sprint include:</p>) }
+
 
 export const ActivitiesListIntro = (sprint) => { 
 	if ((sprint === null) || (sprint === undefined) || (sprint === '')) {
@@ -45,6 +50,7 @@ export const ActivitiesListIntro = (sprint) => {
 	
 	return (<p>Below is our activities list which needs to be completed by {sprintEndDateWithoutTime(sprint-1)}:</p>)
 }
+
 
 export const StandardActivitiesWithLink = (programmingAssignmentLink, playlist, excludePreviousTopics) => { 
 	const checkExcludingPreviousSprintReviewTopics = (excludePreviousTopics) => { 
@@ -73,3 +79,4 @@ export const StandardActivitiesClosingWithLink = (programmingAssignmentLink, pro
 
 export const Closing = () => { return ( <p>Remember to tell your Scrum teammates how much you appreciate them and to 
 	check for <NavLink to='/activity/programming-together'>programming together</NavLink> tutorials.</p> ) }
+	

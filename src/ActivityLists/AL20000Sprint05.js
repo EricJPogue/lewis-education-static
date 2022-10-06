@@ -48,9 +48,9 @@ This week we switch gears and move into graphical drawing using Python and the T
 </div> )
 }
 
-
-
 // Todo: Remove the programming together tutorials from the activity list to the Turtledraw activity itself, and then 
 // remove the tutorials from the programming together. 
 
 // Todo: Remove T/F question "Everything connected to the Internet has an IP address."
+
+// Todo: Add zipped source code requirement to all Final Project presentation assignments.

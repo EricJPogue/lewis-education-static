@@ -118,8 +118,6 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 }
 
 export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink='', programmingAssignmentEstimate='') => { 
-
-	
 	const sprint1StandardActivitiesClosing = () => { 
 		return (<div>
 			<li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
@@ -149,19 +147,13 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 			<li><em>Submit Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
 		</div>)
 	}
-	const sprint4StandardActivitiesClosing = () => { 
-		return (<div>
-			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
-			<li><em>Submit Discussion {sprint} responses, Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
-		</div>)
-	}
-	const sprint5StandardActivitiesClosing = () => { 
+	const sprint4and5StandardActivitiesClosing = () => { 
 		return (<div>
 			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 			<li><em>Submit sprint {sprint} assignments including Discussion, Quiz, Lab, and Reflection</em></li>
 		</div>)
 	}
-	const sprint6StandardActivitiesClosing = () => { 
+	const sprint6and7StandardActivitiesClosing = () => { 
 		return (<div>
 			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 			<li><em>Submit Discussion, Quiz, Lab, and Reflection</em></li>
@@ -180,10 +172,10 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 		case 1: return sprint1StandardActivitiesClosing()
 		case 2: return sprint2StandardActivitiesClosing()
 		case 3: return sprint3StandardActivitiesClosing()
-		case 4: return sprint4StandardActivitiesClosing()
-		case 5: return sprint5StandardActivitiesClosing()
-		case 6: return sprint6StandardActivitiesClosing()
-		case 7: return sprint6StandardActivitiesClosing()
+		case 4: return sprint4and5StandardActivitiesClosing()
+		case 5: return sprint4and5StandardActivitiesClosing()
+		case 6: return sprint6and7StandardActivitiesClosing()
+		case 7: return sprint6and7StandardActivitiesClosing()
 		case 8: return sprint8StandardActivitiesClosing()
 		default: return null
 	}
