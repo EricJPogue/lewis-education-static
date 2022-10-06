@@ -28,9 +28,9 @@ const HealthRiskCalculatorTeam = (appProps) => {
 <br />
 <h4>{appProps.name}</h4>
 <h5>Summary: Work with your scrum team to create a {appProps.language} application that will calculate the health risk 
-of a new insurance company customer <em>utilizing Node.js and server-side programming for all calculations and 
-comparisons</em>. Implement the application utilizing a {sharedGitHubRepository()}
-</h5>
+of a new insurance company customer utilizing a static website for the client, a separate Node.js server to implement an 
+API for **all** calculations, and utilizing a new GitHub Organization to manage the two separate Shared GitHub 
+repositories.</h5>
 <h5>Prerequisites: {appProps.prerequisites}</h5>
 
 <p>In this assignment, you will create a tool a health insurance company could use to determine the risk associated with 
@@ -104,39 +104,39 @@ improve on his design in any event.
 <em>Requirement 1</em>
 <p>Create a web application that:</p>
 <ol>
-	<li>Utilizes Node.js and the Express JavaScript library for all hosting</li>
-	<li>Utilizes a shared GitHub repository that all team members can update and also meets the following <NavLink to='/activity/repository'>criteria</NavLink></li>
-	<li>Utilizes a {sharedGitHubRepository()} including “production” and “test” GitHub branches</li>
-	<li>Hosts the “test” branch in an Azure website</li>
+	<li>Utilizes a new GitHub Organization named “[[Your Team Name]] - Health Insurance Risk Calculator” to host all repositories</li>
+	<li>Utilizes two separate GitHub repositories with one being for a static Client website and the other for the Node.js API server</li>
+	<li>Hosts the client application in Microsoft Azure as a Static Web App</li>
+	<li>Hosts the server application in Microsoft Azure as a Node.js base Web App</li>
 </ol>
 
 <em>Requirement 2</em>
-<p>Be sure that application also:</p>
+<p>Be sure that client application also:</p>
 <ol>
 	<li>Has a simple yet an aesthetically pleasing user interface</li>
 	<li>Provides excellent end user instructions when the application starts</li>
-	<li>Asks all necessary questions required to complete the above calculations</li>
-	<li>Identifies the unit of each input with appropriate US/English units</li>
+	<li>Asks questions to complete the above calculations... <i>but performs **none** of the calculations in the client</i></li>
+	<li>Implements user friendly inputs including English units of measure and feet and inches for height</li>
 </ol>
 
 <em>Requirement 3</em>
-<p>Enhance the application so that it:</p>
+<p>Enhance the client application so that it:</p>
 <ol>
-	<li>Validates user input for appropriate values, displays meaningful error messages, and asks the question again 
-		if the user enters a value that seems inappropriate (i.e. a height equal to 2 feet)</li>
+	<li>Validates user input and displays meaningful error messages including a minimum height of 2 feet</li>
+	<li>Displays meaningful error message and focuses/highlights fields that contain invalid input</li>
 	<li>Summarizes each of the values used in the final calculation including Age, BMI, Blood Pressure, and Family Disease(s)</li>
-	<li>Calculates and displays the final Risk Category</li>
-	<li>Continues to evaluate people’s health until the user indicates they are done</li>
+	<li>Calculates and displays the final Risk Category by calling an server API hosted as a Node.js based Azure Web App</li>
 </ol>
 
 <em>Requirement 4</em>
-<p>Implement the application so that it:</p>
+<p>Implement the server application so that it:</p>
 <ol>
-	<li>Utilizes Node.js and the Express JavaScript library such that each team member can test changes locally</li>
-	<li>Utilizes no client-side JavaScript math commands but instead implements all calculations on the Node.js server</li>
-	<li>Utilizes no client-side comparison commands but instead implements them on the Node.js server</li>
-	<li>Has each team member verifiably implement and test at least one server-side Node.js function</li>
-</ol>
+	<li>Implements an API that implements ALL risk calculations using Node.js and a Microsoft Azure Web App</li>
+	<li>Utilizes standard configuration that allows each team member to fully test client and server functionally locally</li>
+	<li>Implements ALL risk calculations as a set of APIs</li>
+	<li>Has each team member implement at least one server-side Node.js API function that is verifiable in a GitHub commit</li>
+</ol><br />
+Optionally review {sharedGitHubRepository()}.
 </div> )
 
 }
