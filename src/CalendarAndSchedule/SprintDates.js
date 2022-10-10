@@ -32,8 +32,6 @@ export const duration = (start, end) => {
 }
 
 export const incrementDate = (originalDate, incrementBy) => {
-	// Note that sometimes the newDate seems to be off by one hour. Limited research suggests that may be because of 
-	// daylights savings time. More research may be valuable. 
 	let newDate = new Date(originalDate);
 	newDate.setDate(newDate.getDate()+incrementBy);
 	return newDate;

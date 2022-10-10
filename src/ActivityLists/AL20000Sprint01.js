@@ -64,4 +64,8 @@ export const list20000Sprint01 = (sprint) => {
 // Todo: Remove "part-1" reference to lab 1 question 8.
 // Todo: Consider removing Office 365 from Tools of the Trade.
 
+// Todo: Figure out why when a link is clicked (i.e. Syllabus) the page scrolls to the same position on the page as
+//     the current page is on. This is confusing because you would assume clicking on the link takes you to the top of
+//     the destination page. 
 
+// Todo: Update syllabus with Activity List headers... or update Activity list headers. 

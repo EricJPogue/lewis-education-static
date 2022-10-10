@@ -48,8 +48,8 @@ export class SprintClassActivities extends Component {
 	// Monday, Wednesday, and Friday class schedules.
 	MWFSchedule = {
 		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Demos & Retrospectives",
-		"FirstFriday":     "Discussion Board & Lab",
+		"FirstWednesday":  "Discussion Board & Lab",
+		"FirstFriday":     "Demos & Retrospectives",
 		"SecondMonday":    "Topic Discussion",
 		"SecondWednesday": "Quiz",
 		"SecondFriday":    "Lab"
@@ -64,10 +64,9 @@ export class SprintClassActivities extends Component {
 		"SecondFriday":    "Lab"
 	}
 
-	// Todo: Review fall break schedule.
 	MWFScheduleSprint3 = {
 		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Discussion Board & Lab (switching Wednesday and Friday this sprint)",
+		"FirstWednesday":  "Discussion Board & Lab",
 		"FirstFriday":     "Demos, Retrospectives, and Topic Discussion",
 		"SecondMonday":    "Topic Discussion",
 		"SecondWednesday": "Quiz & Lab",
@@ -85,8 +84,8 @@ export class SprintClassActivities extends Component {
 
 	MWFScheduleSprint8 = {
 		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Demos, Retrospectives, & Quiz",
-		"FirstFriday":     "Topic Discussion & Lab",
+		"FirstWednesday":  "Topic Discussion & Lab",
+		"FirstFriday":     "Demos, Retrospectives, & Quiz",
 		"SecondMonday":    "No regular classes (final exams)",
 		"SecondWednesday": "No regular classes (final exams)",
 		"SecondFriday":    "No regular classes (final exams)"
