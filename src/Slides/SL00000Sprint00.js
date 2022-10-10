@@ -24,9 +24,8 @@ export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
 			'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
-			`We will have sprint ${sprint-1} Demos and Retrospective on Wednesday`,
-			'We will complete our scrum team Discussion Board breakout session on Friday' ]
-		)
+			'We will complete our scrum team Discussion Board breakout session on Wednesday',
+			`We will have sprint ${sprint-1} Demos and Retrospective on Friday` ])
 	}
 	const activitiesReview = () => {
 		return basicSlide('Activity List and Assignments Review', [

@@ -47,6 +47,7 @@ export const isToday = (someDate) => {
 }
 
 export const pastDate = (checkDate) => {
+	// Todo: Verify the CST is always GMT-0500 and does not change with daylight savings time.
 	if (Date.parse(checkDate) - Date.parse(new Date()) < 0) {
 		return true;
 	}
