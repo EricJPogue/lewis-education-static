@@ -19,20 +19,23 @@ export const preflightChecklist = () => {
 		{bulletListSlide(
 			'Preflight Checklist',
 			`In preparation for ${getClass().title}:`, [
+			'Log into the campus wireless network', 
 			'Sign into our Blackboard course shell',
 			'Sign into our Zoom session through the Zoom link in our Blackboard course shell',
-			'Make sure that you can hear the conversation, see shared desktops, and view chat topics',
+			'Mute your microphone and speakers as needed so that we do not get an echo in the room',
 			'Be prepared to share your computer screen',
-			'Be prepared to utilize a headset with a microphone',
-			'Optionally leave your camera on to help make our class more interactive',
-			'Verify that class is being recorded**']
-		)}
+			'If you are remote, optionally leave your camera on to help make our class more interactive' ]
+		)}<br />
 		{renderBulletList(
-			'In-person participants also:', [
-			'Make sure that your microphone and speakers are muted or off so that we don’t get an echo',
-			'Sit in a good spot near the classroom ceiling microphones if possible',
-			'Log into our campus wireless network as needed' ]
+			'Instructor Checklist:', [
+			`Verify this is  ${getClass().title} (${getClassIDfromURL()})`,
+			'Update Zoom polls and start Zoom session', 
+			'Share desktop and open slides', 
+			'Test camera, microphone, and speakers',
+			'Share slides with ”&hide-nav=y” option as needed',
+			'Start recording' ]
 		)}
+		
 	</div> )
 }
 
@@ -41,7 +44,7 @@ export const instructorChecklist = () => {
 		{renderLogo()}
 		{bulletListSlide(
 			'Instructor Checklist',
-			`In preparation for ${getClass().title} / ${getClassIDfromURL()}`, [
+			`In preparation for ${getClass().title} section ${getClassIDfromURL()}`, [
 			'Share slides with ”&hide-nav=y” option',
 			'Access Zoom series and load/update polls as needed',
 			'Start Zoom session',
@@ -346,6 +349,10 @@ export const demoAssignment = () => {
 	return basicSlide('Complete Demo Assignment', [
 		'If you have completed your sprint demo, please also submit your lab demo assignment in Blackboard.' ])
 }
+export const reviewDemoSchedule = () => {
+	return basicSlide('Review Demo Schedule', [
+		'Review the demo schedule in preparation for our upcoming lab demos.' ])
+}
 
 // Beta 
 // Review code Breakout.js
@@ -364,6 +371,12 @@ export const breakoutStandard = (breakoutTitle, introduction, topicList) => {
 			<li>Sit back, relax, and thank your presenter for their bravery and dedication</li>
 		</ol>
 	</div>)
+}
+
+export const retrospectiveIntroduction = (sprint) => {
+	return orderedListSlide(`Sprint ${sprint-1} Retrospective`, 
+		`This is our opportunity to look back and bring closure to sprint ${sprint-1} activities and assignments with an 
+		eye toward how we each can improve individually, how we can improve a team, and how we can improve as a class.`, [])
 }
 
 export const retrospectiveBreakout = (sprint) => {

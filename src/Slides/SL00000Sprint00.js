@@ -4,6 +4,14 @@ import { agendaSlide, orderedListSlide, bulletListSlide, basicSlideWithLogo, tPr
 
 export const makeSlideDeck = (slides) => { return [ preflightChecklist, instructorChecklist ].concat(slides).concat(end) }
 
+export const completeDeck = (slideDeck, slides) => { 
+	const addSlide = (slide) => { slideDeck.push(slide) }
+
+	slides.forEach(addSlide)
+	slideDeck.push(end)
+	return slideDeck
+}
+
 export const xyz_n_1of6_agenda_list = (sprint) => { 
 	return [ `Sprint ${sprint} Planning`,
 	`Sprint ${sprint} Planning Breakout`,
@@ -63,4 +71,21 @@ export const tAnnouncementPreworkOrAgenda = (titleAndList, sprint=null, activity
 	return tPreworkWithLogo(titleAndList[0], titleAndList.slice(1), sprint, activityList )
 }
 
-// Todo: Create checklistAnnouncementsPreworkAndAgenda = (announcementPreworkAndAgendaLists) => {...}
+export const checklistAnnouncementsPreworkAndAgenda = (lists, sprint, activityList) => {
+	const prework = () => { return tPreworkWithLogo('Prework For Today', lists.prework, sprint, activityList) }
+	const announcements = () => { return tPreworkWithLogo('Announcements', lists.announcements, sprint )}
+	const agenda = () => { return agendaSlide(lists.agenda) }
+
+	const slideDeck = [ preflightChecklist ]
+
+	if (lists.prework.length > 0) 
+		slideDeck.push(prework)
+
+	if (lists.announcements.length > 0) 
+		slideDeck.push(announcements)
+
+	if (lists.agenda.length > 0) 
+		slideDeck.push(agenda)
+
+	return slideDeck
+}
