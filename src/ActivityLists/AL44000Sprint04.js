@@ -6,7 +6,6 @@ import { oreillyPlaylistSE, internalLink, JSONWebServicesTutorial } from '../Dat
 import { healthRiskCalculatorTeamWebLink } from '../Activities/HealthRiskCalculatorTeam'
 
 export const al44000Sprint04 = () => {
-	const foxChapter8Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-08') }
 	let sprint = 4
 	return ( <div>
 		<h5>Sprint 4: Testing, Test-Driven Development, Application Programming Interfaces, and working in teams</h5>
@@ -27,6 +26,14 @@ export const al44000Sprint04 = () => {
 			<li>Work as part of a software development team utilizing GitHub, Azure, and Node.js</li>
 		</ul>
 
+		{list44000Sprint04(sprint)}
+		{closing(sprint)}
+	</div> )
+}
+
+export const list44000Sprint04 = (sprint) => {
+	const foxChapter8Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-08') }
+	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, healthRiskCalculatorTeamWebLink(), oreillyPlaylistSE())}
@@ -44,7 +51,6 @@ export const al44000Sprint04 = () => {
 			<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapter 15</li>
 			{standardActivitiesClosing(sprint, healthRiskCalculatorTeamWebLink(), '6 hours per team member')}
 		</ol>
-		{closing(sprint)}
 	</div> )
 }
 

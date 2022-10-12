@@ -10,8 +10,9 @@ import { list20000Sprint04 } from '../ActivityLists/AL20000Sprint04'
 
 // Sprint 4 Introduction to Computer Science (ICS) values.
 const sprint = 4
-const activityList = () => { return list20000Sprint04(sprint) }
 const activityListPrevious = () => { return list20000Sprint03(sprint-1) }
+const activityList = () => { return list20000Sprint04(sprint) }
+
 
 // Todo: Review https://stackoverflow.com/questions/1300242/passing-a-function-with-parameters-as-a-parameter
 // Todo: Create xyz_n_1of6 version 2 that includes optional null (or default_announcements) announcements and makes prework_list 
@@ -47,7 +48,7 @@ export const ics_4_2of6 = () => {
 			'Zipping the files as if we were going to submit them for Lab 4',
 			'Finally, let’s do the same thing for MatchMaker' ])
 	}
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_3of6_lists.prework, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_3of6_lists.prework, sprint, activityList) }
 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_2of6_lists, sprint, activityList)
 	return completeDeck(slideDeck, [ discussion4Breakout, reviewDemoSchedule, preworkNext, programmingTogether ])
