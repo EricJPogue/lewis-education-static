@@ -13,17 +13,16 @@ const sprint = 4
 const activityListPrevious = () => { return list20000Sprint03(sprint-1) }
 const activityList = () => { return list20000Sprint04(sprint) }
 
-
 // Todo: Review https://stackoverflow.com/questions/1300242/passing-a-function-with-parameters-as-a-parameter
 // Todo: Create xyz_n_1of6 version 2 that includes optional null (or default_announcements) announcements and makes prework_list 
 // and agenda_list optionally null (or default_prework_list and default_agenda_list)
 
-// Session 1 of 6.
+// Session 1 of 6: Monday
 export const ics_4_1of6_prework_list = xyz_n_1of6_prework_list(sprint)  
 const ics_4_1of6_agenda_list = xyz_n_1of6_agenda_list(sprint)
 export const ics_4_1of6 = () => { return xyz_n_1of6(sprint, ics_4_1of6_prework_list, activityListPrevious, ics_4_1of6_agenda_list, ics_4_2of6_lists.prework, activityList) }
 
-// Session 2 of 6.
+// Session 2 of 6: Wednesday
 const ics_4_2of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
@@ -54,10 +53,13 @@ export const ics_4_2of6 = () => {
 	return completeDeck(slideDeck, [ discussion4Breakout, reviewDemoSchedule, preworkNext, programmingTogether ])
 }
 
-// Session 3 of 6.
+// Session 3 of 6: Friday
 const ics_4_3of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		'You rock!', 
+		`If you are enjoying creating websites, you may want to consider taking Web & Distributed Programming... I will 
+		happily wave the Programming Fundamentals prerequisite if you have completed this section of Intro to Computer
+		Science` ],
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
@@ -72,17 +74,17 @@ export const ics_4_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
 		if (getClass().section === '002') {
 			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:25 },
+				{ name: 'Discussion', due:27, submitted:26 },
 				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:24 },
-				{ name: 'Reflection', due: 27, submitted: 26 }
+				{ name: 'Lab', due:27, submitted:26 },
+				{ name: 'Reflection', due: 27, submitted: 27 }
 			])
 		} else {
 			return submissionPercentage([
-				{ name: 'Discussion', due:28, submitted:26 },
-				{ name: 'Quiz', due:28, submitted:28 },
-				{ name: 'Lab', due:28, submitted:27 },
-				{ name: 'Reflection', due: 28, submitted: 27 }
+				{ name: 'Discussion', due:27, submitted:24 },
+				{ name: 'Quiz', due:27, submitted:27 },
+				{ name: 'Lab', due:27, submitted:27 },
+				{ name: 'Reflection', due: 27, submitted: 25 }
 			])
 		}
 	}
@@ -90,10 +92,12 @@ export const ics_4_3of6 = () => {
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Okay submission percentage... it does’t feel good to have multiple Labs not submitted',
-			'I “don’t allow” for late assignments because historically it makes a difficult situation worse',
-			'All assignments are graded and posted... maybe?', 
-			'Still some difficulties creating and attaching zip files' ])
+			'Excellent submission percentage... very well done!',
+			'100% Submission Percentage === Food... what does “===” mean in Python?',
+			'All assignments are graded and posted', 
+			'Some difficulties creating GitHub Repositories and Azure Websites',
+			'It feels like our changes to help us get started earlier had a positive impact... thoughts?', 
+			'Very impressive work! Thank you!' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_4of6_lists.prework, sprint, activityList) }
@@ -102,15 +106,16 @@ export const ics_4_3of6 = () => {
 	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
+// Session 4 of 6: Monday
 const ics_4_4of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 11 prior to next class', '',
-		'Focus on “Gates and Circuits” and “Computing Components” chapters and lectures',
-		'Be prepared for Lab and Programming Together**' ],
+		'Focus on “Sequences, Selections, and Loops” and “Python Programming”',
+		'Be prepared for “Sequences, Selections, and Loops with Python Breakout”' ],
 	'agenda':[
-		'Gates and Circuits Breakout (abbreviated)',
+		'Sequences, Selections, and Loops with Python Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }

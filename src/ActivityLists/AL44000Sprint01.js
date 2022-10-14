@@ -78,6 +78,9 @@ const extras = () => {
 // Todo: Fix the end of the Fox Preface video.
 // Certified for FA22 (08/26/22)
 
+// BugBug: Review question "Which of the following statements relating Service-Oriented Architecture (SOA) and 
+// Software Development Lifecycles is True?" question and remove "Give Full Credit to Everyone" flag. 
+
 
 
 
