@@ -54,6 +54,7 @@ the work we do in scrum is essentially maintenance.</p>
 </div> )
 }
 
+
 // Todo: Consider moving Software Metrics to sprint 6
 // Todo: Add multiple-choice question on refactoring vs re-engineering.
 // Todo: Add multiple-choice question on “Describe the similarities and differences normally observed when maintaining a
@@ -67,5 +68,8 @@ the work we do in scrum is essentially maintenance.</p>
 // Todo: Add lots of links from the Agile Alliance to various activity lists.
 // Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
 
-
+// Review GitHub Organization tutorials:
+// https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch 
+// https://www.youtube.com/watch?v=SUu6cmcC-3A
+// https://developers.sap.com/tutorials/webide-github-creating-org.html 
 

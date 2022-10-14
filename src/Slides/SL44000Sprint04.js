@@ -66,20 +66,20 @@ const se_4_3of6_lists = {
 export const se_4_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:27, submitted:25 },
-			{ name: 'Quiz', due:27, submitted:27 },
-			{ name: 'Lab', due:27, submitted:24 },
-			{ name: 'Reflection', due: 27, submitted: 26 }
+			{ name: 'Discussion', due:14, submitted:14 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:14 },
+			{ name: 'Reflection', due: 14, submitted: 14 }
 		])
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Okay submission percentage... it does’t feel good to have multiple Labs not submitted',
-			'I “don’t allow” for late assignments because historically it makes a difficult situation worse',
-			'All assignments are graded and posted... maybe?', 
-			'Still some difficulties creating and attaching zip files' ])
+			'Fantastic submission percentage... how would we like to celebrate, food? ',
+			'Very nice work with GitHub Organizations... that will be something that future classes will thank you for',
+			'Assignments are not all graded... I still need to grade 4 labs, sorry?', 
+			'I agree that some of the lab 3 instructions were not very clear... I will work to improve that in the future' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_4of6_lists.prework, sprint, activityList) }
@@ -92,11 +92,10 @@ const ics_4_4of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
 	'prework':[
-		'Complete through activity 11 prior to next class', '',
-		'Focus on “Gates and Circuits” and “Computing Components” chapters and lectures',
-		'Be prepared for Lab and Programming Together**' ],
+		'Complete through activity 9 prior to next class', '',
+		'Be prepared for a breakout session on “Test-Driven Development' ],
 	'agenda':[
-		'Gates and Circuits Breakout (abbreviated)',
-		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		'TBD)',
+		'',
+		'' ]
 }

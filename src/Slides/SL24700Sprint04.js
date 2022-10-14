@@ -52,7 +52,7 @@ export const web_4_2of6 = () => {
 // Session 3 of 6.
 const web_4_3of6_lists = {
 	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
+		'Reminder that you do not have to implement your local development web server as suggested in ”“Learning Web Development” Chapter 6' ],
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
@@ -66,10 +66,10 @@ const web_4_3of6_lists = {
 export const web_4_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:27, submitted:25 },
-			{ name: 'Quiz', due:27, submitted:27 },
-			{ name: 'Lab', due:27, submitted:24 },
-			{ name: 'Reflection', due: 27, submitted: 26 }
+			{ name: 'Discussion', due:14, submitted:14 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:12 },
+			{ name: 'Reflection', due:14, submitted:14 }
 		])
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
@@ -77,9 +77,8 @@ export const web_4_3of6 = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
 			'Okay submission percentage... it does’t feel good to have multiple Labs not submitted',
-			'I “don’t allow” for late assignments because historically it makes a difficult situation worse',
-			'All assignments are graded and posted... maybe?', 
-			'Still some difficulties creating and attaching zip files' ])
+			'All assignments are graded and posted',
+			'Several very nice API implementations' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', web_4_4of6_lists.prework, sprint, activityList) }
@@ -92,11 +91,10 @@ const web_4_4of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
 	'prework':[
-		'Complete through activity 11 prior to next class', '',
-		'Focus on “Gates and Circuits” and “Computing Components” chapters and lectures',
-		'Be prepared for Lab and Programming Together**' ],
+		'Complete through activity 9 prior to next class', '',
+		'Be prepared for a discussion on the Node.js local server environment, AJAX, and JSON' ],
 	'agenda':[
-		'Gates and Circuits Breakout (abbreviated)',
-		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		'',
+		'',
+		'' ]
 }
