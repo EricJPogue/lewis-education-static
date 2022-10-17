@@ -62,3 +62,6 @@ export const list24700Sprint03 = (sprint) => {
 }
 
 // Certified for SU22 (05/20/2022)
+
+// Adding something like tic-tac-toe game tutorial.
+// Updating MapMania Lite to be more step-by-step including design. 

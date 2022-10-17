@@ -3,7 +3,7 @@ import { getClass } from '../DataAndAPIs/Classes'
 import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6, completeDeck, checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 
 import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule } from './SLSprint00'
-import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction } from './SLSprint00'
+import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard } from './SLSprint00'
 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 import { list20000Sprint04 } from '../ActivityLists/AL20000Sprint04'
@@ -71,6 +71,7 @@ const ics_4_3of6_lists = {
 		'Prework for Next Class' ]
 }
 export const ics_4_3of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_3of6_lists, sprint, activityList)
 	const metricsSubmissionPercentage = () => {
 		if (getClass().section === '002') {
 			return submissionPercentage([
@@ -102,7 +103,7 @@ export const ics_4_3of6 = () => {
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_4of6_lists.prework, sprint, activityList) }
 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_3of6_lists, sprint, activityList)
+
 	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
@@ -118,4 +119,45 @@ const ics_4_4of6_lists = {
 		'Sequences, Selections, and Loops with Python Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
+}
+export const ics_4_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_4of6_lists, sprint, activityList)
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Sequences, Selections, and Loops with Python', 
+			'In this breakout session we will demonstrate our mastery of Sequences, Selections, and Loops using our knowledge of Python:', [
+			'Sequence and selection “Numbering Systems with Python”', 
+			'Loops in “Numbering Systems with Python”', 
+			'Sequences in “Matchmaker Lite - Part 2”',
+			'Selections in “Matchmaker Lite - Part 2”',
+			'Repetition in “Matchmaker Lite - Part 2”... what is the relationship between Loops and Repetition?'
+		])
+	}
+	const programmingTogether = () => {
+		return bulletListSlide('Lab & Programming Together', 
+			'How can we best make progress on Matchmaker given that we have already:', [
+			'Started MatchMakerLite tutorial by implementing a README.md and LICENSE file in GitHub', 
+			'Added a MatchMakerLite.py file', 
+			'Pushed the updated files to GitHub',
+			'Zipped the files as if we were going to submit them for Lab 4',
+			'Started work on MatchMaker' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_lists.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ breakout, preworkNext, programmingTogether ])
+}
+
+// Session 5 of 6: Wednesday
+const ics_4_5of6_lists = {
+	'announcements':[ 
+		'Any announcements?' ],
+	'prework':[
+		'Complete through activity 12 and working on activity 13 prior to next class', '',
+		'Focus on “Sequences, Selections, and Loops” and “Python Programming”',
+		'Be prepared for “Computer Science Illuminated” Artificial Intelligence Breakout',
+		'Be prepared for Lab & Programming together OR Quiz 4... thoughts?' ],
+	'agenda':[
+		'Be prepared for “Computer Science Illuminated” Artificial Intelligence Breakout',
+		'Prework for Next Class',
+		/* BugBug: selection one of these: */ 'Lab & Programming together OR Quiz 4' ]
 }

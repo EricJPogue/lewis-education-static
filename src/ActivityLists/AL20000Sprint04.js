@@ -54,4 +54,4 @@ export const list20000Sprint04 = (sprint) => {
 
 // Certified for FA22 (10/06/2022)
 
-
+// Todo: Consider adding Matchmaker Lite - Part 1 and Part 2 to the activity list or to the Matchmaker assignment.
