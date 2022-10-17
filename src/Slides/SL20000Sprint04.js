@@ -152,11 +152,10 @@ const ics_4_5of6_lists = {
 		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 12 and working on activity 13 prior to next class', '',
-		'Focus on “Sequences, Selections, and Loops” and “Python Programming”',
 		'Be prepared for “Computer Science Illuminated” Artificial Intelligence Breakout',
 		'Be prepared for Quiz 4' ],
 	'agenda':[
-		'Be prepared for “Computer Science Illuminated” Artificial Intelligence Breakout',
+		'“Computer Science Illuminated” Artificial Intelligence Breakout',
 		'Prework for Next Class',
 		'Quiz 4' ]
 }
@@ -184,7 +183,7 @@ const ics_4_6of6_lists = {
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
-		'Be at least 50% complete with activity 13 prior to next class', '',
+		'Be at mostly complete with activity 13 prior to next class', '',
 		'Be prepared for Lab & Programming together' ],
 	'agenda':[
 		'Sprint Progress Polling',

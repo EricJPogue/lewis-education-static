@@ -1,8 +1,8 @@
-import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6, tLab } from './SL00000Sprint00'
 import { completeDeck, checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 
-import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule } from './SLSprint00'
-import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction } from './SLSprint00'
+import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule, end } from './SLSprint00'
+import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard } from './SLSprint00'
 
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
@@ -49,7 +49,7 @@ export const se_4_2of6 = () => {
 	return completeDeck(slideDeck, [ discussion4Breakout, reviewDemoSchedule, preworkNext, programmingTogether ])
 }
 
-// Session 3 of 6.
+// Session 3 of 6: Friday
 const se_4_3of6_lists = {
 	'announcements':[ 
 		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
@@ -82,20 +82,58 @@ export const se_4_3of6 = () => {
 			'I agree that some of the lab 3 instructions were not very clear... I will work to improve that in the future' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_4of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_4of6_lists.prework, sprint, activityList) }
 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_4_3of6_lists, sprint, activityList)
 	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
-const ics_4_4of6_lists = {
+// Session 4 of 6: Monday
+const se_4_4of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
 	'prework':[
-		'Complete through activity 9 prior to next class', '',
-		'Be prepared for a breakout session on “Test-Driven Development' ],
+		'Complete through activity 10 and be working on activity 11', '',
+		'Be prepared for a breakout session on “Software Testing: Test-Driven Development”' ],
 	'agenda':[
-		'TBD)',
+		'“Software Testing: Test-Driven Development” breakout',
+		'Prework for Next Class',
+		'Lab' ]
+}
+export const se_4_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_4_4of6_lists, sprint, activityList)
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Software Testing: Test-Driven Development', 
+			'In this breakout session your team will discuss Software Testing: Test-Driven Development:', [
+			'Test-Driven Development (TDD)', 
+			'FIRST, TDD, and Red-Green-Refactor', 
+			'Code coverage and defect assumptions',
+			'Plan and Document vs. Agile testing practices and product quality responsibility',
+			'Quality Assurance Organizations vs. Testing Services Organizations vs. Integrated Team Testing'
+		])
+	}
+
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_5of6_lists.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ])
+}
+
+// Session 4 of 6: Monday
+const se_4_5of6_lists = {
+	'announcements':[ 
+		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
+	'prework':[
+		'Complete through activity 10 and be working on activity 11', '',
+		'Be prepared for Quiz 4' ],
+	'agenda':[
+		'',
 		'',
 		'' ]
 }
+
+// Session 5 of 6: Wednesday
+export const se_4_5of6 = () => { return [end]}
+
+// Session 6 of 6: Friday
+export const se_4_6of6 = () => { return [end]}

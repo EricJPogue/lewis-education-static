@@ -1,8 +1,8 @@
 import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6 } from './SL00000Sprint00'
-import { completeDeck, checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
+import { completeDeck, checklistAnnouncementsPreworkAndAgenda, tLab } from './SL00000Sprint00'
 
 import { tPrework, bulletListSlide, discussionBreakout, reviewDemoSchedule } from './SLSprint00'
-import { submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction } from './SLSprint00'
+import { submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard, end } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
 import { list24700Sprint03 } from '../ActivityLists/AL24700Sprint03'
@@ -87,6 +87,7 @@ export const web_4_3of6 = () => {
 	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
+// Session 4 of 6: Monday
 const web_4_4of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
@@ -94,7 +95,46 @@ const web_4_4of6_lists = {
 		'Complete through activity 9 prior to next class', '',
 		'Be prepared for a discussion on the Node.js local server environment, AJAX, and JSON' ],
 	'agenda':[
+		'Node.js The Server breakout',
+		'Prework for Next Class',
+		'Lab' ]
+}
+export const web_4_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_4_4of6_lists, sprint, activityList)
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Node.js The Server breakout', 
+			'In this breakout session your team will discuss Node.js server environment:', [
+			'Software Configuration Management (SCM)... Wikipedia',
+			'Unit testing and the Node.js local environment', 
+			'Azure Static Website vs. Azure Node.js Website', 
+			'Hosting Map Mania... static website or Node.js', 
+			'Local development and testing of Node.js website vs. local testing of a static website', 
+			'Local development and testing of Node.js “Learning Web Development” vs. suggested environment', 
+			'JSON, AJAX, and CORS'
+		])
+	}
+
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_4_5of6_lists.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ])
+}
+
+// Session 4 of 6: Monday
+const web_4_5of6_lists = {
+	'announcements':[ 
+		'Any announcements?' ],
+	'prework':[
+		'Complete through activity 10 and be working on activity 11', '',
+		'Be prepared for Quiz 4' ],
+	'agenda':[
 		'',
 		'',
 		'' ]
 }
+
+// Session 5 of 6: Wednesday
+export const web_4_5of6 = () => { return [end]}
+
+// Session 6 of 6: Friday
+export const web_4_6of6 = () => { return [end]}
