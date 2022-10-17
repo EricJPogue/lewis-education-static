@@ -1,9 +1,9 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
-import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6, completeDeck, checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
+import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6, completeDeck, checklistAnnouncementsPreworkAndAgenda, tLab } from './SL00000Sprint00'
 
 import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule } from './SLSprint00'
-import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard } from './SLSprint00'
+import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard, tQuiz } from './SLSprint00'
 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 import { list20000Sprint04 } from '../ActivityLists/AL20000Sprint04'
@@ -103,7 +103,6 @@ export const ics_4_3of6 = () => {
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_4of6_lists.prework, sprint, activityList) }
 
-
 	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
@@ -155,9 +154,50 @@ const ics_4_5of6_lists = {
 		'Complete through activity 12 and working on activity 13 prior to next class', '',
 		'Focus on “Sequences, Selections, and Loops” and “Python Programming”',
 		'Be prepared for “Computer Science Illuminated” Artificial Intelligence Breakout',
-		'Be prepared for Lab & Programming together OR Quiz 4... thoughts?' ],
+		'Be prepared for Quiz 4' ],
 	'agenda':[
 		'Be prepared for “Computer Science Illuminated” Artificial Intelligence Breakout',
 		'Prework for Next Class',
-		/* BugBug: selection one of these: */ 'Lab & Programming together OR Quiz 4' ]
+		'Quiz 4' ]
 }
+export const ics_4_5of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_5of6_lists, sprint, activityList)
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Artificial Intelligence', 
+			'In this breakout will discuss Artificial Intelligence (reading and lecture):', [
+			'Thinking Machines',
+			'Knowledge Representation and Data Quality',
+			'Expert Systems',
+			'Neural Networks',
+			'Natural Language Processing',
+			'Robotics' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_lists.prework, sprint, activityList) }
+	const quiz = () => { return tQuiz(sprint) }
+
+	return completeDeck(slideDeck, [ breakout, preworkNext, quiz ])
+}
+
+// Session 5 of 6: Wednesday
+const ics_4_6of6_lists = {
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		'Be at least 50% complete with activity 13 prior to next class', '',
+		'Be prepared for Lab & Programming together' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Prework for Next Class',
+		'Lab and Programming Together' ]
+}
+export const ics_4_6of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_6of6_lists, sprint, activityList)
+	// BugBug: the following line must be updated for ics_5_1of6.prework.
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_lists.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ preworkNext, tLab ])
+}
+
+
+
