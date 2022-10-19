@@ -122,7 +122,8 @@ export const se_4_4of6 = () => {
 // Session 4 of 6: Monday
 const se_4_5of6_lists = {
 	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
+		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th',
+		'... and there will be pizza!' ],
 	'prework':[
 		'Complete through activity 10 and be working on activity 11', '',
 		'Be prepared for Quiz 4' ],
