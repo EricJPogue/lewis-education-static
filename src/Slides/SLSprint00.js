@@ -354,6 +354,11 @@ export const reviewDemoSchedule = () => {
 		'Review the demo schedule in preparation for our upcoming lab demos.' ])
 }
 
+export const backlogGrooming = (sprint) => {
+	return basicSlide('Backlog Grooming', [
+		`Complete backlog grooming in preparation for sprint ${sprint} planning.` ])
+}
+
 // Beta 
 // Review code Breakout.js
 export const breakoutStandard = (breakoutTitle, introduction, topicList) => {

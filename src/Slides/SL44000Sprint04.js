@@ -1,8 +1,8 @@
 import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6, tLab } from './SL00000Sprint00'
 import { completeDeck, checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 
-import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule, end } from './SLSprint00'
-import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard } from './SLSprint00'
+import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule, backlogGrooming, end } from './SLSprint00'
+import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard, tQuiz } from './SLSprint00'
 
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
@@ -89,6 +89,7 @@ export const se_4_3of6 = () => {
 }
 
 // Session 4 of 6: Monday
+// Todo: Reduce prework to less than activity 10. 
 const se_4_4of6_lists = {
 	'announcements':[ 
 		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
@@ -113,28 +114,46 @@ export const se_4_4of6 = () => {
 			'Quality Assurance Organizations vs. Testing Services Organizations vs. Integrated Team Testing'
 		])
 	}
-
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_5of6_lists.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ])
 }
 
-// Session 4 of 6: Monday
+// Session 5 of 6: Wednesday
 const se_4_5of6_lists = {
 	'announcements':[ 
 		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th',
-		'... and there will be pizza!' ],
+		'... and there will be pizza!', '',
+		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 10 and be working on activity 11', '',
 		'Be prepared for Quiz 4' ],
 	'agenda':[
-		'',
-		'',
-		'' ]
+		'Backlog Grooming in Preparation for Sprint 5 Planning',
+		'Prework for Next Class',
+		'Quiz 4' ]
+}
+export const se_4_5of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_4_5of6_lists, sprint, activityList)
+	const breakout = () => { return backlogGrooming(sprint+1) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_6of6_lists.prework, sprint, activityList) }
+	const quiz = () => { return tQuiz(sprint) }
+
+	return completeDeck(slideDeck, [ breakout, preworkNext, quiz ])
 }
 
-// Session 5 of 6: Wednesday
-export const se_4_5of6 = () => { return [end]}
-
 // Session 6 of 6: Friday
+const se_4_6of6_lists = {
+	'announcements':[ 
+		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th',
+		'... and there will be pizza!', '',
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday!`, '',
+		'Be prepared for Lab & Programming Together' ],
+	'agenda':[
+		'Backlog Grooming in Preparation for Sprint 5 Planning',
+		'Prework for Next Class',
+		'Quiz 4' ]
+}
 export const se_4_6of6 = () => { return [end]}

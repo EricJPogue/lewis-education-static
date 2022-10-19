@@ -2,7 +2,7 @@ import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6 } from './S
 import { completeDeck, checklistAnnouncementsPreworkAndAgenda, tLab } from './SL00000Sprint00'
 
 import { tPrework, bulletListSlide, discussionBreakout, reviewDemoSchedule } from './SLSprint00'
-import { submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard, end } from './SLSprint00'
+import { submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard, tQuiz, end } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
 import { list24700Sprint03 } from '../ActivityLists/AL24700Sprint03'
@@ -120,21 +120,38 @@ export const web_4_4of6 = () => {
 	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ])
 }
 
-// Session 4 of 6: Monday
+// Sprint 5 session 5 of 6: Wednesday
 const web_4_5of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 10 and be working on activity 11', '',
 		'Be prepared for Quiz 4' ],
 	'agenda':[
-		'',
-		'',
-		'' ]
+		'Lab & Programming Together',
+		'Prework for Next Class',
+		'Quiz 4' ]
+}
+export const web_4_5of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_4_5of6_lists, sprint, activityList)
+	const breakout = () => {
+		return bulletListSlide('Lab & Programming Together', 
+			'Let’s commit to focusing on our Lab assignment by:', [
+			'Focusing on Map Mania' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_4_6of6_lists.prework, sprint, activityList) }
+	const quiz = () => { return tQuiz(sprint) }
+
+	return completeDeck(slideDeck, [ breakout, preworkNext, quiz ])
 }
 
-// Session 5 of 6: Wednesday
-export const web_4_5of6 = () => { return [end]}
-
-// Session 6 of 6: Friday
+// Sprint 4 session 6 of 6: Friday
+const web_4_6of6_lists = {
+	'announcements':[ '' ],
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday!`, '',
+		'Be prepared for Lab & Programming Together' ],
+	'agenda':[
+		'' ]
+}
 export const web_4_6of6 = () => { return [end]}
