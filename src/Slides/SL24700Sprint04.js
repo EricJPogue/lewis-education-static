@@ -2,11 +2,13 @@ import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6 } from './S
 import { completeDeck, checklistAnnouncementsPreworkAndAgenda, tLab } from './SL00000Sprint00'
 
 import { tPrework, bulletListSlide, discussionBreakout, reviewDemoSchedule } from './SLSprint00'
-import { submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard, tQuiz, end } from './SLSprint00'
+import { submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard, tQuiz } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
 import { list24700Sprint03 } from '../ActivityLists/AL24700Sprint03'
 import { list24700Sprint04 } from '../ActivityLists/AL24700Sprint04'
+
+import { web_5_1of6_lists } from './SL24700Sprint05'
 
 // Sprint 4 Software Engineering (SE) values.
 const sprint = 4
@@ -147,11 +149,19 @@ export const web_4_5of6 = () => {
 
 // Sprint 4 session 6 of 6: Friday
 const web_4_6of6_lists = {
-	'announcements':[ '' ],
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		`All sprint ${sprint} assignments due Sunday!`, '',
 		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
-		'' ]
+		'Sprint Progress Polling',
+		'Prework for Next Class',
+		'Lab and Programming Together' ]
 }
-export const web_4_6of6 = () => { return [end]}
+export const web_4_6of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_4_6of6_lists, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_5_1of6_lists.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ preworkNext, tLab ])
+}

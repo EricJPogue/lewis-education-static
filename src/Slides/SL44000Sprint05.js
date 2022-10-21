@@ -3,6 +3,12 @@ import { renderLogo, renderHeaderAndOrderedList, renderHeader, topic, basicSlide
 import { preflightChecklist, instructorChecklist, endOfSession } from './Slide'
 import { breakoutMaintenanceAndSupport } from './Breakout'
 
+
+
+
+
+
+// BugBug: From last semester below.
 // Sprint 5 Session 3 of 4
 export const SD44000_5_3_of_4_ROUTE = '44000-5-3-of-4'
 export const sd44000Sprint5_3of4 = () => {
