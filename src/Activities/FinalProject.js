@@ -185,12 +185,12 @@ process knowledge to deliver something to a production environment.</h5>
 	<li>{finalProjectProposalLink()}</li>
 </ul>
 
-<p>In this activity you will start your final project. Build something. Anything that makes you feel good and shows 
+<p>In this activity you will start your final project. Build something. Anything that makes you proud and shows 
 that you invested an appropriate amount of time and effort. Maybe perform a technology spike to set up development,
 test, and production environments?</p>
 
-<em>Requirement</em>
-<p>Create something pretty that showcases your idea by utilizing the CI/CD philosophy to :</p>
+<em>Requirement 1</em>
+<p>Create something that makes you proud showcases your idea by utilizing the CI/CD philosophy to :</p>
 <ol>
 	<li>Successfully deploying your product to a local development and test environment to you personal computer</li>
 	<li>Successfully deploying your product to hosted test and production environments</li>
@@ -200,6 +200,9 @@ test, and production environments?</p>
 	<li>Complete {backlogGrooming()} to create and update groom your {productBacklog()} while creating appropriate <em>artifacts</em></li>
 </ol>
 
+<h6>Requirement 2: Complete sprint 5 Planning by the end of the first class session</h6>
+<h6>Requirement 3: Execute sprint 5</h6>
+<h6>Requirement 4: Complete sprint 5 backlog grooming in preparation for sprint 6 planning</h6>
 </div> )
 }
 

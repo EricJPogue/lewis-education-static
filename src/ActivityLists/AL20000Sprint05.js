@@ -1,9 +1,8 @@
 import React from 'react'
 
-import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
+import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated, finalProjectsAndMoreResponsibility } from './AL00000Sprint00'
 import { oreillyPlaylistICS, introducingPythonCodeExamples, programmingTogether, PythonW3C, internalLink } from '../DataAndAPIs/Links'
 
-import { FinalProjectsAndMoreResponsibility } from './AL00000Sprint05'
 import { turtledrawLink } from '../Activities/PythonTurtleDraw'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 
@@ -16,7 +15,7 @@ export const al20000Sprint05 = () => {
 		<span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084;</span>.
 		This week we switch gears and move into graphical drawing using Python and the Turtle graphics library.</p>
 
-		{FinalProjectsAndMoreResponsibility()}
+		{finalProjectsAndMoreResponsibility()}
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Explore Networks</li>

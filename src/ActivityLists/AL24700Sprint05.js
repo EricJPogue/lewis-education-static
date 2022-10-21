@@ -33,10 +33,11 @@ const list24700Sprint05 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, mapManiaVersion2Link(), oreillyPlaylistWeb())}
-			<li>Read Sebesta chapter 13 and review our Database Access through the Web {sebestaChapter13Lecture()}</li>
-			<li>Complete {mapManiaVersion2Link()} requirement 5{estimated('6 hours')}</li>
+			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 7 The Data Store while updating Amazeriffic</li>
+			<li>Complete {mapManiaVersion2Link()} requirements 5 & 6{estimated('6 hours')}</li>
 
 			{initialPost(sprint)}
+			<li>Read Sebesta chapter 13 and review our Database Access through the Web {sebestaChapter13Lecture()}</li>
 			<li>Complete {finalProjectProposalLink()}{estimated('2 hours')}</li>
 			{standardActivitiesClosing(sprint, mapManiaVersion2Link(), '6 hours')}
 		</ol>
@@ -45,5 +46,8 @@ const list24700Sprint05 = (sprint) => {
 }
 
 // Certified for SU22 (06/03/2022)
+// Certified for FA22 (10/21/2022)
+
+// Todo: Replace Sebesta Database Access through the Web (chapter 13)... with what? I don't know. Maybe just focus on MongoDB?
 
 

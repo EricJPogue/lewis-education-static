@@ -57,6 +57,9 @@ export const list24700Sprint04 = (sprint) => {
 // Todo: Continue to refocus to Node.js on Azure for Azure Website activity.
 // BugBug: Update Quiz 4 to include time limit plus verify data of answers being shown. 
 
+// BugBug: Map Mania number of location 8 vs 10. 
+// BugBug: Update Map Mania 'Creating a new location using the LatLong constructor (e.g. “var loc1 = new LatLng(12.432, 43.234)”)"'
+
 
 
 

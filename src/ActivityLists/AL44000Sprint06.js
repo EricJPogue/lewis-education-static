@@ -2,11 +2,12 @@ import React from 'react'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
-import { oreillyPlaylistSE, AzureFunctionsWithVSCodeAndJavaScript, ServerlessAzure, ServerlessGoogle, ServerlessAWS } from '../DataAndAPIs/Links'
+import { oreillyPlaylistSE, AzureFunctionsWithVSCodeAndJavaScript, ServerlessAzure, ServerlessGoogle, ServerlessAWS, externalLink } from '../DataAndAPIs/Links'
 import { finalProjectSprint6Link } from '../Activities/FinalProject'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 
 export const al44000Sprint06 = () => {
+	const softwareMetrics = () => { return externalLink('Software Metrics', 'https://lewiseducation.blob.core.windows.net/software-engineering/software-engineering-metrics.mp4')}
 	const sprint = 6
 	return ( <div>
 	<h5>Sprint 6: Project Management, Serverless Computing, and Final Project</h5>
@@ -25,6 +26,7 @@ export const al44000Sprint06 = () => {
 	<ol>
 		{StandardActivitiesWithLinkAndSprint(sprint, finalProjectSprint6Link(), oreillyPlaylistSE() )}
 		<li>Review and update {finalProjectProposalLink()}</li>
+		<li>Review {softwareMetrics()} lecture</li>
 		<li>Read Chapter 10 of Fox on Project Management, Scrum, Pairs, and Version Control Systems</li>
 		<li>Within {oreillyPlaylistSE()} “Scaling Software Agility” read chapters 1 and 2 focussing on “Assumptions Underlying the Model”</li>
 
@@ -43,4 +45,7 @@ export const al44000Sprint06 = () => {
 
 // Todo: Consider moving the Sprint 5 Metric - Capacity, Committed, Effort, and Delivered to a sprint 6 delivery metric. 
 
+// Todo: Consider the impact of moving Software Metrics from sprint 5 to sprint 6 and possibly move Fox chapter 10 from sprint 6 to sprint 7
+
+// Todo: Create new tutorial based on Matt's body-parser Node.js example. 
 

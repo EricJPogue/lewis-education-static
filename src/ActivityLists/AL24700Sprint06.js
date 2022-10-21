@@ -36,11 +36,11 @@ const list24700Sprint06 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, amazerifficFullStackLink(), oreillyPlaylistWeb())}
-			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 7 The Data Store while updating Amazeriffic</li>
+			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 8</li>
 
 			{initialPost(sprint)}
 			<li>Continue to update and enhance your {assignmentPortfolioLink()}</li>
-			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapters 8 &amp; 9</li>
+			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 9</li>
 			<li>Scan Sebesta chapter 9 and review our PHP {sebestaChapter9Lecture()}</li>
 			<li>Review and update {finalProjectProposalLink()}{estimated('2 hours')}</li>
 			{standardActivitiesClosing(sprint, amazerifficFullStackLink(), '12 hours')}
