@@ -4,7 +4,6 @@ import { learningObjectivesIntro, activitiesListIntro, standardActivities, initi
 
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { finalProjectSprint5Link } from '../Activities/FinalProject'
-import { healthRiskCalculatorTeamWebLink } from '../Activities/HealthRiskCalculatorTeam'
 
 import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
 
@@ -46,7 +45,6 @@ const list44000Sprint05 = (sprint) => {
 			{initialPost(sprint)}
 			<li>Complete {finalProjectProposalLink()}{estimated('4 hours')}</li>
 			<li>Start working on {finalProjectSprint5Link()}</li>
-			<li>Set up your team’s final project production site and deploy {healthRiskCalculatorTeamWebLink()}</li>
 			{standardActivitiesClosing(sprint, finalProjectSprint5Link(), '6 hours')}
 		</ol>
 	</div> )
