@@ -56,3 +56,5 @@ create a <em>Web</em> version of <span style={{color: "red"}}> &#10084;&#10084;&
 }
 
 // Certified for SP22 (03/24/2022)
+
+// Todo: Add zipped source code requirement to all Final Project presentation assignments.

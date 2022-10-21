@@ -8,6 +8,8 @@ import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, re
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 import { list20000Sprint04 } from '../ActivityLists/AL20000Sprint04'
 
+import { ics_5_1of6_lists } from './SL20000Sprint05'
+
 // Sprint 4 Introduction to Computer Science (ICS) values.
 const sprint = 4
 const activityListPrevious = () => { return list20000Sprint03(sprint-1) }
@@ -192,8 +194,7 @@ const ics_4_6of6_lists = {
 }
 export const ics_4_6of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_6of6_lists, sprint, activityList)
-	// BugBug: the following line must be updated for ics_5_1of6.prework.
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_1of6_lists.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ preworkNext, tLab ])
 }

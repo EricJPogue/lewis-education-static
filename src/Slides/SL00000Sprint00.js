@@ -23,6 +23,20 @@ export const xyz_n_1of6_prework_list = (sprint) => {
 		`Be prepared for Sprint ${sprint} Planning` ]
 }
 
+export const xyz_n_1of6_lists = (sprint) => {
+	return {
+		'announcements':[ 
+			`${sprint} start now.` ],
+		'prework':[ 
+			'Everything is due Sunday!', '',
+			`Be prepared for Sprint ${sprint} Planning` ],
+		'agenda':[ 
+			`Sprint ${sprint} Planning`,
+			`Sprint ${sprint} Planning Breakout`,
+			'Prework for Next Class' ]
+	}
+}
+
 export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList, preworkListNext, activityList) => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', preworkList, sprint-1, activityListPrevious) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Let’s stay 100% focused on sprint planning today']) }
