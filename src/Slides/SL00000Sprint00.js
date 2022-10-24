@@ -1,8 +1,8 @@
 
-import { preflightChecklist, instructorChecklist, basicSlide, end } from './SLSprint00'
+import { preflightChecklist, basicSlide, end } from './SLSprint00'
 import { agendaSlide, orderedListSlide, bulletListSlide, basicSlideWithLogo, tPreworkWithLogo, tPrework } from './SLSprint00'
 
-export const makeSlideDeck = (slides) => { return [ preflightChecklist, instructorChecklist ].concat(slides).concat(end) }
+export const makeSlideDeck = (slides) => { return [ preflightChecklist ].concat(slides).concat(end) }
 
 export const completeDeck = (slideDeck, slides) => { 
 	const addSlide = (slide) => { slideDeck.push(slide) }
@@ -36,7 +36,6 @@ export const xyz_n_1of6_lists = (sprint) => {
 			'Prework for Next Class' ]
 	}
 }
-
 export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList, preworkListNext, activityList) => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', preworkList, sprint-1, activityListPrevious) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Let’s stay 100% focused on sprint planning today']) }
@@ -61,17 +60,9 @@ export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList
 			'Scrum master report out by sharing scrum team’s top 2 or 3 questions/concerns' ]
 		)
 	}
-	const reviewDemoSchedule = () => {
-		return bulletListSlide('Review Wednesday’s Demo Schedule', 
-			'Let’s review Wednesday’s demo schedule while recalling that demos are an important part of scrum and that they:', [
-			'Occur at the beginning of each new sprint ',
-			'Are an opportunity to show what was completed in the previous sprint',
-			'Are an **easy** and hopefully rewarding experience to show off your work',
-			'Provide a chance to see how others solved a problem and to see some of the challenges they faces' ]
-		)
-	}
 
-	return makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, reviewDemoSchedule, preworkNext ])
+
+	return makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, preworkNext ])
 }
 
 export const tLab = () => {

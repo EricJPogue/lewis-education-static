@@ -24,5 +24,18 @@ const ics_5_2of6_lists = {
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
 		'Prework for Next Class',
+		'Review Friday’s Demo Schedule',
 		'Lab & Programming Together' ]
 }
+
+/*
+	const reviewDemoSchedule = () => {
+		return bulletListSlide('Review Friday’s Demo Schedule', 
+			'Let’s review Wednesday’s demo schedule while recalling that demos are an important part of scrum and that they:', [
+			'Occur at the beginning of each new sprint ',
+			'Are an opportunity to show what was completed in the previous sprint',
+			'Are an **easy** and hopefully rewarding experience to show off your work',
+			'Provide a chance to see how others solved a problem and to see some of the challenges they faces' ]
+		)
+	}
+*/

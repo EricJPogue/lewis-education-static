@@ -39,6 +39,7 @@ export const preflightChecklist = () => {
 	</div> )
 }
 
+// Todo: Remove this function as the checklists have been consolidated.
 export const instructorChecklist = () => {
 	return ( <div>
 		{renderLogo()}
