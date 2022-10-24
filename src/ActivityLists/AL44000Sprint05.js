@@ -31,20 +31,20 @@ export const al44000Sprint05 = () => {
 	</div> )
 }
 
-const list44000Sprint05 = (sprint) => {
+export const list44000Sprint05 = (sprint) => {
 	const softwareMaintenanceAndSupport = () => { return externalLink('Software Maintenance and Support', 'https://lewiseducation.blob.core.windows.net/software-engineering/software-maintenance-and-support.mp4') }
 
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, finalProjectProposalLink(), oreillyPlaylistSE())}
+			<li>Start working on {finalProjectSprint5Link()}</li>
 			<li>Read Chapter 9 of Fox on Software Maintenance</li>
 			<li>Review {softwareMaintenanceAndSupport()} lecture</li>
 			<li>Review <a href='https://www.agilealliance.org/agile-essentials/' target='_blank' rel='noopener noreferrer'>Agile Alliance</a> by analyzing “Agile 101” and reviewing the “Agile Glossary”</li>
 
 			{initialPost(sprint)}
 			<li>Complete {finalProjectProposalLink()}{estimated('4 hours')}</li>
-			<li>Start working on {finalProjectSprint5Link()}</li>
 			{standardActivitiesClosing(sprint, finalProjectSprint5Link(), '6 hours')}
 		</ol>
 	</div> )

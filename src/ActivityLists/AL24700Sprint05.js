@@ -27,7 +27,7 @@ export const al24700Sprint05 = () => {
 	</div> )
 }
 
-const list24700Sprint05 = (sprint) => {
+export const list24700Sprint05 = (sprint) => {
 	const sebestaChapter13Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-13') }
 	return ( <div>
 		{activitiesListIntro(sprint)}
