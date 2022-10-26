@@ -1,12 +1,11 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
 import { xyz_n_1of6, xyz_n_1of6_lists } from './SL00000Sprint00'
+
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
-
 import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
+
 import { submissionPercentage, retrospectiveIntroduction, orderedListSlide, retrospectiveBreakout, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
-
-
 
 import { list20000Sprint04 } from '../ActivityLists/AL20000Sprint04'
 import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
