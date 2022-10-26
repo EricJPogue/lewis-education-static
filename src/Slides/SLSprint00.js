@@ -176,7 +176,6 @@ export const basicSlideWithLogo = (title, lineList) => {
 	</div>) 
 }
 
-
 export const basicSlideWithTitleLink = (title, link, lineList) => {
 	const renderBasicSlideLine = (item) => { return (<div key={item} style={styleBasic}>{item}<br /></div>) }
 	return ( <div>
@@ -284,6 +283,10 @@ export const discussionBreakout6 = () => {
 	</div> )
 }
 
+
+
+// Depreciated discussionBreakout... eventually replace discussionBreakout with tDiscussionBreakout.
+export const tDiscussionBreakout = (sprint) => { return discussionBreakout(sprint) }
 export const discussionBreakout = (sprint) => {
 	return ( <div>
 		{orderedListSlide(`Breakout for Discussion ${sprint}`, 

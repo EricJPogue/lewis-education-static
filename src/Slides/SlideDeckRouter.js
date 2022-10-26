@@ -11,7 +11,7 @@ import { tutorialRouter } from './Tutorials'
 
 import { ics_3_1of6, ics_3_2of6, ics_3_3of6, ics_3_4of6, ics_3_5of6, ics_3_6of6 } from './SL20000Sprint03'
 import { ics_4_1of6, ics_4_2of6, ics_4_3of6, ics_4_4of6, ics_4_5of6, ics_4_6of6 } from './SL20000Sprint04'
-import { ics_5_1of6 } from './SL20000Sprint05'
+import { ics_5_1of6, ics_5_2of6, ics_5_3of6 } from './SL20000Sprint05'
 
 
 import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6, web_3_5of6, web_3_6of6 } from './SL24700Sprint03'
@@ -66,6 +66,8 @@ const sprint3Router = (route) => {
 		case '20000-4-6': return ics_4_6of6()
 
 		case '20000-5-1': return ics_5_1of6()
+		case '20000-5-2': return ics_5_2of6()
+		case '20000-5-3': return ics_5_3of6()
 
 		case '24700-3-1': return web_3_1of6()
 		case '24700-3-2': return web_3_2of6()
