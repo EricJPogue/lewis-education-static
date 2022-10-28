@@ -3,6 +3,8 @@ import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
 import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
 
+import { submissionPercentage, retrospectiveIntroduction, orderedListSlide, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
+
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 
@@ -66,6 +68,48 @@ const se_5_3of6_lists = {
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
-		`Breakout for Sprint ${sprint-1} Retrospective`,
-		'Prework for Next Class' ]
+		'Prework for Next Class',
+		'Sprint Planning (continued)' ]
+}
+export const se_5_3of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_3of6_lists, sprint, activityList)
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:14, submitted:14 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:13 },
+			{ name: 'Reflection', due: 14, submitted: 13 }
+		])
+	}
+	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Fantastic submission percentage!',
+			'Assignments graded and posted' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_5_4of6_lists.prework, sprint, activityList) }
+	const sprintPlanningContinued = () => {
+		return bulletListSlide('Sprint Planning (continued)', 
+			`What do we need to do to finalize sprint ${sprint} planning?`, [
+			'Backlog Grooming',
+			'Sprint Planning',
+			'Immutable commitments... it is okay to fail but not okay to modify.' ]
+		)
+	}
+
+	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, preworkNext, sprintPlanningContinued])
+}
+
+// Sprint 5 session 4 of 6: Monday
+const web_5_4of6_lists = {
+	'announcements':[ 
+		'Any announcements?' ],
+	'prework':[
+		'Complete through activity 9 prior to next class', '',
+		'Be prepared for “Software Maintenance and Support” breakout' ],
+	'agenda':[
+		'“Software Maintenance and Support” Breakout',
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
 }

@@ -3,6 +3,8 @@ import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
 
+import { submissionPercentage, retrospectiveIntroduction, retrospectiveBreakout, orderedListSlide, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
+
 import { list24700Sprint04 } from '../ActivityLists/AL24700Sprint04'
 import { list24700Sprint05 } from '../ActivityLists/AL24700Sprint05'
 
@@ -61,4 +63,39 @@ const web_5_3of6_lists = {
 		`Sprint ${sprint-1} Retrospective`,
 		`Breakout for Sprint ${sprint-1} Retrospective`,
 		'Prework for Next Class' ]
+}
+export const web_5_3of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_5_3of6_lists, sprint, activityList)
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:14, submitted:14 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:13 },
+			{ name: 'Reflection', due:14, submitted:13 }
+		])
+	}
+	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Solid submission percentage',
+			'Discuss 4 and Quiz 4 graded and posted... 50% of Lab 4 and Reflection 4 graded and posted' ])
+	}
+	const breakout = () =>{ return retrospectiveBreakout(sprint) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_4of6_lists.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
+}
+
+// Sprint 5 session 4 of 6: Monday
+const ics_5_4of6_lists = {
+	'announcements':[ 
+		'Any announcements?' ],
+	'prework':[
+		'Complete through activity 10 prior to next class', '',
+		'Be prepared for Networks breakout' ],
+	'agenda':[
+		'Networks Breakout',
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
 }
