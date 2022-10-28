@@ -109,6 +109,7 @@ const web_5_4of6_lists = {
 		'Complete through activity 9 prior to next class', '',
 		'Be prepared for “Software Maintenance and Support” breakout' ],
 	'agenda':[
+		`Be prepared to your team’s final sprint ${sprint} backlogs`,
 		'“Software Maintenance and Support” Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
