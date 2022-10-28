@@ -87,14 +87,24 @@ export const ics_5_3of6 = () => {
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {
-		return orderedListSlide('Class Retrospective',
+		if (getClass().section === '002') {
+			return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Excellent submission percentage... very well done!',
+			'Solid submission percentage... well done.',
+			'All assignments are graded and posted', 
+			'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
+			'Multiple Reflection comments about successfully getting started earlier', 
+			'Very nice Python work!' ])
+		} else {
+			return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Exceptional submission percentage... very well done!',
 			'100% Submission Percentage === Food... what does “===” mean in Python?',
 			'All assignments are graded and posted', 
-			'Some difficulties creating GitHub Repositories and Azure Websites',
-			'It feels like our changes to help us get started earlier had a positive impact... thoughts?', 
-			'Very impressive work! Thank you!' ])
+			'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
+			'Multiple Reflection comments about successfully getting started earlier', 
+			'Very nice Python work!' ])
+		}
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_4of6_lists.prework, sprint, activityList) }
