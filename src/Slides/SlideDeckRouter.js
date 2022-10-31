@@ -16,11 +16,11 @@ import { ics_5_1of6, ics_5_2of6, ics_5_3of6, ics_5_4of6, ics_5_5of6, ics_5_6of6 
 
 import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6, web_3_5of6, web_3_6of6 } from './SL24700Sprint03'
 import { web_4_1of6, web_4_2of6, web_4_3of6, web_4_4of6, web_4_5of6, web_4_6of6 } from './SL24700Sprint04'
-import { web_5_1of6, web_5_2of6, web_5_3of6 } from './SL24700Sprint05'
+import { web_5_1of6, web_5_2of6, web_5_3of6, web_5_4of6, web_5_5of6, web_5_6of6 } from './SL24700Sprint05'
 
 import { se_3_1of6, se_3_2of6, se_3_3of6, se_3_4of6, se_3_5of6, se_3_6of6 } from './SL44000Sprint03'
 import { se_4_1of6, se_4_2of6, se_4_3of6, se_4_4of6, se_4_5of6, se_4_6of6 } from './SL44000Sprint04'
-import { se_5_1of6, se_5_2of6, se_5_3of6 } from './SL44000Sprint05A'
+import { se_5_1of6, se_5_2of6, se_5_3of6, se_5_4of6, se_5_5of6, se_5_6of6 } from './SL44000Sprint05A'
 
 export const slideDeckRouter = (route) => {
 	let currentSlideDeck = sprint1Router(route)
@@ -89,6 +89,9 @@ const sprint3Router = (route) => {
 		case '24700-5-1': return web_5_1of6()
 		case '24700-5-2': return web_5_2of6()
 		case '24700-5-3': return web_5_3of6()
+		case '24700-5-4': return web_5_4of6()
+		case '24700-5-5': return web_5_5of6()
+		case '24700-5-6': return web_5_6of6()
 
 		case '44000-3-1': return se_3_1of6()
 		case '44000-3-2': return se_3_2of6()
@@ -107,6 +110,9 @@ const sprint3Router = (route) => {
 		case '44000-5-1': return se_5_1of6()
 		case '44000-5-2': return se_5_2of6()
 		case '44000-5-3': return se_5_3of6()
+		case '44000-5-4': return se_5_4of6()
+		case '44000-5-5': return se_5_5of6()
+		case '44000-5-6': return se_5_6of6()
 
 		default: return null
 	}

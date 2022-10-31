@@ -148,13 +148,13 @@ export const ics_5_4of6 = () => {
 			'Pushed the updated files to GitHub',
 			'Start working on TurtleDraw' ])
 	}
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_5of6_lists.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ breakout, preworkNext, programmingTogether ])
 }
 
 // Sprint 5 session 5 of 6: Wednesday
-const ics_4_5of6_lists = {
+const ics_5_5of6_lists = {
 	'announcements':[ 
 		'Last warning that Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
 		'Any other announcements?' ],
@@ -164,8 +164,8 @@ const ics_4_5of6_lists = {
 		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
 		'Lab & Programming Together with Loops, Functions, and Files... but not Tuples, Lists, Dictionaries, and Sets',
-		'Quiz 4' ]
+		`Quiz ${sprint}` ]
 }
 
-export const ics_5_5of6 = () => { return [end] }
-export const ics_5_6of6 = () => { return [end] }
+export const ics_5_5of6 = () => { return [ end ] }
+export const ics_5_6of6 = () => { return [ end ] }

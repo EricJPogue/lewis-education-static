@@ -5,6 +5,8 @@ import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
 
 import { submissionPercentage, retrospectiveIntroduction, retrospectiveBreakout, orderedListSlide, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
 
+import { breakoutStandard } from './SLSprint00'
+
 import { list24700Sprint04 } from '../ActivityLists/AL24700Sprint04'
 import { list24700Sprint05 } from '../ActivityLists/AL24700Sprint05'
 
@@ -82,20 +84,59 @@ export const web_5_3of6 = () => {
 			'Discuss 4 and Quiz 4 graded and posted... 50% of Lab 4 and Reflection 4 graded and posted' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_4of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_5_4of6_lists.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
 // Sprint 5 session 4 of 6: Monday
-const ics_5_4of6_lists = {
+export const web_5_4of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared for Networks breakout' ],
 	'agenda':[
-		'Networks Breakout',
+		'“Database Access Through the Web” Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
+}
+export const web_5_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_5_4of6_lists, sprint, activityList)
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Database Access Through the Web', 
+			'In this breakout session we will explore SQL Databases and Database Access Through the Web:', [
+				'Relational Databases and the Structured Query Language (SQL)',
+				'Databases, Tables, CREATE TABLE, INSERT, SELECT, WHERE, UPDATE, DELETE, DROP',
+				'Data normalization, de-normalization, and joins... why is “join” controversial?',
+				'PHP, Node.js, Java, C#, etc. ',
+				'MySQL, PostgreSQL, DB2, MS SQL Server, etc. ',
+				'SQL Database architecture of a Web application and Database Access Through the Web',
+				'Shared databases',
+				'NoSQL and where are we headed?' ]
+		)
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_5_5of6_lists.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ breakout, preworkNext ])
+}
+
+const xyz_n_xofx_lists = {
+	'announcements':[ 
+		'Any announcements?' ],
+	'prework':[
+		'Complete through activity XX prior to next class', '',
+		'Be prepared for...' ],
+	'agenda':[
+		'' ]
+}
+
+const web_5_5of6_lists = xyz_n_xofx_lists
+export const web_5_5of6 = () => {
+	return checklistAnnouncementsPreworkAndAgenda(web_5_5of6_lists, sprint, activityList)
+}
+
+const web_5_6of6_lists = xyz_n_xofx_lists
+export const web_5_6of6 = () => {
+	return checklistAnnouncementsPreworkAndAgenda(web_5_6of6_lists, sprint, activityList)
 }
