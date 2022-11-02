@@ -92,7 +92,7 @@ export const web_5_3of6 = () => {
 // Sprint 5 session 4 of 6: Monday
 export const web_5_4of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		'Any announcements?' ],		
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared for Networks breakout' ],
@@ -121,7 +121,7 @@ export const web_5_4of6 = () => {
 	return completeDeck(slideDeck, [ breakout, preworkNext ])
 }
 
-const xyz_n_xofx_lists = {
+const xyz_n_xofx_lists = {		
 	'announcements':[ 
 		'Any announcements?' ],
 	'prework':[

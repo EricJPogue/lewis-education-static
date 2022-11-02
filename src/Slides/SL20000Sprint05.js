@@ -5,7 +5,7 @@ import { xyz_n_1of6, xyz_n_1of6_lists } from './SL00000Sprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 import { tPrework, bulletListSlide, tDiscussionBreakout, end } from './SLSprint00'
 
-import { submissionPercentage, retrospectiveIntroduction, orderedListSlide, retrospectiveBreakout, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
+import { submissionPercentage, retrospectiveIntroduction, orderedListSlide, retrospectiveBreakout, sprintDemos, sprintDemosIntro, demoAssignment, tQuiz } from './SLSprint00'
 
 import { breakoutStandard } from './SLSprint00'
 
@@ -139,33 +139,56 @@ export const ics_5_4of6 = () => {
 				'Blockchain, Bitcoin, and Hashing... plus bitcoin vs ethereum energy consumption?' ]
 		)
 	}
-	const programmingTogether = () => {
-		return bulletListSlide('Lab & Programming Together', 
-			'How can we best make progress on TurtleDraw?', [
-			'Review the differences between TurtleDraw Lite and TurtleDraw',
-			'Implementing a README.md and LICENSE file in GitHub', 
-			'Added TurtleDraw.py file', 
-			'Pushed the updated files to GitHub',
-			'Start working on TurtleDraw' ])
-	}
+
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_5of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ breakout, preworkNext, programmingTogether ])
+	return completeDeck(slideDeck, [ breakout, preworkNext, programmingTogetherWithTurtleDraw ])
+}
+
+// Shared with session 4 and 5... we did not get to it in session 4.
+const programmingTogetherWithTurtleDraw = () => {
+	return bulletListSlide('Lab & Programming Together', 
+		'How can we best make progress on TurtleDraw?', [
+		'Review the differences between TurtleDraw Lite and TurtleDraw',
+		'Implementing a README.md and LICENSE file in GitHub', 
+		'Added TurtleDraw.py file', 
+		'Pushed the updated files to GitHub',
+		'Start working on TurtleDraw' ])
 }
 
 // Sprint 5 session 5 of 6: Wednesday
 const ics_5_5of6_lists = {
 	'announcements':[ 
 		'Last warning that Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
-		'Any other announcements?' ],
+		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 11', '',
-		'Be prepared for Programming Together with Abstraction, Loops, Functions, and Files',
+		'Be prepared for Programming Together with TurtleDraw',
 		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
-		'Lab & Programming Together with Loops, Functions, and Files... but not Tuples, Lists, Dictionaries, and Sets',
+		'Sprint Progress Polling',
+		'Lab & Programming Together with TurtleDraw',
 		`Quiz ${sprint}` ]
 }
+export const ics_5_5of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_5of6_lists, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_5_5of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_6of6_lists.prework, sprint, activityList) }
+	const quiz = () => { return tQuiz(sprint) }
 
-export const ics_5_5of6 = () => { return [ end ] }
+	return 	completeDeck(slideDeck, [ poll, programmingTogetherWithTurtleDraw, preworkNext, quiz ])
+}
+
+// Sprint 5 session 5 of 6: Wednesday
+const ics_5_6of6_lists = {
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		'Complete through activity 12', '',
+		'Be prepared for Programming Together with TurtleDraw OR Final Project Proposals' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together with TurtleDraw',
+		`Quiz ${sprint}` ]
+}
 export const ics_5_6of6 = () => { return [ end ] }

@@ -120,7 +120,7 @@ export const se_5_4of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_4of6_lists, sprint, activityList)
 	const breakout = () => { 
 		return breakoutStandard( 
-			'Breakout: Networks', 
+			'Breakout: Maintenance and Support', 
 			'In this breakout session we will explore Networks:', [
 				'Maintenance',
 				'Support',
