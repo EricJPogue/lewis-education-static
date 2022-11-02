@@ -6,6 +6,7 @@ import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
 import { submissionPercentage, retrospectiveIntroduction, orderedListSlide, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
 
 import { breakoutStandard } from './SLSprint00'
+import { tQuiz } from './SLSprint00'
 
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
@@ -141,27 +142,31 @@ const se_5_5of6_lists = {
 		`Sprint ${sprint+1} product backlog grooming with be Friday... plan on coming Monday with a fully groomed product backlog` ],
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
-		'Be prepared for “Software Maintenance and Support” breakout' ],
+		'Be prepared for Lab',
+		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
-		`Scrum Team Sprint ${sprint} backlog review and sign off`,
-		'Prework for Next Class',
-		'“Software Maintenance and Support” Breakout' ]
+		'Sprint Progress Polling',
+		'Lab',
+		`Quiz ${sprint}` ]
 }
 export const se_5_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_5of6_lists, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', se_5_5of6_lists.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_6of6_lists.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ preworkNext ]) 
+	const quiz = () => { return tQuiz(sprint) }
+	
+	return completeDeck(slideDeck, [ poll, tLab, preworkNext, quiz ]) 
 }
 
 // SE sprint 5 session 6 of 6
 const se_5_6of6_lists = {
 	'announcements':[ 
 		`Your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday, November 7th`,
-		`Sprint ${sprint+1} product backlog grooming with be Friday... plan on coming Monday with a fully groomed product backlog`,
+		`Sprint ${sprint+1} product backlog grooming with be Friday... come Monday with a fully groomed product backlog`,
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		`All sprint ${sprint} assignments due Sunday!`, '',
-		'Be prepared for Lab & Programming Together' ],
+		'Be prepared for Backlog Grooming' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Prework for Next Class',

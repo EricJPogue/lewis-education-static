@@ -6,6 +6,7 @@ import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
 import { submissionPercentage, retrospectiveIntroduction, retrospectiveBreakout, orderedListSlide, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
 
 import { breakoutStandard } from './SLSprint00'
+import { tQuiz } from './SLSprint00'
 
 import { list24700Sprint04 } from '../ActivityLists/AL24700Sprint04'
 import { list24700Sprint05 } from '../ActivityLists/AL24700Sprint05'
@@ -121,22 +122,39 @@ export const web_5_4of6 = () => {
 	return completeDeck(slideDeck, [ breakout, preworkNext ])
 }
 
-const xyz_n_xofx_lists = {		
+const web_5_5of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		'Last warning that Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
+		`All sprint ${sprint} assignments due Sunday!`,
+		'I have to leave about 20 minutes early today' ],
 	'prework':[
-		'Complete through activity XX prior to next class', '',
-		'Be prepared for...' ],
+		'Complete through activity 11', '',
+		'Be prepared for Lab',
+		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
-		'' ]
+		'Sprint Progress Polling',
+		'Lab',
+		`Quiz ${sprint}` ]
 }
-
-const web_5_5of6_lists = xyz_n_xofx_lists
 export const web_5_5of6 = () => {
-	return checklistAnnouncementsPreworkAndAgenda(web_5_5of6_lists, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_5_5of6_lists, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', web_5_5of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_5_6of6_lists.prework, sprint, activityList) }
+	const quiz = () => { return tQuiz(sprint) }
+
+	return 	completeDeck(slideDeck, [ poll, tLab, preworkNext, quiz ])
 }
 
-const web_5_6of6_lists = xyz_n_xofx_lists
+const web_5_6of6_lists = {
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		'Complete through activity 12', '',
+		'Be prepared for Lab' ],
+	'agenda':[
+		'Lab',
+		`Quiz ${sprint}` ]
+}
 export const web_5_6of6 = () => {
 	return checklistAnnouncementsPreworkAndAgenda(web_5_6of6_lists, sprint, activityList)
 }
