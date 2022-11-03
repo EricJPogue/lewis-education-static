@@ -27,7 +27,6 @@ export const al44000Sprint06 = () => {
 		{StandardActivitiesWithLinkAndSprint(sprint, finalProjectSprint6Link(), oreillyPlaylistSE() )}
 		<li>Review and update {finalProjectProposalLink()}</li>
 		<li>Review {softwareMetrics()} lecture</li>
-		<li>Read Chapter 10 of Fox on Project Management, Scrum, Pairs, and Version Control Systems</li>
 		<li>Within {oreillyPlaylistSE()} “Scaling Software Agility” read chapters 1 and 2 focussing on “Assumptions Underlying the Model”</li>
 
 		{InitialPost()}	
@@ -42,10 +41,8 @@ export const al44000Sprint06 = () => {
 }
 
 // Certified for SP22 (03/25/2022)
+// Certified for FA22 (10/21/2022)
 
-// Todo: Consider moving the Sprint 5 Metric - Capacity, Committed, Effort, and Delivered to a sprint 6 delivery metric. 
 
-// Todo: Consider the impact of moving Software Metrics from sprint 5 to sprint 6 and possibly move Fox chapter 10 from sprint 6 to sprint 7
 
-// Todo: Create new tutorial based on Matt's body-parser Node.js example. 
 

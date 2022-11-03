@@ -49,8 +49,9 @@ const list24700Sprint06 = (sprint) => {
 }
 
 // Certified for SU22 (06/17/2022)
+// Certified for FA22 (10/21/2022)
 
-// In lab 6 move Final Project Presentation time so that it is below Final Project Proposal Requirement. 
+// We have work to do during the sprint!
 
 // Todo: Review
 // I have posted a recording of a conversation I had with Alex relating to MovieCRUD, MoveCRUDLite, and Amazeriffic. I believe that the conversation may be of value to many of you. The cording is available in our Web & Distributed Programming lecture playlist [link].

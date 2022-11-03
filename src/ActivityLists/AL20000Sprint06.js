@@ -36,7 +36,7 @@ create a <em>Web</em> version of <span style={{color: "red"}}> &#10084;&#10084;&
 	<li>Complete {programmingTogether()} MatchmakerLite for the Web - Part 1</li>
 	<li>Review and update {finalProjectProposalLink()}</li>
 	<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The World Wide Web and review our associated {daleWWWLecture()}</li>
-	<li>Review the following activities that were completed previously:<sup></sup></li>
+	<li>Review the following activities that were completed previously:</li>
 	<ul style={{listStyleType:'square'}}>
 		<li>{azureWebsiteLink()}</li>
 		<li>{matchmakerPythonLink()}</li>
@@ -56,5 +56,4 @@ create a <em>Web</em> version of <span style={{color: "red"}}> &#10084;&#10084;&
 }
 
 // Certified for SP22 (03/24/2022)
-
-// Todo: Add zipped source code requirement to all Final Project presentation assignments.
+// Certified for FA22 (10/21/2022)
