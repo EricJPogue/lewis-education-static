@@ -1,3 +1,5 @@
+// BugBug: Replace and remove SL44000Sprint05.js with the code in this file. 
+
 import { xyz_n_1of6_lists, xyz_n_1of6, tLab } from './SL00000Sprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
@@ -7,6 +9,8 @@ import { submissionPercentage, retrospectiveIntroduction, orderedListSlide, spri
 
 import { breakoutStandard } from './SLSprint00'
 import { tQuiz } from './SLSprint00'
+
+import { se_6_1of6_lists } from './SL44000Sprint06'
 
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
@@ -168,17 +172,11 @@ const se_5_6of6_lists = {
 		`All sprint ${sprint} assignments due Sunday!`, '',
 		'Be prepared for Backlog Grooming' ],
 	'agenda':[
-		'Sprint Progress Polling',
-		'Prework for Next Class',
-		'Lab and Programming Together' ]
+		'Backlog Grooming',
+		'Lab' ]
 }
 export const se_5_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_6of6_lists, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_6_1of6_lists.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ preworkNext ]) 
 }
-
-// Todo: Move this to sprint 6 slides. 
-
-// SE Sprint 6 session 1 of 6: Monday
-export const se_6_1of6_lists = xyz_n_1of6_lists(sprint)

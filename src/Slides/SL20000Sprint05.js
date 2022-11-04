@@ -191,8 +191,7 @@ const ics_5_6of6_lists = {
 		'Be prepared for Programming Together with TurtleDraw OR Final Project Proposals' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Lab & Programming Together with TurtleDraw',
-		`Quiz ${sprint}` ]
+		'Lab & Programming Together with TurtleDraw' ]
 }
 export const ics_5_6of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_6of6_lists, sprint, activityList)

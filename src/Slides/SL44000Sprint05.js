@@ -1,3 +1,5 @@
+// BugBug: Replace this file with the code in SL44000Sprint05A.js. 
+
 import React from 'react'
 import { renderLogo, renderHeaderAndOrderedList, renderHeader, topic, basicSlideWithTitle } from './SL00000'
 import { preflightChecklist, instructorChecklist, endOfSession } from './Slide'

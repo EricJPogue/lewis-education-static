@@ -8,6 +8,8 @@ import { submissionPercentage, retrospectiveIntroduction, retrospectiveBreakout,
 import { breakoutStandard } from './SLSprint00'
 import { tQuiz } from './SLSprint00'
 
+import { web_6_1of6_lists } from './SL24700Sprint06'
+
 import { list24700Sprint04 } from '../ActivityLists/AL24700Sprint04'
 import { list24700Sprint05 } from '../ActivityLists/AL24700Sprint05'
 
@@ -147,14 +149,19 @@ export const web_5_5of6 = () => {
 
 const web_5_6of6_lists = {
 	'announcements':[ 
+		'Today is the last day to withdraw from Fall 16-week classes with a grade of “W”',
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 12', '',
 		'Be prepared for Lab' ],
 	'agenda':[
-		'Lab',
-		`Quiz ${sprint}` ]
+		'Sprint Progress Polling',
+		'Lab' ]
 }
 export const web_5_6of6 = () => {
-	return checklistAnnouncementsPreworkAndAgenda(web_5_6of6_lists, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_5_6of6_lists, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', web_5_6of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_6_1of6_lists.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ poll, preworkNext, tLab ])
 }
