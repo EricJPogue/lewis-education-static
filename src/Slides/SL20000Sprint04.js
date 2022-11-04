@@ -180,7 +180,7 @@ export const ics_4_5of6 = () => {
 	return completeDeck(slideDeck, [ breakout, preworkNext, quiz ])
 }
 
-// Session 5 of 6: Wednesday
+// Session 6 of 6: Friday
 const ics_4_6of6_lists = {
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday!` ],
