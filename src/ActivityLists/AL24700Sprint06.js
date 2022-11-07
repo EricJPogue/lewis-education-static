@@ -30,13 +30,13 @@ export const al24700Sprint06 = () => {
 	</div> )
 }
 
-const list24700Sprint06 = (sprint) => {
+export const list24700Sprint06 = (sprint) => {
 	const sebestaChapter9Lecture = () => { return internalLink('lecture', '/activity/sebesta-chapter-09') }
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, amazerifficFullStackLink(), oreillyPlaylistWeb())}
-			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 8</li>
+			<li>Within {oreillyPlaylistWeb()} review “Learning Web Development” chapter 7 and read chapter 8</li>
 
 			{initialPost(sprint)}
 			<li>Continue to update and enhance your {assignmentPortfolioLink()}</li>

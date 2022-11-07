@@ -26,7 +26,7 @@ export const al44000Sprint06 = () => {
 	</div> )
 }
 
-const list44000Sprint06 = (sprint) => {
+export const list44000Sprint06 = (sprint) => {
 	const softwareMetrics = () => { return externalLink('Software Metrics', 'https://lewiseducation.blob.core.windows.net/software-engineering/software-engineering-metrics.mp4')}
 	return ( <div>
 		{activitiesListIntro(sprint)}
