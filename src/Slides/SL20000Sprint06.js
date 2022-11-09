@@ -27,7 +27,6 @@ const ics_6_2of6_lists = {
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
 		'Prework for Next Class',
-		'Review Friday’s Demo Schedule',
 		'Lab & Programming Together' ]
 }
 

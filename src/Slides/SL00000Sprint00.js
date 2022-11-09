@@ -3,7 +3,9 @@ import { agendaSlide, orderedListSlide, bulletListSlide, basicSlideWithLogo, tPr
 
 import { tDiscussionBreakout } from './SLSprint00'
 
-export const makeSlideDeck = (slides) => { return [ preflightChecklist ].concat(slides).concat(end) }
+export const makeSlideDeck = (slides) => { 
+	return [ preflightChecklist ].concat(slides).concat(end) 
+}
 
 export const completeDeck = (slideDeck, slides) => { 
 	const addSlide = (slide) => { slideDeck.push(slide) }
@@ -71,7 +73,7 @@ export const xyz_n_2of6 = (sprint, sessionLists, preworkListNext, activityList) 
 	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
 	const reviewDemoSchedule = () => {
 		return bulletListSlide('Review Friday’s Demo Schedule', 
-			'Let’s review Wednesday’s demo schedule while recalling that demos are an important part of scrum and that they:', [
+			'Let’s review Friday’s demo schedule while recalling that demos are an important part of scrum and that they:', [
 			'Occur at the beginning of each new sprint ',
 			'Are an opportunity to show what was completed in the previous sprint',
 			'Are an **easy** and hopefully rewarding experience to show off your work',
@@ -79,7 +81,7 @@ export const xyz_n_2of6 = (sprint, sessionLists, preworkListNext, activityList) 
 		)
 	}
 
-	return completeDeck(slideDeck, [ discussionBreakout, preworkNext, reviewDemoSchedule, tLab ])
+	return completeDeck(slideDeck, [ discussionBreakout, reviewDemoSchedule, preworkNext, tLab ])
 }
 
 export const tLab = () => {

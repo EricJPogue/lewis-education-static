@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6 } from './SL00000Sprint00'
 import { end } from '../Slides/SLSprint00'
 
 import { list24700Sprint05 } from '../ActivityLists/AL24700Sprint05'
@@ -16,8 +16,7 @@ export const web_6_1of6 = () => { return xyz_n_1of6(sprint, web_6_1of6_lists.pre
 // Sprint 6 session 2 of 6: Wednesday
 const web_6_2of6_lists = {
 	'announcements':[ 
-		'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
-		'Any other announcements?' ],
+		'I have updated the sprint 6 activity list to include the two programming together tutorials' ],
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
@@ -31,8 +30,20 @@ const web_6_2of6_lists = {
 		'Lab & Programming Together' ]
 }
 
-export const web_6_2of6 = () => { return [ end ] }
+export const web_6_2of6 = () => { return xyz_n_2of6(sprint, web_6_2of6_lists, web_6_3of6_lists.prework, activityList) }
 
+const web_6_3of6_lists = {
+	'announcements':[ 
+		'John Deere job openings' ],
+	'prework':[
+		'Complete through activity 6 prior to next class', '',
+		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class' ]
+}
 export const web_6_3of6 = () => { return [ end ] }
 /*
 	const metricsSubmissionPercentage = () => {

@@ -37,8 +37,10 @@ export const list24700Sprint06 = (sprint) => {
 		<ol>
 			{standardActivities(sprint, amazerifficFullStackLink(), oreillyPlaylistWeb())}
 			<li>Within {oreillyPlaylistWeb()} review “Learning Web Development” chapter 7 and read chapter 8</li>
+			<li>Complete “MongoDB Atlas Movie CRUD” programming together tutorial</li>
 
 			{initialPost(sprint)}
+			<li>Complete “MovieCRUD Lite” programming together tutorial </li>
 			<li>Continue to update and enhance your {assignmentPortfolioLink()}</li>
 			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 9</li>
 			<li>Scan Sebesta chapter 9 and review our PHP {sebestaChapter9Lecture()}</li>
