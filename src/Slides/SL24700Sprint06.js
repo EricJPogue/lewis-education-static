@@ -32,7 +32,28 @@ const web_6_2of6_lists = {
 }
 
 export const web_6_2of6 = () => { return [ end ] }
+
 export const web_6_3of6 = () => { return [ end ] }
+/*
+	const metricsSubmissionPercentage = () => {
+		if (getClass().section === '002') {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:25 },
+				{ name: 'Quiz', due:27, submitted:26 },
+				{ name: 'Lab', due:27, submitted:0 },
+				{ name: 'Reflection', due: 27, submitted: 0 }
+			])
+		} else {
+			return submissionPercentage([
+				{ name: 'Discussion', due:26, submitted:26 },
+				{ name: 'Quiz', due:26, submitted:26 },
+				{ name: 'Lab', due:26, submitted:0 },
+				{ name: 'Reflection', due: 26, submitted: 0 }
+			])
+		}
+	}
+*/
+
 export const web_6_4of6 = () => { return [ end ] }
 export const web_6_5of6 = () => { return [ end ] }
 export const web_6_6of6 = () => { return [ end ] }

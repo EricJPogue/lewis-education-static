@@ -1,6 +1,8 @@
 import { preflightChecklist, basicSlide, end } from './SLSprint00'
 import { agendaSlide, orderedListSlide, bulletListSlide, basicSlideWithLogo, tPreworkWithLogo, tPrework } from './SLSprint00'
 
+import { tDiscussionBreakout } from './SLSprint00'
+
 export const makeSlideDeck = (slides) => { return [ preflightChecklist ].concat(slides).concat(end) }
 
 export const completeDeck = (slideDeck, slides) => { 
@@ -60,8 +62,24 @@ export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList
 		)
 	}
 
-
 	return makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, preworkNext ])
+}
+
+export const xyz_n_2of6 = (sprint, sessionLists, preworkListNext, activityList) => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
+	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
+	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
+	const reviewDemoSchedule = () => {
+		return bulletListSlide('Review Friday’s Demo Schedule', 
+			'Let’s review Wednesday’s demo schedule while recalling that demos are an important part of scrum and that they:', [
+			'Occur at the beginning of each new sprint ',
+			'Are an opportunity to show what was completed in the previous sprint',
+			'Are an **easy** and hopefully rewarding experience to show off your work',
+			'Provide a chance to see how others solved a problem and to see some of the challenges they faces' ]
+		)
+	}
+
+	return completeDeck(slideDeck, [ discussionBreakout, preworkNext, reviewDemoSchedule, tLab ])
 }
 
 export const tLab = () => {

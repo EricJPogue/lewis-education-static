@@ -1,4 +1,6 @@
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
+import { xyz_n_2of6 } from './SL00000Sprint00'
+
 import { end } from '../Slides/SLSprint00'
 
 import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
@@ -29,8 +31,21 @@ const ics_6_2of6_lists = {
 		'Lab & Programming Together' ]
 }
 
-export const ics_6_2of6 = () => { return [ end ] }
+export const ics_6_2of6 = () => { return xyz_n_2of6(sprint, ics_6_2of6_lists, ics_6_3of6_lists.prework, activityList) }
+const ics_6_3of6_lists = {
+	'announcements':[ 
+		'Any announcements?' ],
+	'prework':[
+		'Complete through activity 7 prior to next class', '',
+		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class' ]
+}
 export const ics_6_3of6 = () => { return [ end ] }
+
 export const ics_6_4of6 = () => { return [ end ] }
 export const ics_6_5of6 = () => { return [ end ] }
 export const ics_6_6of6 = () => { return [ end ] }
