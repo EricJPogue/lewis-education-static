@@ -34,7 +34,7 @@ const ics_6_2of6_lists = {
 export const ics_6_2of6 = () => { return xyz_n_2of6(sprint, ics_6_2of6_lists, ics_6_3of6_lists.prework, activityList) }
 const ics_6_3of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		'John Deere job openings' ],
 	'prework':[
 		'Complete through activity 7 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
