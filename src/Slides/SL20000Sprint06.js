@@ -89,52 +89,6 @@ export const ics_6_3of6 = () => {
 }
 
 /*
-export const ics_6_3of6X = () => {
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_6_3of6_lists, sprint, activityList)
-	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:26 },
-				{ name: 'Quiz', due:27, submitted:26 },
-				{ name: 'Lab', due:27, submitted:25 },
-				{ name: 'Reflection', due: 27, submitted: 26 }
-			])
-		} else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:26 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:27 },
-				{ name: 'Reflection', due: 27, submitted: 27 }
-			])
-		}
-	}
-	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
-	const retrospective = () => {
-		if (getClass().section === '002') {
-			return orderedListSlide('Class Retrospective',
-			'Feedback from Assignments & Reflections', [
-			'Solid submission percentage... well done.',
-			'Not all assignments are graded', 
-			'Multiple Reflection comments about successfully getting started earlier', 
-			'Very nice work!' ])
-		} else {
-			return orderedListSlide('Class Retrospective',
-			'Feedback from Assignments & Reflections', [
-			'Exceptional submission percentage... very well done!',
-			'100% Submission Percentage === Food... what does “===” mean in Python?',
-			'Not all assignments are graded', 
-			'Multiple Reflection comments about successfully getting started earlier', 
-			'Very nice work!' ])
-		}
-	}
-	const breakout = () =>{ return retrospectiveBreakout(sprint) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_6_4of6_lists.prework, sprint, activityList) }
-
-	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
-}
-*/
-
-/*
 	const wwwBreakout = () => {
 		return renderBreakout({
 			'title':'The World Wide Web Breakout',
@@ -154,9 +108,9 @@ const ics_6_4of6_lists = {
 		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
-		'Be prepared for Networks breakout' ],
+		'Be prepared for World Wide Web breakout' ],
 	'agenda':[
-		'Networks Breakout',
+		'World Wide Web Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
