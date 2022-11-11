@@ -1,4 +1,6 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
+import { submissionPercentage, orderedListSlide } from '../Slides/SLSprint00'
+
 import { end } from '../Slides/SLSprint00'
 
 import { list24700Sprint05 } from '../ActivityLists/AL24700Sprint05'
@@ -44,26 +46,35 @@ const web_6_3of6_lists = {
 		`Breakout for Sprint ${sprint-1} Retrospective`,
 		'Prework for Next Class' ]
 }
-export const web_6_3of6 = () => { return [ end ] }
-/*
+export const web_6_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:25 },
-				{ name: 'Quiz', due:27, submitted:26 },
-				{ name: 'Lab', due:27, submitted:0 },
-				{ name: 'Reflection', due: 27, submitted: 0 }
-			])
-		} else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:26, submitted:26 },
-				{ name: 'Quiz', due:26, submitted:26 },
-				{ name: 'Lab', due:26, submitted:0 },
-				{ name: 'Reflection', due: 26, submitted: 0 }
-			])
-		}
+		return submissionPercentage([
+			{ name: 'Discussion', due:11, submitted:10 },
+			{ name: 'Quiz', due:11, submitted:9 },
+			{ name: 'Lab', due:11, submitted:9 },
+			{ name: 'Reflection', due: 11, submitted: 9 }
+		])
 	}
-*/
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+		'Feedback from Assignments & Reflections', [
+		'I am quite confused by the number of assignments that are not being submitted... any insights?',
+		'All assignments are graded and posted', 
+		'Nice work with Map Mania' ])
+	}
+	return xyz_n_3of6(sprint, web_6_3of6_lists, web_6_4of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
+}
+
+const web_6_4of6_lists = {
+	'announcements':[ 
+		'John Deere job openings' ],
+	'prework':[
+		'Complete through activity 11 prior to next class', '',
+		'Be prepared for breakout PHP session' ],
+	'agenda':[
+		'TBD'
+	]
+}
 
 export const web_6_4of6 = () => { return [ end ] }
 export const web_6_5of6 = () => { return [ end ] }
