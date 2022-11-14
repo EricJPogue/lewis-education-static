@@ -51,7 +51,7 @@ export const list20000Sprint06 = (sprint) => {
 			</ul>
 
 			{initialPost(sprint)}
-			<li>Within {oreillyPlaylistICS()} read “Learning Web App Development” chapters 3 through 5</li>
+			<li>Within {oreillyPlaylistICS()} read “Learning Web App Development” chapter 4</li>
 			<li>Complete {JavaScriptW3C()} tutorial from W3C</li>
 			<li>Complete {programmingTogether()} MatchmakerLite for the Web - Part 2</li>
 			{standardActivitiesClosing(sprint, matchmakerWebLink(), '8 hours')}

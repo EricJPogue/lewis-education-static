@@ -95,6 +95,14 @@ export const xyz_n_3of6 = (sprint, sessionLists, preworkListNext, activityList, 
 	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
+export const xyz_n_4of6 = (sprint, sessionLists, preworkListNext, activityList, breakout) => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
+
+	return completeDeck(slideDeck, [breakout, preworkNext, tLab])
+}
+
+
 export const tLab = () => {
 	return bulletListSlide('Lab & Programming Together', 
 		'Let’s focus on completing our activities and assignments by:', [

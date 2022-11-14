@@ -1,9 +1,10 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
-import { xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
+import { xyz_n_2of6, xyz_n_3of6, xyz_n_4of6 } from './SL00000Sprint00'
 
 import { submissionPercentage, orderedListSlide } from './SLSprint00'
+import { breakoutStandard } from './SLSprint00'
 
 import { end } from '../Slides/SLSprint00'
 
@@ -88,24 +89,10 @@ export const ics_6_3of6 = () => {
 	return xyz_n_3of6(sprint, ics_6_3of6_lists, ics_6_4of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
 
-/*
-	const wwwBreakout = () => {
-		return renderBreakout({
-			'title':'The World Wide Web Breakout',
-			'topics': [
-				'The Internet vs. The World Wide Web',
-				'HTML, CSS, and Javascript',
-				'Java Applets, Java Servlets, and Java Server Pages',
-				'XML, DTDs, and JSON',
-				'Search Engines, Social Networks, Cookies, Web Analytics, and Web 3.0' ]
-		})
-	}
-*/
-
 // Sprint 6 session 4 of 6: Monday
 const ics_6_4of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		'Sprint 6 activities updated.' ],
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared for World Wide Web breakout' ],
@@ -114,6 +101,47 @@ const ics_6_4of6_lists = {
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
-export const ics_6_4of6 = () => { return [ end ] }
+export const ics_6_4of6 = () => {
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: The World Wide Web', 
+			'In this breakout session we will explore The World Wide Web:', [
+				'The Internet vs. The World Wide Web plus HTML, CSS, and Javascript',
+				'HTTP, SSL, HTTPs, and DNS',
+				'Java Applets, Java Servlets, and Java Server Pages',
+				'XML, DTDs, and JSON',
+				'Search Engines, Social Networks, Cookies, Web Analytics, and Web 3.0' ]
+		)
+	}
+
+	return xyz_n_4of6(sprint, ics_6_4of6_lists, ics_6_5of6_lists.prework, activityList, breakout)
+}
+
+// Sprint 6 session 5 of 6: Wednesday
+const ics_6_5of6_lists = {
+	'announcements':[ 
+		'Any announcements or questions?' ],
+	'prework':[
+		'Complete through activity 11', '',
+		'Be prepared for Programming Together with Matchmaker for the Web',
+		`Be prepared for Quiz ${sprint}` ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together with Matchmaker for the Web',
+		`Quiz ${sprint}` ]
+}
 export const ics_6_5of6 = () => { return [ end ] }
+
+// Sprint 6 session 6 of 6: Friday
+// **BugBug**: Remove export in following line.
+export const ics_6_6of6_lists = {
+	'announcements':[ 
+		'Any announcements or questions?' ],
+	'prework':[
+		'Complete through activity 12', '',
+		'Be prepared for Programming Together with Matchmaker for the Web' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+}
 export const ics_6_6of6 = () => { return [ end ] }
