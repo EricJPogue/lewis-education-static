@@ -1,8 +1,10 @@
-import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide } from '../Slides/SLSprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
 import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
+
+import { breakoutStandard } from '../Slides/SLSprint00'
 
 import { tLab } from './SL00000Sprint00'
 
@@ -101,22 +103,45 @@ export const se_6_3of6 = () => {
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_6_4of6_lists.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [retrospectiveInto, metricsSubmissionPercentage, retrospective, scrumTeamDemos, scrumTeamRetrospective, preworkNext])
-
-
-
-	//return xyz_n_3of6(sprint, se_6_3of6_lists, se_6_4of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
 
 const se_6_4of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`, ],
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared breakout session on Metrics' ],
 	'agenda':[
-		'TBD' ]
+		'Metrics Breakout',
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
+}
+export const se_6_4of6 = () => {
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Metrics', 
+			'In this breakout session we will explore Metrics:', [
+				'Software Quality, Architecture Quality, and Project Quality',
+				'Characteristics of a Good Metric and Common Metrics for Waterfall and Agile',
+				'Software Metrics Best Practices',
+				'Metics that measure team output',
+				'Pros and cons of our Software Engineering team metrics' ]
+		)
+	}
+
+	return xyz_n_4of6(sprint, se_6_4of6_lists, se_6_5of6_lists.prework, activityList, breakout)
 }
 
-export const se_6_4of6 = () => { return [ end ] }
+const se_6_5of6_lists = {
+	'announcements':[ 
+		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`, ],
+	'prework':[
+		'Complete through activity 11 prior to next class', '',
+		`Be prepared for Quiz ${sprint}` ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together with Matchmaker for the Web',
+		`Quiz ${sprint}` ]
+}
 export const se_6_5of6 = () => { return [ end ] }
 export const se_6_6of6 = () => { return [ end ] }

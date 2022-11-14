@@ -1,5 +1,7 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6, xyz_n_4of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide } from '../Slides/SLSprint00'
+
+import { breakoutStandard } from '../Slides/SLSprint00'
 
 import { end } from '../Slides/SLSprint00'
 
@@ -67,15 +69,41 @@ export const web_6_3of6 = () => {
 
 const web_6_4of6_lists = {
 	'announcements':[ 
-		'John Deere job openings' ],
+		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 11 prior to next class', '',
 		'Be prepared for breakout PHP session' ],
 	'agenda':[
-		'TBD'
-	]
+		'PHP Breakout',
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
+}
+export const web_6_4of6 = () => {
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: PHP', 
+			'In this breakout session we will explore PHP:', [
+				'History, popularity, and language characteristics',
+				'HTML embedded JavaScript and PHP similarities and differences',
+				'Testing PHP code locally',
+				'Java, JavaScript, PHP, and C# .Net similarities and differences' ]
+		)
+	}
+
+	return xyz_n_4of6(sprint, web_6_4of6_lists, web_6_5of6_lists.prework, activityList, breakout)
 }
 
-export const web_6_4of6 = () => { return [ end ] }
+
+const web_6_5of6_lists = {
+	'announcements':[ 
+		'Any announcements?' ],
+	'prework':[
+		'Complete through activity 12 prior to next class', '',
+		`Be prepared for Quiz ${sprint}` ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together',
+		`Quiz ${sprint}` ]
+}
 export const web_6_5of6 = () => { return [ end ] }
 export const web_6_6of6 = () => { return [ end ] }
