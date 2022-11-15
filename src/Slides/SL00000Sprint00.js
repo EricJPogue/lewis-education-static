@@ -1,5 +1,5 @@
 import { preflightChecklist, basicSlide, end } from './SLSprint00'
-import { agendaSlide, orderedListSlide, bulletListSlide, basicSlideWithLogo, tPreworkWithLogo, tPrework } from './SLSprint00'
+import { agendaSlide, orderedListSlide, bulletListSlide, basicSlideWithLogo, tPreworkWithLogo, tPrework, tQuiz } from './SLSprint00'
 
 import { retrospectiveIntroduction, retrospectiveBreakout, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
 
@@ -102,6 +102,14 @@ export const xyz_n_4of6 = (sprint, sessionLists, preworkListNext, activityList, 
 	return completeDeck(slideDeck, [breakout, preworkNext, tLab])
 }
 
+export const xyz_n_5of6 = (sprint, sessionLists, preworkListNext, activityList) => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', sessionLists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
+	const quiz = () => { return tQuiz(sprint) }
+
+	return 	completeDeck(slideDeck, [ poll, tLab, preworkNext, quiz ])
+}
 
 export const tLab = () => {
 	return bulletListSlide('Lab & Programming Together', 
