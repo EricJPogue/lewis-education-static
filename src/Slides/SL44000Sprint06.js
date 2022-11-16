@@ -1,5 +1,5 @@
 import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6 } from './SL00000Sprint00'
-import { submissionPercentage, orderedListSlide } from '../Slides/SLSprint00'
+import { submissionPercentage, orderedListSlide, basicSlideWithTitle } from '../Slides/SLSprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
 import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
@@ -141,6 +141,7 @@ const se_6_5of6_lists = {
 		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
 		'Sprint Progress Polling',
+		'Serverless Computing',
 		'Lab & Programming Together',
 		`Quiz ${sprint}` ]
 }
@@ -149,8 +150,14 @@ export const se_6_5of6 = () => {
 	const poll = () => { return tPrework('Sprint Progress Polling', se_6_5of6_lists.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_6_6of6_lists.prework, sprint, activityList) }
 	const quiz = () => { return tQuiz(sprint) }
+	const serverless = () => { 
+		return basicSlideWithTitle(
+			'Serverless Computing', [
+				'Azure Functions', 
+				'Google Cloud Functions',
+				'AWS Lambda'])}
 	
-	return completeDeck(slideDeck, [ poll, tLab, preworkNext, quiz ]) 
+	return completeDeck(slideDeck, [ poll, serverless, tLab, preworkNext, quiz ]) 
 }
 
 // Sprint 6 session 6 of 6
