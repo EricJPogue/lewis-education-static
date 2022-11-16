@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6, xyz_n_4of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide } from '../Slides/SLSprint00'
 
 import { breakoutStandard } from '../Slides/SLSprint00'
@@ -93,7 +93,7 @@ export const web_6_4of6 = () => {
 	return xyz_n_4of6(sprint, web_6_4of6_lists, web_6_5of6_lists.prework, activityList, breakout)
 }
 
-
+// Sprint 6 session 5 of 6: Wednesday
 const web_6_5of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
@@ -105,5 +105,18 @@ const web_6_5of6_lists = {
 		'Lab & Programming Together',
 		`Quiz ${sprint}` ]
 }
-export const web_6_5of6 = () => { return [ end ] }
+export const web_6_5of6 = () => { return xyz_n_5of6(sprint, web_6_5of6_lists, web_6_6of6_lists.prework, activityList) }
+
+
+// Sprint 6 session 6 of 6: Friday
+const web_6_6of6_lists = {
+	'announcements':[ 
+		'Any announcements or questions?' ],
+	'prework':[
+		'Complete through activity 12', '',
+		'Be prepared for Programming Together' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+}
 export const web_6_6of6 = () => { return [ end ] }

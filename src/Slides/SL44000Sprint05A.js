@@ -165,7 +165,7 @@ export const se_5_5of6 = () => {
 // SE sprint 5 session 6 of 6
 const se_5_6of6_lists = {
 	'announcements':[ 
-		`Your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday, November 7th`,
+		`Your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for next Monday`,
 		`Sprint ${sprint+1} product backlog grooming with be Friday... come Monday with a fully groomed product backlog`,
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
