@@ -135,7 +135,8 @@ export const se_6_4of6 = () => {
 
 const se_6_5of6_lists = {
 	'announcements':[ 
-		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`, ],
+		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`,
+		'Two new MongoDB programming together tutorial added' ],
 	'prework':[
 		'Complete through activity 11 prior to next class', '',
 		`Be prepared for Quiz ${sprint}` ],
