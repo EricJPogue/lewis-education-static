@@ -166,6 +166,7 @@ const se_6_6of6_lists = {
 	'announcements':[ 
 		`Your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for Monday`,
 		`Sprint ${sprint+1} product backlog grooming is today... come Monday with a fully groomed product backlog`,
+		'Sprint 7 individual capacity has been reduced from 10 story points to 8 story points due to Thanksgiving Break',
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		`All sprint ${sprint} assignments due Sunday!`, '',
