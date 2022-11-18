@@ -1,7 +1,7 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
-import { xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
+import { xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
 
 import { submissionPercentage, orderedListSlide } from './SLSprint00'
 import { breakoutStandard } from './SLSprint00'
@@ -143,4 +143,4 @@ const ics_6_6of6_lists = {
 		'Sprint Progress Polling',
 		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
 }
-export const ics_6_6of6 = () => { return xyz_n_5of6(sprint, ics_6_6of6_lists, ics_7_1of6_lists.prework, activityList) }
+export const ics_6_6of6 = () => { return xyz_n_6of6(sprint, ics_6_6of6_lists, ics_7_1of6_lists.prework, activityList) }

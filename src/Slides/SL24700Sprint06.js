@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, breakoutStandard } from '../Slides/SLSprint00'
 
 import { web_7_1of6_lists } from './SL24700Sprint07'
@@ -116,4 +116,4 @@ const web_6_6of6_lists = {
 		'Sprint Progress Polling',
 		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
 }
-export const web_6_6of6 = () => { return xyz_n_5of6(sprint, web_6_6of6_lists, web_7_1of6_lists.prework, activityList) }
+export const web_6_6of6 = () => { return xyz_n_6of6(sprint, web_6_6of6_lists, web_7_1of6_lists.prework, activityList) }
