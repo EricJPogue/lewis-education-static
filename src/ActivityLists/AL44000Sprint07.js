@@ -34,8 +34,7 @@ export const list44000Sprint07 = () => {
 		<ol>
 			{StandardActivitiesWithLinkAndSprint(sprint, finalProjectSprint7Link(), oreillyPlaylistSE())}
 			<li>Read Chapter 10 of Fox on Project Management, Scrum, Pairs, and Version Control Systems</li>
-			<li>Read Fox Chapter 11 on Design Patterns</li>
-			<li>Within {oreillyPlaylistSE()} read “Design Patterns” through chapter 1</li>
+
 			{InitialPost()}		
 			<li>Complete Introduction to React {introductionToReactLink()}</li>	
 			<li>Complete {reactProgrammingTogether()} programming together tutorial</li>
@@ -45,8 +44,6 @@ export const list44000Sprint07 = () => {
 }
 
 // Certified for SP22 (04/08/2022)
-
-// Todo: Create new tutorial based on Matt's body-parser Node.js example. 
 
 // Todo: Determine if 6, 8, or 10 hours would be the most appropriate to require on the final project. In SP22 I 
 // reduced it to 8 hours based on the fact that Easter Break was in sprint 7 and consumed Thursday, Friday, and Monday.

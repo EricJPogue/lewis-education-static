@@ -3,7 +3,7 @@ import React from 'react'
 import { LearningObjectivesIntro, ActivitiesListIntro } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, ClosingSprint08 } from './AL00000Sprint05'
 import { finalProjectSprint8Link } from '../Activities/FinalProject'
-import { oreillyPlaylistSE, architecturePart1, architecturePart2, externalLink } from '../DataAndAPIs/Links'
+import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
 
 export const al44000Sprint08 = () => {
 	return ( <div>
@@ -32,9 +32,10 @@ export const list44000Sprint08 = () => {
 		{ActivitiesListIntro(sprint)}
 		<ol>
 			{StandardActivitiesWithLinkAndSprint(sprint, finalProjectSprint8Link(), oreillyPlaylistSE())}
-			<li>Complete {architecturePart1()}</li>
-			<li>Scan {architecturePart2()}</li>
-			<li>Consider watching the very funny {agileCoachInterview()} Youtube video if you need 4 minutes to reflect and laugh</li>
+			<li>Read Fox Chapter 11 on Design Patterns</li>
+			<li>Within {oreillyPlaylistSE()} read “Design Patterns” through chapter 1</li>
+
+			<li>Watch the very funny {agileCoachInterview()} Youtube video if you need 4 minutes to reflect and laugh</li>
 			{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectSprint8Link(), '10 hours')}
 		</ol>
 	</div>)
@@ -43,3 +44,8 @@ export const list44000Sprint08 = () => {
 // Certified for SP22 (Monday, April 18, 2022)
 // Todo: Consider expected number of hours as it was changed from 12 to 10 during sprint 8.
 // Todo: Consider adding https://www.youtube.com/watch?v=bB340S0tGf8.
+
+// Todo: Consider updating and adding the following Architecture videos back into the class:
+//	import { architecturePart1, architecturePart2 } from '../DataAndAPIs/Links'
+// <li>Complete {architecturePart1()}</li>
+// <li>Scan {architecturePart2()}</li>
