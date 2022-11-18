@@ -1,9 +1,7 @@
 import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
-import { submissionPercentage, orderedListSlide } from '../Slides/SLSprint00'
+import { submissionPercentage, orderedListSlide, breakoutStandard } from '../Slides/SLSprint00'
 
-import { breakoutStandard } from '../Slides/SLSprint00'
-
-import { end } from '../Slides/SLSprint00'
+import { web_7_1of6_lists } from './SL24700Sprint07'
 
 import { list24700Sprint05 } from '../ActivityLists/AL24700Sprint05'
 import { list24700Sprint06 } from '../ActivityLists/AL24700Sprint06'
@@ -13,9 +11,9 @@ const sprint = 6
 const activityListPrevious = () => { return list24700Sprint05(sprint-1) }
 const activityList = () => { return list24700Sprint06(sprint) }
 
+// Sprint 6 session 1 of 6: Monday
 export const web_6_1of6_lists = xyz_n_1of6_lists(sprint)
 export const web_6_1of6 = () => { return xyz_n_1of6(sprint, web_6_1of6_lists.prework, activityListPrevious, web_6_1of6_lists.agenda, web_6_2of6_lists.prework, activityList) }
-
 
 // Sprint 6 session 2 of 6: Wednesday
 const web_6_2of6_lists = {
@@ -33,7 +31,6 @@ const web_6_2of6_lists = {
 		'Review Friday’s Demo Schedule',
 		'Lab & Programming Together' ]
 }
-
 export const web_6_2of6 = () => { return xyz_n_2of6(sprint, web_6_2of6_lists, web_6_3of6_lists.prework, activityList) }
 
 const web_6_3of6_lists = {
@@ -111,7 +108,7 @@ export const web_6_5of6 = () => { return xyz_n_5of6(sprint, web_6_5of6_lists, we
 // Sprint 6 session 6 of 6: Friday
 const web_6_6of6_lists = {
 	'announcements':[ 
-		'Any announcements or questions?' ],
+		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 12', '',
 		'Be prepared for Programming Together' ],
@@ -119,4 +116,4 @@ const web_6_6of6_lists = {
 		'Sprint Progress Polling',
 		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
 }
-export const web_6_6of6 = () => { return [ end ] }
+export const web_6_6of6 = () => { return xyz_n_5of6(sprint, web_6_6of6_lists, web_7_1of6_lists.prework, activityList) }

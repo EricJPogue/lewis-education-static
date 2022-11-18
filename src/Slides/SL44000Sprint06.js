@@ -11,7 +11,7 @@ import { tQuiz } from '../Slides/SLSprint00'
 
 import { retrospectiveIntroduction } from './SLSprint00'
 
-import { end } from './SLSprint00'
+import { se_7_1of6_lists } from './SL44000Sprint07'
 
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
@@ -165,7 +165,7 @@ export const se_6_5of6 = () => {
 const se_6_6of6_lists = {
 	'announcements':[ 
 		`Your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for Monday`,
-		`Sprint ${sprint+1} product backlog grooming with be Friday... come Monday with a fully groomed product backlog`,
+		`Sprint ${sprint+1} product backlog grooming is today... come Monday with a fully groomed product backlog`,
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		`All sprint ${sprint} assignments due Sunday!`, '',
@@ -174,4 +174,16 @@ const se_6_6of6_lists = {
 		'Backlog Grooming',
 		'Lab' ]
 }
-export const se_6_6of6 = () => { return [ end ] }
+export const se_6_6of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_6_6of6_lists, sprint, activityList)
+	const backlogGrooming = () => {
+		return basicSlideWithTitle(
+			'Backlog Grooming', [
+				`Complete epic and story backlog grooming in preparation for sprint ${sprint+1} planning on Monday`, 
+				`Have a plan to complete sprint ${sprint+1} planning by the end of class on Monday`,
+				`What is the appropriate individual and team capacity for sprint ${sprint+1}?` ]) 
+
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_1of6_lists.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ backlogGrooming, preworkNext ]) 
+}

@@ -6,7 +6,7 @@ import { xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint0
 import { submissionPercentage, orderedListSlide } from './SLSprint00'
 import { breakoutStandard } from './SLSprint00'
 
-import { end } from '../Slides/SLSprint00'
+import { ics_7_1of6_lists } from './SL20000Sprint07'
 
 import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
@@ -135,7 +135,7 @@ export const ics_6_5of6 = () => { return xyz_n_5of6(sprint, ics_6_5of6_lists, ic
 // Sprint 6 session 6 of 6: Friday
 const ics_6_6of6_lists = {
 	'announcements':[ 
-		'Any announcements or questions?' ],
+		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 12', '',
 		'Be prepared for Programming Together with Matchmaker for the Web' ],
@@ -143,4 +143,4 @@ const ics_6_6of6_lists = {
 		'Sprint Progress Polling',
 		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
 }
-export const ics_6_6of6 = () => { return [ end ] }
+export const ics_6_6of6 = () => { return xyz_n_5of6(sprint, ics_6_6of6_lists, ics_7_1of6_lists.prework, activityList) }
