@@ -108,7 +108,8 @@ export const web_6_5of6 = () => { return xyz_n_5of6(sprint, web_6_5of6_lists, we
 // Sprint 6 session 6 of 6: Friday
 const web_6_6of6_lists = {
 	'announcements':[ 
-		`All sprint ${sprint} assignments due Sunday!` ],
+		`All sprint ${sprint} assignments due Sunday!`,
+		'Be prepared begin you Final Project Monday' ],
 	'prework':[
 		'Complete through activity 12', '',
 		'Be prepared for Programming Together' ],
