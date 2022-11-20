@@ -17,6 +17,24 @@ export const completeDeck = (slideDeck, slides) => {
 	return slideDeck
 }
 
+export const xyz_n_nof6_lists = (sprint) => {
+	return {
+		'announcements':[ 
+			'Any announcements?' ],
+		'prework':[ 
+			'Complete through **', '',
+			`Be prepared ****` ],
+		'agenda':[ 
+			`Sprint ${sprint} Agenda item 1`,
+			'Agenda item 2',
+			'...' ]
+	}
+}
+export const xyz_n_nof6UnderConstruction = () => {
+	return basicSlideWithLogo('Slide Deck Under Construction', [
+		'This slide deck is currently under construction. Please check back later.'])
+}
+
 export const xyz_n_1of6_agenda_list = (sprint) => { 
 	return [ `Sprint ${sprint} Planning`,
 	`Sprint ${sprint} Planning Breakout`,
@@ -31,7 +49,7 @@ export const xyz_n_1of6_prework_list = (sprint) => {
 export const xyz_n_1of6_lists = (sprint) => {
 	return {
 		'announcements':[ 
-			`${sprint} start now.` ],
+			`${sprint} starts now.` ],
 		'prework':[ 
 			'Everything is due Sunday!', '',
 			`Be prepared for Sprint ${sprint} Planning` ],

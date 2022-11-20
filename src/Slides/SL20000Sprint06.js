@@ -2,10 +2,7 @@ import { getClass } from '../DataAndAPIs/Classes'
 
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 import { xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
-
-import { submissionPercentage, orderedListSlide } from './SLSprint00'
-import { breakoutStandard } from './SLSprint00'
-
+import { submissionPercentage, orderedListSlide, breakoutStandard } from './SLSprint00'
 import { ics_7_1of6_lists } from './SL20000Sprint07'
 
 import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'

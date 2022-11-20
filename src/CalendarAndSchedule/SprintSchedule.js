@@ -74,12 +74,12 @@ export class SprintClassActivities extends Component {
 	}
 
 	MWFScheduleSprint7 = {
-		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Demos, Retrospectives, and Discussion Board",
-		"FirstFriday":     "Easter Holiday",
-		"SecondMonday":    "Easter Holiday",
-		"SecondWednesday": "Topic Discussion & Quiz",
-		"SecondFriday":    "Lab"
+		'FirstMonday':     'Sprint Planning',
+		'FirstWednesday':  'Thanksgiving Holiday',
+		'FirstFriday':     'Thanksgiving Holiday',
+		'SecondMonday':    'Discussion Board & Topic Breakout',
+		'SecondWednesday': 'Lab & Quiz',
+		'SecondFriday':    'Lab'
 	}
 
 	MWFScheduleSprint8 = {
