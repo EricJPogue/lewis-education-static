@@ -23,7 +23,8 @@ export const ics_7_1of6 = () => {
 			`We will also have our sprint ${sprint-1} Demos and Retrospective next Monday` ])
 	}
 
-	return xyz_n_1of6(sprint, ics_7_1of6_lists.prework, activityListPrevious, ics_7_1of6_lists.agenda, ics_7_4of6_lists.prework, activityList, sprintPlanning()) }
+	return xyz_n_1of6(sprint, ics_7_1of6_lists.prework, activityListPrevious, ics_7_1of6_lists.agenda, ics_7_4of6_lists.prework, activityList, sprintPlanning()) 
+}
 
 // Sprint 7 session 2 of 6: Wednesday
 export const ics_7_2of6 = () => { return [ tNoClassToday ] }

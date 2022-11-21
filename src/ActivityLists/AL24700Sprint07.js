@@ -30,7 +30,7 @@ export const al24700Sprint07 = () => {
 	</div> )
 }
 
-const list24700Sprint07 = (sprint) => {
+export const list24700Sprint07 = (sprint) => {
 	const angularReactVue = () => { return externalLink('Angular vs React vs Vue.js: Which is the Best Choice for 2022?', 'https://javascript.plainenglish.io/angular-vs-react-vs-vue-js-which-is-the-best-choice-for-2022-5ef83f2257ab') }
 	const reactJSOrg = () => { return externalLink('React', 'https://reactjs.org/') }
 	const reactW3C = () => { return externalLink('React W3C', 'https://www.w3schools.com/REACT/') }
@@ -52,7 +52,6 @@ const list24700Sprint07 = (sprint) => {
 
 // Certified for SU22 (06/17/2022)
 
-// Todo: Add back “Complete Lab Demo if you have not already” to standardActivitiesClosing() for non-online classes as 
-// it was removed for a summer online class.
+
 
 

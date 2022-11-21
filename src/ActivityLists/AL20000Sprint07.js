@@ -55,4 +55,5 @@ export const list20000Sprint07 = () => {
 }
 
 // Certified for SP22 (04/05/2022)
-// Todo: Add zipped source code requirement to all Final Project presentation assignments.
+// Todo: Review: Add zipped source code requirement to all Final Project presentation assignments.
+// Todo: Remove final lab 7 question and redistribute points.  
