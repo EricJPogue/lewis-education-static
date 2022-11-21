@@ -30,9 +30,16 @@ export const xyz_n_nof6_lists = (sprint) => {
 			'...' ]
 	}
 }
-export const xyz_n_nof6UnderConstruction = () => {
+
+// Todo: Consider renaming the following function to tUnderConstruction
+export const tUnderConstruction = () => {
 	return basicSlideWithLogo('Slide Deck Under Construction', [
 		'This slide deck is currently under construction. Please check back later.'])
+}
+
+export const tNoClassToday = () => {
+	return basicSlideWithLogo('Holiday', [
+		'The is no class today.'])
 }
 
 export const xyz_n_1of6_agenda_list = (sprint) => { 
@@ -59,17 +66,21 @@ export const xyz_n_1of6_lists = (sprint) => {
 			'Prework for Next Class' ]
 	}
 }
-export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList, preworkListNext, activityList) => {
+export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList, preworkListNext, activityList, substituteSprintPlanning = null) => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', preworkList, sprint-1, activityListPrevious) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Let’s stay 100% focused on sprint planning today']) }
 	const agenda = () => { return agendaSlide(agendaList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
 
 	const sprintPlanning = () => {
-		return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
-			'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
-			'We will complete our scrum team Discussion Board breakout session on Wednesday',
-			`We will have sprint ${sprint-1} Demos and Retrospective on Friday` ])
+		if (substituteSprintPlanning != null) {
+			return substituteSprintPlanning
+		} else {
+			return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
+				'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
+				'We will complete our scrum team Discussion Board breakout session on Wednesday',
+				`We will have sprint ${sprint-1} Demos and Retrospective on Friday` ])
+		}
 	}
 	const activitiesReview = () => {
 		return basicSlide('Activity List and Assignments Review', [
