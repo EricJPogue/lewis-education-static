@@ -1,8 +1,10 @@
+// import { getClass } from '../DataAndAPIs/Classes'
+
 import { xyz_n_nof6_lists, xyz_n_1of6_lists, xyz_n_4of6, xyz_n_1of6 } from './SL00000Sprint00'
 
-import {tUnderConstruction, tNoClassToday } from './SL00000Sprint00'
+import { tUnderConstruction, tNoClassToday } from './SL00000Sprint00'
 
-import { orderedListSlide, breakoutStandard } from './SLSprint00'
+import { /* submissionPercentage, */ orderedListSlide, breakoutStandard } from './SLSprint00'
 
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
@@ -46,8 +48,29 @@ const ics_7_4of6_lists = {
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
-// BugBug: Review and update slides to include Discussion Board as well.
+
 export const ics_7_4of6 = () =>  {
+	/*
+	const metricsSubmissionPercentage = () => {
+		if (getClass().section === '002') {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:25 },
+				{ name: 'Quiz', due:27, submitted:27 },
+				{ name: 'Lab', due:27, submitted:26 },
+				{ name: 'Reflection', due: 27, submitted: 27 }
+			])
+		} else {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:25 },
+				{ name: 'Quiz', due:27, submitted:26 },
+				{ name: 'Lab', due:27, submitted:26 },
+				{ name: 'Reflection', due: 27, submitted: 25 }
+			])
+		}
+	}
+	*/
+
+	// BugBug: Review and update slides to include Discussion Board as well.
 	const breakout = () => { 
 		return breakoutStandard( 
 			'Breakout: Security', 

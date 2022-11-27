@@ -45,7 +45,24 @@ const web_7_4of6_lists = {
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
-export const web_7_4of6 = () => { return [tUnderConstruction ] }
+export const web_7_4of6 = () => { 
+/*
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:11, submitted:10 },
+			{ name: 'Quiz', due:11, submitted:11 },
+			{ name: 'Lab', due:11, submitted:9 },
+			{ name: 'Reflection', due: 11, submitted: 10 }
+		])
+	}
+
+	Suggestions:
+		Final Project presentation time
+		Working in teams including dependencies and multi-person stories
+		Agile verboseness or tediousness
+*/
+	return [tUnderConstruction ] 
+}
 
 // Sprint 7 session 5 of 6: Wednesday
 export const web_7_5of6 = () => { return [tUnderConstruction ] }
