@@ -68,13 +68,11 @@ export const ics_7_4of6 = () =>  {
 		}
 	}
 	const retrospective = () => {
-		if (getClass().section === '002') {
-			return orderedListSlide('Class Retrospective',
-			'Feedback from Assignments & Reflections', [
-			'Solid submission percentage... well done.',
-			'All assignments graded and posted', 
-			'Very nice work!' ])
-		} 
+		return orderedListSlide('Class Retrospective',
+		'Feedback from Assignments & Reflections', [
+		'Solid submission percentage... well done.',
+		'All assignments graded and posted', 
+		'Very nice work!' ])
 	}
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 
@@ -83,7 +81,6 @@ export const ics_7_4of6 = () =>  {
 
 	slides.splice(slides.length-2,0,discussionBreakout)
 	return slides
-	// return xyz_n_4of6(sprint, ics_7_4of6_lists, ics_7_5of6_lists.prework, activityList, breakout)
 }
 
 // Sprint 7 session 5 of 6: Wednesday

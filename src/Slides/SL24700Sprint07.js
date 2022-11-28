@@ -1,5 +1,5 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, tNoClassToday } from './SL00000Sprint00'
-import { orderedListSlide } from './SLSprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_3of6, tNoClassToday } from './SL00000Sprint00'
+import { orderedListSlide, submissionPercentage, tDiscussionBreakout } from './SLSprint00'
 
 import { tUnderConstruction } from './SL00000Sprint00'
 
@@ -40,13 +40,13 @@ const web_7_4of6_lists = {
 		'Be prepared for Demos & Retrospectives',
 		`Be prepared Discussion Board ${sprint}` ],
 	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
 		`Discussion Board ${sprint} as a scrum team`,
-		'Review Demo Schedule for Next Class',
-		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		'Prework for Next Class' ]
 }
 export const web_7_4of6 = () => { 
-/*
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
 			{ name: 'Discussion', due:11, submitted:10 },
@@ -55,17 +55,35 @@ export const web_7_4of6 = () => {
 			{ name: 'Reflection', due: 11, submitted: 10 }
 		])
 	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+		'Feedback from Assignments & Reflections', [
+		'Submission percentage concerns me',
+		'All assignments graded and posted',
+		'Some confusion around finals / final project presentation date',
+		'Very nice work!' ])
+	}
 
-	Suggestions:
-		Final Project presentation time
-		Working in teams including dependencies and multi-person stories
-		Agile verboseness or tediousness
-*/
-	
-	return [ tUnderConstruction ] 
+	const discussionBreakout = () => { return tDiscussionBreakout(sprint) }
+
+	// Due to the Thanksgiving holiday we missed sessions 2 and 3 so we mostly doing session 3 activities here in session 4. 
+	let slides = xyz_n_3of6(sprint, web_7_4of6_lists, web_7_5of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
+
+	slides.splice(slides.length-2,0,discussionBreakout)
+	return slides
 }
 
 // Sprint 7 session 5 of 6: Wednesday
+const web_7_5of6_lists = {
+	'announcements':[ 
+		'Any Announcements?' ],
+	'prework':[
+		'Complete through activity 8 prior to next class', '',
+		'Be prepared for “Project Management, Scrum, Pairs, and Version Control Systems” Breakout',
+		`Be prepared for Quiz ${sprint}` ],
+	'agenda':[
+		'TBD' ]
+}
 export const web_7_5of6 = () => { return [tUnderConstruction ] }
 
 // Sprint 7 session 6 of 6: Friday

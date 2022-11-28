@@ -40,7 +40,6 @@ const se_6_2of6_lists = {
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
-
 export const se_6_2of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_6_2of6_lists, sprint, activityList)
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
