@@ -34,7 +34,7 @@ export const web_7_3of6 = () => { return [ tNoClassToday ] }
 // Sprint 7 session 4 of 6: Monday
 const web_7_4of6_lists = {
 	'announcements':[ 
-		'No class Wednesday or Friday this week in observance of Thanksgiving' ],
+		'Welcome back!' ],
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		'Be prepared for Demos & Retrospectives',
@@ -61,7 +61,8 @@ export const web_7_4of6 = () => {
 		Working in teams including dependencies and multi-person stories
 		Agile verboseness or tediousness
 */
-	return [tUnderConstruction ] 
+	
+	return [ tUnderConstruction ] 
 }
 
 // Sprint 7 session 5 of 6: Wednesday

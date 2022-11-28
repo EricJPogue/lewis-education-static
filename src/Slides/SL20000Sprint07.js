@@ -1,10 +1,10 @@
-// import { getClass } from '../DataAndAPIs/Classes'
+import { getClass } from '../DataAndAPIs/Classes'
 
-import { xyz_n_nof6_lists, xyz_n_1of6_lists, xyz_n_4of6, xyz_n_1of6 } from './SL00000Sprint00'
+import { /* xyz_n_nof6_lists, */ xyz_n_1of6_lists, xyz_n_3of6, xyz_n_1of6 } from './SL00000Sprint00'
 
 import { tUnderConstruction, tNoClassToday } from './SL00000Sprint00'
 
-import { /* submissionPercentage, */ orderedListSlide, breakoutStandard } from './SLSprint00'
+import { submissionPercentage, orderedListSlide, tDiscussionBreakout } from './SLSprint00'
 
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
@@ -37,20 +37,19 @@ export const ics_7_3of6 = () => { return [ tNoClassToday ] }
 // Sprint 7 session 4 of 6: Monday
 const ics_7_4of6_lists = {
 	'announcements':[ 
-		'No class Wednesday or Friday this week in observance of Thanksgiving' ],
+		'Welcome back! I hope you had a wonderful Thanksgiving holiday.' ],
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		'Be prepared for Demos & Retrospectives',
 		`Be prepared Discussion Board ${sprint}` ],
 	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
 		`Discussion Board ${sprint} as a scrum team`,
-		'Review Demo Schedule for Next Class',
-		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		'Prework for Next Class' ]
 }
-
 export const ics_7_4of6 = () =>  {
-	/*
 	const metricsSubmissionPercentage = () => {
 		if (getClass().section === '002') {
 			return submissionPercentage([
@@ -68,8 +67,38 @@ export const ics_7_4of6 = () =>  {
 			])
 		}
 	}
-	*/
+	const retrospective = () => {
+		if (getClass().section === '002') {
+			return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Solid submission percentage... well done.',
+			'All assignments graded and posted', 
+			'Very nice work!' ])
+		} 
+	}
+	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 
+	// Due to the Thanksgiving holiday we missed sessions 2 and 3 so we mostly doing session 3 activities here in session 4. 
+	let slides = xyz_n_3of6(sprint, ics_7_4of6_lists, ics_7_5of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
+
+	slides.splice(slides.length-2,0,discussionBreakout)
+	return slides
+	// return xyz_n_4of6(sprint, ics_7_4of6_lists, ics_7_5of6_lists.prework, activityList, breakout)
+}
+
+// Sprint 7 session 5 of 6: Wednesday
+
+const ics_7_5of6_lists = {
+	'announcements':[ 
+		'Any Announcements?' ],
+	'prework':[
+		'Complete through activity 8 prior to next class', '',
+		'Be prepared for Security Breakout',
+		`Be prepared for Quiz ${sprint}` ],
+	'agenda':[
+		'TBD' ]
+}
+/*
 	// BugBug: Review and update slides to include Discussion Board as well.
 	const breakout = () => { 
 		return breakoutStandard( 
@@ -82,12 +111,7 @@ export const ics_7_4of6 = () =>  {
 				'Protecting Online Information' ]
 		)
 	}
-
-	return xyz_n_4of6(sprint, ics_7_4of6_lists, ics_7_5of6_lists.prework, activityList, breakout)
-}
-
-// Sprint 7 session 5 of 6: Wednesday
-const ics_7_5of6_lists = xyz_n_nof6_lists(sprint)
+*/
 export const ics_7_5of6 = () => { return [ tUnderConstruction ] }
 
 // Sprint 7 session 6 of 6: Friday
