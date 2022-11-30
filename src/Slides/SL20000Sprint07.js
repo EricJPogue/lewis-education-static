@@ -101,10 +101,10 @@ export const ics_7_5of6 = () => {
 			'In this breakout session we will explore Security:', [
 				'Information Security and Confidentiality, Availability, and Integrity',
 				'Access, Authentication, Authorization, CAPTCHA',
-				'Malicious Code /Malware, Worms, Trojan Horses, Phishing, and DoS',
+				'Malicious Code, Malware, Worms, Trojan Horses, Phishing, and DoS',
 				'Cryptography, Encryption/Decryption, ciphers, public-key cryptography, and digital signatures',
 				'Protecting Online Information',
-				'Security and usability tradeoffs' ]
+				'Security and Usability Tradeoffs' ]
 		)
 	}
 
@@ -124,7 +124,7 @@ const ics_7_6of6_lists = {
 		'Be prepared for Programming Together' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+		'Lab & Programming Together' ]
 }
 export const ics_7_6of6 = () => { 
 	return [ tUnderConstruction ] 

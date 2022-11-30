@@ -1,7 +1,9 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_3of6, tNoClassToday } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_3of6, xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide, submissionPercentage, tDiscussionBreakout } from './SLSprint00'
 
 import { tUnderConstruction } from './SL00000Sprint00'
+
+import { breakoutStandard } from './SLSprint00'
 
 import { list24700Sprint06 } from '../ActivityLists/AL24700Sprint06'
 import { list24700Sprint07 } from '../ActivityLists/AL24700Sprint07'
@@ -79,12 +81,39 @@ const web_7_5of6_lists = {
 		'Any Announcements?' ],
 	'prework':[
 		'Complete through activity 8 prior to next class', '',
-		'Be prepared for “Project Management, Scrum, Pairs, and Version Control Systems” Breakout',
+		'Be prepared for “Angular, React, and Vue” Breakout',
 		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
-		'TBD' ]
+		'Sprint Progress Polling', 
+		'Angular, React, and Vue Breakout',
+		'Lab and Programming Together',
+		`Quiz ${sprint}` ]
 }
-export const web_7_5of6 = () => { return [tUnderConstruction ] }
+export const web_7_5of6 = () => { 
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Angular, React, and Vue', 
+			'In this breakout session we will explore Angular, React, and Vue:', [
+				'Describe Angular and make an argument for using Angular and against using React',
+				'Describe React and make an argument for using React and against using Vue',
+				'Describe Vue and make an argument for using Vue and against using Angular and React' ]
+		)
+	}
+	const slides = xyz_n_5of6(sprint, web_7_5of6_lists, web_7_6of6_lists.prework, activityList)
+	const agendaSlide = 3
+	slides.splice(agendaSlide+2, 0, breakout)
+	return slides 
+}
 
 // Sprint 7 session 6 of 6: Friday
-export const web_7_6of6 = () => { return [tUnderConstruction ] }
+const web_7_6of6_lists = {
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday!`, '',
+		'Be prepared for Programming Together' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together' ]
+}
+export const web_7_6of6 = () => { return [ tUnderConstruction ] }

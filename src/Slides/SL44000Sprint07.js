@@ -1,9 +1,11 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, tNoClassToday } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6,xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
 import { tUnderConstruction } from './SL00000Sprint00'
 import { tDiscussionBreakout, submissionPercentage, tPrework, retrospectiveIntroduction } from './SLSprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
+
+import { breakoutStandard } from './SLSprint00'
 
 import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
 import { list44000Sprint07 } from '../ActivityLists/AL44000Sprint07'
@@ -93,15 +95,46 @@ export const se_7_4of6 = () => {
 // Sprint 7 session 5 of 6: Wednesday
 const se_7_5of6_lists = {
 	'announcements':[ 
-		'Any Announcements?' ],
+		`Your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for Monday`, ],
 	'prework':[
 		'Complete through activity 8 prior to next class', '',
 		'Be prepared for “Project Management, Scrum, Pairs, and Version Control Systems” Breakout',
 		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
-		'TBD' ]
+		'Project Management, Scrum, Pairs, and Version Control Breakout',
+		'Lab and Programming Together',
+		`Quiz ${sprint}` ]
 }
-export const se_7_5of6 = () => { return [ tUnderConstruction ] }
+export const se_7_5of6 = () => {
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Project Management, Scrum, Pairs, and Version Control', 
+			'In this breakout session we will explore Project Management, Scrum, Pairs, and Version Control:', [
+				'Team sizes, SDLCs, and key Scrum Roles & Rituals',
+				'Project Managers, Project Management, and the Six Phases of a Project',
+				'Priority of specialized vs generalized skills in Agile vs Waterfall or Iterative',
+				'Configuration management, version control, merge conflicts, and branching',
+				'Reporting and fixing bugs: The five R’s', 
+				'The two most important books about managing people (according to the authors)',
+				'Paired Programming' ]
+		)
+	}
+
+	const slides = xyz_n_5of6(sprint, se_7_5of6_lists, se_7_6of6_lists.prework, activityList)
+	const agendaSlide = 3
+	slides.splice(agendaSlide+1, 0, breakout)
+	return slides 
+}
 
 // Sprint 7 session 6 of 6: Friday
+const se_7_6of6_lists = {
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday!`, '',
+		'Be prepared for Backlog Grooming' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+}
 export const se_7_6of6 = () => { return [ tUnderConstruction ] }
