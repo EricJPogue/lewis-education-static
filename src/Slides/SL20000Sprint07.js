@@ -1,10 +1,8 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
-import { /* xyz_n_nof6_lists, */ xyz_n_1of6_lists, xyz_n_3of6, xyz_n_1of6 } from './SL00000Sprint00'
-
+import { xyz_n_1of6_lists, xyz_n_3of6, xyz_n_5of6, xyz_n_1of6 } from './SL00000Sprint00'
 import { tUnderConstruction, tNoClassToday } from './SL00000Sprint00'
-
-import { submissionPercentage, orderedListSlide, tDiscussionBreakout } from './SLSprint00'
+import { submissionPercentage, orderedListSlide, tDiscussionBreakout, breakoutStandard } from './SLSprint00'
 
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
@@ -84,7 +82,6 @@ export const ics_7_4of6 = () =>  {
 }
 
 // Sprint 7 session 5 of 6: Wednesday
-
 const ics_7_5of6_lists = {
 	'announcements':[ 
 		'Any Announcements?' ],
@@ -92,11 +89,12 @@ const ics_7_5of6_lists = {
 		'Complete through activity 8 prior to next class', '',
 		'Be prepared for Security Breakout',
 		`Be prepared for Quiz ${sprint}` ],
-	'agenda':[
-		'TBD' ]
+	'agenda': [
+		'Security Breakout',
+		'Lab & Programming Together',
+		`Quiz ${sprint}` ]
 }
-/*
-	// BugBug: Review and update slides to include Discussion Board as well.
+export const ics_7_5of6 = () => { 
 	const breakout = () => { 
 		return breakoutStandard( 
 			'Breakout: Security', 
@@ -105,12 +103,29 @@ const ics_7_5of6_lists = {
 				'Access, Authentication, Authorization, CAPTCHA',
 				'Malicious Code /Malware, Worms, Trojan Horses, Phishing, and DoS',
 				'Cryptography, Encryption/Decryption, ciphers, public-key cryptography, and digital signatures',
-				'Protecting Online Information' ]
+				'Protecting Online Information',
+				'Security and usability tradeoffs' ]
 		)
 	}
-*/
-export const ics_7_5of6 = () => { return [ tUnderConstruction ] }
+
+	const slides = xyz_n_5of6(sprint, ics_7_5of6_lists, ics_7_6of6_lists.prework, activityList)
+	const agendaSlide = 3
+	slides.splice(agendaSlide+1, 0, breakout)
+	return slides 
+}
 
 // Sprint 7 session 6 of 6: Friday
 // const ics_7_6of6_lists = xyz_n_nof6_lists(sprint)
-export const ics_7_6of6 = () => { return [ tUnderConstruction ] }
+const ics_7_6of6_lists = {
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday!`, '',
+		'Be prepared for Programming Together' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+}
+export const ics_7_6of6 = () => { 
+	return [ tUnderConstruction ] 
+}
