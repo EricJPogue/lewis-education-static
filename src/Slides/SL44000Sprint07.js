@@ -1,9 +1,8 @@
 import { xyz_n_1of6_lists, xyz_n_1of6,xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
-import { tUnderConstruction } from './SL00000Sprint00'
-import { tDiscussionBreakout, submissionPercentage, tPrework, retrospectiveIntroduction } from './SLSprint00'
-import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
+import { tDiscussionBreakout, submissionPercentage, tPrework, retrospectiveIntroduction, basicSlideWithTitle } from './SLSprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 
 import { breakoutStandard } from './SLSprint00'
 
@@ -134,7 +133,19 @@ const se_7_6of6_lists = {
 		`All sprint ${sprint} assignments due Sunday!`, '',
 		'Be prepared for Backlog Grooming' ],
 	'agenda':[
-		'Sprint Progress Polling',
-		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+		'Backlog Grooming',
+		'Lab' ]
 }
-export const se_7_6of6 = () => { return [ tUnderConstruction ] }
+export const se_7_6of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_6of6_lists, sprint, activityList)
+	const backlogGrooming = () => {
+		return basicSlideWithTitle(
+			'Backlog Grooming', [
+				`Complete epic and story backlog grooming in preparation for sprint ${sprint+1} planning on Monday`, 
+				`Have a plan to complete sprint ${sprint+1} planning by the end of class on Monday`,
+				`What is the appropriate individual and team capacity for sprint ${sprint+1}?` ]) 
+
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_1of6_lists.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ backlogGrooming, tLab, preworkNext ]) 
+ }
