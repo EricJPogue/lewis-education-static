@@ -1,13 +1,15 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
-import { xyz_n_1of6_lists, xyz_n_3of6, xyz_n_5of6, xyz_n_1of6 } from './SL00000Sprint00'
-import { tUnderConstruction, tNoClassToday } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_3of6, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6 } from './SL00000Sprint00'
+import { tNoClassToday } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, tDiscussionBreakout, breakoutStandard } from './SLSprint00'
+
+import { ics_8_1of6_lists } from './SL20000Sprint08'
 
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
 
-// Introduction to Computer Science (ICS) sprint 6 global values.
+// Introduction to Computer Science (ICS) sprint 7 global values.
 const sprint = 7
 const activityListPrevious = () => { return list20000Sprint06(sprint-1) }
 const activityList = () => { return list20000Sprint07(sprint) }
@@ -115,7 +117,7 @@ export const ics_7_5of6 = () => {
 }
 
 // Sprint 7 session 6 of 6: Friday
-// const ics_7_6of6_lists = xyz_n_nof6_lists(sprint)
+
 const ics_7_6of6_lists = {
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday!` ],
@@ -126,6 +128,4 @@ const ics_7_6of6_lists = {
 		'Sprint Progress Polling',
 		'Lab & Programming Together' ]
 }
-export const ics_7_6of6 = () => { 
-	return [ tUnderConstruction ] 
-}
+export const ics_7_6of6 = () => { return xyz_n_6of6(sprint, ics_7_6of6_lists, ics_8_1of6_lists.prework, activityList) }

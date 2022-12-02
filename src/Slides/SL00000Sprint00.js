@@ -42,6 +42,11 @@ export const tNoClassToday = () => {
 		'The is no class today.'])
 }
 
+export const tNoRegularClassToday = () => {
+	return basicSlideWithLogo('Finals Week', [
+		'No regular class this week.'])
+}
+
 export const xyz_n_1of6_agenda_list = (sprint) => { 
 	return [ `Sprint ${sprint} Planning`,
 	`Sprint ${sprint} Planning Breakout`,
