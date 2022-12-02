@@ -1,10 +1,14 @@
-import { xyz_n_1of6_lists, xyz_n_1of6,xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
+
+import { se_8_1of6_lists } from './SL44000Sprint08'
 
 import { tDiscussionBreakout, submissionPercentage, tPrework, retrospectiveIntroduction, basicSlideWithTitle } from './SLSprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 
 import { breakoutStandard } from './SLSprint00'
+
+
 
 import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
 import { list44000Sprint07 } from '../ActivityLists/AL44000Sprint07'
@@ -146,6 +150,6 @@ export const se_7_6of6 = () => {
 				`What is the appropriate individual and team capacity for sprint ${sprint+1}?` ]) 
 
 	}
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_1of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_8_1of6_lists.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ backlogGrooming, tLab, preworkNext ]) 
  }

@@ -1,7 +1,8 @@
 import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_3of6, xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide, submissionPercentage, tDiscussionBreakout } from './SLSprint00'
 
-import { tUnderConstruction } from './SL00000Sprint00'
+import { xyz_n_6of6 } from './SL00000Sprint00'
+import { web_8_1of6_lists } from './SL24700Sprint08'
 
 import { breakoutStandard } from './SLSprint00'
 
@@ -114,6 +115,7 @@ const web_7_6of6_lists = {
 		'Be prepared for Programming Together' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Lab & Programming Together' ]
+		'Lab & Programming Together',
+		'Global Software Development / Practical Diversity' ]
 }
-export const web_7_6of6 = () => { return [ tUnderConstruction ] }
+export const web_7_6of6 = () => { return xyz_n_6of6(sprint, web_7_6of6_lists, web_8_1of6_lists.prework, activityList) }
