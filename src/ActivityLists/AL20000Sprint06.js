@@ -28,7 +28,6 @@ export const al20000Sprint06 = () => {
 		</ul>
 
 		{list20000Sprint06(sprint)}
-
 		{closing(sprint)}
 	</div> )
 }

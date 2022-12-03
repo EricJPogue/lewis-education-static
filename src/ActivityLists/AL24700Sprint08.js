@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, standardActivitiesClosing, closing } from './AL00000Sprint00'
 import { oreillyPlaylistWeb, architecturePart2 } from '../DataAndAPIs/Links'
 import { finalProjectDistributedV2Link } from '../Activities/FinalProject';
@@ -35,10 +36,6 @@ const list24700Sprint08 = (sprint) => {
 	</div> )
 }
 
-
-
-// Review FinalProjectDistributed to see if we need more to differentiate version 1 from version 2.
-// Update Lab 8 to remove final question.
-// Update Lab 8 to reference Final Project version 2 and to make sure that the students describe what they implemented 
-//     that meet the requirement.
-// Todo: Verify that all sprint 8 activities list pages have the programming together tutorials link in the closing.
+// Certified for FA22 (12/03/2022)
+// Todo: Consider adding programming together tutorials link to sprint 8 closing.
+// Todo: Consider reviewing and improving quiz 8.

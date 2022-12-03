@@ -8,8 +8,6 @@ import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL
 
 import { breakoutStandard } from './SLSprint00'
 
-
-
 import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
 import { list44000Sprint07 } from '../ActivityLists/AL44000Sprint07'
 

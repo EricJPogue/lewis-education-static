@@ -1,7 +1,6 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
-import { xyz_n_1of6_lists, xyz_n_3of6, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6 } from './SL00000Sprint00'
-import { tNoClassToday } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_3of6, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6, tNoClassToday } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, tDiscussionBreakout, breakoutStandard } from './SLSprint00'
 
 import { ics_8_1of6_lists } from './SL20000Sprint08'

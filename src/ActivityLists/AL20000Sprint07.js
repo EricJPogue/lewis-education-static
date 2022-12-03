@@ -1,13 +1,14 @@
 import React from 'react'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
-import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
+import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
+
 import { healthRiskCalculatorWebOrPythonLink } from '../Activities/HealthRiskCalculator'
 import { oreillyPlaylistICS, internalLink } from '../DataAndAPIs/Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 
 export const al20000Sprint07 = () => {
+	const sprint = 7
 	return ( <div>
 		<h5>Sprint 7: Security, JavaScript, and you setting the direction</h5>
 
@@ -24,7 +25,7 @@ export const al20000Sprint07 = () => {
 		<br />
 
 		<p><i>What will you do with all that power... and responsibility?</i></p>
-		{LearningObjectivesIntro()}
+		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Understand Computer Security</li>
 			<li>Deliver more sophisticated Web applications using HTML, CSS, and JavaScript Website</li>
@@ -33,7 +34,7 @@ export const al20000Sprint07 = () => {
 		</ul>
 
 		{list20000Sprint07()}
-		{Closing()}
+		{closing(sprint)}
 	</div> )
 }
 
@@ -41,19 +42,20 @@ export const list20000Sprint07 = () => {
 	const daleSecurityLecture = () => { return internalLink('lecture', '/activity-dale/17' )}
 	const sprint = 7
 	return ( <div>
-		{ActivitiesListIntro(sprint)}
+		{activitiesListIntro(sprint)}
 		<ol>
-			{StandardActivitiesWithLinkAndSprint(sprint, healthRiskCalculatorWebOrPythonLink(), oreillyPlaylistICS())}
+			{standardActivities(sprint, healthRiskCalculatorWebOrPythonLink(), oreillyPlaylistICS())}
 			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Security and review our associated {daleSecurityLecture()}</li>
 		
-			{InitialPost()}	
+			{initialPost(sprint)}
 			<li>Verify that you will be presenting your Final Project on <em>{getFinalExamDateAndTime()}</em></li>
 			<li>Make and last updates to your {finalProjectProposalLink()}</li>
-			{StandardActivitiesClosingWithLinkAndSprint(sprint, healthRiskCalculatorWebOrPythonLink(), '8 hours')}
+			{standardActivitiesClosing(sprint, healthRiskCalculatorWebOrPythonLink(), '8 hours')}
 		</ol>
 	</div>)
 }
 
 // Certified for SP22 (04/05/2022)
+// Certified for FA22 (11/30/2022)
 // Todo: Review: Add zipped source code requirement to all Final Project presentation assignments.
 // Todo: Remove final lab 7 question and redistribute points.  

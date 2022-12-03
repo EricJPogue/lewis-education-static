@@ -1,19 +1,20 @@
 import React from 'react'
 
-import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } from './AL00000Sprint03'
-import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
+import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
+
 import { finalProjectSprint7Link } from '../Activities/FinalProject'
 import { introductionToReactLink } from '../Activities/IntroductionToReact'
 import { oreillyPlaylistSE, internalLink } from '../DataAndAPIs/Links'
 
 export const al44000Sprint07 = () => {
+	const sprint = 7
 	return ( <div>
 		<h5>Sprint 7: Final Project, Design Patterns, and React</h5>
 
 		<p>Welcome to sprint 7. This sprint will see us continuing to work on our final project, optimizing your team’s 
 		Agile processes, leaning about React, and looking at Design Patterns.</p>
 
-		{LearningObjectivesIntro()}
+		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Utilize your knowledge of Agile development and Saas to deliver sprint backlog stories</li>
 			<li>Understand Design Patterns with a particular focus on the Model-View-Controller pattern</li>
@@ -21,24 +22,23 @@ export const al44000Sprint07 = () => {
 			<li>Understand Application architecture particularly as it relates to Object-Oriented Programming and Databases</li>
 		</ul>
 
-		{list44000Sprint07()}
-		{Closing()}
+		{list44000Sprint07(sprint)}
+		{closing(sprint)}
 	</div> )
 }
 
-export const list44000Sprint07 = () => {
+export const list44000Sprint07 = (sprint) => {
 	const reactProgrammingTogether = () => { return internalLink('React on Azure', '/activity-config/react-on-azure')}
-	const sprint = 7
 	return ( <div>
-		{ActivitiesListIntro(sprint)}
+		{activitiesListIntro(sprint)}
 		<ol>
-			{StandardActivitiesWithLinkAndSprint(sprint, finalProjectSprint7Link(), oreillyPlaylistSE())}
+			{standardActivities(sprint, finalProjectSprint7Link(), oreillyPlaylistSE())}
 			<li>Read Chapter 10 of Fox on Project Management, Scrum, Pairs, and Version Control Systems</li>
 
-			{InitialPost()}		
+			{initialPost(sprint)}
 			<li>Complete Introduction to React {introductionToReactLink()}</li>	
 			<li>Complete {reactProgrammingTogether()} programming together tutorial</li>
-			{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectSprint7Link(), '8 hours')}
+			{standardActivitiesClosing(sprint, finalProjectSprint7Link(), '8 hours')}
 		</ol>
 	</div> )
 }
