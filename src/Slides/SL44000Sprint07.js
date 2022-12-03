@@ -151,3 +151,5 @@ export const se_7_6of6 = () => {
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_8_1of6_lists.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ backlogGrooming, tLab, preworkNext ]) 
  }
+
+ 

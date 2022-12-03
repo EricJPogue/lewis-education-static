@@ -50,3 +50,5 @@ export const list44000Sprint07 = (sprint) => {
 
 // Todo: Consider adding back in Architecture lecture or removing SQL questions from quiz.
 // Todo: Make sure that in sprints 7 & 8 that “individual” lab questions are identified. 
+
+// BugBug: Fix or remove Quiz 7 Question "What are the advantages of Software Inspection.."
