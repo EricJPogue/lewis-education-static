@@ -17,7 +17,6 @@ export const ics_8_1of6_lists = xyz_n_1of6_lists(sprint)
 export const ics_8_1of6 = () => { 
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
-			'Sprint 8 is different in many ways',
 			`We will be focused on final projects throughout the sprint ${sprint}`,
 			'No regular class sessions during finals week',
 			'You will submit Quiz 8, Lab 8, Reflection 8, and Final Project Presentation assignments',
@@ -39,10 +38,8 @@ const ics_8_2of6_lists = {
 		`Be prepared for Quiz ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
-		`Discussion Board ${sprint} as a scrum team`,
-		'Review Demo Schedule for Next Class',
-		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		'Lab & Programming Together',
+		`Quiz ${sprint} as a scrum team` ]
 }
 export const ics_8_2of6 = () => { return [ tUnderConstruction ] }
 

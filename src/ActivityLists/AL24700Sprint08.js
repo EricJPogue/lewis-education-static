@@ -25,7 +25,7 @@ export const al24700Sprint08 = () => {
 	</div> )
 }
 
-const list24700Sprint08 = (sprint) => {
+export const list24700Sprint08 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
