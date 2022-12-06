@@ -1,4 +1,4 @@
-import { getCalendarByCalendarID, _FALL_2022_08_29_16, _CURRENT_CALENDAR } from "./Calendars"
+import { getCalendarByCalendarID, _SPRING_2023_01_09_16, _FALL_2022_08_29_16, _CURRENT_CALENDAR } from "./Calendars"
 
 import { al44000Sprint3Topics } from "../ActivityLists/AL44000Sprint03"
 
@@ -231,7 +231,8 @@ export const classSectionList = [
 	{ 'classID':'fa22-cpsc-24700-001', 'title':'Web and Distributed Programming', 'number':'24700', 'section':'001', 'class':_CPSC_24700, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'3-3:50 PM CT', 'finalExam':'Friday, December 16 from 4 PM to 6 PM CT' },
 	{ 'classID':'cpsc-24500', 'title':'Object-Oriented Programming', 'number':'24500', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'time':'', 'finalExam':'', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
 	{ 'classID':'cpsc-36000', 'title':'Applied Programming Languages', 'number':'36000', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/se3c5q62-syllabus-cpsc-36000-001.pdf' },
-	{ 'classID':'cpsc-49200', 'title':'Software Systems Capstone', 'number':'49200', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'time':'', 'finalExam':'', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' }
+	{ 'classID':'cpsc-49200', 'title':'Software Systems Capstone', 'number':'49200', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'time':'', 'finalExam':'', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' },
+	{ 'classID':'sp23-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'002', 'class':_CPSC_20000, 'calendarID':_SPRING_2023_01_09_16, 'schedule':_MWF, 'location':'Arts and Sciences AS 104A','time':'1-1:50 PM', 'finalExam':'Wednesday, May 3 from 1:30 PM to 3:30 PM CT' }
 ]
 
 // Non-current courses.
