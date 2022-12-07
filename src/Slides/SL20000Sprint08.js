@@ -1,6 +1,9 @@
 
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 import { tUnderConstruction, tNoRegularClassToday } from './SL00000Sprint00'
+import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
+import { tQuiz, tPrework } from './SLSprint00'
+import { tLab, completeDeck } from './SL00000Sprint00'
 
 import { orderedListSlide } from './SLSprint00'
 
@@ -32,18 +35,37 @@ export const ics_8_1of6 = () => {
 // Sprint 8 session 2 of 6: Wednesday
 const ics_8_2of6_lists = {
 	'announcements':[ 
-		'This is the last week of regular classes' ],
+		'This is the last week of regular classes', 
+		'Be certain you have your final exam time marked on your calendar ' ],
 	'prework':[
 		'Complete through activity 4 prior to next class', '',
 		`Be prepared for Quiz ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
 		'Lab & Programming Together',
-		`Quiz ${sprint} as a scrum team` ]
+		`Quiz ${sprint}` ]
 }
-export const ics_8_2of6 = () => { return [ tUnderConstruction ] }
+export const ics_8_2of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_8_2of6_lists, sprint, activityList)
+	const quiz = () => { return tQuiz(sprint) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_8_3of6_lists.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ tLab, preworkNext, quiz ]) 
+}
 
 // Sprint 8 session 3 of 6: Friday
+const ics_8_3of6_lists = {
+	'announcements':[ 
+		'Today is our last regular class session' ],
+	'prework':[
+		'Complete through activity 4 prior to next class', '',
+		`Be prepared for sprint ${sprint-1} Demos & Retrospectives`,
+		'Be prepared for Lab & Programming Together' ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		'Lab & Programming Together' ]
+}
 export const ics_8_3of6 = () => { return [ tUnderConstruction ] }
 
 // Sprint 8 session 4 of 6: Monday
