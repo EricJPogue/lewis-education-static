@@ -1,9 +1,11 @@
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 import { tNoRegularClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
+import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
+import { tQuiz, tPrework } from './SLSprint00'
+import { tLab, completeDeck } from './SL00000Sprint00'
 
 import { tUnderConstruction } from './SL00000Sprint00'
-
 
 import { list44000Sprint07 } from '../ActivityLists/AL44000Sprint07'
 import { list44000Sprint08 } from '../ActivityLists/AL44000Sprint08'
@@ -32,18 +34,43 @@ export const se_8_1of6 = () => {
 // Sprint 8 session 2 of 6: Wednesday
 const se_8_2of6_lists = {
 	'announcements':[ 
-		'This is the last week of regular classes' ],
+		'This is the last week of regular classes', 
+		'Be certain you have your final exam time marked on your calendar ' ],
 	'prework':[
 		'Complete through activity 4 prior to next class', '',
 		`Be prepared for Quiz ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
+		'Complete Sprint Planning',
+		'Lab & Programming Together',
+		`Quiz ${sprint}` ]
+}
+export const se_8_2of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_8_2of6_lists, sprint, activityList)
+	const sprintPlanning = () => {
+		return orderedListSlide('Sprint Planning', `Complete sprint ${sprint} planning including:`, [
+			`Final review of sprint ${sprint} backlog`,
+			'Commitment',
+			'Celebration' ])
+	}
+	const quiz = () => { return tQuiz(sprint) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_8_3of6_lists.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ sprintPlanning, tLab, preworkNext, quiz ]) 
+}
+
+// Sprint 8 session 3 of 6: Friday
+const se_8_3of6_lists = {
+	'announcements':[ 
+		'This is the last week of regular classes' ],
+	'prework':[
+		'Complete through activity 7 prior to next class', '',
+		'Be prepared for Demos & Retrospectives',
+		'Be prepared for Lab & Programming Together' ],
+	'agenda':[
 		'Lab & Programming Together',
 		`Quiz ${sprint} as a scrum team` ]
 }
-export const se_8_2of6 = () => { return [ tUnderConstruction ] }
-
-// Sprint 8 session 3 of 6: Friday
 export const se_8_3of6 = () => { return [ tUnderConstruction ] }
 
 // Sprint 8 session 4 of 6: Monday

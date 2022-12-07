@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, standardActivitiesClosing, closing } from './AL00000Sprint00'
-import { oreillyPlaylistWeb, architecturePart2 } from '../DataAndAPIs/Links'
+import { oreillyPlaylistWeb } from '../DataAndAPIs/Links'
 import { finalProjectDistributedV2Link } from '../Activities/FinalProject';
 
 export const al24700Sprint08 = () => {
@@ -30,7 +30,6 @@ export const list24700Sprint08 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, finalProjectDistributedV2Link(), oreillyPlaylistWeb())}
-			<li>Explore {architecturePart2()}</li>
 			{standardActivitiesClosing(sprint, finalProjectDistributedV2Link(), '12 hours')}
 		</ol>
 	</div> )
@@ -39,3 +38,4 @@ export const list24700Sprint08 = (sprint) => {
 // Certified for FA22 (12/03/2022)
 // Todo: Consider adding programming together tutorials link to sprint 8 closing.
 // Todo: Consider reviewing and improving quiz 8.
+// Todo: Consider adding back '<li>Explore {architecturePart2()}</li>'

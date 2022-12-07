@@ -1,3 +1,5 @@
+// BugBug: Move all sprint 23 functionality to new source file.
+
 import { getClassSection, _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from '../DataAndAPIs/Classes'
 import { getCalendarPlusByCalendarID } from '../DataAndAPIs/Calendars'
 
@@ -21,15 +23,15 @@ const makeDefaultClassSection = () => {
 
 const sp23MakeDefaultClassSection = () => {
 	let defaultClassSection= {
-		officeHours:'Thursday 10 to 11:30 AM CT by appointment', // Todo: Consider adding 'officeHours' to calendar.
-		appointmentRequests:'Appointments can be requested via email', // Todo: Consider moving 'appointmentRequests' to syllabus. 
+		officeHours:'Thursday 10 to 11:30 AM CT by appointment', // Todo: Consider adding 'officeHours' to _INSTRUCTOR.
+		appointmentRequests:'Appointments can be requested via email', // Todo: Consider moving 'appointmentRequests' to _INSTRUCTOR. 
 	}
 
 	const classSection = getClassSection()
 	defaultClassSection.section = classSection.section
 	defaultClassSection.meetingTimes = `${classSection.schedule} ${classSection.time}`
 	defaultClassSection.finalExam = classSection.finalExam
-	defaultClassSection.meetingLocation = classSection.location
+	defaultClassSection.meetingLocation = classSection.location // Todo: Change '.location' to '.meetingLocation'. 
 
 	const calendar = getCalendarPlusByCalendarID(classSection.calendarID)
 	defaultClassSection.description = calendar.description
@@ -39,15 +41,15 @@ const sp23MakeDefaultClassSection = () => {
 }
 
 // Syllabi for Spring 2023 classes:
-export const sp22_cpsc_20000_002 = () => { return syllabus(_CPSC_20000, sp23MakeDefaultClassSection(), _INSTRUCTOR) }
+export const sp22_cpsc_20000_002 = () => { return syllabus( _CPSC_20000, sp23MakeDefaultClassSection(), _INSTRUCTOR) }
 
 // Syllabi for Fall 2022 classes:
-export const fa22_cpsc_20000_002 = () => { return syllabus(_CPSC_20000, makeDefaultClassSection(), _INSTRUCTOR) }
-export const fa22_cpsc_20000_003 = () => { return syllabus(_CPSC_20000, makeDefaultClassSection(), _INSTRUCTOR) }
-export const fa22_cpsc_24700_001 = () => { return syllabus(_CPSC_24700, makeDefaultClassSection(), _INSTRUCTOR) }
-export const fa22_cpsc_44000_001 = () => { return syllabus(_CPSC_44000, makeDefaultClassSection(), _INSTRUCTOR) }
+export const fa22_cpsc_20000_002 = () => { return syllabus( _CPSC_20000, makeDefaultClassSection(), _INSTRUCTOR ) }
+export const fa22_cpsc_20000_003 = () => { return syllabus( _CPSC_20000, makeDefaultClassSection(), _INSTRUCTOR ) }
+export const fa22_cpsc_24700_001 = () => { return syllabus( _CPSC_24700, makeDefaultClassSection(), _INSTRUCTOR ) }
+export const fa22_cpsc_44000_001 = () => { return syllabus( _CPSC_44000, makeDefaultClassSection(), _INSTRUCTOR ) }
 
 // Supported courses that are not being offered currently. 
-export const cpsc_24500 = () => { return syllabus(_CPSC_24500, makeDefaultClassSection(), _INSTRUCTOR) }
-export const cpsc_36000 = () => { return syllabus(_CPSC_36000, makeDefaultClassSection(), _INSTRUCTOR) }
-export const cpsc_49200 = () => { return syllabus(_CPSC_49200, makeDefaultClassSection(), _INSTRUCTOR) }
+export const cpsc_24500 = () => { return syllabus( _CPSC_24500, makeDefaultClassSection(), _INSTRUCTOR ) }
+export const cpsc_36000 = () => { return syllabus( _CPSC_36000, makeDefaultClassSection(), _INSTRUCTOR ) }
+export const cpsc_49200 = () => { return syllabus( _CPSC_49200, makeDefaultClassSection(), _INSTRUCTOR ) }
