@@ -1,12 +1,10 @@
-import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_3of6 } from './SL00000Sprint00'
 import { tNoRegularClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 import { tQuiz, tPrework } from './SLSprint00'
 import { tLab, completeDeck } from './SL00000Sprint00'
-
-
-import { tUnderConstruction } from './SL00000Sprint00'
+import { submissionPercentage } from './SLSprint00'
 
 
 import { list24700Sprint07 } from '../ActivityLists/AL24700Sprint07'
@@ -69,7 +67,36 @@ const web_8_3of6_lists = {
 		`Sprint ${sprint-1} Retrospective`,
 		'Lab & Programming Together' ]
 }
-export const web_8_3of6 = () => { return [ tUnderConstruction ] }
+export const web_8_3of6 = () => { 
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:11, submitted:11 },
+			{ name: 'Quiz', due:11, submitted:11 },
+			{ name: 'Lab', due:11, submitted:10 },
+			{ name: 'Reflection', due: 11, submitted: 10 }
+		])
+	}
+
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Fantastic submission percentage!',
+			'All assignments graded and posted', 
+			'Very nice work!' ])
+	}
+	const finalComments = () => {
+		return orderedListSlide('Thank you!',
+			'', [
+			'Thank you for making this a wonderful experience for me',
+			'Don’t hesitate to reach out in the future',
+			'Hope to see you in a future class', 
+			'Very nice work! I am impressed with what you have accomplished.' ])
+	}
+
+	let slides = xyz_n_3of6(sprint, web_8_3of6_lists, web_8_7of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
+	slides.splice(slides.length-2, 0, finalComments)
+	return slides
+}
 
 // Sprint 8 session 4 of 6: Monday
 export const web_8_4of6 = () => { return [ tNoRegularClassToday ] }
@@ -79,3 +106,14 @@ export const web_8_5of6 = () => { return [ tNoRegularClassToday ] }
 
 // Sprint 8 session 6 of 6: Friday
 export const web_8_6of6 = () => { return [ tNoRegularClassToday ] }
+
+// Final Exam / Final Project Presentation
+const web_8_7of6_lists = {
+	'announcements':[ 
+		'Final Project Presentations Today',
+		'Please consider taking time to complete your course evaluation' ],
+	'prework':[
+		'Be prepared for your final project presentations' ],
+	'agenda':[
+		`Final Project Presentations` ]
+}
