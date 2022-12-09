@@ -1,11 +1,9 @@
+import { getClass } from '../DataAndAPIs/Classes'
+import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 
-import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
-import { tUnderConstruction, tNoRegularClassToday } from './SL00000Sprint00'
-import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
-import { tQuiz, tPrework } from './SLSprint00'
-import { tLab, completeDeck } from './SL00000Sprint00'
-
-import { orderedListSlide } from './SLSprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_3of6 } from './SL00000Sprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab, tNoRegularClassToday } from './SL00000Sprint00'
+import { tQuiz, tPrework, submissionPercentage, orderedListSlide } from './SLSprint00'
 
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
 import { list20000Sprint08 } from '../ActivityLists/AL20000Sprint08'
@@ -56,7 +54,9 @@ export const ics_8_2of6 = () => {
 // Sprint 8 session 3 of 6: Friday
 const ics_8_3of6_lists = {
 	'announcements':[ 
-		'Today is our last regular class session' ],
+		'Today is our last regular class session',
+		`Our final project presentations are **${getFinalExamDateAndTime()}**`, 
+		'Please consider taking time to complete your course evaluation' ],
 	'prework':[
 		'Complete through activity 4 prior to next class', '',
 		`Be prepared for sprint ${sprint-1} Demos & Retrospectives`,
@@ -64,9 +64,48 @@ const ics_8_3of6_lists = {
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
+		'Final Comments',
 		'Lab & Programming Together' ]
 }
-export const ics_8_3of6 = () => { return [ tUnderConstruction ] }
+export const ics_8_3of6 = () => { 
+	const metricsSubmissionPercentage = () => {
+		if (getClass().section === '002') {
+			return submissionPercentage([
+				{ name: 'Discussion', due:26, submitted:25 },
+				{ name: 'Quiz', due:26, submitted:26 },
+				{ name: 'Lab', due:26, submitted:26 },
+				{ name: 'Reflection', due: 26, submitted: 25 }
+			])
+		} else {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:24 },
+				{ name: 'Quiz', due:27, submitted:27 },
+				{ name: 'Lab', due:27, submitted:27 },
+				{ name: 'Reflection', due: 27, submitted: 27 }
+			])
+		}
+	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Fantastic submission percentage!',
+			'All assignments graded and posted', 
+			'Very nice work!' ])
+	}
+	const finalComments = () => {
+		return orderedListSlide('Thank you!',
+			'', [
+			'Thank you for making this a wonderful experience for me',
+			'Don’t hesitate to reach out in the future',
+			'Hope to see you in a future class', 
+			'Very nice work! I am impressed with what you have accomplished.' ])
+	}
+
+	let slides = xyz_n_3of6(sprint, ics_8_3of6_lists, ics_8_7of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
+
+	slides.splice(slides.length-2, 0, finalComments)
+	return slides
+}
 
 // Sprint 8 session 4 of 6: Monday
 export const ics_8_4of6 = () => { return [ tNoRegularClassToday ] }
@@ -76,3 +115,14 @@ export const ics_8_5of6 = () => { return [ tNoRegularClassToday ] }
 
 // Sprint 8 session 6 of 6: Friday
 export const ics_8_6of6 = () => { return [ tNoRegularClassToday ] }
+
+// Final Exam / Final Project Presentation
+const ics_8_7of6_lists = {
+	'announcements':[ 
+		'Final Project Presentations Today',
+		'Please consider taking time to complete your course evaluation' ],
+	'prework':[
+		'Be prepared for your final project presentations' ],
+	'agenda':[
+		`Final Project Presentations` ]
+}
