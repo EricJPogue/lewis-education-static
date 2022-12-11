@@ -94,7 +94,10 @@ export class SprintClassActivities extends Component {
 	finalExamDateAndTimeTextForFinalSprint = () => {
 		let finalExam = getFinalExamDateAndTime()
 		if ((this.currentSprintBaseOne() === 8) && (finalExam.length > -0))
-			return (<div>Final Project Presentations will be held during our scheduled Final Exam time which is <u><em>{finalExam}</em></u> with in-person attendance required.</div>)
+			return (<div>
+				{internalLink('Final Project Presentations', '/deck/8-7')} will be held during our scheduled Final Exam 
+				time which is <u><em>{finalExam}</em></u> with in-person attendance required.
+			</div>)
 		else
 			return null
 	}
@@ -127,7 +130,7 @@ export class SprintClassActivities extends Component {
 			<div>
 				{this.renderScheduleHeader()}
 				<Table striped bordered hover>
-					<thead><tr><th style={{width:'300px'}}>Day</th><th>Schedule</th></tr></thead>
+					<thead><tr><th style={{width:'300px'}}>Day</th><th>Schedule and Slides</th></tr></thead>
 					<tbody>
 						{this.renderScheduleRow(incrementDate(dates.start,0),schedule.FirstMonday,1)}
 						{this.renderScheduleRow(incrementDate(dates.start,2),schedule.FirstWednesday,2)}
