@@ -126,7 +126,6 @@ const se_8_7of6_lists = {
 		'Verify that you have submitted your final project presentation assignment',
 		'Be prepared for your final project presentations' ],
 	'agenda':[
-		'Prework for Today',
 		'Final Project Presentations',
 		'Next Steps',
 		'Thank you!' ]
