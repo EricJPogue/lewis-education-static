@@ -59,7 +59,7 @@ export class SprintClassActivities extends Component {
 		"FirstMonday":     "Introductions & Sprint Planning",
 		"FirstWednesday":  "Sprint Planning (continued)",
 		"FirstFriday":     "Discussion Board and Topic Discussion",
-		"SecondMonday":    "No class (Labor Day)",
+		"SecondMonday":    "No class (Martin Luther King Day)",
 		"SecondWednesday": "Quiz",
 		"SecondFriday":    "Lab"
 	}

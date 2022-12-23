@@ -1,4 +1,4 @@
-import { getCalendarByCalendarID, _SPRING_2023_01_09_16, _FALL_2022_08_29_16, _CURRENT_CALENDAR } from "./Calendars"
+import { getCalendarByCalendarID, _SPRING_2023_01_09_16, _CURRENT_CALENDAR } from "./Calendars"
 
 import { al44000Sprint3Topics } from "../ActivityLists/AL44000Sprint03"
 
@@ -171,71 +171,6 @@ export const _CPSC_24700 = {
 	]
 }
 
-export const _CPSC_44000 = {
-	name:'Software Engineering',
-	id:'CPSC-44000',
-	number: 44000,
-	creditHours:3,
-	description: 
-		`Methods, strategies, and tools for implementing software systems, particularly as part of a development team. 
-		Topics include the software development life cycle, Unified Modeling Language, software testing techniques, 
-		software security, open-source development, requirements gathering and documentation, maintenance, and basic
-		software project management.`,
-	prerequisites:'CPSC-24500 Object-Oriented Programming',
-	learningOutcomes:[
-		'compare and contrast various software process models',
-		'be able to elicit and analyze requirements of a proposed application',
-		'write clear and complete requirements documents',
-		'identify the events to which the software must respond and document them as a set of use cases',
-		'identify security issues in a software projects requirements and design',
-		'use techniques to produce self-documenting code',
-		'use coding strategy to produce secure code',
-		'draw diagrams to model workflows',
-		'develop and use diagrams to model classes and the interaction of classes',
-		'understand and practice unit testing and functional testing',
-		'understand the techniques used to test non-functional requirements such as performance and security',
-		'develop a project schedule'
-	],
-	programOutcomes:[
-		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
-		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
-		{'value':7, outcome:'explain how programming languages are designed and implemented'}
-	],
-	baccalaureateCharacteristics:[
-		{'value':1, outcome:'Essential Skills'},
-		{'value':6, outcome:'Critical Thinking'}
-	],
-	textBook: 'Fox and Patterson. Engineering Software as a Service: An Agile Approach Using Cloud Computing.  ISBN: 978-0984881246.',
-	modules: [
-		'Software Engineering Life Cycles, Software as a Service, and Cloud Computing',
-		'Overview of Ruby, JavaScript, and Node.js',
-		`${al44000Sprint3Topics}`, // Previously: Behavior Driven Development, Plan and Document Requirements, and hosting Node.js in the cloud
-		'Testing and Test-Driven Development, HTML, CSS, and JavaScript, Node.js, and Express',
-		'Maintenance and Metrics, Live Scrum Team with Requirements, Planning, Environment, and Demos',
-		'Project Management & Scaled Agile, Live Scrum Team adding Metrics, and Testing',
-		'Security and Live Scrum Team',
-		'Software Architecture, Final Project, Live Scrum Team'
-	]
-}
-
-// Application Constants
-export const URLCLASSID = 'cpsc'
-export const _MWF = 'MWF'
-export const _TTR = 'TTh'
-export const _ASYNCHRONOUS = 'Asynchronous' 
-
-export const classSectionList = [
-	{ 'classID':'fa22-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'002', 'class':_CPSC_20000, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'10-10:50 AM', 'finalExam':'Monday, December 12 from 10:30 AM to 12:30 PM CT' },
-	{ 'classID':'fa22-cpsc-20000-003', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'003', 'class':_CPSC_20000, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'11-11:50 AM', 'finalExam':'Friday, December 16 from 10:30 AM to 12:30 PM CT' },
-	{ 'classID':'fa22-cpsc-44000-001', 'title':'Software Engineering', 'number':'44000', 'section':'001', 'class':_CPSC_44000, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'2-2:50 PM', 'finalExam':'Monday, December 12 from 4 PM to 6 PM CT' },
-	{ 'classID':'fa22-cpsc-24700-001', 'title':'Web and Distributed Programming', 'number':'24700', 'section':'001', 'class':_CPSC_24700, 'calendarID':_FALL_2022_08_29_16, 'schedule':_MWF, 'time':'3-3:50 PM CT', 'finalExam':'Friday, December 16 from 4 PM to 6 PM CT' },
-	{ 'classID':'cpsc-24500', 'title':'Object-Oriented Programming', 'number':'24500', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'time':'', 'finalExam':'', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
-	{ 'classID':'cpsc-36000', 'title':'Applied Programming Languages', 'number':'36000', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'finalExam':'', 'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/se3c5q62-syllabus-cpsc-36000-001.pdf' },
-	{ 'classID':'cpsc-49200', 'title':'Software Systems Capstone', 'number':'49200', 'section':'XXX', 'calendarID':_CURRENT_CALENDAR, 'schedule':'', 'time':'', 'finalExam':'', 'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' },
-	{ 'classID':'sp23-cpsc-20000-002', 'title':'Introduction to Computer Science', 'number':'20000', 'section':'002', 'class':_CPSC_20000, 'calendarID':_SPRING_2023_01_09_16, 'schedule':_MWF, 'location':'Arts and Sciences AS 104A','time':'1-1:50 PM', 'finalExam':'Wednesday, May 3 from 1:30 PM to 3:30 PM CT' }
-]
-
-// Non-current courses.
 export const _CPSC_24500 = {
 	name:'Object-Oriented Programming',
 	id:'CPSC-24500',
@@ -345,6 +280,53 @@ export const _CPSC_36000 = {
 	]
 }
 
+export const _CPSC_44000 = {
+	name:'Software Engineering',
+	id:'CPSC-44000',
+	number: 44000,
+	creditHours:3,
+	description: 
+		`Methods, strategies, and tools for implementing software systems, particularly as part of a development team. 
+		Topics include the software development life cycle, Unified Modeling Language, software testing techniques, 
+		software security, open-source development, requirements gathering and documentation, maintenance, and basic
+		software project management.`,
+	prerequisites:'CPSC-24500 Object-Oriented Programming',
+	learningOutcomes:[
+		'compare and contrast various software process models',
+		'be able to elicit and analyze requirements of a proposed application',
+		'write clear and complete requirements documents',
+		'identify the events to which the software must respond and document them as a set of use cases',
+		'identify security issues in a software projects requirements and design',
+		'use techniques to produce self-documenting code',
+		'use coding strategy to produce secure code',
+		'draw diagrams to model workflows',
+		'develop and use diagrams to model classes and the interaction of classes',
+		'understand and practice unit testing and functional testing',
+		'understand the techniques used to test non-functional requirements such as performance and security',
+		'develop a project schedule'
+	],
+	programOutcomes:[
+		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
+		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
+		{'value':7, outcome:'explain how programming languages are designed and implemented'}
+	],
+	baccalaureateCharacteristics:[
+		{'value':1, outcome:'Essential Skills'},
+		{'value':6, outcome:'Critical Thinking'}
+	],
+	textBook: 'Fox and Patterson. Engineering Software as a Service: An Agile Approach Using Cloud Computing.  ISBN: 978-0984881246.',
+	modules: [
+		'Software Engineering Life Cycles, Software as a Service, and Cloud Computing',
+		'Overview of Ruby, JavaScript, and Node.js',
+		`${al44000Sprint3Topics}`, // Previously: Behavior Driven Development, Plan and Document Requirements, and hosting Node.js in the cloud
+		'Testing and Test-Driven Development, HTML, CSS, and JavaScript, Node.js, and Express',
+		'Maintenance and Metrics, Live Scrum Team with Requirements, Planning, Environment, and Demos',
+		'Project Management & Scaled Agile, Live Scrum Team adding Metrics, and Testing',
+		'Security and Live Scrum Team',
+		'Software Architecture, Final Project, Live Scrum Team'
+	]
+}
+
 export const _CPSC_49200 = {
 	name:'Software Engineering',
 	id:'CPSC-49200',
@@ -399,3 +381,42 @@ export const _CPSC_49200 = {
 		'Full Product Development, Product Presentations, Product Handoff'
 	]
 }
+
+// Application Constants
+export const URLCLASSID = 'cpsc'
+export const _MWF = 'MWF'
+const _T = 'T'
+export const _TTR = 'TTh'
+const _Th = 'Th'
+export const _ASYNCHRONOUS = 'Asynchronous' 
+
+export const classSectionList = [
+	{ 'classID':'sp23-cpsc-44000-001', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_44000, 'number':'44000', 'section':'001', 'crn':'10788', 
+		'title':'Software Engineering', 'location':'Arts and Sciences AS 104A', 'schedule':_MWF, 'time':'11-11:50 am', 'finalExam':'Friday, May 5 from 10:30 AM to 12:30 PM CT' },
+
+	{ 'classID':'sp23-cpsc-20000-002', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 'crn':'10526', 
+		'title':'Introduction to Computer Science', 'location':'Arts and Sciences AS 104A', 'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, May 3 from 1:30 PM to 3:30 PM CT' },
+
+	{ 'classID':'sp23-cpsc-24500-001', 'class':_CPSC_24500, 'number':'24500', 'section':'001', 'crn':'10561',
+		'title':'Object-Oriented Programming', 'location':'Arts and Sciences AS 104A', 'schedule':_MWF, 'time':'2-2:50 pm', 'finalExam':'Monday, May 1 from 4-6 pm CT', 
+		'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
+
+	{ 'classID':'sp23-cpsc-49200-001', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_49200, 'number':'49200', 'section':'001', 'crn':'10815', 
+		'title':'Software Systems Capstone', 'schedule':_T, 'time':'2-3:15', 'finalExam':'Thursday, May 4 from 1:30 to 3:30 pm CT**', 
+		'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' },
+
+	{ 'classID':'sp23-cpsc-49200-004', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_49200, 'number':'49200', 'section':'004', 'crn':'10822', 
+		'title':'Software Systems Capstone', 'schedule':_Th, 'time':'2-3:15', 'finalExam':'Thursday, May 4 from 1:30 to 3:30 pm CT', 
+		'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' },
+
+	{ 'classID':'cpsc-24700', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_24700, 'number':'24700', 'section':'XXX', 'crn':'00000',
+		'title':'Web and Distributed Programming', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' },
+	
+	{ 'classID':'cpsc-36000', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_36000, 'number':'36000', 'section':'XXX', 'crn':'00000',
+		'title':'Applied Programming Languages', 'location':'', 'schedule':'', 'time':'', 'finalExam':'', 
+		'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/se3c5q62-syllabus-cpsc-36000-001.pdf' }	
+]
+
+
+
+

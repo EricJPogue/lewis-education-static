@@ -70,3 +70,10 @@ export const list20000Sprint01 = (sprint) => {
 //     the destination page. 
 
 // Todo: Update syllabus with Activity List headers... or update Activity list headers. 
+
+/*
+Sprint Checklist:
+- Update and verify activity list link
+- Update and verify due date for discussion, quiz, lab, and reflection
+- Update and verify verify quiz Answer display date
+*/
