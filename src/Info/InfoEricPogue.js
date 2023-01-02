@@ -17,7 +17,7 @@ export const InfoEricPogue = () => {
 		GitHub: {personalGitHub()}<br /><br />
 
 		Lewis Office Location: AS-124-A<br />
-		Office Hours: TTR 2:30 to 4 PM CT by appointment<br /><br />
+		Office Hours: Thursday 10 to 11:30 AM CT by appointment<br /><br />
 
 		Desk Phone: <a href='tel: +18158365015'>(815) 836-5015</a><br />
 		Personal Mobile Phone: <a href='tel: +15632097280'>(563) 209-7280</a><br />
