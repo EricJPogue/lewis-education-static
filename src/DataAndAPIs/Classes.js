@@ -36,7 +36,9 @@ export const getClassIDfromURL = () => {
 	return cpscParam
 }
 
-export const getClassCalendar = () => { return getCalendarByCalendarID(getClass().calendarID) }
+export const getClassCalendar = () => { 
+	return getCalendarByCalendarID(getClass().calendarID) 
+}
 
 export const getClass = () => {
 	const classID = getClassIDfromURL()
@@ -397,7 +399,7 @@ export const classSectionList = [
 	{ 'classID':'sp23-cpsc-20000-002', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 'crn':'10526', 
 		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, May 3 from 1:30 PM to 3:30 PM CT' },
 
-	{ 'classID':'sp23-cpsc-24500-001', 'class':_CPSC_24500, 'number':'24500', 'section':'001', 'crn':'10561',
+	{ 'classID':'sp23-cpsc-24500-001', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_24500, 'number':'24500', 'section':'001', 'crn':'10561',
 		'title':'Object-Oriented Programming', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'2-2:50 pm', 'finalExam':'Monday, May 1 from 4-6 pm CT', 
 		'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
 

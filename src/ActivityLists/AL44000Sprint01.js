@@ -52,7 +52,7 @@ export const list44000Sprint01 = (sprint) => {
 		<ol>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
 			<li>Read “Engineering Software as a Service” Chapter 1 by Armando Fox and David Patterson and review the associated {foxChapter1Lecture()}{estimated('2 hours')}</li>
-			<li>Begin to understand software as a service by completing {htmlLink()} - Part 1{estimated('2 hours')}</li>
+			<li>Begin to understand the software as a service architecture by completing {htmlLink()} - Part 1{estimated('2 hours')}</li>
 
 			{initialPost(sprint)}
 			<li>Complete {toolsOfTheTradeLink()}{estimated('2 hours')}</li>

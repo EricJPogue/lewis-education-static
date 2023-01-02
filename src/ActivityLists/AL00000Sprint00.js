@@ -72,6 +72,7 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 			<li>Review our course {syllabus()}</li>
 			<li>Understand blended learning by watching {Blended()}</li>
 			<li>Be prepared to participate in your scrum team by watching {scrumIn7Min()}</li>
+			<li>Become comfortable with logging into and adding a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
 			<li>Start working on {toolsOfTheTrade()} by setting up Discord and O’Reilly Books</li>
 		</div> )
 	}
@@ -120,7 +121,6 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink='', programmingAssignmentEstimate='') => { 
 	const sprint1StandardActivitiesClosing = () => { 
 		return (<div>
-			<li>Add a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
 			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 			<li><em>Complete Discussion {sprint} by responding to at least two of your classmates’ posts</em></li>
 			<li><em>Submit sprint {sprint} assignments including Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>
