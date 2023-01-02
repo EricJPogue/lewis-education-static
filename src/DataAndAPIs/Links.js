@@ -35,7 +35,7 @@ export const PowerShell = () => { return internalLink('PowerShell', '/activity-c
 export const Terminal = () => { return internalLink('Terminal', '/activity-config/macos-setup-terminal-finder-and-git') }
 export const GitTutorial = () => { return internalLink('tutorial', '/activity-config/git-installation-on-windows-10') }
 
-export const Blended = () => { return internalLink('Blended Learning & Flipped Classroom', '/activity/blended-learning') }
+export const Blended = () => { return externalLink('Blended Learning & Flipped Classroom', 'https://www.youtube.com/watch?v=paQCE58334M') }
 export const scrumIn7Min = () => { return internalLink('Introduction to Scrum in 7 Minutes', '/activity/scrum-in-7-minutes') }
 
 export const blackboardChangePhoto = () => { return internalLink('Blackboard', '/activity/photo-to-blackboard')}

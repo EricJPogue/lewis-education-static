@@ -7,11 +7,10 @@ const panoptoWelcomeIFrameTag = () => {
 	return '<iframe src="https://lewisu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1bd10fe6-8984-4a88-98a1-ae7f0107d260&autoplay=false&offerviewer=false&showtitle=false&showbrand=false&captions=false&interactivity=all" height="576" width="1024" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>'
 }
 
-export const welcome2022Fall = () => {
+export const welcome = () => {
 	return ( <div>
 		<h4>{getClass().title}</h4>
-		<h5>Welcome to Lewis University Fall 2022!</h5>
-		<p style={{marginTop:'20px'}}>Please take a few minutes to view your fall 2022 welcome message.</p>
+		<h5>Welcome! Please take a few minutes to view your welcome message.</h5>
 		<IFrameComponent iframe={panoptoWelcomeIFrameTag()} />
 		<br />
 		<p>Please also take a few minutes to gain a better understand of Blended Learning and Scrum by reviewing the 
