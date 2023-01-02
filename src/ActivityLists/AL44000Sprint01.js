@@ -67,9 +67,11 @@ export const list44000Sprint01 = (sprint) => {
 
 
 // Certified for FA22 (08/26/22)
-// Certified for SP23 (02/01/23)
-
 // Todo: Fix the end of the Fox Preface video.
+
+// Certified for SP23 (01/02/23)
+
+
 
 
 

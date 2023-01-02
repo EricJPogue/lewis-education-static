@@ -62,3 +62,9 @@ export const list20000Sprint02 = (sprint) => {
 // Todo: Review and possibly reword Lab 2 questions relating to zipping and submitting tools of the trade. Be sure to 
 //     update "Part 1" naming as there is no longer a part 1 and part 2.
 // Todo: Consider removing Office 365 from the tools of the trade? Maybe it should be left for any writing assignments?
+// Todo: Update and improve all Lab Demo assignments to include more appropriate content.
+// Todo: Consider removing Office 365 from Tools of the Trade.
+// Todo: Figure out why when a link is clicked (i.e. Syllabus) the page scrolls to the same position on the page as
+//     the current page is on. This is confusing because you would assume clicking on the link takes you to the top of
+//     the destination page. 
+// Todo: Update syllabus with Activity List headers... or update Activity list headers. 

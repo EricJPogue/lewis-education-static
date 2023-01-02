@@ -57,23 +57,10 @@ export const list20000Sprint01 = (sprint) => {
 }
 
 // Certified for FA22 (08/27/2022)
-
-// Todo: Update and improve all Lab Demo assignments to include more appropriate content.
-// Todo: Update quiz 1 so that they can not see specific answers during the sprint. 
-// Todo: Update lab 1 questions 8 and 9 to be more clear. 
 // Todo: Add good feedback answer to lab 1 question 5 to see if we can do this on other important questions. 
-// Todo: Remove "part-1" reference to lab 1 question 8.
-// Todo: Consider removing Office 365 from Tools of the Trade.
 
-// Todo: Figure out why when a link is clicked (i.e. Syllabus) the page scrolls to the same position on the page as
-//     the current page is on. This is confusing because you would assume clicking on the link takes you to the top of
-//     the destination page. 
+// Certified for SP23 (01/02/23)
 
-// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
 
-/*
-Sprint Checklist:
-- Update and verify activity list link
-- Update and verify due date for discussion, quiz, lab, and reflection
-- Update and verify verify quiz Answer display date
-*/
+
+
