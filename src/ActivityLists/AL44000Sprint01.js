@@ -39,11 +39,11 @@ export const al44000Sprint01 = () => {
 
 		{list44000Sprint01(sprint)}
 		{closing(sprint)}
-		{extras()}
 	</div> )
 }
 
 export const list44000Sprint01 = (sprint) => {
+	const engineeringSoftwareAsAService = () => externalLink('Engineering Software as a Service','http://www.saasbook.info/')
 	const foxChapter0Lecture = () => internalLink('lecture', '/activity/fox-chapter-00')
 	const foxChapter1Lecture = () => internalLink('lecture', '/activity/fox-chapter-01')
 
@@ -51,7 +51,7 @@ export const list44000Sprint01 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
-			<li>Read “Engineering Software as a Service” Chapter 1 by Armando Fox and David Patterson and review the associated {foxChapter1Lecture()}{estimated('2 hours')}</li>
+			<li>Read {engineeringSoftwareAsAService()} Chapter 1 by Armando Fox and David Patterson and review the associated {foxChapter1Lecture()}{estimated('2 hours')}</li>
 			<li>Begin to understand the software as a service architecture by completing {htmlLink()} - Part 1{estimated('2 hours')}</li>
 
 			{initialPost(sprint)}
@@ -65,22 +65,12 @@ export const list44000Sprint01 = (sprint) => {
 	</div> )
 }
 
-const extras = () => {
-	const foxBetaOnlinePDF = () => externalLink('Engineering Software as a Service, Second Edition','https://learning.oreilly.com/playlists/b2510780-81f1-404e-975d-4354219ff894')
-	return (<div>	
-		<br />
-		<p>Additional suggested activities:</p>
-		<ul style={{listStyleType:'square'}}>
-			<li>Review the prerelease online version of {foxBetaOnlinePDF()}</li>
-		</ul>
-	</div>)
-}
+
+// Certified for FA22 (08/26/22)
+// Certified for SP23 (02/01/23)
 
 // Todo: Fix the end of the Fox Preface video.
-// Certified for FA22 (08/26/22)
 
-// BugBug: Review question "Which of the following statements relating Service-Oriented Architecture (SOA) and 
-// Software Development Lifecycles is True?" question and remove "Give Full Credit to Everyone" flag. 
 
 
 
