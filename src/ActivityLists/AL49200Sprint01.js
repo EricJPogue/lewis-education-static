@@ -42,7 +42,8 @@ export const list49200Sprint01 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-			<li>Request a product team by submitting Requirement 1 of {classProductSprint1Link()} via email by noon on <em>Wednesday, January 12th</em>.</li>
+			<li>Review Requirement 1 of {classProductSprint1Link()} and be prepared for team assignments in class 
+				on <em>Tuesday, January 10th</em>.</li>
 			{standardActivities(sprint, gettingToKnowEachOtherAbbreviatedLink())}
 			<li>Within {oreillyPlaylistSC()} scan “Essential Scrum” from the beginning through chapter 12</li>
 			<li>Within {oreillyPlaylistSC()} read “Essential Scrum” from the beginning through chapter 3</li>

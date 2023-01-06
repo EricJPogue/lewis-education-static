@@ -6,7 +6,6 @@ import { externalLink, agileAlliance, scrum, agileAllianceAgile101, productBackl
 
 import { aidanLink } from './Aidan'
 import { arduinoDroneLink } from './ArduinoDrone'
-import { deliveryDroneLink } from './DeliveryDrone'
 import { pitHubLink } from './PitHub'
 import { quizMasterMERNLink } from './QuizMasterMERN'
 import { seatSelectorMERNLink } from './SeatSelectorMERN'
@@ -20,7 +19,7 @@ export const classProductSprint1 = () => {
 <div>
 <br />
 <h4>{name1}</h4>
-<h5>Summary: Review available products, request teams, make team assignments, and self-organize into scrum teams, and 
+<h5>Summary: Review available products, request teams, make team assignments, self-organize into scrum teams, and 
 start working.</h5>
 <h5>Prerequisites: None</h5>
 
@@ -36,29 +35,38 @@ development, support, operations, product owner, and marketing for your product 
 <p>The products that are available for you to work on this semester are:</p>
 <ul style={{listStyleType:'square'}}>
 	<li>{aidanLink()} (formerly known as Stadia)</li>
-	<li>{deliveryDroneLink()} / {arduinoDroneLink()}</li>
 	<li>{pitHubLink()}</li>
 	<li>{quizMasterMERNLink()}</li>
 	<li>{seatSelectorMERNLink()}</li>
+	<li>{arduinoDroneLink()}</li>
 </ul>
 
-<p>Note that since the {deliveryDroneLink()} project is limited to two additional team members this semester, we will 
-likely utilize the {arduinoDroneLink()} project as our “overflow” if we have additional drone interest.</p>
+<p>Although it is possible to request to work on a product other that the products listed above, I encourage you to 
+select one of the above products. It would be <em>**extremely**</em> rare for a professional developer to have the 
+opportunity to start with a new application or to have the freedom to independently define what they were going to 
+create. In real life, 99.9 percent of the software development products already exist, have real users, need to be 
+supported while they are being enhanced, are complex with thousands or tens of thousand of lines of code, and not 
+breaking the existing application functionality is the number one concern.</p>
+
+<p>If you still feel you would like to propose to work on something else, please set up a time for us to discuss your 
+proposal and come prepared with your proposal in hand and ready to discuss the above topics. </p>
 
 <em>Requirement 1</em>
 <p>Review each of the products above in detail and send an email to your instructor that includes:</p>
 <ol>
-	<li>Your prioritized (forced ranked) list of at least three products from above that you would like to work on this semester</li>
+	<li>Your prioritized (forced ranked) list of at least three products from above that you would like to work on this 
+		semester</li>
 	<li>A very brief summary of what interest you most about your top two prioritized products</li>
 	<li>Your GitHub user name</li>
 	<li>A list of any classmates that you would like to work together with on the same Scrum product team</li>
-	<li>A brief summary of when you would be available to meet regularly and synchronously with your Scrum team</li>
-	<li>When you took Software Engineering (and your instructor) plus a description of your comfort level with Agile and Scrum</li>
+	<li>Confirmation that you will be available to meet regularly with your team each week on Tuesday from 2-3:15</li>
+	<li>When you took Software Engineering (and your instructor) plus a description of your comfort level with Agile 
+		and Scrum</li>
 </ol>
 
 <em>Requirement 2</em>
-<p>Accept the invitation from your instructor to join the GitHub repository where you and your team will be developing 
-your class product:</p>
+<p>Accept the invitation from your instructor to join the GitHub organization or repository where you and your team will 
+be developing your class product:</p>
 <ol>
 	<li>Accept the GitHub invitation from your instructor</li>
 	<li>Add your name and email address and GitHub user ID to the Credits section of the README.md file</li>
