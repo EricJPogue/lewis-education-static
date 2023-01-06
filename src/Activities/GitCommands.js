@@ -31,7 +31,7 @@ for {getClass().title} is:</p>
 then clone it locally using the <span style={mono}>“git clone”</span> command. Once we have a local copy to work with,
 the normal pattern is to create, update, and test code locally. Once the code is tested, we can update the remote GitHub 
 repository with the following sequence of commands:</p>
-<pre>{`git add .
+<pre>{`git add -A
 git commit -m "Update files."
 git push
 `}</pre><br />

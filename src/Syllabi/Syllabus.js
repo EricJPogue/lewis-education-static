@@ -7,9 +7,10 @@ import { fa22_cpsc_20000_002, fa22_cpsc_20000_003, fa22_cpsc_24700_001, fa22_cps
 
 export const Syllabus = () => {
 	const classID = getClassIDfromURL()
+
 	switch(classID) {
 		case 'sp23-cpsc-20000-002': return sp23_cpsc_20000_002()
-		case 'sp23-cpsc-25400-001': return sp23_cpsc_25400_001()
+		case 'sp23-cpsc-24500-001': return sp23_cpsc_25400_001()
 		case 'sp23-cpsc-44000-001': return sp23_cpsc_44000_001()
 		case 'sp23-cpsc-49200-001': return sp23_cpsc_49200_001()
 		case 'sp23-cpsc-49200-004': return sp23_cpsc_49200_001()
@@ -23,4 +24,6 @@ export const Syllabus = () => {
 
 		default: return null
 	}
+
+
 }

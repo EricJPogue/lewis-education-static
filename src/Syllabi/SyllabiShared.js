@@ -140,8 +140,8 @@ export const syllabus = (course, courseSection, instructor) => {
 				<tr>
 				<td></td>
 				<td colSpan={2}>
-					<p><em>Modality of Instruction:</em> This course will be a online, asynchronous, and include 
-					blended learning instructional elements.</p>
+					<p><em>Modality of Instruction:</em>This course will be a face-to-face in-person synchronous class 
+					with blended learning elements.</p>
 				</td>	
 				</tr>
 				{header(['VI.', 'Course Schedule'])}
