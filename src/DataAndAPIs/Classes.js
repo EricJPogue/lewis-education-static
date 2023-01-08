@@ -394,7 +394,7 @@ export const _ASYNCHRONOUS = 'Asynchronous'
 
 export const classSectionList = [
 	{ 'classID':'sp23-cpsc-44000-001', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_44000, 'number':'44000', 'section':'001', 'crn':'10788', 
-		'title':'Software Engineering', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'11-11:50 am', 'finalExam':'Friday, May 5 from 10:30 AM to 12:30 PM CT' },
+		'title':'Software Engineering', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'1-1:50 am', 'finalExam':'Friday, May 5 from 10:30 AM to 12:30 PM CT' },
 
 	{ 'classID':'sp23-cpsc-20000-002', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 'crn':'10526', 
 		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, May 3 from 1:30 PM to 3:30 PM CT' },
