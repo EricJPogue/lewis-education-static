@@ -37,7 +37,7 @@ export const al24500Sprint01 = () => {
 	</div> )
 }
 
-const list24500Sprint01 = (sprint) => {
+export const list24500Sprint01 = (sprint) => {
 	const conceptsAndPractices = () => { return internalLink('Object-Oriented Programming Concepts and Practices', '/activity-oop/concepts-and-practices') }
 	return ( <div>
 		{activitiesListIntro(sprint)}

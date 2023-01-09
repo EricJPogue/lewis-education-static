@@ -9,12 +9,15 @@ import { sprint6Router } from './SLSprint06'
 
 import { tutorialRouter } from './Tutorials'
 
+import { ics_1_1of6 } from './SL20000Sprint01'
 import { ics_3_1of6, ics_3_2of6, ics_3_3of6, ics_3_4of6, ics_3_5of6, ics_3_6of6 } from './SL20000Sprint03'
 import { ics_4_1of6, ics_4_2of6, ics_4_3of6, ics_4_4of6, ics_4_5of6, ics_4_6of6 } from './SL20000Sprint04'
 import { ics_5_1of6, ics_5_2of6, ics_5_3of6, ics_5_4of6, ics_5_5of6, ics_5_6of6 } from './SL20000Sprint05'
 import { ics_6_1of6, ics_6_2of6, ics_6_3of6, ics_6_4of6, ics_6_5of6, ics_6_6of6 } from './SL20000Sprint06'
 import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6 } from './SL20000Sprint07'
 import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6, ics_8_7of6 } from './SL20000Sprint08'
+
+import { oop_1_1of6 } from './SL24500Sprint01'
 
 import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6, web_3_5of6, web_3_6of6 } from './SL24700Sprint03'
 import { web_4_1of6, web_4_2of6, web_4_3of6, web_4_4of6, web_4_5of6, web_4_6of6 } from './SL24700Sprint04'
@@ -61,6 +64,8 @@ export const slideDeckRouter = (route) => {
 const sprint3Router = (route) => {
 	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
+		case '20000-1-1': return ics_1_1of6()
+
 		case '20000-3-1': return ics_3_1of6()
 		case '20000-3-2': return ics_3_2of6()
 		case '20000-3-3': return ics_3_3of6()
@@ -103,6 +108,8 @@ const sprint3Router = (route) => {
 		case '20000-8-5': return ics_8_5of6()
 		case '20000-8-6': return ics_8_6of6()
 		case '20000-8-7': return ics_8_7of6()
+
+		case '24500-1-1': return oop_1_1of6()
 
 		case '24700-3-1': return web_3_1of6()
 		case '24700-3-2': return web_3_2of6()
