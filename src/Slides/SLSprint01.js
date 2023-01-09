@@ -34,7 +34,7 @@ export const sprint1Router = (route) => {
 		// BugBug: Reusing ics slides incorrectly has ics activity lists!
 
 
-		case '44000-1-1': return se1_1of6()
+		case '44000-1-1o': return se1_1of6()
 		case '44000-1-2': return se1_2of6()
 		case '44000-1-3': return se1_3of6()
 		case '44000-1-4': return se1_4of6()

@@ -11,7 +11,7 @@ import { breakoutStandard } from './SLSprint00'
 import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
 import { list44000Sprint07 } from '../ActivityLists/AL44000Sprint07'
 
-// Introduction to Computer Science (ICS) sprint 6 global values.
+// Software Engineering (SE) sprint 7 global values.
 const sprint = 7
 const activityListPrevious = () => { return list44000Sprint06(sprint-1) }
 const activityList = () => { return list44000Sprint07(sprint) }
