@@ -35,6 +35,8 @@ import { se_6_1of6, se_6_2of6, se_6_3of6, se_6_4of6, se_6_5of6, se_6_6of6 } from
 import { se_7_1of6, se_7_2of6, se_7_3of6, se_7_4of6, se_7_5of6, se_7_6of6 } from './SL44000Sprint07'
 import { se_8_1of6, se_8_2of6, se_8_3of6, se_8_4of6, se_8_5of6, se_8_6of6, se_8_7of6 } from './SL44000Sprint08'
 
+import { ssc_1_1of6 } from './SL49200Sprint01'
+
 export const slideDeckRouter = (route) => {
 	let currentSlideDeck = sprint1Router(route)
 	if (currentSlideDeck === null) {
@@ -197,6 +199,8 @@ const sprint3Router = (route) => {
 		case '44000-8-5': return se_8_5of6()
 		case '44000-8-6': return se_8_6of6()
 		case '44000-8-7': return se_8_7of6()
+
+		case '49200-1-1': return ssc_1_1of6()
 
 		default: return null
 	}
