@@ -1,3 +1,4 @@
+import { xyz_1_2of6 } from './SL00000Sprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
 import { tPrework, bulletListSlide } from './SLSprint00'
 
@@ -34,13 +35,29 @@ export const oop_1_1of6 = () => {
 	return completeDeck(slideDeck, [poll, switchDeck, preworkNext])
 }
 
-// Sprint 2 session 2 of 6: Wednesday
+// Sprint 1 session 2 of 6: Wednesday
 const oop_1_2of6_lists = {
 	'announcements':[ 
-		'Any Announcements?' ],
+	'Friday’s class will be remote via Zoom' ],
 	'prework':[
 		'Complete through activity 7 prior to next class', '',
 		`Be prepared to complete sprint ${sprint} planning` ],
 	'agenda':[
-		'TBD' ]
+		'Sprint Progress Polling', 
+		'Introductions and Scrum Team Assignments (continued)',
+		`Sprint ${sprint} Planning (continued)`,
+		`Sprint ${sprint} Scrum Team Breakout` ]
+}
+export const oop_1_2of6 = () => { return xyz_1_2of6(sprint, oop_1_2of6_lists, oop_1_3of6_lists, activityList) }
+
+// Sprint 1 session 3 of 6: Friday
+const oop_1_3of6_lists = {
+	'announcements':[ 
+		'Any Announcements?' ],
+	'prework':[
+		'Have your scrum team Discord server set up for Friday’s remote class',
+		'Complete through activity 9 prior to next class', '',
+		'Be prepared to for a scrum team breakout session on “Engineering Software as a Service” Chapter 1 and the associated lecture' ],
+	'agenda':[
+		'' ]
 }

@@ -19,7 +19,7 @@ export const sprint1Router = (route) => {
 	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
 		case '20000-1-1o': return ics1_1of6()
-		case '20000-1-2': return ics1_2of6()
+		case '20000-1-2o': return ics1_2of6()
 		case '20000-1-3': return ics1_3of6()
 		case '20000-1-4': return ics1_4of6()
 		case '20000-1-5': return ics1_5of6()
