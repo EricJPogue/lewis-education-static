@@ -19,7 +19,7 @@ export const matchMakerJavaLink = () => {return (<NavLink to={makeInternalURL(MA
 export const matchmakerJava = () => { return MatchmakerJava() }
 
 const MATCHMAKER_GO_NAME = 'Matchmaker for Go'
-export const MATCHMAKER_GO_ROUTE = 'matchmaker-java'
+export const MATCHMAKER_GO_ROUTE = 'matchmaker-go'
 export const matchMakerGoLink = () => {return (<NavLink to={makeInternalURL(MATCHMAKER_GO_ROUTE)}>{MATCHMAKER_GO_NAME}</NavLink>)}
 export const matchmakerGo = () => { return MatchmakerGo() }
 
@@ -65,9 +65,7 @@ export const MatchmakerGoProperties = {
 }
 
 const Matchmaker = (appProps) => {
-	return (
-	
-<div>
+	return ( <div>
 <br />
 <h4><span style={{color: "red"}}>&#10084;&#10084;&#10084;</span> {appProps.name} <span style={{color: "red"}}>&#10084;&#10084;&#10084;</span></h4>
 <h5>Summary: Create a {appProps.language} application that will determine your true love.</h5>
@@ -138,14 +136,10 @@ sure you can improve on his design.
 </ol>
 
 </div> )
-
 }
 
 export const MatchmakerExamples = () => {
-	return (
-	
-<div>
-
+	return ( <div>
 <br />
 <h4><span style={{color: "red"}}>&#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084;</span></h4>
 <h5>Summary: Below are some examples of how a Matchmaker user interface might look.</h5>
@@ -273,5 +267,4 @@ Yeah ... ummm ... no.
 
 `}</pre>
 </div> )
-
 }
