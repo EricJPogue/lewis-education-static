@@ -55,7 +55,7 @@ const oop_1_3of6_lists = {
 		'Reminder that Monday is Martin Luther King Jr. Day with no classes' ],
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
-		'Be prepared for “Software as a Service, Agile Development, and Cloud Computing” Breakout'],
+		'Be prepared for “Object-Oriented Programming Concepts & Practices” Breakout'],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Programming Together: Accessing Example Code',

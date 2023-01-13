@@ -57,7 +57,7 @@ const ics_1_3of6_lists = {
 		'Reminder that Monday is Martin Luther King Jr. Day with no classes' ],
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
-		'Be prepared for “Software as a Service, Agile Development, and Cloud Computing” Breakout'],
+		'Be prepared for “File Systems, Directories, and Files” Breakout'],
 	'agenda':[
 			'Sprint Progress Polling plus Command Line Interfaces (CLI) and Directories',
 			'Programming Together with graphical and CLI tool to manage directories and files',
