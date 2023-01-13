@@ -1,10 +1,5 @@
-import { xyz_1_2of6 } from './SL00000Sprint00'
-import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
-import { tPrework, bulletListSlide } from './SLSprint00'
-import { breakoutStandard } from '../Slides/SLSprint00'
-import { tQuiz } from './SLSprint00'
-import { basicSlideWithLogo } from './SLSprint00'
-import { orderedListSlide } from './SLSprint00'
+import { xyz_1_2of6, checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
+import { tPrework, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, orderedListSlide } from './SLSprint00'
 
 import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
 
@@ -61,10 +56,10 @@ const se_1_3of6_lists = {
 		'Complete through activity 9 prior to next class', '',
 		'Be prepared for “Software as a Service, Agile Development, and Cloud Computing” Breakout'],
 	'agenda':[
-			'Sprint Progress Polling',
-			'Programming Together: Azure Website with Node.js',
-			'Prework for Next Class',
-			'Breakout: SDLCs, SaaS, Cloud Computing, plus Frameworks & Tools' 
+		'Sprint Progress Polling',
+		'Programming Together: Azure Website with Node.js',
+		'Prework for Next Class',
+		'Breakout: SDLCs, SaaS, Cloud Computing, plus Frameworks & Tools' 
 	]
 }
 export const se_1_3of6 = () => { 

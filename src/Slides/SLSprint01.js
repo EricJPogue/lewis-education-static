@@ -20,10 +20,10 @@ export const sprint1Router = (route) => {
 	switch(courseNumberPlusRoute) {
 		case '20000-1-1o': return ics1_1of6()
 		case '20000-1-2o': return ics1_2of6()
-		case '20000-1-3': return ics1_3of6()
-		case '20000-1-4': return ics1_4of6()
-		case '20000-1-5': return ics1_5of6()
-		case '20000-1-6': return ics1_6of6()
+		case '20000-1-3o': return ics1_3of6()
+		case '20000-1-4o': return ics1_4of6()
+		case '20000-1-5o': return ics1_5of6()
+		case '20000-1-6o': return ics1_6of6()
 
 		case '24700-1-1': return web1_1of6()
 		case '24700-1-2': return web1_2of6()
