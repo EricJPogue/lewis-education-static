@@ -74,18 +74,18 @@ export const se_1_3of6 = () => {
 	const lab = () => {
 		return bulletListSlide('Programming Together', 
 			`Let’s spend a few minutes programming together utilizing our knowledge of Git, GitHub, and Azure to create 
-			an operational Azure hosted Node.js website. Can we accomplish what used to take 6 months and $500,000 in 
-			15 minutes and at a cost of $0?`, [])
+			an Azure hosted Node.js website. Can we accomplish what used to take 6 months, $500,000, plus $50,000 per year 
+			in 15 minutes and at a cost of $0?`, [])
 	}
 	const breakout = () => { 
 		return breakoutStandard(
-		'Breakout: Software Development Life Cycles', 
-		'In this breakout session on Software Development Life Cycles (SDLCs), Software as a Service, Cloud Computing, and Highly Productive Frameworks & Tools your team will:', [
-		'Virtuous Triangle... Could Saas on Cloud Computing and Frameworks and Tools be combined?',
-		'SDLCs including Plan and Document, Iterative, and Agile',
-		'SDLCs including Waterfall, Spiral, RUP, Agile, and Scrum',
-		'Agile Manifesto',
-		'Agile methodologies including Kanban, XP (formerly Extreme Programming), and Test-Driven Development' ])
+			'Breakout: Software Development Life Cycles', 
+			'In this breakout session on Software Development Life Cycles (SDLCs), Software as a Service, Cloud Computing, and Highly Productive Frameworks & Tools your team will:', [
+			'Virtuous Triangle... Could Saas on Cloud Computing and Frameworks and Tools be combined?',
+			'SDLCs including Plan and Document, Iterative, and Agile',
+			'SDLCs including Waterfall, Spiral, RUP, Agile, and Scrum',
+			'Agile Manifesto',
+			'Agile methodologies including Kanban, XP (formerly Extreme Programming), and Test-Driven Development' ])
 	}
 
 	return completeDeck(slideDeck, [poll, lab, breakout, preworkNext])
