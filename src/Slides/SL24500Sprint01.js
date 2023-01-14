@@ -1,4 +1,5 @@
-import { xyz_1_2of6, checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
+import { xyz_1_1of6, xyz_1_2of6 } from './SL00000Sprint01'
 import { tPrework, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, orderedListSlide } from './SLSprint00'
 
 import { list24500Sprint01 } from '../ActivityLists/AL24500Sprint01'
@@ -8,34 +9,10 @@ const sprint = 1
 const activityList = () => { return list24500Sprint01(sprint) }
 
 // Sprint 1 session 1 of 6: Monday
-const oop_1_1of6_lists = {
-	'announcements':[ 
-		'Welcome back! I hope you had a wonderful Holiday Break.' ],
-	'prework':[
-		'Review Welcome Message',
-		'Review Blended Learning & Flipped Classroom',
-		'Review Introduction to Scrum',
-		'Review Course Syllabus' ],
-	'agenda':[
-		'Progress Polling',
-		'Class Format',
-		'Introductions - Part 1',
-		'Sprint 1 Planning (abbreviated)',
-		'Introductions - Part 2 and Scrum Team Assignments',
-		'Prework for Next Class' ]
-}
-
-export const oop_1_1of6 = () => { 
-	const poll = () => { return tPrework('Sprint Progress Polling', oop_1_1of6_lists.prework, sprint, activityList) }
-	const switchDeck = () => { return bulletListSlide('PowerPoint', 'Switch to PowerPoint slides.', [])}
-
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_1_1of6_lists, sprint, activityList)
-	const preworkNext = () => { return tPrework('Prework For Next Class', oop_1_2of6_lists.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [poll, switchDeck, preworkNext])
-}
+export const oop_1_1of6 = () => { return xyz_1_1of6(activityList, oop_1_2of6_PreworkAnnouncementsAndAgenda.prework) }
 
 // Sprint 1 session 2 of 6: Wednesday
-const oop_1_2of6_lists = {
+const oop_1_2of6_PreworkAnnouncementsAndAgenda = {
 	'announcements':[ 
 	'Friday’s class will be remote via Zoom' ],
 	'prework':[
@@ -47,10 +24,10 @@ const oop_1_2of6_lists = {
 		`Sprint ${sprint} Planning (continued)`,
 		`Sprint ${sprint} Scrum Team Breakout` ]
 }
-export const oop_1_2of6 = () => { return xyz_1_2of6(sprint, oop_1_2of6_lists, oop_1_3of6_lists, activityList) }
+export const oop_1_2of6 = () => { return xyz_1_2of6(sprint, oop_1_2of6_PreworkAnnouncementsAndAgenda, oop_1_3of6_PreworkAnnouncementsAndAgenda, activityList) }
 
 // Sprint 1 session 3 of 6: Friday
-const oop_1_3of6_lists = {
+const oop_1_3of6_PreworkAnnouncementsAndAgenda = {
 	'announcements':[ 
 		'Reminder that Monday is Martin Luther King Jr. Day with no classes' ],
 	'prework':[
@@ -64,9 +41,9 @@ const oop_1_3of6_lists = {
 	]
 }
 export const oop_1_3of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_1_3of6_lists, sprint, activityList)
-	const poll = () => { return tPrework('Sprint Progress Polling', oop_1_3of6_lists.prework, sprint, activityList) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', oop_1_5of6_lists.prework, sprint, activityList) }
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_1_3of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', oop_1_3of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', oop_1_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
 	const lab = () => {
 		return bulletListSlide('Programming Together', 
 			`Let’s spend a few minutes programming together checking our Java SDK installation and utilizing our 
@@ -94,7 +71,7 @@ export const oop_1_4of6 = () => {
 }
 
 // Sprint 1 session 5 of 6: Wednesday
-const oop_1_5of6_lists = {
+const oop_1_5of6_PreworkAnnouncementsAndAgenda = {
 	'prework':[
 		'Complete through activity 11 prior to next class', '',
 		'Make your initial post for Discussion 1',
@@ -104,9 +81,9 @@ const oop_1_5of6_lists = {
 	'agenda':['TBD']
 }
 export const oop_1_5of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_1_5of6_lists, sprint, activityList)
-	const poll = () => { return tPrework('Sprint Progress Polling', oop_1_5of6_lists.prework, sprint, activityList) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', oop_1_6of6_lists.prework, sprint, activityList) }
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_1_5of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', oop_1_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', oop_1_6of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
 	const breakout = () => { 
 		return breakoutStandard(
 		'Breakout: SaaS, Cloud, and Frameworks & Tools', 
@@ -131,11 +108,11 @@ export const oop_1_5of6 = () => {
 }
 
 // Sprint 1 session 6 of 6: Friday
-const oop_1_6of6_lists = {
-	'announcements':['TBD'],
+const oop_1_6of6_PreworkAnnouncementsAndAgenda = {
 	'prework':['TBD'],
+	'announcements':['TBD'],
 	'agenda':['TBD']
 }
 export const oop_1_6of6 = () => { 
-	return checklistAnnouncementsPreworkAndAgenda(oop_1_6of6_lists, sprint, activityList)
+	return checklistAnnouncementsPreworkAndAgenda(oop_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
 }

@@ -120,39 +120,7 @@ export const xyz_n_2of6 = (sprint, sessionLists, preworkListNext, activityList) 
 	return completeDeck(slideDeck, [ discussionBreakout, reviewDemoSchedule, preworkNext, tLab ])
 }
 
-export const xyz_1_2of6 = (sprint, currentSession, nextSession, sprintActivitiesList) => {
-	const poll = () => { return tPrework('Sprint Progress Polling', currentSession.prework, sprint, sprintActivitiesList) }
 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(currentSession, sprint, sprintActivitiesList)
-	const preworkNext = () => { return tPrework('Prework For Next Class', nextSession.prework, sprint, sprintActivitiesList) }
-	const introductionsContinued = () => {
-		return basicSlide('Introductions and Scrum Team Assignments (continued)', [
-			'Review scrum team assignments from Monday',
-			'Continue with introductions and scrum team assignments',
-			'Did we miss anyone?' ]
-		)
-	}
-	const sprintPlanning = () => {
-		return orderedListSlide('Sprint Planning (continued)', `Sprint ${sprint} Expectations:`, [
-			'Similar to future sprints with Discussion, Quiz, Lab, and Reflection',
-			'Monday is a holiday which makes this sprint a little more challenging than most',
-			'We will complete our scrum team Discussion Board breakout session today as time allows' ])
-	}
-	const activitiesReview = () => {
-		return basicSlide('Activity List and Assignments Review', [
-			'Let’s open our Blackboard shell and review the activity list, syllabus, and assignments together.' ]
-		)
-	}
-	const planningBreakout = () => {
-		return orderedListSlide('Sprint Planning Scrum Team Breakout', 'As a scrum team:', [
-			`Review sprint ${sprint} activity list & assignments in detail`,
-			'Discuss and identify questions/concerns',
-			'Scrum master report out by sharing scrum team’s top 2 or 3 questions/concerns' ]
-		)
-	}
-
-	return completeDeck(slideDeck, [poll, introductionsContinued, sprintPlanning, activitiesReview, planningBreakout, preworkNext])
-}
 
 export const xyz_n_3of6 = (sprint, sessionLists, preworkListNext, activityList, metricsSubmissionPercentage, retrospective) => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)

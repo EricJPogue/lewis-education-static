@@ -146,6 +146,16 @@ export const topic = (topic) => {
 	return ( <div><br /><br /><br /><br /><br /><br /><h1 style={title}>{topic}</h1> </div>)
 }
 
+export const tQuizExpectations = () => {
+	return orderedListSlide('Quiz Expectations', 
+		'Quiz Expectations include:', [
+		'You may use any naturally available documentation including books, notes, and web browser',
+		'You may not use quiz specific content like question banks',
+		'The quiz is an individual assignment so asking others would be inappropriate**',
+		'You are welcome to ask me quiz or non-quiz related questions',
+		'Your first sincere attempt at the quiz is expected by the end of class']) 
+}
+
 export const tQuiz = (sprint) => { return quiz(sprint) } 
 export const quiz = (sprint) => {
 	return ( <div>		

@@ -19,6 +19,7 @@ import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6,
 
 import { oop_1_1of6, oop_1_2of6, oop_1_3of6 } from './SL24500Sprint01'
 
+import { web_1_1of6, web_1_2of6, web_1_3of6, web_1_4of6, web_1_5of6, web_1_6of6 } from './SL24700Sprint01'
 import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6, web_3_5of6, web_3_6of6 } from './SL24700Sprint03'
 import { web_4_1of6, web_4_2of6, web_4_3of6, web_4_4of6, web_4_5of6, web_4_6of6 } from './SL24700Sprint04'
 import { web_5_1of6, web_5_2of6, web_5_3of6, web_5_4of6, web_5_5of6, web_5_6of6 } from './SL24700Sprint05'
@@ -36,6 +37,14 @@ import { se_7_1of6, se_7_2of6, se_7_3of6, se_7_4of6, se_7_5of6, se_7_6of6 } from
 import { se_8_1of6, se_8_2of6, se_8_3of6, se_8_4of6, se_8_5of6, se_8_6of6, se_8_7of6 } from './SL44000Sprint08'
 
 import { ssc_1_1of6 } from './SL49200Sprint01'
+
+// Routing constants are defined by the class number followed by the sprint number and session. Note that sessions are
+// identified by the session number without consideration for missed classes. For example a week 2 Friday session for a 
+// MWF class would still be considered session 6 even if the preceding Monday was a holiday. For example, is sprint 1
+// the second Monday is Labor day so the final Friday of the sprint for Software Engineering would have a rout of 
+// '44000-1-6' which implies the integrated slide deck is for Software Engineering sprint 1 session 6.
+
+// Todo: Refactor slideDeckRouter so that it only utilizes the current sprint3Router. And then rename sprint3Router.
 
 export const slideDeckRouter = (route) => {
 	let currentSlideDeck = sprint1Router(route)
@@ -119,6 +128,13 @@ const sprint3Router = (route) => {
 		case '24500-1-1': return oop_1_1of6()
 		case '24500-1-2': return oop_1_2of6()
 		case '24500-1-3': return oop_1_3of6()
+
+		case '24700-1-1': return web_1_1of6()
+		case '24700-1-2': return web_1_2of6()
+		case '24700-1-3': return web_1_3of6()
+		case '24700-1-4': return web_1_4of6()
+		case '24700-1-5': return web_1_5of6()
+		case '24700-1-6': return web_1_6of6()
 
 		case '24700-3-1': return web_3_1of6()
 		case '24700-3-2': return web_3_2of6()

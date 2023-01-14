@@ -1,4 +1,6 @@
 
+// Todo: Remove fall22 as a dependency.
+
 import { getClassIDfromURL } from '../DataAndAPIs/Classes'
 
 import { sp23_cpsc_20000_002, sp23_cpsc_25400_001, sp23_cpsc_44000_001, sp23_cpsc_49200_001, cpsc_36000 } from './sp23'

@@ -1,3 +1,5 @@
+// SLSprint01 is depreciated and should be removed after SP23 sprint 1.
+
 import { getClass } from '../DataAndAPIs/Classes'
 import { preflightChecklist, instructorChecklist, basicSlide, basicSlideWithLogo, orderedListSlide, end, breakout, bulletListSlide } from './SLSprint00' // Shared slides.
 import { prework, breakoutStandard, quiz } from './SLSprint00'
@@ -24,15 +26,6 @@ export const sprint1Router = (route) => {
 		case '20000-1-4o': return ics1_4of6()
 		case '20000-1-5o': return ics1_5of6()
 		case '20000-1-6o': return ics1_6of6()
-
-		case '24700-1-1': return web1_1of6()
-		case '24700-1-2': return web1_2of6()
-		case '24700-1-3': return web1_3of6()
-		case '24700-1-4': return web1_4of6()
-		case '24700-1-5': return web1_5of6()
-		case '24700-1-6': return ics1_6of6() // Reusing ics slides. 
-		// BugBug: Reusing ics slides incorrectly has ics activity lists!
-
 
 		case '44000-1-1o': return se1_1of6()
 		case '44000-1-2o': return se1_2of6()
@@ -198,95 +191,6 @@ export const ics_prework_2_1of6 = () => {
 		sprint, list20000Sprint01)
 }
 
-
-// Web & Distributed Programming (WEB)
-const web1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
-
-const web1_2of6 = () => { 
-	const announcements =  () => { return basicSlideWithLogo('Announcements', ['Dr. Martinez is looking for someone to do some Web development work for her research project.']) }
-	const sprintProgressPolling = () => { return prework('Sprint Progress Polling', prework_1_1of6_list, sprint, list24700Sprint01) }
-
-	return mwf_1_2of6(announcements, prework_1_1of6, sprintProgressPolling, web_prework_1_2of6)
-}
-
-const web_prework_1_2of6 = () => {
-	return prework('Prework', [
-		'Complete through activity 10 prior to next class', '',
-		'Be ready for a fully remote Friday class where will need a working microphone and headset**', 		
-		'Be prepared for a breakout session on Web Development Workflows and HTML',
-		'Be sure to take screenshots when completing Tools of the Trade' ],
-		sprint, list24700Sprint01)
-}
-const web1_3of6 = () => {
-	const announcements =  () => {
-		return basicSlideWithLogo('Announcements', [ 'Reminder that Monday is the Labor Day holiday with no classes.' ]) }
-	const agenda = () => { 
-		return agendaSlide([
-			'Prework for Today',
-			'Polling: Sprint Progress',
-			'Programming Together: Lew Alcindor and Web Programming',
-			'Prework for Next Class',
-			'Breakout: Web Development Workflows and HTML' ])
-	}
-	const programmingTogether = () => {
-		return bulletListSlide('Programming Together: Lew Alcindor and Web Programming', 
-			'Let’s spend a few minutes programming together utilizing command line and graphical tools to create a basic web application by:', [
-			'Launching PowerShell or Terminal', 
-			'Executing pwd, cd, ls, ls -l, ls -a, mkdir, and clear', 
-			'Identifying an optimal location to work on our files',
-			'Utilizing VS Code and a Web browser to create a web page' ])
-	}
-	const poll = () => { return prework('Poll', [ 'Sprint Progress' ], sprint, list24700Sprint01) }
-	const breakout = () => { 
-		return breakoutStandard(
-		'Breakout: Web Development Workflows and HTML', 
-		'In this breakout session on Web development workflows and HTML your team will:', [
-		'Web Development Workflow... What is our web development workflow and tooling?',
-		'HTML history and evolution... What HTML standard will we use?',
-		'Syntax and basic structure... What are other popular markup languages?',
-		'How do we Verify correct HTML syntax... Can you demo this activity?' ])
-	}
-
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, web_prework_1_2of6, poll, programmingTogether, web_prework_1_5of6, breakout, end ] 
-}
-
-const web1_4of6 = () => { return shared1_4of6() }
-
-const web_prework_1_5of6 = () => {
-	return prework('Prework', [
-		'Complete through activity 13 prior to next class', '',
-		'Be prepared to continue breakout session',
-		'Be prepared for Quiz 1' ],
-		sprint, list24700Sprint01)
-}
-const web1_5of6 = () => {
-	const announcements =  () => {
-		return basicSlideWithLogo('Announcements', [ 'I hope you had a wonderful three day weekend' ])
-	}
-	const agenda = () => { 
-		return agendaSlide([
-			'Prework for Today',
-			'Polling: Sprint Progress',
-			'Breakout: Web Development Workflows and HTML (continued)',
-			'Prework for Next Class',
-			'Quiz 1' ])
-	}
-	const breakout = () => { 
-		return breakoutStandard(
-			'Breakout: Web Development Workflows and HTML (continued)', 
-			'In this breakout session on Web development workflows and HTML your team will:', [
-			'Web Development Workflow... What is our web development workflow and tooling?',
-			'HTML history and evolution... What HTML standard will we use?',
-			'Syntax and basic structure... What are other popular markup languages?',
-			'How do we Verify correct HTML syntax... Can you demo this activity?' ])
-	}
-
-	const quizSlide = () => { return quiz(sprint) }
-
-	return [ instructorChecklist, preflightChecklist, announcements, agenda, web_prework_1_5of6, breakout, web_prework_1_6of6, quizExpectations, quizSlide, end ]
-}
-
-const web_prework_1_6of6 = () => { return shared_prework_1_6of6() }
 const shared_prework_1_6of6 = () => {
 	return prework('Prework', [
 		'Everything is due Sunday!', '',
