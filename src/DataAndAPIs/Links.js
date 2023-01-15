@@ -121,23 +121,17 @@ export const sprintBacklog = () => { return externalLink('Sprint Backlog', 'http
 export const sprintPlanning = () => { return externalLink('Sprint Planning', 'https://www.agilealliance.org/glossary/sprint-planning')}
 export const userStory = () => { return externalLink('User Story', 'https://www.agilealliance.org/glossary/user-stories')}
 export const userStoryTemplate = () => { return externalLink('User Story Template', 'https://www.agilealliance.org/glossary/user-story-template/')}
-
-export const learningJavaExampleCode = () =>  { return internalLink('example code', 'https://github.com/l0y/learnjava5e.git')}
-
 export const done = () => { return externalLink('Done', 'https://www.agilealliance.org/glossary/definition-of-done')}
 
-export const architecturePart1 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 1', 
-	'/activity-architecture/application-architecture-part1')}
-export const architecturePart2 = () => { return internalLink('Application Architectures - Part 2', 
-	'/activity-architecture/application-architecture-part2')}
+export const learningJavaExampleCode = () =>  { return internalLink('example code', 'https://github.com/l0y/learnjava5e.git')}
+export const architecturePart1 = () => { return internalLink('Application Architectures, Object-Oriented Programming, and Databases - Part 1', '/activity-architecture/application-architecture-part1')}
+export const architecturePart2 = () => { return internalLink('Application Architectures - Part 2', '/activity-architecture/application-architecture-part2')}
 
-export const continuousIntegration = () => { return externalLink('What is CI/CD? Continuous integration and continuous delivery explained', 
-	'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
+export const continuousIntegration = () => { return externalLink('What is CI/CD? Continuous integration and continuous delivery explained', 'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
+export const fullStackJavaScriptW3C = () => { return externalLink('Full stack JavaScript', 'https://www.w3schools.com/whatis/whatis_fullstack_js.asp')}
+export const successfulProgrammer = () => { return internalLink('How To Be A Successful Programmer', '/activity/successful-programmer')}
 
-export const fullStackJavaScriptW3C = () => { return externalLink('Full stack JavaScript', 'https://www.w3schools.com/whatis/whatis_fullstack_js.asp') }
-
-export const successfulProgrammer = () => { return internalLink('How To Be A Successful Programmer', '/activity/successful-programmer') }
-
+export const overcomingProcrastination = () => {return externalLink('Why Emotionally Intelligent People Embrace the 30-for-30 Plan to Overcome Procrastination', 'https://www.inc.com/jeff-haden/why-emotionally-intelligent-people-embrace-30-for-30-plan-to-overcome-procrastination.html')}
 
 export const externalLink = (displayName, url) => {
 	return (

@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import { getClass } from '../DataAndAPIs/Classes'
+
 import { oreillyPlaylistICS, CommandLine, IntroducingPythonSampleCode } from '../DataAndAPIs/Links'
 
 import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
@@ -8,9 +10,10 @@ import { HelloWorldPythonLink } from '../Activities/HelloWorld'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 
 export const al20000Sprint01 = () => {
+	const classSection = getClass()
 	const sprint = 1
 	return ( <div>
-		<h5>Sprint 1: Getting Started, The Big Picture, Files Systems, and Tools of the Trade</h5>
+		<h5>Sprint 1: {classSection.class.modules[sprint-1]}</h5>
 
 		<p>Welcome to Introduction to Computer Science! In this course we will be exploring the field of computer 
 		science. The course will include an overview of computer architecture, software engineering, data organization, 

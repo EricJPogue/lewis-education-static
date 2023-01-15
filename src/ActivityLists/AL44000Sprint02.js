@@ -2,11 +2,11 @@ import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
 import { oreillyPlaylistSE, HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C, internalLink } from '../DataAndAPIs/Links'
-import { FoxHTML, FoxCSS, FoxCookies, FoxAttributes, FoxRubyMVC } from '../DataAndAPIs/Links'
 
 import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 import { webResumeLink } from '../Activities/WebResume'
+import { webDiceRollerLink } from '../Activities/WebDiceRoller'
 
 const foxChapter2Lecture = () => internalLink('lecture', '/activity/fox-chapter-02')
 const foxChapter6Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-06')}
@@ -39,42 +39,20 @@ export const list44000Sprint02 = (sprint) => {
 			{standardActivities(sprint, assignmentPortfolioLink())}
 			<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated {foxChapter2Lecture()}</li>
 			<li>Complete {azureWebsiteLink()}{estimated('2 hours')}</li>
+			<li>Review the Potpourri web application from our example code GitHub repository</li>
 			<li>Within {oreillyPlaylistSE()} scan “Learning Web Development” Preface through Chapter 4</li>
 			<li>Implement your {webResumeLink()} while completing the W3Schools {HTMLW3C()} and {CSSW3C()} tutorials{estimated('6 hours')}</li>
 			{initialPost(sprint)}
+			<li>Complete {webDiceRollerLink()}</li>
 			<li>Read “Engineering Software as a Service” chapter 6 and review our chapter 6 {foxChapter6Lecture()}</li>
 			<li>Read “Engineering Software as a Service” sections A.6 and A.7</li>
 			<li>Complete {JavaScriptW3C()} tutorial including {RegularExpressionsW3C()}</li>
-			<li>Briefly Scan the following “Engineering Software as a Service” videos on {FoxHTML()}, {FoxCSS()}, {FoxCookies()}, {FoxAttributes()}, and {FoxRubyMVC()}</li>
 			{standardActivitiesClosing(sprint, assignmentPortfolioLink(), '2 hours')}
 		</ol>
 	</div> )
 }
 
 // Certified for FA22 (08/27/2022)
-
-// BugBug: All Lab 2 applications need to be added to the activities list! 
-
-// Todo: Keep improving Quiz 2.
-// Todo: Strongly consider getting rid of "Briefly Scan the following “Engineering Software as a Service” videos..."
-
-/* z
-Fix Quiz 2 Question by verifying that the question should be "is TRUE":
-
-
-Which of the following statements relating Service-Oriented Architecture (SOA) and Software Development Lifecycles is FALSE?
-
-    SOA is desirable in Waterfall, RUP, and Agile
-    Correct answer
-
-    SOA is desirable in Waterfall and RUP but not in Agile
-
-    SOA is desirable in Waterfall and Agile but not in RUP
-
-    SOA is desirable in RUP and Agile but not in Waterfall
-	
-*/
-
-
+// Certified for SP23 (01/15/2023)
 
 

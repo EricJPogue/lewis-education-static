@@ -117,8 +117,8 @@ export const _CPSC_20000 = {
 	],
 	textBook: 'Computer Science Illuminated, Nell Dale and John Lewis, Jones & Bartlett Learning. This book is required for this course.',
 	modules: [
-		'File Systems and Directories, Computer Science – The Big Picture, and Introduction to Python',
-		'Binary Values and Number Systems, Data Representation, and Introduction to HTML and CSS',
+		'Getting Started, Tools of the Trade, Files Systems, and The Big Picture',
+		'Numbering Systems, Data Representation, and HyperText Markup Language (HTML)',
 		'Gates and Circuits, Computing Components, and Cloud Computing with HTML and CSS',
 		'Artificial Intelligence, Functions, and Objects and Drawing',
 		'Networks, Final Project Proposal, and Objects and Drawing with Python',

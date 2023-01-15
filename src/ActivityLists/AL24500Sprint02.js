@@ -45,4 +45,4 @@ export const al24500Sprint02 = () => {
 	</div> )
 }
 
-// Todo: Update lab demo assignment. 
+// Certified for SP23 (01/15/2023)

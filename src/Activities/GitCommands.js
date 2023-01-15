@@ -33,8 +33,7 @@ the normal pattern is to create, update, and test code locally. Once the code is
 repository with the following sequence of commands:</p>
 <pre>{`git add -A
 git commit -m "Update files."
-git push
-`}</pre><br />
+git push`}</pre><br />
 
 <p>Sometimes it is helpful to review the current status of the local repository and to pull down any changes that have 
 been made to the remote repository by using following commands:</p>

@@ -2,45 +2,18 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { makeInternalURL } from './ActivityRouter';
 
-const JavaProperties = {
-	'name': 'OvalDraw Plus', 
-	'language': 'Java',
-	'prerequisites': 'Java, VS Code, and Terminal',
-	'type': 'command-line application written in the Java language',
-	'requirement1_1': 'Is implemented in a single Java (.java) file named “OvalDrawPlus.java”',
-	'requirement1_2': 'Successfully compiles with “javac *.java" and successfully executes with “java OvalDrawPlus',
-	'example': 'https://github.com/EricJPogue/cpsc-example-code.git'
-}
-
-const NAME = JavaProperties.name
+const NAME = 'OvalDraw Plus'
 export const OVAL_DRAW_PLUS_JAVA_ROUTE = 'ovaldraw-plus-java'
 export const ovalDrawPlusJavaLink = () => {return (<NavLink to={makeInternalURL(OVAL_DRAW_PLUS_JAVA_ROUTE)}>{NAME}</NavLink>)}
 
-export const ovalDrawPlusJava = () => { return OvalDrawPlus(JavaProperties) }
+export const ovalDrawPlusJava = () => { 
+	return ( <div>
 
-const ExampleLink = (tutorialLink) => {
-	if (tutorialLink == null) {
-		return null
-	} else {
-		return ( 
-			<div>
-			<p>Be sure to review the example OvalDraw project in the Java section of our example code repository. The following 
-			command will retrieve the example code:
-			<pre>     git clone --depth=1 {tutorialLink}</pre></p>
-			</div>
-		)
-	}
-}
+<h4>OvalDraw Plus</h4>
+<h5>Summary: Create a graphical application with Java that that draws an oval</h5>
+<h5>Prerequisites: Java, VS Code, and Terminal</h5>
 
-const OvalDrawPlus = (appProps) => {
-	return (
-	
-<div>
-<h4>{appProps.name}</h4>
-<h5>Summary: Create a graphical application with {appProps.language} that that draws an oval</h5>
-<h5>Prerequisites: {appProps.prerequisites}</h5>
-
-<p>Create a graphical {appProps.language} application that runs on Microsoft Windows and MacOS that draws an oval 
+<p>Create a graphical Java application that runs on Microsoft Windows and MacOS that draws an oval 
 centered in the main application window when the programming starts. The oval should automatically resize and 
 reposition itself when the window is resized.</p>
 
@@ -49,13 +22,13 @@ incremental improvements to the application. Be sure to make the resulting appli
 standard comments at the top application (i.e. your name, class, etc.), changing the names of variables, and adding 
 small features. Finally, be sure to save your work as you will often be asked to submit it as part of an assignment.</p>
 
-{ExampleLink(appProps.example)}
+<p>Be sure to review the example OvalDraw project in the Java section of our example code repository. </p>
 
 <em>Requirement 1</em>
 <p>Create an application that:</p>
 <ol>
-	<li>{appProps.requirement1_1}</li>
-	<li>{appProps.requirement1_2}</li>
+	<li>Is implemented in a single Java (.java) file named “OvalDrawPlus.java”</li>
+	<li>Successfully compiles with “javac *.java" and successfully executes with “java OvalDrawPlus”</li>
 	<li>Has a simple yet an aesthetically pleasing user interface</li>
 </ol>
 
@@ -83,5 +56,6 @@ small features. Finally, be sure to save your work as you will often be asked to
 	<li>Utilizes constants at the top of the file to define the rectangle color</li>
 	<li>Prints “Closing OvalDrawPlus...” in the terminal window when the application is exited</li>
 </ol>
-</div> )
+
+	</div> )
 }

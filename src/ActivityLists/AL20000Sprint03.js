@@ -11,7 +11,7 @@ import { azureWebsiteLink } from '../Activities/AzureWebsite'
 export const al20000Sprint03 = () => {
 	const sprint = 3
 	return ( <div>
-		<h5>Sprint 3: Gates and Circuits, Computing Components, HTML, CSS, and Hosting Web Applications in Azure</h5>
+		<h5>Sprint 3: Gates and Circuits, Computing Components, HTML, Cascading Style Sheets (CSS), and Azure</h5>
 
 		<p>Welcome to sprint 3. I hope you enjoyed our work with HTML and your introduction to CSS because we are going to be 
 		continuing that journey by enhancing our web applications with more sophisticated HTML and CSS while hosting your 

@@ -45,6 +45,7 @@ import { thunderbird } from './Thunderbird'
 import { TURTLEDRAW_ROUTE, turtledraw } from './PythonTurtleDraw'
 import { PIT_HUB_ROUTE, pitHub } from './PitHub'
 import { QUIZ_MASTER_MERN_ROUTE, quizMasterMERN } from './QuizMasterMERN'
+import { WEB_DICE_ROLLER_ROUTE, webDiceRoller } from './WebDiceRoller'
 import { WEB_RESUME_ROUTE, webResume } from './WebResume'
 
 // The following includes represent an new alternative method of implementing activities.
@@ -104,6 +105,7 @@ export const routeActivity = (activityRoute) => {
 		case TURTLEDRAW_ROUTE: return turtledraw()
 		case PIT_HUB_ROUTE: return pitHub()
 		case QUIZ_MASTER_MERN_ROUTE: return quizMasterMERN()
+		case WEB_DICE_ROLLER_ROUTE: return webDiceRoller()
 		case WEB_RESUME_ROUTE: return webResume()
 
 		// The following case statements represent an new alternative method of implementing activities.

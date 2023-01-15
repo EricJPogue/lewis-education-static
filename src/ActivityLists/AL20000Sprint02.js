@@ -1,16 +1,19 @@
 import React from 'react'
 
+import { getClass } from '../DataAndAPIs/Classes'
+
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
-import { SequenceSelectionAndRepetition, oreillyPlaylistICS, internalLink } from '../DataAndAPIs/Links'
+import { SequenceSelectionAndRepetition, overcomingProcrastination, oreillyPlaylistICS, internalLink } from '../DataAndAPIs/Links'
 
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
 
 export const al20000Sprint02 = () => {
+	const classSection = getClass()
 	const sprint = 2
 	return ( <div>
-		<h5>Sprint 2: Numbering Systems, Data Representation, HyperText Markup Language (HTML), and Cascading Style Sheets (CSS)</h5>
+		<h5>Sprint 2: {classSection.class.modules[sprint-1]}</h5>
 
 		<p>Welcome to sprint 2 of Introduction to Computer Science. In sprint 2 we are going to continue our journey into data
 		representation and also take look at some of the key technologies that make up the Web. Our sprint activities will 
@@ -42,6 +45,7 @@ export const list20000Sprint02 = (sprint) => {
 		<ol>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
 			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The Information Layer and review our associated {daleChapter2Lecture()}</li>
+			<li>Embrace the 30-for-30 plan {overcomingProcrastination()}</li>
 			<li>Review {toolsOfTheTradeLink()}</li>
 			<li>Review {SequenceSelectionAndRepetition()}</li>
 			{initialPost(sprint)}
@@ -54,17 +58,16 @@ export const list20000Sprint02 = (sprint) => {
 	</div> )
 }
 
-// Todo: Consider adding Git/GitHub activity / tutorial. 
-// Todo: Consider lining up certain discussion topics with Friendly Conversation Topics.
-
 // Certified for FA22 (08/27/2022)
 
-// Todo: Review and possibly reword Lab 2 questions relating to zipping and submitting tools of the trade. Be sure to 
-//     update "Part 1" naming as there is no longer a part 1 and part 2.
+// Todo: Consider adding Git/GitHub activity / tutorial. 
+// Todo: Consider lining up certain discussion topics with Friendly Conversation Topics.
 // Todo: Consider removing Office 365 from the tools of the trade? Maybe it should be left for any writing assignments?
-// Todo: Update and improve all Lab Demo assignments to include more appropriate content.
-// Todo: Consider removing Office 365 from Tools of the Trade.
 // Todo: Figure out why when a link is clicked (i.e. Syllabus) the page scrolls to the same position on the page as
 //     the current page is on. This is confusing because you would assume clicking on the link takes you to the top of
 //     the destination page. 
+
 // Todo: Update syllabus with Activity List headers... or update Activity list headers. 
+// Todo: Strongly consider moving HTML to sprint 1 and moving Python to a later sprint. 
+
+// Certified for SP23 (01/15/2023)

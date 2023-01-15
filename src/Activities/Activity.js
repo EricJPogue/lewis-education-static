@@ -27,7 +27,7 @@ import { PythonW3C } from './PythonW3C'
 import { SuccessfulDeveloper } from './SuccessfulDeveloper'
 
 import { WebAssignmentPortfolioWithNodeJS } from './WebAssignmentPortfolioWithNodeJS'
-import { WebDiceRoller } from './WebDiceRoller'
+// import { WebDiceRoller } from './WebDiceRoller'
 import { gettingToKnowEachOther } from './WebGettingToKnowEachOther'
 import { WebCourseSchedule } from './WebCourseSchedule'
 import { WebMapManiaVersion2 } from './WebMapManiaVersion2'
@@ -119,7 +119,7 @@ class Activity extends Component {
 			case 'html': return HTML()
 			case 'python-w3c': return PythonW3C()
 			case 'assignment-portfolio-with-node-js': return WebAssignmentPortfolioWithNodeJS()
-			case 'dice-roller': return WebDiceRoller()
+			// case 'dice-roller': return WebDiceRoller()
 			case 'getting-to-know-each-other': return gettingToKnowEachOther()
 			case 'course-schedule': return WebCourseSchedule()
 			case 'map-mania-v2': return WebMapManiaVersion2()

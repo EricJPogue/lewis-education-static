@@ -1,13 +1,19 @@
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { makeInternalURL } from './ActivityRouter'
 
-export const WebDiceRoller = () => {
+const WEB_DICE_ROLLER_NAME = 'Web Dice Roller'
+export const WEB_DICE_ROLLER_ROUTE = 'dice-roller'
+export const webDiceRollerLink = () => { return (<NavLink to={makeInternalURL(WEB_DICE_ROLLER_ROUTE)}>{WEB_DICE_ROLLER_NAME}</NavLink>) }
+export const webDiceRoller = () => { return WebDiceRoller() }
+
+const WebDiceRoller = () => {
 	return (
 	
 <div>
 <br />
-<h4>Dice Roller</h4>
+<h4>{WEB_DICE_ROLLER_NAME}</h4>
 <h5>Summary: Create a website that simulates the rolling as part of a game</h5>
 <h5>Prerequisites: </h5>
 <ul style={{listStyleType:'square'}}>
