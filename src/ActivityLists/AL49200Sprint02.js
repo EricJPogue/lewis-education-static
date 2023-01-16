@@ -36,7 +36,7 @@ export const al49200Sprint02 = () => {
 		<ol>
 			{standardActivities(sprint, classProductSprint2Link())}
 			<li>Review our sprint 2 planning {lectureRecordingPlaylist()}</li>
-			<li>Read {continuousIntegration() /*cICDArticle()*/}</li>
+			<li>Read {continuousIntegration()}</li>
 			<li>Within {oreillyPlaylistSC()} read “Essential Scrum” chapters 7 through 10</li>
 
 			<li>As needed review {HTMLW3C()}, {CSSW3C()}, and {JavaScriptW3C()} tutorials</li>
@@ -45,7 +45,7 @@ export const al49200Sprint02 = () => {
 			{initialPost(sprint)}
 
 			<li>Within {oreillyPlaylistSC()} read “Essential Scrum” chapters 11 and 12</li>
-			<li>Review {jira()} and {trello()} as potential tools to assist you in your Agile Scrum planning</li>
+			<li>Utilize GitHub to document each of your scrum events and artifacts... {jira()} and {trello()} should only be used with prior approval</li>
 			{standardActivitiesClosing(sprint, classProductSprint2Link(), '8 hours per team member')}
 		</ol>
 		{closing(sprint)}

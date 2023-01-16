@@ -80,7 +80,6 @@ be developing your class product:</p>
 const markdownOnGitHub = () => { return externalLink('Markdown', 'https://docs.github.com/en/github/writing-on-github')}
 const minimumViableProduct = () => { return externalLink('Minimum Viable Product', 'https://www.agilealliance.org/glossary/mvp/')}
 
-
 const name2 = 'Class Product Sprint 2'
 export const CLASS_PRODUCT_SPRINT_2_ROUTE = 'class-product-sprint-2'
 export const classProductSprint2Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_2_ROUTE)}>{name2}</NavLink>)}
@@ -103,9 +102,15 @@ a shared MVP view that you will publish as a team in your team’s GitHub reposi
 	<li>Review the definition of {minimumViableProduct()} (MVP) from {agileAlliance()}</li>
 	<li>Review each team member’s MVP proposal from sprint 1</li>
 	<li>As a team create and publish a MVP direction paper for your product</li>
+	<li>Include <em>a review of and an initial plan for existing product code</em></li> 
 	<li>Your direction paper needs to be very high quality from a content, clarity, format, and technical perspective</li>
-	<li>Your final MVP paper should be embraced by all team members, maintained in your GitHub repository utilizing 
-		{markdownOnGitHub()}, and linked to the README.md file</li>
+	<li>Your final MVP paper must be:</li>
+		<ul>
+			<li>embraced by all team members</li>
+			<li>maintained in the root of your GitHub product repository</li>
+			<li>in {markdownOnGitHub()} format</li>
+			<li>linked to your README.md</li>
+		</ul>
 	<li>To appropriately cover the topics a 500 to 1500 word document would be expected (1 to 3 pages)</li>
 </ol>
 
