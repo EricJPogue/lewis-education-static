@@ -2,6 +2,10 @@ import { getCalendarByCalendarID, _SPRING_2023_01_09_16, _CURRENT_CALENDAR } fro
 
 import { al44000Sprint3Topics } from "../ActivityLists/AL44000Sprint03"
 
+export const getIsScheduleT = () => {
+	return (getClass().schedule === _T)
+}
+
 export const getIsScheduleTTr = () => {
 	return (getClass().schedule === _TTR)
 }

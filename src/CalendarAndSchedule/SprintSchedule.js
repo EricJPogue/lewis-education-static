@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table'
 import { CSTDate, incrementDate, isToday, pastDate, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 
-import { getIsScheduleTTr, getIsScheduleOnline } from '../DataAndAPIs/Classes'
+import { getIsScheduleT, getIsScheduleTTr, getIsScheduleOnline } from '../DataAndAPIs/Classes'
 import { getClass } from '../DataAndAPIs/Classes'
 import { getClassCalendar } from '../DataAndAPIs/Classes'
 import { internalLink } from '../DataAndAPIs/Links'
@@ -174,7 +174,7 @@ export class SprintClassActivities extends Component {
 		"SecondThursday": "Finals Week (no regular classes)"
 	}
 
-	renderTTSchedule = () => {
+	renderTThSchedule = () => {
 		let schedule = null
 		switch(this.currentSprintBaseOne()) {
 			case 1: schedule = this.TTScheduleSprint1; break;
@@ -201,6 +201,32 @@ export class SprintClassActivities extends Component {
 		)
 	}
 
+	renderTSchedule = () => {
+			// Tuesday, Thursday class schedules. 
+		const TSchedule = {
+			"FirstTuesday":   "Lab",
+			"FirstThursday":  "Alternate lab day for teams that can’t meet Tuesday",
+			"SecondTuesday":  "Lab",
+			"SecondThursday": "Alternate lab day for teams that can’t meet Tuesday"
+		}
+
+		const schedule = TSchedule
+		const calendar = getClassCalendar()
+		const dates = calendar[this.currentSprint()]
+		return ( <div>
+				{this.renderScheduleHeader()}
+				<Table striped bordered hover>
+					<thead><tr><th>Day</th><th>Schedule</th></tr></thead>
+					<tbody>
+						{this.renderScheduleRow(incrementDate(dates.start,1),schedule.FirstTuesday,1)}
+						{this.renderScheduleRow(incrementDate(dates.start,3),schedule.FirstThursday,2)}
+						{this.renderScheduleRow(incrementDate(dates.start,8),schedule.SecondTuesday,3)}
+						{this.renderScheduleRow(incrementDate(dates.start,10),schedule.SecondThursday,4)}
+					</tbody>
+				</Table>
+		</div> )
+	}
+
 	renderOnlineSchedule = () => {
 		return ( <div>
 			{this.renderScheduleHeader()}
@@ -209,7 +235,8 @@ export class SprintClassActivities extends Component {
 	}
 
 	render() {
-		if (getIsScheduleTTr()) return this.renderTTSchedule()
+		if (getIsScheduleT()) return this.renderTSchedule()
+		if (getIsScheduleTTr()) return this.renderTThSchedule()
 		if (getIsScheduleOnline()) return this.renderOnlineSchedule()
 		else return this.renderMWFSchedule()
 	}
