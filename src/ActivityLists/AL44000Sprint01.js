@@ -56,7 +56,7 @@ export const list44000Sprint01 = (sprint) => {
 
 			{initialPost(sprint)}
 			<li>Complete {toolsOfTheTradeLink()}{estimated('2 hours')}</li>
-			<li>Read “Engineering Software as a Service” Preface and review associated {foxChapter0Lecture()}</li>
+			<li>Read {engineeringSoftwareAsAService()} Preface and review associated {foxChapter0Lecture()}</li>
 			<li>Within {oreillyPlaylistSE()} scan “Essential Scrum” Chapters 1 and 2</li>
 			<li>Complete {HelloWorldPythonLink()}</li>
 

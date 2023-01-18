@@ -33,15 +33,14 @@ export const ics_1_2of6 = () => { return xyz_1_2of6(sprint, ics_1_2of6_PreworkAn
 const ics_1_3of6_PreworkAnnouncementAndAgenda = {
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
-		'Be prepared for “File Systems, Directories, and Files” Breakout'],
+		'Be prepared for “File Systems, Directories, and Files” Breakout' ],
 	'announcements':[ 
 		'Reminder that Monday is Martin Luther King Jr. Day with no classes' ],
 	'agenda':[
-			'Sprint Progress Polling plus Command Line Interfaces (CLI) and Directories',
-			'Programming Together with graphical and CLI tool to manage directories and files',
-			'Prework for Next Class',
-			'Breakout: File Systems, Directories, and Files' 
-	]
+		'Sprint Progress Polling plus Command Line Interfaces (CLI) and Directories',
+		'Programming Together with graphical and CLI tool to manage directories and files',
+		'Prework for Next Class',
+		'Breakout: File Systems, Directories, and Files' ]
 }
 export const ics_1_3of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_3of6_PreworkAnnouncementAndAgenda, sprint, activityList)
@@ -74,8 +73,14 @@ const ics_1_5of6_PreworkAnnouncementsAndAgenda = {
 		'Make your initial post for Discussion 1',
 		'Be prepared to continue “File Systems, Directories, and Files” Breakout',
 		'Be prepared for Quiz 1'],
-	'announcements':['TBD'],
-	'agenda':['TBD']
+	'announcements':[
+		'ECaMS Study Table open for business in Memorial Hall - Room 129... highly recommended!',
+		'All sprint 1 activities and assignments due Sunday'],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Breakout: File Systems, Directories, and Files (continued)',
+		'Prework for Next Class',
+		'Quiz 1']
 }
 export const ics_1_5of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_5of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
@@ -90,9 +95,12 @@ export const ics_1_5of6 = () => {
 
 // Sprint 1 session 6 of 6: Friday
 const ics_1_6of6_PreworkAnnouncementsAndAgenda = {
-	'prework':['TBD'],
-	'announcements':['TBD'],
-	'agenda':['TBD']
+	'prework': [
+		'Complete through activity 15 prior to next class', '',
+		'Be prepared for Lab & Programming Together',
+		'Be prepared to submit all sprint 1 assignments Sunday!' ],
+	'announcements': ['TBD'],
+	'agenda': ['TBD']
 }
 export const ics_1_6of6 = () => { 
 	return checklistAnnouncementsPreworkAndAgenda(ics_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
