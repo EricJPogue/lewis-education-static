@@ -31,7 +31,7 @@ const breakoutSDLCsName = 'SDLCs, Virtuous Triangle, Plan and Document, and Agil
 const breakoutSDLCs = () => { 
 	return breakoutStandard(
 		`Breakout: ${breakoutSDLCsName}`, 
-		`In this breakout session your team will discuss:`, [
+		'In this breakout session your team will', [
 		'The Virtuous Triangle... Could Saas on Cloud Computing and Frameworks and Tools be combined?',
 		'Software Development Life Cycles including Plan and Document, Iterative, and Agile',
 		'SDLCs including Waterfall, Spiral, RUP, Agile, and Scrum',

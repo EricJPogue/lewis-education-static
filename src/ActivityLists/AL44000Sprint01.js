@@ -70,6 +70,10 @@ export const list44000Sprint01 = (sprint) => {
 // Todo: Fix the end of the Fox Preface video.
 
 // Certified for SP23 (01/02/23)
+// Todo: If the fist sprint always has a holiday the second Monday, consider moving one topic and associated discussion
+//     back to sprint 2. 
+// Todo: Consider moving to 7 sprints by combining sprints 7 and 8 into final projects of at least 3 weeks (in 16 week 
+//     classes),
 
 
 
