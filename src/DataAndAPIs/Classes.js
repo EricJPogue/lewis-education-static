@@ -334,7 +334,7 @@ export const _CPSC_44000 = {
 }
 
 export const _CPSC_49200 = {
-	name:'Software Engineering',
+	name:'Software Systems Capstone',
 	id:'CPSC-49200',
 	number: 49200,
 	creditHours:3,
