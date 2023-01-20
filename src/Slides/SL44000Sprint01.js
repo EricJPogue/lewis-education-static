@@ -1,8 +1,9 @@
-import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 import { xyz_1_1of6, xyz_1_2of6 } from './SL00000Sprint01'
 import { tPrework, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, tQuizExpectations } from './SLSprint00'
 
 import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
+import { se_2_1of6_PreworkAnnouncementsAndAgenda } from './SL44000Sprint02'
 
 // Software Engineering (SE) sprint 1 global values.
 const sprint = 1
@@ -97,8 +98,8 @@ const breakoutSaaS = () => {
 	'In this breakout session on Software Development Life Cycles (SDLCs), Software as a Service, Cloud Computing, and Highly Productive Frameworks & Tools your team will:', [
 	'SaaService architectures including SOA, APIs, and Web Services',
 	'Cloud Computing including Azure, AWS, Google, GoDaddy, and Cloud9... How have costs evolved?',
-	'Highly Effective Frameworks including Ruby/Rails, React, MERN, Flask and many more', 
-	'Highly Effective Tools Git, GitHub, JUnit,  and many more',
+	'Highly Effective Frameworks including Ruby/Rails, React, and MERN and more... what is our framework?', 
+	'Highly Effective Tools Git, GitHub, JUnit,  and more',
 	'Testing including Verification and Validation... How does Waterfall accomplish Validation?' ])
 }
 export const se_1_5of6 = () => { 
@@ -115,12 +116,19 @@ export const se_1_5of6 = () => {
 const se_1_6of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 15 prior to next class', '',
-		`Be prepared for “${breakoutSaaSName}” breakout}`,
+		`Be prepared for “${breakoutSaaSName}” breakout`,
 		'Be prepared for Lab & Programming Together',
 		'Be prepared to submit all sprint 1 assignments Sunday!' ],
-	'announcements':['TBD'],
-	'agenda':['TBD']
+	'announcements':[
+		`All sprint ${sprint} assignments due Sunday!`],
+	'agenda':[
+		`Breakout: ${breakoutSaaSName}`,
+		'Lab'
+	]
 }
 export const se_1_6of6 = () => { 
-	return checklistAnnouncementsPreworkAndAgenda(se_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_1of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [breakoutSaaS, preworkNext, tLab ])
 }
