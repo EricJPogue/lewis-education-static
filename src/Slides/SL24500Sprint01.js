@@ -1,17 +1,18 @@
-import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 import { xyz_1_1of6, xyz_1_2of6 } from './SL00000Sprint01'
-import { tPrework, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, tQuizExpectations } from './SLSprint00'
+import { tPrework, tQuiz, basicSlide, basicSlideWithLogo, bulletListSlide, breakoutStandard, tQuizExpectations } from './SLSprint00'
 
 import { list24500Sprint01 } from '../ActivityLists/AL24500Sprint01'
+import { oop_2_1of6_PreworkAnnouncementsAndAgenda } from './SL24500Sprint02'
 
 // Introduction to Computer Science (ICS) sprint 1 global values.
 const sprint = 1
 const activityList = () => { return list24500Sprint01(sprint) }
 
-// Sprint 1 session 1 of 6: Monday
+// Session 1 of 6: Monday
 export const oop_1_1of6 = () => { return xyz_1_1of6(activityList, oop_1_2of6_PreworkAnnouncementsAndAgenda.prework) }
 
-// Sprint 1 session 2 of 6: Wednesday
+// Session 2 of 6: Wednesday
 const oop_1_2of6_PreworkAnnouncementsAndAgenda = {
 	'announcements':[ 
 	'Friday’s class will be remote via Zoom' ],
@@ -26,7 +27,7 @@ const oop_1_2of6_PreworkAnnouncementsAndAgenda = {
 }
 export const oop_1_2of6 = () => { return xyz_1_2of6(sprint, oop_1_2of6_PreworkAnnouncementsAndAgenda, oop_1_3of6_PreworkAnnouncementsAndAgenda, activityList) }
 
-// Sprint 1 session 3 of 6: Friday
+// Session 3 of 6: Friday
 const oop_1_3of6_PreworkAnnouncementsAndAgenda = {
 	'announcements':[ 
 		'Reminder that Monday is Martin Luther King Jr. Day with no classes' ],
@@ -67,13 +68,13 @@ export const oop_1_3of6 = () => {
 	return completeDeck(slideDeck, [poll, lab, breakout, preworkNext])
 }
 
-// Sprint 1 session 4 of 6: Monday
+// Session 4 of 6: Monday
 export const oop_1_4of6 = () => { 
 	const announcement = () => { return basicSlideWithLogo('Announcement', ['In recognition of Martin Luther King Jr. Day day there is no class.']) }
 	return [ announcement ] 
 }
 
-// Sprint 1 session 5 of 6: Wednesday
+// Session 5 of 6: Wednesday
 const oop_1_5of6_PreworkAnnouncementsAndAgenda = {
 	'prework':[
 		'Complete through activity 11 prior to next class', '',
@@ -100,15 +101,28 @@ export const oop_1_5of6 = () => {
 	return completeDeck(slideDeck, [poll, breakout, quizExpectations, quiz, preworkNext])
 }
 
-// Sprint 1 session 6 of 6: Friday
+// Session 6 of 6: Friday
 const oop_1_6of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 15 prior to next class', '',
+		`Be prepared for “${breakoutOOPConceptsName}” breakout (continued)`,
 		'Be prepared for Lab & Programming Together',
 		'Be prepared to submit all sprint 1 assignments Sunday!' ],
-	'announcements':['TBD'],
-	'agenda':['TBD']
+	'announcements':[
+		`All sprint ${sprint} assignments due Sunday!`],
+	'agenda':[
+		`Breakout: ${breakoutOOPConceptsName} (continued)`,
+		`Quiz ${sprint} “Phone a Friend”`,
+		'Prework for Next Class',
+		'Lab' ]
 }
 export const oop_1_6of6 = () => { 
-	return checklistAnnouncementsPreworkAndAgenda(oop_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const quizPhoneAFriend = () => { return basicSlide(
+		`Quiz ${sprint} “Phone a Friend”`, [
+			`Let’s play Quiz ${sprint} “Phone a Friend”`,
+			`Who has a Quiz ${sprint} question they would like help with?`]) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', oop_2_1of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [breakoutOOPConcepts, quizPhoneAFriend, preworkNext, tLab ])
 }

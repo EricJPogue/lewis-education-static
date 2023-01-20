@@ -393,7 +393,6 @@ export const URLCLASSID = 'cpsc'
 export const _MWF = 'MWF'
 const _T = 'T'
 export const _TTR = 'TTh'
-const _Th = 'Th'
 export const _ASYNCHRONOUS = 'Asynchronous' 
 
 export const classSectionList = [
@@ -412,7 +411,7 @@ export const classSectionList = [
 		'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' },
 
 	{ 'classID':'sp23-cpsc-49200-004', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_49200, 'number':'49200', 'section':'004', 'crn':'10822', 
-		'title':'Software Systems Capstone', 'schedule':_Th, 'time':'2-3:15', 'finalExam':'Thursday, May 4 from 1:30 to 3:30 pm CT', 
+		'title':'Software Systems Capstone', 'schedule':_T, 'time':'2-3:15', 'finalExam':'Thursday, May 4 from 1:30 to 3:30 pm CT', 
 		'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' },
 
 	{ 'classID':'cpsc-24700', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_24700, 'number':'24700', 'section':'XXX', 'crn':'00000',

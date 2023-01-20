@@ -123,8 +123,7 @@ const se_1_6of6_PreworkAnnouncementsAndAgenda = {
 		`All sprint ${sprint} assignments due Sunday!`],
 	'agenda':[
 		`Breakout: ${breakoutSaaSName}`,
-		'Lab'
-	]
+		'Lab' ]
 }
 export const se_1_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
