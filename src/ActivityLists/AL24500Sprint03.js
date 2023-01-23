@@ -23,6 +23,7 @@ export const al24500Sprint03 = () => {
 			<li>Develop a moderately sophisticated graphical Java application (FaceDraw)</li>
 			<li>Comfortably utilize our command-line Java development environment and VS Code editor</li>
 			<li>Utilize source code management and Git/GitHub</li>
+			<li>Utilize JSON to represent program data</li>
 			<li>Effectively compile, debug, submit, update, and manage Java application source code</li>
 		</ul>
 

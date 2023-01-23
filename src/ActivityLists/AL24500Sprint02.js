@@ -23,7 +23,7 @@ export const al24500Sprint02 = () => {
 			<li>Identify, define, and discuss object-oriented Patterns and Principles</li>
 			<li>Create, modify, compile, and execute OOP based Java applications</li>
 			<li>Manage and submit source code utilizing the GitHub and the Git command line client</li>
-			<li>Utilize UML and JSON to represent program data</li>
+			<li>Utilize UML to represent Java classes</li>
 		</ul>
 
 		{activitiesListIntro(sprint)}

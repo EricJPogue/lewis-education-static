@@ -44,13 +44,13 @@ export const list20000Sprint02 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
-			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The Information Layer and review our associated {daleChapter2Lecture()}</li>
+			<li>Read “Computer Science Illuminated” The Information Layer and review our associated {daleChapter2Lecture()}</li>
 			<li>Embrace the 30-for-30 plan {overcomingProcrastination()}</li>
 			<li>Review {toolsOfTheTradeLink()}</li>
 			<li>Review {SequenceSelectionAndRepetition()}</li>
 			{initialPost(sprint)}
 
-			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Data Representation and review our associated {daleChapter3Lecture()}</li>
+			<li>Read “Computer Science Illuminated” Data Representation and review our associated {daleChapter3Lecture()}</li>
 			<li>Within {oreillyPlaylistICS()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
 			<li>Complete {htmlLink()} - Part 1{estimated('3 hours')}</li>
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
