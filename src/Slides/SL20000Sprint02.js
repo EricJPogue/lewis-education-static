@@ -10,20 +10,19 @@ const activityListPrevious = () => { return list20000Sprint01(sprint-1) }
 const activityList = () => { return list20000Sprint02(sprint) }
 
 // Session 1 of 6: Monday
+export const xyz_2_1of6_sprintPlanning = () => {
+	return orderedListSlide(`Sprint Planning`, `Sprint ${sprint} Changes:`, [
+		'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
+		'We have a new Demo assignment that will need to be submitted when you complete your lab demo',
+		'To help reduce procrastination** demos and retrospectives will be Friday while and Lab will be Wednesday',
+		'We will complete our first scrum team Breakout Discussion on Friday',
+		`Sprint ${sprint} should be a little easier since we don’t have a holiday during the sprint`
+	])
+}
 export const ics_2_1of6_PreworkAnnouncementsAndAgenda = xyz_n_1of6_lists(sprint)
 export const ics_2_1of6 = () => { 
-	const sprintPlanning = () => {
-		return orderedListSlide(`Sprint Planning`, `Sprint ${sprint} Changes:`, [
-			'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
-			'We have a new Demo assignment that will need to be submitted when you complete your lab demo',
-			'To help reduce procrastination demos and retrospectives will be Friday while and Lab will be Wednesday**',
-			'We will complete our first Scrum Team Breakout Discussion on Friday',
-			'Should be a little easier since we don’t have a holiday during the sprint'
-		])
-	}
-
 	return xyz_n_1of6(sprint, ics_2_1of6_PreworkAnnouncementsAndAgenda.prework, activityListPrevious, ics_2_1of6_PreworkAnnouncementsAndAgenda.agenda, 
-		ics_2_2of6_PreworkAnnouncementsAndAgenda.prework, activityList, sprintPlanning()) 
+		ics_2_2of6_PreworkAnnouncementsAndAgenda.prework, activityList, xyz_2_1of6_sprintPlanning()) 
 }
 
 const ics_2_2of6_PreworkAnnouncementsAndAgenda = {

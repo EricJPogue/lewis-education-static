@@ -1,12 +1,12 @@
 // SLSprint01 is depreciated and should be removed after SP23 sprint 1.
-
-import { getClass } from '../DataAndAPIs/Classes'
-import { preflightChecklist, instructorChecklist, basicSlide, basicSlideWithLogo, orderedListSlide, end, breakout, bulletListSlide } from './SLSprint00' // Shared slides.
-import { prework, breakoutStandard, quiz } from './SLSprint00'
-import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
-import { list24700Sprint01 } from '../ActivityLists/AL24700Sprint01'
-import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
-import { agendaSlide } from './SLSprint00' // Shared slide templates.
+/*
+import { getClass } from '../../DataAndAPIs/Classes'
+import { preflightChecklist, instructorChecklist, basicSlide, basicSlideWithLogo, orderedListSlide, end, breakout, bulletListSlide } from '../SLSprint00' // Shared slides.
+import { prework, breakoutStandard, quiz } from '../SLSprint00'
+import { list20000Sprint01 } from '../../ActivityLists/AL20000Sprint01'
+import { list24700Sprint01 } from '../../ActivityLists/AL24700Sprint01'
+import { list44000Sprint01 } from '../../ActivityLists/AL44000Sprint01'
+import { agendaSlide } from '../SLSprint00' // Shared slide templates.
 
 // Sprint 1 integrated slide decks are defined below.
 const sprint = 1
@@ -17,7 +17,8 @@ const sprint = 1
 // the second Monday is Labor day so the final Friday of the sprint for Software Engineering would have a rout of 
 // '44000-1-6' which implies the integrated slide deck is for Software Engineering sprint 1 session 6.
 
-export const sprint1Router = (route) => {
+
+const sprint1Router = (route) => {
 	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
 		case '20000-1-1o': return ics1_1of6()
@@ -38,6 +39,7 @@ export const sprint1Router = (route) => {
 		default: return null
 	}
 }
+
 
 // Introduction to Computer Science (ICS)
 // Todo: Move session 1 from PowerPoint slides to integrated slides.
@@ -109,7 +111,7 @@ const ics_prework_1_3of6 = () => {
 		sprint, list20000Sprint01)
 }
 
-/* No class due to Labor Day. */
+// No class due to Labor Day. 
 const ics1_4of6 = () => { return shared1_4of6() }
 const shared1_4of6 = () => { 
 	const laborDayAnnouncements =  () => { return basicSlideWithLogo('Announcements', [ 
@@ -263,7 +265,7 @@ const se1_3of6 = () => {
 	return [ instructorChecklist, preflightChecklist, announcements, agenda, se_prework_1_2of6, poll, programmingTogether, se_prework_1_5of6, breakout, breakout2, end ] 
 }
 
-/* No class due to Labor Day. */
+// No class due to Labor Day. 
 const se1_4of6 = () => { return shared1_4of6() }
 
 const se_prework_1_5of6 = () => {
@@ -398,3 +400,4 @@ const quizExpectations = () => {
 		'Your first sincere attempt at the quiz is expected by the end of class']) 
 }
 
+*/

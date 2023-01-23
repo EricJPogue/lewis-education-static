@@ -6,7 +6,7 @@ import { tPreworkWithLogo } from './SLSprint00'
 
 import { discussionBreakout } from './SLSprint00'
 
-import { ics_prework_2_1of6, web_prework_2_1of6 } from './SLSprint01'
+import { ics_prework_2_1of6, web_prework_2_1of6 } from './archive/SLSprint01'
 
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02' 
 import { list24700Sprint02 } from '../ActivityLists/AL24700Sprint02'
@@ -19,7 +19,7 @@ import { se_3_1of6_prework_list } from './SL44000Sprint03'
 export const sprint2Router = (route) => {
 	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
-		case '20000-2-1': return ics2_1of6()
+		case '20000-2-1o': return ics2_1of6()
 		case '20000-2-2': return ics2_2of6()
 		case '20000-2-3': return ics2_3of6()
 		case '20000-2-4': return ics_2_4of6()

@@ -1,8 +1,10 @@
 import { xyz_n_1of6_lists, xyz_n_1of6 } from "./SL00000Sprint00"
-import { orderedListSlide } from './SLSprint00'
+// import { orderedListSlide } from './SLSprint00'
 
 import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02'
+
+import { xyz_2_1of6_sprintPlanning } from "./SL20000Sprint02"
 
 // Software Engineering (SE) sprint 2 global values.
 const sprint = 2
@@ -13,18 +15,8 @@ const activityList = () => { return list44000Sprint02(sprint) }
 // SE Sprint 2 session 1 of 6: Monday
 export const se_2_1of6_PreworkAnnouncementsAndAgenda = xyz_n_1of6_lists(sprint)
 export const se_2_1of6 = () => { 
-	const sprintPlanning = () => {
-		return orderedListSlide(`Sprint Planning`, `Sprint ${sprint} Changes:`, [
-			'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
-			'We have a new Demo assignment that will need to be submitted when you complete your lab demo',
-			'To help reduce procrastination demos and retrospectives will be Friday while and Lab will be Wednesday**',
-			'We will complete our first Scrum Team Breakout Discussion on Friday',
-			'Should be a little easier since we don’t have a holiday during the sprint'
-		])
-	}
-
 	return xyz_n_1of6(sprint, se_2_1of6_PreworkAnnouncementsAndAgenda.prework, activityListPrevious, se_2_1of6_PreworkAnnouncementsAndAgenda.agenda, 
-		se_2_2of6_PreworkAnnouncementsAndAgenda.prework, activityList, sprintPlanning()) 
+		se_2_2of6_PreworkAnnouncementsAndAgenda.prework, activityList, xyz_2_1of6_sprintPlanning()) 
 }
 
 const se_2_2of6_PreworkAnnouncementsAndAgenda = {
@@ -33,7 +25,8 @@ const se_2_2of6_PreworkAnnouncementsAndAgenda = {
 		'Be prepared for Lab & Programming Together Wednesday',
 		'Demos and retrospectives will be Friday' ],
 	'announcements':[
-		'Procrastination is on the agenda.'],
+		'Procrastination is on the agenda',
+		'Does everyone know where to find the class recordings?'],
 	'agenda':['TBD' ]
 }
 

@@ -33,7 +33,7 @@ export const preflightChecklist = () => {
 			'Share desktop and open slides', 
 			'Test camera, microphone, and speakers',
 			'Share slides with ”&hide-nav=y” option as needed',
-			'Start recording' ]
+			'Verify recording has started automatically' ]
 		)}
 		
 	</div> )
