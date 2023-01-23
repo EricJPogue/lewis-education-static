@@ -63,6 +63,8 @@ export const list20000Sprint01 = (sprint) => {
 // Todo: Add good feedback answer to lab 1 question 5 to see if we can do this on other important questions. 
 
 // Certified for SP23 (01/02/23)
+// Todo: Strongly consider replacing hello world Python with hello world web so that students do not have to switch 
+//     back and forth between languages so many times. 
 
 
 

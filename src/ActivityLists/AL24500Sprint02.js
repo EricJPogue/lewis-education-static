@@ -2,7 +2,7 @@ import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
 import { ovalDrawPlusJavaLink } from '../Activities/OvalDrawPlus';
-import { oreillyPlaylistOOP, umlClassDiagrams, gitCommands, successfulProgrammer, internalLink } from '../DataAndAPIs/Links';
+import { oreillyPlaylistOOP, overcomingProcrastination, umlClassDiagrams, gitCommands, successfulProgrammer, internalLink } from '../DataAndAPIs/Links';
 
 const shapesPart1 = () => { return internalLink('Shapes - Part 1', '/activity-oop/java-shapes-step1') }
 const shapesPart2 = () => { return internalLink('Shapes - Part 2', '/activity-oop/java-shapes-step2') }
@@ -31,6 +31,7 @@ export const al24500Sprint02 = () => {
 			{standardActivities(sprint, ovalDrawPlusJavaLink())}
 			<li>Review basic {gitCommands()}</li>
 			<li>Complete {oopPatterns()}</li>
+			<li>Embrace the 30-for-30 plan {overcomingProcrastination()}</li>
 			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapters 4 and 5</li>
 			<li>Complete {shapesPart1()}</li>
 			{initialPost(sprint)}
@@ -46,3 +47,4 @@ export const al24500Sprint02 = () => {
 }
 
 // Certified for SP23 (01/15/2023)
+// Todo: Consider adding lab 2 question relating to overcoming procrastination article. 
