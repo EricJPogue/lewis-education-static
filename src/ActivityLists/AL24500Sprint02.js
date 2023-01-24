@@ -26,6 +26,7 @@ export const al24500Sprint02 = () => {
 			<li>Utilize UML to represent Java classes</li>
 		</ul>
 
+		{list24500Sprint02(sprint)}
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, ovalDrawPlusJavaLink())}
@@ -45,6 +46,28 @@ export const al24500Sprint02 = () => {
 		{closing(sprint)}
 	</div> )
 }
+
+export const list24500Sprint02 = (sprint) => {
+	return ( <div>
+		{activitiesListIntro(sprint)}
+		<ol>
+			{standardActivities(sprint, ovalDrawPlusJavaLink())}
+			<li>Review basic {gitCommands()}</li>
+			<li>Complete {oopPatterns()}</li>
+			<li>Embrace the 30-for-30 plan {overcomingProcrastination()}</li>
+			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapters 4 and 5</li>
+			<li>Complete {shapesPart1()}</li>
+			{initialPost(sprint)}
+
+			<li>Complete {successfulProgrammer()}</li>
+			<li>Complete {shapesPart2()}</li>
+			<li>Complete {oopPrinciples()}</li>
+			<li>Review {umlClassDiagrams()}</li>
+			{standardActivitiesClosing(sprint, ovalDrawPlusJavaLink(), '4 hours')}
+		</ol> 
+	</div> )
+}
+
 
 // Certified for SP23 (01/15/2023)
 // Todo: Consider adding lab 2 question relating to overcoming procrastination article. 

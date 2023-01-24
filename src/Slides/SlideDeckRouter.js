@@ -19,6 +19,7 @@ import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6 
 import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6, ics_8_7of6 } from './SL20000Sprint08'
 
 import { oop_1_1of6, oop_1_2of6, oop_1_3of6, oop_1_4of6, oop_1_5of6, oop_1_6of6 } from './SL24500Sprint01'
+import { oop_2_1of6 } from './SL24500Sprint02'
 
 
 import { web_1_1of6, web_1_2of6, web_1_3of6, web_1_4of6, web_1_5of6, web_1_6of6 } from './SL24700Sprint01'
@@ -132,6 +133,8 @@ const sprint3Router = (route) => {
 		case '24500-1-4': return oop_1_4of6()
 		case '24500-1-5': return oop_1_5of6()
 		case '24500-1-6': return oop_1_6of6()
+
+		case '24500-2-1': return oop_2_1of6()
 
 		case '24700-1-1': return web_1_1of6()
 		case '24700-1-2': return web_1_2of6()
