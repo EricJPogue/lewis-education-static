@@ -32,6 +32,7 @@ export const al49200Sprint02 = () => {
 			<li>Implement, document, and demonstrate CI/CD for your customer’s access to test, and productions environments</li>
 		</ul>
 
+		list49200Sprint02(sprint)
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, classProductSprint2Link())}
@@ -49,6 +50,27 @@ export const al49200Sprint02 = () => {
 			{standardActivitiesClosing(sprint, classProductSprint2Link(), '8 hours per team member')}
 		</ol>
 		{closing(sprint)}
+	</div> )
+}
+
+export const list49200Sprint02 = (sprint) => {
+	return ( <div>
+		{activitiesListIntro(sprint)}
+		<ol>
+			{standardActivities(sprint, classProductSprint2Link())}
+			<li>Review our sprint 2 planning {lectureRecordingPlaylist()}</li>
+			<li>Read {continuousIntegration()}</li>
+			<li>Within {oreillyPlaylistSC()} read “Essential Scrum” chapters 7 through 10</li>
+
+			<li>As needed review {HTMLW3C()}, {CSSW3C()}, and {JavaScriptW3C()} tutorials</li>
+			<li>Individually complete {azureWebsiteLink()} to publish your {gettingToKnowEachOtherAbbreviatedLink()} on Microsoft Azure{estimated('2 hours')}</li>
+			<li>With your team complete {gettingToKnowEachOthersTeamsLink()}{estimated('3 hours')}</li> 
+			{initialPost(sprint)}
+
+			<li>Within {oreillyPlaylistSC()} read “Essential Scrum” chapters 11 and 12</li>
+			<li>Utilize GitHub to document each of your scrum events and artifacts... {jira()} and {trello()} should only be used with prior approval</li>
+			{standardActivitiesClosing(sprint, classProductSprint2Link(), '8 hours per team member')}
+		</ol>
 	</div> )
 }
 

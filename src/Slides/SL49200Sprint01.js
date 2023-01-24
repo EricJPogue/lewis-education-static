@@ -9,15 +9,15 @@ import { list49200Sprint01 } from '../ActivityLists/AL49200Sprint01'
 const sprint = 1
 const activityList = () => { return list49200Sprint01(sprint) }
 
-// Sprint 1 session 1 of 4: Tuesday (there are 4 potential sessions)
+// Session 1 of 4: Tuesday (there are 4 potential sessions)
 export const ssc_1_1of4 = () => { return xyz_1_1of6(activityList, ssc_1_3of4_PreworkAnnouncementsAndAgenda.prework) }
 
-// Sprint 1 session 2 of 4: Monday
+// Session 2 of 4: Monday
 const announcement = () => { return basicSlideWithLogo('Announcement', ['Thursdays are reserved for teams that are not able to meet on Tuesday.']) }
 export const ssc_1_2of4 = () => { return [ announcement ] }
 
 
-// Sprint 1 session 3 of 4: Tuesday (week 2)
+// Session 3 of 4: Tuesday (week 2)
 const ssc_1_3of4_PreworkAnnouncementsAndAgenda = {
 	'prework':[
 		'Complete activity 1 (Class Product Sprint 1) by sending me an email before you leave today', 
