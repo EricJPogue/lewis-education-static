@@ -161,6 +161,16 @@ export const tLab = () => {
 		'Completing the most important activities and assignments together' ])
 }
 
+export const tReviewDemoSchedule = () => {
+	return bulletListSlide('Review Demo Schedule', 
+		'Let’s review our demo schedule while recalling that demos are an important part of scrum and that they:', [
+		'Occur at the “beginning” of each new sprint ',
+		'Are an opportunity to show what was completed in the previous sprint',
+		'Are an **easy** and hopefully rewarding experience to show off your work',
+		'Provide a chance to see how others solved a problem and to see some of the challenges they faces' ]
+	)
+}
+
 export const tAnnouncementPreworkOrAgenda = (titleAndList, sprint=null, activityList=null) => {
 	return tPreworkWithLogo(titleAndList[0], titleAndList.slice(1), sprint, activityList )
 }

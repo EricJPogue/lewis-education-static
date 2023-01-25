@@ -1,10 +1,9 @@
-import { xyz_n_1of6_lists, xyz_n_1of6 } from "./SL00000Sprint00"
-// import { orderedListSlide } from './SLSprint00'
-
 import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02'
 
-import { xyz_2_1of6_sprintPlanning } from "./SL00000Sprint02"
+import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
+import { bulletListSlide, tDiscussionBreakout, tPrework } from './SLSprint00'
+import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
 
 // Software Engineering (SE) sprint 2 global values.
 const sprint = 2
@@ -18,17 +17,38 @@ export const se_2_1of6 = () => {
 		se_2_2of6_PreworkAnnouncementsAndAgenda.prework, activityList, xyz_2_1of6_sprintPlanning(sprint)) 
 }
 
+// Session 2 of 6: Wednesday
 const se_2_2of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 6 prior to next class', '',
 		'Be prepared for Lab & Programming Together Wednesday',
 		'Demos and retrospectives will be Friday' ],
 	'announcements':[
-		'Procrastination is on the agenda',
+		'Reducing procrastination is on the agenda',
 		'Does everyone know where to find the class recordings?'],
-	'agenda':['TBD' ]
+	'agenda':[
+		`Sprint ${sprint} Planning Questions & Answers`,
+		`Discussion Board ${sprint} as a scrum team`,
+		'Confirm scrum team Demos for Next Class',
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
+}
+export const se_2_2of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_2_2of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const qAndA = () => { return bulletListSlide(`Sprint ${sprint} Planning Questions & Answers`, `What questions do you have about sprint ${sprint}?`, [ ]) }
+	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_3of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab ])
 }
 
+const se_2_3of6_PreworkAnnouncementsAndAgenda = {
+	'prework': [
+		'Complete through activity 11 prior to next class', '',
+		'Be prepared for Demos and Retrospectives Friday' ],
+	'announcements':[ 'TBD' ],
+	'agenda':[ 'TBD' ]
+}
 /*
 	const introducingDemos = () => {
 		return bulletListSlide('Foreshadowing Wednesday’s Sprint Demos', 
