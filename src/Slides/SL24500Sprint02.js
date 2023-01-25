@@ -49,3 +49,11 @@ const oop_2_3of6_PreworkAnnouncementsAndAgenda = {
 	'announcements':[ 'TBD' ],
 	'agenda':[ 'TBD' ]
 }
+
+// Feedback:
+// Remember to respond back to at least two of your classmates in Discussions
+// I am impressed with how many of you have outside jobs
+
+// Metric: Missing only 1 Reflection
+
+// What do dentists cal their x-rays? Tooth pics.
