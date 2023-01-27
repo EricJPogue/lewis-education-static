@@ -27,22 +27,6 @@ export const al24500Sprint02 = () => {
 		</ul>
 
 		{list24500Sprint02(sprint)}
-		{activitiesListIntro(sprint)}
-		<ol>
-			{standardActivities(sprint, ovalDrawPlusJavaLink())}
-			<li>Review basic {gitCommands()}</li>
-			<li>Complete {oopPatterns()}</li>
-			<li>Embrace the 30-for-30 plan {overcomingProcrastination()}</li>
-			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapters 4 and 5</li>
-			<li>Complete {shapesPart1()}</li>
-			{initialPost(sprint)}
-
-			<li>Complete {successfulProgrammer()}</li>
-			<li>Complete {shapesPart2()}</li>
-			<li>Complete {oopPrinciples()}</li>
-			<li>Review {umlClassDiagrams()}</li>
-			{standardActivitiesClosing(sprint, ovalDrawPlusJavaLink(), '4 hours')}
-		</ol> 
 		{closing(sprint)}
 	</div> )
 }

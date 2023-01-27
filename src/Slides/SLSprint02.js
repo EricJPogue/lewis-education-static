@@ -21,7 +21,7 @@ export const sprint2Router = (route) => {
 	switch(courseNumberPlusRoute) {
 		case '20000-2-1o': return ics2_1of6()
 		case '20000-2-2o': return ics2_2of6()
-		case '20000-2-3': return ics2_3of6()
+		case '20000-2-3o': return ics2_3of6()
 		case '20000-2-4': return ics_2_4of6()
 		case '20000-2-5': return ics_2_5of6()
 		case '20000-2-6': return ics_2_6of6()

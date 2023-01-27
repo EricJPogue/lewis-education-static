@@ -10,7 +10,7 @@ import { sprint6Router } from './SLSprint06'
 import { tutorialRouter } from './Tutorials'
 
 import { ics_1_1of6, ics_1_2of6, ics_1_3of6, ics_1_4of6, ics_1_5of6, ics_1_6of6 } from './SL20000Sprint01'
-import { ics_2_1of6, ics_2_2of6 } from './SL20000Sprint02'
+import { ics_2_1of6, ics_2_2of6, ics_2_3of6 } from './SL20000Sprint02'
 import { ics_3_1of6, ics_3_2of6, ics_3_3of6, ics_3_4of6, ics_3_5of6, ics_3_6of6 } from './SL20000Sprint03'
 import { ics_4_1of6, ics_4_2of6, ics_4_3of6, ics_4_4of6, ics_4_5of6, ics_4_6of6 } from './SL20000Sprint04'
 import { ics_5_1of6, ics_5_2of6, ics_5_3of6, ics_5_4of6, ics_5_5of6, ics_5_6of6 } from './SL20000Sprint05'
@@ -19,7 +19,7 @@ import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6 
 import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6, ics_8_7of6 } from './SL20000Sprint08'
 
 import { oop_1_1of6, oop_1_2of6, oop_1_3of6, oop_1_4of6, oop_1_5of6, oop_1_6of6 } from './SL24500Sprint01'
-import { oop_2_1of6, oop_2_2of6 } from './SL24500Sprint02'
+import { oop_2_1of6, oop_2_2of6, oop_2_3of6 } from './SL24500Sprint02'
 
 
 import { web_1_1of6, web_1_2of6, web_1_3of6, web_1_4of6, web_1_5of6, web_1_6of6 } from './SL24700Sprint01'
@@ -85,6 +85,7 @@ const sprint3Router = (route) => {
 
 		case '20000-2-1': return ics_2_1of6()
 		case '20000-2-2': return ics_2_2of6()
+		case '20000-2-3': return ics_2_3of6()
 
 		case '20000-3-1': return ics_3_1of6()
 		case '20000-3-2': return ics_3_2of6()
@@ -138,6 +139,7 @@ const sprint3Router = (route) => {
 
 		case '24500-2-1': return oop_2_1of6()
 		case '24500-2-2': return oop_2_2of6()
+		case '24500-2-3': return oop_2_3of6()
 
 		case '24700-1-1': return web_1_1of6()
 		case '24700-1-2': return web_1_2of6()

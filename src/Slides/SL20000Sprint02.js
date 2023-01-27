@@ -2,7 +2,8 @@ import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02'
 
 import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
-import { bulletListSlide, tDiscussionBreakout, tPrework } from './SLSprint00'
+import { basicSlide, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+
 import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
 
 // Introduction to Computer Science (ICS) sprint 2 global values.
@@ -43,28 +44,64 @@ export const ics_2_2of6 = () => {
 }
 
 // Session 3 of 6: Friday
-
-export const ics_3_2of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_2of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
-	const qAndA = () => { return bulletListSlide(`Sprint ${sprint} Planning Questions & Answers`, `What questions do you have about sprint ${sprint}?`, [ ]) }
-	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_3of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
-
-	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab ])
-}
-
 const ics_2_3of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 9 prior to next class', '',
-		'Be prepared to discuss Chapter 2: The Architecture of Saas Applications' ],
-	'announcements':[ 'TBD' ],
-	'agenda':[ 'TBD' ]
+		'Be prepared to discuss “The Information Layer”' ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class' ]
+}
+export const ics_2_3of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_3of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:14, submitted:14 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:14},
+			{ name: 'Reflection', due: 14, submitted: 14 }])
+	}
+	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Wow! 100% submission percentage in sprint 1',
+			'All assignments are graded and posted', 
+			'Thank you for your reflection comments',
+			'Lots of nice comments about scrum teammates', 
+			'Be **sure** to put something in for each question so that I can give you at least a point or two',
+			'Riddles continue to be my Kryptonite for me :-) ... and now funny YouTube videos?!?!', 
+			'... What did the computer do at lunchtime?', 
+			'If you are not where you want to be in the class after sprint 1, I encourage you to come and talk with me' ])
+	}
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_4of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
+		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
 }
 
-
-// 100% submission
-//What did the computer do at lunchtime?
-// I don't know... let me Google...
-// "HasAByte"... very nice :-)
-
-// Youtube videos...
+const se_2_4of6_PreworkAnnouncementsAndAgenda = {
+	'prework': [
+		'Complete through activity 11 prior to next class', '',
+		`Be prepared for breakout` ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[ 
+		'TBD' ]
+}

@@ -2,11 +2,9 @@ import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02'
 
 import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
-import { basicSlide, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework } from './SLSprint00'
-import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
+import { basicSlide, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, breakoutStandard, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
-import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
-import { breakoutStandard } from './SLSprint00'
+import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
 
 // Software Engineering (SE) sprint 2 global values.
 const sprint = 2
