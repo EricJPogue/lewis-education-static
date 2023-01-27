@@ -42,12 +42,29 @@ export const ics_2_2of6 = () => {
 	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab ])
 }
 
+// Session 3 of 6: Friday
+
+export const ics_3_2of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_2of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const qAndA = () => { return bulletListSlide(`Sprint ${sprint} Planning Questions & Answers`, `What questions do you have about sprint ${sprint}?`, [ ]) }
+	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_3of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab ])
+}
+
 const ics_2_3of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 9 prior to next class', '',
-		'Be prepared for Demos and Retrospectives Friday' ],
+		'Be prepared to discuss Chapter 2: The Architecture of Saas Applications' ],
 	'announcements':[ 'TBD' ],
 	'agenda':[ 'TBD' ]
 }
 
 
+// 100% submission
+//What did the computer do at lunchtime?
+// I don't know... let me Google...
+// "HasAByte"... very nice :-)
+
+// Youtube videos...

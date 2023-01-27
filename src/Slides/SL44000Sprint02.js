@@ -2,8 +2,11 @@ import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02'
 
 import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
-import { bulletListSlide, tDiscussionBreakout, tPrework } from './SLSprint00'
+import { basicSlide, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework } from './SLSprint00'
 import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
+
+import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+import { breakoutStandard } from './SLSprint00'
 
 // Software Engineering (SE) sprint 2 global values.
 const sprint = 2
@@ -42,21 +45,77 @@ export const se_2_2of6 = () => {
 	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab ])
 }
 
+// Session 3 of 6: Wednesday
+const breakoutSaaSArchitectureName = 'The Architecture of Saas Applications'
+const breakoutSaaSArchitecture = () => {
+	return breakoutStandard( 
+		`Breakout: ${breakoutSaaSArchitectureName}`, 
+		`In this breakout session on ${breakoutSaaSArchitectureName} reading and lecture your team will discuss:`, [
+		'“100,000 Feet” through “50,000 Feet”',
+		'“10,000 Feet” through “500 Feet”',
+		'SaaS Architecture elements and the specific tools in the Author’s SaaS Architecture including database', 
+		'The required components of our SaaS architecture... and interesting options', 
+		'Suggested additional components including Bootstrap, Mongoose, Web Services/REST, and React' ])
+}
 const se_2_3of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 11 prior to next class', '',
 		'Be prepared for Demos and Retrospectives Friday' ],
-	'announcements':[ 'TBD' ],
-	'agenda':[ 'TBD' ]
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class',
+		`Preview of Monday Breakout on ${breakoutSaaSArchitectureName}` ]
 }
-/*
-	const introducingDemos = () => {
-		return bulletListSlide('Foreshadowing Wednesday’s Sprint Demos', 
-			'Sprint demos are a key part of Agile software development and Scrum.', [
-			'They occur at the beginning of each new sprint ',
-			'They are an opportunity to show what was completed in the previous sprint',
-			'They are intended to be an **easy** and rewarding experience to show off your work',
-			'Also a chance to see how others solved a problem and to see some of the challenges they faces',
-			'We will each be doing at least on sprint demo during the semester during class' ])
+export const se_2_3of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_2_3of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
 	}
-*/
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:26, submitted:26 },
+			{ name: 'Quiz', due:26, submitted:26 },
+			{ name: 'Lab', due:26, submitted:26},
+			{ name: 'Reflection', due: 26, submitted: 26 }])
+	}
+	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Wow! 100% submission percentage in sprint 1',
+			'All assignments are graded and posted', 
+			'Thank you for your reflection comments',
+			'Lots of nice comments about scrum teammates', 
+			'Be **sure** to put something in for each question so that I can give you at least a point or two',
+			'Riddles continue to be my Kryptonite for me :-) ... and now funny YouTube videos?!?!', 
+			'... What has cities with no people, mountains with no trees, and water with no ocean?', 
+			'If you are not where you want to be in the class after sprint 1, I encourage you to come and talk with me' ])
+	}
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_4of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
+		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext, breakoutSaaSArchitecture ])
+}
+
+const se_2_4of6_PreworkAnnouncementsAndAgenda = {
+	'prework': [
+		'Complete through activity 13 prior to next class', '',
+		`Be prepared for “${breakoutSaaSArchitectureName}” breakout` ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[ 
+		'TBD' ]
+}

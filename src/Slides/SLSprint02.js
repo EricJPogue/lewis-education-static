@@ -35,7 +35,7 @@ export const sprint2Router = (route) => {
 
 		case '44000-2-1o': return se2_1of6()
 		case '44000-2-2o': return se2_2of6()
-		case '44000-2-3': return se2_3of6()
+		case '44000-2-3o': return se2_3of6()
 		case '44000-2-4': return se_2_4of6()
 		case '44000-2-5': return se_2_5of6()
 		case '44000-2-6': return se_2_6of6()
