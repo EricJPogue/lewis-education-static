@@ -24,7 +24,7 @@ export const al44000Sprint03 = () => {
 			<li>Understand how client-side HTML, CSS, JavaScript, and Bootstrap applications can be hosted using Node.js and Express</li>
 			<li>Create and modify Node.js with server-side JavaScript applications</li>
 			<li>Migrate all of your HTML, CSS, JavaScript, and Bootstrap applications over to a single Node.js hosted site running locally</li>
-			<li>Create a Node.js application on Azure</li>
+			<li>Create a Node.js applications on Azure</li>
 		</ul>
 
 		{list44000Sprint03(sprint)}
@@ -59,6 +59,6 @@ export const list44000Sprint03 = (sprint) => {
 }
 
 // Certified for SU22 (05/20/2022)
+
+// Certified for SP22 (01/29/2022)
 // Todo: Consider reviewing and enhancing Quiz 3.
-// Todo: Review and update activities and assignments with the understanding that we already did Assignment Portfolio in Node.js in sprint 2. 
-// BugBug: Update activity list with everything that is included in Lab 3. 
