@@ -8,7 +8,6 @@ import { faceDrawJavaLink } from '../Activities/FaceDraw';
 export const gUIsInJava = () => { return internalLink('Graphical User Interfaces (GUIs) in Java', '/activity-oop/java-gui-programming') }
 
 export const al24500Sprint03 = () => {
-	const faceDrawLite = () => { return internalLink('FaceDraw Lite', '/activity-oop/java-facedraw-lite') }
 	const sprint = 3
 	return ( <div>
 		<h5>Sprint 3: Graphical User Interfaces and FaceDraw</h5>
@@ -27,6 +26,14 @@ export const al24500Sprint03 = () => {
 			<li>Effectively compile, debug, submit, update, and manage Java application source code</li>
 		</ul>
 
+		{list24500Sprint03(sprint)}
+		{closing(sprint)}
+	</div> )
+}
+
+const list24500Sprint03 = (sprint) => {
+	const faceDrawLite = () => { return internalLink('FaceDraw Lite', '/activity-oop/java-facedraw-lite') }
+	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, faceDrawJavaLink(), oreillyPlaylistOOP())}
@@ -38,11 +45,8 @@ export const al24500Sprint03 = () => {
 			<li>Read {jsonArticle()} and complete the W3C {jsonW3CTutorial()}{estimated('2 hours')}</li>
 			{standardActivitiesClosing(sprint, faceDrawJavaLink(), '8 hours')}
 		</ol>
-		{closing(sprint)}
 	</div> )
 }
 
-// Todo: Review and update FaceDraw and Lab 3 to better reflect FaceDraw requirement 4 which should not be Coding 
-// standards. Make coding standards the first question on every lab and not part of a programming assignment’s 
-// requirements.
-// Todo: Review fall 22 updates and make sure that the programming together tutorial link is appropriate. 
+// Certified for SP22 (01/29/2022)
+// Todo: Review and consider updating OOP Programming Together tutorials. 

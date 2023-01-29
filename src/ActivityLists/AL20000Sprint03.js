@@ -57,7 +57,8 @@ export const list20000Sprint03 = (sprint) => {
 
 // Certified for FA22 (09/20/2022)
 
-// Todo: Verify that Unicode representation question fixed to more than 100,000 as best answer.
-// Todo: Fix link https://www.lewis.education/#/activity/coding-standards
+// Certified for SP22 (01/29/2022)
+// Todo: Verify that Unicode representation question fixed to more than 100,000 as best answer. This should be changed now. 
+
 
 

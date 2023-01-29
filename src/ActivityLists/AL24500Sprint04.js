@@ -48,5 +48,5 @@ export const al24500Sprint04 = () => {
 	</div> )
 }
 
-// Todo: Review fall 22 updates and make sure that the programming together tutorial link is appropriate. 
+// Todo: Review and consider updating OOP Programming Together tutorials. 
 // Todo: From ActionListenerPlus video remove date/sprint references

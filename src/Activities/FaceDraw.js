@@ -26,8 +26,8 @@ const FaceDrawJavaProperties = {
 	'language': 'Java graphical',
 	'prerequisites': 'Java, VS Code, and Terminal',
 	'type': 'graphical application written in the Java language',
-	'requirement1_1': 'Is implemented in multiple Java (.java) files with the main file named “FaceDraw.java”',
-	'requirement1_2': 'Successfully compiles from the command line using “javac *.java” and executes by typing “java FaceDraw'
+	'requirement1_1': 'Utilizes multiple Java files',
+	'requirement1_2': 'compiles from the command line using “javac *.java” and executes with “java FaceDraw'
 }
 
 const FaceDrawReactProperties = {
@@ -38,7 +38,6 @@ const FaceDrawReactProperties = {
 	'requirement1_1': 'Is implemented as a standard React application',
 	'requirement1_2': 'Is hosted as a public website in Microsoft Azure'
 }	
-	
 
 const FaceDraw = (appProps) => {
 	return (
@@ -66,30 +65,39 @@ mouth should be randomly smiling, frowning, or in-between. </p>
 <em>Requirement 1</em>
 <p>Create an application that:</p>
 <ol>
-	<li>{appProps.requirement1_1}</li>
-	<li>{appProps.requirement1_2}</li>
+	<li>{appProps.requirement1_1} and {appProps.requirement1_2}</li>
+	<li>Implements a Face class that includes member variables and getters/setters for width, height, x, y, and smiling status</li>
+	<li>Implements at least three constructors for Face including a default constructor</li>
+	<li>Implements toString() in the Face class so that each member variable in printed to the console window each time a Face is painted</li>
+	<li>Implements ArrayList called FaceList that includes 3 and 10 Faces</li>
 </ol>
 
 <em>Requirement 2</em>
 <p>Be sure that application also:</p>
 <ol>
 	<li>Has a simple yet an aesthetically pleasing user interface</li>
-	<li>Creates and draws multiple graphical faces</li>
+	<li>Creates and draws multiple graphical faces when the application starts</li>
 	<li>Each face should have two eyes and a mouth</li>
-	<li>The mouth should be smiling, frowning, or be neutral</li>
+	<li>The mouth should be set randomly to smiling, frowning, or be neutral when the application starts</li>
 </ol>
 
 <em>Requirement 3</em>
 <p>Enhance the application so that when it starts it:</p>
 <ol>
-	<li>Draws between 3 and 10 faces (utilizing a random number)</li>
-	<li>Randomly determines each faces’ characteristics including location, size, and emotion (smile, frown, or neutral)</li>
+	<li>Draws between 3 and 10 faces which is determined randomly when the program starts</li>
+	<li>Randomly determines each faces’ characteristics including location, size, and mouth shape of smile, frown, or neutral</li>
 	<li>Retains original face characteristics when the window is resized</li>
 	<li>Uses reasonable and visually appealing ranges for all random numbers</li>
 </ol>
 
 <em>Requirement 4</em>
-<p>Test and refactor the application so that it implements all appropriate Coding Standards <NavLink to='/activity/coding-standards'>[link]</NavLink></p>
+<p>Enhance the application so that:</p>
+<ol>
+	<li>Half of all smiling faces have green filled eyes with the other half of smiling faces have blue filled eyes</li>
+	<li>All neutral faces have yellow filled eyes</li>
+	<li>All frowning faces have red filled eyes</li>
+	<li>All eyes should still have a black oval around the edge of the eye</li>
+</ol>
 </div> )
 
 }
