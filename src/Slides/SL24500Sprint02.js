@@ -128,7 +128,7 @@ export const oop_2_4of6 = () => {
 const oop_2_5of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 15 prior to next class', '',
-		'Be prepared for OOP Principles breakout',
+		'Be prepared for Object-Oriented Design Principles breakout',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
 		'Any announcements or questions?' ],
