@@ -55,3 +55,4 @@ export const list24500Sprint02 = (sprint) => {
 
 // Certified for SP23 (01/15/2023)
 // Todo: Consider adding lab 2 question relating to overcoming procrastination article. 
+// Todo: Consider moving Principles to sprint 3 to make more room for basic Java.

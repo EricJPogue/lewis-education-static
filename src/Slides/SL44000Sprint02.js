@@ -113,7 +113,27 @@ const se_2_4of6_PreworkAnnouncementsAndAgenda = {
 		'Complete through activity 13 prior to next class', '',
 		`Be prepared for “${breakoutSaaSArchitectureName}” breakout` ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'Any teams interested in working on a Lewis Signage class product?' ],
+	'agenda':[ 
+		'The Humble Text File',
+		`Breakout: ${breakoutSaaSArchitectureName}`,
+		'Lab (as time allows)' ]
+}
+export const se_2_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_2_4of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const theHumbleTextFile = () => { return basicSlide('The Humble Text File', ['Let’s explore the evolution of the humble text file.']) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ theHumbleTextFile, breakoutSaaSArchitecture, preworkNext, tLab ])
+}
+
+const se_2_5of6_PreworkAnnouncementsAndAgenda = {
+	'prework': [
+		'Complete through activity 15 prior to next class', '',
+		'Be prepared for Lab',
+		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		'Any announcements or questions?' ],
 	'agenda':[ 
 		'TBD' ]
 }

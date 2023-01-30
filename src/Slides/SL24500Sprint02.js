@@ -1,7 +1,7 @@
 import { list24500Sprint01 } from '../ActivityLists/AL24500Sprint01'
 import { list24500Sprint02 } from '../ActivityLists/AL24500Sprint02'
 
-import { basicSlide, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 
 import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
@@ -95,23 +95,43 @@ export const oop_2_3of6 = () => {
 		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
 }
 
+// Session 4 of 6: Monday
 const oop_2_4of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
-		'Complete through activity 12 prior to next class', 
-		'', '',
-		`Be prepared for breakout` ],
+		'Complete through activity 14 prior to next class', '',
+		`Be prepared for “Disign Patterns” breakout` ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'Any announcements or questions?' ],
+	'agenda':[ 
+		'The Humble Text File',
+		'Breakout: Design Patterns',
+		'Lab (as time allows)' ]
+}
+export const oop_2_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_2_4of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const theHumbleTextFile = () => { return basicSlide('The Humble Text File', ['Let’s explore the evolution of the humble text file.']) }
+	const breakoutDesignPatterns = () => {
+		return breakoutStandard( 
+			'Breakout: Design Patterns', 
+			`In this breakout session on Design Patterns your team will discuss:`, [
+			'Who wrote “the book”, what is GOF, and which pattern will you be asked in an interview',
+			'Singleton',
+			'Factory', 
+			'Delegation', 
+			'Model-View-Controller' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', oop_2_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ theHumbleTextFile, breakoutDesignPatterns, preworkNext, tLab ])
+}
+
+const oop_2_5of6_PreworkAnnouncementsAndAgenda = {
+	'prework': [
+		'Complete through activity 15 prior to next class', '',
+		'Be prepared for OOP Principles breakout',
+		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		'Any announcements or questions?' ],
 	'agenda':[ 
 		'TBD' ]
 }
-
-
-
-// Feedback:
-// Remember to respond back to at least two of your classmates in Discussions
-// I am impressed with how many of you have outside jobs
-
-// Metric: Missing only 1 Reflection
-
-// What do dentists cal their x-rays? Tooth pics.

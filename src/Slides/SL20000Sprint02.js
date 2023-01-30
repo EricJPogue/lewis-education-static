@@ -2,9 +2,9 @@ import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02'
 
 import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
-import { basicSlide, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
-import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
+import { xyz_2_1of6_sprintPlanning, theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
 
 // Introduction to Computer Science (ICS) sprint 2 global values.
 const sprint = 2
@@ -90,18 +90,47 @@ export const ics_2_3of6 = () => {
 			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
 			'What improvements should we make as a class, team, or individual going forward' ])
 	}
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_4of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_4of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
 		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
 }
 
-const se_2_4of6_PreworkAnnouncementsAndAgenda = {
+const ics_2_4of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 11 prior to next class', '',
 		`Be prepared for breakout` ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'Any announcements or questions?' ],
 	'agenda':[ 
-		'TBD' ]
+		'Breakout: The Information Layer',
+		`Data Representation and ${theHumbleTextFileName}`,
+		'Prework for Next Class' ]
+}
+export const ics_2_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_4of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const breakoutTheInformationLayer = () => { 
+		return breakoutStandard('Breakout: The Information Layer', 
+			'In this breakout session on The Information Layer (reading and lecture) your team will discuss:', [
+			'Numbers and Computing', 
+			'Positional Notation', 
+			'Binary, Octal, and Hexadecimal',
+			'Why Hex? How does this relate to files?',
+			'What about conversion calculators?' ])
+	}
+
+	return completeDeck(slideDeck, [ breakoutTheInformationLayer, theHumbleTextFile, preworkNext, tLab ])
+}
+
+const ics_2_5of6_PreworkAnnouncementsAndAgenda = {
+	'prework': [
+		'Complete through activity 13 prior to next class', '',
+		'Be prepared for “Data Representation” breakout',
+		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		'Any announcements or questions?' ],
+	'agenda':[ 
+		'Breakout: Data Representation',
+		`Quiz ${sprint}` ]
 }

@@ -71,3 +71,15 @@ export const list20000Sprint02 = (sprint) => {
 // Todo: Strongly consider moving HTML to sprint 1 and moving Python to a later sprint. 
 
 // Certified for SP23 (01/15/2023)
+// Todo: Add slide for Metrics (Rule #9)... “Anything that is measured and watched, improves.” – Bob Parsons
+/* Todo: Add slide:
+	The Beauty of Starting Early
+	“The difference of starting early instead of leaving everything for the last minute truly amazes me. I feel so much better about this Sprint. I was able to figure out how to make changes from the Python version of Matchmaker to the HTML version all on my own. 
+	Thus, I am proud of myself for getting everything done and not feeling so overwhelmed as I usually did in the past Sprints. Overall, things are going great. I feel that I am getting more and more used to everything and am finally able to solve more problems out on my own.”
+
+	Justina Piwoni
+	Introduction to Computer Science, Sprint 6 Reflection
+
+
+	Kaizen: Small improvements eventually result in huge benefits
+*/
