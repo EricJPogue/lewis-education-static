@@ -20,7 +20,6 @@ import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6,
 import { oop_1_1of6, oop_1_2of6, oop_1_3of6, oop_1_4of6, oop_1_5of6, oop_1_6of6 } from './SL24500Sprint01'
 import { oop_2_1of6, oop_2_2of6, oop_2_3of6, oop_2_4of6 } from './SL24500Sprint02'
 
-
 import { web_1_1of6, web_1_2of6, web_1_3of6, web_1_4of6, web_1_5of6, web_1_6of6 } from './SL24700Sprint01'
 import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6, web_3_5of6, web_3_6of6 } from './SL24700Sprint03'
 import { web_4_1of6, web_4_2of6, web_4_3of6, web_4_4of6, web_4_5of6, web_4_6of6 } from './SL24700Sprint04'
@@ -30,7 +29,7 @@ import { web_7_1of6, web_7_2of6, web_7_3of6, web_7_4of6, web_7_5of6, web_7_6of6 
 import { web_8_1of6, web_8_2of6, web_8_3of6, web_8_4of6, web_8_5of6, web_8_6of6 } from './SL24700Sprint08'
 
 import { se_1_1of6, se_1_2of6, se_1_3of6, se_1_4of6, se_1_5of6, se_1_6of6 } from './SL44000Sprint01'
-import { se_2_1of6, se_2_2of6, se_2_3of6, se_2_4of6 } from './SL44000Sprint02'
+import { se_2_1of6, se_2_2of6, se_2_3of6, se_2_4of6, se_2_5of6, se_2_6of6 } from './SL44000Sprint02'
 import { se_3_1of6, se_3_2of6, se_3_3of6, se_3_4of6, se_3_5of6, se_3_6of6 } from './SL44000Sprint03'
 import { se_4_1of6, se_4_2of6, se_4_3of6, se_4_4of6, se_4_5of6, se_4_6of6 } from './SL44000Sprint04'
 import { se_5_1of6, se_5_2of6, se_5_3of6, se_5_4of6, se_5_5of6, se_5_6of6 } from './SL44000Sprint05A'
@@ -204,6 +203,8 @@ const sprint3Router = (route) => {
 		case '44000-2-2': return se_2_2of6()
 		case '44000-2-3': return se_2_3of6()
 		case '44000-2-4': return se_2_4of6()
+		case '44000-2-5': return se_2_5of6()
+		case '44000-2-6': return se_2_6of6()
 
 		case '44000-3-1': return se_3_1of6()
 		case '44000-3-2': return se_3_2of6()

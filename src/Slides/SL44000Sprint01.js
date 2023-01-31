@@ -3,7 +3,7 @@ import { xyz_1_1of6, xyz_1_2of6 } from './SL00000Sprint01'
 import { tPrework, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, tQuizExpectations } from './SLSprint00'
 
 import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
-import { se_2_1of6_PreworkAnnouncementsAndAgenda } from './SL44000Sprint02'
+import { se_2_1of6_PAaA } from './SL44000Sprint02'
 
 // Software Engineering (SE) sprint 1 global values.
 const sprint = 1
@@ -127,7 +127,7 @@ const se_1_6of6_PreworkAnnouncementsAndAgenda = {
 }
 export const se_1_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_1of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_1of6_PAaA.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [breakoutSaaS, preworkNext, tLab ])
 }

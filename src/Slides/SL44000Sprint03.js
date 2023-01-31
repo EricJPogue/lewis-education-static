@@ -14,6 +14,24 @@ const sprint = 3
 const activityListPrevious = () => { return list44000Sprint02(sprint-1) }
 const activityList = () => { return list44000Sprint03(sprint) }
 
+// BugBug: Integrate different prework and agendas
+export const se_3_1of6_PAaA = {
+	'prework': [
+		'Everything is due Sunday!', '',
+		`Be prepared for Sprint ${sprint} Planning` ],
+	'announcements':[
+		`All sprint ${sprint} assignments due Sunday!`],
+	'agenda':[
+		`Sprint ${sprint} Planning`,
+		`Sprint ${sprint} Planning Breakout`,
+		'Review Wednesday’s Demo Schedule',
+		'Prework for Next Class' ]
+}
+
+
+
+
+
 export const se_3_1of6_prework_list = ics_3_1of6_prework_list
 const se_3_1of6_agenda_list = ics_3_1of6_agenda_list
 export const se_3_1of6 = () => { return xyz_n_1of6(sprint, se_3_1of6_prework_list, activityListPrevious, se_3_1of6_agenda_list, se_3_2of6_prework_list, activityList) }
