@@ -1,25 +1,23 @@
 import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02'
 
-import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
-import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_6of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
+import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, tQuizExpectations, tQuiz, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
-import { xyz_2_1of6_sprintPlanning, theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
+import { xyz_2_1of6_sprintPlanning, xyz_2_6of6_PreworkAnnouncementsAndAgenda, theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
+import { ics_3_1of6_PAaA } from './SL20000Sprint03'
 
-// Introduction to Computer Science (ICS) sprint 2 global values.
+// Introduction to Computer Science (ICS) sprint 2 shared values.
 const sprint = 2
 const activityListPrevious = () => { return list20000Sprint01(sprint-1) }
 const activityList = () => { return list20000Sprint02(sprint) }
 
 // Session 1 of 6: Monday
-export const ics_2_1of6_PreworkAnnouncementsAndAgenda = xyz_n_1of6_lists(sprint)
-export const ics_2_1of6 = () => { 
-	return xyz_n_1of6(sprint, ics_2_1of6_PreworkAnnouncementsAndAgenda.prework, activityListPrevious, ics_2_1of6_PreworkAnnouncementsAndAgenda.agenda, 
-		ics_2_2of6_PreworkAnnouncementsAndAgenda.prework, activityList, xyz_2_1of6_sprintPlanning(sprint)) 
-}
+export const ics_2_1of6_PAaA = xyz_n_1of6_lists(sprint)
+export const ics_2_1of6 = () => { return xyz_n_1of6(sprint, ics_2_1of6_PAaA.prework, activityListPrevious, ics_2_1of6_PAaA.agenda, ics_2_2of6_PAaA.prework, activityList, xyz_2_1of6_sprintPlanning(sprint)) }
 
 // Session 2 of 6: Wednesday
-const ics_2_2of6_PreworkAnnouncementsAndAgenda = {
+const ics_2_2of6_PAaA = {
 	'prework': [
 		'Complete through activity 6 prior to next class', '',
 		'Be prepared for Lab & Programming Together Wednesday',
@@ -35,16 +33,16 @@ const ics_2_2of6_PreworkAnnouncementsAndAgenda = {
 		'Lab & Programming Together' ]
 }
 export const ics_2_2of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_2of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_2of6_PAaA, sprint, activityList)
 	const qAndA = () => { return bulletListSlide(`Sprint ${sprint} Planning Questions & Answers`, `What questions do you have about sprint ${sprint}?`, [ ]) }
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_3of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_3of6_PAaA.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab ])
 }
 
 // Session 3 of 6: Friday
-const ics_2_3of6_PreworkAnnouncementsAndAgenda = {
+const ics_2_3of6_PAaA = {
 	'prework': [
 		'Complete through activity 9 prior to next class', '',
 		'Be prepared to discuss “The Information Layer”' ],
@@ -57,7 +55,7 @@ const ics_2_3of6_PreworkAnnouncementsAndAgenda = {
 		'Prework for Next Class' ]
 }
 export const ics_2_3of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_3of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_3of6_PAaA, sprint, activityList)
 
 	const metrics = () => {
 		return basicSlide(`Sprint ${sprint-1} Metrics`, [
@@ -90,16 +88,17 @@ export const ics_2_3of6 = () => {
 			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
 			'What improvements should we make as a class, team, or individual going forward' ])
 	}
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_4of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_4of6_PAaA.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
 		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
 }
 
-const ics_2_4of6_PreworkAnnouncementsAndAgenda = {
+// Session 4 of 6: Monday
+const ics_2_4of6_PAaA = {
 	'prework': [
 		'Complete through activity 11 prior to next class', '',
-		`Be prepared for breakout` ],
+		`Be prepared for “The Information Layer” breakout` ],
 	'announcements':[ 
 		'Any announcements or questions?' ],
 	'agenda':[ 
@@ -108,8 +107,8 @@ const ics_2_4of6_PreworkAnnouncementsAndAgenda = {
 		'Prework for Next Class' ]
 }
 export const ics_2_4of6 = () => {
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_4of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_4of6_PAaA, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_5of6_PAaA.prework, sprint, activityList) }
 	const breakoutTheInformationLayer = () => { 
 		return breakoutStandard('Breakout: The Information Layer', 
 			'In this breakout session on The Information Layer (reading and lecture) your team will discuss:', [
@@ -123,7 +122,8 @@ export const ics_2_4of6 = () => {
 	return completeDeck(slideDeck, [ breakoutTheInformationLayer, theHumbleTextFile, preworkNext, tLab ])
 }
 
-const ics_2_5of6_PreworkAnnouncementsAndAgenda = {
+// Session 5 of 6: Wednesday
+const ics_2_5of6_PAaA = {
 	'prework': [
 		'Complete through activity 13 prior to next class', '',
 		'Be prepared for “Data Representation” breakout',
@@ -131,6 +131,29 @@ const ics_2_5of6_PreworkAnnouncementsAndAgenda = {
 	'announcements':[ 
 		'Any announcements or questions?' ],
 	'agenda':[ 
+		'Sprint Progress Polling',
 		'Breakout: Data Representation',
-		`Quiz ${sprint}` ]
+		`Quiz ${sprint}` ],
 }
+export const ics_2_5of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_5of6_PAaA, sprint, activityList)
+	const breakout = () => { 
+		return breakoutStandard('Breakout: Data Representation', 
+			'In this breakout session on Data Representation (reading and lecture) your team will:', [
+			'Analog and Digital Data',
+			'Binary Representation of Numeric Data',
+			'Text including ASCII, Unicode, UTF-8, UTF-16 Representations, and PDF',
+			'Photo and Audio Representation Priorities',
+			'Video Representation priorities' ])
+	}
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_2_5of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_6of6_PAaA.prework, sprint, activityList) }
+	const quizExpectations = () => { return tQuizExpectations(sprint)}
+	const quiz = () => { return tQuiz(sprint) }
+
+	return 	completeDeck(slideDeck, [ poll, breakout, preworkNext, quizExpectations, quiz ])
+}
+
+// Session 6 of 6: Friday
+const ics_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('activity 13 and actively working on 14', sprint)
+export const ics_2_6of6 = () => { return  xyz_n_6of6(sprint, ics_2_6of6_PAaA, ics_3_1of6_PAaA.prework, activityList) }

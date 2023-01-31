@@ -10,6 +10,21 @@ export const xyz_2_1of6_sprintPlanning = (sprint) => {
 	])
 }
 
+export const xyz_2_6of6_PreworkAnnouncementsAndAgenda = (completeThrough, sprint) => {
+	const preworkAnnouncementsAndAgenda = {
+		'prework': [
+			`Complete through activity ${completeThrough} prior to next class`, '',
+			'Be prepared for Lab & Programming Together',
+			`All sprint ${sprint} assignments are due Sunday!` ],
+		'announcements':[
+			`All sprint ${sprint} assignments due Sunday!`],
+		'agenda':[
+			`Quiz ${sprint} “Phone a Friend”`,
+			'Lab']
+	}
+	return preworkAnnouncementsAndAgenda
+}
+
 export const theHumbleTextFileName = 'The Humble Text File'
 export const theHumbleTextFile = () => {
 	return bulletListSlide(`${theHumbleTextFileName}`, 
@@ -20,3 +35,4 @@ export const theHumbleTextFile = () => {
 		'What is a local',
 		'What is received when a US-English ASCII email is sent to a CA-French recipient?'])
 }
+

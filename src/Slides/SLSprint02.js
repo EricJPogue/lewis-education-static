@@ -12,19 +12,22 @@ import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02'
 import { list24700Sprint02 } from '../ActivityLists/AL24700Sprint02'
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02'
 
-import { ics_3_1of6_prework_list } from './SL20000Sprint03'
+// import { ics_3_1of6_prework_list } from './SL20000Sprint03'
+
 import { web_3_1of6_prework_list } from './SL24700Sprint03'
 import { se_3_1of6_prework_list } from './SL44000Sprint03'
 
 export const sprint2Router = (route) => {
 	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
+		/*
 		case '20000-2-1o': return ics2_1of6()
 		case '20000-2-2o': return ics2_2of6()
 		case '20000-2-3o': return ics2_3of6()
 		case '20000-2-4o': return ics_2_4of6()
-		case '20000-2-5': return ics_2_5of6()
-		case '20000-2-6': return ics_2_6of6()
+		case '20000-2-5o': return ics_2_5of6()
+		case '20000-2-6o': return ics_2_6of6()
+		*/
 
 		case '24700-2-1': return web2_1of6()
 		case '24700-2-2': return web2_2of6()
@@ -108,6 +111,8 @@ const ics_prework_2_2of6 = () => {
 // Todo: Review slides and check for class conflict relating to “Mass of the Holy Spirit” as FA22 university schedule
 //     cancelled 11 AM classes cause us to reschedule Wednesday (ics2_2of6) activities to Friday.
 // Todo: Consider prerecording class for both FA22 sections if one is canceled.
+
+/*
 const ics2_2of6 = () => {
 	const agenda = () => { 
 		return agendaSlide([
@@ -158,7 +163,7 @@ const ics2_2of6 = () => {
 		sprintDemosIntro, sprintDemos, demoAssignment,  
 		metrics, metricsSubmissionPercentage, retrospective, retrospectiveBreakout, end ]
 }
-
+*/
 /* Due to change in plans on Wednesday, the Friday prework was not implemented. 
 const ics_prework_2_3of6 = () => {
 	const activityList = () => { return list20000Sprint02(sprint) }
@@ -169,6 +174,8 @@ const ics_prework_2_3of6 = () => {
 		sprint, activityList)
 }
 */
+
+/*
 
 const ics2_3of6 = () => {
 	const announcements =  () => { return basicSlideWithLogo(
@@ -183,19 +190,22 @@ const ics2_3of6 = () => {
 
 	return slides
 }
+*/
 
+/*
 const ics_2_4of6_prework = () => {
 	const activityList = () => { return list20000Sprint02(sprint) }
 	return prework('Prework', ics_2_4of6_prework_list, sprint, activityList)
 }
-
+*/
+/*
 const ics_2_4of6_prework_list = [ 
 	'Complete through activity 9 prior to next class', '',
 	'Complete your initial Discussion 2 post by the end of the day Sunday',
 	'Be prepared for breakout on The Information Layer reading and lecture',
 	'Be prepared for programming together with Getting to Know Each Other' 
 ]
-
+*/
 const theHumbleTextFile = () => {
 	return bulletListSlide('The Humble Text File', 
 		'Let’s explore Binary Values and the Data Representation of text files including:', [
@@ -205,7 +215,7 @@ const theHumbleTextFile = () => {
 		'What is a local',
 		'What is received when a US-English ASCII email is sent to a CA-French recipient?'])
 }
-
+/*
 const ics_2_4of6 = () => {
 	const activityList = () => { return list20000Sprint02(sprint) }
 	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_4of6_prework_list, sprint, activityList) }
@@ -234,7 +244,9 @@ const ics_2_4of6 = () => {
 
 	return [ preflightChecklist, instructorChecklist, prework, agenda, breakout, preworkNext, theHumbleTextFile, lab, end ]
 }
+*/
 
+/*
 const ics_2_5of6_prework_list = [
 	'Complete through activity 10 prior to next class', '',
 	'Be prepared for breakout on Data Representation reading and lecture',
@@ -268,19 +280,22 @@ const ics_2_5of6 = () => {
 
 	return makeSlideDeck([ announcements, prework, agenda, theHumbleTextFile, breakout, preworkNext, quiz  ] )
 }
-
+*/
 const lab = () => { return basicSlide('Lab and Programming Together', [
 	`How can we best work together to help you be successful in sprint ${sprint}?`, 
 	'“Phone a Friend” quiz question review?', 
 	'Programming together on assignments?' ]) }
 
+	/*
 const ics_2_6of6_prework_list = [
 	'Complete through activity 12 prior to next class', '',
 	'Be prepared for Lab and Programming Together' ]
+	*/
 const ics_2_6of6_agenda = [
 	'Sprint Progress Polling',
 	'Prework for Next Class',
 	'Lab and Programming Together']
+	/*
 const ics_2_6of6 = () => {
 	const activityList = () => { return list20000Sprint02(sprint) }
 	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_2_6of6_prework_list, sprint, activityList) }
@@ -292,7 +307,7 @@ const ics_2_6of6 = () => {
 
 	return makeSlideDeck([ announcements, prework, agenda, polling, preworkNext, lab ])
 }
-
+*/
 // Web & Distributed Programming (WEB)
 const web2_1of6 = () => {
 	return ics2_1of6(web_prework_2_1of6(), web2_2of6_prework())

@@ -3,7 +3,7 @@ import { xyz_1_1of6, xyz_1_2of6,  } from './SL00000Sprint01'
 import { tPrework, tQuizExpectations, tQuiz, basicSlide, basicSlideWithLogo, bulletListSlide, breakoutStandard } from './SLSprint00'
 
 import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
-import { ics_2_1of6_PreworkAnnouncementsAndAgenda } from './SL20000Sprint02'
+import { ics_2_1of6_PAaA } from './SL20000Sprint02'
 
 // Introduction to Computer Science (ICS) sprint 1 global values.
 const sprint = 1
@@ -96,7 +96,7 @@ const ics_1_6of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 15 prior to next class', '',
 		'Be prepared for Lab & Programming Together',
-		'Be prepared to submit all sprint 1 assignments Sunday!' ],
+		`Be prepared to submit all sprint ${sprint} assignments Sunday!` ],
 	'announcements':[
 		`All sprint ${sprint} assignments due Sunday!`],
 	'agenda':[
@@ -106,7 +106,7 @@ const ics_1_6of6_PreworkAnnouncementsAndAgenda = {
 export const ics_1_6of6 = () => { 
 	const slideDeck =  checklistAnnouncementsPreworkAndAgenda(ics_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
 	const quizPhoneAFriend = () => { return basicSlide(`Quiz ${sprint} “Phone a Friend”`, [`Let’s play Quiz ${sprint} “Phone a Friend”`]) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_1of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_1of6_PAaA.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [quizPhoneAFriend, preworkNext, tLab ])
 }

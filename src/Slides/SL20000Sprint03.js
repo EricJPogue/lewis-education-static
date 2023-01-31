@@ -14,6 +14,22 @@ const activityList = () => { return list20000Sprint03(sprint) }
 const activityListPrevious = () => { return list20000Sprint02(sprint-1) }
 
 // Introduction to Computer Science Sprint 3 Session 1 of 6
+
+// BugBug: Integrate different prework and agendas
+export const ics_3_1of6_PAaA = {
+	'prework': [
+		'Everything is due Sunday!', '',
+		`Be prepared for Sprint ${sprint} Planning` ],
+	'announcements':[
+		`All sprint ${sprint} assignments due Sunday!`],
+	'agenda':[
+		`Sprint ${sprint} Planning`,
+		`Sprint ${sprint} Planning Breakout`,
+		'Review Wednesday’s Demo Schedule',
+		'Prework for Next Class' ]
+}
+
+
 export const ics_3_1of6_prework_list = [
 	'Everything is due Sunday!', '',
 	`Be prepared for Sprint ${sprint} Planning` ]

@@ -9,7 +9,7 @@ import { sprint6Router } from './SLSprint06'
 import { tutorialRouter } from './Tutorials'
 
 import { ics_1_1of6, ics_1_2of6, ics_1_3of6, ics_1_4of6, ics_1_5of6, ics_1_6of6 } from './SL20000Sprint01'
-import { ics_2_1of6, ics_2_2of6, ics_2_3of6, ics_2_4of6 } from './SL20000Sprint02'
+import { ics_2_1of6, ics_2_2of6, ics_2_3of6, ics_2_4of6, ics_2_5of6, ics_2_6of6 } from './SL20000Sprint02'
 import { ics_3_1of6, ics_3_2of6, ics_3_3of6, ics_3_4of6, ics_3_5of6, ics_3_6of6 } from './SL20000Sprint03'
 import { ics_4_1of6, ics_4_2of6, ics_4_3of6, ics_4_4of6, ics_4_5of6, ics_4_6of6 } from './SL20000Sprint04'
 import { ics_5_1of6, ics_5_2of6, ics_5_3of6, ics_5_4of6, ics_5_5of6, ics_5_6of6 } from './SL20000Sprint05'
@@ -86,6 +86,8 @@ const sprint3Router = (route) => {
 		case '20000-2-2': return ics_2_2of6()
 		case '20000-2-3': return ics_2_3of6()
 		case '20000-2-4': return ics_2_4of6()
+		case '20000-2-5': return ics_2_5of6()
+		case '20000-2-6': return ics_2_6of6()
 
 		case '20000-3-1': return ics_3_1of6()
 		case '20000-3-2': return ics_3_2of6()
