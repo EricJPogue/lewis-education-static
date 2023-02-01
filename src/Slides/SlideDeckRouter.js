@@ -1,7 +1,6 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
 import { checklist } from './SLSprint00' // Shared slide decks.
-import { sprint2Router } from './SLSprint02'
 import { sprint4Router } from './SLSprint04'
 import { sprint5Router } from './SLSprint05'
 import { sprint6Router } from './SLSprint06'
@@ -21,6 +20,7 @@ import { oop_1_1of6, oop_1_2of6, oop_1_3of6, oop_1_4of6, oop_1_5of6, oop_1_6of6 
 import { oop_2_1of6, oop_2_2of6, oop_2_3of6, oop_2_4of6 } from './SL24500Sprint02'
 
 import { web_1_1of6, web_1_2of6, web_1_3of6, web_1_4of6, web_1_5of6, web_1_6of6 } from './SL24700Sprint01'
+import { web_2_1of6, web_2_2of6, web_2_3of6, web_2_4of6, web_2_5of6, web_2_6of6 } from './SL24700Sprint02'
 import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6, web_3_5of6, web_3_6of6 } from './SL24700Sprint03'
 import { web_4_1of6, web_4_2of6, web_4_3of6, web_4_4of6, web_4_5of6, web_4_6of6 } from './SL24700Sprint04'
 import { web_5_1of6, web_5_2of6, web_5_3of6, web_5_4of6, web_5_5of6, web_5_6of6 } from './SL24700Sprint05'
@@ -49,10 +49,7 @@ import { ssc_2_1of4, ssc_2_3of4 } from './SL49200Sprint02'
 // Todo: Refactor slideDeckRouter so that it only utilizes the current sprint3Router. And then rename sprint3Router.
 
 export const slideDeckRouter = (route) => {
-	let currentSlideDeck = sprint2Router(route)
-	if (currentSlideDeck === null) {
-		currentSlideDeck = sprint3Router(route)
-	}
+	let currentSlideDeck = sprint3Router(route)
 	if (currentSlideDeck === null) {
 		currentSlideDeck = sprint4Router(route)
 	}
@@ -149,6 +146,13 @@ const sprint3Router = (route) => {
 		case '24700-1-4': return web_1_4of6()
 		case '24700-1-5': return web_1_5of6()
 		case '24700-1-6': return web_1_6of6()
+
+		case '24700-2-1': return web_2_1of6()
+		case '24700-2-2': return web_2_2of6()
+		case '24700-2-3': return web_2_3of6()
+		case '24700-2-4': return web_2_4of6()
+		case '24700-2-5': return web_2_5of6()
+		case '24700-2-6': return web_2_6of6()
 
 		case '24700-3-1': return web_3_1of6()
 		case '24700-3-2': return web_3_2of6()
