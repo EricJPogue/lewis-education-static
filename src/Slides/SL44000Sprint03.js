@@ -28,10 +28,6 @@ export const se_3_1of6_PAaA = {
 		'Prework for Next Class' ]
 }
 
-
-
-
-
 export const se_3_1of6_prework_list = ics_3_1of6_prework_list
 const se_3_1of6_agenda_list = ics_3_1of6_agenda_list
 export const se_3_1of6 = () => { return xyz_n_1of6(sprint, se_3_1of6_prework_list, activityListPrevious, se_3_1of6_agenda_list, se_3_2of6_prework_list, activityList) }

@@ -134,9 +134,10 @@ const breakoutSaaSClientFrameworkJavaScript = () => {
 	return breakoutStandard( 
 		`Breakout: ${breakoutSaaSClientFrameworkJavaScriptName}`, 
 		`In this breakout session on ${breakoutSaaSClientFrameworkJavaScriptName} reading and lecture your team will discuss:`, [
-		'What about Introduction to Ruby, Introduction to Rails, and Advanced Rails?', 
-		'JavaScript and it’s relationship to Ruby, Node.js, and JSON', 
-		'AJAX, REST, Web Services, XML, and JSON', 
+		'JavaScript and code running in the browser',
+		'How does JavaScript relate to the Introduction to Ruby, Introduction to Rails, and Advanced Rails chapters?',
+		'JavaScript and code running on the server plus Node.js, AJAX, JavaScript, and JSON', 
+		'AJAX, REST, Web Services, and JSON', 
 		'JavaScript libraries including JQuery, Bootstrap, and reactive applications',
 		'Single-page web applications, static web sites, REACT, and Jamstack' ])
 }
