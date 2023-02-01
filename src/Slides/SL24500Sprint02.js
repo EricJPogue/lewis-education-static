@@ -1,10 +1,10 @@
 import { list24500Sprint01 } from '../ActivityLists/AL24500Sprint01'
 import { list24500Sprint02 } from '../ActivityLists/AL24500Sprint02'
 
-import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
-import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
+import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submissionPercentage, tQuiz, tQuizExpectations, tDiscussionBreakout, tPrework, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_6of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 
-import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
+import { xyz_2_1of6_sprintPlanning, xyz_2_6of6_PreworkAnnouncementsAndAgenda } from './SL00000Sprint02'
 
 // Object-Oriented Programming (OOP)sprint 2 global values.
 const sprint = 2
@@ -125,13 +125,57 @@ export const oop_2_4of6 = () => {
 	return completeDeck(slideDeck, [ theHumbleTextFile, breakoutDesignPatterns, preworkNext, tLab ])
 }
 
+// Session 5 of 6: Wednesday
+const breakoutDesignPrinciplesName = 'Agile Design Principles'
+const breakoutDesignPrinciples = () => {
+	return breakoutStandard( 
+		`Breakout: ${breakoutDesignPrinciplesName}`, 
+		`In this breakout session on ${breakoutDesignPrinciplesName} your team will discuss:`, [
+		'Who wrote “the book”',
+		'SOLID',
+		'Rigidity, fragility, and immobility',
+		'Single-Responsibility Principle',
+		'Open-Closed Principle',
+		'Liskov’s Substitution Principle',
+		'Dependency-Inversion Principle',
+		'Interface-Segregation Principle',
+		'Which of these can be applied to non-agile environments and/or non-object-oriented programs?' ])
+}
 const oop_2_5of6_PreworkAnnouncementsAndAgenda = {
 	'prework': [
 		'Complete through activity 15 prior to next class', '',
-		'Be prepared for Object-Oriented Design Principles breakout',
+		`Be prepared for “${breakoutDesignPrinciplesName}” breakout`,
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
 		'Any announcements or questions?' ],
 	'agenda':[ 
-		'TBD' ]
+		'Sprint Progress Polling',
+		'Breakout: Data Representation',
+		`Quiz ${sprint}` ],
+}
+export const oop_2_5of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_2_5of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', oop_2_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', oop_2_6of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const quizExpectations = () => { return tQuizExpectations(sprint)}
+	const quiz = () => { return tQuiz(sprint) }
+
+	return 	completeDeck(slideDeck, [ poll, breakoutDesignPrinciples, preworkNext, quizExpectations, quiz ])
+}
+
+// Session 6 of 6: Friday
+const oop_2_6of6_PreworkAnnouncementsAndAgenda = xyz_2_6of6_PreworkAnnouncementsAndAgenda('activity 13 and actively working on 14', sprint)
+export const oop_2_6of6 = () => { return  xyz_n_6of6(sprint, oop_2_6of6_PreworkAnnouncementsAndAgenda, oop_3_1of6_PreworkAnnouncementsAndAgenda.prework, activityList) }
+
+export const oop_3_1of6_PreworkAnnouncementsAndAgenda = {
+	'prework': [
+		'Everything is due Sunday!', '',
+		`Be prepared for Sprint ${sprint} Planning` ],
+	'announcements':[
+		`All sprint ${sprint} assignments due Sunday!`],
+	'agenda':[
+		`Sprint ${sprint} Planning`,
+		`Sprint ${sprint} Planning Breakout`,
+		'Review Wednesday’s Demo Schedule',
+		'Prework for Next Class' ]
 }
