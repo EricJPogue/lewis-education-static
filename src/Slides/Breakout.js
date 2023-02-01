@@ -54,7 +54,7 @@ export const renderBreakout = (breakoutData) => {
 	</div> ) 
 }
 
-export const daleDiscussion3Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion3) }
+//export const daleDiscussion3Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion3) }
 export const daleDiscussion4Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion4) }
 export const daleDiscussion13Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion13) }
 export const daleDiscussion15Link = () => { return makeBreakoutLink(breakoutSlides.daleDiscussion15) }

@@ -13,12 +13,9 @@ export class ActivityArchitecture extends Component {
 		return videoLink('', architectureLink(activityReference+'.mp4'))
 	}
 
-	render() {
-		return (
-			<div>
-				<h4>{getClass().title}</h4>
-				{this.activity()}
-			</div>
-		)
+	render() { return ( <div>
+			<h4>{getClass().title}</h4>
+			{this.activity()}
+		</div> )
 	}
 }
