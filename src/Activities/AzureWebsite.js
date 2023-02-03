@@ -1,11 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { externalLink } from '../DataAndAPIs/Links';
 import { makeInternalURL } from './ActivityRouter';
 
 const NAME = 'Azure Website'
 export const AZURE_WEBSITE_ROUTE = 'azure-website'
 export const azureWebsiteLink = () => {return (<NavLink to={makeInternalURL(AZURE_WEBSITE_ROUTE)}>{NAME}</NavLink>)}
 export const azureWebsite = () => {
+	const azureStaticTemplate = () => {return externalLink('Azure static website template', 'https://github.com/EricPogueExampleCode-Web/azure-static-website-template')}
+	const azureNodeJSBasicTemplate = () => {return externalLink('Azure NodeJS basic template', 'EricPogueExampleCode-Web/node-js-express-and-azure-template')}
+	const azureNodeJSWithFetchTemplate = () => {return externalLink('Azure NodeJS with Fetch template', 'EricPogueExampleCode-Web/node-js-express-and-azure-template')}
 	return ( <div>
 	<br />
 	<h4>{NAME}</h4>
@@ -24,6 +28,12 @@ export const azureWebsite = () => {
 		</ul><br />
 
 		<h5>Frequently Asked Questions:</h5>
+		Question: Where can I find the GitHub templates for creating Azure websites?<br />
+		{azureStaticTemplate()}<br />
+		{azureNodeJSBasicTemplate()}<br />
+		{azureNodeJSWithFetchTemplate()}
+
+		<br /><br />
 		Question: Why do I receive an message that says “You do not have permission to view this directory or page.” when I enter the URL in my browser?<br />
 		Do you have an “index.html” file? If your main HTML file is something other than “index.html”, you 
 		need to include the name of the HTML file in the URL to access the page.

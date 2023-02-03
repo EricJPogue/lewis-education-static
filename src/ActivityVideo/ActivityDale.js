@@ -5,7 +5,7 @@ import { getClass } from '../DataAndAPIs/Classes'
 import { daleLectureVideo } from './Panopto'
 
 export class ActivityDale extends Component {
-	// Todo: Add back link to video slides and breakout discussion on video.
+	// Todo: Consider adding back link to video slides and breakout discussion on video.
 	render() {
 		const chapter = this.props.match.params.reference
 		return (
