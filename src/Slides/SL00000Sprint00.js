@@ -151,8 +151,9 @@ export const xyz_n_5of6 = (sprint, sessionLists, preworkListNext, activityList) 
 export const xyz_n_6of6 = (sprint, sessionLists, preworkListNext, activityList) => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
+	const quizPhoneAFriend = () => { return basicSlideWithLogo(`Quiz ${sprint} “Phone a Friend”`, [`Any quiz ${sprint} questions?`]) }
 
-	return completeDeck(slideDeck, [ preworkNext, tLab ])
+	return completeDeck(slideDeck, [ quizPhoneAFriend, preworkNext, tLab ])
 }
 
 export const tLab = () => {

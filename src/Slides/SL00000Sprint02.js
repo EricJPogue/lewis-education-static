@@ -17,7 +17,7 @@ export const xyz_2_6of6_PreworkAnnouncementsAndAgenda = (completeThrough, sprint
 			'Be prepared for Lab & Programming Together',
 			`All sprint ${sprint} assignments are due Sunday!` ],
 		'announcements':[
-			`All sprint ${sprint} assignments due Sunday!`],
+			`All sprint ${sprint} assignments are due Sunday!`],
 		'agenda':[
 			`Quiz ${sprint} “Phone a Friend”`,
 			'Lab']
