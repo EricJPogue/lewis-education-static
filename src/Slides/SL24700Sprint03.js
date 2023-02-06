@@ -6,13 +6,24 @@ import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } 
 import { list24700Sprint02 } from '../ActivityLists/AL24700Sprint02' 
 import { list24700Sprint03 } from '../ActivityLists/AL24700Sprint03'
 
-import { ics_3_1of6_prework_list, ics_3_1of6_agenda_list  } from './SL20000Sprint03'
-
 import { web_4_1of6_prework_list } from './SL24700Sprint04'
 
 const sprint = 3
 const activityListPrevious = () => { return list24700Sprint02(sprint-1) }
 const activityList = () => { return list24700Sprint03(sprint) }
+
+
+//BugBug: Fix this
+const ics_3_1of6_prework_list = [
+	'Everything is due Sunday!', '',
+	`Be prepared for Sprint ${sprint} Planning` ]
+
+const ics_3_1of6_agenda_list = [
+	`Sprint ${sprint} Planning`,
+	`Sprint ${sprint} Planning Breakout`,
+	'Review Wednesday’s Demo Schedule',
+	'Prework for Next Class' ]
+//End BugBug: Fix this
 
 export const web_3_1of6_prework_list = ics_3_1of6_prework_list
 const web_3_1of6_agenda_list = ics_3_1of6_agenda_list

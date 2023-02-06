@@ -31,7 +31,7 @@ export const al24500Sprint03 = () => {
 	</div> )
 }
 
-const list24500Sprint03 = (sprint) => {
+export const list24500Sprint03 = (sprint) => {
 	const faceDrawLite = () => { return internalLink('FaceDraw Lite', '/activity-oop/java-facedraw-lite') }
 	return ( <div>
 		{activitiesListIntro(sprint)}

@@ -5,6 +5,7 @@ import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submis
 import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_6of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 
 import { xyz_2_1of6_sprintPlanning, xyz_2_6of6_PreworkAnnouncementsAndAgenda } from './SL00000Sprint02'
+import { oop_3_1of6_PreworkAnnouncementsAndAgenda } from './SL24500Sprint03'
 
 // Object-Oriented Programming (OOP)sprint 2 global values.
 const sprint = 2
@@ -167,15 +168,4 @@ export const oop_2_5of6 = () => {
 const oop_2_6of6_PreworkAnnouncementsAndAgenda = xyz_2_6of6_PreworkAnnouncementsAndAgenda('activity 13 and actively working on 14', sprint)
 export const oop_2_6of6 = () => { return  xyz_n_6of6(sprint, oop_2_6of6_PreworkAnnouncementsAndAgenda, oop_3_1of6_PreworkAnnouncementsAndAgenda.prework, activityList) }
 
-export const oop_3_1of6_PreworkAnnouncementsAndAgenda = {
-	'prework': [
-		'Everything is due Sunday!', '',
-		`Be prepared for Sprint ${sprint} Planning` ],
-	'announcements':[
-		`All sprint ${sprint} assignments due Sunday!`],
-	'agenda':[
-		`Sprint ${sprint} Planning`,
-		`Sprint ${sprint} Planning Breakout`,
-		'Review Wednesday’s Demo Schedule',
-		'Prework for Next Class' ]
-}
+

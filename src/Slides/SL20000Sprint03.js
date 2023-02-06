@@ -1,6 +1,6 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
-import { makeSlideDeck, xyz_n_1of6, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
+import { makeSlideDeck, xyz_n_1of6, xyz_n_1of6_lists, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
 import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage, tQuiz } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } from './SLSprint00'
 
@@ -9,36 +9,14 @@ import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 
 import { ics_4_1of6_prework_list } from './SL20000Sprint04'
 
+// Constants
 const sprint = 3
 const activityList = () => { return list20000Sprint03(sprint) }
 const activityListPrevious = () => { return list20000Sprint02(sprint-1) }
 
-// Introduction to Computer Science Sprint 3 Session 1 of 6
-
-// BugBug: Integrate different prework and agendas
-export const ics_3_1of6_PAaA = {
-	'prework': [
-		'Everything is due Sunday!', '',
-		`Be prepared for Sprint ${sprint} Planning` ],
-	'announcements':[
-		`All sprint ${sprint} assignments due Sunday!`],
-	'agenda':[
-		`Sprint ${sprint} Planning`,
-		`Sprint ${sprint} Planning Breakout`,
-		'Review Wednesday’s Demo Schedule',
-		'Prework for Next Class' ]
-}
-
-
-export const ics_3_1of6_prework_list = [
-	'Everything is due Sunday!', '',
-	`Be prepared for Sprint ${sprint} Planning` ]
-export const ics_3_1of6_agenda_list = [
-	`Sprint ${sprint} Planning`,
-	`Sprint ${sprint} Planning Breakout`,
-	'Review Wednesday’s Demo Schedule',
-	'Prework for Next Class' ]
-export const ics_3_1of6 = () => { return xyz_n_1of6(sprint, ics_3_1of6_prework_list, activityListPrevious, ics_3_1of6_agenda_list, ics_3_2of6_prework_list, activityList) }
+// Session 1 of 6: Monday
+export const ics_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
+export const ics_3_1of6 = () => { return xyz_n_1of6(sprint, ics_3_1of6_PAaA.prework, activityListPrevious, ics_3_1of6_PAaA.agenda, ics_3_2of6_prework_list, activityList) }
 
 // Session 2 of 6
 const ics_3_2of6_prework_list = [

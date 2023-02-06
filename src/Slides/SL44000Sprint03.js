@@ -1,4 +1,4 @@
-import { makeSlideDeck, xyz_n_1of6, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
+import { makeSlideDeck, xyz_n_1of6_lists, xyz_n_1of6, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
 
 import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage, tQuiz } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } from './SLSprint00'
@@ -6,36 +6,22 @@ import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } 
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02' 
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
 
-import { ics_3_1of6_prework_list, ics_3_1of6_agenda_list, ics_3_3of6_agenda_list } from './SL20000Sprint03'
-
+import { ics_3_3of6_agenda_list } from './SL20000Sprint03'
 import { se_4_1of6_prework_list } from './SL44000Sprint04'
 
+// Constants
 const sprint = 3
 const activityListPrevious = () => { return list44000Sprint02(sprint-1) }
 const activityList = () => { return list44000Sprint03(sprint) }
 
-// BugBug: Integrate different prework and agendas
-export const se_3_1of6_PAaA = {
-	'prework': [
-		'Everything is due Sunday!', '',
-		`Be prepared for Sprint ${sprint} Planning` ],
-	'announcements':[
-		`All sprint ${sprint} assignments due Sunday!`],
-	'agenda':[
-		`Sprint ${sprint} Planning`,
-		`Sprint ${sprint} Planning Breakout`,
-		'Review Wednesday’s Demo Schedule',
-		'Prework for Next Class' ]
-}
+// Session 1 of 6: Monday
+export const se_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
+export const se_3_1of6 = () => { return xyz_n_1of6(sprint, se_3_1of6_PAaA.prework, activityListPrevious, se_3_1of6_PAaA.agenda, se_3_2of6_prework_list, activityList) }
 
-export const se_3_1of6_prework_list = ics_3_1of6_prework_list
-const se_3_1of6_agenda_list = ics_3_1of6_agenda_list
-export const se_3_1of6 = () => { return xyz_n_1of6(sprint, se_3_1of6_prework_list, activityListPrevious, se_3_1of6_agenda_list, se_3_2of6_prework_list, activityList) }
-
-// Todo: Review if we still want to continue to swap Wednesday and Friday sessions. If not, make appropriate changes to slides.
+// Session 2 of 6: Wednesday
 const se_3_2of6_prework_list = [
 	'Complete through activity 4 prior to next class', '',
-	'Be prepared for team Discussion 2 and Lab' ]
+	`Be prepared for team Discussion ${sprint} and Lab` ]
 const se_3_2of6_agenda_list = [
 	`Discussion Board ${sprint} as a Scrum Team`,
 	'Prework for Next Class',
@@ -64,6 +50,8 @@ const se_3_3of6_prework_list = [
 	'Complete through activity 8 prior to next class', '',
 	`Be prepared for sprint ${sprint-1} demos and retrospectives`,
 	'Those scheduled to demo on Wednesday please be a couple of minutes early to class' ]
+
+// BugBug: Remove ICS reference.
 const se_3_3of6_agenda_list = ics_3_3of6_agenda_list
 export const se_3_3of6 = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', se_3_3of6_prework_list, sprint, activityList) }

@@ -19,10 +19,9 @@ export const preflightChecklist = () => {
 		{bulletListSlide(
 			'Preflight Checklist',
 			`In preparation for ${getClass().title}:`, [
-			'Log into the campus wireless network', 
 			'Sign into our Blackboard course shell',
 			'Sign into our Zoom session through the Zoom link in our Blackboard course shell',
-			'Mute your microphone and speakers as needed so that we do not get an echo in the room',
+			'Mute your microphone and speakers as needed',
 			'Be prepared to share your computer screen',
 			'If you are remote, optionally leave your camera on to help make our class more interactive' ]
 		)}<br />
@@ -30,9 +29,8 @@ export const preflightChecklist = () => {
 			'Instructor Checklist:', [
 			`Verify this is  ${getClass().title} (${getClassIDfromURL()})`,
 			'Update Zoom polls and start Zoom session', 
-			'Share desktop and open slides', 
-			'Test camera, microphone, and speakers',
-			'Share slides with ”&hide-nav=y” option as needed',
+			'Share desktop and open slides (using ”&hide-nav=y” option as needed)', 
+			'Check camera, microphone, and speakers',
 			'Verify recording has started automatically' ]
 		)}
 		

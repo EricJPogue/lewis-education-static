@@ -83,3 +83,4 @@ export const list20000Sprint02 = (sprint) => {
 
 	Kaizen: Small improvements eventually result in huge benefits
 */
+// Todo: Consider adding licensing topic to all classes. 

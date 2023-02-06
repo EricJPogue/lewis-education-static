@@ -18,6 +18,7 @@ import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6,
 
 import { oop_1_1of6, oop_1_2of6, oop_1_3of6, oop_1_4of6, oop_1_5of6, oop_1_6of6 } from './SL24500Sprint01'
 import { oop_2_1of6, oop_2_2of6, oop_2_3of6, oop_2_4of6, oop_2_5of6, oop_2_6of6 } from './SL24500Sprint02'
+import { oop_3_1of6 } from './SL24500Sprint03'
 
 import { web_1_1of6, web_1_2of6, web_1_3of6, web_1_4of6, web_1_5of6, web_1_6of6 } from './SL24700Sprint01'
 import { web_2_1of6, web_2_2of6, web_2_3of6, web_2_4of6, web_2_5of6, web_2_6of6 } from './SL24700Sprint02'
@@ -49,6 +50,7 @@ import { ssc_2_1of4, ssc_2_3of4 } from './SL49200Sprint02'
 // Todo: Refactor slideDeckRouter so that it only utilizes the current sprint3Router. And then rename sprint3Router.
 
 export const slideDeckRouter = (route) => {
+	// Todo: Make sprint3Router the only slide router.
 	let currentSlideDeck = sprint3Router(route)
 	if (currentSlideDeck === null) {
 		currentSlideDeck = sprint4Router(route)
@@ -141,6 +143,8 @@ const sprint3Router = (route) => {
 		case '24500-2-4': return oop_2_4of6()
 		case '24500-2-5': return oop_2_5of6()
 		case '24500-2-6': return oop_2_6of6()
+
+		case '24500-3-1': return oop_3_1of6()
 
 		case '24700-1-1': return web_1_1of6()
 		case '24700-1-2': return web_1_2of6()
