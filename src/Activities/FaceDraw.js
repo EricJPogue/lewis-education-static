@@ -69,7 +69,7 @@ mouth should be randomly smiling, frowning, or in-between. </p>
 	<li>Implements a Face class that includes member variables and getters/setters for width, height, x, y, and smiling status</li>
 	<li>Implements at least three constructors for Face including a default constructor</li>
 	<li>Implements toString() in the Face class so that each member variable in printed to the console window each time a Face is painted</li>
-	<li>Implements ArrayList called FaceList that includes 3 and 10 Faces</li>
+	<li>Implements ArrayList called FaceList that includes 3 to 10 Faces</li>
 </ol>
 
 <em>Requirement 2</em>
@@ -93,7 +93,7 @@ mouth should be randomly smiling, frowning, or in-between. </p>
 <em>Requirement 4</em>
 <p>Enhance the application so that:</p>
 <ol>
-	<li>Half of all smiling faces have green filled eyes with the other half of smiling faces have blue filled eyes</li>
+	<li>Smiling faces have a 50% chance of having green filled eyes and a 50% chance blue filled eyes</li>
 	<li>All neutral faces have yellow filled eyes</li>
 	<li>All frowning faces have red filled eyes</li>
 	<li>All eyes should still have a black oval around the edge of the eye</li>
