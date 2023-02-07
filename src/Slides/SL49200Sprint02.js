@@ -1,10 +1,5 @@
-import { tPreworkWithLogo } from "./SLSprint00"
-import { basicSlideWithLogo } from "./SLSprint00"
-import { makeSlideDeck } from "./SL00000Sprint00"
-import { agendaSlide } from "./SLSprint00"
-import { tPrework } from "./SLSprint00"
-import { bulletListSlide } from "./SLSprint00"
-import { orderedListSlide } from "./SLSprint00"
+import { agendaSlide, basicSlideWithLogo, bulletListSlide, orderedListSlide, tPrework, tPreworkWithLogo } from './SLSprint00'
+import { makeSlideDeck } from './SL00000Sprint00'
 
 import { list49200Sprint01 } from '../ActivityLists/AL49200Sprint01'
 import { list49200Sprint02 } from '../ActivityLists/AL49200Sprint02'
