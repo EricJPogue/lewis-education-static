@@ -1,8 +1,7 @@
-import { getClass } from '../DataAndAPIs/Classes'
-
 import { makeSlideDeck, xyz_n_1of6, xyz_n_1of6_lists, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
 import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage, tQuiz } from './SLSprint00'
-import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } from './SLSprint00'
+
+import { xyz_n_3of6 } from './SL00000Sprint00'
 
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02' 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
@@ -32,7 +31,7 @@ export const ics_3_2of6 = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_2of6_prework_list, sprint, activityList) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Any announcements?']) }
 	const agenda = () => { return agendaSlide(ics_3_2of6_agenda_list) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_3of6_prework_list, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_3of6_PAaA.prework, sprint, activityList) }
 
 	const discussion3Breakout = () => { return discussionBreakout(sprint) } 
 	const programmingTogether = () => {
@@ -46,51 +45,59 @@ export const ics_3_2of6 = () => {
 	return makeSlideDeck([ prework, announcements, agenda, discussion3Breakout, programmingTogether, preworkNext ])
 }
 
-const ics_3_3of6_prework_list = [
-	'Complete through activity 9 prior to next class', '',
-	`Be prepared for sprint ${sprint-1} demos and retrospectives`,
-	'Those scheduled to demo please be a couple of minutes early to class' ]
-export const ics_3_3of6_agenda_list = [
-	`Sprint ${sprint-1} Demos`,
-	`Sprint ${sprint-1} Retrospective`,
-	`Breakout for Sprint ${sprint-1} Retrospective`,
-	'Prework for Next Class' ]
+const ics_3_3of6_PAaA = {
+	'prework': [
+		'Complete through activity 9 prior to next class', '',
+		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
+		'Those scheduled to demo please be a couple of minutes early to class' ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class' ]
+}
 export const ics_3_3of6 = () => {
-	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_3of6_prework_list, sprint, activityList) }
-	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['No class next Friday', 'Any other announcements?']) }
-	const agenda = () => { return agendaSlide(ics_3_3of6_agenda_list) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_4of6_prework_list, sprint, activityList) }
-
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:25 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:24 },
-				{ name: 'Reflection', due: 27, submitted: 26 }
-			])
-		} else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:28, submitted:26 },
-				{ name: 'Quiz', due:28, submitted:28 },
-				{ name: 'Lab', due:28, submitted:27 },
-				{ name: 'Reflection', due: 28, submitted: 27 }
-			])
-		}
+		return submissionPercentage([
+			{ name: 'Discussion', due:14, submitted:14 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:14},
+			{ name: 'Reflection', due: 14, submitted: 13 }])
 	}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Okay submission percentage... it does’t feel good to have multiple Labs not submitted',
-			'I “don’t allow” for late assignments because historically it makes a difficult situation worse',
-			'All assignments are graded and posted... maybe?', 
-			'Still some difficulties creating and attaching zip files' ])
+			'Fantastic submission percentage!',
+			'All assignments are graded and posted', 
+			'Can you see your scores?',
+			'Can you see the answers to all quiz questions?',
+			'Thank you for your reflection comments' ])
 	}
-	const breakout = () =>{ return retrospectiveBreakout(sprint) }
-
-	return makeSlideDeck([ prework, announcements, agenda, sprintDemosIntro, sprintDemos, demoAssignment, 
-		metricsSubmissionPercentage, retrospective, breakout, preworkNext ])
+	return xyz_n_3of6(sprint, ics_3_4of6_PAaA, ics_3_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
+
+
+
+
+
+const ics_3_4of6_PAaA = {
+	'prework': [
+		'Complete through activity 11 prior to next class', '',
+		'Focus on “Gates and Circuits” and “Computing Components” chapters and lectures',
+		'Be prepared for Lab and Programming Together**' ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		'Gates and Circuits Breakout (abbreviated)',
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
+}
+
+
+
+
 
 const ics_3_4of6_prework_list = [
 	'Complete through activity 11 prior to next class', '',

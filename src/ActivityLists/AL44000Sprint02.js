@@ -57,5 +57,8 @@ export const list44000Sprint02 = (sprint) => {
 // Todo: Consider adding lab 2 question relating to overcoming procrastination article. 
 // Todo: Consider adding CSS and JavaScript example after reviewing if they are already available. 
 // Todo: Review https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
+// Todo: Consider Git centric topic sprint 2 
+// Todo: Only go over Azure hosting once.
+// Todo: Identify where quiz answers originate from. 
 
 

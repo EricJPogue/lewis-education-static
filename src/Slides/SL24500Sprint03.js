@@ -1,8 +1,10 @@
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 
 import { makeSlideDeck } from './SL00000Sprint00'
-import { tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout } from './SLSprint00'
+import { tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, submissionPercentage } from './SLSprint00'
 
+import { xyz_n_3of6 } from './SL00000Sprint00'
+import { orderedListSlide } from './SLSprint00'
 
 import { list24500Sprint02 } from '../ActivityLists/AL24500Sprint02'
 import { list24500Sprint03 } from '../ActivityLists/AL24500Sprint03'
@@ -43,7 +45,7 @@ export const oop_3_2of6 = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', oop_3_2of6_prework_list, sprint, activityList) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Any announcements?']) }
 	const agenda = () => { return agendaSlide(oop_3_2of6_agenda_list) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', oop_3_3of6_prework_list, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', oop_3_3of6_PAaA.prework, sprint, activityList) }
 
 	const discussion3Breakout = () => { return discussionBreakout(sprint) } 
 	const programmingTogether = () => {
@@ -58,7 +60,45 @@ export const oop_3_2of6 = () => {
 	return makeSlideDeck([ prework, announcements, agenda, discussion3Breakout, programmingTogether, preworkNext ])
 }
 
-const oop_3_3of6_prework_list = [
-	'Complete through activity 9 prior to next class', '',
-	`Be prepared for sprint ${sprint-1} demos and retrospectives`,
-	'Those scheduled to demo please be a couple of minutes early to class' ]
+const oop_3_3of6_PAaA = {
+	'prework': [
+		'Complete through activity 9 prior to next class', '',
+		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
+		'Those scheduled to demo please be a couple of minutes early to class' ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class' ]
+}
+export const oop_3_3of6 = () => {
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:17, submitted:17 },
+			{ name: 'Quiz', due:17, submitted:17 },
+			{ name: 'Lab', due:17, submitted:17},
+			{ name: 'Reflection', due: 17, submitted: 15 }])
+	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Fantastic submission percentage!',
+			'All assignments are graded and posted', 
+			'Can you see your scores?',
+			'Can you see the answers to all quiz questions?',
+			'Thank you for your reflection comments' ])
+	}
+	return xyz_n_3of6(sprint, ics_3_4of6_PAaA, ics_3_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+}
+
+const ics_3_4of6_PAaA = {
+	'prework': [
+		'Complete through activity 9 and started on activity 10 prior to next class', '',
+		'Be prepared for breakout on “Graphical User Interfaces (GUIs) in Java”' ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		'TBD' ]
+}

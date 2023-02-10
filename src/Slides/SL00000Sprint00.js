@@ -124,11 +124,15 @@ export const xyz_n_2of6 = (sprint, sessionLists, preworkListNext, activityList) 
 
 export const xyz_n_3of6 = (sprint, sessionLists, preworkListNext, activityList, metricsSubmissionPercentage, retrospective) => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
+	const metricsIntro = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
+	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
 
-	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
+	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, tDemos, demoAssignment, metricsIntro, metricsSubmissionPercentage, retrospectiveInto, retrospective, breakout, preworkNext])
 }
 
 export const xyz_n_4of6 = (sprint, sessionLists, preworkListNext, activityList, breakout) => {
@@ -177,7 +181,7 @@ export const tDemos = () => {
 	return bulletListSlide('Sprint Demos', 
 		`Remember:`, [
 		'Presenters: What was your experience, application running, maybe some source code',
-		'Listens: Listen, come up with a question, clap at the end of the demo' ]
+		'Listeners: Actively listen, come up with a question, clap for the presenter' ]
 	)
 }
 

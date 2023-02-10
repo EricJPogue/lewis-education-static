@@ -6,6 +6,7 @@ import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 import { basicSlide } from './SLSprint00'
 import { completeDeck } from './SL00000Sprint00'
 import { tReviewDemoSchedule } from './SL00000Sprint00'
+import { retrospectiveBreakout } from './SLSprint00'
 
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02' 
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
@@ -21,6 +22,7 @@ const activityList = () => { return list44000Sprint03(sprint) }
 export const se_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const se_3_1of6 = () => { return xyz_n_1of6(sprint, se_3_1of6_PAaA.prework, activityListPrevious, se_3_1of6_PAaA.agenda, se_3_2of6_prework_list, activityList) }
 
+// Todo: Update session 2 so that it utilizes the integrated lists format. 
 // Session 2 of 6: Wednesday
 const se_3_2of6_prework_list = [
 	'Complete through activity 4 prior to next class', '',
@@ -33,7 +35,7 @@ export const se_3_2of6 = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', se_3_2of6_prework_list, sprint, activityList) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Any announcements?']) }
 	const agenda = () => { return agendaSlide(se_3_2of6_agenda_list) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_3of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_3_3of6_PAaA.prework, sprint, activityList) }
 
 	const discussion3Breakout = () => { return discussionBreakout(sprint) } 
 	const programmingTogether = () => {
@@ -49,7 +51,8 @@ export const se_3_2of6 = () => {
 	return makeSlideDeck([ prework, announcements, agenda, discussion3Breakout, preworkNext, programmingTogether ])
 }
 
-const se_2_3of6_PAaA = {
+// Todo: Update the following session to be similar to ics.
+const se_3_3of6_PAaA = {
 	'prework': [
 		'Complete through activity 8 prior to next class', '',
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
@@ -63,7 +66,7 @@ const se_2_3of6_PAaA = {
 		'Prework for Next Class' ]
 }
 export const se_3_3of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_2_3of6_PAaA, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_3_3of6_PAaA, sprint, activityList)
 
 	const metrics = () => {
 		return basicSlide(`Sprint ${sprint-1} Metrics`, [
@@ -85,17 +88,11 @@ export const se_3_3of6 = () => {
 			'Comments and feedback immensely different depending on Web development background', 
 			'Azure static website are much better for static content!' ])
 	}
-	const retrospectiveBreakout = () => {
-		return orderedListSlide('Breakout Session for Team Retrospective', 
-			'As a scrum team consider:', [
-			`How does your team feel about sprint ${sprint-1} now that it is over`,
-			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
-			'What improvements should we make as a class, team, or individual going forward' ])
-	}
+	const breakout = () => { return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_3_4of6_PAaA.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, tDemos, demoAssignment, metrics, 
-		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
+		metricsSubmissionPercentage, retrospective, breakout, preworkNext ])
 }
 
 const se_3_4of6_PAaA = {
