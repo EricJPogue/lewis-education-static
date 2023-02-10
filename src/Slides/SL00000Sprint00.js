@@ -173,6 +173,14 @@ export const tReviewDemoSchedule = () => {
 	)
 }
 
+export const tDemos = () => {
+	return bulletListSlide('Sprint Demos', 
+		`Remember:`, [
+		'Presenters: What was your experience, application running, maybe some source code',
+		'Listens: Listen, come up with a question, clap at the end of the demo' ]
+	)
+}
+
 export const tAnnouncementPreworkOrAgenda = (titleAndList, sprint=null, activityList=null) => {
 	return tPreworkWithLogo(titleAndList[0], titleAndList.slice(1), sprint, activityList )
 }
