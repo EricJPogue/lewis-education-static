@@ -41,17 +41,19 @@ export const list20000Sprint04 = (sprint) => {
 			<li>Complete {numberingSystemsLink()}{estimated('2 hours')}</li>
 			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>
 			<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 3 and 4 while reviewing associated {IntroducingPythonSampleCode()}</li>
+			<li>Complete “Matchmaker Lite - Part 1” from our programming together tutorials</li>
 
 			{initialPost(sprint)}
 			<li>Review {pythonW3CPart1()} from W3C</li>
 			<li>Master {SequenceSelectionAndRepetition()}</li>
 			<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 5 and 6 while reviewing associated {IntroducingPythonSampleCode()}</li>
 			<li>Review {pythonW3CPart2()} from W3C</li>
+			<li>Complete “Matchmaker Lite - Part 2” from our programming together tutorials</li>
 			{standardActivitiesClosing(sprint, matchmakerPythonLink(), '6 hours')}
 		</ol>
 	</div> )
 }
 
 // Certified for FA22 (10/06/2022)
+// Certified for SP22 (02/12/2022)
 
-// Todo: Consider adding Matchmaker Lite - Part 1 and Part 2 to the activity list or to the Matchmaker assignment.

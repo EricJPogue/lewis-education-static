@@ -55,6 +55,7 @@ export const list44000Sprint04 = (sprint) => {
 }
 
 // Certified for FA22 (10/06/2022) 
+// Certified for SP22 (02/12/2022)
 
-// BugBug: Fix questions about submitting Node.js textbook work. 
+
 

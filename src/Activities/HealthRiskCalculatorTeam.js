@@ -104,7 +104,7 @@ improve on his design in any event.
 <em>Requirement 1</em>
 <p>Create a web application that:</p>
 <ol>
-	<li>Utilizes a new GitHub Organization named “[[Your Team Name]] - Health Insurance Risk Calculator” to host all repositories</li>
+	<li>Utilizes you a GitHub Organization to host all repositories</li>
 	<li>Utilizes two separate GitHub repositories with one being for a static Client website and the other for the Node.js API server</li>
 	<li>Hosts the client application in Microsoft Azure as a Static Web App</li>
 	<li>Hosts the server application in Microsoft Azure as a Node.js base Web App</li>
@@ -125,15 +125,17 @@ improve on his design in any event.
 	<li>Validates user input and displays meaningful error messages including a minimum height of 2 feet</li>
 	<li>Displays meaningful error message and focuses/highlights fields that contain invalid input</li>
 	<li>Summarizes each of the values used in the final calculation including Age, BMI, Blood Pressure, and Family Disease(s)</li>
-	<li>Calculates and displays the final Risk Category by calling an server API hosted as a Node.js based Azure Web App</li>
+	<li>Does <em>no calculations in the client code</em> but instead calls server APIs hosted as a Node.js based Azure Web App</li>
+	<li>Displays the final Risk Category</li>
 </ol>
 
 <em>Requirement 4</em>
 <p>Implement the server application so that it:</p>
 <ol>
-	<li>Implements an API that implements ALL risk calculations using Node.js and a Microsoft Azure Web App</li>
+	<li>Implements an API or APIs that implement ALL risk calculations using Node.js and a Microsoft Azure Web App</li>
 	<li>Utilizes standard configuration that allows each team member to fully test client and server functionally locally</li>
 	<li>Implements ALL risk calculations as a set of APIs</li>
+	<li>Implements a “ping” style API that can be utilized to wake the server up when the client application is started</li>
 	<li>Has each team member implement at least one server-side Node.js API function that is verifiable in a GitHub commit</li>
 </ol><br />
 Optionally review {sharedGitHubRepository()}.
