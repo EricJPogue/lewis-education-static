@@ -1,12 +1,8 @@
-import { makeSlideDeck, xyz_n_1of6_lists, xyz_n_1of6, tLab, tAnnouncementPreworkOrAgenda, tDemos } from './SL00000Sprint00'
+import { xyz_n_1of6, xyz_n_1of6_lists, xyz_n_4of6 } from './SL00000Sprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, makeSlideDeck, tAnnouncementPreworkOrAgenda, tDemos, tLab, tReviewDemoSchedule } from './SL00000Sprint00'
+import { agendaSlide, basicSlideWithLogo, breakoutStandard, bulletListSlide, orderedListSlide, discussionBreakout, submissionPercentage, tPrework, tPreworkWithLogo,tQuiz } from './SLSprint00'
 
-import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage, tQuiz } from './SLSprint00'
-import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
-import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
-import { basicSlide } from './SLSprint00'
-import { completeDeck } from './SL00000Sprint00'
-import { tReviewDemoSchedule } from './SL00000Sprint00'
-import { retrospectiveBreakout } from './SLSprint00'
+import { basicSlide, demoAssignment, sprintDemosIntro, sprintDemos, retrospectiveBreakout } from './SLSprint00'
 
 import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02' 
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
@@ -95,50 +91,47 @@ export const se_3_3of6 = () => {
 		metricsSubmissionPercentage, retrospective, breakout, preworkNext ])
 }
 
+// Session 4 of 6: Monday
+const breakoutRequirementsName = 'Requirements'
+const breakoutRequirements = () => {
+	return breakoutStandard( 
+		`Breakout: ${breakoutRequirementsName}`, 
+		`In this breakout session on our “${breakoutRequirementsName}” reading and lecture your team will discuss:`, [
+		'Behavior-Driven Design, Gemba (or Genba), Requirements, Use Cases, and User Stories',
+		'Points, velocity, SMART, and MVP',
+		'Story Points, Use Case Points, Function Points, and measuring productivity across teams',
+		'User Experience / User Interface Design, Interface Sketches, and Storyboards',
+		'Requirements Gathering Waterfall (Requirements) vs. Iterative (Use Cases) vs. Agile (Stories)' ])
+}
 const se_3_4of6_PAaA = {
 	'prework': [
 		'Complete through activity 8 prior to next class', '',
-		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
-		'Those scheduled to demo on Wednesday please be a couple of minutes early to class' ],
+		`Be prepared for a breakout session on ${breakoutRequirementsName}`,
+		'Be prepared for Lab and Programming Together as time allows' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'I have updated Lab 3 to reflect specific exercises to complete in “Web Development with Node.js and Express”',
+		'Is anyone having difficulties accessing O’Reilly?' ],
 	'agenda':[
-		`Sprint ${sprint-1} Demos`,
-		`Sprint ${sprint-1} Retrospective`,
-		`Breakout for Sprint ${sprint-1} Retrospective`,
-		'Prework for Next Class' ]
+		'Sprint Progress Polling', 
+		`${breakoutRequirementsName} Breakout`,
+		'Lab and Programming Together as time allows' ]
 }
+export const se_3_4of6 = () => { return xyz_n_4of6(sprint, se_3_4of6_PAaA, se_3_5of6_PAaA.prework, activityList, breakoutRequirements) }
 
-// Todo: Update session 4, 5, and 6.
-const se_3_4of6_prework_list = [
-	'Complete through activity 11 prior to next class', '',
-	'Focus on reading assignments and associated lectures',
-	'Be prepared for Lab and Programming Together**' ]
-const se_3_4of6_agenda_list = [
-	'Requirements Breakout',
-	'Prework for Next Class',
-	'Lab & Programming Together' ]
-export const se_3_4of6 = () => {
-	const prework = () => { return tPreworkWithLogo('Prework For Today', se_3_4of6_prework_list, sprint, activityList) }
-	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
-		'No class Friday', 
-		'No Node.js or JSON Breakout this sprint (you are still responsible for the content)']) 
-	}
-	const agenda = () => { return agendaSlide(se_3_4of6_agenda_list) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_3_5of6_prework_list, sprint, activityList) }
-
-	const breakout = () => { 
-		return breakoutStandard( 
-			'Requirements Breakout', 
-			'In this breakout session on Requirements (reading and lecture) your team will discuss:', [
-			'Behavior-Driven Design, Gemba (or Genba), Requirements, Use Cases, and User Stories',
-			'Points, velocity, SMART, and MVP',
-			'Story Points, Use Case Points, Function Points, and measuring productivity across teams',
-			'User Experience / User Interface Design, Interface Sketches, and Storyboards',
-			'Requirements Gathering Waterfall (Requirements) vs. Iterative (Use Cases) vs. Agile (Stories)' ])
-	}
-
-	return makeSlideDeck([ announcements, prework, agenda, breakout, preworkNext ])
+// Todo: Update 5, and 6.
+// Session 5 of 6: Wednesday
+const se_3_5of6_PAaA = {
+	'prework': [
+		'Complete through activity 11 prior to next class', '',
+		'Be prepared for Lab and Programming Together as time allows',
+		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		'Any announcements or questions?' ],
+	'agenda':[
+		'Agenda', 
+		'Lab and Programming Together',
+		'Prework for Next Class',
+		`Quiz ${sprint}` ]
 }
 
 const se_3_5of6_announcement_list = [
@@ -175,6 +168,8 @@ export const se_3_6of6 = () => {
 
 	return [ announcements ]
 }
+
+
 
 // Todo: Where do these topics fit?
 /*

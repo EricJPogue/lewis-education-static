@@ -1,10 +1,11 @@
-import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6 } from './SL00000Sprint00'
 
 import { makeSlideDeck } from './SL00000Sprint00'
 import { tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, submissionPercentage } from './SLSprint00'
 
 import { xyz_n_3of6 } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
+import { breakoutStandard } from './SLSprint00'
 
 import { list24500Sprint02 } from '../ActivityLists/AL24500Sprint02'
 import { list24500Sprint03 } from '../ActivityLists/AL24500Sprint03'
@@ -90,15 +91,46 @@ export const oop_3_3of6 = () => {
 			'Can you see the answers to all quiz questions?',
 			'Thank you for your reflection comments' ])
 	}
-	return xyz_n_3of6(sprint, ics_3_4of6_PAaA, ics_3_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+	return xyz_n_3of6(sprint, oop_3_3of6_PAaA, oop_3_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
 
-const ics_3_4of6_PAaA = {
+// Session 4 of 6: Monday
+const breakoutGUIsName = 'Graphical User Interfaces (GUIs) in Java'
+const breakoutGUIs = () => {
+	return breakoutStandard( 
+		`Breakout: ${breakoutGUIsName}`, 
+		`In this breakout session on our “${breakoutGUIsName}” reading and lecture your team will discuss:`, [
+		'Summarize Java Graphical User Interface development and position Java GUI development',
+		'Explain Heavyweight components and Lightweight components',
+		'Describe the paint and paintComponent methods', 
+		'Discuss minimizing inheritance dependencies when developing GUIs and the java.lang.Object class',
+		`Explain Layout Managers (sprint ${sprint+1})`,
+		`Review Class extension and interface implementation (sprint ${sprint+1})`, 
+		`Introduce Event Handling and action listeners (sprint ${sprint+1})` ])
+}
+
+const oop_3_4of6_PAaA = {
 	'prework': [
 		'Complete through activity 9 and started on activity 10 prior to next class', '',
 		'Be prepared for breakout on “Graphical User Interfaces (GUIs) in Java”' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'Is anyone having difficulties accessing O’Reilly?',
+		'Friday, March 24 is the last day to withdraw from sprint 2023 16-week classes with a grade of “W”' ],
 	'agenda':[
-		'TBD' ]
+		'Sprint Progress Polling', 
+		`${breakoutGUIsName} Breakout`,
+		'Lab and Programming Together as time allows' ]
+}
+export const oop_3_4of6 = () => { return xyz_n_4of6(sprint, oop_3_4of6_PAaA, oop_3_5of6_PAaA.prework, activityList, breakoutGUIs) }
+
+const oop_3_5of6_PAaA = {
+	'prework': [
+		'Complete through activity 9 and started on activity 10 prior to next class', '',
+		'Be prepared for breakout on “Graphical User Interfaces (GUIs) in Java”' ],
+	'announcements':[ 
+		'Is anyone having difficulties accessing O’Reilly?' ],
+	'agenda':[
+		'Sprint Progress Polling', 
+		`${breakoutGUIsName} Breakout`,
+		'Lab and Programming Together as time allows' ]
 }

@@ -41,7 +41,7 @@ export const se_2_2of6 = () => {
 	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab ])
 }
 
-// Session 3 of 6: Wednesday
+// Session 3 of 6: Friday
 const breakoutSaaSArchitectureName = 'The Architecture of Saas Applications'
 const breakoutSaaSArchitecture = () => {
 	return breakoutStandard( 

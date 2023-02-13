@@ -120,8 +120,6 @@ export const xyz_n_2of6 = (sprint, sessionLists, preworkListNext, activityList) 
 	return completeDeck(slideDeck, [ discussionBreakout, reviewDemoSchedule, preworkNext, tLab ])
 }
 
-
-
 export const xyz_n_3of6 = (sprint, sessionLists, preworkListNext, activityList, metricsSubmissionPercentage, retrospective) => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
 	const metricsIntro = () => {
@@ -137,9 +135,10 @@ export const xyz_n_3of6 = (sprint, sessionLists, preworkListNext, activityList, 
 
 export const xyz_n_4of6 = (sprint, sessionLists, preworkListNext, activityList, breakout) => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', sessionLists.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
 
-	return completeDeck(slideDeck, [breakout, preworkNext, tLab])
+	return completeDeck(slideDeck, [poll, breakout, preworkNext, tLab])
 }
 
 export const xyz_n_5of6 = (sprint, sessionLists, preworkListNext, activityList) => {

@@ -1,7 +1,5 @@
-import { makeSlideDeck, xyz_n_1of6, xyz_n_1of6_lists, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
-import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage, tQuiz } from './SLSprint00'
-
-import { xyz_n_3of6 } from './SL00000Sprint00'
+import { makeSlideDeck, xyz_n_1of6, xyz_n_1of6_lists, xyz_n_3of6, xyz_n_4of6, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
+import { agendaSlide, basicSlideWithLogo, breakoutStandard, bulletListSlide, orderedListSlide, discussionBreakout, submissionPercentage, tPrework, tPreworkWithLogo,tQuiz } from './SLSprint00'
 
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02' 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
@@ -17,7 +15,7 @@ const activityListPrevious = () => { return list20000Sprint02(sprint-1) }
 export const ics_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const ics_3_1of6 = () => { return xyz_n_1of6(sprint, ics_3_1of6_PAaA.prework, activityListPrevious, ics_3_1of6_PAaA.agenda, ics_3_2of6_prework_list, activityList) }
 
-// Session 2 of 6
+// Session 2 of 6: Wednesday
 const ics_3_2of6_prework_list = [
 	'Complete through activity 5 prior to next class', '',
 	'Be prepared Discussion Board 3',
@@ -45,6 +43,8 @@ export const ics_3_2of6 = () => {
 	return makeSlideDeck([ prework, announcements, agenda, discussion3Breakout, programmingTogether, preworkNext ])
 }
 
+// Session 3 of 6: Friday
+// Todo: Consider where “Gates & Circuits” and “Computing Components” breakout should occur.
 const ics_3_3of6_PAaA = {
 	'prework': [
 		'Complete through activity 9 prior to next class', '',
@@ -78,24 +78,66 @@ export const ics_3_3of6 = () => {
 	return xyz_n_3of6(sprint, ics_3_4of6_PAaA, ics_3_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
 
+// Session 4 of 6: Monday
+const breakoutGateAndCircuitsName = 'Gates & Circuits'
+const breakoutGateAndCircuits = () => { 
+	return breakoutStandard( 
+		`Breakout: ${breakoutGateAndCircuitsName}`, 
+		`In this breakout session on our ${breakoutGateAndCircuitsName} reading and lecture your team will discuss:`, [
+		'Gates', 
+		'Circuits and how they relate to Gates', 
+		'NOT and AND gates',
+		'OR, XOR, NAND, and NOR gates and share which one is consistent with English language "or"',
+		'Integrated Circuits, CPU Chips, and how much does it cost to buy 100,000,000 (100 million) gates' ])
+}
 
-
-
+const breakoutComputingComponentsName = 'Computing Components'
+const breakoutComputingComponents = () => { 
+	return breakoutStandard( 
+		`Breakout: ${breakoutComputingComponentsName}`, 
+		`In this breakout session on our ${breakoutComputingComponentsName} reading and lecture your team will discuss:`, [
+		'Computing Components',
+		'Stored Program plus Von Neumann Architecture',
+		'Ram and Rom plus Secondary Storage',
+		'Embedded Systems',
+		'Parallel Architectures plus Classes of Parallel Hardware' ])
+}
 
 const ics_3_4of6_PAaA = {
 	'prework': [
 		'Complete through activity 11 prior to next class', '',
-		'Focus on “Gates and Circuits” and “Computing Components” chapters and lectures',
-		'Be prepared for Lab and Programming Together**' ],
+		`Focus on “${breakoutGateAndCircuitsName}” and “${breakoutGateAndCircuitsName}” chapters and lectures`,
+		'Be prepared for Lab and Programming Together' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		`Have we discussed “${breakoutGateAndCircuitsName}”?`,
+		'Any announcements or questions?' ],
+	'agenda':[
+		'Sprint Progress Polling', 
+		`“${breakoutGateAndCircuitsName}” or “${breakoutGateAndCircuitsName}”s Breakout`,
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
+}
+export const ics_3_4of6 = () => { 
+	let slides = xyz_n_4of6(sprint, ics_3_4of6_PAaA, ics_3_5of6_PAaA.prework, activityList, breakoutComputingComponents)
+	// Not sure if we completed “Gate & Circuits breakout.
+	slides.splice(slides.length-4, 0, breakoutGateAndCircuits)
+	return slides
+}
+
+const ics_3_5of6_PAaA = {
+	'prework': [
+		'Complete through activity 12 prior to next class', '',
+		`Focus on “${breakoutGateAndCircuitsName}” and “${breakoutGateAndCircuitsName}” chapters and lectures`,
+		'Be prepared for Lab and Programming Together as time allows',
+		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		`Have we discussed “${breakoutGateAndCircuitsName}”?`,
+		'Any announcements or questions?' ],
 	'agenda':[
 		'Gates and Circuits Breakout (abbreviated)',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
-
-
 
 
 
@@ -107,7 +149,7 @@ const ics_3_4of6_agenda_list = [
 	'Gates and Circuits Breakout (abbreviated)',
 	'Prework for Next Class',
 	'Lab & Programming Together' ]
-export const ics_3_4of6 = () => {
+export const ics_3_4of6x = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_4of6_prework_list, sprint, activityList) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
 		'No class Friday', 
@@ -116,18 +158,7 @@ export const ics_3_4of6 = () => {
 	}
 	const agenda = () => { return agendaSlide(ics_3_4of6_agenda_list) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_5of6_prework_list, sprint, activityList) }
-
-	const breakout = () => { 
-		return breakoutStandard( 
-			'Breakout: Gates and Circuits', 
-			'In this breakout session on Gates and Circuits (reading and lecture) your team will discuss:', [
-			'Gates', 
-			'Circuits and how they relate to Gates', 
-			'NOT and AND gates',
-			'OR, XOR, NAND, and NOR gates and share which one is consistent with English language "or"',
-			'Integrated Circuits, CPU Chips, and how much does it cost to buy 100,000,000 (100 million) gates',
-			'Computing Component: Can you identify one computing component?' ])
-	}
+	const breakout = () => { return breakoutGateAndCircuits() }
 
 	return makeSlideDeck([ announcements, prework, agenda, breakout, preworkNext ])
 }
