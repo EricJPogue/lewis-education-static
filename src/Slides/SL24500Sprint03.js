@@ -126,7 +126,7 @@ export const oop_3_4of6 = () => { return xyz_n_4of6(sprint, oop_3_4of6_PAaA, oop
 const oop_3_5of6_PAaA = {
 	'prework': [
 		'Complete through activity 9 and started on activity 10 prior to next class', '',
-		'Be prepared for breakout on “Graphical User Interfaces (GUIs) in Java”' ],
+		'Be **done** with FaceDrawLite”' ],
 	'announcements':[ 
 		'Is anyone having difficulties accessing O’Reilly?' ],
 	'agenda':[
