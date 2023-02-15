@@ -10,10 +10,11 @@ export const xyz_2_1of6_sprintPlanning = (sprint) => {
 	])
 }
 
-export const xyz_2_6of6_PreworkAnnouncementsAndAgenda = (completeThrough, sprint) => {
+// Todo: Convert the following function. 
+export const xyz_2_6of6_PreworkAnnouncementsAndAgenda = (preworkItem1, sprint) => {
 	const preworkAnnouncementsAndAgenda = {
 		'prework': [
-			`Complete through activity ${completeThrough} prior to next class`, '',
+			`${preworkItem1}`, '',
 			'Be prepared for Lab & Programming Together',
 			`All sprint ${sprint} assignments are due Sunday!` ],
 		'announcements':[

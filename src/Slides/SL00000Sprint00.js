@@ -151,6 +151,21 @@ export const xyz_n_5of6 = (sprint, sessionLists, preworkListNext, activityList) 
 	return 	completeDeck(slideDeck, [ poll, tLab, preworkNext, quizExpectations, quiz ])
 }
 
+export const xyz_n_6of6_PAaA = (completeThrough, sprint) => {
+	const preworkAnnouncementsAndAgenda = {
+		'prework': [
+			`Complete through activity ${completeThrough} prior to next class`, '',
+			'Be prepared for Lab & Programming Together',
+			`All sprint ${sprint} assignments are due Sunday!` ],
+		'announcements':[
+			`All sprint ${sprint} assignments are due Sunday!`],
+		'agenda':[
+			`Quiz ${sprint} “Phone a Friend”`,
+			'Lab']
+	}
+	return preworkAnnouncementsAndAgenda
+}
+
 export const xyz_n_6of6 = (sprint, sessionLists, preworkListNext, activityList) => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }

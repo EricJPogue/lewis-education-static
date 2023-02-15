@@ -62,3 +62,12 @@ export const list44000Sprint03 = (sprint) => {
 
 // Certified for SP22 (01/29/2022)
 // Todo: Consider reviewing and enhancing Quiz 3.
+// Todo: Where do these topics fit?
+/*
+Team discusses topics while the presenter summarizes the topics below:
+Chapter 3 Introduction to Ruby… how do we create non-objects in Ruby?
+Chapter 4 Introduction to Rails… how do we create a non-model-view-controller Rails application?
+Chapter 5 Advanced Rails… authentication? Is the Ruby/Rails framework opinionated? Is that good or bad?
+A.6 Git and Version Control and A.7 GitHub
+ORM (Object-Relational-Mapper) and NoSQL Databases
+*/

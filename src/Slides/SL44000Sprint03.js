@@ -1,6 +1,6 @@
-import { xyz_n_1of6, xyz_n_1of6_lists, xyz_n_4of6 } from './SL00000Sprint00'
-import { checklistAnnouncementsPreworkAndAgenda, completeDeck, makeSlideDeck, tAnnouncementPreworkOrAgenda, tDemos, tLab, tReviewDemoSchedule } from './SL00000Sprint00'
-import { agendaSlide, basicSlideWithLogo, breakoutStandard, bulletListSlide, orderedListSlide, discussionBreakout, submissionPercentage, tPrework, tPreworkWithLogo,tQuiz } from './SLSprint00'
+import { xyz_n_1of6, xyz_n_1of6_lists, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6_PAaA, xyz_n_6of6 } from './SL00000Sprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, makeSlideDeck, tDemos, tReviewDemoSchedule } from './SL00000Sprint00'
+import { agendaSlide, basicSlideWithLogo, breakoutStandard, bulletListSlide, orderedListSlide, discussionBreakout, submissionPercentage, tPrework, tPreworkWithLogo } from './SLSprint00'
 
 import { basicSlide, demoAssignment, sprintDemosIntro, sprintDemos, retrospectiveBreakout } from './SLSprint00'
 
@@ -118,7 +118,7 @@ const se_3_4of6_PAaA = {
 }
 export const se_3_4of6 = () => { return xyz_n_4of6(sprint, se_3_4of6_PAaA, se_3_5of6_PAaA.prework, activityList, breakoutRequirements) }
 
-// Todo: Update 5, and 6.
+
 // Session 5 of 6: Wednesday
 const se_3_5of6_PAaA = {
 	'prework': [
@@ -126,57 +126,18 @@ const se_3_5of6_PAaA = {
 		'Be prepared for Lab and Programming Together as time allows',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
+		'I have updated “Assignment Portfolio with Node.js”',
 		'Any announcements or questions?' ],
 	'agenda':[
-		'Agenda', 
 		'Lab and Programming Together',
 		'Prework for Next Class',
 		`Quiz ${sprint}` ]
 }
+export const se_3_5of6 = () => { return xyz_n_5of6(sprint, se_3_5of6_PAaA, se_3_6of6_PAaA.prework, activityList) }
 
-const se_3_5of6_announcement_list = [
-	'Announcements', 
-	'No class Friday', 
-	`All sprint ${sprint} assignments are due Sunday!`]
-const se_3_5of6_prework_list = [
-	'Complete through activity 14 prior to next class', '',
-	'Focus on reading assignments and associated lectures',
-	'Be prepared for Lab and Programming Together',
-	'Be prepared for Quiz 3' ]
-const se_3_5of6_agenda_list = [
-	'Agenda', 
-	'Lab and Programming Together',
-	'Prework for Next Class',
-	'Quiz 3' ]
-export const se_3_5of6 = () => {
-	const announcements =  () => { return tAnnouncementPreworkOrAgenda(se_3_5of6_announcement_list) }
-	const prework = () => { return tAnnouncementPreworkOrAgenda(se_3_5of6_prework_list, sprint, activityList) }
-	const agenda = () => { return tAnnouncementPreworkOrAgenda(se_3_5of6_agenda_list) }
-
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_1of6_prework_list, sprint, activityList) }
-	const quiz = () => { return tQuiz(sprint) }
-
-	return makeSlideDeck([ announcements, prework, agenda, tLab, preworkNext, quiz ])
-}
-
-// No “se_3_6of6...” prework or agenda structures as there is no class Friday due to Fall Break.
-export const se_3_6of6 = () => {
-	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
-		'No class', 
-		`All sprint ${sprint} assignments are due Sunday!`]) 
-	}
-
-	return [ announcements ]
-}
+// Session 6 of 6: Friday
+const se_3_6of6_PAaA = xyz_n_6of6_PAaA('Complete through activity activity 14 and actively working on 15', sprint)
+export const se_3_6of6 = () => { return  xyz_n_6of6(sprint, se_3_6of6_PAaA, se_4_1of6_prework_list, activityList) }
 
 
 
-// Todo: Where do these topics fit?
-/*
-Team discusses topics while the presenter summarizes the topics below:
-Chapter 3 Introduction to Ruby… how do we create non-objects in Ruby?
-Chapter 4 Introduction to Rails… how do we create a non-model-view-controller Rails application?
-Chapter 5 Advanced Rails… authentication? Is the Ruby/Rails framework opinionated? Is that good or bad?
-A.6 Git and Version Control and A.7 GitHub
-ORM (Object-Relational-Mapper) and NoSQL Databases
-*/

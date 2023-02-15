@@ -36,7 +36,7 @@ export const WebAssignmentPortfolioWithNodeJS = () => {
 	<li>Implement a basic Node.js and Express application utilizing Azure Node.js hosting</li>
 	<li>Update your basic Node.js and Express application so that it implements your Assignment Portfolio</li>
 	<li>Fully test your Node.js and Express implementation of Assignment Portfolio</li>
-	<li>Remove any previous versions of Assignment Portfolio from Azure</li>
+	<li>Compare your Node.js and Static Website versions of your assignment portfolio... which one will you keep?</li>
 </ol>
 
 <p>Be sure to complete the following tutorial on deploying Node.js on Azure. The code can be found in the {ExampleCode()} repository in the “web” section.</p>
