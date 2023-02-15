@@ -1,5 +1,5 @@
-import { makeSlideDeck, xyz_n_1of6, xyz_n_1of6_lists, xyz_n_3of6, xyz_n_4of6, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
-import { agendaSlide, basicSlideWithLogo, breakoutStandard, bulletListSlide, orderedListSlide, discussionBreakout, submissionPercentage, tPrework, tPreworkWithLogo,tQuiz } from './SLSprint00'
+import { makeSlideDeck, xyz_n_1of6, xyz_n_1of6_lists, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6_PAaA, xyz_n_6of6 } from './SL00000Sprint00'
+import { agendaSlide, basicSlideWithLogo, breakoutStandard, bulletListSlide, orderedListSlide, discussionBreakout, submissionPercentage, tPrework, tPreworkWithLogo } from './SLSprint00'
 
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02' 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
@@ -127,74 +127,19 @@ export const ics_3_4of6 = () => {
 const ics_3_5of6_PAaA = {
 	'prework': [
 		'Complete through activity 12 prior to next class', '',
-		`Focus on “${breakoutGateAndCircuitsName}” and “${breakoutGateAndCircuitsName}” chapters and lectures`,
 		'Be prepared for Lab and Programming Together as time allows',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
-		`Have we discussed “${breakoutGateAndCircuitsName}”?`,
-		'Any announcements or questions?' ],
+		'ECaMS Study Table open for business in Memorial Hall - Room 129... highly recommended!',
+		'Any other announcements or questions?' ],
 	'agenda':[
-		'Gates and Circuits Breakout (abbreviated)',
+		'Lab and Programming Together',
 		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		`Quiz ${sprint}` ]
 }
+export const ics_3_5of6 = () => { return xyz_n_5of6(sprint, ics_3_5of6_PAaA, ics_3_6of6_PAaA.prework, activityList) }
 
+// Session 6 of 6: Friday
+const ics_3_6of6_PAaA = xyz_n_6of6_PAaA('Complete through activity activity 13 and actively working on 14', sprint)
+export const ics_3_6of6 = () => { return  xyz_n_6of6(sprint, ics_3_6of6_PAaA, ics_4_1of6_prework_list, activityList) }
 
-
-const ics_3_4of6_prework_list = [
-	'Complete through activity 11 prior to next class', '',
-	'Focus on “Gates and Circuits” and “Computing Components” chapters and lectures',
-	'Be prepared for Lab and Programming Together**' ]
-const ics_3_4of6_agenda_list = [
-	'Gates and Circuits Breakout (abbreviated)',
-	'Prework for Next Class',
-	'Lab & Programming Together' ]
-export const ics_3_4of6x = () => {
-	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_4of6_prework_list, sprint, activityList) }
-	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
-		'No class Friday', 
-		'Recall ECaMS tutoring',
-		'No Computing Components Breakout this sprint (you are still responsible for the content)']) 
-	}
-	const agenda = () => { return agendaSlide(ics_3_4of6_agenda_list) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_5of6_prework_list, sprint, activityList) }
-	const breakout = () => { return breakoutGateAndCircuits() }
-
-	return makeSlideDeck([ announcements, prework, agenda, breakout, preworkNext ])
-}
-
-const ics_3_5of6_announcement_list = [
-	'Announcements', 
-	'No class Friday', 
-	`All sprint ${sprint} assignments are due Sunday!`]
-const ics_3_5of6_prework_list = [
-	'Prework For Today', 
-	'Complete through activity 13 prior to next class', '',
-	'Focus on reading assignments and associated lectures',
-	'Be prepared for Lab and Programming Together',
-	'Be prepared for Quiz 3' ]
-const ics_3_5of6_agenda_list = [
-	'Agenda', 
-	'Lab and Programming Together',
-	'Prework for Next Class',
-	'Quiz 3' ]
-export const ics_3_5of6 = () => {
-	const announcements =  () => { return tAnnouncementPreworkOrAgenda(ics_3_5of6_announcement_list) }
-	const prework = () => { return tAnnouncementPreworkOrAgenda(ics_3_5of6_prework_list, sprint, activityList) }
-	const agenda = () => { return tAnnouncementPreworkOrAgenda(ics_3_5of6_agenda_list) }
-
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_1of6_prework_list, sprint, activityList) }
-	const quiz = () => { return tQuiz(sprint) }
-
-	return makeSlideDeck([ announcements, prework, agenda, tLab, preworkNext, quiz ])
-}
-
-// No “ics_3_6of6...” prework or agenda structures as there is no class Friday due to Fall Break.
-export const ics_3_6of6 = () => {
-	const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
-		'No class', 
-		`All sprint ${sprint} assignments are due Sunday!`]) 
-	}
-
-	return [ announcements ]
-}
