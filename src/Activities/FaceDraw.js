@@ -68,7 +68,7 @@ mouth should be randomly smiling, frowning, or in-between. </p>
 	<li>{appProps.requirement1_1} and {appProps.requirement1_2}</li>
 	<li>Implements a Face class that includes member variables and getters/setters for width, height, x, y, and smiling status</li>
 	<li>Implements at least three constructors for Face including a default constructor</li>
-	<li>Implements toString() in the Face class so that each member variable in printed to the console window each time a Face is painted</li>
+	<li>Implements toString() in the Face class so that each member variable is printed to the console each time a Face is painted</li>
 	<li>Implements ArrayList called FaceList that includes 3 to 10 Faces</li>
 </ol>
 

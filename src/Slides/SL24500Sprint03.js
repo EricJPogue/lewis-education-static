@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6_PAaA, xyz_n_6of6 } from './SL00000Sprint00'
 
 import { makeSlideDeck } from './SL00000Sprint00'
 import { tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, submissionPercentage } from './SLSprint00'
@@ -134,3 +134,10 @@ const oop_3_5of6_PAaA = {
 		`${breakoutGUIsName} Breakout`,
 		'Lab and Programming Together as time allows' ]
 }
+export const oop_3_5of6 = () => { return xyz_n_5of6(sprint, oop_3_5of6_PAaA, oop_3_6of6_PAaA.prework, activityList) }
+
+// Session 6 of 6: Friday
+const oop_3_6of6_PAaA = xyz_n_6of6_PAaA('Complete through activity activity 14 and actively working on 15', sprint)
+export const oop_3_6of6 = () => { return  xyz_n_6of6(sprint, oop_3_6of6_PAaA, oop_4_1of6_PAaA.prework, activityList) }
+
+export const oop_4_1of6_PAaA = xyz_n_1of6_lists(sprint)
