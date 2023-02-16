@@ -8,8 +8,8 @@ export const AZURE_WEBSITE_ROUTE = 'azure-website'
 export const azureWebsiteLink = () => {return (<NavLink to={makeInternalURL(AZURE_WEBSITE_ROUTE)}>{NAME}</NavLink>)}
 export const azureWebsite = () => {
 	const azureStaticTemplate = () => {return externalLink('Azure static website template', 'https://github.com/EricPogueExampleCode-Web/azure-static-website-template')}
-	const azureNodeJSBasicTemplate = () => {return externalLink('Azure NodeJS basic template', 'EricPogueExampleCode-Web/node-js-express-and-azure-template')}
-	const azureNodeJSWithFetchTemplate = () => {return externalLink('Azure NodeJS with Fetch template', 'EricPogueExampleCode-Web/node-js-express-and-azure-template')}
+	const azureNodeJSBasicTemplate = () => {return externalLink('Azure NodeJS basic template', 'https://github.com/EricPogueExampleCode-Web/node-js-express-and-azure-template')}
+	const azureNodeJSWithFetchTemplate = () => {return externalLink('Azure NodeJS with Fetch template', 'https://github.com/EricPogueExampleCode-Web/node-js-express-and-azure-template')}
 	return ( <div>
 	<br />
 	<h4>{NAME}</h4>
