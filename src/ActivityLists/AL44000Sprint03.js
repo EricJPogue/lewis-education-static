@@ -31,6 +31,7 @@ export const al44000Sprint03 = () => {
 		{closing(sprint)}
 
 		<p>Programming Together: “Deploying Node.js on Microsoft Azure”</p>
+		{extras()}
 	</div> )
 }
 
@@ -58,6 +59,17 @@ export const list44000Sprint03 = (sprint) => {
 	</div> )
 }
 
+const extras = () => {
+	const whateverHappenedToRuby = () => externalLink('Whatever happened to Ruby?', 'https://www.infoworld.com/article/3687219/whatever-happened-to-ruby.html')
+	const introToReactTicTacToeTutorial = () => externalLink('Intro to React - Tic-Tac-Toe', 'https://reactjs.org/tutorial/tutorial.html')
+	return (<div>	
+		<p>Additional suggested activities:</p>
+		<ul style={{listStyleType:'square'}}>
+			<li>Read {whateverHappenedToRuby()}</li>
+			<li>If you are looking for an interesting challenge, complete {introToReactTicTacToeTutorial()}</li>
+		</ul>
+	</div>)
+}
 // Certified for SU22 (05/20/2022)
 
 // Certified for SP22 (01/29/2022)
