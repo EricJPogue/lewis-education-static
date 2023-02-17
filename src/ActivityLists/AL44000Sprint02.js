@@ -54,7 +54,7 @@ export const list44000Sprint02 = (sprint) => {
 
 // Certified for FA22 (08/27/2022)
 // Certified for SP23 (01/15/2023)
-// Todo: Add "Whatever Happened to Ruby" article. 
+// Todo: Add "Whatever Happened to Ruby" article currently in sprint 3. 
 // Todo: Consider adding lab 2 question relating to overcoming procrastination article. 
 // Todo: Consider adding CSS and JavaScript example after reviewing if they are already available. 
 // Todo: Review https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/

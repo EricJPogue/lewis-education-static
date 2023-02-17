@@ -62,19 +62,21 @@ export const list44000Sprint03 = (sprint) => {
 const extras = () => {
 	const whateverHappenedToRuby = () => externalLink('Whatever happened to Ruby?', 'https://www.infoworld.com/article/3687219/whatever-happened-to-ruby.html')
 	const introToReactTicTacToeTutorial = () => externalLink('Intro to React - Tic-Tac-Toe', 'https://reactjs.org/tutorial/tutorial.html')
-	const blackboardAssignments = () => externalLink('assignments', 'https://lewisuniversity.blackboard.com/ultra/courses/_195587_1/outline')
+	const imageMap = () => externalLink('Image Map Generator', 'https://www.image-map.net/')
 	return (<div>	
 		<p>Additional suggested activities:</p>
 		<ul style={{listStyleType:'square'}}>
+			<li>Review {imageMap()} </li>
 			<li>Read {whateverHappenedToRuby()}</li>
 			<li>If you are looking for an interesting challenge, complete {introToReactTicTacToeTutorial()}</li>
-			<li>Blackboard {blackboardAssignments()} </li>
+
 		</ul>
 	</div>)
 }
 // Certified for SU22 (05/20/2022)
 
 // Certified for SP22 (01/29/2022)
+// Todo: Update to reflect Zac’s fix (see related announcement). 
 // Todo: Move Whatever Happened to Ruby to earlier sprints.
 // Todo: Consider reviewing and enhancing Quiz 3.
 
