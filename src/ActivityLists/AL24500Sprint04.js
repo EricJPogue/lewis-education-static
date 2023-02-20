@@ -48,6 +48,27 @@ export const al24500Sprint04 = () => {
 	</div> )
 }
 
+export const list24500Sprint04 = (sprint) => {
+	const actionListenerPlus = () => { return internalLink('ActionListenerPlus', '/activity-oop/java-action-listeners') }
+	const mosaicLite = () => { return internalLink('Mosaic Lite', '/activity-oop/java-mosaic-lite')}
+	const shapeDrawPlus = () => { return internalLink('ShapeDraw Plus', '/activity-oop/java-ovaldraw-plus')}
+	return ( <div>
+		{activitiesListIntro(sprint)}
+		<ol>
+			{standardActivities(sprint, mosaicJavaLink(), oreillyPlaylistOOP())}
+			<li>Complete {mosaicLite()}{estimated('2 hours')}</li>
+			<li>Review {gUIsInJava()}</li>
+			<li>Complete {actionListenerPlus()}</li>
+
+			{initialPost(sprint)}
+			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 10 on Desktop Applications and review associated {learningJavaExampleCode()}</li>
+			<li>Within {oreillyPlaylistOOP()} review “Learning Java” chapter 6 on Error Handling and Logging</li>
+			<li>Analyze and test ShapeDraw which is located in our {ExampleCode()}</li>
+			<li>Complete {shapeDrawPlus()} by enhancing ShapeDraw (sometimes referred to as “OvalDraw”){estimated('2 hours')}</li>
+			{standardActivitiesClosing(sprint, mosaicJavaLink(), '6 hours')}
+		</ol> 
+	</div> )
+}
 // Todo: Review and consider updating OOP Programming Together tutorials. 
 // Todo: From ActionListenerPlus video remove date/sprint references
 
