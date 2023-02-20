@@ -50,3 +50,5 @@ export const al24500Sprint04 = () => {
 
 // Todo: Review and consider updating OOP Programming Together tutorials. 
 // Todo: From ActionListenerPlus video remove date/sprint references
+
+// Certified for SP22 (02/12/2022)
