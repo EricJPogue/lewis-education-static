@@ -1,6 +1,7 @@
 import { agendaSlide, basicSlideWithLogo, bulletListSlide, orderedListSlide, tPrework, tPreworkWithLogo } from './SLSprint00'
 import { makeSlideDeck } from './SL00000Sprint00'
 
+// BugBug: These are not the correct activity lists below.
 import { list49200Sprint01 } from '../ActivityLists/AL49200Sprint01'
 import { list49200Sprint02 } from '../ActivityLists/AL49200Sprint02'
 

@@ -10,10 +10,9 @@ import { classProductSprint2Link } from '../Activities/ClassProduct'
 
 import { HTMLW3C, CSSW3C, JavaScriptW3C } from '../DataAndAPIs/Links'
 
-// const cICDArticle = () => { return externalLink('What is CI/CD? Continuous integration and continuous delivery explained', 'https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html') }
 const jira = () => { return externalLink('Jira', 'https://www.atlassian.com/software/jira/guides/getting-started' )}
 const trello = () => { return externalLink('Trello', 'https://trello.com')}
-const lectureRecordingPlaylist = () => { return externalLink('lecture', 'https://lewisu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=50ad011a-766e-43e7-8ec4-ae2301373d46')}
+export const lectureRecordingPlaylist = () => { return externalLink('lecture', 'https://lewisu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=50ad011a-766e-43e7-8ec4-ae2301373d46')}
 
 export const al49200Sprint02 = () => {
 	const sprint = 2

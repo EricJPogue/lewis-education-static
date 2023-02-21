@@ -4,7 +4,7 @@ import { oreillyPlaylistSC } from '../DataAndAPIs/Links'
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint05'
 
-import { lectureRecordingPlaylist } from './AL49200Sprint04'
+import { lectureRecordingPlaylist } from './AL49200Sprint02'
 import { classProductSprint7Link } from '../Activities/ClassProduct'
 
 export const al49200Sprint07 = () => {
