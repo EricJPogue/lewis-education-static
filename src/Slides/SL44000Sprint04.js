@@ -38,9 +38,8 @@ const se_4_2of6_lists = {
 export const se_4_2of6 = () => {
 	const discussion4Breakout = () => { return discussionBreakout(sprint) } 
 	const programmingTogether = () => {
-		return bulletListSlide('Lab: Complete a draft of your Final Project Proposal', 
-			'Identify a presenter', 
-			'Complete a draft of your Final Project Proposal by:', [
+		return bulletListSlide('Lab & Programming Together', 
+			'Let’s commit to focusing on our Lab assignment by:', [
 			'Reviewing the Final Project Proposal activity in our sprint 5 activity list', 
 			'Complete a draft version of your team’s Final Project Proposal',
 			'Be ready for a brief report-out on your draft proposal with about 10 minutes left in class', 
@@ -55,7 +54,7 @@ export const se_4_2of6 = () => {
 // Session 3 of 6: Friday
 const se_4_3of6_lists = {
 	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
+		'TBD' ],
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,

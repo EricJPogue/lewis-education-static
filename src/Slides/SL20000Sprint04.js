@@ -26,12 +26,13 @@ export const ics_4_1of6 = () => { return xyz_n_1of6(sprint, ics_4_1of6_prework_l
 
 // Session 2 of 6: Wednesday
 const ics_4_2of6_lists = {
-	'announcements':[ 
-		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
+	'announcements':[ 
+		'Sprint 5 Planning will be Monday, March 13th',
+		'Last day to drop 16 week courses with a grade of “W” is March 24' ],
 	'agenda':[
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
