@@ -14,41 +14,42 @@ const sprint = 4
 const activityListPrevious = () => { return list44000Sprint03(sprint-1) }
 const activityList = () => { return list44000Sprint04(sprint) }
 
-// Session 1 of 6.
+// Session 1 of 6: Monday
 // Todo: Review Sprint 4 Session 1 (below) as it was fixed but not reviewed after the session.
 export const se_4_1of6_prework_list = xyz_n_1of6_prework_list(sprint)  
 const se_4_1of6_agenda_list = xyz_n_1of6_agenda_list(sprint)
 export const se_4_1of6 = () => { return xyz_n_1of6(sprint, se_4_1of6_prework_list, activityListPrevious, se_4_1of6_agenda_list, se_4_2of6_lists.prework, activityList) }
 
-// Session 2 of 6.
+// Session 2 of 6: Wednesday
 const se_4_2of6_lists = {
 	'announcements':[ 
-		'Your team’s Sprint 5 Planning will be Monday, October 24th',
-		'This planning session is required and in-person attendance**' ],
+		'Your team’s Sprint 5 Planning will be Monday, March 13th',
+		'**Each of the remaining sprint planning sessions require in-person attendance' ],
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
-		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
 		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		`Discussion Board ${sprint} as a scrum team`,
+		'Lab: Complete a draft of your Final Project Proposal' ]
 }
 export const se_4_2of6 = () => {
 	const discussion4Breakout = () => { return discussionBreakout(sprint) } 
 	const programmingTogether = () => {
-		return bulletListSlide('Lab & Programming Together', 
-			'Let’s commit to focusing on our Lab assignment by:', [
-			'Setting up a GitHub organization', 
-			'Setting up a GitHub repository and Azure static website to host the client',
-			'Setting up a GitHub repository and Azure Node.js website to host the server APIs', 
-			'Starting work on a “Hello World” type Node.js API' ])
+		return bulletListSlide('Lab: Complete a draft of your Final Project Proposal', 
+			'Identify a presenter', 
+			'Complete a draft of your Final Project Proposal by:', [
+			'Reviewing the Final Project Proposal activity in our sprint 5 activity list', 
+			'Complete a draft version of your team’s Final Project Proposal',
+			'Be ready for a brief report-out on your draft proposal with about 10 minutes left in class', 
+			'Consider the Lewis (ECaMS) “Cloud Billboard” product based on “Dogs, JavaScript & An API 🐶 Fetch, Promises & Async Await”' ])
 	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_3of6_lists.prework, sprint, activityList) }
 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_4_2of6_lists, sprint, activityList)
-	return completeDeck(slideDeck, [ discussion4Breakout, reviewDemoSchedule, preworkNext, programmingTogether ])
+	return completeDeck(slideDeck, [ reviewDemoSchedule, preworkNext, discussion4Breakout, programmingTogether ])
 }
 
 // Session 3 of 6: Friday
@@ -96,7 +97,7 @@ const se_4_4of6_lists = {
 	'announcements':[ 
 		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
 	'prework':[
-		'Complete through activity 10 and be working on activity 11', '',
+		'Complete through activity 8 and working on activity 9', '',
 		'Be prepared for a breakout session on “Software Testing: Test-Driven Development”' ],
 	'agenda':[
 		'“Software Testing: Test-Driven Development” breakout',
