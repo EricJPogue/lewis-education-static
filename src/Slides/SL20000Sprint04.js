@@ -1,5 +1,3 @@
-import { getClass } from '../DataAndAPIs/Classes'
-
 import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6, completeDeck, checklistAnnouncementsPreworkAndAgenda, tLab } from './SL00000Sprint00'
 
 import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule } from './SLSprint00'
@@ -76,21 +74,11 @@ const ics_4_3of6_lists = {
 export const ics_4_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_3of6_lists, sprint, activityList)
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:26 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:26 },
-				{ name: 'Reflection', due: 27, submitted: 27 }
-			])
-		} else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:24 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:27 },
-				{ name: 'Reflection', due: 27, submitted: 25 }
-			])
-		}
+		return submissionPercentage([
+			{ name: 'Discussion', due:14, submitted:13 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:14},
+			{ name: 'Reflection', due: 14, submitted: 13 }])
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {

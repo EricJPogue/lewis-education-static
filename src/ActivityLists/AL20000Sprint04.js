@@ -56,4 +56,5 @@ export const list20000Sprint04 = (sprint) => {
 
 // Certified for FA22 (10/06/2022)
 // Certified for SP22 (02/12/2022)
+// BugBug: Movie “Artificial Intelligence” up on the list so that it is before the breakout session which is on the first Wednesday.
 

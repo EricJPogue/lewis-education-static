@@ -53,12 +53,12 @@ export const se_4_2of6 = () => {
 
 // Session 3 of 6: Friday
 const se_4_3of6_lists = {
-	'announcements':[ 
-		'TBD' ],
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
 		'Those scheduled to demo please be a couple of minutes early to class' ],
+	'announcements':[ 
+		'Any announcements?' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
@@ -79,9 +79,7 @@ export const se_4_3of6 = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
 			'Fantastic submission percentage... how would we like to celebrate, food? ',
-			'Very nice work with GitHub Organizations... that will be something that future classes will thank you for',
-			'Assignments are not all graded... I still need to grade 4 labs, sorry?', 
-			'I agree that some of the lab 3 instructions were not very clear... I will work to improve that in the future' ])
+			'Assignments are not all graded... I still need to grade 4 labs, sorry?' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_4of6_lists.prework, sprint, activityList) }
@@ -93,11 +91,11 @@ export const se_4_3of6 = () => {
 // Session 4 of 6: Monday
 // Todo: Reduce prework to less than activity 10. 
 const se_4_4of6_lists = {
-	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
 	'prework':[
 		'Complete through activity 8 and working on activity 9', '',
 		'Be prepared for a breakout session on “Software Testing: Test-Driven Development”' ],
+	'announcements':[ 
+		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
 	'agenda':[
 		'“Software Testing: Test-Driven Development” breakout',
 		'Prework for Next Class',

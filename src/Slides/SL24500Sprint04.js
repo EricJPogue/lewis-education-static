@@ -1,4 +1,7 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
+
+import { submissionPercentage, orderedListSlide } from './SLSprint00'
+
 import { list24500Sprint03 } from '../ActivityLists/AL24500Sprint03'
 import { list24500Sprint04 } from '../ActivityLists/AL24500Sprint04'
 
@@ -35,4 +38,37 @@ const oop_4_3of6_PAaA = {
 		'TBD' ],
 	'agenda':[
 		`TBD` ]
+}
+
+export const oop_4_3of6 = () => {
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:17, submitted:17 },
+			{ name: 'Quiz', due:17, submitted:17 },
+			{ name: 'Lab', due:17, submitted:17},
+			{ name: 'Reflection', due: 17, submitted: 15 }])
+	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Fantastic submission percentage!',
+			'All assignments are graded and posted', 
+			'Can you see your scores?',
+			'Can you see the answers to all quiz questions?',
+			'Thank you for your reflection comments' ])
+	}
+	return xyz_n_3of6(sprint, oop_4_3of6_PAaA, oop_4_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+}
+
+// Session 4 of 6: Monday
+const oop_4_4of6_PAaA = {
+	'prework':[
+		'Complete through activity 9', '',
+		'Be prepared for a breakout session on “Learning Java: Desktop Applications”' ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		'“Learning Java: Desktop Applications” breakout',
+		'Prework for Next Class',
+		'Lab' ]
 }
