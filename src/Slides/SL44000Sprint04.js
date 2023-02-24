@@ -78,8 +78,10 @@ export const se_4_3of6 = () => {
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Fantastic submission percentage... how would we like to celebrate, food? ',
-			'Assignments are not all graded... I still need to grade 4 labs, sorry?' ])
+			'Fantastic submission percentage... donuts, pizza, or something else?',
+			'Assignments are not all graded... I still need to grade 4 labs, sorry?',
+			'Several requests for more class time to work with your teams',
+			'Lots of comments about enjoying working with your teams' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_4of6_lists.prework, sprint, activityList) }
