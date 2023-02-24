@@ -68,10 +68,10 @@ const se_4_3of6_lists = {
 export const se_4_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:14, submitted:14 },
-			{ name: 'Quiz', due:14, submitted:14 },
-			{ name: 'Lab', due:14, submitted:14 },
-			{ name: 'Reflection', due: 14, submitted: 14 }
+			{ name: 'Discussion', due:26, submitted:26 },
+			{ name: 'Quiz', due:26, submitted:26 },
+			{ name: 'Lab', due:26, submitted:26},
+			{ name: 'Reflection', due: 26, submitted: 26 }
 		])
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}

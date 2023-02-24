@@ -32,12 +32,16 @@ export const oop_4_2of6 = () => { return xyz_n_2of6(sprint, oop_4_2of6_PAaA, oop
 
 const oop_4_3of6_PAaA = {
 	'prework':[
-		'Complete through activity 6', '',
-		`Be prepared for team Discussion ${sprint} and Lab` ],
+		'Complete through activity 8', '',
+		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
+		'Those scheduled to demo please be a couple of minutes early to class' ],
 	'announcements':[ 
-		'TBD' ],
+		'Any announcements?' ],
 	'agenda':[
-		`TBD` ]
+			`Sprint ${sprint-1} Demos`,
+			`Sprint ${sprint-1} Retrospective`,
+			`Breakout for Sprint ${sprint-1} Retrospective`,
+			'Prework for Next Class' ]
 }
 
 export const oop_4_3of6 = () => {

@@ -89,3 +89,6 @@ Chapter 5 Advanced Rails… authentication? Is the Ruby/Rails framework opiniona
 A.6 Git and Version Control and A.7 GitHub
 ORM (Object-Relational-Mapper) and NoSQL Databases
 */
+
+// Todo: Consider adding image mapper: https://www.image-map.net/
+

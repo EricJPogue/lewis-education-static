@@ -77,6 +77,7 @@ export const list44000Sprint01 = (sprint) => {
 //     classes),
 // Todo: Consider updating Static Website and Node.js website assignments. The final Node.js Assignment Portfolio implementation 
 //     does not really make sense as it is slower than the Static Website.
+// Todo: Consider adding W3C Validator VS code add-in to several classes. 
 
 
 
