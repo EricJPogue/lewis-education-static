@@ -1,6 +1,6 @@
 import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
-
-import { submissionPercentage, orderedListSlide } from './SLSprint00'
+import { breakoutStandard, submissionPercentage, orderedListSlide, tPrework } from './SLSprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 
 import { list24500Sprint03 } from '../ActivityLists/AL24500Sprint03'
 import { list24500Sprint04 } from '../ActivityLists/AL24500Sprint04'
@@ -70,9 +70,36 @@ const oop_4_4of6_PAaA = {
 		'Complete through activity 9', '',
 		'Be prepared for a breakout session on “Learning Java: Desktop Applications”' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'I am worried about where we are as a class', 
+		'...I have decided to make myself available after class every Monday and Wednesday for at least 30 minutes' ],
 	'agenda':[
 		'“Learning Java: Desktop Applications” breakout',
 		'Prework for Next Class',
 		'Lab' ]
+}
+
+export const oop_4_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_4_4of6_PAaA, sprint, activityList)
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Graphical User Interfaces, Action Listeners, and Implementing Mosaic', 
+			'In this breakout session your team will review Mosaic Lite and Action ListenerPlus and suggest a design for Mosaic:', [
+			'Review Mosaic List', 
+			'Review Action Listener Plus',
+			'Review FaceDraw', 
+			'Suggest a design for Mosaic using UML to describe the relationships'
+		])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', oop_4_5of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ])
+}
+
+const oop_4_5of6_PAaA = {
+	'prework':[
+		'Complete through activity 10', '',
+		'Be prepared for Quiz 4' ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		'TBD' ]
 }

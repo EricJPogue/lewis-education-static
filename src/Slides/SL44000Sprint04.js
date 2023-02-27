@@ -101,6 +101,7 @@ const se_4_4of6_lists = {
 	'announcements':[ 
 		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
 	'agenda':[
+		'Sprint Progress Polling',
 		'“Software Testing: Test-Driven Development” breakout',
 		'Prework for Next Class',
 		'Lab' ]

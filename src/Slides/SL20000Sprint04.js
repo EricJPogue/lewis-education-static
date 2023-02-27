@@ -106,6 +106,7 @@ const ics_4_4of6_lists = {
 		'Focus on “Sequences, Selections, and Loops” and “Python Programming”',
 		'Be prepared for “Sequences, Selections, and Loops with Python Breakout”' ],
 	'agenda':[
+		'Sprint Progress Polling',
 		'Sequences, Selections, and Loops with Python Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
@@ -118,9 +119,9 @@ export const ics_4_4of6 = () => {
 			'In this breakout session we will demonstrate our mastery of Sequences, Selections, and Loops using our knowledge of Python:', [
 			'Sequence and selection “Numbering Systems with Python”', 
 			'Loops in “Numbering Systems with Python”', 
-			'Sequences in “Matchmaker Lite - Part 2”',
-			'Selections in “Matchmaker Lite - Part 2”',
-			'Repetition in “Matchmaker Lite - Part 2”... what is the relationship between Loops and Repetition?'
+			'Sequences in “Matchmaker Lite - Part 1 and Part 2”',
+			'Selections in “Matchmaker Lite - Part 1 and Part 2”',
+			'Repetition in “Matchmaker Lite - Part 1 and Part 2”... what is the relationship between Loops and Repetition?'
 		])
 	}
 	const programmingTogether = () => {

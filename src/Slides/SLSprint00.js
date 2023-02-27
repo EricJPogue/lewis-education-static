@@ -18,9 +18,9 @@ export const preflightChecklist = () => {
 		{renderLogo()}
 		{bulletListSlide(
 			'Preflight Checklist',
-			`In preparation for ${getClass().title}:`, [
+			`In preparation for our ${getClass().title} class please:`, [
 			'Sign into our Blackboard course shell',
-			'Sign into our Zoom session through the Zoom link in our Blackboard course shell',
+			'Sign into Zoom through the Zoom link in our Blackboard course shell',
 			'Mute your microphone and speakers as needed',
 			'Be prepared to share your computer screen',
 			'If you are remote, optionally leave your camera on to help make our class more interactive' ]
@@ -33,7 +33,6 @@ export const preflightChecklist = () => {
 			'Check camera, microphone, and speakers',
 			'Verify recording has started automatically' ]
 		)}
-		
 	</div> )
 }
 

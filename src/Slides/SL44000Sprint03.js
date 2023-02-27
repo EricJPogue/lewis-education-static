@@ -139,5 +139,5 @@ export const se_3_5of6 = () => { return xyz_n_5of6(sprint, se_3_5of6_PAaA, se_3_
 const se_3_6of6_PAaA = xyz_n_6of6_PAaA('Complete through activity activity 14 and actively working on 15', sprint)
 export const se_3_6of6 = () => { return  xyz_n_6of6(sprint, se_3_6of6_PAaA, se_4_1of6_prework_list, activityList) }
 
-
+// Todo: Update Lab 3 Question 3 to specifically ask for more detail. 
 
