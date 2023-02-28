@@ -64,4 +64,6 @@ making.</p>
 // Status: Signed off SP22.
 
 // Todo: Determine how to reusing and/or enhance Testing lecture.
-// Todo: Add Final Project proposals to assignments. 
+
+// Certified for SP22 (02/28/2022)
+// Todo: Update quiz 5... it sucks.

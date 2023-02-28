@@ -66,8 +66,5 @@ export const list44000Sprint05 = (sprint) => {
 // https://www.youtube.com/watch?v=SUu6cmcC-3A
 // https://developers.sap.com/tutorials/webide-github-creating-org.html 
 
-// Fix Quiz Question... not certain which quiz:
-// - Which type of testing tests the system to check that changes have not 'broken' previously working code?
-// - Both re-engineering and refactoring involve adding functionality
-// - Which of the following tests is not independent and repeatable?
-// - Which of the following statement is FALSE as they related to software maintenance costs increasing 
+
+// Certified for SP22 (02/28/2022)
