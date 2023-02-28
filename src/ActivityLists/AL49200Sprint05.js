@@ -6,6 +6,7 @@ import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkA
 
 import { lectureRecordingPlaylist } from './AL49200Sprint02'
 import { classProductSprint5Link } from '../Activities/ClassProduct'
+import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
 
 export const al49200Sprint05 = () => {
 	const sprint = 5
@@ -41,8 +42,10 @@ than being “almost done” with something great.</p>
 	{StandardActivitiesWithLinkAndSprint(sprint, classProductSprint5Link(), oreillyPlaylistSC(), true)}
 	<li>Review our sprint {sprint} planning {lectureRecordingPlaylist()}</li>
 	<li>Within {oreillyPlaylistSC()} review “Essential Scrum” looking for topics that your team can focus on improving</li>
-
+	<li>Review {capacityCommittedEffortDeliveredLink()}</li>
+	
 	{InitialPost(sprint)}
+	<li>Complete {capacityCommittedEffortDeliveredLink()}</li>
 	{StandardActivitiesClosingWithLinkAndSprint(sprint, classProductSprint5Link(),'14 hours per team member')}
 </ol>
 {Closing()}

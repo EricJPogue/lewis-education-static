@@ -4,6 +4,7 @@ import { learningObjectivesIntro, activitiesListIntro, standardActivities, initi
 
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { finalProjectSprint5Link } from '../Activities/FinalProject'
+import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
 
 import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
 
@@ -33,6 +34,7 @@ export const al44000Sprint05 = () => {
 
 export const list44000Sprint05 = (sprint) => {
 	const softwareMaintenanceAndSupport = () => { return externalLink('Software Maintenance and Support', 'https://lewiseducation.blob.core.windows.net/software-engineering/software-maintenance-and-support.mp4') }
+	const agileAlliance = () => { return externalLink('Agile Alliance', 'https://www.agilealliance.org/agile-essentials/')}
 
 	return ( <div>
 		{activitiesListIntro(sprint)}
@@ -41,11 +43,13 @@ export const list44000Sprint05 = (sprint) => {
 			<li>Start working on {finalProjectSprint5Link()}</li>
 			<li>Read Chapter 9 of Fox on Software Maintenance</li>
 			<li>Review {softwareMaintenanceAndSupport()} lecture</li>
-			<li>Review <a href='https://www.agilealliance.org/agile-essentials/' target='_blank' rel='noopener noreferrer'>Agile Alliance</a> by analyzing “Agile 101” and reviewing the “Agile Glossary”</li>
+			<li>Review {capacityCommittedEffortDeliveredLink()}</li>
 
 			{initialPost(sprint)}
-			<li>Complete {finalProjectProposalLink()}{estimated('4 hours')}</li>
-			{standardActivitiesClosing(sprint, finalProjectSprint5Link(), '6 hours')}
+			<li>Review {agileAlliance()} by analyzing “Agile 101” and reviewing the “Agile Glossary”</li>
+			<li>Complete {finalProjectProposalLink()}{estimated('2 hours per team member')}</li>
+			<li>Complete {capacityCommittedEffortDeliveredLink()}</li>
+			{standardActivitiesClosing(sprint, finalProjectSprint5Link(), '6 hours per team member')}
 		</ol>
 	</div> )
 }
