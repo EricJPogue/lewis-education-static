@@ -99,7 +99,7 @@ const se_4_4of6_lists = {
 		'Complete through activity 8 and working on activity 9', '',
 		'Be prepared for a breakout session on “Software Testing: Test-Driven Development”' ],
 	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th' ],
+		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, March 13th' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'“Software Testing: Test-Driven Development” breakout',
@@ -126,15 +126,15 @@ export const se_4_4of6 = () => {
 
 // Session 5 of 6: Wednesday
 const se_4_5of6_lists = {
-	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th',
-		'... and there will be pizza!', '',
-		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 10 and be working on activity 11', '',
 		'Be prepared for Quiz 4' ],
+	'announcements':[ 
+		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, March 13th', '',
+		`All sprint ${sprint} assignments due Sunday, March 12th!` ],
 	'agenda':[
 		'Backlog Grooming in Preparation for Sprint 5 Planning',
+		'Lab & Programming Together', 
 		'Prework for Next Class',
 		'Quiz 4' ]
 }
@@ -144,20 +144,22 @@ export const se_4_5of6 = () => {
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_6of6_lists.prework, sprint, activityList) }
 	const quiz = () => { return tQuiz(sprint) }
 
-	return completeDeck(slideDeck, [ breakout, preworkNext, quiz ])
+	return completeDeck(slideDeck, [ breakout, tLab, preworkNext, quiz ])
 }
 
 // Session 6 of 6: Friday
 const se_4_6of6_lists = {
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday, March 12th!`, '',
+		'Be prepared for Backlog Grooming in Preparation for Sprint 5 Planning',
+		'Be prepared for Lab & Programming Together' ],
 	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, October 24th',
+		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, March 13th',
 		'... and there will be pizza!', '',
 		`All sprint ${sprint} assignments due Sunday!` ],
-	'prework':[
-		`All sprint ${sprint} assignments due Sunday!`, '',
-		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
 		'Sprint Progress Polling',
+		'Backlog Grooming in Preparation for Sprint 5 Planning',
 		'Prework for Next Class',
 		'Lab and Programming Together' ]
 }

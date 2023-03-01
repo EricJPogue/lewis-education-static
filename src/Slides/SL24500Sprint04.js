@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6, xyz_n_5of6 } from './SL00000Sprint00'
 import { breakoutStandard, submissionPercentage, orderedListSlide, tPrework } from './SLSprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 
@@ -77,7 +77,6 @@ const oop_4_4of6_PAaA = {
 		'Prework for Next Class',
 		'Lab' ]
 }
-
 export const oop_4_4of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(oop_4_4of6_PAaA, sprint, activityList)
 	const breakout = () => { 
@@ -99,7 +98,26 @@ const oop_4_5of6_PAaA = {
 		'Complete through activity 10', '',
 		'Be prepared for Quiz 4' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		`All sprint ${sprint} assignments are due Sunday, March 12th!` ],
 	'agenda':[
-		'TBD' ]
+		'Sprint Progress Polling',
+		'Lab & Programming Together',
+		`Quiz ${sprint}` ]
+}
+export const oop_4_5of6 = () => {
+	return xyz_n_5of6(sprint, oop_4_5of6_PAaA, oop_4_6of6_PAaA.prework, activityList)
+}
+
+const oop_4_6of6_PAaA = {
+	'prework': [
+		'Complete through activity 12', '',
+		'Be prepared for Lab & Programming Together',
+		`All sprint ${sprint} assignments are due Sunday, March 12th!` ],
+	'announcements':[
+		`Any announcements?`],
+	'agenda':[
+		`Final sprint ${sprint} activity list and assignment Q&A`,
+		`Quiz ${sprint} “Phone a Friend”`,
+		'Prework for Next Class', 
+		'Lab']
 }

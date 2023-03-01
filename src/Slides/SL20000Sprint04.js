@@ -140,12 +140,12 @@ export const ics_4_4of6 = () => {
 
 // Session 5 of 6: Wednesday
 const ics_4_5of6_lists = {
-	'announcements':[ 
-		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 12 and working on activity 13 prior to next class', '',
 		'Be prepared for “Computer Science Illuminated” Artificial Intelligence Breakout',
 		'Be prepared for Quiz 4' ],
+	'announcements':[ 
+		'Any announcements?' ],
 	'agenda':[
 		'“Computer Science Illuminated” Artificial Intelligence Breakout',
 		'Prework for Next Class',
