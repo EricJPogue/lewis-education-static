@@ -154,9 +154,8 @@ const se_4_6of6_lists = {
 		'Be prepared for Backlog Grooming in Preparation for Sprint 5 Planning',
 		'Be prepared for Lab & Programming Together' ],
 	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, March 13th',
-		'... and there will be pizza!', '',
-		`All sprint ${sprint} assignments due Sunday!` ],
+		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, March 13th', '',
+		`All sprint ${sprint} assignments due Sunday, March 12th!` ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Backlog Grooming in Preparation for Sprint 5 Planning',
@@ -165,8 +164,9 @@ const se_4_6of6_lists = {
 }
 export const se_4_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_4_6of6_lists, sprint, activityList)
+	const breakout = () => { return backlogGrooming(sprint+1) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_1of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ preworkNext, tLab ])
+	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ])
 }
 
