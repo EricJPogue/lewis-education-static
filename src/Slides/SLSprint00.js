@@ -290,8 +290,6 @@ export const discussionBreakout6 = () => {
 	</div> )
 }
 
-
-
 // Depreciated discussionBreakout... eventually replace discussionBreakout with tDiscussionBreakout.
 export const tDiscussionBreakout = (sprint) => { return discussionBreakout(sprint) }
 export const discussionBreakout = (sprint) => {
@@ -401,4 +399,14 @@ export const retrospectiveBreakout = (sprint) => {
 			`How does your team feel about sprint ${sprint-1} now that it is over`,
 			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
 			'What improvements should we make as a class, team, or individual going forward' ])
+}
+
+export const scrumProcess = () => {
+	const styleCreditFooter = { fontSize:20, textAlign:"center" }
+	return ( <div> 
+		<h1 style={title}>Scrum Process</h1>
+		<img src='https://upload.wikimedia.org/wikipedia/commons/d/df/Scrum_Framework.png' alt='scrum process' />
+		<p style={styleCreditFooter}>Credit {externalLink('Dr Ian Mitchell', 'https://commons.wikimedia.org/w/index.php?curid=44894952')} 
+		license {externalLink('CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0')} </p>
+	</div> )
 }

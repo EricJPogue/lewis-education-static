@@ -7,7 +7,7 @@ import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, re
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 
-import { se_5_1of6_lists } from './SL44000Sprint05'
+import { se_5_1of6_PAaA } from './SL44000Sprint05'
 
 // Sprint 4 Software Engineering (SE) values.
 const sprint = 4
@@ -165,7 +165,7 @@ const se_4_6of6_lists = {
 export const se_4_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_4_6of6_lists, sprint, activityList)
 	const breakout = () => { return backlogGrooming(sprint+1) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_1of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_1of6_PAaA.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ])
 }

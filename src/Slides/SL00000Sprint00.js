@@ -82,7 +82,7 @@ export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList
 			return substituteSprintPlanning
 		} else {
 			return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
-				'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
+				'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
 				'We will complete our scrum team Discussion Board breakout session on Wednesday',
 				`We will have sprint ${sprint-1} Demos and Retrospective on Friday` ])
 		}
