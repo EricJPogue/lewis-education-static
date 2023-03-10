@@ -1,15 +1,54 @@
 // BugBug: Replace this file with the code in SL44000Sprint05A.js. 
 
-import React from 'react'
-import { renderLogo, renderHeaderAndOrderedList, renderHeader, topic, basicSlideWithTitle } from './SL00000'
-import { preflightChecklist, instructorChecklist, endOfSession } from './Slide'
-import { breakoutMaintenanceAndSupport } from './Breakout'
+import { xyz_n_1of6_lists, xyz_n_1of6 /*, tLab */} from './SL00000Sprint00'
+
+/*
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
+import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
+
+import { submissionPercentage, retrospectiveIntroduction, orderedListSlide, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
+
+import { breakoutStandard } from './SLSprint00'
+import { tQuiz } from './SLSprint00'
+
+import { se_6_1of6_lists } from './SL44000Sprint06'
 
 
+*/ 
+
+import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
+import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
+
+// Sprint 5 Software Engineering (SE) values.
+const sprint = 5
+const activityListPrevious = () => { return list44000Sprint04(sprint-1) }
+const activityList = () => { return list44000Sprint05(sprint) }
+
+// SE Sprint 5 session 1 of 6: Monday
+export const se_5_1of6_lists = xyz_n_1of6_lists(sprint)
+export const se_5_1of6 = () => { return xyz_n_1of6(sprint, se_5_1of6_lists.prework, activityListPrevious, se_5_1of6_lists.agenda, se_5_2of6_lists.prework, activityList) }
 
 
+// SE Sprint 5 session 2 of 6: Wednesday
+const se_5_2of6_lists = {
+	'announcements':[ 
+		'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
+		'Any other announcements?' ],
+	'prework':[
+		'Complete through activity 5 prior to next class', '',
+		`Be prepared Discussion Board ${sprint}`,
+		'Be prepared for Sprint Planning (continued)' ],
+	'agenda':[
+		`Discussion Board ${sprint} as a scrum team`,
+		'Confirm no Demos Schedule for Next Class',
+		'Prework for Next Class',
+		'Review Friday’s Demo Schedule',
+		'Lab & Programming Together' ]
+}
 
+export const testFunction = () => { }
 
+/*
 // BugBug: From last semester below.
 // Sprint 5 Session 3 of 4
 export const SD44000_5_3_of_4_ROUTE = '44000-5-3-of-4'
@@ -74,3 +113,4 @@ const agendaFooter = () => {
 }
 
 
+*/

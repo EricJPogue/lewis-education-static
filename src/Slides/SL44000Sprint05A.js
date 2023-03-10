@@ -1,6 +1,6 @@
 // BugBug: Replace and remove SL44000Sprint05.js with the code in this file. 
 
-import { xyz_n_1of6_lists, xyz_n_1of6, tLab } from './SL00000Sprint00'
+import { /*xyz_n_1of6_lists, xyz_n_1of6,*/ tLab } from './SL00000Sprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
 import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
@@ -12,17 +12,17 @@ import { tQuiz } from './SLSprint00'
 
 import { se_6_1of6_lists } from './SL44000Sprint06'
 
-import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
+// import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 
 // Sprint 5 Software Engineering (SE) values.
 const sprint = 5
-const activityListPrevious = () => { return list44000Sprint04(sprint-1) }
+//const activityListPrevious = () => { return list44000Sprint04(sprint-1) }
 const activityList = () => { return list44000Sprint05(sprint) }
 
 // SE Sprint 5 session 1 of 6: Monday
-export const se_5_1of6_lists = xyz_n_1of6_lists(sprint)
-export const se_5_1of6 = () => { return xyz_n_1of6(sprint, se_5_1of6_lists.prework, activityListPrevious, se_5_1of6_lists.agenda, se_5_2of6_lists.prework, activityList) }
+//export const se_5_1of6_lists = xyz_n_1of6_lists(sprint)
+//export const se_5_1of6 = () => { return xyz_n_1of6(sprint, se_5_1of6_lists.prework, activityListPrevious, se_5_1of6_lists.agenda, se_5_2of6_lists.prework, activityList) }
 
 // SE Sprint 5 session 2 of 6: Wednesday
 const se_5_2of6_lists = {

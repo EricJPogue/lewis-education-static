@@ -60,11 +60,11 @@ export const xyz_n_1of6_prework_list = (sprint) => {
 
 export const xyz_n_1of6_lists = (sprint) => {
 	return {
-		'announcements':[ 
-			`${sprint} starts now.` ],
 		'prework':[ 
 			'Everything is due Sunday!', '',
 			`Be prepared for Sprint ${sprint} Planning` ],
+		'announcements':[ 
+			`${sprint} starts now.` ],
 		'agenda':[ 
 			`Sprint ${sprint} Planning`,
 			`Sprint ${sprint} Planning Breakout`,

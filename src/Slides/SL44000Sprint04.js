@@ -7,7 +7,7 @@ import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, re
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 
-import { se_5_1of6_lists } from './SL44000Sprint05A'
+import { se_5_1of6_lists } from './SL44000Sprint05'
 
 // Sprint 4 Software Engineering (SE) values.
 const sprint = 4
