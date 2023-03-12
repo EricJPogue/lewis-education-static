@@ -72,5 +72,6 @@ export const list24500Sprint04 = (sprint) => {
 // Todo: Review and consider updating OOP Programming Together tutorials. 
 // Todo: From ActionListenerPlus video remove date/sprint references
 
-// Certified for SP22 (02/12/2022)
+// Certified for SP23 (02/28/2023)
 // Todo: Update ActionListenerPlus
+// Todo: Fix Quiz 4... is sucks!

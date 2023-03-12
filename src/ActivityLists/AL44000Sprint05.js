@@ -22,7 +22,7 @@ export const al44000Sprint05 = () => {
 		<ul style={{ listStyleType: 'square' }}>
 			<li>Successfully develop you team’s final project proposal</li>
 			<li>Utilize Epics and Stories to create a product backlog</li>
-			<li>Setup our multiple Saas final project environments</li>
+			<li>Setup your multiple Saas final project environments</li>
 			<li>Explain why change is inevitable for software systems and describe the processes of software evolution</li>
 			<li>Assess whether a legacy system should be scrapped, maintained, re-engineered or replaced</li>
 		</ul>
@@ -47,7 +47,7 @@ export const list44000Sprint05 = (sprint) => {
 
 			{initialPost(sprint)}
 			<li>Review {agileAlliance()} by analyzing “Agile 101” and reviewing the “Agile Glossary”</li>
-			<li>Complete {finalProjectProposalLink()}{estimated('2 hours per team member')}</li>
+			<li>Update and finalize your team’s {finalProjectProposalLink()}{estimated('2 hours per team member')}</li>
 			<li>Complete {capacityCommittedEffortDeliveredLink()}</li>
 			{standardActivitiesClosing(sprint, finalProjectSprint5Link(), '6 hours per team member')}
 		</ol>
@@ -71,4 +71,5 @@ export const list44000Sprint05 = (sprint) => {
 // https://developers.sap.com/tutorials/webide-github-creating-org.html 
 
 
-// Certified for SP22 (02/28/2022)
+// Certified for SP23 (02/28/2023)
+// Todo: Move capacityCommittedEffortDeliveredLink() to after finalProjectSprint5Link() like Software Systems Capstone.

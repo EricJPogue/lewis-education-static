@@ -9,7 +9,6 @@ import { basicSlide } from './SLSprint00'
 import { makeSlideDeck } from './SL00000Sprint00'
 import { scrumProcess } from './SLSprint00'
 
-
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 
@@ -101,7 +100,6 @@ export const se_5_1of6 = () => {
 	return makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, preworkNext, 
 		intro, scrumProcess, prioritiesAndRoles, done, scrumProcess, productBacklogGrooming, scrumProcess, planning ])
 }
-
 
 // Session 2 of 6: Wednesday
 const se_5_2of6_PAaA = {

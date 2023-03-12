@@ -50,7 +50,8 @@ export const list20000Sprint05 = (sprint) => {
 }
 
 // Certified for FA22 (10/21/2022)
-// Certified for SP22 (02/28/2022)
+
+// Certified for SP23 (02/28/2023)
 
 
 
