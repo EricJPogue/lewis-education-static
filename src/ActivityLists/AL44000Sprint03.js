@@ -91,4 +91,6 @@ ORM (Object-Relational-Mapper) and NoSQL Databases
 */
 
 // Todo: Consider adding image mapper: https://www.image-map.net/
+// Todo: Consider moving  some of the Waterfall Project Management video and assignment from Sprint 5 to sprint 3.
+// Todo: Consider moving something related to “Dogs, JavaScript & An API 🐶 Fetch, Promises & Async Await” from sprint 4 to sprint 3
 

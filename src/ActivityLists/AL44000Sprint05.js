@@ -20,8 +20,8 @@ export const al44000Sprint05 = () => {
 		{finalProjectsAndMoreResponsibility()}
 		{learningObjectivesIntro(sprint)}
 		<ul style={{ listStyleType: 'square' }}>
-			<li>Successfully develop you team’s final project proposal</li>
-			<li>Utilize Epics and Stories to create a product backlog</li>
+			<li>Finalize and publish your team’s final project proposal</li>
+			<li>Utilize Stories to create a product backlog and sprint backlog</li>
 			<li>Setup your multiple Saas final project environments</li>
 			<li>Explain why change is inevitable for software systems and describe the processes of software evolution</li>
 			<li>Assess whether a legacy system should be scrapped, maintained, re-engineered or replaced</li>
