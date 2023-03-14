@@ -38,8 +38,6 @@ import { se_5_1of6 } from './SL44000Sprint05'
 
 import { /*se_5_1of6,*/ se_5_2of6, se_5_3of6, se_5_4of6, se_5_5of6, se_5_6of6 } from './SL44000Sprint05A'
 
-
-
 import { se_6_1of6, se_6_2of6, se_6_3of6, se_6_4of6, se_6_5of6, se_6_6of6 } from './SL44000Sprint06'
 import { se_7_1of6, se_7_2of6, se_7_3of6, se_7_4of6, se_7_5of6, se_7_6of6 } from './SL44000Sprint07'
 import { se_8_1of6, se_8_2of6, se_8_3of6, se_8_4of6, se_8_5of6, se_8_6of6, se_8_7of6 } from './SL44000Sprint08'
@@ -48,6 +46,7 @@ import { ssc_1_1of4, ssc_1_2of4, ssc_1_3of4, ssc_1_4of4 } from './SL49200Sprint0
 import { ssc_2_1of4, ssc_2_3of4 } from './SL49200Sprint02'
 import { ssc_3_1of4 } from './SL49200Sprint03'
 import { ssc_4_1of4 } from './SL49200Sprint04'
+import { ssc_5_1of4 } from './SL49200Sprint05'
 
 // Routing constants are defined by the class number followed by the sprint number and session. Note that sessions are
 // identified by the session number without consideration for missed classes. For example a week 2 Friday session for a 
@@ -289,8 +288,8 @@ const sprint3Router = (route) => {
 		case '49200-2-4': return ssc_2_3of4()
 
 		case '49200-3-1': return ssc_3_1of4()
-
 		case '49200-4-1': return ssc_4_1of4()
+		case '49200-5-1': return ssc_5_1of4()
 
 		default: return null
 	}

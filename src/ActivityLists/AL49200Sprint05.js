@@ -35,6 +35,13 @@ export const al49200Sprint05 = () => {
 			<li>Master sprint reviews (demos) and sprint retrospectives as you complete them for sprint {sprint-1}</li>
 		</ul>
 
+		{list49200Sprint05(sprint)}
+		{closing(sprint)}
+	</div> )
+}
+
+export const list49200Sprint05 = (sprint) => {
+	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, classProductSprint5Link(), oreillyPlaylistSC(), false)}
@@ -46,9 +53,11 @@ export const al49200Sprint05 = () => {
 			<li>Complete {classProductSprint5Link()}{estimated('14 hours per team member')} </li>
 			{standardActivitiesClosing(sprint, capacityCommittedEffortDeliveredLink(),'')}
 		</ol>
-		{closing(sprint)}
 	</div> )
 }
+
+
+
 // Certified for SP23 (03/12/2023)
 
 
