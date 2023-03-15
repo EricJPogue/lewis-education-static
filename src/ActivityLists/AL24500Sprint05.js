@@ -61,6 +61,30 @@ making.</p>
 </div> )
 }
 
+export const list24500Sprint05 = (sprint) => {
+	const softwareTesting = () => { return internalLink('Software Testing', '/activity-oop/java-testing') }
+	return ( <div>
+		{ActivitiesListIntro(sprint)}
+		<ol>
+			{StandardActivitiesWithLinkAndSprint(sprint, swissArmyKnifeLink(), oreillyPlaylistOOP())}
+			<li>Start working on {finalProjectProposalLink()}</li>
+			<li>Review {softwareTesting()} lecture</li>
+			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 11 on Networking and I/O and review associated {learningJavaExampleCode()}</li>
+			<li>Complete {htmlLink()} - Part 1</li>
+			<li>Complete {azureWebsiteLink()}{estimated('2 hours')}</li>
+
+			{InitialPost()}	
+			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 12 on Programming the Web</li>
+			<li>Read {jsonArticle()} and complete the W3C {jsonW3CTutorial()}</li>
+			<li>Create an Azure website to host globally accessible JSON files</li>
+			<li>Complete {finalProjectProposalLink()}{estimated('2 hours')}</li>
+			{StandardActivitiesClosingWithLinkAndSprint(sprint, swissArmyKnifeLink(), '8 hours')}
+		</ol>
+	</div> )
+}
+
+
+
 // Status: Signed off SP22.
 
 // Todo: Determine how to reusing and/or enhance Testing lecture.

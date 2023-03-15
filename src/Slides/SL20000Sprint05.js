@@ -21,27 +21,34 @@ const activityList = () => { return list20000Sprint05(sprint) }
 
 // Sprint 5 session 1 of 6: Monday
 export const ics_5_1of6_lists = xyz_n_1of6_lists(sprint)
-export const ics_5_1of6 = () => { return xyz_n_1of6(sprint, ics_5_1of6_lists.prework, activityListPrevious, ics_5_1of6_lists.agenda, ics_5_2of6_lists.prework, activityList) }
+export const ics_5_1of6 = () => { return xyz_n_1of6(sprint, ics_5_1of6_lists.prework, activityListPrevious, ics_5_1of6_lists.agenda, ics_5_2of6_PAaA.prework, activityList) }
 
 // Sprint 5 session 2 of 6: Wednesday
-const ics_5_2of6_lists = {
-	'announcements':[ 
-		'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
-		'Any other announcements?' ],
+
+const ics_5_2of6_PAaA = {
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
+	'announcements':[ 
+		'What is the last day to withdraw from Spring, 2023 16-week classes with a grade of “W”' ],
 	'agenda':[
 		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
 		'Prework for Next Class',
-		'Review Friday’s Demo Schedule',
 		'Lab & Programming Together' ]
 }
 export const ics_5_2of6 = () => {
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_2of6_lists, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_2of6_PAaA, sprint, activityList)
+	const theSocialDilemma = () => {
+		return bulletListSlide('Technology Business Models', 
+			'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models', [
+			'YouTube',
+			'Eric’s Trip to Google',
+			'The Social Dilemma',
+			'Technology Business Models' ])
+	 }
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_3of6_lists.prework, sprint, activityList) }
 	const reviewDemoSchedule = () => {
@@ -54,7 +61,7 @@ export const ics_5_2of6 = () => {
 		)
 	}
 
-	return completeDeck(slideDeck, [ discussionBreakout, preworkNext, reviewDemoSchedule, tLab ])
+	return completeDeck(slideDeck, [ theSocialDilemma, discussionBreakout, preworkNext, reviewDemoSchedule, tLab ])
 }
 
 // Sprint 5 session 3 of 6: Friday
