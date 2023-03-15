@@ -7,7 +7,9 @@ import { basicSlideWithLogo } from './SLSprint00'
 import { agendaSlide } from './SLSprint00'
 import { basicSlide } from './SLSprint00'
 import { makeSlideDeck } from './SL00000Sprint00'
-import { scrumProcess } from './SLSprint00'
+
+import { insertInto, sprintPlanningSlideDeck } from './SLSprintPlanning'
+import { xyz_n_2of6 } from './SL00000Sprint00'
 
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
@@ -50,59 +52,36 @@ export const se_5_1of6 = () => {
 			`No discussion or breakout today so that we can focus on your Team’s Sprint ${sprint} planning` ]
 		)
 	}
-	const intro = () => {
-		return orderedListSlide('Sprint Planning Goal & Steps', 
-			`Each team member will **request** and commit to multiple User Stories that have a total story point 
-			estimate approximately equal to their sprint ${sprint} capacity by utilizing the following steps:`, [
-				'Priorities and Roles',
-				'“Done”',
-				`Product Backlog Grooming`, 
-				`Sprint ${sprint} Planning` ]
-		)
-	}
-	const prioritiesAndRoles = () => {
-		return orderedListSlide('Step 1: Priorities and Roles', 
-			'Scrum priorities and associated roles include:', [
-				'Customer & Product Owner',
-				'Technology & Architect (optional)',
-				'Process & Scrum Master' ])
-	} 
-	const done = () => {
-		return orderedListSlide('Step 2: “Done”', 
-			'Update your team’s definition of “Done” by:', [
-				'Verifying your definition of Done includes that stories are deployed and available to Demo in production',
-				'Including at least one team specific item (i.e. “Demoed to Product Owner” or “Test in production”)',
-				'Document your definition of Done by creating a “done.md” file in the root of your product repository' ])
-	} 
-	const productBacklogGrooming = () => {
-		return orderedListSlide('Step 3: Product Backlog Grooming', 
-			'Product Owner leads your team’s Product Backlog Grooming of stories so that the backlog includes:', [
-				'Permanent unique identifiers for each story',
-				'Only valid stories',
-				'Only a “small” percentage of spikes',
-				'Story point estimates for each story based on “Done” and assuming that 1 story point ~ 1 hour effort',
-				'Updated or split stories for any story that is too large to complete in a single sprint',
-				'Force ranked stories',
-				`More estimated stories than your team can get Done in sprint ${sprint}` ])
-	}
-	const planning = () => {
-		return orderedListSlide('Step 4: Sprint Planning', 
-			'Create your team’s Sprint Backlog by:', [
-				'Team members requesting highest priority stories', 
-				`Product Owner **Moving** requested highest priority stories to the Sprint ${sprint} Backlog`,
-				'Assigning each story to a **single** team member',
-				'Maintaining the force ranking of stories as they are moved to the Sprint Backlog',
-				`Creating the team’s **immutable** Sprint ${sprint} Backlog`,
-				'Documenting the Sprint Backlog including team capacity plus stories and story points committed',
-				'Making commitments while recalling that it is okay to be wrong, but not okay to be ambiguous' ])
-	}
 
-	return makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, preworkNext, 
-		intro, scrumProcess, prioritiesAndRoles, done, scrumProcess, productBacklogGrooming, scrumProcess, planning ])
+	const slideDeck = makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, preworkNext ])
+	const slideDeckWithSprintPlanning = insertInto(slideDeck, sprintPlanningSlideDeck(sprint), 8)
+	return slideDeckWithSprintPlanning
 }
 
 // Session 2 of 6: Wednesday
 const se_5_2of6_PAaA = {
+	'prework':[
+		'Complete through activity 5 prior to next class', '',
+		`Be prepared Discussion Board ${sprint}`,
+		'Be prepared for Sprint Planning (continued)' ],
+	'announcements':[ 
+		'What is the last day to withdraw from Spring, 2023 16-week classes with a grade of “W”' ],
+	'agenda':[
+		`Discussion Board ${sprint} as a scrum team`,
+		'Confirm Demos Schedule for Next Class',
+		'Prework for Next Class',
+		'Review Friday’s Demo Schedule',
+		'Lab & Programming Together' ]
+}
+
+export const se_5_2of6 = () => {
+	const slideDeck = xyz_n_2of6(sprint, se_5_2of6_PAaA, se_5_3of6_PAaA.prework, activityList)
+	const slideDeckWithSprintPlanning = insertInto(slideDeck, sprintPlanningSlideDeck(sprint), 8)
+	return slideDeckWithSprintPlanning
+}
+
+// Session 3 of 6: Friday
+const se_5_3of6_PAaA = {
 	'announcements':[ 
 		'What is the last day to withdraw from Spring, 2023 16-week classes with a grade of “W”' ],
 	'prework':[
@@ -111,10 +90,15 @@ const se_5_2of6_PAaA = {
 		'Be prepared for Sprint Planning (continued)' ],
 	'agenda':[
 		`Discussion Board ${sprint} as a scrum team`,
-		'Confirm no Demos Schedule for Next Class',
+		'Confirm Demos Scheduled for Next Class',
 		'Prework for Next Class',
 		'Review Friday’s Demo Schedule',
 		'Lab & Programming Together' ]
+}
+
+export const se_5_3of6 = () => {
+	// BugBug: Update this slide deck for session 3.
+	return xyz_n_2of6(sprint, se_5_2of6_PAaA, se_5_3of6_PAaA.prework, activityList)
 }
 
 /*
