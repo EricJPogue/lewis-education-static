@@ -1,5 +1,3 @@
-import { getClass } from '../DataAndAPIs/Classes'
-
 import { xyz_n_1of6, xyz_n_1of6_lists } from './SL00000Sprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
@@ -48,7 +46,7 @@ export const ics_5_2of6 = () => {
 			'Eric’s Trip to Google',
 			'The Social Dilemma',
 			'Technology Business Models' ])
-	 }
+	}
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_3of6_lists.prework, sprint, activityList) }
 	const reviewDemoSchedule = () => {
@@ -66,11 +64,11 @@ export const ics_5_2of6 = () => {
 
 // Sprint 5 session 3 of 6: Friday
 const ics_5_3of6_lists = {
-	'announcements':[ 
-		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 6 and working on activity 7 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
+	'announcements':[ 
+		'Any announcements?' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
@@ -80,42 +78,21 @@ const ics_5_3of6_lists = {
 export const ics_5_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_3of6_lists, sprint, activityList)
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:26 },
-				{ name: 'Quiz', due:27, submitted:26 },
-				{ name: 'Lab', due:27, submitted:25 },
-				{ name: 'Reflection', due: 27, submitted: 26 }
-			])
-		} else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:26 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:27 },
-				{ name: 'Reflection', due: 27, submitted: 27 }
-			])
-		}
+		return submissionPercentage([
+			{ name: 'Discussion', due:13, submitted:13 },
+			{ name: 'Quiz', due:13, submitted:13 },
+			{ name: 'Lab', due:13, submitted:13},
+			{ name: 'Reflection', due: 13, submitted: 13 }])
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {
-		if (getClass().section === '002') {
-			return orderedListSlide('Class Retrospective',
-			'Feedback from Assignments & Reflections', [
-			'Solid submission percentage... well done.',
-			'All assignments are graded and posted', 
-			'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
-			'Multiple Reflection comments about successfully getting started earlier', 
-			'Very nice Python work!' ])
-		} else {
 			return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
 			'Exceptional submission percentage... very well done!',
 			'100% Submission Percentage === Food... what does “===” mean in Python?',
-			'All assignments are graded and posted', 
-			'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
+			'All assignments are graded and posted',
 			'Multiple Reflection comments about successfully getting started earlier', 
 			'Very nice Python work!' ])
-		}
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_4of6_lists.prework, sprint, activityList) }
@@ -125,11 +102,11 @@ export const ics_5_3of6 = () => {
 
 // Sprint 5 session 4 of 6: Monday
 const ics_5_4of6_lists = {
-	'announcements':[ 
-		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared for Networks breakout' ],
+	'announcements':[ 
+		'Any announcements?' ],
 	'agenda':[
 		'Networks Breakout',
 		'Prework for Next Class',
