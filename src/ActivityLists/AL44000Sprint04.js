@@ -60,6 +60,7 @@ export const list44000Sprint04 = (sprint) => {
 // Todo: Move some of the Waterfall Project Management video and assignment from Sprint 5 to sprint 4.
 // Todo: Add something to lab 4 to validate Dogs, JavaScript & An API 🐶 Fetch, Promises & Async Await.
 // Todo: Move Final Project Proposal from sprint 5 to sprint 4.
+// Todo: Verify the length of the videos and see if they are really 4 hours (per Nathan) and consider breaking them up between sprints.
 
 
 

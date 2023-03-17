@@ -1,15 +1,8 @@
 // BugBug: Replace this file with the code in SL44000Sprint05A.js. 
 
-import { tPreworkWithLogo } from './SLSprint00'
-import { tPrework } from './SLSprint00'
-import { orderedListSlide } from './SLSprint00'
-import { basicSlideWithLogo } from './SLSprint00'
-import { agendaSlide } from './SLSprint00'
-import { basicSlide } from './SLSprint00'
-import { makeSlideDeck } from './SL00000Sprint00'
-
+import { makeSlideDeck, xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
+import { agendaSlide, basicSlide, basicSlideWithLogo, orderedListSlide, submissionPercentage, tPrework, tPreworkWithLogo } from './SLSprint00'
 import { insertInto, sprintPlanningSlideDeck } from './SLSprintPlanning'
-import { xyz_n_2of6 } from './SL00000Sprint00'
 
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
@@ -82,24 +75,55 @@ export const se_5_2of6 = () => {
 
 // Session 3 of 6: Friday
 const se_5_3of6_PAaA = {
+	'prework':[
+		'Complete through activity 9 prior to next class', '',
+		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
+		'Those scheduled to demo please be a couple of minutes early to class' ],
 	'announcements':[ 
-		'What is the last day to withdraw from Spring, 2023 16-week classes with a grade of “W”' ],
+		'Any announcements?' ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class' ]
+}
+
+export const se_5_3of6 = () => {
+	const metrics = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:26, submitted:26 },
+			{ name: 'Quiz', due:26, submitted:26 },
+			{ name: 'Lab', due:26, submitted:26},
+			{ name: 'Reflection', due: 26, submitted: 26 }
+		])
+	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+		'Feedback from Assignments & Reflections', [
+		'Yet again. Perfect submission percentage! Very well done.',
+		'Most assignments graded and posted',
+		'Great comments about teammates',
+		'Not so great comments about working in teams... working in teams is HARD',
+		'Videos were long and I will consider breaking the topics between sprints in the future',
+		'Bootstrap is your contribution for future teams :-)',
+		'Very nice work!' ])
+	}
+
+	return  xyz_n_3of6(sprint, se_5_3of6_PAaA, se_5_4of6_PAaA.prework, activityList, metrics, retrospective)
+}
+
+const se_5_4of6_PAaA = {
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Sprint Planning (continued)' ],
+	'announcements':[ 
+		'TBD' ],
 	'agenda':[
-		`Discussion Board ${sprint} as a scrum team`,
-		'Confirm Demos Scheduled for Next Class',
-		'Prework for Next Class',
-		'Review Friday’s Demo Schedule',
-		'Lab & Programming Together' ]
+		`TBD` ]
 }
 
-export const se_5_3of6 = () => {
-	// BugBug: Update this slide deck for session 3.
-	return xyz_n_2of6(sprint, se_5_2of6_PAaA, se_5_3of6_PAaA.prework, activityList)
-}
+
 
 /*
 // BugBug: From last semester below.
