@@ -101,12 +101,14 @@ export const se_5_3of6 = () => {
 		return orderedListSlide('Class Retrospective',
 		'Feedback from Assignments & Reflections', [
 		'Yet again. Perfect submission percentage! Very well done.',
-		'Most assignments graded and posted',
+		'All assignments graded and posted',
 		'Great comments about teammates',
 		'Not so great comments about working in teams... working in teams is HARD',
 		'Videos were long and I will consider breaking the topics between sprints in the future',
-		'Bootstrap is your contribution for future teams :-)',
-		'Very nice work!' ])
+		'If you are struggling with server-side APIs, need to get on that quickly',
+		'Bootstrap is your contribution for future teams :-) Thank you',
+		'Very nice work!',
+		'THE 1975 - Robbers (Piano Cover)... Thank you' ])
 	}
 
 	return  xyz_n_3of6(sprint, se_5_3of6_PAaA, se_5_4of6_PAaA.prework, activityList, metrics, retrospective)
