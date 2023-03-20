@@ -1,7 +1,8 @@
 // BugBug: Replace this file with the code in SL44000Sprint05A.js. 
 
 import { makeSlideDeck, xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
-import { agendaSlide, basicSlide, basicSlideWithLogo, orderedListSlide, submissionPercentage, tPrework, tPreworkWithLogo } from './SLSprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
+import { agendaSlide, basicSlide, basicSlideWithLogo, breakoutStandard, orderedListSlide, submissionPercentage, tPrework, tPreworkWithLogo } from './SLSprint00'
 import { insertInto, sprintPlanningSlideDeck } from './SLSprintPlanning'
 
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
@@ -116,13 +117,50 @@ export const se_5_3of6 = () => {
 
 const se_5_4of6_PAaA = {
 	'prework':[
-		'Complete through activity 5 prior to next class', '',
-		`Be prepared Discussion Board ${sprint}`,
-		'Be prepared for Sprint Planning (continued)' ],
+		'Complete through activity 9 prior to next class', '',
+		'Be prepared for “Software Maintenance and Support” breakout' ],
 	'announcements':[ 
-		'TBD' ],
+		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`,
+		`Sprint ${sprint+1} product backlog grooming with be Friday... plan on coming Monday with a fully groomed product backlog`,
+		'Very well done with your sprint 1 planning and sign off' ],
 	'agenda':[
-		`TBD` ]
+		'Sprint Progress Polling', 
+		'Prework for Next Class',
+		'“Software Maintenance and Support” Breakout',
+		'Lab' ]
+}
+export const se_5_4of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_4of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', se_5_4of6_PAaA.prework, sprint, activityList) }
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Maintenance and Support', 
+			'In this breakout session we will explore Maintenance and Support:', [
+				'Maintenance including daily activities of a development and/or maintenance team',
+				'Support including daily activities of a support team',
+				'Maintenance in Waterfall and Iterative',
+				'Maintenance in Agile',
+				'What is the biggest challenge we face in getting real-life usage of your products?' ]
+		)
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_5of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ breakout, poll, preworkNext, tLab ]) 
+}
+
+// Session 5 of 6
+const se_5_5of6_PAaA = {
+	'prework':[
+		'Complete through activity 10 prior to next class', '',
+		'Be prepared for Lab',
+		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		`Your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday, November 7th`,
+		`Sprint ${sprint+1} product backlog grooming with be Friday... plan on coming Monday with a fully groomed product backlog` ],
+
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab',
+		`Quiz ${sprint}` ]
 }
 
 

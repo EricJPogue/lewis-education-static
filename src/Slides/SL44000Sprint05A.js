@@ -3,11 +3,11 @@
 import { /*xyz_n_1of6_lists, xyz_n_1of6,*/ tLab } from './SL00000Sprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
-import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
+import { tPrework/*, bulletListSlide, tDiscussionBreakout*/ } from './SLSprint00'
 
-import { submissionPercentage, retrospectiveIntroduction, orderedListSlide, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
+//import { submissionPercentage, retrospectiveIntroduction, orderedListSlide, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
 
-import { breakoutStandard } from './SLSprint00'
+// import { breakoutStandard } from './SLSprint00'
 import { tQuiz } from './SLSprint00'
 
 import { se_6_1of6_lists } from './SL44000Sprint06'
@@ -25,6 +25,7 @@ const activityList = () => { return list44000Sprint05(sprint) }
 //export const se_5_1of6 = () => { return xyz_n_1of6(sprint, se_5_1of6_lists.prework, activityListPrevious, se_5_1of6_lists.agenda, se_5_2of6_lists.prework, activityList) }
 
 // SE Sprint 5 session 2 of 6: Wednesday
+/*
 const se_5_2of6_lists = {
 	'announcements':[ 
 		'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
@@ -40,7 +41,7 @@ const se_5_2of6_lists = {
 		'Review Friday’s Demo Schedule',
 		'Lab & Programming Together' ]
 }
-export const se_5_2of6 = () => {
+const se_5_2of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_2of6_lists, sprint, activityList)
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_3of6_lists.prework, sprint, activityList) }
@@ -78,7 +79,7 @@ const se_5_3of6_lists = {
 		'Prework for Next Class',
 		'Sprint Planning (continued)' ]
 }
-export const se_5_3of6 = () => {
+const se_5_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_3of6_lists, sprint, activityList)
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
@@ -121,24 +122,23 @@ const se_5_4of6_lists = {
 		'Prework for Next Class',
 		'“Software Maintenance and Support” Breakout' ]
 }
-export const se_5_4of6 = () => { 
+const se_5_4of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_4of6_lists, sprint, activityList)
 	const breakout = () => { 
 		return breakoutStandard( 
 			'Breakout: Maintenance and Support', 
-			'In this breakout session we will explore Networks:', [
-				'Maintenance',
-				'Support',
+			'In this breakout session we will explore Maintenance and Support:', [
+				'Maintenance including daily activities of a development and/or maintenance team',
+				'Support including daily activities of a support team',
 				'Maintenance in Waterfall and Iterative',
 				'Maintenance in Agile',
-				'Describe the daily activities of a support team and the impact of user base',
-				'Describe the daily activities of a maintenance team and how it differs from a development team' ]
+				'Support in Waterfall, Iterative, and Agile' ]
 		)
 	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_5of6_lists.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ]) 
 }
-
+*/
 // SE sprint 5 session 5 of 6
 const se_5_5of6_lists = {
 	'announcements':[ 

@@ -100,7 +100,17 @@ export const ics_5_3of6 = () => {
 	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
-// Sprint 5 session 4 of 6: Monday
+const programmingTogetherWithTurtleDraw = () => {
+	return bulletListSlide('Lab & Programming Together', 
+		'How can we best make progress on TurtleDraw?', [
+		'Review the differences between TurtleDraw Lite and TurtleDraw',
+		'Implementing a README.md and LICENSE file in GitHub', 
+		'Added TurtleDraw.py file', 
+		'Pushed the updated files to GitHub',
+		'Start working on TurtleDraw' ])
+}
+
+// Session 4 of 6: Monday
 const ics_5_4of6_lists = {
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
@@ -108,13 +118,15 @@ const ics_5_4of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
 	'agenda':[
+		'Sprint Progress Polling',
 		'Networks Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
 export const ics_5_4of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_4of6_lists, sprint, activityList)
-	const breakout = () => { 
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_5_4of6_lists.prework, sprint, activityList) }
+	const breakoutNetworks = () => { 
 		return breakoutStandard( 
 			'Breakout: Networks', 
 			'In this breakout session we will explore Networks:', [
@@ -125,21 +137,9 @@ export const ics_5_4of6 = () => {
 				'Blockchain, Bitcoin, and Hashing... plus bitcoin vs ethereum energy consumption?' ]
 		)
 	}
-
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_5of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ breakout, preworkNext, programmingTogetherWithTurtleDraw ])
-}
-
-// Shared with session 4 and 5... we did not get to it in session 4.
-const programmingTogetherWithTurtleDraw = () => {
-	return bulletListSlide('Lab & Programming Together', 
-		'How can we best make progress on TurtleDraw?', [
-		'Review the differences between TurtleDraw Lite and TurtleDraw',
-		'Implementing a README.md and LICENSE file in GitHub', 
-		'Added TurtleDraw.py file', 
-		'Pushed the updated files to GitHub',
-		'Start working on TurtleDraw' ])
+	return completeDeck(slideDeck, [ poll, breakoutNetworks, preworkNext, programmingTogetherWithTurtleDraw ])
 }
 
 // Sprint 5 session 5 of 6: Wednesday

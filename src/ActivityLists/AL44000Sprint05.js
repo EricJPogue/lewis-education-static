@@ -73,4 +73,5 @@ export const list44000Sprint05 = (sprint) => {
 
 // Certified for SP23 (02/28/2023)
 // Todo: Move capacityCommittedEffortDeliveredLink() to after finalProjectSprint5Link() like Software Systems Capstone.
+// Todo: Add Support and Maintenance lecture video topics to Quiz 5. Are they already there?
 

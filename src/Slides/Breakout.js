@@ -126,6 +126,7 @@ const breakoutSlides = {
 		'route':'software-testing',
 		'title':'Software Testing',
 		'topics': [
+			'Relationship between time to finding defect and cost to fix defect',
 			'Software development processes and how they impact testing',
 			'Verification and validation and the criticality of finding/fixing defects early',
 			'Types of testing including unit, integration, and user acceptance',

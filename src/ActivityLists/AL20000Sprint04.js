@@ -58,4 +58,5 @@ export const list20000Sprint04 = (sprint) => {
 // Certified for SP22 (02/12/2022)
 // BugBug: Movie “Artificial Intelligence” up on the list so that it is before the breakout session which is on the first Wednesday.
 // Todo: Consider adding MatchmakerLite tutorials to ActivityList (and/or the Matchmaker assignment) instead of just in the Programming Together section. 
+// Todo: Make sure that Matchmaker expectations of Lite topics vs features to learn on your own. 
 

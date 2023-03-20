@@ -6,7 +6,8 @@ import { completeDeck } from './SL00000Sprint00'
 import { tLab } from './SL00000Sprint00'
 import { submissionPercentage } from './SLSprint00'
 import { orderedListSlide } from './SLSprint00'
-import { xyz_n_3of6 } from './SL00000Sprint00'
+import { xyz_n_3of6, xyz_n_4of6 } from './SL00000Sprint00'
+import { breakoutStandard } from './SLSprint00'
 
 // import { list24500Sprint04 } from '../ActivityLists/AL24500Sprint04'
 import { list24500Sprint05 } from '../ActivityLists/AL24500Sprint05'
@@ -92,7 +93,38 @@ export const oop_5_3of6 = () => {
 	return xyz_n_3of6(sprint, oop_5_3of6_PAaA, oop_5_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
 
-const oop_5_4of6_PAaA = {
+
+
+
+export const oop_5_4of6_PAaA = {
+	'prework':[
+		'Complete through activity 11 prior to next class', '',
+		'Be prepared for “Software Testing” breakout' ],
+	'announcements':[ 
+		'TBD' ],
+	'agenda':[
+		'TBD' ]
+}
+export const oop_5_4of6 = () => {
+	const breakoutTestingName = 'Testing'
+	const breakoutTesting = () => { 
+		return breakoutStandard( 
+			`Breakout: ${breakoutTestingName}`, 
+			`In this breakout session on our ${breakoutTestingName} lecture your team will discuss:`, [
+				'Relationship between time to finding defect and cost to fix defect',
+				'Software development processes and how they impact testing',
+				'Verification and validation and the criticality of finding/fixing defects early',
+				'Types of testing including unit, integration, and user acceptance',
+				'Types of testing including performance, manual, and automated',
+				'Purpose and syntax of JUnit and JavaDoc',
+				'Software development process, associated testing priorities, and how they impact software development'
+			])
+	}
+	
+	return xyz_n_4of6(sprint, oop_5_4of6_PAaA, oop_5_5of6_PAaA.prework, activityList, breakoutTesting)
+}
+
+const oop_5_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 11 prior to next class', '',
 		'Be prepared for “Software Testing” breakout' ],
