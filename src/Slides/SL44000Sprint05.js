@@ -1,13 +1,9 @@
-// BugBug: Replace this file with the code in SL44000Sprint05A.js. 
-
 import { makeSlideDeck, xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
-import { agendaSlide, basicSlide, basicSlideWithLogo, breakoutStandard, orderedListSlide, submissionPercentage, tPrework, tPreworkWithLogo } from './SLSprint00'
+import { agendaSlide, basicSlide, basicSlideWithLogo, breakoutStandard, orderedListSlide, submissionPercentage, tPrework, tPreworkWithLogo, tQuiz } from './SLSprint00'
 import { insertInto, sprintPlanningSlideDeck } from './SLSprintPlanning'
-import { tQuiz } from './SLSprint00'
+
 import { se_6_1of6_lists } from './SL44000Sprint06'
-
-
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 
@@ -157,8 +153,9 @@ const se_5_5of6_PAaA = {
 		'Be prepared for Lab',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
-		`Your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday, November 7th`,
-		`Sprint ${sprint+1} product backlog grooming with be Friday... plan on coming Monday with a fully groomed product backlog` ],
+		`You are required to attend and attend in-person Monday for sprint ${sprint+1} planning`,
+		`Sprint ${sprint+1} product backlog grooming with be Friday... plan on coming Monday with a fully groomed product backlog`,
+		'Lab Demo assignments have been graded... Did you demo something to the class? Did you submit your Lab Demo assignment?' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Lab',
