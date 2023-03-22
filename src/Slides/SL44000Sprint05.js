@@ -155,7 +155,8 @@ const se_5_5of6_PAaA = {
 	'announcements':[ 
 		`You are required to attend and attend in-person Monday for sprint ${sprint+1} planning`,
 		`Sprint ${sprint+1} product backlog grooming with be Friday... plan on coming Monday with a fully groomed product backlog`,
-		'Lab Demo assignments have been graded... Did you demo something to the class? Did you submit your Lab Demo assignment?' ],
+		'Lab Demo assignments have been graded... Did you demo something to the class? Did you submit your Lab Demo assignment?',
+		'Quiz 5 has some challenges... Blackboard and I are no longer friends this semester' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Lab',

@@ -72,6 +72,10 @@ export const list44000Sprint05 = (sprint) => {
 
 
 // Certified for SP23 (02/28/2023)
+// BugBug: Add one question to Quiz 5 so that the quiz totals 40 points.
+// BugBug: Remove one question from Quiz 6 so that it also totals 40 points. Recall that the question was added to make 
+//    everything balance.
+// Toto: Consider updating and enhancing Quiz 5 as it is not very good. 
 // Todo: Move capacityCommittedEffortDeliveredLink() to after finalProjectSprint5Link() like Software Systems Capstone.
 // Todo: Add Support and Maintenance lecture video topics to Quiz 5. Are they already there?
 
