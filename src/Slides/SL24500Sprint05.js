@@ -6,19 +6,21 @@ import { completeDeck } from './SL00000Sprint00'
 import { tLab } from './SL00000Sprint00'
 import { submissionPercentage } from './SLSprint00'
 import { orderedListSlide } from './SLSprint00'
-import { xyz_n_3of6, xyz_n_4of6 } from './SL00000Sprint00'
+import { xyz_n_1of6, xyz_n_1of6_lists, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
 import { breakoutStandard } from './SLSprint00'
 
-// import { list24500Sprint04 } from '../ActivityLists/AL24500Sprint04'
+import { list24500Sprint04 } from '../ActivityLists/AL24500Sprint04'
 import { list24500Sprint05 } from '../ActivityLists/AL24500Sprint05'
 
 // Sprint 5 Introduction to Object-Oriented Programming (OOP) global values.
 const sprint = 5
 const activityList = () => { return list24500Sprint05(sprint) }
-// const activityListPrevious = () => { return list24500Sprint04(sprint) }
+const activityListPrevious = () => { return list24500Sprint04(sprint) }
 
 // BugBug: Need to implement session 1 slides and uncomment activityListPrevious.
-
+// Session 1 of 6: Monday
+export const oop_5_1of6_PAaA = xyz_n_1of6_lists(sprint)
+export const oop_5_1of6 = () => { return xyz_n_1of6(sprint, oop_5_1of6_PAaA.prework, activityListPrevious, oop_5_1of6_PAaA.agenda, oop_5_2of6_PAaA.prework, activityList) }
 
 const oop_5_2of6_PAaA = {
 	'prework':[
@@ -129,7 +131,25 @@ const oop_5_5of6_PAaA = {
 		'Complete through activity 11 prior to next class', '',
 		'Be prepared for “Software Testing” breakout' ],
 	'announcements':[ 
-		'TBD' ],
+		'Last day to drop with a “W” coming up soon',
+		'Registration for next semester coming up soon as well' ],
 	'agenda':[
-		'TBD' ]
+			'Sprint Progress Polling',
+			'Lab',
+			`Quiz ${sprint}` ]
+}
+export const oop_5_5of6 = () => { return xyz_n_5of6(sprint, oop_5_5of6_PAaA, oop_5_6of6_PAaA.prework, activityList) }
+
+const oop_5_6of6_PAaA = {
+	'prework': [
+		'Complete through activity 12', '',
+		'Be prepared for Lab & Programming Together',
+		`All sprint ${sprint} assignments are due Sunday, March 12th!` ],
+	'announcements':[
+		`Any announcements?`],
+	'agenda':[
+		`Final sprint ${sprint} activity list and assignment Q&A`,
+		`Quiz ${sprint} “Phone a Friend”`,
+		'Prework for Next Class', 
+		'Lab']
 }

@@ -104,9 +104,7 @@ const oop_4_5of6_PAaA = {
 		'Lab & Programming Together',
 		`Quiz ${sprint}` ]
 }
-export const oop_4_5of6 = () => {
-	return xyz_n_5of6(sprint, oop_4_5of6_PAaA, oop_4_6of6_PAaA.prework, activityList)
-}
+export const oop_4_5of6 = () => { return xyz_n_5of6(sprint, oop_4_5of6_PAaA, oop_4_6of6_PAaA.prework, activityList) }
 
 const oop_4_6of6_PAaA = {
 	'prework': [
