@@ -1,15 +1,8 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6 } from './SL00000Sprint00'
-import { submissionPercentage, orderedListSlide, basicSlideWithTitle } from '../Slides/SLSprint00'
+import { xyz_n_1of6, xyz_n_4of6 } from './SL00000Sprint00'
+import { submissionPercentage, orderedListSlide, basicSlideWithTitle, retrospectiveIntroduction } from '../Slides/SLSprint00'
+import { breakoutStandard, bulletListSlide, tDiscussionBreakout, tPrework, tQuiz } from './SLSprint00'
 
-import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000Sprint00'
-import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
-
-import { breakoutStandard } from '../Slides/SLSprint00'
-
-import { tLab } from './SL00000Sprint00'
-import { tQuiz } from '../Slides/SLSprint00'
-
-import { retrospectiveIntroduction } from './SLSprint00'
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 
 import { se_7_1of6_lists } from './SL44000Sprint07'
 
@@ -21,9 +14,20 @@ const sprint = 6
 const activityListPrevious = () => { return list44000Sprint05(sprint-1) }
 const activityList = () => { return list44000Sprint06(sprint) }
 
-
 // SE Sprint 6 session 1 of 6: Monday
-export const se_6_1of6_lists = xyz_n_1of6_lists(sprint)
+export const se_6_1of6_lists = {
+	'prework':[ 
+		`All sprint ${sprint-1} assignments are due Sunday!`, '',
+		`Be on time and prepared for in-person sprint ${sprint} Planning`,
+		'Come Monday with a fully groomed Product Backlog',
+		'Make sure that you production application is up and running Monday' ],
+	'announcements':[ 
+		`${sprint} starts now.` ],
+	'agenda':[ 
+		`Sprint ${sprint} Planning`,
+		`Sprint ${sprint} Planning Breakout`,
+		'Prework for Next Class' ]
+}
 export const se_6_1of6 = () => { return xyz_n_1of6(sprint, se_6_1of6_lists.prework, activityListPrevious, se_6_1of6_lists.agenda, se_6_2of6_lists.prework, activityList) }
 
 // SE Sprint 6 session 2 of 6: Wednesday

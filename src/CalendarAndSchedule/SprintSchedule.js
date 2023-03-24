@@ -47,48 +47,57 @@ export class SprintClassActivities extends Component {
 
 	// Monday, Wednesday, and Friday class schedules.
 	MWFSchedule = {
-		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Discussion Board & Lab",
-		"FirstFriday":     "Demos & Retrospectives",
-		"SecondMonday":    "Topic Discussion",
-		"SecondWednesday": "Quiz",
-		"SecondFriday":    "Lab"
+		'FirstMonday':     'Sprint Planning',
+		'FirstWednesday':  'Discussion Board & Lab',
+		'FirstFriday':     'Demos & Retrospectives',
+		'SecondMonday':    'Topic Discussion',
+		'SecondWednesday': 'Quiz',
+		'SecondFriday':    'Lab'
 	}
 
 	MWFScheduleSprint1 = {
-		"FirstMonday":     "Introductions & Sprint Planning",
-		"FirstWednesday":  "Sprint Planning (continued)",
-		"FirstFriday":     "Discussion Board and Topic Discussion",
-		"SecondMonday":    "No class (Martin Luther King Day)",
-		"SecondWednesday": "Quiz",
-		"SecondFriday":    "Lab"
+		'FirstMonday':     'Introductions & Sprint Planning',
+		'FirstWednesday':  'Sprint Planning (continued)',
+		'FirstFriday':     'Discussion Board and Topic Discussion',
+		'SecondMonday':    'No class (Martin Luther King Day)',
+		'SecondWednesday': 'Quiz',
+		'SecondFriday':    'Lab'
 	}
 
 	MWFScheduleSprint3 = {
-		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Discussion Board & Lab",
-		"FirstFriday":     "Demos, Retrospectives, and Topic Discussion",
-		"SecondMonday":    "Topic Discussion",
-		"SecondWednesday": "Quiz & Lab",
-		"SecondFriday":    "Lab"
+		'FirstMonday':     'Sprint Planning',
+		'FirstWednesday':  'Discussion Board & Lab',
+		'FirstFriday':     'Demos, Retrospectives, and Topic Discussion',
+		'SecondMonday':    'Topic Discussion',
+		'SecondWednesday': 'Quiz & Lab',
+		'SecondFriday':    'Lab'
+	}
+
+	MWFScheduleSprint6 = {
+		'FirstMonday':     'Sprint Planning',
+		'FirstWednesday':  'Discussion Board & Lab',
+		'FirstFriday':     'Demos & Retrospectives',
+		'SecondMonday':    'Topic Discussion & Quiz',
+		'SecondWednesday': 'Lab',
+		'SecondFriday':    'Easter Holiday Recess: No Classes'
 	}
 
 	MWFScheduleSprint7 = {
-		'FirstMonday':     'Sprint Planning',
-		'FirstWednesday':  'Thanksgiving Holiday',
-		'FirstFriday':     'Thanksgiving Holiday',
-		'SecondMonday':    'Discussion Board & Topic Breakout',
+		'FirstMonday':     'Easter Holiday Recess: No Classes',
+		'FirstWednesday':  'Sprint Planning',
+		'FirstFriday':     'Discussion Board, Demos, and Retrospectives',
+		'SecondMonday':    'Topic Discussion',
 		'SecondWednesday': 'Lab & Quiz',
 		'SecondFriday':    'Lab'
 	}
 
 	MWFScheduleSprint8 = {
-		"FirstMonday":     "Sprint Planning",
-		"FirstWednesday":  "Quiz & Lab",
-		"FirstFriday":     "Demos, Retrospectives, & Lab",
-		"SecondMonday":    "No regular classes (final exams)",
-		"SecondWednesday": "No regular classes (final exams)",
-		"SecondFriday":    "No regular classes (final exams)"
+		'FirstMonday':     'Sprint Planning',
+		'FirstWednesday':  'Quiz & Lab',
+		'FirstFriday':     'Demos, Retrospectives, & Lab',
+		'SecondMonday':    'No regular classes (final exams)',
+		'SecondWednesday': 'No regular classes (final exams)',
+		'SecondFriday':    'No regular classes (final exams)'
 	}
 
 	finalExamDateAndTimeTextForFinalSprint = () => {
@@ -119,6 +128,7 @@ export class SprintClassActivities extends Component {
 		switch(this.currentSprintBaseOne()) {
 			case 1: schedule = this.MWFScheduleSprint1; break;
 			case 3: schedule = this.MWFScheduleSprint3; break;
+			case 6: schedule = this.MWFScheduleSprint6; break;
 			case 7: schedule = this.MWFScheduleSprint7; break;
 			case 8: schedule = this.MWFScheduleSprint8; break;
 			default: schedule = this.MWFSchedule
@@ -147,31 +157,31 @@ export class SprintClassActivities extends Component {
 
 	// Tuesday, Thursday class schedules. 
 	TTSchedule = {
-		"FirstTuesday":   "Demos, Retrospective, and Sprint Planning",
-		"FirstThursday":  "Topic Discussion, Discussion Board, and Lab",
-		"SecondTuesday":  "Lab & Quiz",
-		"SecondThursday": "Lab"
+		'FirstTuesday':   'Demos, Retrospective, and Sprint Planning',
+		'FirstThursday':  'Topic Discussion, Discussion Board, and Lab',
+		'SecondTuesday':  'Lab & Quiz',
+		'SecondThursday': 'Lab'
 	}
 
 	TTScheduleSprint1 = {
-		"FirstTuesday":   "Introductions & Sprint Planning",
-		"FirstThursday":  "Topic Discussion, Discussion Board, and Lab",
-		"SecondTuesday":  "Lab & Quiz",
-		"SecondThursday": "Lab"
+		'FirstTuesday':   'Introductions & Sprint Planning',
+		'FirstThursday':  'Topic Discussion, Discussion Board, and Lab',
+		'SecondTuesday':  'Lab & Quiz',
+		'SecondThursday': 'Lab'
 	}
 
 	TTScheduleSprint7 = {
-		"FirstTuesday":   "Demos, Retrospective, Sprint Planning, and Discussion Board",
-		"FirstThursday":  "Easter Holiday",
-		"SecondTuesday":  "Topic Discussion, Lab & Quiz",
-		"SecondThursday": "Lab"
+		'FirstTuesday':   'Demos, Retrospective, Sprint Planning, and Discussion Board',
+		'FirstThursday':  'Easter Holiday',
+		'SecondTuesday':  'Topic Discussion, Lab & Quiz',
+		'SecondThursday': 'Lab'
 	}
 
 	TTScheduleSprint8 = {
-		"FirstTuesday":   "Demos, Retrospective, and Sprint Planning",
-		"FirstThursday":  "Topic Discussion, Quiz, and Lab",
-		"SecondTuesday":  "Finals Week (no regular classes)",
-		"SecondThursday": "Finals Week (no regular classes)"
+		'FirstTuesday':   'Demos, Retrospective, and Sprint Planning',
+		'FirstThursday':  'Topic Discussion, Quiz, and Lab',
+		'SecondTuesday':  'Finals Week (no regular classes)',
+		'SecondThursday': 'Finals Week (no regular classes)'
 	}
 
 	renderTThSchedule = () => {
@@ -204,10 +214,10 @@ export class SprintClassActivities extends Component {
 	renderTSchedule = () => {
 			// Tuesday, Thursday class schedules. 
 		const TSchedule = {
-			"FirstTuesday":   "Lab",
-			"FirstThursday":  "Alternate lab day for teams that can’t meet Tuesday",
-			"SecondTuesday":  "Lab",
-			"SecondThursday": "Alternate lab day for teams that can’t meet Tuesday"
+			'FirstTuesday':   'Lab',
+			'FirstThursday':  'Alternate lab day for teams that can’t meet Tuesday',
+			'SecondTuesday':  'Lab',
+			'SecondThursday': 'Alternate lab day for teams that can’t meet Tuesday'
 		}
 
 		const schedule = TSchedule

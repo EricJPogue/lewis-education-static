@@ -177,8 +177,8 @@ const se_5_6of6_lists = {
 		`All sprint ${sprint} assignments due Sunday!`, '',
 		'Be prepared for Sprint Planning' ],
 	'announcements':[ 
-		`Your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for next Monday`,
-		`Sprint ${sprint+1} product backlog grooming with be Friday... come Monday with a fully groomed product backlog`,
+		`Your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for Monday`,
+		`Monday with a fully groomed product backlog`,
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'agenda':[
 		'Backlog Grooming',
@@ -187,5 +187,6 @@ const se_5_6of6_lists = {
 export const se_5_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_6of6_lists, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_6_1of6_lists.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ preworkNext ]) 
+	const slideDeckWithPrework = completeDeck(slideDeck, [ preworkNext ]) 
+	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), 5)
 }
