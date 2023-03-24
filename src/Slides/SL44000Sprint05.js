@@ -3,7 +3,7 @@ import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL
 import { agendaSlide, basicSlide, basicSlideWithLogo, breakoutStandard, orderedListSlide, submissionPercentage, tPrework, tPreworkWithLogo, tQuiz } from './SLSprint00'
 import { insertInto, sprintPlanningSlideDeck } from './SLSprintPlanning'
 
-import { se_6_1of6_lists } from './SL44000Sprint06'
+import { se_6_1of6_PAaA } from './SL44000Sprint06'
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 
@@ -165,14 +165,14 @@ const se_5_5of6_PAaA = {
 export const se_5_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_5of6_PAaA, sprint, activityList)
 	const poll = () => { return tPrework('Sprint Progress Polling', se_5_5of6_PAaA.prework, sprint, activityList) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_6of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_6of6_PAaA.prework, sprint, activityList) }
 	const quiz = () => { return tQuiz(sprint) }
 	
 	return completeDeck(slideDeck, [ poll, tLab, preworkNext, quiz ]) 
 }
 
 // Session 6 of 6
-const se_5_6of6_lists = {
+const se_5_6of6_PAaA = {
 	'prework':[
 		`All sprint ${sprint} assignments due Sunday!`, '',
 		'Be prepared for Sprint Planning' ],
@@ -185,8 +185,8 @@ const se_5_6of6_lists = {
 		'Lab' ]
 }
 export const se_5_6of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_6of6_lists, sprint, activityList)
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_6_1of6_lists.prework, sprint, activityList) }
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_6of6_PAaA, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_6_1of6_PAaA.prework, sprint, activityList) }
 	const slideDeckWithPrework = completeDeck(slideDeck, [ preworkNext ]) 
 	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), 5)
 }
