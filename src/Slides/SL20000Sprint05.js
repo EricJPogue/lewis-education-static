@@ -168,7 +168,6 @@ export const ics_5_5of6 = () => {
 // Sprint 5 session 6 of 6: Friday
 const ics_5_6of6_lists = {
 	'announcements':[ 
-		'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 12', '',

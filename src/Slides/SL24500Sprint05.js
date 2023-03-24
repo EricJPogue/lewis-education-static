@@ -6,9 +6,10 @@ import { completeDeck } from './SL00000Sprint00'
 import { tLab } from './SL00000Sprint00'
 import { submissionPercentage } from './SLSprint00'
 import { orderedListSlide } from './SLSprint00'
-import { xyz_n_1of6, xyz_n_1of6_lists, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
+import { xyz_n_1of6, xyz_n_1of6_lists, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { breakoutStandard } from './SLSprint00'
 
+import { oop_6_1of6_PAaA } from './SL24500Sprint06'
 import { list24500Sprint04 } from '../ActivityLists/AL24500Sprint04'
 import { list24500Sprint05 } from '../ActivityLists/AL24500Sprint05'
 
@@ -95,9 +96,6 @@ export const oop_5_3of6 = () => {
 	return xyz_n_3of6(sprint, oop_5_3of6_PAaA, oop_5_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
 
-
-
-
 export const oop_5_4of6_PAaA = {
 	'prework':[
 		'Complete through activity 11 prior to next class', '',
@@ -144,12 +142,13 @@ const oop_5_6of6_PAaA = {
 	'prework': [
 		'Complete through activity 12', '',
 		'Be prepared for Lab & Programming Together',
-		`All sprint ${sprint} assignments are due Sunday, March 12th!` ],
+		`All sprint ${sprint} assignments are due Sunday` ],
 	'announcements':[
-		`Any announcements?`],
+		`All sprint ${sprint} assignments are due Sunday` ],
 	'agenda':[
 		`Final sprint ${sprint} activity list and assignment Q&A`,
 		`Quiz ${sprint} “Phone a Friend”`,
 		'Prework for Next Class', 
 		'Lab']
 }
+export const oop_5_6of6 = () => xyz_n_6of6(sprint, oop_5_6of6_PAaA, oop_6_1of6_PAaA.prework, activityList)
