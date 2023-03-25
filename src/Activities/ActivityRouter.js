@@ -42,6 +42,7 @@ import { OVAL_DRAW_PLUS_JAVA_ROUTE, ovalDrawPlusJava } from './OvalDrawPlus'
 import { SEAT_SELECTOR_MERN_ROUTE, seatSelectorMERN } from './SeatSelectorMERN'
 import { SWISS_ARMY_KNIFE_ROUTE, swissArmyKnife } from './SwissArmyKnife'
 import { SWISS_ARMY_KNIFE_V2_ROUTE, swissArmyKnifeV2 } from './SwissArmyKnife'
+import { SWISS_ARMY_KNIFE_SERVER_ROUTE, swissArmyKnifeServer } from './SwissArmyKnifeServer'
 import { thunderbird } from './Thunderbird'
 import { TURTLEDRAW_ROUTE, turtledraw } from './PythonTurtleDraw'
 import { PIT_HUB_ROUTE, pitHub } from './PitHub'
@@ -104,6 +105,7 @@ export const routeActivity = (activityRoute) => {
 		case SEAT_SELECTOR_MERN_ROUTE: return seatSelectorMERN()
 		case SWISS_ARMY_KNIFE_ROUTE: return swissArmyKnife()
 		case SWISS_ARMY_KNIFE_V2_ROUTE: return swissArmyKnifeV2()
+		case SWISS_ARMY_KNIFE_SERVER_ROUTE: return swissArmyKnifeServer()
 		case TURTLEDRAW_ROUTE: return turtledraw()
 		case PIT_HUB_ROUTE: return pitHub()
 		case QUIZ_MASTER_MERN_ROUTE: return quizMasterMERN()
