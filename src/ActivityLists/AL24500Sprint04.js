@@ -9,9 +9,6 @@ import { gUIsInJava } from './AL24500Sprint03';
 import { mosaicJavaLink } from '../Activities/Mosaic';
 
 export const al24500Sprint04 = () => {
-	const actionListenerPlus = () => { return internalLink('ActionListenerPlus', '/activity-oop/java-action-listeners') }
-	const mosaicLite = () => { return internalLink('Mosaic Lite', '/activity-oop/java-mosaic-lite')}
-	const shapeDrawPlus = () => { return internalLink('ShapeDraw Plus', '/activity-oop/java-ovaldraw-plus')}
 	const sprint = 4
 	return ( <div>
 		<h5>Sprint 4: Interactive User Interfaces and Mosaic</h5>
@@ -30,20 +27,8 @@ export const al24500Sprint04 = () => {
 			<li>Understand Error Handling and Exceptions</li>
 		</ul>
 
-		{activitiesListIntro(sprint)}
-		<ol>
-			{standardActivities(sprint, mosaicJavaLink(), oreillyPlaylistOOP())}
-			<li>Complete {mosaicLite()}{estimated('2 hours')}</li>
-			<li>Review {gUIsInJava()}</li>
-			<li>Complete {actionListenerPlus()}</li>
 
-			{initialPost(sprint)}
-			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 10 on Desktop Applications and review associated {learningJavaExampleCode()}</li>
-			<li>Within {oreillyPlaylistOOP()} review “Learning Java” chapter 6 on Error Handling and Logging</li>
-			<li>Analyze and test ShapeDraw which is located in our {ExampleCode()}</li>
-			<li>Complete {shapeDrawPlus()} by enhancing ShapeDraw (sometimes referred to as “OvalDraw”){estimated('2 hours')}</li>
-			{standardActivitiesClosing(sprint, mosaicJavaLink(), '6 hours')}
-		</ol> 
+		{list24500Sprint04(sprint)}
 		{closing(sprint)}
 	</div> )
 }

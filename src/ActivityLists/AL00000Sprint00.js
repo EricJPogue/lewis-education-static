@@ -224,3 +224,4 @@ export const finalProjectsAndMoreResponsibility = () => {
 		will have more control <em>and responsibility</em> in determining what is done and how it is implemented.</p>
 	</div> )
 }
+

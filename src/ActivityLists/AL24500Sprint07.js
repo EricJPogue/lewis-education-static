@@ -23,6 +23,10 @@ export const al24500Sprint07 = ( props ) => {
 
 		{LearningObjectivesIntro()}
 		<ul style={{ listStyleType:'square'}}>
+			<li>Develop multithreaded Java applications</li>
+			<li>Create and automated API automated test applications in Java</li>
+			<li>Understand JavaDoc and how it can create self-documenting source code</li>
+
 			<li>Develop and enhance intermediate level graphical, distributed, multi-threaded Java applications</li>
 			<li>Create View and Model classes that conform to the model-view-controller pattern</li>
 			<li>Begin to understand Application Architecture and its relationship to Object-Oriented Programming</li>
@@ -37,12 +41,25 @@ export const al24500Sprint07 = ( props ) => {
 }
 
 export const list24500Sprint07 = () => {
+	const performanceAndMultithreading = () => { return internalLink('Performance and Multithreading', '/activity-oop/performance-and-multithreaded-programming') }
+	const sleepFast = () => { return internalLink('SleepFast', '/activity-oop/java-sleep-fast')}
+	const bodyMassIndexWithJavaDocAndScanner = () => { return internalLink('BMI with JavaDoc and Scanner', '/activity-oop/bmi-calculator-add-javadoc-and-keyboard-input')}
+	const objectOrientedProgrammingLanguagesAndPlatforms = () => { return internalLink('Object-Oriented Programming Languages and Platforms', '/activity-oop/languages-and-platforms')}
+
 	const thunderbirdLite = () => { return internalLink('ThunderbirdLite', '/activity-oop/java-thunderbird-lite')}
 	const sprint = 7
 	return ( <div>
 		{ActivitiesListIntro(sprint)}
 		<ol>
 			{StandardActivitiesWithLinkAndSprint(sprint, thunderbirdLink(), oreillyPlaylistOOP() )}
+
+			<li>Review {performanceAndMultithreading()}</li>
+			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 9 on Threads</li>
+			<li>Complete {sleepFast()}</li>
+			<li>Complete {bodyMassIndexWithJavaDocAndScanner()}</li>
+			<li>Review {objectOrientedProgrammingLanguagesAndPlatforms()}</li>
+
+
 			<li>Complete {thunderbirdLite()}{estimated('2 hours')}</li>
 			<li>Complete {architecturePart1()}</li>
 			<li>Complete {thunderbirdLink()}{estimated('6 hours')}</li>
