@@ -3,6 +3,7 @@ import { oreillyPlaylistSC } from '../DataAndAPIs/Links'
 
 import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost } from './AL00000Sprint03'
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint, Closing } from './AL00000Sprint05'
+import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
 
 import { lectureRecordingPlaylist } from './AL49200Sprint02'
 import { classProductSprint6Link } from '../Activities/ClassProduct'
@@ -41,6 +42,7 @@ than being “almost done” with something great.</p>
 	<li>Within {oreillyPlaylistSC()} review “Essential Scrum” looking for topics that your team can focus on improving</li>
 
 	{InitialPost(sprint)}
+	<li>Complete {capacityCommittedEffortDeliveredLink()}</li>
 	{StandardActivitiesClosingWithLinkAndSprint(sprint, classProductSprint6Link(),'14 hours per team member')}
 </ol>
 {Closing()}

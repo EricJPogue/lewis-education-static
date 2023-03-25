@@ -2,12 +2,11 @@ import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
 import { ServerlessAzure, ServerlessGoogle, ServerlessAWS } from '../DataAndAPIs/Links'
-
-import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
-
 import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
+
 import { finalProjectSprint6Link } from '../Activities/FinalProject'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
+import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
 
 export const al44000Sprint06 = () => {
 	const sprint = 6
@@ -40,9 +39,9 @@ export const list44000Sprint06 = (sprint) => {
 			<li>Review {softwareMetrics()} lecture</li>
 
 			{initialPost(sprint)}
-			<li>Review and implement {capacityCommittedEffortDeliveredLink()}</li>
 			<li>Within {oreillyPlaylistSE()} “Scaling Software Agility” read chapters 1 and 2 focussing on “Assumptions Underlying the Model”</li>
 			<li>Review and analyze {ServerlessAzure()}, {ServerlessGoogle()}, and {ServerlessAWS()}</li>
+			<li>Complete {capacityCommittedEffortDeliveredLink()}</li>
 			{standardActivitiesClosing(sprint, finalProjectSprint6Link(), '6 hours')}
 		</ol>
 	</div> )
