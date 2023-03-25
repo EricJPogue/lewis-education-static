@@ -2,8 +2,9 @@ import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
 
-import { oreillyPlaylistOOP, internalLink } from '../DataAndAPIs/Links'
-import { swissArmyKnifeV2Link } from '../Activities/SwissArmyKnife'
+import { oreillyPlaylistOOP, internalLink, externalLink } from '../DataAndAPIs/Links'
+// import { swissArmyKnifeV2Link } from '../Activities/SwissArmyKnife'
+import { swissArmyKnifeServerLink } from '../Activities/SwissArmyKnifeServer'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
 import { learningJavaExampleCode } from '../DataAndAPIs/Links'
@@ -32,29 +33,27 @@ export const al24500Sprint06 = ( props ) => {
 
 export const list24500Sprint06 = (sprint) => {
 	const personalInformationJSONFiles = () => { return internalLink('Personal Information JSON Files', '/activity-oop/personal-info-json-to-azure')}
-
+	const javaServletOnAzureQuickStart = () => { return externalLink('Quickstart: Create a Java app on Azure App Service', 
+		'https://learn.microsoft.com/en-us/azure/app-service/quickstart-java?tabs=javase&pivots=platform-windows-development-environment-azure-portal')}
+	const javaServletIntroduction = () => { return externalLink('Java Servlets Introduction', 'https://pithub.blob.core.windows.net/nvm4zqwm/jb85qsab-userstory14.pdf')}
+	const javaServletOnAzure = () => { return externalLink('Creating a server website using azure', 'https://pithub.blob.core.windows.net/nvm4zqwm/jb85qsab-userstory10.pdf')}
 
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-			{standardActivities(sprint, swissArmyKnifeV2Link(), oreillyPlaylistOOP())}
-			<li>Review and update {finalProjectProposalLink()}</li>
-			<li>Review {azureWebsiteLink()}</li>
+			{standardActivities(sprint, swissArmyKnifeServerLink(), oreillyPlaylistOOP())}
+			<li>Read {javaServletIntroduction()} by Muhammad J Jarad</li>
 			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 12 “Programming the Web” and review associated {learningJavaExampleCode()}</li>
+			<li>Complete {javaServletOnAzure()} by Muhammad J Jarad</li>
+			<li>Complete {javaServletOnAzureQuickStart()}</li>
 
 			{initialPost(sprint)}
+			<li>Review and update {finalProjectProposalLink()}</li>
+			<li>Review {azureWebsiteLink()}</li>
 			<li>Complete {personalInformationJSONFiles()}</li>
-
-			{standardActivitiesClosing(sprint, swissArmyKnifeV2Link(), '8 hours')}
+			{standardActivitiesClosing(sprint, swissArmyKnifeServerLink(), '6 hours')}
 		</ol>
 	</div> )
 }
 
 // Certified for SP22 (03/26/2022)
-
-/*
-Java: https://www.w3schools.com/java/
-JavaServlets: 
-
-*/
-
