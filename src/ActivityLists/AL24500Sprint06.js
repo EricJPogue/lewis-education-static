@@ -13,11 +13,11 @@ export const al24500Sprint06 = ( props ) => {
 	const sprint = 6
 
 	return ( <div>
-		<h5>Sprint 6: Oh my! Hang on tight. We are going to try something new.</h5>
-		<p>We are going to be learning something new together this sprint. A vast majority of Java development job opportunities 
-		today are for Java web development which takes the form of Java servlets. We have long wanted to integrate Web 
-		development and Java servlet programming into our Object-Oriented Programming class. Now with your help and with the help
-		of Jarad and Nick we are going to make that happen.</p>
+		<h5>Sprint 6: Java servlets... Oh my! Hang on tight. We are going to try something new.</h5>
+		<p>We are going to be learning something new together this sprint. A vast majority of Java development job 
+		opportunities are in web development. Java web development is implemented utilizing with Java servlets. We have 
+		long wanted to integrate web development and Java servlet programming into Object-Oriented Programming. Now with 
+		your help and with the help of Jarad and Nick we are going to make that happen.</p>
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{ listStyleType: 'square' }}>
