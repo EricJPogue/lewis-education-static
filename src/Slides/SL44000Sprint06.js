@@ -25,7 +25,8 @@ export const se_6_1of6_PAaA = {
 		'Come Monday with a fully groomed Product Backlog',
 		'Make sure that you production application is up and running Monday' ],
 	'announcements':[ 
-		'Today is going to be challenging so let’s stay relaxed and stay focused'],
+		'Welcome to Dr. Howard, Professor and Chair, Engineering, Computing and Mathematical Sciences',
+		'Today is going to be challenging so let’s stay relaxed and stay focused' ],
 	'agenda':[ 
 		`Sprint ${sprint} Planning as a Class`,
 		'Prework for Next Class',
@@ -40,10 +41,10 @@ export const se_6_1of6 = () => {
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
 			'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
-			'No class Lab Demos as we will each be demoing stories within your teams', 
+			'Demos will be occurring within your teams', 
 			'The Easter Holiday Recess will cause us a a few scheduling and capacity challenges',
-			'We will complete our scrum team Discussion Board breakout session on Wednesday',
-			`We will have sprint ${sprint-1} Demos and Retrospective on Friday` ])
+			'We will complete our scrum team Discussion Board on Wednesday',
+			`We will have sprint ${sprint-1} Retrospective on Friday` ])
 	}
 	const activitiesReview = () => {
 		return basicSlide('Activity List and Assignments Review', [

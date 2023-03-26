@@ -44,6 +44,13 @@ export const sprintPlanningSlideDeck = (sprint) => {
 				'Force ranked stories',
 				`More estimated stories than your team can get Done in sprint ${sprint}` ])
 	}
+	const productBacklogGroomingUpdate = () => {
+		return orderedListSlide('Step 3a: Product Backlog Grooming Update', 
+			'Product Owner leads your team’s Product Backlog Grooming Update by:', [
+				`Copying not “Done” sprint ${sprint-1} stories back to the Product Backlog`,
+				`Warning: Copy don’t move stories from the Sprint ${sprint-1} Backlog`,
+				'Question: Will your team decide to re-estimate not “Done” stories as they are moved? (Answer: No)' ])
+	}
 	const planning = () => {
 		return orderedListSlide('Step 4: Sprint Planning', 
 			'Create your team’s Sprint Backlog by:', [
@@ -56,5 +63,6 @@ export const sprintPlanningSlideDeck = (sprint) => {
 				'Making commitments while recalling that it is okay to be wrong, but not okay to be ambiguous' ])
 	}
 
-	return [ intro, scrumProcess, prioritiesAndRoles, done, scrumProcess, productBacklogGrooming, scrumProcess, planning ]
+	return [ intro, scrumProcess, prioritiesAndRoles, done, scrumProcess, productBacklogGrooming, productBacklogGroomingUpdate, 
+		scrumProcess, planning ]
 } 
