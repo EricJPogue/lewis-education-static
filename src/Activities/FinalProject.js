@@ -222,16 +222,23 @@ export const finalProjectSprint6 = () => {
 	<li><NavLink to='/activity/final-project-sprint-5'>Final Project Sprint 5</NavLink></li>
 </ul>
 
-<p>This is our first full sprint for our final project. We delivered something in sprint 5, we completed sprint 6 
-planning, and we have made our specific commitment for sprint 6.</p>
+<p>We delivered something in sprint 5. Very well done! Now let’s focus on our sprint 6 work by completing Sprint 6 planning,
+making our commitments, and focusing our delivering our stories.</p>
 
 <p>Always remember the that in agile and scrum stories must be 100% complete in order to receive any credit for completing 
-the story. There is no such thing as “almost complete” or even ”99% complete” in scrum. We often use the term <em>done</em> to 
-describe a story that is 100% complete. At a minimum, our definitions of <em>done</em> in sprint 6
-includes that a story is fully implemented the story’s user centric functionality, deployed tou the team’s production 
-website, and is “demo-able” by every member of the team.</p>
+the story. There is no such thing as “almost complete” or even ”99% complete” in scrum.</p>
 
-<p>Create something that adds value and that you can be proud of creating.</p>
+<p>Recall from sprint 5 that we worked to:</p>
+<ol>
+	<li>Successfully deploying your product to a local development and test environment to you personal computer</li>
+	<li>Successfully deploying your product to hosted test and production environments</li>
+	<li>Review {scrum()} while focusing on Events, Artifacts, and Rolls</li>
+	<li>Review {agileAllianceAgile101()} from {agileAlliance()}</li>
+	<li>Understand and consistently utilize {userStory()}, {userStoryTemplate()}, {epic()}, {productBacklog()}, {backlogGrooming()} and {iNVEST()}</li>
+	<li>Complete {backlogGrooming()} to create and update groom your {productBacklog()} while creating appropriate <em>artifacts</em></li>
+</ol>
+
+<p>Now let’s focus on sprint 6, stay focused, and work toward delivering something that you will be proud of creating.</p>
 {sprintRequirements(6)}
 </div> )
 }

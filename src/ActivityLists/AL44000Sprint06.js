@@ -21,7 +21,7 @@ export const al44000Sprint06 = () => {
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
-			<li>Utilize your knowledge of Agile development and Saas to deliver Final Project stories/features</li>
+			<li>Utilize your knowledge of Agile development and Software-As-A-Service (Saas) to deliver Final Project stories</li>
 			<li>Understand and work with Software Metrics</li>
 			<li>Understand serverless computing</li>
 		</ul>
