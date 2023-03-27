@@ -8,10 +8,11 @@ import { finalProjectSprint6Link } from '../Activities/FinalProject'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
 
+export const al44000Sprint6Topics = 'Team Final Project utilizing Scrum, Software Metrics, and Serverless Computing'
 export const al44000Sprint06 = () => {
 	const sprint = 6
 	return ( <div>
-		<h5>Sprint 6: Final Projects, Software Metrics, and Serverless Computing</h5>
+		<h5>Sprint 6: {al44000Sprint6Topics}</h5>
 
 		<p>Welcome to sprint 6. This sprint will see us splitting our time between our final project, understanding 
 		software metrics and understanding serverless computing in the context of Azure Functions, Google Cloud 

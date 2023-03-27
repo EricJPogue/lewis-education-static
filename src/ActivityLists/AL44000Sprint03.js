@@ -6,7 +6,7 @@ import { oreillyPlaylistSE, internalLink, externalLink, gitCommands, jsonArticle
 import { assignmentPortfolioWithNodeJSLink } from '../Activities/WebAssignmentPortfolioWithNodeJS'
 import { gettingToKnowEachOthersTeamsLink } from '../Activities/WebGettingToKnowEachOthersTeams'
 
-export const al44000Sprint3Topics = 'Application Requirements, Live Scrum Teams, Node.js, and Azure'
+export const al44000Sprint3Topics = 'Live Scrum Teams, Application Requirements, GitHub, Static Websites, Node.js, and Azure'
 export const al44000Sprint03 = () => {
 	const sprint = 3
 

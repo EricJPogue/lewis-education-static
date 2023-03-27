@@ -8,10 +8,11 @@ import { finalProjectSprint7Link } from '../Activities/FinalProject'
 import { introductionToReactLink } from '../Activities/IntroductionToReact'
 import { oreillyPlaylistSE, internalLink } from '../DataAndAPIs/Links'
 
+export const al44000Sprint7Topics = 'Team Final Project, Application Frameworks, and React'
 export const al44000Sprint07 = () => {
 	const sprint = 7
 	return ( <div>
-		<h5>Sprint 7: Final Project, Design Patterns, and React</h5>
+		<h5>Sprint 7: {al44000Sprint7Topics}</h5>
 
 		<p>Welcome to sprint 7. This sprint will see us continuing to work on our final project, optimizing your team’s 
 		Agile processes, leaning about React, and looking at Design Patterns.</p>

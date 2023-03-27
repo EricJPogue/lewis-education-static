@@ -8,10 +8,11 @@ import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityComm
 
 import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
 
+export const al44000Sprint5Topics = 'Team Final Project utilizing Scrum Events, Artifacts, and Roles plus Software Maintenance'
 export const al44000Sprint05 = () => {
 	const sprint = 5
 	return ( <div>
-		<h5>Sprint 5: Software Maintenance, Final Project Proposal, and production Azure Site Setup</h5>
+		<h5>Sprint 5: {al44000Sprint5Topics}</h5>
 
 		<p>Welcome to sprint 5. We will start this sprint by learning about software maintenance. Very quickly we will 
 		come to understand that since Agile development has us shipping software to customers every few weeks, nearly all of 

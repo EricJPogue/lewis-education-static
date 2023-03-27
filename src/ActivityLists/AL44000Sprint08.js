@@ -4,10 +4,11 @@ import { learningObjectivesIntro, activitiesListIntro, standardActivities, stand
 import { finalProjectSprint8Link } from '../Activities/FinalProject'
 import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
 
+export const al44000Sprint8Topics = 'Team Final Project, Design Patterns, and Security'
 export const al44000Sprint08 = () => {
 	const sprint = 8
 	return ( <div>
-		<h5>Sprint 8: Final project and Design Patterns</h5>
+		<h5>Sprint 8: {al44000Sprint8Topics}</h5>
 
 		<p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 
 		strong and deliver a Final Project that makes you proud. Don’t do it for the grade, don’t do it for me, do this one for 

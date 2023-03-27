@@ -1,6 +1,13 @@
 import { getCalendarByCalendarID, _SPRING_2023_01_09_16, _CURRENT_CALENDAR } from "./Calendars"
 
-import { al44000Sprint3Topics } from "../ActivityLists/AL44000Sprint03"
+import { al44000Sprint1Topics } from '../ActivityLists/AL44000Sprint01'
+import { al44000Sprint2Topics } from '../ActivityLists/AL44000Sprint02'
+import { al44000Sprint3Topics } from '../ActivityLists/AL44000Sprint03'
+import { al44000Sprint4Topics } from '../ActivityLists/AL44000Sprint04'
+import { al44000Sprint5Topics } from '../ActivityLists/AL44000Sprint05'
+import { al44000Sprint6Topics } from '../ActivityLists/AL44000Sprint06'
+import { al44000Sprint7Topics } from '../ActivityLists/AL44000Sprint07'
+import { al44000Sprint8Topics } from '../ActivityLists/AL44000Sprint08'
 
 export const getIsScheduleT = () => {
 	return (getClass().schedule === _T)
@@ -71,8 +78,6 @@ export const getClassByClassID = (classID) => {
 	console.log('Error: Class not found (class= “'+classID+'”).')
 	return classSectionList[0]
 }
-
-export const getModuleDescription = (sprint) => { return getClassSection().class.modules[sprint-1] }
 
 export const _INSTRUCTOR = { 
 	name:'Eric Pogue', 
@@ -275,7 +280,7 @@ export const _CPSC_36000 = {
 	],
 	textBook: 'Reading assignments well be made from the O’Reilly online book service which Lewis University provides to students at no cost.',
 	modules: [
-		'Programing Languages, Object-Oriented Programming (OOP) Concepts, Getting Started with Go',
+		'Programming Languages, Object-Oriented Programming (OOP) Concepts, Getting Started with Go',
 		'OOP Patterns and Principles, Functional Programming, Configuration Management, Structs, Interfaces, and Packages',
 		'Inheritance and Polymorphism, Classes (including Constructors and Destructors), Exceptions, Templates, Overloading, and Testing',
 		'Concurrency and Next Steps',
@@ -322,14 +327,14 @@ export const _CPSC_44000 = {
 	],
 	textBook: 'Fox and Patterson. Engineering Software as a Service: An Agile Approach Using Cloud Computing.  ISBN: 978-0984881246.',
 	modules: [
-		'Software Engineering Life Cycles, Software as a Service, and Cloud Computing',
-		'Overview of Ruby, JavaScript, and Node.js',
-		`${al44000Sprint3Topics}`, // Previously: Behavior Driven Development, Plan and Document Requirements, and hosting Node.js in the cloud
-		'Testing and Test-Driven Development, HTML, CSS, and JavaScript, Node.js, and Express',
-		'Maintenance and Metrics, Live Scrum Team with Requirements, Planning, Environment, and Demos',
-		'Project Management & Scaled Agile, Live Scrum Team adding Metrics, and Testing',
-		'Security and Live Scrum Team',
-		'Software Architecture, Final Project, Live Scrum Team'
+		`${al44000Sprint1Topics}`,
+		`${al44000Sprint2Topics}`,
+		`${al44000Sprint3Topics}`, 
+		`${al44000Sprint4Topics}`, 
+		`${al44000Sprint5Topics}`, 
+		`${al44000Sprint6Topics}`,
+		`${al44000Sprint7Topics}`,
+		`${al44000Sprint8Topics}`,
 	]
 }
 

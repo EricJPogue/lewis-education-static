@@ -11,10 +11,11 @@ import { webDiceRollerLink } from '../Activities/WebDiceRoller'
 const foxChapter2Lecture = () => internalLink('lecture', '/activity/fox-chapter-02')
 const foxChapter6Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-06')}
 
+export const al44000Sprint2Topics = 'Agile, Scrum, Software-As-A-Service, Microsoft Azure, JavaScript, and Ruby on Rails'
 export const al44000Sprint02 = () => {
 	const sprint = 2
 	return ( <div>
-		<h5>Sprint 2: Node.js, JavaScript, Ruby on Rails, and Azure</h5>
+		<h5>Sprint 2: {al44000Sprint2Topics}</h5>
 
 		<p><em>Welcome to sprint 2.</em> We covered a lot of material in sprint 1. However, we didn't get a chance to write 
 		much code. This sprint get your text editors out. We are going to start practicing some of the concepts we learned.</p>
