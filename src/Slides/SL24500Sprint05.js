@@ -13,7 +13,7 @@ import { oop_6_1of6_PAaA } from './SL24500Sprint06'
 import { list24500Sprint04 } from '../ActivityLists/AL24500Sprint04'
 import { list24500Sprint05 } from '../ActivityLists/AL24500Sprint05'
 
-// Sprint 5 Introduction to Object-Oriented Programming (OOP) global values.
+// Sprint 5 Object-Oriented Programming (OOP) global values.
 const sprint = 5
 const activityList = () => { return list24500Sprint05(sprint) }
 const activityListPrevious = () => { return list24500Sprint04(sprint) }
