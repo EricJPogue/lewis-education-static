@@ -28,7 +28,7 @@ import { web_2_1of6, web_2_2of6, web_2_3of6, web_2_4of6, web_2_5of6, web_2_6of6 
 import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6, web_3_5of6, web_3_6of6 } from './SL24700Sprint03'
 import { web_4_1of6, web_4_2of6, web_4_3of6, web_4_4of6, web_4_5of6, web_4_6of6 } from './SL24700Sprint04'
 import { web_5_1of6, web_5_2of6, web_5_3of6, web_5_4of6, web_5_5of6, web_5_6of6 } from './SL24700Sprint05'
-import { web_6_1of6, web_6_2of6, web_6_3of6, web_6_4of6, web_6_5of6, web_6_6of6	 } from './SL24700Sprint06'
+import { web_6_1of6, web_6_2of6, web_6_3of6, web_6_4of6, web_6_5of6, web_6_6of6	} from './SL24700Sprint06'
 import { web_7_1of6, web_7_2of6, web_7_3of6, web_7_4of6, web_7_5of6, web_7_6of6 } from './SL24700Sprint07'
 import { web_8_1of6, web_8_2of6, web_8_3of6, web_8_4of6, web_8_5of6, web_8_6of6 } from './SL24700Sprint08'
 
@@ -47,6 +47,7 @@ import { ssc_2_1of4, ssc_2_3of4 } from './SL49200Sprint02'
 import { ssc_3_1of4 } from './SL49200Sprint03'
 import { ssc_4_1of4 } from './SL49200Sprint04'
 import { ssc_5_1of4 } from './SL49200Sprint05'
+import { ssc_6_1of4 } from './SL49200Sprint06'
 
 // Routing constants are defined by the class number followed by the sprint number and session. Note that sessions are
 // identified by the session number without consideration for missed classes. For example a week 2 Friday session for a 
@@ -299,6 +300,7 @@ const sprint3Router = (route) => {
 		case '49200-3-1': return ssc_3_1of4()
 		case '49200-4-1': return ssc_4_1of4()
 		case '49200-5-1': return ssc_5_1of4()
+		case '49200-6-1': return ssc_6_1of4()
 
 		default: return null
 	}
