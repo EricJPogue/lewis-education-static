@@ -32,8 +32,8 @@ export const CALENDAR_LIST =  [
 			{ 'start':'Mon Feb 06 2023 08:00:00 GMT-0500', 'end':'Sun Feb 19 2023 23:59:00 GMT-0600', 'notes':'' },
 			{ 'start':'Mon Feb 20 2023 08:00:00 GMT-0500', 'end':'Sun Mar 12 2023 23:59:00 GMT-0600', 'notes':'Spring Break' },
 			{ 'start':'Mon Mar 13 2023 08:00:00 GMT-0500', 'end':'Sun Mar 26 2023 23:59:00 GMT-0600', 'notes':'' },
-			{ 'start':'Mon Mar 27 2023 08:00:00 GMT-0500', 'end':'Sun Apr 09 2023 23:59:00 GMT-0600', 'notes':'' },
-			{ 'start':'Mon Apr 10 2023 08:00:00 GMT-0500', 'end':'Sun Apr 23 2023 23:59:00 GMT-0600', 'notes':'Easter Holiday' },
+			{ 'start':'Mon Mar 27 2023 08:00:00 GMT-0500', 'end':'Sun Apr 09 2023 23:59:00 GMT-0600', 'notes':'Easter Holiday' },
+			{ 'start':'Mon Apr 10 2023 08:00:00 GMT-0500', 'end':'Sun Apr 23 2023 23:59:00 GMT-0600', 'notes':'' },
 			{ 'start':'Mon Apr 24 2023 08:00:00 GMT-0500', 'end':'Thu May 04 2023 23:59:00 GMT-0600', 'notes':'Final Exams' }
 		]
 	}

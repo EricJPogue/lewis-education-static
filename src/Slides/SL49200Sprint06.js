@@ -30,9 +30,9 @@ export const ssc_6_1of4 = () => {
 	const qAndASession = () => {
 		return orderedListSlide('Question and Answer Session', 'Questions:', [
 			`Will you complete your sprint ${sprint} planning by by the end of class today?`,
-			`Do you still need to complete your sprint ${sprint-1} demos and/or retrospective?`, 
 			'Has your MVP been delivered',
 			`Will you be able to show me your sprint ${sprint} planning commitment?`,
+			'Who would be willing to “trade sprint 8 for ~18-ish hours next semester”',
 			`Will you be able to show me at least one MVP ${sprint-1} demo?` ]
 		)
 	}
