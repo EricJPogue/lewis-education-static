@@ -32,7 +32,6 @@ export const se_6_1of6_PAaA = {
 		'Prework for Next Class',
 		`Sprint ${sprint} Planning for your Team` ]
 }
-// export const se_6_1of6 = () => { return xyz_n_1of6(sprint, se_6_1of6_lists.prework, activityListPrevious, se_6_1of6_lists.agenda, se_6_2of6_lists.prework, activityList) }
 export const se_6_1of6 = () => { 
 	const prework = () => { return tPreworkWithLogo('Prework For Today', se_6_1of6_PAaA.prework, sprint-1, activityListPrevious) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', se_6_1of6_PAaA.announcements) }
@@ -62,10 +61,12 @@ export const se_6_1of6 = () => {
 	return slideDeckWithSprintPlanning
 }
 
-// SE Sprint 6 session 2 of 6: Wednesday
+// Session 2 of 6: Wednesday
 const se_6_2of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		'Software Systems Capstone section now available',
+		'Registration open April 11th... class size limited to 10 or 10-ish',
+		'Available projects include Aidan, PitHub, QuizMaster, Ultimate Seat Selector, possibly Arduino Drone' ],
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}` ],

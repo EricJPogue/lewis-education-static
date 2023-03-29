@@ -26,32 +26,32 @@ export const ics_6_1of6 = () => {
 			'You will have until the end of the day Monday, April 10th to submit assignments' ])
 	}
 
-	return xyz_n_1of6(sprint, ics_6_1of6_PAaA.prework, activityListPrevious, ics_6_1of6_PAaA.agenda, ics_6_2of6_lists.prework, activityList, sprintPlanning) 
+	return xyz_n_1of6(sprint, ics_6_1of6_PAaA.prework, activityListPrevious, ics_6_1of6_PAaA.agenda, ics_6_2of6_PAaA.prework, activityList, sprintPlanning) 
 }
 
-// Sprint 6 session 2 of 6: Wednesday
-const ics_6_2of6_lists = {
-	'announcements':[ 
-		'Any announcements?' ],
+// Session 2 of 6: Wednesday
+const ics_6_2of6_PAaA = {
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
+	'announcements':[ 
+		'Registration for Fall 2023 starts April 11' ],
 	'agenda':[
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
-export const ics_6_2of6 = () => { return xyz_n_2of6(sprint, ics_6_2of6_lists, ics_6_3of6_lists.prework, activityList) }
+export const ics_6_2of6 = () => { return xyz_n_2of6(sprint, ics_6_2of6_PAaA, ics_6_3of6_PAaA.prework, activityList) }
 
-// Sprint 6 session 3 of 6: Friday
-const ics_6_3of6_lists = {
-	'announcements':[ 
-		'John Deere job openings' ],
+// Session 3 of 6: Friday
+const ics_6_3of6_PAaA = {
 	'prework':[
 		'Complete through activity 7 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
+	'announcements':[ 
+		'John Deere job openings' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
@@ -95,10 +95,10 @@ export const ics_6_3of6 = () => {
 			'Very nice work!' ])
 		}
 	}
-	return xyz_n_3of6(sprint, ics_6_3of6_lists, ics_6_4of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
+	return xyz_n_3of6(sprint, ics_6_3of6_PAaA, ics_6_4of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
 
-// Sprint 6 session 4 of 6: Monday
+// Session 4 of 6: Monday
 const ics_6_4of6_lists = {
 	'announcements':[ 
 		'Sprint 6 activities updated.' ],
@@ -126,7 +126,7 @@ export const ics_6_4of6 = () => {
 	return xyz_n_4of6(sprint, ics_6_4of6_lists, ics_6_5of6_lists.prework, activityList, breakout)
 }
 
-// Sprint 6 session 5 of 6: Wednesday
+// Session 5 of 6: Wednesday
 const ics_6_5of6_lists = {
 	'announcements':[ 
 		'Any announcements or questions?' ],
@@ -141,7 +141,7 @@ const ics_6_5of6_lists = {
 }
 export const ics_6_5of6 = () => { return xyz_n_5of6(sprint, ics_6_5of6_lists, ics_6_6of6_lists.prework, activityList) }
 
-// Sprint 6 session 6 of 6: Friday
+// Session 6 of 6: Friday
 const ics_6_6of6_lists = {
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday!` ],
