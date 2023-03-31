@@ -121,7 +121,9 @@ export const se_6_3of6 = () => {
 		return orderedListSlide('Class Retrospective',
 		'Feedback from Assignments & Reflections', [
 		`Wonderful sprint ${sprint-1} submission percentage`,
-		'I am running behind on grading assignments... sorry',
+		'Lot’s of great comments about working with teammates', 
+		'Lot’s of obvious pride in your work',
+		'I am running behind on grading assignments... sorry for the generic comments to many of your reflections',
 		'Planning is hard... and having more time (without experimentation) does not make it easier or better', 
 		'Estimation is hard... and having more time (without experimentation) does not make it easier or better',  
 		'Very well done!... this is hard!' ])
