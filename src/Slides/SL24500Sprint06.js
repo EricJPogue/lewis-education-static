@@ -1,4 +1,7 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, tLab } from './SL00000Sprint00'
+
+import { submissionPercentage, orderedListSlide } from './SLSprint00'
+import { xyz_n_3of6 } from './SL00000Sprint00'
 
 import { list24500Sprint05 } from '../ActivityLists/AL24500Sprint05'
 import { list24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
@@ -25,13 +28,49 @@ const oop_6_2of6_PAaA = {
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
-export const oop_6_2of6 = () => { return xyz_n_2of6(sprint, oop_6_2of6_PAaA, ics_6_3of6_PAaA.prework, activityList) }
+export const oop_6_2of6 = () => { return xyz_n_2of6(sprint, oop_6_2of6_PAaA, oop_6_3of6_PAaA.prework, activityList) }
 
 // Session 3 of 6: Friday
-const ics_6_3of6_PAaA = {
+const oop_6_3of6_PAaA = {
 	'prework':[
 		'Complete through activity 7 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
+	'announcements':[ 
+		'Any announcements' ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class',
+		'Lab' ]
+}
+export const oop_6_3of6 = () => {
+	const metricsSubmissionPercentage = () => {
+			return submissionPercentage([
+				{ name: 'Discussion', due:17, submitted:15 },
+				{ name: 'Quiz', due:17, submitted:15 },
+				{ name: 'Lab', due:17, submitted:14 },
+				{ name: 'Reflection', due: 17, submitted: 14 }
+			])
+	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+		'Feedback from Assignments & Reflections', [
+		'We are really struggling from a submission perspective',
+		'All assignments graded and posted', 
+		'Solid labs' ])
+	}
+	const lab = () => { return tLab(sprint) }
+
+	let slides = xyz_n_3of6(sprint, oop_6_3of6_PAaA, oop_6_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+	slides.splice(slides.length-1,0,lab)
+	return slides
+}
+
+const oop_6_4of6_PAaA = {
+	'prework':[
+		'Complete through activity 7 prior to next class', '',
+		`Be prepared for more servlet programming` ],
 	'announcements':[ 
 		'John Deere job openings' ],
 	'agenda':[

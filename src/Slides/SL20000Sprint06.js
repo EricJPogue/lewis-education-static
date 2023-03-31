@@ -51,7 +51,7 @@ const ics_6_3of6_PAaA = {
 		'Complete through activity 7 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
 	'announcements':[ 
-		'John Deere job openings' ],
+		'Any announcements?' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
@@ -61,21 +61,11 @@ const ics_6_3of6_PAaA = {
 
 export const ics_6_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:26 },
-				{ name: 'Quiz', due:27, submitted:26 },
-				{ name: 'Lab', due:27, submitted:25 },
-				{ name: 'Reflection', due: 27, submitted: 26 }
-			])
-		} else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:26 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:27 },
-				{ name: 'Reflection', due: 27, submitted: 27 }
-			])
-		}
+		return submissionPercentage([
+			{ name: 'Discussion', due:13, submitted:13 },
+			{ name: 'Quiz', due:13, submitted:13 },
+			{ name: 'Lab', due:13, submitted:12 },
+			{ name: 'Reflection', due: 13, submitted: 13 }])
 	}
 	const retrospective = () => {
 		if (getClass().section === '002') {
@@ -88,9 +78,8 @@ export const ics_6_3of6 = () => {
 		} else {
 			return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Exceptional submission percentage... very well done!',
-			'100% Submission Percentage === Food... what does “===” mean in Python?',
-			'Not all assignments are graded', 
+			'Wonderful submission percentage... very well done!',
+			'Assignments are graded and posted', 
 			'Multiple Reflection comments about successfully getting started earlier', 
 			'Very nice work!' ])
 		}
