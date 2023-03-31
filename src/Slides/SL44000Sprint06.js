@@ -111,18 +111,20 @@ const se_6_3of6_lists = {
 export const se_6_3of6 = () => { 
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:13, submitted:13 },
-			{ name: 'Quiz', due:13, submitted:13 },
-			{ name: 'Lab', due:13, submitted:13 },
-			{ name: 'Reflection', due: 13, submitted: 12 }
+			{ name: 'Discussion', due:26, submitted:26 },
+			{ name: 'Quiz', due:26, submitted:26 },
+			{ name: 'Lab', due:26, submitted:25},
+			{ name: 'Reflection', due: 26, submitted: 26 }
 		])
 	}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 		'Feedback from Assignments & Reflections', [
-		'Exceptional sprint 5 submission percentage',
-		'All assignments are graded and posted', 
-		'Very well done in sprint 5... this is hard!' ])
+		`Wonderful sprint ${sprint-1} submission percentage`,
+		'I am running behind on grading assignments... sorry',
+		'Planning is hard... and having more time (without experimentation) does not make it easier or better', 
+		'Estimation is hard... and having more time (without experimentation) does not make it easier or better',  
+		'Very well done!... this is hard!' ])
 	}
 	const scrumTeamDemos = () => {
 		return orderedListSlide('Scrum Team Demos',
@@ -131,7 +133,7 @@ export const se_6_3of6 = () => {
 	}
 	const scrumTeamRetrospective = () => {
 		return orderedListSlide('Scrum Team Retrospective',
-		'What will your team need to do differently to complete Sprint 7 planning on the first day of Sprint 7', [
+		'What will your team need to do to complete Sprint 7 planning on the first day of Sprint 7', [
 		'What is the highest priority Continuous Improvement item for your team... will you make it a story in the future?' ])
 	}
 
