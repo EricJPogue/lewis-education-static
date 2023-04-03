@@ -17,7 +17,7 @@ const activityListPrevious = () => { return list44000Sprint06(sprint-1) }
 const activityList = () => { return list44000Sprint07(sprint) }
 
 // Sprint 7 session 1 of 6: Monday
-export const se_7_1of6_lists = xyz_n_1of6_lists(sprint)
+export const se_7_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const se_7_1of6 = () => { 
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
@@ -27,7 +27,7 @@ export const se_7_1of6 = () => {
 			`We will also have our sprint ${sprint-1} Demos and Retrospective next Monday` ])
 	}
 
-	return xyz_n_1of6(sprint, se_7_1of6_lists.prework, activityListPrevious, se_7_1of6_lists.agenda, se_7_4of6_lists.prework, activityList, sprintPlanning()) 
+	return xyz_n_1of6(sprint, se_7_1of6_PAaA.prework, activityListPrevious, se_7_1of6_PAaA.agenda, se_7_4of6_lists.prework, activityList, sprintPlanning()) 
 }
 
 // Sprint 7 session 2 of 6: Wednesday
