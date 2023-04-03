@@ -1,9 +1,14 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
-import { xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
+import { xyz_n_2of6, xyz_n_3of6, xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, breakoutStandard } from './SLSprint00'
-import { ics_7_1of6_lists } from './SL20000Sprint07'
+import { tQuiz } from './SLSprint00'
+import { ics_7_1of6_PAaA } from './SL20000Sprint07'
+
+import { tPrework } from './SLSprint00'
+import { checklistAnnouncementsPreworkAndAgenda, tLab, completeDeck } from './SL00000Sprint00'
+
 
 import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
@@ -84,20 +89,22 @@ export const ics_6_3of6 = () => {
 			'Very nice work!' ])
 		}
 	}
-	return xyz_n_3of6(sprint, ics_6_3of6_PAaA, ics_6_4of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
+	return xyz_n_3of6(sprint, ics_6_3of6_PAaA, ics_6_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
 
 // Session 4 of 6: Monday
-const ics_6_4of6_lists = {
-	'announcements':[ 
-		'Sprint 6 activities updated.' ],
+const ics_6_4of6_PAaA = {
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared for World Wide Web breakout' ],
+	'announcements':[ 
+		`All sprint ${sprint} assignments due “Sunday”! ... grace period until Tuesday morning at 6 AM`,
+		'Sprint 7 Planning will be next Wednesday' ],
 	'agenda':[
 		'World Wide Web Breakout',
 		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		'Lab & Programming Together (as time allows)',
+		`Quiz ${sprint}` ]
 }
 export const ics_6_4of6 = () => {
 	const breakout = () => { 
@@ -108,30 +115,35 @@ export const ics_6_4of6 = () => {
 				'HTTP, SSL, HTTPs, and DNS',
 				'Java Applets, Java Servlets, and Java Server Pages',
 				'XML, DTDs, and JSON',
-				'Search Engines, Social Networks, Cookies, Web Analytics, and Web 3.0' ]
+				'Search Engines, Social Networks, Cookies, Web Analytics, and Web 3.0',
+				'Where does ChatGPT fit into this?' ]
 		)
 	}
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_6_4of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_6_5of6_PAaA.prework, sprint, activityList) }
+	const quiz = () => { return tQuiz(sprint) }
 
-	return xyz_n_4of6(sprint, ics_6_4of6_lists, ics_6_5of6_lists.prework, activityList, breakout)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_6_4of6_PAaA, sprint, activityList)
+	return completeDeck(slideDeck, [poll, breakout, preworkNext, tLab, quiz])
 }
 
 // Session 5 of 6: Wednesday
-const ics_6_5of6_lists = {
-	'announcements':[ 
-		'Any announcements or questions?' ],
+const ics_6_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 11', '',
 		'Be prepared for Programming Together with Matchmaker for the Web',
 		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		'Any announcements or questions?' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Lab & Programming Together with Matchmaker for the Web',
 		`Quiz ${sprint}` ]
 }
-export const ics_6_5of6 = () => { return xyz_n_5of6(sprint, ics_6_5of6_lists, ics_6_6of6_lists.prework, activityList) }
+export const ics_6_5of6 = () => { return xyz_n_5of6(sprint, ics_6_5of6_PAaA, ics_6_6of6_PAaA.prework, activityList) }
 
 // Session 6 of 6: Friday
-const ics_6_6of6_lists = {
+const ics_6_6of6_PAaA = {
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
@@ -141,4 +153,4 @@ const ics_6_6of6_lists = {
 		'Sprint Progress Polling',
 		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
 }
-export const ics_6_6of6 = () => { return xyz_n_6of6(sprint, ics_6_6of6_lists, ics_7_1of6_lists.prework, activityList) }
+export const ics_6_6of6 = () => { return xyz_n_6of6(sprint, ics_6_6of6_PAaA, ics_7_1of6_PAaA.prework, activityList) }

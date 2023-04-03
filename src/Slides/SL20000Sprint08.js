@@ -14,7 +14,7 @@ const activityListPrevious = () => { return list20000Sprint07(sprint-1) }
 const activityList = () => { return list20000Sprint08(sprint) }
 
 // Sprint 8 session 1 of 6: Monday
-export const ics_8_1of6_lists = xyz_n_1of6_lists(sprint)
+export const ics_8_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const ics_8_1of6 = () => { 
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
@@ -27,11 +27,11 @@ export const ics_8_1of6 = () => {
 			'Final project presentations will be during our final exam time next week' ])
 	}
 
-	return xyz_n_1of6(sprint, ics_8_1of6_lists.prework, activityListPrevious, ics_8_1of6_lists.agenda, ics_8_2of6_lists.prework, activityList, sprintPlanning()) 
+	return xyz_n_1of6(sprint, ics_8_1of6_PAaA.prework, activityListPrevious, ics_8_1of6_PAaA.agenda, ics_8_2of6_PAaA.prework, activityList, sprintPlanning()) 
 }
 
 // Sprint 8 session 2 of 6: Wednesday
-const ics_8_2of6_lists = {
+const ics_8_2of6_PAaA = {
 	'announcements':[ 
 		'This is the last week of regular classes', 
 		'Be certain you have your final exam time marked on your calendar ' ],
@@ -44,15 +44,15 @@ const ics_8_2of6_lists = {
 		`Quiz ${sprint}` ]
 }
 export const ics_8_2of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_8_2of6_lists, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_8_2of6_PAaA, sprint, activityList)
 	const quiz = () => { return tQuiz(sprint) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_8_3of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_8_3of6_PAaA.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ tLab, preworkNext, quiz ]) 
 }
 
 // Sprint 8 session 3 of 6: Friday
-const ics_8_3of6_lists = {
+const ics_8_3of6_PAaA = {
 	'announcements':[ 
 		'Today is our last regular class session',
 		`Our final project presentations are **${getFinalExamDateAndTime()}**`, 
@@ -101,7 +101,7 @@ export const ics_8_3of6 = () => {
 			'Very nice work! I am impressed with what you have accomplished.' ])
 	}
 
-	let slides = xyz_n_3of6(sprint, ics_8_3of6_lists, ics_8_7of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)
+	let slides = xyz_n_3of6(sprint, ics_8_3of6_PAaA, ics_8_7of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
 
 	slides.splice(slides.length-2, 0, finalComments)
 	return slides
@@ -117,7 +117,7 @@ export const ics_8_5of6 = () => { return [ tNoRegularClassToday ] }
 export const ics_8_6of6 = () => { return [ tNoRegularClassToday ] }
 
 // Final Exam / Final Project Presentation
-const ics_8_7of6_lists = {
+const ics_8_7of6_PAaA = {
 	'announcements':[ 
 		'Final Project Presentations Today',
 		'Please consider taking time to complete your course evaluation' ],
@@ -130,7 +130,7 @@ const ics_8_7of6_lists = {
 		'Thank you!' ]
 }
 export const ics_8_7of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_8_7of6_lists, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_8_7of6_PAaA, sprint, activityList)
 	const finalProjectPresentation = () => {
 		return orderedListSlide('Final Project Presentations', `Recall that your final project presentation should including a/an:`, [
 			'Brief introduction of yourself',

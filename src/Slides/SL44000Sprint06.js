@@ -146,11 +146,11 @@ export const se_6_3of6 = () => {
 }
 
 const se_6_4of6_PAaA = {
-	'announcements':[ 
-		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`, ],
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared breakout session on Metrics' ],
+	'announcements':[ 
+		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`, ],
 	'agenda':[
 		'Metrics Breakout',
 		'Prework for Next Class',
