@@ -11,7 +11,7 @@ export const insertInto = (destinationDeck, sourceDeck, atDestinationIndex) => {
 export const sprintPlanningSlideDeck = (sprint) => {
 	const intro = () => {
 		return orderedListSlide('Sprint Planning Goal & Steps', 
-			`Each team member will **request** and commit to multiple User Stories that have a total story point 
+			`Goal: Each team member will **request** and commit to multiple User Stories that have a total story point 
 			estimate approximately equal to their sprint ${sprint} capacity by utilizing the following steps:`, [
 				'Priorities and Roles',
 				'“Done”',

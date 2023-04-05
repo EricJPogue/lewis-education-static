@@ -1,7 +1,7 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
-import { xyz_n_2of6, xyz_n_3of6, xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
+import { xyz_n_2of6, xyz_n_3of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, breakoutStandard } from './SLSprint00'
 import { tQuiz } from './SLSprint00'
 import { ics_7_1of6_PAaA } from './SL20000Sprint07'
@@ -131,16 +131,13 @@ export const ics_6_4of6 = () => {
 const ics_6_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 11', '',
-		'Be prepared for Programming Together with Matchmaker for the Web',
-		`Be prepared for Quiz ${sprint}` ],
+		'Be prepared for Lab' ],
 	'announcements':[ 
-		'Any announcements or questions?' ],
+		`All sprint ${sprint} assignments due “Sunday”! ... grace period until Tuesday morning at 6 AM` ],
 	'agenda':[
-		'Sprint Progress Polling',
-		'Lab & Programming Together with Matchmaker for the Web',
-		`Quiz ${sprint}` ]
+		'Lab' ]
 }
-export const ics_6_5of6 = () => { return xyz_n_5of6(sprint, ics_6_5of6_PAaA, ics_6_6of6_PAaA.prework, activityList) }
+export const ics_6_5of6 = () => { return xyz_n_6of6(sprint, ics_6_5of6_PAaA, ics_7_1of6_PAaA.prework, activityList) }
 
 // Session 6 of 6: Friday
 const ics_6_6of6_PAaA = {
