@@ -21,7 +21,7 @@ import { oop_2_1of6, oop_2_2of6, oop_2_3of6, oop_2_4of6, oop_2_5of6, oop_2_6of6 
 import { oop_3_1of6, oop_3_2of6, oop_3_3of6, oop_3_4of6, oop_3_5of6, oop_3_6of6 } from './SL24500Sprint03'
 import { oop_4_1of6, oop_4_2of6, oop_4_3of6, oop_4_4of6, oop_4_5of6 } from './SL24500Sprint04'
 import { oop_5_1of6, oop_5_2of6, oop_5_3of6, oop_5_4of6, oop_5_5of6, oop_5_6of6 } from './SL24500Sprint05'
-import { oop_6_1of6, oop_6_2of6, oop_6_3of6 } from './SL24500Sprint06'
+import { oop_6_1of6, oop_6_2of6, oop_6_3of6, oop_6_5of6 } from './SL24500Sprint06'
 
 import { web_1_1of6, web_1_2of6, web_1_3of6, web_1_4of6, web_1_5of6, web_1_6of6 } from './SL24700Sprint01'
 import { web_2_1of6, web_2_2of6, web_2_3of6, web_2_4of6, web_2_5of6, web_2_6of6 } from './SL24700Sprint02'
@@ -175,6 +175,7 @@ const sprint3Router = (route) => {
 		case '24500-6-1': return oop_6_1of6()
 		case '24500-6-2': return oop_6_2of6()
 		case '24500-6-3': return oop_6_3of6()
+		case '24500-6-5': return oop_6_5of6()
 
 		case '24700-1-1': return web_1_1of6()
 		case '24700-1-2': return web_1_2of6()

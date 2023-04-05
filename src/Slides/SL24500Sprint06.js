@@ -1,7 +1,7 @@
 import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, tLab } from './SL00000Sprint00'
 
 import { submissionPercentage, orderedListSlide } from './SLSprint00'
-import { xyz_n_3of6 } from './SL00000Sprint00'
+import { xyz_n_3of6, xyz_n_6of6 } from './SL00000Sprint00'
 
 import { list24500Sprint05 } from '../ActivityLists/AL24500Sprint05'
 import { list24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
@@ -79,3 +79,16 @@ const oop_6_4of6_PAaA = {
 		`Breakout for Sprint ${sprint-1} Retrospective`,
 		'Prework for Next Class' ]
 }
+
+// Session 5 of 6: Wednesday
+const oop_6_5of6_PAaA = {
+	'prework':[
+		'Be prepared for Lab' ],
+	'announcements':[ 
+		`All sprint ${sprint} assignments due “Sunday”! ... grace period until Tuesday morning at 6 AM` ],
+	'agenda':[
+		'Lab' ]
+}
+export const oop_6_5of6 = () => { return xyz_n_6of6(sprint, oop_6_5of6_PAaA, oop_7_1of6_PAaA.prework, activityList) }
+
+export const oop_7_1of6_PAaA = xyz_n_1of6_lists(sprint)
