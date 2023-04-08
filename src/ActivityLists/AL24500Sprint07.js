@@ -5,9 +5,8 @@ import { LearningObjectivesIntro, ActivitiesListIntro, InitialPost, Closing } fr
 import { StandardActivitiesWithLinkAndSprint, StandardActivitiesClosingWithLinkAndSprint } from './AL00000Sprint05'
 import { finalProjectLink } from '../Activities/FinalProject'
 // import { finalProjectSprint7Link } from '../Activities/FinalProject'
-import { oreillyPlaylistOOP, architecturePart1, internalLink } from '../DataAndAPIs/Links'
-import { thunderbirdLink } from '../Activities/Thunderbird'
-import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
+import { oreillyPlaylistOOP, internalLink } from '../DataAndAPIs/Links'
+import { thunderbirdLink } from '../Activities/Thunderbird'	
 import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 
 export const al24500Sprint07 = ( props ) => {
@@ -25,7 +24,6 @@ export const al24500Sprint07 = ( props ) => {
 		<ul style={{ listStyleType:'square'}}>
 			<li>Develop multithreaded Java applications</li>
 			<li>Create and automated API automated test applications in Java</li>
-			<li>Understand JavaDoc and how it can create self-documenting source code</li>
 
 			<li>Develop and enhance intermediate level graphical, distributed, multi-threaded Java applications</li>
 			<li>Create View and Model classes that conform to the model-view-controller pattern</li>
@@ -43,7 +41,7 @@ export const al24500Sprint07 = ( props ) => {
 export const list24500Sprint07 = () => {
 	const performanceAndMultithreading = () => { return internalLink('Performance and Multithreading', '/activity-oop/performance-and-multithreaded-programming') }
 	const sleepFast = () => { return internalLink('SleepFast', '/activity-oop/java-sleep-fast')}
-	const bodyMassIndexWithJavaDocAndScanner = () => { return internalLink('BMI with JavaDoc and Scanner', '/activity-oop/bmi-calculator-add-javadoc-and-keyboard-input')}
+
 	const objectOrientedProgrammingLanguagesAndPlatforms = () => { return internalLink('Object-Oriented Programming Languages and Platforms', '/activity-oop/languages-and-platforms')}
 
 	const thunderbirdLite = () => { return internalLink('ThunderbirdLite', '/activity-oop/java-thunderbird-lite')}
@@ -52,22 +50,17 @@ export const list24500Sprint07 = () => {
 		{ActivitiesListIntro(sprint)}
 		<ol>
 			{StandardActivitiesWithLinkAndSprint(sprint, thunderbirdLink(), oreillyPlaylistOOP() )}
-
 			<li>Review {performanceAndMultithreading()}</li>
 			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapter 9 on Threads</li>
 			<li>Complete {sleepFast()}</li>
-			<li>Complete {bodyMassIndexWithJavaDocAndScanner()}</li>
-			<li>Review {objectOrientedProgrammingLanguagesAndPlatforms()}</li>
-
-
 			<li>Complete {thunderbirdLite()}{estimated('2 hours')}</li>
-			<li>Complete {architecturePart1()}</li>
-			<li>Complete {thunderbirdLink()}{estimated('6 hours')}</li>
+			<li>Complete {thunderbirdLink()}{estimated('4 hours')}</li>
 
 			{InitialPost()}		
+			<li>Review {objectOrientedProgrammingLanguagesAndPlatforms()}</li>
 			<li>Verify that you will be presenting your Final Project on <em>{getFinalExamDateAndTime()}</em></li>
-			<li>Review and update {finalProjectProposalLink()}</li>
-			{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectLink(), '6 hours')}
+
+			{StandardActivitiesClosingWithLinkAndSprint(sprint, finalProjectLink(), '4 hours')}
 		</ol>
 	</div> )
 }
@@ -78,3 +71,10 @@ export const list24500Sprint07 = () => {
 // Todo: Review how many times Coding Standards is is the sprint 7 assignments.
 // Todo: Determine if 6, 8, or 10 hours would be the most appropriate to require on the final project. In SP22 I 
 // reduced it to 6 hours based on the fact that Easter Break was in sprint 7 and consumed Thursday, Friday, and Monday.
+
+// Todo: Consider adding back:
+//     const bodyMassIndexWithJavaDocAndScanner = () => { return internalLink('BMI with JavaDoc and Scanner', '/activity-oop/bmi-calculator-add-javadoc-and-keyboard-input')}
+//	   <li>Complete {architecturePart1()}</li>
+//     <li>Understand JavaDoc and how it can create self-documenting source code</li>
+//     <li>Complete {bodyMassIndexWithJavaDocAndScanner()}</li>
+//     <li>Review and update {finalProjectProposalLink()}</li>

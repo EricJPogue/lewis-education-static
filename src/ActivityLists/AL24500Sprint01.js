@@ -60,3 +60,7 @@ export const list24500Sprint01 = (sprint) => {
 
 
 // Certified for SP23 (01/06/23)
+// BugBug: Need to update sprint 1 to include Java training as some students may never have seen Java!
+// Todo: Consider adding:
+//     <li>Understand JavaDoc and how it can create self-documenting source code</li>
+//     <li>Complete {bodyMassIndexWithJavaDocAndScanner()}</li>

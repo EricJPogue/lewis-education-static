@@ -53,6 +53,7 @@ export const list44000Sprint06 = (sprint) => {
 // Certified for SP23 (03/24/2023)
 // Todo: Note that several activities were removed in SP23 and the expected capacity was reduced from 8 to 6 hours 
 //     because of Easter Break. Consider adding some of these items back in FA23 as there will likely be more time. 
+// Add activity for completing metrics
 
 
 

@@ -60,3 +60,5 @@ export const list20000Sprint06 = (sprint) => {
 
 // Certified for SP22 (03/24/2022)
 // Certified for FA22 (10/21/2022)
+// Todo: Move Matchmaker Lite - Part 2 up on the activity list. 
+// Todo: Consider adding funny video https://www.youtube.com/watch?v=Uo3cL4nrGOk

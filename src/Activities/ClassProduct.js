@@ -10,6 +10,8 @@ import { pitHubLink } from './PitHub'
 import { quizMasterMERNLink } from './QuizMasterMERN'
 import { seatSelectorMERNLink } from './SeatSelectorMERN'
 
+import { capacityCommittedEffortDeliveredLink } from './CapacityCommittedEffortDelivered'
+
 const name1 = 'Class Product Sprint 1'
 export const CLASS_PRODUCT_SPRINT_1_ROUTE = 'class-product-sprint-1'
 export const classProductSprint1Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_1_ROUTE)}>{name1}</NavLink>)}
@@ -276,54 +278,54 @@ export const classProductSprint5 = () => {
 
 const classProduct = (sprint, effort ) => {
 	return ( <div>
+		<p><em>Summary:</em> Stay focused on delivering and enhancing your team’s MVP.</p>
 
-<p><em>Summary:</em> Stay focused on delivering and enhancing your team’s MVP.</p>
+		<p>In sprint {sprint} you and your team will continue to focus on implementing the most valuable features from your 
+		MVP. <em>Value should always be viewed from a customer perspective</em> by constantly asking the question, ”What 
+		feature would be most likely to entice a person to use this product?” It is expected that each team member will contribute 
+		approximately {effort} hours to the activity.</p>
 
-<p>In sprint {sprint} you and your team will continue to focus on implementing the most valuable features from your 
-MVP. <em>Value should always be viewed from a customer perspective</em> by constantly asking the question, ”What 
-feature would be most likely to entice a person to use this product?” It is expected that each team member will contribute 
-approximately {effort} hours to the activity.</p>
+		<p>As your team completes each requirement, be sure to appropriately <em>document</em> each activity.</p>
 
-<p>As your team completes each requirement, be sure to appropriately <em>document</em> each activity.</p>
+		<em>Requirement 1</em>
+		<p>Bring closure to sprint {sprint-1} by completing Review/Demos and Retrospective:</p>
+		<ol>
+			<li>Review {scrum()} and complete your team’s Sprint {sprint-1} Review</li>
+			<li>Make sure that each team member Demos the stories they completed</li>
+			<li>Note that each team member will also need to demo at least one time during the semester their instructor</li>
+			<li>Complete your team’s Sprint {sprint-1} Retrospective</li>
+		</ol>
 
-<em>Requirement 1</em>
-<p>Bring closure to sprint {sprint-1} by completing Review/Demos and Retrospective:</p>
-<ol>
-	<li>Review {scrum()} and complete your team’s Sprint {sprint-1} Review</li>
-	<li>Make sure that each team member Demos the stories they completed</li>
-	<li>Note that each team member will also need to demo at least one time during the semester their instructor</li>
-	<li>Complete your team’s Sprint {sprint-1} Retrospective</li>
-</ol>
+		<em>Requirement 2</em>
+		<p>Sprint Planning{sprint}:</p>
+		<ol>
+			<li>Review {scrum()} while focusing on Events, Artifacts, and Rolls</li>
+			<li>Review, understand, and utilize {userStory()}, {userStoryTemplate()}, and {iNVEST()}</li>
+			<li>Review {agileAllianceAgile101()} from {agileAlliance()} while creating your {productBacklog()}</li>
+			<li>Complete {sprintPlanning()} to finalize to the team’s {sprintBacklog()}</li>
+			<li>Define {done()} for your team</li>
+			<li>Assign each {userStory()} to a single team member and commit as a team to delivering the {sprintBacklog()}</li>
+		</ol>
 
-<em>Requirement 2</em>
-<p>Plan sprint {sprint}:</p>
-<ol>
-	<li>Review {scrum()} while focusing on Events, Artifacts, and Rolls</li>
-	<li>Review, understand, and utilize {userStory()}, {userStoryTemplate()}, and {iNVEST()}</li>
-	<li>Review {agileAllianceAgile101()} from {agileAlliance()} while creating your {productBacklog()}</li>
-	<li>Complete {sprintPlanning()} to finalize to the team’s {sprintBacklog()}</li>
-	<li>Define {done()} for your team</li>
-	<li>Assign each {userStory()} to a single team member and commit as a team to delivering the {sprintBacklog()}</li>
-</ol>
+		<em>Requirement 3</em>
+		<p>Execute sprint {sprint}:</p>
+		<ol>
+			<li>Verify that each team member is committed to delivering User Stories that are estimated at lest {effort} hours effort</li>
+			<li>Develop, unit test, and deploy committed User Stories</li>
+			<li>Verify that each story that is complete meets your team’s definition of {done()}</li>
+			<li>Complete any production version upgrade conversions verifying that production data from previous version is not lost</li>
+		</ol>
 
-<em>Requirement 3</em>
-<p>Execute sprint {sprint}:</p>
-<ol>
-	<li>Verify that each team member is committed to delivering User Stories that are estimated at lest {effort} hours effort</li>
-	<li>Develop, unit test, and deploy committed User Stories</li>
-	<li>Verify that each story that is complete meets your team’s definition of {done()}</li>
-	<li>Complete any production version upgrade conversions verifying that production data from previous version is not lost</li>
-</ol>
-
-<em>Requirement 4</em>
-<p>Test stories, deploy to production, and update CI/CD documentation:</p>
-<ol>
-	<li>System test your stories in the development and production environments</li>
-	<li>Acceptance test one other team members stories in the development and production environments</li>
-	<li>Update CI/CD documentation so that it is verified current, maintained as MarkDown, and linked to README.md</li>
-	<li>Do <em>not</em> break the production environment</li>
-</ol>
-
+		<em>Requirement 4</em>
+		<p>Test stories, deploy to production, CI/CD, story sign-off, and Metrics:</p>
+		<ol>
+			<li>System test your stories in the development and production environments</li>
+			<li>Acceptance test one other team members stories in the development and production environments</li>
+			<li>Update CI/CD documentation so that it is verified current, maintained as MarkDown, and linked to README.md</li>
+			<li>Do <em>not</em> break the production environment</li>
+			<li>Review and sign-off on "Done" stories</li>
+			<li>Complete metrics including {capacityCommittedEffortDeliveredLink()}</li>
+		</ol>
 	</div>)
 }
 

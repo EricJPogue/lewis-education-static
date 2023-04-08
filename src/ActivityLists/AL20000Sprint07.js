@@ -57,6 +57,5 @@ export const list20000Sprint07 = () => {
 
 // Certified for SP22 (04/05/2022)
 // Certified for FA22 (11/30/2022)
-// Todo: Review: Add zipped source code requirement to all Final Project presentation assignments.
-// Todo: Remove final lab 7 question and redistribute points.  
+
 // BugBug: Fix Quiz 7 question "This is a security attack that attempts to disrupt services of a host connected to the Internet by overwriting memory."

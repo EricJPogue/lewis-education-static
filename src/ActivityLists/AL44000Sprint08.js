@@ -42,12 +42,12 @@ export const list44000Sprint08 = (sprint) => {
 // Certified for SP22 (Monday, April 18, 2022)
 // Certified for FA22 (12/03/2022)
 
-// Todo: Consider expected number of hours as it was changed from 12 to 10 during sprint 8.
 // Todo: Consider adding https://www.youtube.com/watch?v=bB340S0tGf8.
-
 // Todo: Consider updating and adding the following Architecture videos back into the class:
 //	import { architecturePart1, architecturePart2 } from '../DataAndAPIs/Links'
 // <li>Complete {architecturePart1()}</li>
 // <li>Scan {architecturePart2()}</li>
+
+// Consider adding https://www.youtube.com/watch?v=A-H-xZ5ZXgo
 
 
