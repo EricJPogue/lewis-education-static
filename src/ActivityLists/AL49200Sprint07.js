@@ -26,12 +26,12 @@ export const al49200Sprint07 = () => {
 			<li>Master delivering working code to the production environment</li>
 		</ul>
 
-		{list49200Sprint7(sprint)}
+		{list49200Sprint07(sprint)}
 		{Closing()}
 	</div> )
 }
 
-const list49200Sprint7 = (sprint) => {
+export const list49200Sprint07 = (sprint) => {
 	return ( <div>
 		{ActivitiesListIntro(sprint)}
 		<ol>
