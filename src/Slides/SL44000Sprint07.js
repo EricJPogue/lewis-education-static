@@ -6,6 +6,14 @@ import { se_8_1of6_lists } from './SL44000Sprint08'
 import { tDiscussionBreakout, submissionPercentage, tPrework, retrospectiveIntroduction, basicSlideWithTitle } from './SLSprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 
+import { tPreworkWithLogo } from './SLSprint00'
+import { basicSlideWithLogo } from './SLSprint00'
+import { agendaSlide } from './SLSprint00'
+import { basicSlide } from './SLSprint00'
+import { makeSlideDeck } from './SL00000Sprint00'
+import { insertInto } from './SLSprintPlanning'
+import { sprintPlanningSlideDeck } from './SLSprintPlanning'
+
 import { breakoutStandard } from './SLSprint00'
 
 import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
@@ -23,7 +31,7 @@ export const se_7_1of6 = () => { return [ tNoClassToday ] }
 
 // Sprint 7 session 1 of 6: Monday
 export const se_7_2of6_PAaA = xyz_n_1of6_lists(sprint)
-export const se_7_2of6 = () => { 
+export const se_7_2of6Old = () => { 
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
 			'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
@@ -37,6 +45,35 @@ export const se_7_2of6 = () => {
 
 // Sprint 7 session 2 of 6: Wednesday
 // export const se_7_2of6 = () => { return [ tNoClassToday ] }
+export const se_7_2of6 = () => { 
+	const prework = () => { return tPreworkWithLogo('Prework For Today', se_7_2of6_PAaA.prework, sprint-1, activityListPrevious) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', se_7_2of6_PAaA.announcements) }
+	const agenda = () => { return agendaSlide(se_7_2of6_PAaA.agenda) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_2of6_PAaA.prework, sprint, activityList) }
+	const sprintPlanning = () => {
+		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
+			'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
+			'We missed Monday due to the Easter Holiday Recess',
+			'Demos will be occurring Friday... including Aidan',
+			'We will complete our scrum team Discussion Board on Friday',
+			`We will have sprint ${sprint-1} Retrospective on Friday also if possible` ])
+	}
+	const activitiesReview = () => {
+		return basicSlide('Activity List and Assignments Review', [
+			'Let’s open our Blackboard shell and briefly review the activity list and assignments together.' ]
+		)
+	}
+	const planningBreakout = () => {
+		return orderedListSlide('Sprint Planning Scrum Team Breakout', 'As a scrum team:', [
+			`No discussion or breakout today so that we can focus on your Team’s Sprint ${sprint} planning` ]
+		)
+	}
+
+	const slideDeck = makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, preworkNext ])
+	const slideDeckWithSprintPlanning = insertInto(slideDeck, sprintPlanningSlideDeck(sprint), 8)
+	return slideDeckWithSprintPlanning
+}
+
 
 // Sprint 7 session 3 of 6: Friday
 export const se_7_3of6 = () => { return [ tNoClassToday ] }

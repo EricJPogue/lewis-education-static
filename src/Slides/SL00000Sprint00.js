@@ -64,7 +64,7 @@ export const xyz_n_1of6_lists = (sprint) => {
 			'Everything is due Sunday!', '',
 			`Be prepared for Sprint ${sprint} Planning` ],
 		'announcements':[ 
-			`${sprint} starts now.` ],
+			`Sprint ${sprint} starts now.` ],
 		'agenda':[ 
 			`Sprint ${sprint} Planning`,
 			`Sprint ${sprint} Planning Breakout`,
