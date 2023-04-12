@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
 import { se_8_1of6_lists } from './SL44000Sprint08'
@@ -31,17 +31,7 @@ export const se_7_1of6 = () => { return [ tNoClassToday ] }
 
 // Sprint 7 session 1 of 6: Monday
 export const se_7_2of6_PAaA = xyz_n_1of6_lists(sprint)
-export const se_7_2of6Old = () => { 
-	const sprintPlanning = () => {
-		return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
-			'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
-			'Not having class on Wednesday or Friday will be challenging',
-			'We will complete our scrum team Discussion Board next Monday',
-			`We will also have our sprint ${sprint-1} Demos and Retrospective next Monday` ])
-	}
-
-	return xyz_n_1of6(sprint, se_7_2of6_PAaA.prework, activityListPrevious, se_7_2of6_PAaA.agenda, se_7_4of6_lists.prework, activityList, sprintPlanning()) 
-}
+export const se_7_2of6Old = () => { return [ tNoClassToday ] }
 
 // Sprint 7 session 2 of 6: Wednesday
 // export const se_7_2of6 = () => { return [ tNoClassToday ] }
