@@ -91,25 +91,27 @@ export const se_7_3of6 = () => {
 		'Feedback from Assignments & Reflections', [
 		`Okay Sprint ${sprint-1} submission percentage... it’s that time of the year`,
 		'It’s that time of the year for me too... I am running substantially behind on grading', 
-		'Bootstrap (and maybe authentication) is the legacy your class will leave for future Software Engineering classes', 
+		'Bootstrap is the legacy your class will leave for future Software Engineering classes', 
 		'I am concerned about sprint planning participation', 
 		'Very well done!... this is hard!' ])
 	}
 	const scrumTeamDemos = () => {
-		return orderedListSlide('Scrum Team Demos',
-		'How do/will your team handle Demos?', [
-		'What is your team’s “Best-of-the-best” demo' ])
+		return orderedListSlide('Scrum Team Demos', 
+			'How do/will your team handle Demos?', [
+			'Did you complete and create an artifact for your Demos?',
+			'What is your team’s “Best-of-the-best” demo' ])
 	}
 	const scrumTeamRetrospective = () => {
 		return orderedListSlide('Scrum Team Retrospective',
-		`What will your team need to do to complete Sprint ${sprint+1} planning on the first day of Sprint ${sprint+1}` [
-		`How are we going to guarantee make sure that everyone on your team is present and participates in Sprint ${sprint } planning` ])
+			'What is the highest priority Continuous Improvement action for your team?', [
+			`What will your team need to do to guarantee Sprint ${sprint+1} planning is complete on the first day of the Sprint?`,
+			'Do we need to do something different to make sure that team members are here in person for sprint planning?',
+			'What is the highest priority Continuous Improvement item for your team... will you make it a story in the future?' ])
 	}
 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_3of6_PAaA, sprint, activityList)
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_4of6_PAaA.prework, sprint, activityList) }
-
 	return completeDeck(slideDeck, [retrospectiveInto, metricsSubmissionPercentage, retrospective, scrumTeamDemos, scrumTeamRetrospective, preworkNext])
 }
 
