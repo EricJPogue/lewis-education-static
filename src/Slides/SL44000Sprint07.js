@@ -99,7 +99,8 @@ export const se_7_3of6 = () => {
 		return orderedListSlide('Scrum Team Demos', 
 			'How do/will your team handle Demos?', [
 			'Did you complete and create an artifact for your Demos?',
-			'What is your team’s “Best-of-the-best” demo' ])
+			'Aidan Interactive Rendering Demo', 
+			'What is your team’s “Best-of-the-best” demo... as time allows' ])
 	}
 	const scrumTeamRetrospective = () => {
 		return orderedListSlide('Scrum Team Retrospective',
