@@ -133,6 +133,22 @@ export const xyz_n_3of6 = (sprint, sessionLists, preworkListNext, activityList, 
 	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, tDemos, demoAssignment, metricsIntro, metricsSubmissionPercentage, retrospectiveInto, retrospective, breakout, preworkNext])
 }
 
+export const xyz_n_4of6_PAaA = (sprint, completeThrough, breakoutTopic) => {
+	const preworkAnnouncementsAndAgenda = {
+		'prework': [
+			`${completeThrough}`, '',
+			`'Be prepared for “${breakoutTopic}” breakout'`,
+			`All sprint ${sprint} assignments are due Sunday` ],
+		'announcements':[
+			`Any announcements?`],
+		'agenda':[
+			`Sprint Progress Polling`,
+			`Breakout: ${breakoutTopic}`,
+			'Prework for Next Class', 
+			'Lab']
+	}
+	return preworkAnnouncementsAndAgenda
+}
 export const xyz_n_4of6 = (sprint, sessionLists, preworkListNext, activityList, breakout) => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
 	const poll = () => { return tPrework('Sprint Progress Polling', sessionLists.prework, sprint, activityList) }

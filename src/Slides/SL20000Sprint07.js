@@ -1,6 +1,4 @@
-import { getClass } from '../DataAndAPIs/Classes'
-
-import { xyz_n_1of6_lists, xyz_n_3of6, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6, tNoClassToday } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_4of6_PAaA, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6, tNoClassToday } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, tDiscussionBreakout, breakoutStandard } from './SLSprint00'
 
 import { ics_8_1of6_PAaA } from './SL20000Sprint08'
@@ -92,52 +90,25 @@ export const ics_7_3of6 = () => {
 }
 
 // Sprint 7 session 4 of 6: Monday
-const ics_7_4of6_PAaA = {
-	'announcements':[ 
-		'Welcome back! I hope you had a wonderful Thanksgiving holiday.' ],
-	'prework':[
-		'Complete through activity 5 prior to next class', '',
-		'Be prepared for Demos & Retrospectives',
-		`Be prepared Discussion Board ${sprint}` ],
-	'agenda':[
-		`Sprint ${sprint-1} Demos`,
-		`Sprint ${sprint-1} Retrospective`,
-		`Breakout for Sprint ${sprint-1} Retrospective`,
-		`Discussion Board ${sprint} as a scrum team`,
-		'Prework for Next Class' ]
-}
-export const ics_7_4of6 = () =>  {
-	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:25 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:26 },
-				{ name: 'Reflection', due: 27, submitted: 27 }
-			])
-		} else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:25 },
-				{ name: 'Quiz', due:27, submitted:26 },
-				{ name: 'Lab', due:27, submitted:26 },
-				{ name: 'Reflection', due: 27, submitted: 25 }
-			])
-		}
+const ics_7_4of6_PAaA = xyz_n_4of6_PAaA(sprint, 
+	'Complete through activity 7 prior to next class', 
+	'Project Management, Scrum, Pairs, and Version Control')
+export const ics_7_4of6 = () => { 
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Project Management, Scrum, Pairs, and Version Control', 
+			'In this breakout session we will explore Project Management, Scrum, Pairs, and Version Control:', [
+				'Team sizes, SDLCs, and key Scrum Roles & Rituals',
+				'Project Managers, Project Management, and the Six Phases of a Project',
+				'Priority of specialized vs generalized skills in Agile vs Waterfall or Iterative',
+				'Configuration management, version control, merge conflicts, and branching',
+				'Reporting and fixing bugs: The five R’s', 
+				'Paired Programming',
+				'The two most important books about managing people (according to the authors)' ]
+		)
 	}
-	const retrospective = () => {
-		return orderedListSlide('Class Retrospective',
-		'Feedback from Assignments & Reflections', [
-		'Solid submission percentage... well done.',
-		'All assignments graded and posted', 
-		'Very nice work!' ])
-	}
-	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
-
-	// Due to the Thanksgiving holiday we missed sessions 2 and 3 so we mostly doing session 3 activities here in session 4. 
-	let slides = xyz_n_3of6(sprint, ics_7_4of6_PAaA, ics_7_5of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
-
-	slides.splice(slides.length-2,0,discussionBreakout)
-	return slides
+	
+	return xyz_n_4of6(sprint, ics_7_4of6_PAaA, ics_7_5of6_PAaA.prework, activityList, breakout)
 }
 
 // Sprint 7 session 5 of 6: Wednesday

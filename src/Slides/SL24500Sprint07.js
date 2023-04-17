@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6_PAaA, xyz_n_4of6 } from './SL00000Sprint00'
 import { tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
@@ -10,6 +10,7 @@ import { sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
 import { tDemos } from './SL00000Sprint00'
 import { tDiscussionBreakout } from './SLSprint00'
 import { submissionPercentage } from './SLSprint00'
+import { breakoutStandard } from './SLSprint00'
 
 import { list24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
 import { list24500Sprint07 } from '../ActivityLists/AL24500Sprint07'
@@ -91,7 +92,27 @@ export const oop_7_3of6 = () => {
 }
 
 // Session 4 of 6: Monday
-const oop_7_4of6_PAaA = {
-	'prework':[
-		'Have a great weekend' ],
+const oop_7_4of6_PAaA = xyz_n_4of6_PAaA(sprint, 
+	'Complete through activity 7 prior to next class', 
+	'Project Management, Scrum, Pairs, and Version Control')
+export const oop_7_4of6 = () => { 
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Project Management, Scrum, Pairs, and Version Control', 
+			'In this breakout session we will explore Project Management, Scrum, Pairs, and Version Control:', [
+				'Team sizes, SDLCs, and key Scrum Roles & Rituals',
+				'Project Managers, Project Management, and the Six Phases of a Project',
+				'Priority of specialized vs generalized skills in Agile vs Waterfall or Iterative',
+				'Configuration management, version control, merge conflicts, and branching',
+				'Reporting and fixing bugs: The five R’s', 
+				'Paired Programming',
+				'The two most important books about managing people (according to the authors)' ]
+		)
+	}
+	
+	return xyz_n_4of6(sprint, oop_7_4of6_PAaA, oop_7_5of6_PAaA.prework, activityList, breakout)
 }
+
+const oop_7_5of6_PAaA = xyz_n_4of6_PAaA(sprint, 
+	'Complete through activity 7 prior to next class', 
+	'Project Management, Scrum, Pairs, and Version Control')
