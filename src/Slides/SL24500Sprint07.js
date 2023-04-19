@@ -122,7 +122,7 @@ export const oop_7_5of6 = () => { return xyz_n_5of6(sprint, oop_7_5of6_PAaA, oop
 
 const oop_7_6of6_PAaA = {
 	'prework':[
-		'Complete through activity 5 prior to next class', '',
+		'Complete through activity 11 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Demos & Retrospectives' ]
 }
