@@ -139,45 +139,40 @@ export const se_7_4of6 = () => {
 // Sprint 7 session 5 of 6: Wednesday
 const se_7_5of6_PAaA = {
 	'prework':[
-		'Complete through activity 8 prior to next class', '',
-		'Be prepared for “Project Management, Scrum, Pairs, and Version Control Systems” Breakout',
-		`Be prepared for Quiz ${sprint}` ],
+		'Complete through activity 9 prior to next class', '',
+		`Be prepared for Lab & Quiz ${sprint}` ],
 	'announcements':[ 
-		`Your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for Monday`, ],
-
+		`Monday is sprint ${sprint+1} planning with in-person attendance required`,
+		'In retrospect several Quiz 6 questions were really bad questions', 
+		'How would a good scrum team handle sprint 9 planning?'],
 	'agenda':[
-		'Project Management, Scrum, Pairs, and Version Control Breakout',
-		'Lab and Programming Together',
+		'Backlog Grooming',
+		'Lab',
 		`Quiz ${sprint}` ]
 }
 export const se_7_5of6 = () => {
-	const breakout = () => { 
-		return breakoutStandard( 
-			'Breakout: Project Management, Scrum, Pairs, and Version Control', 
-			'In this breakout session we will explore Project Management, Scrum, Pairs, and Version Control:', [
-				'Team sizes, SDLCs, and key Scrum Roles & Rituals',
-				'Project Managers, Project Management, and the Six Phases of a Project',
-				'Priority of specialized vs generalized skills in Agile vs Waterfall or Iterative',
-				'Configuration management, version control, merge conflicts, and branching',
-				'Reporting and fixing bugs: The five R’s', 
-				'The two most important books about managing people (according to the authors)',
-				'Paired Programming' ]
-		)
-	}
+	const backlogGrooming = () => {
+		return basicSlideWithTitle(
+			'Backlog Grooming', [
+				`Start backlog grooming in preparation for sprint ${sprint+1} planning on Monday`, 
+				`Have a plan to complete sprint ${sprint+1} planning by the end of class on Monday`,
+				`What is the appropriate individual and team capacity for sprint ${sprint+1}?` ]) 
 
+	}
 	const slides = xyz_n_5of6(sprint, se_7_5of6_PAaA, se_7_6of6_lists.prework, activityList)
 	const agendaSlide = 3
-	slides.splice(agendaSlide+1, 0, breakout)
+	slides.splice(agendaSlide+1, 0, backlogGrooming)
 	return slides 
 }
 
 // Sprint 7 session 6 of 6: Friday
 const se_7_6of6_lists = {
-	'announcements':[ 
-		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		`All sprint ${sprint} assignments due Sunday!`, '',
-		'Be prepared for Backlog Grooming' ],
+		'Team members who can not attend Friday should submit their Backlog Grooming stories prior to class on Friday', 
+		'Be prepared to complete Backlog Grooming' ],
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
 	'agenda':[
 		'Backlog Grooming',
 		'Lab' ]

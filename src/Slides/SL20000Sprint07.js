@@ -96,15 +96,14 @@ const ics_7_4of6_PAaA = xyz_n_4of6_PAaA(sprint,
 export const ics_7_4of6 = () => { 
 	const breakout = () => { 
 		return breakoutStandard( 
-			'Breakout: Project Management, Scrum, Pairs, and Version Control', 
-			'In this breakout session we will explore Project Management, Scrum, Pairs, and Version Control:', [
-				'Team sizes, SDLCs, and key Scrum Roles & Rituals',
-				'Project Managers, Project Management, and the Six Phases of a Project',
-				'Priority of specialized vs generalized skills in Agile vs Waterfall or Iterative',
-				'Configuration management, version control, merge conflicts, and branching',
-				'Reporting and fixing bugs: The five R’s', 
-				'Paired Programming',
-				'The two most important books about managing people (according to the authors)' ]
+			'Breakout: Security', 
+			'In this breakout session we will explore Security:', [
+				'Information Security and Confidentiality, Availability, and Integrity',
+				'Access, Authentication, Authorization, CAPTCHA',
+				'Malicious Code, Malware, Worms, Trojan Horses, Phishing, and DoS',
+				'Cryptography, Encryption/Decryption, ciphers, public-key cryptography, and digital signatures',
+				'Protecting Online Information',
+				'Security and Usability Tradeoffs' ]
 		)
 	}
 	

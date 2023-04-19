@@ -52,4 +52,5 @@ export const list44000Sprint07 = (sprint) => {
 // Certified for SP22 (04/08/2022)
 // Todo: Consider adding back in Architecture lecture or removing SQL questions from quiz.
 // Todo: Make sure that in sprints 7 & 8 that “individual” lab questions are identified. 
+// Todo: Review Zac’s quiz and update quiz 7. 
 

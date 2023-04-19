@@ -94,7 +94,7 @@ export const oop_7_3of6 = () => {
 // Session 4 of 6: Monday
 const oop_7_4of6_PAaA = xyz_n_4of6_PAaA(sprint, 
 	'Complete through activity 7 prior to next class', 
-	'Project Management, Scrum, Pairs, and Version Control')
+	'Lab with Thunderbird')
 export const oop_7_4of6 = () => { 
 	const breakout = () => { 
 		return breakoutStandard( 
