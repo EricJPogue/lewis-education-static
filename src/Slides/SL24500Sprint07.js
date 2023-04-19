@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6_PAaA, xyz_n_4of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6_PAaA, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
 import { tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
@@ -14,6 +14,7 @@ import { breakoutStandard } from './SLSprint00'
 
 import { list24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
 import { list24500Sprint07 } from '../ActivityLists/AL24500Sprint07'
+// import { xyz_n_6of6_PAaA } from './SL00000Sprint00'
 
 // Introduction to Computer Science (ICS) sprint 7 global values.
 const sprint = 7
@@ -116,3 +117,12 @@ export const oop_7_4of6 = () => {
 const oop_7_5of6_PAaA = xyz_n_4of6_PAaA(sprint, 
 	'Complete through activity 7 prior to next class', 
 	'Project Management, Scrum, Pairs, and Version Control')
+
+export const oop_7_5of6 = () => { return xyz_n_5of6(sprint, oop_7_5of6_PAaA, oop_7_6of6_PAaA.prework, activityList) }
+
+const oop_7_6of6_PAaA = {
+	'prework':[
+		'Complete through activity 5 prior to next class', '',
+		`Be prepared Discussion Board ${sprint}`,
+		'Be prepared for Demos & Retrospectives' ]
+}
