@@ -172,6 +172,7 @@ const se_7_6of6_lists = {
 		'Team members who can not attend Friday should submit their Backlog Grooming stories prior to class on Friday', 
 		'Be prepared to complete Backlog Grooming' ],
 	'announcements':[ 
+		`Recall that Monday in-person attendance is required for your team’s sprint ${sprint+1} planning`,
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'agenda':[
 		'Backlog Grooming',
@@ -182,13 +183,15 @@ export const se_7_6of6 = () => {
 	const backlogGrooming = () => {
 		return basicSlideWithTitle(
 			'Backlog Grooming', [
-				`Complete epic and story backlog grooming in preparation for sprint ${sprint+1} planning on Monday`, 
+				`Complete backlog grooming in preparation for sprint ${sprint+1} planning on Monday`, 
 				`Have a plan to complete sprint ${sprint+1} planning by the end of class on Monday`,
 				`What is the appropriate individual and team capacity for sprint ${sprint+1}?` ]) 
-
 	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_8_1of6_lists.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ backlogGrooming, tLab, preworkNext ]) 
+	const slideDeckWithPrework = completeDeck(slideDeck, [ backlogGrooming, tLab, preworkNext ]) 
+
+	const insertIndex = 5
+	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), insertIndex)
  }
 
  

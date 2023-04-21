@@ -146,11 +146,11 @@ export const ics_7_5of6 = () => {
 // Sprint 7 session 6 of 6: Friday
 
 const ics_7_6of6_PAaA = {
-	'announcements':[ 
-		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		`All sprint ${sprint} assignments due Sunday!`, '',
 		'Be prepared for Programming Together' ],
+	'announcements':[ 
+		`Monday starts sprint ${sprint}` ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Lab & Programming Together' ]

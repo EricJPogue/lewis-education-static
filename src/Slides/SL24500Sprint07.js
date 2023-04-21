@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6_PAaA, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_4of6_PAaA, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
@@ -124,5 +124,13 @@ const oop_7_6of6_PAaA = {
 	'prework':[
 		'Complete through activity 11 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
-		'Be prepared for Demos & Retrospectives' ]
+		'Be prepared for Demos & Retrospectives' ],
+	'announcements':[ 
+		`Monday starts sprint ${sprint}` ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together' ]
 }
+export const oop_7_6of6 = () => { return xyz_n_6of6(sprint, oop_7_6of6_PAaA, oop_8_1of6_PAaP.prework, activityList) }
+
+const oop_8_1of6_PAaP = xyz_n_1of6_lists()

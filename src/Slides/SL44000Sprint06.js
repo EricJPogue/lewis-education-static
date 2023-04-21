@@ -198,9 +198,8 @@ export const se_6_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_6_5of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_2of6_PAaA.prework, sprint, activityList) }
 	const slideDeckWithPrework = completeDeck(slideDeck, [ preworkNext ]) 
-	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), 5)
+	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), 5 /* index to insert */)
 }
-
 
 // Session 6 of 6
 export const se_6_6of6 = () => { return [ tNoClassToday ] }
