@@ -31,18 +31,16 @@ export const list44000Sprint08 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, finalProjectSprint8Link(), oreillyPlaylistSE())}
+			<li>Watch the very funny {agileCoachInterview()} video when you need a few minutes to reflect and laugh</li>
 			<li>Read Fox Chapter 11 on Design Patterns</li>
 			<li>Within {oreillyPlaylistSE()} read “Design Patterns” through chapter 1</li>
-			<li>Watch the very funny {agileCoachInterview()} Youtube video when you need 4 minutes to reflect and laugh</li>
 			{standardActivitiesClosing(sprint, finalProjectSprint8Link(), '10 hours')}
 		</ol>
 	</div>)
 }
 
-// Certified for SP22 (Monday, April 18, 2022)
 // Certified for FA22 (12/03/2022)
 
-// Todo: Consider adding https://www.youtube.com/watch?v=bB340S0tGf8.
 // Todo: Consider updating and adding the following Architecture videos back into the class:
 //	import { architecturePart1, architecturePart2 } from '../DataAndAPIs/Links'
 // <li>Complete {architecturePart1()}</li>
@@ -50,4 +48,5 @@ export const list44000Sprint08 = (sprint) => {
 
 // Consider adding https://www.youtube.com/watch?v=A-H-xZ5ZXgo
 
+// Certified for SP23 (04/23/2023)
 

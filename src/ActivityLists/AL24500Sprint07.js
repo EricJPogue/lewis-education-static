@@ -78,3 +78,5 @@ export const list24500Sprint07 = () => {
 //     <li>Understand JavaDoc and how it can create self-documenting source code</li>
 //     <li>Complete {bodyMassIndexWithJavaDocAndScanner()}</li>
 //     <li>Review and update {finalProjectProposalLink()}</li>
+
+// Todo: Fix Lab 7 so that it calls out Final Project version 1.

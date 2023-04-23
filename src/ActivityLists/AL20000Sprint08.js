@@ -34,6 +34,6 @@ export const list20000Sprint08 = () => {
 	</div>)
 }
 
-// Certified for SP22 (Monday, April 18, 2022)
 // Certified for FA22 (12/03/2022)
-// Todo: Review: Add zipped source code requirement to all Final Project presentation assignments.
+// Certified for SP23 (04/23/2023)
+
