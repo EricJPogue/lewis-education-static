@@ -16,6 +16,8 @@ import { list24500Sprint06 } from '../ActivityLists/AL24500Sprint06'
 import { list24500Sprint07 } from '../ActivityLists/AL24500Sprint07'
 // import { xyz_n_6of6_PAaA } from './SL00000Sprint00'
 
+import { oop_8_1of6_PAaA } from './SL24500Sprint08'
+
 // Introduction to Computer Science (ICS) sprint 7 global values.
 const sprint = 7
 const activityListPrevious = () => { return list24500Sprint06(sprint-1) }
@@ -131,6 +133,5 @@ const oop_7_6of6_PAaA = {
 		'Sprint Progress Polling',
 		'Lab & Programming Together' ]
 }
-export const oop_7_6of6 = () => { return xyz_n_6of6(sprint, oop_7_6of6_PAaA, oop_8_1of6_PAaP.prework, activityList) }
+export const oop_7_6of6 = () => { return xyz_n_6of6(sprint, oop_7_6of6_PAaA, oop_8_1of6_PAaA.prework, activityList) }
 
-const oop_8_1of6_PAaP = xyz_n_1of6_lists()

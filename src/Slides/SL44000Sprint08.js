@@ -55,12 +55,6 @@ export const se_8_1of6 = () => {
 	return slideDeckWithSprintPlanning
 }
 
-
-
-
-
-
-
 // Sprint 8 session 1 of 6: Monday
 export const se_X_1of6_lists = xyz_n_1of6_lists(sprint)
 export const se_X_1of6 = () => { 
