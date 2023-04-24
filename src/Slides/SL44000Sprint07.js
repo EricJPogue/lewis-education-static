@@ -1,7 +1,7 @@
 import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_4of6_PAaA, xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
-import { se_8_1of6_lists } from './SL44000Sprint08'
+import { se_8_1of6_PAaA } from './SL44000Sprint08'
 
 import { submissionPercentage, tPrework, retrospectiveIntroduction, basicSlideWithTitle } from './SLSprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
@@ -187,7 +187,7 @@ export const se_7_6of6 = () => {
 				`Have a plan to complete sprint ${sprint+1} planning by the end of class on Monday`,
 				`What is the appropriate individual and team capacity for sprint ${sprint+1}?` ]) 
 	}
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_8_1of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_8_1of6_PAaA.prework, sprint, activityList) }
 	const slideDeckWithPrework = completeDeck(slideDeck, [ backlogGrooming, tLab, preworkNext ]) 
 
 	const insertIndex = 5

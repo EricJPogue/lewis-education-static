@@ -66,6 +66,9 @@ export const list20000Sprint01 = (sprint) => {
 // Todo: Strongly consider replacing hello world Python with hello world web so that students do not have to switch 
 //     back and forth between languages so many times. 
 
+// Todo: Strongly consider hiding blackboard sprint sections 24 hours after sprint is due. It seem like a good 
+//     enforcement of no late assignments? Try it with one or two classes? Maybe 48 hours first time?
+
 
 
 
