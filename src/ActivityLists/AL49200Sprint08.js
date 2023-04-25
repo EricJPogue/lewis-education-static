@@ -22,12 +22,12 @@ export const al49200Sprint08 = () => {
 			<li>Implement a sustainable product that would allow someone else to continue development</li>
 		</ul>
 
-		{list49200Sprint8(sprint)}
+		{list49200Sprint08(sprint)}
 		{closing(sprint)}
 	</div> )
 }
 
-const list49200Sprint8 = (sprint) => {
+export const list49200Sprint08 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>

@@ -50,6 +50,7 @@ import { ssc_4_1of4 } from './SL49200Sprint04'
 import { ssc_5_1of4 } from './SL49200Sprint05'
 import { ssc_6_1of4 } from './SL49200Sprint06'
 import { ssc_7_1of4 } from './SL49200Sprint07'
+import { ssc_8_1of4 } from './SL49200Sprint08'
 
 // Routing constants are defined by the class number followed by the sprint number and session. Note that sessions are
 // identified by the session number without consideration for missed classes. For example a week 2 Friday session for a 
@@ -315,6 +316,7 @@ const sprint3Router = (route) => {
 		case '49200-5-1': return ssc_5_1of4()
 		case '49200-6-1': return ssc_6_1of4()
 		case '49200-7-1': return ssc_7_1of4()
+		case '49200-8-1': return ssc_8_1of4()
 
 		default: return null
 	}
