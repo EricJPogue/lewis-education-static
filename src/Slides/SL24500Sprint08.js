@@ -1,7 +1,8 @@
 
-import { xyz_n_1of6_lists, xyz_n_1of6 } from "./SL00000Sprint00"
+import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
+import { ics_8_2of6_PAaA, ics_8_2of6 } from './SL20000Sprint08'
 
-import { orderedListSlide } from "./SLSprint00"
+import { orderedListSlide } from './SLSprint00'
 
 import { list24500Sprint07 } from '../ActivityLists/AL24500Sprint07'
 import { list24500Sprint08 } from '../ActivityLists/AL24500Sprint08'
@@ -28,15 +29,5 @@ export const oop_8_1of6 = () => {
 }
 
 // Session 2 of 6: Wednesday
-const oop_8_2of6_PAaA = {
-	'announcements':[ 
-		'This is the last week of regular classes', 
-		'Be certain you have your final exam time marked on your calendar ' ],
-	'prework':[
-		'Complete through activity 4 prior to next class', '',
-		`Be prepared for Quiz ${sprint}`,
-		'Be prepared for Lab & Programming Together' ],
-	'agenda':[
-		'Lab & Programming Together',
-		`Quiz ${sprint}` ]
-}
+const oop_8_2of6_PAaA = ics_8_2of6_PAaA
+export const oop_8_2of6 = ics_8_2of6

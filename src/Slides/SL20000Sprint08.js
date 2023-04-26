@@ -30,16 +30,17 @@ export const ics_8_1of6 = () => {
 	return xyz_n_1of6(sprint, ics_8_1of6_PAaA.prework, activityListPrevious, ics_8_1of6_PAaA.agenda, ics_8_2of6_PAaA.prework, activityList, sprintPlanning()) 
 }
 
-// Sprint 8 session 2 of 6: Wednesday
-const ics_8_2of6_PAaA = {
-	'announcements':[ 
-		'This is the last week of regular classes', 
-		'Be certain you have your final exam time marked on your calendar ' ],
+// Session 2 of 6: Wednesday
+export const ics_8_2of6_PAaA = {
 	'prework':[
 		'Complete through activity 4 prior to next class', '',
 		`Be prepared for Quiz ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
+	'announcements':[ 
+		'This is the last week of regular classes', 
+		`Be certain that you have your on your calendar for **${getFinalExamDateAndTime()}**` ],
 	'agenda':[
+		'Confirm Final Project Presentations',
 		'Lab & Programming Together',
 		`Quiz ${sprint}` ]
 }
@@ -47,8 +48,15 @@ export const ics_8_2of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_8_2of6_PAaA, sprint, activityList)
 	const quiz = () => { return tQuiz(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_8_3of6_PAaA.prework, sprint, activityList) }
+	const confirmFinalProjectPresentations = () => {
+		return orderedListSlide('Confirm Final Project Presentations', 
+			'Confirm final project presentation date and times', [
+			`${getFinalExamDateAndTime()} is your scheduled time for Final Project Presentations`,
+			'Any exceptions should have meeting requests',
+			'Any exceptions need to specify location' ])
+	}
 
-	return completeDeck(slideDeck, [ tLab, preworkNext, quiz ]) 
+	return completeDeck(slideDeck, [ confirmFinalProjectPresentations, tLab, preworkNext, quiz ]) 
 }
 
 // Sprint 8 session 3 of 6: Friday

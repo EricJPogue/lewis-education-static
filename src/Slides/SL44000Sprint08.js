@@ -73,42 +73,42 @@ export const se_X_1of6 = () => {
 
 // Sprint 8 session 2 of 6: Wednesday
 const se_8_2of6_lists = {
-	'announcements':[ 
-		'This is the last week of regular classes', 
-		'Be certain you have your final exam time marked on your calendar ' ],
 	'prework':[
 		'Complete through activity 4 prior to next class', '',
 		`Be prepared for Quiz ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
+	'announcements':[ 
+		'This is the last week of regular classes', 
+		`Recall final project presentations on **${getFinalExamDateAndTime()}**`  ],
 	'agenda':[
-		'Complete Sprint Planning',
+		'Confirm Final Project Presentations',
 		'Lab & Programming Together',
 		`Quiz ${sprint}` ]
 }
 export const se_8_2of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_8_2of6_lists, sprint, activityList)
-	const sprintPlanning = () => {
-		return orderedListSlide('Sprint Planning', `Complete sprint ${sprint} planning including:`, [
-			`Final review of sprint ${sprint} backlog`,
-			'Commitment',
-			'Celebration' ])
+	const confirmFinalProjectPresentations = () => {
+		return orderedListSlide('Final Project Presentations', 
+			'Confirm final project presentation expectations, dates, and times', [
+			'Expectations: Overview of application plus each team member presenting',
+			'Any exceptions should have meeting requests',
+			'Any exceptions need to specify location' ])
 	}
 	const quiz = () => { return tQuiz(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_8_3of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ sprintPlanning, tLab, preworkNext, quiz ]) 
+	return completeDeck(slideDeck, [ confirmFinalProjectPresentations, tLab, preworkNext, quiz ]) 
 }
 
 // Sprint 8 session 3 of 6: Friday
 const se_8_3of6_lists = {
+	'prework':[
+		'Submit all assignments by the end of the day Thursday, May 4... no late assignments', '',
+		'Be prepared for final project presentation' ],
 	'announcements':[ 
 		'Today is our last regular class session',
 		`Our final project presentations are **${getFinalExamDateAndTime()}**`, 
 		'Please consider taking time to complete your course evaluation' ],
-	'prework':[
-		'Complete through activity 7 prior to next class', '',
-		'Be prepared for Demos & Retrospectives',
-		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
