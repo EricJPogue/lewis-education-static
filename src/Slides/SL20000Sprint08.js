@@ -1,4 +1,3 @@
-import { getClass } from '../DataAndAPIs/Classes'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 
 import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_3of6 } from './SL00000Sprint00'
@@ -61,14 +60,13 @@ export const ics_8_2of6 = () => {
 
 // Sprint 8 session 3 of 6: Friday
 const ics_8_3of6_PAaA = {
+	'prework':[
+		'Complete through activity 5 prior to next class', '',
+		`Be prepared for sprint ${sprint-1} Demos & Retrospectives` ],
 	'announcements':[ 
 		'Today is our last regular class session',
 		`Our final project presentations are **${getFinalExamDateAndTime()}**`, 
 		'Please consider taking time to complete your course evaluation' ],
-	'prework':[
-		'Complete through activity 4 prior to next class', '',
-		`Be prepared for sprint ${sprint-1} Demos & Retrospectives`,
-		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
@@ -77,28 +75,18 @@ const ics_8_3of6_PAaA = {
 }
 export const ics_8_3of6 = () => { 
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:26, submitted:25 },
-				{ name: 'Quiz', due:26, submitted:26 },
-				{ name: 'Lab', due:26, submitted:26 },
-				{ name: 'Reflection', due: 26, submitted: 25 }
-			])
-		} else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:24 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:27 },
-				{ name: 'Reflection', due: 27, submitted: 27 }
-			])
-		}
+		return submissionPercentage([
+			{ name: 'Discussion', due:13, submitted:9 },
+			{ name: 'Quiz', due:13, submitted:14 },
+			{ name: 'Lab', due:13, submitted:12 },
+			{ name: 'Reflection', due: 13, submitted: 12 }])
 	}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Fantastic submission percentage!',
-			'All assignments graded and posted', 
-			'Very nice work!' ])
+			'Not very good submission percentage',
+			'Discussions, Quizzes, and  are graded and posted',
+			'Quiz answer should be available' ])
 	}
 	const finalComments = () => {
 		return orderedListSlide('Thank you!',
