@@ -101,36 +101,37 @@ export const se_8_2of6 = () => {
 }
 
 // Sprint 8 session 3 of 6: Friday
+// BugBug: Review and update this session as the slides are not very good. 
 const se_8_3of6_lists = {
 	'prework':[
 		'Submit all assignments by the end of the day Thursday, May 4... no late assignments', '',
 		'Be prepared for final project presentation' ],
 	'announcements':[ 
 		'Today is our last regular class session',
-		`Our final project presentations are **${getFinalExamDateAndTime()}**`, 
+		`In-person final project presentations are **${getFinalExamDateAndTime()}**`,
+		'If you are completing your final project presentation at another time you are still welcome to attend', 
 		'Please consider taking time to complete your course evaluation' ],
 	'agenda':[
-		`Sprint ${sprint-1} Demos`,
+		'FreakingFractals presenting the Lewis University Interactive Map',
 		`Sprint ${sprint-1} Retrospective`,
-		'Final Comments',
-		'Lab & Programming Together' ]
+		'Final Comments' ]
 }
 export const se_8_3of6 = () => { 
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:13, submitted:11 },
-			{ name: 'Quiz', due:13, submitted:13 },
-			{ name: 'Lab', due:13, submitted:13 },
-			{ name: 'Reflection', due: 13, submitted: 13 }
+			{ name: 'Discussion', due:26, submitted:24 },
+			{ name: 'Quiz', due:26, submitted:26 },
+			{ name: 'Lab', due:26, submitted:26 },
+			{ name: 'Reflection', due: 26, submitted: 26 }
 		])
 	}
 
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Fantastic submission percentage!',
-			'All assignments graded and posted', 
-			'Very nice work!' ])
+			'Excellent submission percentage!',
+			'Discussions and Quizzes are graded and posted',
+			'Quiz answer should be available' ])
 	}
 	const finalComments = () => {
 		return orderedListSlide('Thank you!',
