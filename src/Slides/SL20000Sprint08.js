@@ -58,7 +58,7 @@ export const ics_8_2of6 = () => {
 	return completeDeck(slideDeck, [ confirmFinalProjectPresentations, tLab, preworkNext, quiz ]) 
 }
 
-// Sprint 8 session 3 of 6: Friday
+// Session 3 of 6: Friday
 const ics_8_3of6_PAaA = {
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
@@ -77,7 +77,7 @@ export const ics_8_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
 			{ name: 'Discussion', due:13, submitted:9 },
-			{ name: 'Quiz', due:13, submitted:14 },
+			{ name: 'Quiz', due:13, submitted:13 },
 			{ name: 'Lab', due:13, submitted:12 },
 			{ name: 'Reflection', due: 13, submitted: 12 }])
 	}
