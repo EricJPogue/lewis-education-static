@@ -194,6 +194,72 @@ export const xyz_n_6of6 = (sprint, sessionLists, preworkListNext, activityList) 
 	return completeDeck(slideDeck, [ finalReviewActivityListAndAssignments, quizPhoneAFriend, preworkNext, tLab ])
 }
 
+// ** New world order ** 
+
+// Parameters ordered by the least likely to be null to the most likely to be null to optimize default parameters.
+export const makeSession = (sprint, activityList=null, pAaA=null, preworkNext=null, activityListPrevious=null) => {
+	let prework = null
+	let announcements = null
+	let agenda = null
+
+	if (pAaA!=null) {
+		prework = pAaA.prework
+		announcements = pAaA.announcements
+		agenda = pAaA.agenda
+	}
+
+	return {
+		sprint: sprint,
+		activityList: activityList,
+		prework: prework,
+		announcements: announcements,
+		agenda: agenda,
+		preworkNext: preworkNext,
+		activityListPrevious: activityListPrevious
+	}
+}
+
+export const xyz_8_7of6_PAaA = {
+	'prework':[
+		'Verify that you have submitted your final project presentation assignment',
+		'Be prepared for your final project presentation' ],
+	'announcements':[ 
+		'Please consider taking time to complete your course evaluation if you haven’t already' ],
+	'agenda':[
+		'Final Project Presentations',
+		'Next Steps',
+		'Thank you!' ]
+}
+export const xyz_8_7of6 = (session) => {
+	const default_prework = ['Everything is due Thursday!' ]
+	const finalProjectPresentation = () => {
+		return orderedListSlide('Final Project Presentations', `Recall that your final project presentation should including a/an:`, [
+			'Introduce yourself',
+			'Review your proposal',
+			'Demonstrate your product including least one standard and advanced feature',
+			'Share source code',
+			'Describe what else you expect to complete by the end of the day Thursday' ])
+	}
+	const finalComments = () => {
+		return orderedListSlide('Thank you!',
+			'', [
+			'Thank you for making this a wonderful experience for me',
+			'Don’t hesitate to reach out in the future',
+			'Hope to see you in a future class', 
+			'Reach out to me if you are interested in taking Web & Distributed Programming',
+			'I am impressed with what you have accomplished' ])
+	}
+
+	// Does not support overriding PAaA or prework.
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(xyz_8_7of6_PAaA, session.sprint, session.activityList)
+	const nextSteps = () => { return tPrework('Next Steps', [  default_prework ], session.sprint, session.activityList) }
+
+	return completeDeck(slideDeck, [ finalProjectPresentation, nextSteps, finalComments ]) 
+}
+
+
+
+
 export const tLab = () => {
 	return bulletListSlide('Lab & Programming Together', 
 		'Let’s focus on completing our activities and assignments by:', [
