@@ -59,3 +59,4 @@ export const list20000Sprint07 = () => {
 // Certified for FA22 (11/30/2022)
 
 // BugBug: Fix Quiz 7 question "This is a security attack that attempts to disrupt services of a host connected to the Internet by overwriting memory."
+// BugBug: Fix Lab 7 final question as it should not be a repeat of "Coding Standards"
