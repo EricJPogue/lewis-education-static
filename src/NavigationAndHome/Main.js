@@ -5,7 +5,7 @@ import { Route, HashRouter } from 'react-router-dom';
 import { HeaderNavigation } from './HeaderNavigation'
 
 import { Home } from './Home'
-import { Welcome } from '../ActivityVideo/Welcome'
+import { welcome } from '../ActivityVideo/Panopto';
 import { Syllabus } from '../Syllabi/Syllabus' 
 import { Sprint } from '../ActivityLists/Sprint'
 import { SprintCalendar } from '../CalendarAndSchedule/SprintCalendar'
@@ -36,7 +36,7 @@ class Main extends Component {
 					<div className='Main'>
 						<Route exact path='/' component={Home}/>
 						<Route exact path='/home' component={Home}/>
-						<Route path='/welcome' component={Welcome}/>
+						<Route path='/welcome' component={welcome}/>
 						<Route path='/syllabus' component={Syllabus}/>
 						<Route path='/sprint/:reference' component={Sprint}/>
 						<Route path='/calendar/:reference' component={SprintCalendar}/>
