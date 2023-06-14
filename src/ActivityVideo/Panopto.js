@@ -10,7 +10,7 @@ const panoptoWelcomeIFrameTag = () => {
 export const welcome = () => {
 	return ( <div>
 		<h4>{getClass().title}</h4>
-		<h5>Welcome! Please take a few minutes to view your welcome message.</h5>
+		<h5>***** Welcome! Please take a few minutes to view your welcome message.</h5>
 		<IFrameComponent iframe={panoptoWelcomeIFrameTag()} />
 		<br />
 		<p>Please also take a few minutes to gain a better understand of Blended Learning and Scrum by reviewing the 
