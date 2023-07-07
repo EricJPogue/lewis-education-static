@@ -9,7 +9,6 @@ import { Discord, OReillyBooks, Firefox, Chrome, VSCode, FileExplorer, Finder, Z
 const chocolatey = () => externalLink('Chocolatey','https://chocolatey.org/')
 const chocolateyTutorial = () => { return internalLink('Chocolatey tutorial', '/activity-config/chocolatey') }
 const chocolateyInstallApplicationTutorial = () => { return internalLink('Chocolatey application installation tutorial', '/activity-config/chocolatey-install') }
-const chocolateyScript = () => { return externalLink('script', 'https://lewiseducation.blob.core.windows.net/configuration/choco-install-packages.txt') }
 const homebrew = () => { return externalLink('Homebrew tutorial', 'https://lewiseducation.blob.core.windows.net/configuration/homebrew.mp4')}
 
 export const toolsOfTheTradeLink = () => {return (<NavLink to={link}>{name}</NavLink>)}
@@ -96,16 +95,28 @@ install, configure, and utilize the following tools and services. By the end of 
 </ol>
 
 <br />
-<h6>Using Package Mangers (recommended):</h6>
-<p>The recommended method of installing, updating, and deleting software applications is to utilize a package manager. 
-Either Chocolatey (Windows) and Homebrew (MacOS) can be utilized to set up the above applications.</p>
-<p>Chocolatey (Windows):</p>
+<h6>Install Using Standard Methods:</h6>
+<p>Feel free to install these tools in the standard methods of application stores and web sites.</p>
+
+<br />
+<h6>Install Using Package Mangers (recommended):</h6>
+<p>The alternative and recommended method of installing, updating, and deleting these tools is utilizing a package 
+manager and your command the line interface (CLI).</p>
 <ol>
-	<li>Complete {chocolateyTutorial()} using PowerShell</li>
-	<li>Complete {chocolateyInstallApplicationTutorial()} to install VS Code, Python3, VS Code Python extension, MS 
-	    Teams, Git, Node.js, and OpenJDK using a Chocolatey {chocolateyScript()}</li>
+	<li>Open PowerShell in administrator mode</li>
+	<li>Review and install {chocolatey()}</li>
+	<li>Review but do not complete {chocolateyTutorial()} using PowerShell</li>
+	<li>Review but do not complete {chocolateyInstallApplicationTutorial()} to install VS Code, Python3, VS Code 
+		Python extension, MS Teams, Git, Node.js, and OpenJDK using a Chocolatey</li>
 </ol>
-Install {chocolatey()} and then execute the following script:
+
+After verifying that {chocolatey()} installed correctly, execute:
+and then execute the following script:
+<pre style={{color:"brown", fontFamily: 'monospace'}}>{
+`choco list
+`}</pre>
+
+Proceed to execute some or all of the following lines to install the associated tools:
 <pre style={{color:"brown", fontFamily: 'monospace'}}>{
 `choco install python -y
 choco install vscode -y
@@ -117,6 +128,50 @@ choco install nodejs -y
 choco install openjdk -y
 `}</pre>
 
+Alternate: 
+<pre style={{color:"brown", fontFamily: 'monospace'}}>{
+`Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+choco ?
+choco install discord -y
+choco install python -y
+choco list --localonly
+python --version
+
+choco install git -y
+choco install nodejs -y
+choco install openjdk -y
+choco install maven -y
+choco install vscode -y
+choco install vscode-python -y
+choco install vscode-java -y
+choco install vscode-maven -y
+
+choco list --localonly
+
+git --version
+node --version
+npm --version
+mvn --version
+java --version
+javac --version
+choco list --localonly
+
+code .
+
+java-servlet-rg
+
+lewisOOP#321
+
+vscode install extension pack for jav
+choco install vscode-java-pac
+
+git --version
+python --version
+java --version
+javac --version
+node --version
+npm --version
+mvn --version`}</pre>
 
 <p>Homebrew (MacOS): Complete the {homebrew()} to install Visual Studio Code, Python3, Visual Studio Code Python 
 extension, MS Teams, Git, Node.js, and OpenJDK.</p>
