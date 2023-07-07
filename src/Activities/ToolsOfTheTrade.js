@@ -6,6 +6,7 @@ import { internalLink, externalLink } from '../DataAndAPIs/Links'
 import { Discord, OReillyBooks, Firefox, Chrome, VSCode, FileExplorer, Finder, ZipFiles, Office365, PowerShell, Terminal, ScreenCapture, Git, 
 	GitTutorial, GitHub, Azure, Python, VSCodePython, NodeJS, microsoftOpenJDK, JavaTutorial, Go, grammarly, mongoDBAtlas, firebase, CommandLine } from '../DataAndAPIs/Links'
 
+const chocolatey = () => externalLink('Chocolatey','https://chocolatey.org/')
 const chocolateyTutorial = () => { return internalLink('Chocolatey tutorial', '/activity-config/chocolatey') }
 const chocolateyInstallApplicationTutorial = () => { return internalLink('Chocolatey application installation tutorial', '/activity-config/chocolatey-install') }
 const chocolateyScript = () => { return externalLink('script', 'https://lewiseducation.blob.core.windows.net/configuration/choco-install-packages.txt') }
@@ -62,7 +63,7 @@ export const Tools = () => {
 <div>
 <h5>{name}</h5>
 <h6>Summary: Install, configure, and utilize important software development tools</h6>
-<p>Prerequisites: Windows 10 or MacOS</p>
+<p>Prerequisites: Windows 11 or MacOS</p>
 
 <p>To be a successful successful software developer and to be successful in this course you will need to effectively 
 install, configure, and utilize the following tools and services. By the end of this tutorial you will be able to:</p>
@@ -72,8 +73,9 @@ install, configure, and utilize the following tools and services. By the end of 
 	<li>Install, configure, and utilize the following software development tools and services</li>
 </ul>
 
-<p>In this activity you will set up:</p>
+<p>In this activity you will install and configure:</p>
 <ol>
+
 	<li>{Discord()} to allow your scrum team effectively communicate</li>
 	<li>{OReillyBooks()} online service which is available free through Lewis University</li>
 	<li>{Firefox()} and {Chrome()} web browsers</li> 
@@ -94,8 +96,8 @@ install, configure, and utilize the following tools and services. By the end of 
 </ol>
 
 <br />
-<h6>Using Package Mangers (optional):</h6>
-<p>An alternative method of installing, updating, and deleting software applications is to utilize a package manager. 
+<h6>Using Package Mangers (recommended):</h6>
+<p>The recommended method of installing, updating, and deleting software applications is to utilize a package manager. 
 Either Chocolatey (Windows) and Homebrew (MacOS) can be utilized to set up the above applications.</p>
 <p>Chocolatey (Windows):</p>
 <ol>
@@ -103,8 +105,22 @@ Either Chocolatey (Windows) and Homebrew (MacOS) can be utilized to set up the a
 	<li>Complete {chocolateyInstallApplicationTutorial()} to install VS Code, Python3, VS Code Python extension, MS 
 	    Teams, Git, Node.js, and OpenJDK using a Chocolatey {chocolateyScript()}</li>
 </ol>
+Install {chocolatey()} and then execute the following script:
+<pre style={{color:"brown", fontFamily: 'monospace'}}>{
+`choco install python -y
+choco install vscode -y
+choco install vscode-python -y
+
+choco install git -y
+
+choco install nodejs -y
+choco install openjdk -y
+`}</pre>
+
+
 <p>Homebrew (MacOS): Complete the {homebrew()} to install Visual Studio Code, Python3, Visual Studio Code Python 
 extension, MS Teams, Git, Node.js, and OpenJDK.</p>
+
 </div>
 
 	);
