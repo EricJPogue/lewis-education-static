@@ -34,7 +34,7 @@ export class SprintCalendar extends Component {
 	finalExamDateAndTimeText = () => {
 		let finalExam = getFinalExamDateAndTime()
 		if (finalExam.length > 0)
-			return (<div>Final Project Presentations will be held during our scheduled Final Exam time which is <u><em>{finalExam}</em></u> with in-person attendance required.</div>)
+			return (<div>Final exam, makeup exams, and any missed class project presentations will be held during our scheduled Final Exam time which is <u><em>{finalExam}</em></u> with in-person attendance required.</div>)
 		else
 			return null
 	}
