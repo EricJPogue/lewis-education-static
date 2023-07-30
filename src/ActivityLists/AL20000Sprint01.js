@@ -26,6 +26,7 @@ export const al20000Sprint01 = () => {
 		<ul style={{listStyleType:'square'}}>
 			<li>Effectively participate in a blended classroom environment and as part of a scrum team</li>
 			<li>Define and utilize files, files systems, and Zip files</li>
+			<li>Utilize graphical and command line representations of files and file systems</li>
 			<li>Understand the basics of Computer Science</li>
 			<li>Describe the concept of abstraction</li>
 			<li>Utilize important developer tools to create and update basic software applications</li>
@@ -39,7 +40,6 @@ export const al20000Sprint01 = () => {
 }
 
 export const list20000Sprint01 = (sprint) => {
-	const computerScienceIlluminated = () => { return( <a href='https://learning.oreilly.com/playlists/c64af15a-7918-4898-9488-8d573674a2dc' target='_blank' rel='noopener noreferrer'>Computer Science Illuminated</a> ) }
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
@@ -52,7 +52,7 @@ export const list20000Sprint01 = (sprint) => {
 			<li>Review {CommandLine()}</li>
 			{initialPost(sprint)}
 
-			<li>Read {computerScienceIlluminated()} chapter 1, review our <NavLink to='/activity-dale/1'>chapter 1 lecture</NavLink>, and be prepared for a scrum team discussion</li>
+			<li>Read Computer Science Illuminated chapter 1, review our <NavLink to='/activity-dale/1'>chapter 1 lecture</NavLink>, and be prepared for a scrum team discussion</li>
 			<li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface through Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
 			{standardActivitiesClosing(sprint, HelloWorldPythonLink(), '3 hours')}
 		</ol>

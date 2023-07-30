@@ -1,13 +1,10 @@
-import { getClassSection, _CPSC_20000, _CPSC_24500, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from '../DataAndAPIs/Classes'
-import { getCalendarPlusByCalendarID } from '../DataAndAPIs/Calendars'
+import { getClassSection, _CPSC_20000, _CPSC_24500, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from '../../DataAndAPIs/Classes'
+import { getCalendarPlusByCalendarID } from '../../DataAndAPIs/Calendars'
 
-import { syllabus } from './SyllabiShared'
+import { syllabus } from '../SyllabiShared'
 
 const sp23MakeDefaultClassSection = () => {	
-	let defaultClassSection= {
-		officeHours:'Thursday 10 to 11:30 AM CT by appointment', // Todo: Consider adding 'officeHours' to _INSTRUCTOR.
-		appointmentRequests:'Appointments can be requested via email', // Todo: Consider moving 'appointmentRequests' to _INSTRUCTOR. 
-	}
+	let defaultClassSection = {}
 
 	const classSection = getClassSection()
 	defaultClassSection.section = classSection.section

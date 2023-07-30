@@ -1,7 +1,7 @@
 // fa22.js is depreciated and should be removed.
 
-import { getClassSection, _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from '../DataAndAPIs/Classes'
-import { syllabus } from './SyllabiShared'
+import { getClassSection, _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from '../../DataAndAPIs/Classes'
+import { syllabus } from '../SyllabiShared'
 
 const makeDefaultClassSection = () => {
 	let defaultClassSection= {

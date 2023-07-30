@@ -70,9 +70,9 @@ export const syllabus = (course, courseSection, instructor) => {
 			<tbody>
 				{header(['I.', 'Instructor Information'])}
 				{row(['', 'Instructor’s Name:', instructor.name ])}
-				{row(['', 'Office Hours:', courseSection.officeHours])}
+				{row(['', 'Office Hours:', instructor.officeHours])}
 				{row(['', 'Lewis Office Location:', instructor.office])}
-				{row(['', 'Appointments:', courseSection.appointmentRequests])}
+				{row(['', 'Appointments:', instructor.appointmentRequests])}
 				{row(['', 'Lewis Email:', instructor.lewisEmail])}
 				{row(['', 'Lewis Phone Number:', instructor.lewisPhone])}
 			</tbody>

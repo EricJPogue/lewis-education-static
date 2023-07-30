@@ -1,4 +1,4 @@
-import { getCalendarByCalendarID, _FALL_2023_08_28_16, _SPRING_2023_01_09_16, _CURRENT_CALENDAR } from "./Calendars"
+import { getCalendarByCalendarID, _FALL_2023_08_28_16, _CURRENT_CALENDAR } from "./Calendars"
 
 import { al44000Sprint1Topics } from '../ActivityLists/AL44000Sprint01'
 import { al44000Sprint2Topics } from '../ActivityLists/AL44000Sprint02'
@@ -51,6 +51,7 @@ export const getClassCalendar = () => {
 	return getCalendarByCalendarID(getClass().calendarID) 
 }
 
+// getClass() depreciated... replace getClass() with getClassSection()
 export const getClass = () => {
 	const classID = getClassIDfromURL()
 	if (classID  === '') {
@@ -60,8 +61,11 @@ export const getClass = () => {
 }
 
 export const getClassSection = () => {
-	// Todo: Refactor getClass() to getClassSection() as we are really talking about a class section. 
-	return getClass()
+	const classID = getClassIDfromURL()
+	if (classID  === '') {
+		return null
+	}
+	return getClassByClassID(classID)
 }
 
 export  const getClassNumber = () => {
@@ -81,7 +85,9 @@ export const getClassByClassID = (classID) => {
 
 export const _INSTRUCTOR = { 
 	name:'Eric Pogue', 
+	officeHours:'Thursday 10 to 10:50 AM CT by appointment',
 	office:'AS-124-A', 
+	appointmentRequests:'Appointments can be requested via email',
 	lewisPhone:'(815) 836-5015',
 	lewisEmail:'epogue@lewisu.edu' 
 }
@@ -126,14 +132,14 @@ export const _CPSC_20000 = {
 	],
 	textBook: 'Computer Science Illuminated, Nell Dale and John Lewis, Jones & Bartlett Learning. This book is required for this course.',
 	modules: [
-		'Getting Started, Tools of the Trade, Files Systems, and The Big Picture',
+		'Getting Started, Tools of the Trade, Files Systems, Representation, and The Big Picture',
 		'Numbering Systems, Data Representation, and HyperText Markup Language (HTML)',
-		'Gates and Circuits, Computing Components, and Cloud Computing with HTML and CSS',
+		'Gates and Circuits, Computing Components, and Cloud Computing with HTML, CSS, and JavaScript',
 		'Artificial Intelligence, Functions, and Objects and Drawing',
-		'Networks, Final Project Proposal, and Objects and Drawing with Python',
+		'Networks, Class Project Proposal, and Objects and Drawing with Python',
 		'Full Stack Development with Web Browser, Web Server, and NoSQL Database',
-		'Security, More HTML, CSS, and more JavaScript or more Python',
-		'Final Project'
+		'Class Project !!!Security, More HTML, CSS, and more JavaScript or more Python!!!',
+		'Final Exam'
 	]
 }
 
@@ -404,30 +410,23 @@ export const classSectionList = [
 	{ 'classID':'fa23-cpsc-20000-002', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 'crn':'80006', 
 		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'10-10:50 pm', 'finalExam':'Monday, Dec 11 from 10:30 AM to 12:30 PM CT' },
 
-	{ 'classID':'sp23-cpsc-44000-001', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_44000, 'number':'44000', 'section':'001', 'crn':'10788', 
-		'title':'Software Engineering', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'11-11:50 am', 'finalExam':'Friday, May 5 from 10:30 AM to 12:30 PM CT' },
+	{ 'classID':'fa23-cpsc-20000-003', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_20000, 'number':'20000', 'section':'003', 'crn':'80007', 
+		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'11-11:50 pm', 'finalExam':'Friday, Dec 15 from 10:30 AM to 12:30 PM CT' },
 
-	{ 'classID':'sp23-cpsc-20000-002', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 'crn':'10526', 
-		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, May 3 from 1:30 PM to 3:30 PM CT' },
+	{ 'classID':'fa23-cpsc-24700-001', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_24700, 'number':'24700', 'section':'001', 'crn':'80024', 
+		'title':'Web and Distributed Programming', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, Dec 13 from 1:30 AM to 3:30 PM CT' },
 
-	{ 'classID':'sp23-cpsc-24500-001', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_24500, 'number':'24500', 'section':'001', 'crn':'10561',
-		'title':'Object-Oriented Programming', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'2-2:50 pm', 'finalExam':'Monday, May 1 from 4-6 pm CT', 
-		'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-24500-001.pdf' },
+	{ 'classID':'fa23-cpsc-44000-001', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_44000, 'number':'44000', 'section':'001', 'crn':'80053', 
+		'title':'Software Engineering', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'2-2:50 am', 'finalExam':'Monday, Dec 11 from 4 pm to 6 pm CT' },
 
-	{ 'classID':'sp23-cpsc-49200-001', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_49200, 'number':'49200', 'section':'001', 'crn':'10815', 
-		'title':'Software Systems Capstone', 'schedule':_T, 'time':'2-3:15', 'finalExam':'Thursday, May 4 from 1:30 to 3:30 pm CT**', 
-		'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' },
+	{ 'classID':'fa23-cpsc-49200-001', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_49200, 'number':'49200', 'section':'001', 'crn':'80056', 
+		'title':'Software Systems Capstone', 'schedule':_T, 'time':'11-12:15', 'finalExam':'Tuesday, Dec 12 from 10:30 to 12:30 pm CT' },
 
-	{ 'classID':'sp23-cpsc-49200-004', 'calendarID':_SPRING_2023_01_09_16, 'class':_CPSC_49200, 'number':'49200', 'section':'004', 'crn':'10822', 
-		'title':'Software Systems Capstone', 'schedule':_T, 'time':'2-3:15', 'finalExam':'Thursday, May 4 from 1:30 to 3:30 pm CT', 
-		'syllabusURL':'https://pithub.blob.core.windows.net/nvm4zqwm/cuq8toxa-sp22-cpsc-49200-001.pdf' },
-
-	{ 'classID':'cpsc-24700', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_24700, 'number':'24700', 'section':'XXX', 'crn':'00000',
-		'title':'Web and Distributed Programming', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' },
+	{ 'classID':'cpsc-24500', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_24500, 'number':'24500', 'section':'XXX', 'crn':'00000',
+		'title':'Object-Oriented Programming', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' },
 	
 	{ 'classID':'cpsc-36000', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_36000, 'number':'36000', 'section':'XXX', 'crn':'00000',
-		'title':'Applied Programming Languages', 'location':'', 'schedule':'', 'time':'', 'finalExam':'', 
-		'syllabusURL':'https://botb.blob.core.windows.net/nvm4zqwm/se3c5q62-syllabus-cpsc-36000-001.pdf' }	
+		'title':'Applied Programming Languages', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' }	
 ]
 
 
