@@ -4,13 +4,13 @@ import { getClassSection, getClassNumber } from '../DataAndAPIs/Classes'
 import { Blended, externalLink, scrumIn7Min } from '../DataAndAPIs/Links'
 
 const panoptoWelcomeIFrameTag = () => {
-	return '<iframe src="https://lewisu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1bd10fe6-8984-4a88-98a1-ae7f0107d260&autoplay=false&offerviewer=false&showtitle=false&showbrand=false&captions=false&interactivity=all" height="576" width="1024" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>'
+	return '<iframe src="https://lewisu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=bd836897-d00f-43b3-bb9e-b05e00fca7d7&autoplay=false&offerviewer=false&showtitle=false&showbrand=false&captions=false&interactivity=all" height="576" width="1024" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>'
 }
 
 export const welcome = () => {
 	return ( <div>
 		<h4>{getClassSection().title}</h4>
-		<h5>***** Welcome! Please take a few minutes to view your welcome message.</h5>
+		<h5>Welcome! Please take a few minutes to view your welcome message.</h5>
 		<IFrameComponent iframe={panoptoWelcomeIFrameTag()} />
 		<br />
 		<p>Please also take a few minutes to gain a better understand of Blended Learning and Scrum by reviewing the 
