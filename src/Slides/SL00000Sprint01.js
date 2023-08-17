@@ -2,14 +2,14 @@ import { checklistAnnouncementsPreworkAndAgenda, completeDeck } from './SL00000S
 import { tPrework, basicSlide, bulletListSlide, orderedListSlide } from './SLSprint00'
 
 // Sprint 1 session 1 of 6: Monday
-const xyz_1_1of6_preworkAnnouncementsAndAgenda = {
+const xyz_1_1of6_PAaA = {
 	'prework':[
 		'Review Welcome Message',
 		'Review Blended Learning & Flipped Classroom',
 		'Review Introduction to Scrum',
 		'Review Course Syllabus' ],
 	'announcements':[ 
-		'Welcome back! I hope you had a wonderful break.' ],
+		'Welcome back! I hope you had a wonderful summer break.' ],
 	'agenda':[
 		'Progress Polling',
 		'Class Format',
@@ -20,12 +20,11 @@ const xyz_1_1of6_preworkAnnouncementsAndAgenda = {
 }
 export const xyz_1_1of6 = (activityList, xyz_1_2of6Prework) => { 
 	const sprint = 1
-	const preworkAnnouncementsAndAgenda = xyz_1_1of6_preworkAnnouncementsAndAgenda
 
-	const poll = () => { return tPrework('Sprint Progress Polling', preworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const poll = () => { return tPrework('Sprint Progress Polling', xyz_1_1of6_PAaA.prework, sprint, activityList) }
 	const switchDeck = () => { return bulletListSlide('PowerPoint', 'Switch to PowerPoint slides.', [])}
 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(preworkAnnouncementsAndAgenda, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(xyz_1_1of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', xyz_1_2of6Prework, sprint, activityList) }
 	return completeDeck(slideDeck, [poll, switchDeck, preworkNext])
 }
