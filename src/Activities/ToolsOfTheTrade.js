@@ -74,15 +74,15 @@ install, configure, and utilize the following tools and services. By the end of 
 
 <p>In this activity you will install and configure:</p>
 <ol>
-
 	<li>{Discord()} to allow your scrum team effectively communicate</li>
 	<li>{OReillyBooks()} online service which is available free through Lewis University</li>
+	<li>{GitHub()}</li>
 	<li>{Firefox()} and {Chrome()} web browsers</li> 
 	<li>{PowerShell()} or {Terminal()} to execute {CommandLine()} (CLI) functions including “Basic Linux CLI Commands”</li>
 	<li>{VSCode()} source code editor</li>
 	<li>{FileExplorer()} or {Finder()} to manage files, folders, and {ZipFiles()}</li>
 	<li>{ScreenCapture()} to capture images of our computer screen</li>
-	<li>{GitHub()} and the {Git()} command line source code management tool by following this {GitTutorial()}</li>
+	<li>Review {GitHub()} and set up the {Git()} command line source code management tool by following this {GitTutorial()}</li>
 	<li>{Python()} and the {VSCodePython()} integrated development environment</li>
 	<li>{Office365()} which is available to you free through Lewis University</li>
 	<li>{Azure()} cloud hosting service</li>
