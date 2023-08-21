@@ -13,22 +13,21 @@ export const al20000Sprint01 = () => {
 	const classSection = getClass()
 	const sprint = 1
 	return ( <div>
-		<h5>!!!Sprint 1: {classSection.class.modules[sprint-1]}</h5>
+		<h5>Sprint 1: {classSection.class.modules[sprint-1]}</h5>
 
 		<p>Welcome to Introduction to Computer Science! In this course we will be exploring the field of computer 
-		science. The course will include an overview of computer architecture, software engineering, data organization, 
-		networking, and security. Together we will also explore algorithms, abstractions, computational 
-		problem solving, and programming.</p>
+		science. The course will cover computer architecture, software engineering, data organization, 
+		networking, and security. We will also explore algorithms, abstractions, computational 
+		problem-solving, and programming.</p>
 
 		{scrumIntro()}
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Effectively participate in a blended classroom environment and as part of a scrum team</li>
+		    <li>Understand the basics of Computer Science</li>
 			<li>Define and utilize files, files systems, and Zip files</li>
-			<li>Utilize graphical and command line representations of files and file systems</li>
-			<li>Understand the basics of Computer Science</li>
-			<li>Describe the concept of abstraction</li>
+			<li>Utilize graphical and command line tools to manage files and file systems</li>
 			<li>Utilize important developer tools to create and update basic software applications</li>
 		</ul>
 

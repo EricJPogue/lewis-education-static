@@ -22,6 +22,7 @@ export const al20000Sprint02 = () => {
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
+			<li>Describe the concept of abstraction</li>
 			<li>Develop browser-based HTML5 applications that utilize common HTML and CSS</li>
 			<li>Utilize important software developer tools and services to create, update, and deploy basic software applications</li>
 			<li>Understand and utilize numbering systems</li>
