@@ -85,3 +85,6 @@ export const list20000Sprint02 = (sprint) => {
 	Kaizen: Small improvements eventually result in huge benefits
 */
 // Todo: Consider adding licensing topic to all classes. 
+
+// Todo: Consider where the following activity should go. 
+//    <li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface through Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>

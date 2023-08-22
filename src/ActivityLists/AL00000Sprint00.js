@@ -73,7 +73,7 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 			<li>Understand blended learning by watching {Blended()}</li>
 			<li>Be prepared to participate in your scrum team by watching {scrumIn7Min()}</li>
 			<li>Become comfortable with logging into and adding a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
-			<li>Start working on {toolsOfTheTrade()} by setting up Discord, O’Reilly Books, and GitHub</li>
+			<li>Start working on {toolsOfTheTrade()} by setting up Discord, GitHub, and O’Reilly Books</li>
 		</div> )
 	}
 	const sprint2StandardActivities = () => {

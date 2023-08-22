@@ -7,7 +7,7 @@ import { routeActivity } from './ActivityRouter';
 
 import { SeatSelector } from './SeatSelector'
 import { StudyTable } from './StudyTable'
-import { HelloWorldPython, HelloWorldJava, HelloWorldGo, HelloWorldWeb } from './HelloWorld'
+import { HelloWorldPython, HelloWorldJava, HelloWorldGo, /*HelloWorldWeb*/ } from './HelloWorld'
 import { MatchmakerExamples } from './Matchmaker';
 import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './HealthRiskCalculator'
 
@@ -97,7 +97,7 @@ class Activity extends Component {
 			case 'hello-world-python': return HelloWorldPython()
 			case 'hello-world-java': return HelloWorldJava()
 			case 'hello-world-go': return HelloWorldGo()
-			case 'hello-world-web': return HelloWorldWeb()
+			// case 'hello-world-web': return HelloWorldWeb()
 
 			case 'matchmaker-examples': return MatchmakerExamples()
 
