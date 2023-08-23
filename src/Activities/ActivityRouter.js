@@ -30,6 +30,7 @@ import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbb
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
 import { HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE, healthRiskCalculatorTeamWeb } from './HealthRiskCalculatorTeam'
 import { HELLO_WORLD_WEB_ROUTE, HelloWorldWeb } from './HelloWorld'
+import { HELLO_WORLD_WEB_T1_ROUTE, HelloWorldWebT1 } from './HelloWorld'
 import { LIONS_TIGERS_AND_BEARS_ROUTE, lionsTigersAndBears } from './LionsTigerAndBears'
 import { MAP_MANIA_V1_ROUTE, mapManiaVersion1 } from './MapMania'
 import { MAP_MANIA_V2_ROUTE, mapManiaVersion2 } from './MapMania'
@@ -95,6 +96,7 @@ export const routeActivity = (activityRoute) => {
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()
 		case HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE: return healthRiskCalculatorTeamWeb()
 		case HELLO_WORLD_WEB_ROUTE: return HelloWorldWeb()
+		case HELLO_WORLD_WEB_T1_ROUTE: return HelloWorldWebT1()
 		case LIONS_TIGERS_AND_BEARS_ROUTE: return lionsTigersAndBears()
 		case MAP_MANIA_V1_ROUTE: return mapManiaVersion1()
 		case MAP_MANIA_V2_ROUTE: return mapManiaVersion2()
