@@ -12,7 +12,7 @@ export const InfoEricPogue = () => {
 		<h5>Eric Pogue</h5>
 		Assistant Professor<br /><br />
 
-		Short Bio: Professional software developer and software development manager turned college instructor.<br /><br />
+		Short Bio: Professional software development leader turned college instructor.<br /><br />
 
 		Email: <a href='mailto:webmaster@example.com'>epogue@lewisu.edu</a><br />
 		Zoom: {personalZoomRoom()}<br />
