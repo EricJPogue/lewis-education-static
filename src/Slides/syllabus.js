@@ -1,3 +1,5 @@
+// Depreciated: August 24, 2023
+
 import React from 'react'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 import Table from 'react-bootstrap/Table'
@@ -231,7 +233,7 @@ export const syllabus = () => {
 							announcements</p>
 						</td>	
 					</tr>
-					{header(['VIII.', 'Practices and Policies during the Coronavirus Pandemic'])}
+					{header(['VIII.', '[[No longer valid]]Practices and Policies during the Coronavirus Pandemic'])}
 					<tr>
 						<td></td>
 						<td colSpan={2}>

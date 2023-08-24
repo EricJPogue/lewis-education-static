@@ -85,7 +85,7 @@ export const getClassByClassID = (classID) => {
 
 export const _INSTRUCTOR = { 
 	name:'Eric Pogue', 
-	officeHours:'Thursday 10 to 10:50 AM CT by appointment',
+	officeHours:'Tuesdays 1-3 PM and Thursdays 10-11 AM CT by appointment',
 	office:'AS-124-A', 
 	appointmentRequests:'Appointments can be requested via email',
 	lewisPhone:'(815) 836-5015',

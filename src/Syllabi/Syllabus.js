@@ -11,7 +11,7 @@ export const Syllabus = () => {
 		case 'fa23-cpsc-20000-003': return fa23_cpsc_20000_003()
 		case 'fa23-cpsc-24700-001': return fa23_cpsc_24700_001()
 		case 'fa23-cpsc-44000-001': return fa23_cpsc_44000_001()
-		case 'fa23-cpsc-49000-001': return fa23_cpsc_49200_001()
+		case 'fa23-cpsc-49200-001': return fa23_cpsc_49200_001()
 
 		case 'cpsc-24500': return cpsc_24500()
 		case 'cpsc-36000': return cpsc_36000()

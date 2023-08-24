@@ -4,6 +4,7 @@ import React from 'react'
 import Table from 'react-bootstrap/Table'
 
 import LewisUniversityLogo from '../Slides/LewisUniversityLogo.png'
+import { externalLink } from '../DataAndAPIs/Links'
 
 export const syllabus = (course, courseSection, instructor) => {
 	const header = (itemArray) => {
@@ -204,18 +205,25 @@ export const syllabus = (course, courseSection, instructor) => {
 						announcements</p>
 					</td>	
 				</tr>
-				{header(['VIII.', 'Practices and Policies during the Coronavirus Pandemic'])}
-				<tr>
-					<td></td>
-					<td colSpan={2}>
-						{renderPracticesCoronavirusPandemic()}
-					</td>	
-				</tr>
-				{header(['IX.', 'Information for Students'])}
+				{header(['VIII.', 'Academic Information for Students'])}
 				<tr>
 					<td></td>
 					<td colSpan={2}>
 						{renderInformationForStudents()}
+					</td>	
+				</tr>
+				{header(['IX.', 'Student Health, Wellness, and Community Standards'])}
+				<tr>
+					<td></td>
+					<td colSpan={2}>
+						{renderStudentHealthWellnessAndCommunityStandards()}
+					</td>	
+				</tr>
+				{header(['X.', 'Additional Policy and Resources'])}
+				<tr>
+					<td></td>
+					<td colSpan={2}>
+						{renderAdditionalPolicyAndResources()}
 					</td>	
 				</tr>
 
@@ -391,50 +399,6 @@ const renderGradingScale = () => {
 	</div> )
 }
 
-const renderPracticesCoronavirusPandemic = () => {
-	return ( <div>
-		<p><em>Responsiveness to Change:</em> Understanding that the COVID-19 pandemic could influence the course of 
-		this semester, Lewis University will be guided by our Lasallian mission and the well-being of our community of 
-		students, faculty, and staff in respond and adapting to any sudden changes or circumstances. Based on the 
-		guidance of the State of Illinois and the Centers for Disease Control, it may be necessary to change the planned 
-		modality this course.</p>
-		<p><em>Flexibility, Accommodations, and Student Absences:</em>Because we are committed to student success, the 
-		University community is committed to academic standards while maintaining flexibility and empathy.</p>
-		<ul>
-			<li>Absences relating to the Coronavirus crisis will require documentation to be recognized as excused.  
-			Documentation should be submitted to academicservices@lewisu.edu .</li>
-			<li>Students experiencing disruptions in their lives related to the Coronavirus that impact class 
-			attendance and participation should:</li>
-			<ul>
-				<li>First, contact their instructor to make arrangements for completing missed work.</li>
-				<li>When this is not possible and when the absence from class is for three or more class meetings, 
-				students should contact Academic Services at academicservices@lewisu.edu. </li>
-			</ul>
-		</ul>
-		<p>Students who require academic accommodations due to disability caused by COVID-19, or to limit risk of 
-		exposure to Coronavirus, can engage in an interactive process with the Learning Access Coordinator to explore 
-		avenues for accommodations. Students can contact the Academic Services office at 815-836-5593 or 
-		learningaccess@lewisu.edu to request an appointment.</p>
-		<p>Except in the case of unforeseen circumstances that require a university-wide shift in instructional 
-		modalities, courses will only be offered in the modality listed in the course schedule.  It is not possible 
-		to accommodate remote attendance in on-campus classes unless the course is listed as multi-option in the 
-		schedule.</p>
-
-		<p><em>Face Coverings and Surface Cleaning:</em> Lewis understands the benefits of wearing face coverings 
-		by encouraging and supporting all who choose to wear a face covering.</p>   
-		<ul>
-			<li>Face coverings may be required of all individuals, due to changing health and safety conditions, at 
-			the advice of state and local health authorities, or under certain campus circumstances. When face coverings 
-			are required, students will be informed in advance.</li>
-			<li>If conditions improve, face coverings will no longer be required of those who have submitted 
-			documentation of their fully vaccinated status.</li>
-			<li>While the University will disinfect classrooms and common spaces throughout the day, cleaning supplies 
-			will be provided in classrooms and offices so that students and faculty can wipe down work surfaces before 
-			class begins.</li>
-		</ul>
-	</div> )
-}
-
 const renderInformationForStudents = () => {
 	return ( <div>
 		<p><em>Requests for Reasonable Accommodations:</em> Lewis University is committed to providing equal access and 
@@ -464,6 +428,17 @@ const renderInformationForStudents = () => {
 		department/program level. Appeal of the department /program decision must be made to the Dean of 
 		the college/school. The Dean reviews the appeal and makes the final decision in all cases except those in 
 		which suspension or expulsion is recommended, and in these cases the Provost makes the final decision.</p>
+	</div> )
+}
+
+const renderStudentHealthWellnessAndCommunityStandards = () => {
+	return ( <div>
+		<p><em>Sanctified Zone:</em> Guided by its Catholic and Lasallian heritage, Lewis University is firmly committed 
+		to fostering a campus atmosphere that is permeated by its Mission values of Fidelity, Wisdom, Knowledge, 
+		Justice, and Association. Accordingly, we have declared the University campus to be a Sanctified Zone, a place 
+		and a people United in Diversity. The active promotion of diversity and the opposition to all forms of 
+		prejudice and bias are a powerful and healing expression of our desire to be Signs of Faith (Signum Fidei) to 
+		each other.  To learn more about the Sanctified Zone, please visit: http://www.lewisu.edu/sanctified zone</p>
 
 		<p><em>University Student Complaint Policy:</em> The University Student Complaint Policy can be found at 
 		lewisu.edu/studentcomplaints</p>
@@ -476,5 +451,77 @@ const renderInformationForStudents = () => {
 		those living on campus, part-time and full-time students, graduate and undergraduate students, and those 
 		taking Lewis classes at other locations.  For more information, visit the Center for Health &amp; Counseling 
 		website at www.lewisu.edu/studentservices/health or call (815)836-5455.</p>
+
+
+		<p><em>Sanctified Zone:</em> Guided by its Catholic and Lasallian heritage, Lewis University is firmly committed 
+		to fostering a campus atmosphere that is permeated by its Mission values of Fidelity, Wisdom, Knowledge, 
+		Justice, and Association. Accordingly, we have declared the University campus to be a Sanctified Zone, a place 
+		and a people United in Diversity. The active promotion of diversity and the opposition to all forms of 
+		prejudice and bias are a powerful and healing expression of our desire to be Signs of Faith (Signum Fidei) to 
+		each other. To learn more about the Sanctified Zone, please visit: http://www.lewisu.edu/sanctified zone</p>
+
+		<p>As a Sanctified Zone, Lewis University affirms the importance of diverse spiritual and value-based 
+		identities, worldviews, and expressions, including the observance of religious and cultural traditions. To 
+		learn more about the rich diversity of spiritual and cultural holidays celebrated within the Lewis community, 
+		please see the Interfaith Calendar. Please note that this calendar is not a designation of spiritual and 
+		cultural holidays officially recognized or observed by Lewis University; rather, it is intended as an 
+		educational resource for the Lewis community.</p>
+
+		<p>Lewis University is committed to inclusion “together and by association” on our campus and in our classrooms. 
+		At the beginning of the semester, you should carefully review this course syllabus and requirements. If you have 
+		religious or cultural observances that reasonably conflict with attendance or submission of assignments in this 
+		class, please let the instructor know as soon as possible so that alternative arrangements may be discussed at 
+		the instructor’s discretion.</p>
+
+		<p><em>Violence Prevention</em> Students at Lewis University are entitled to personal safety. Our Catholic and 
+		Lasallian tradition views every person as created in the image of God, full of dignity and worth. All community 
+		members are expected to behave in a way that respects others' rights to control their sexual behavior and bodily 
+		integrity. The University takes seriously any incidents of sexual misconduct — including but not limited to 
+		sexual harassment, non-consensual sexual intercourse, non-consensual sexual contact and sexual exploitation. To 
+		learn more about our comprehensive Sexual Misconduct Policy, find out how to report an incident, or access on and 
+		off campus resources, please visit the LU Cares website at www.lewisu.edu/LUCares.</p>
+
+		<p><em>Mandatory Reporting</em> As an instructor, I have a required reporting responsibility as a part of my 
+		role. Lewis University policy requires me to share certain information brought to my attention about potential 
+		sexual misconduct with the Title IX Coordinator. I will seek to keep the information you share private to the 
+		greatest extent possible. Information will only be shared with those that need to know to ensure the University 
+		can respond, take appropriate measures, and provide resources.</p>
+
+		<p>A list of confidential (those not required to report to the Title IX office) on and off-campus resources can 
+		be found on the LU Cares website: www.lewisu.edu/LUCares. For those who may have experienced sexual violence, 
+		harassment, dating violence, or stalking, there are no-cost resources available to provide assistance. This 
+		support also extends to the individuals' associates. The timeframe in which the violence occurred is not a 
+		factor in accessing these resources.</p>
+
+		<p><em>Student Wellness Center</em>All Lewis students are eligible and encouraged to use the services 
+		offered to support overall well-being and student success. The Student Wellness Center is located on the lower 
+		level of Mother Teresa Hall on the Romeoville campus. For more information about all Center offerings or to 
+		access on campus, in-person services, visit https://www.lewisu.edu/StudentWellnessCenter or call (815)836-5455.</p>
+
+		<p><em>Timely Care</em> All students have access to a 24/7, 365 days per year telehealth services through a 
+		partnership with TimelyCare (medical, counseling, health coaching, self-care resources/peer community and urgent 
+		care). To access services, go to www.timelycare.com/lewisu, use your Lewis University email to log in or 
+		download the TimelyCare app. TalkNow and Medical Now on-demand services are available any time of day, either by 
+		phone or video. TimelyCare staff are trained to work with any level of concern and will connect students with 
+		the Student Wellness Center for additional assistance and follow-up as appropriate.</p>
+
+		<p><em>If a student is at imminent risk or there is a serious safety concern, please call 911 or Lewis 
+		University Police Department 815-836-5911. </em>Lewis community members are encouraged to complete the 
+		Assessment and Care Team Person of Concern Form and the Dean of Students Office will ensure follow-up support 
+		as well as other campus resources if helpful and needed.</p>
+	</div> )
+}
+
+const renderAdditionalPolicyAndResources = () => {
+	return ( <div>
+		<p>{externalLink('University Student Complaint Policy', 
+		'https://www.lewisu.edu/welcome/studentcomplaints.htm')}: The University Student Complaint Policy can be found 
+		at lewisu.edu/studentcomplaints.</p>
+		<p>{externalLink('University Grade Appeal Policy', 'https://www.lewisu.edu/welcome/studentcomplaints.htm')}: The 
+		University Grade Appeal Policy can be found at lewisuedu/studentcomplaints.</p>
+		<p>{externalLink('University Copyright and Intellectual Property Guidelines', 
+		'https://www.lewisu.edu/osp/pdf/Intellectual%20Property%20Rights%20Policy.pdf')}: 
+		The University Copyright and Intellectual Property Guidelines can be found at 
+		https://www.lewisu.edu/osp/pdf/Intellectual%20Property%20Rights%20Policy.pd</p>
 	</div> )
 }
