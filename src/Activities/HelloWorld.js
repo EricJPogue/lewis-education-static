@@ -111,9 +111,9 @@ export const HelloWorldWeb = () => {
 		</ol>
 
 		<em>Requirement 2</em>
-		<p>Be sure that the application also:</p>
+		<p>Enhance your application so that it:</p>
 		<ol>
-			<li>Is updated to include a valid README.md file</li>
+			<li>Has an updated valid README.md file</li>
 			<li>Displays your First Name and Last Name followed by Hello World</li>
 			<li>Implements a curly apostrophe (“ ’ ”) to indicate singular possessive last name</li>
 			<li>Displays all text as default Header 2 text</li>
