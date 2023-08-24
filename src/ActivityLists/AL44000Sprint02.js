@@ -37,6 +37,8 @@ export const list44000Sprint02 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
+			<li>** Within {oreillyPlaylistSE()} scan “Essential Scrum” Chapters 1 and 2</li>
+
 			{standardActivities(sprint, assignmentPortfolioLink())}
 			<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated {foxChapter2Lecture()}</li>
 			<li>Complete {azureWebsiteLink()}{estimated('2 hours')}</li>
@@ -62,5 +64,10 @@ export const list44000Sprint02 = (sprint) => {
 // Todo: Consider Git centric topic sprint 2 
 // Todo: Only go over Azure hosting once.
 // Todo: Identify where quiz answers originate from. 
+// Todo: Fix the end of the Fox Preface video.
+// Todo: Review https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository
+// Todo: Consider updating Static Website and Node.js website assignments. The final Node.js Assignment Portfolio implementation 
+//     does not really make sense as it is slower than the Static Website.
+// Todo: Consider adding W3C Validator VS code add-in to several classes. 
 
 

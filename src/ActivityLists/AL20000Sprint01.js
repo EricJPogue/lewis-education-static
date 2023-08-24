@@ -3,7 +3,7 @@ import React from 'react'
 import { getClass } from '../DataAndAPIs/Classes'
 import { CommandLine, internalLink } from '../DataAndAPIs/Links'
 import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
-import { HelloWorldWebLink } from '../Activities/HelloWorld'
+import { HelloWorldWebPart1Link } from '../Activities/HelloWorld'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 
 export const al20000Sprint01 = () => {
@@ -40,7 +40,7 @@ export const list20000Sprint01 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-			{standardActivities(sprint, HelloWorldWebLink())}
+			{standardActivities(sprint, HelloWorldWebPart1Link())}
 			<li>Read “Computer Science Illuminated” chapter 11 File Systems and Directories</li>
 			<li>Review our “Computer Science Illuminated” {daleChapter11Lecture()} and be prepared for a scrum team discussion</li>
 			<li>Complete {toolsOfTheTradeLink()}{estimated('3 hours')}</li>
@@ -49,7 +49,7 @@ export const list20000Sprint01 = (sprint) => {
 			{initialPost(sprint)}
 
 			<li>Read Computer Science Illuminated chapter 1, review our {daleChapter1Lecture()}, and be prepared for a scrum team discussion</li>
-			{standardActivitiesClosing(sprint, HelloWorldWebLink(), '3 hours')}
+			{standardActivitiesClosing(sprint, HelloWorldWebPart1Link(), '3 hours')}
 		</ol>
 	</div> )
 }
@@ -57,8 +57,6 @@ export const list20000Sprint01 = (sprint) => {
 // Certified for FA22 (08/27/22)
 // Certified for SP23 (01/02/23)
 // Certified for FA23 (08/23/23)
-
-// Todo: Add good feedback a	nswer to lab 1 question 5 to see if we can do this on other important questions. 
 
 
 

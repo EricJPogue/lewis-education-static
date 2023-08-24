@@ -78,14 +78,13 @@ const HelloWorld = (app) => {
 const helloWorldTemplate = () => { return externalLink('Hello World for the Web Template', 'https://github.com/EricPogueExampleCode-Web/hello-world-template') } 
 const gitHubPages = () => { return externalLink('GitHub Pages', 'https://pages.github.com/')}
 
-const HELLO_WORLD_WEB_NAME = 'Hello World for the Web'
-export const HELLO_WORLD_WEB_ROUTE = 'hello-world-web'
-export const HelloWorldWebLink = () => {return (<NavLink to={makeInternalURL(HELLO_WORLD_WEB_ROUTE)}>{HELLO_WORLD_WEB_NAME}</NavLink>)}
 
-export const HelloWorldWeb = () => { 
+const HELLO_WORLD_WEB_PART_1_NAME = 'Hello World for the Web - Part 1'
+export const HELLO_WORLD_WEB_PART_1_ROUTE = 'hello-world-web-part-1'
+export const HelloWorldWebPart1Link = () => {return (<NavLink to={makeInternalURL(HELLO_WORLD_WEB_PART_1_ROUTE)}>{HELLO_WORLD_WEB_PART_1_NAME}</NavLink>)}
+
+export const HelloWorldWebPart1 = () => {
 	const practicalTypographyArticle = () => { return externalLink('Practical Typography article', 'https://practicaltypography.com/straight-and-curly-quotes.html') }
-
-
 	return ( <div>
 		<h4>Hello World for the Web</h4>
 		<h5>Summary: Create and host Hello World for the Web using GitHub Pages</h5>
@@ -106,9 +105,19 @@ export const HelloWorldWeb = () => {
 		<ol>
 			<li>Signing into your GitHub account</li>
 			<li>Reviewing {gitHubPages()} and completing {HelloWorldWebT1Link()}</li>
-			<li>Utilizes GitHub Pages and the {helloWorldTemplate()} to create and host a website</li>
-			<li>Implements a Hello World website</li>
+			<li>Utilizing GitHub Pages and the {helloWorldTemplate()} to create and host a website</li>
+			<li>Implementing a Hello World website</li>
 		</ol>
+	</div>)
+}
+
+const HELLO_WORLD_WEB_NAME = 'Hello World for the Web'
+export const HELLO_WORLD_WEB_ROUTE = 'hello-world-web'
+export const HelloWorldWebLink = () => {return (<NavLink to={makeInternalURL(HELLO_WORLD_WEB_ROUTE)}>{HELLO_WORLD_WEB_NAME}</NavLink>)}
+
+export const HelloWorldWeb = () => { 
+	return ( <div>
+		{HelloWorldWebPart1()}
 
 		<em>Requirement 2</em>
 		<p>Enhance your application so that it:</p>
@@ -121,7 +130,8 @@ export const HelloWorldWeb = () => {
 	</div> )
 }
 
-const HELLO_WORLD_WEB_T1_NAME = 'Hello World for the Web - Tutorial Part 1'
+// const HELLO_WORLD_WEB_T1_NAME = 'Hello World for the Web - Tutorial Part 1'
+const HELLO_WORLD_WEB_T1_NAME = 'Hello World for the Web - Tutorial'
 export const HELLO_WORLD_WEB_T1_ROUTE = 'hello-world-web-t1'
 export const HelloWorldWebT1Link = () => {return (<NavLink to={makeInternalURL(HELLO_WORLD_WEB_T1_ROUTE)}>{HELLO_WORLD_WEB_T1_NAME}</NavLink>)}
 
