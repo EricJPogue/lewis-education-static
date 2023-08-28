@@ -3,11 +3,32 @@ import { prework, breakoutStandard, quiz } from './SLSprint00'
 import { list24700Sprint01 } from '../ActivityLists/AL24700Sprint01'
 import { agendaSlide } from './SLSprint00' // Shared slide templates.
 
+import { xyz_1_1of6  } from './SL00000Sprint01'
+
 // Sprint 1 integrated slide decks are defined below.
 const sprint = 1
 
 // Web & Distributed Programming (WEB)
-export const web_1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
+// export const web_1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
+
+const activityList = () => { return list24700Sprint01(sprint) }
+export const web_1_1of6 = () => { return xyz_1_1of6(activityList, web_1_2of6_PreworkAnnouncementAndAgenda.prework) }
+
+// **BugBug: Update below. 
+
+// Session 2 of 6: Wednesday
+const web_1_2of6_PreworkAnnouncementAndAgenda = {
+	'prework':[
+		'Complete through activity 7 prior to next class', '',
+		`Be prepared to complete sprint ${sprint} planning` ],
+	'announcements':[ 
+		'Friday’s class will be remote via Zoom' ],
+	'agenda':[
+		'Sprint Progress Polling', 
+		'Introductions and Scrum Team Assignments (continued)',
+		`Sprint ${sprint} Planning (continued)`,
+		`Sprint ${sprint} Scrum Team Breakout` ]
+}
 
 export const web_1_2of6 = () => { 
 	const announcements =  () => { return basicSlideWithLogo('Announcements', ['Dr. Martinez is looking for someone to do some Web development work for her research project.']) }
@@ -120,24 +141,6 @@ const prework_1_1of6_list = [
 	'Get your headset (that includes a microphone) for teaming and programming together activities'
 ]
 const prework_1_1of6 = () => { return prework('Prework', prework_1_1of6_list) }
-
-const mwf_1_1of6 = (prework_1_1of6) => {
-	// Todo: Move session 1 to an integrated slide deck as it was delivered as a PowerPoint slide presentation on 
-	//     August, 28, 2022. An outline is provided below as a placeholder. 
-	// Todo: Consider reducing content as Introductions and Planning stretched into Wednesday (especially for larger classes.) 
-	const agenda = () => {
-		return agendaSlide([
-			'Friendly Conversation Topic',
-			'Prework and Announcements',
-			'Zoom Polling',
-			'Introductions – Part 1',
-			'Sprint 1 Planning (abbreviated)',
-			'Assignment',
-			'Introductions – Part 2 including Scrum Team Assignments' ])
-	}
-
-	return [ instructorChecklist, preflightChecklist, agenda, prework_1_1of6, end ]
-}
 
 const mwf_1_2of6 = (announcements, prework, poll, preworkForNextClass) => {
 	const agenda = () => { 
