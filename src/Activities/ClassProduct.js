@@ -61,7 +61,7 @@ proposal and come prepared with your proposal in hand and ready to discuss the a
 	<li>A very brief summary of what interest you most about your top two prioritized products</li>
 	<li>Your GitHub user name</li>
 	<li>A list of any classmates that you would like to work together with on the same Scrum product team</li>
-	<li>Confirmation that you will be available to meet regularly with your team each week on Tuesday from 2-3:15</li>
+	<li>Confirmation that you will be available to meet regularly with your team each week during our regular class time</li>
 	<li>When you took Software Engineering (and your instructor) plus a description of your comfort level with Agile 
 		and Scrum</li>
 </ol>
