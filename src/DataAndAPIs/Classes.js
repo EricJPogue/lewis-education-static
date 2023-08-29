@@ -420,7 +420,7 @@ export const classSectionList = [
 		'title':'Software Engineering', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'2-2:50 am', 'finalExam':'Monday, Dec 11 from 4 pm to 6 pm CT' },
 
 	{ 'classID':'fa23-cpsc-49200-001', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_49200, 'number':'49200', 'section':'001', 'crn':'80056', 
-		'title':'Software Systems Capstone', 'schedule':_T, 'time':'11-12:15', 'finalExam':'Tuesday, Dec 12 from 10:30 to 12:30 pm CT' },
+		'title':'Software Systems Capstone', 'location':'Arts and Sciences (AS) 101A and remote via Zoom', 'schedule':_T, 'time':'11-12:15', 'finalExam':'Tuesday, Dec 12 from 10:30 to 12:30 pm CT' },
 
 	{ 'classID':'cpsc-24500', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_24500, 'number':'24500', 'section':'XXX', 'crn':'00000',
 		'title':'Object-Oriented Programming', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' },
