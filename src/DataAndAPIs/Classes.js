@@ -175,7 +175,7 @@ export const _CPSC_24700 = {
 		{'value':1, outcome:'Essential Skills'},
 		{'value':6, outcome:'Critical Thinking'}
 	],
-	textBook: 'Learning Web App Development, Semmy Purewal, O’Reilly Media, 2014 (ISBN 978-1-449-37019-0). This book available through O’Reilly Books and is required for this course.',
+	textBook: 'Learning Web App Development, Semmy Purewal, O’Reilly Media, 2014 (ISBN 978-1-449-37019-0). This book is available through O’Reilly Books and is required for this course.',
 	modules: [
 		'The Internet, World Wide Web, Web Applications, and HyperText Markup Language',
 		'Web Servers, Cloud Hosting, Cascading Style Sheets, and Continuous Integration / Continuous Delivery',
