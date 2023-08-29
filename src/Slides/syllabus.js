@@ -25,7 +25,7 @@ const course = {
 	meetingDates:'This class starts Monday, May 9th and ends Thursday, June 30th',
 	meetingLocation:'Online',
 	finalExamTime: `${getFinalExamDateAndTime()}`,
-	textBook: 'Programming the World Wide Web 8th Edition, Robert W. Sebesta, Addison-Wesley, 2015 (ISBN 978-0-13-377598-3). This book is required for this course.'
+	textBook: '!!!BadProgramming the World Wide Web 8th Edition, Robert W. Sebesta, Addison-Wesley, 2015 (ISBN 978-0-13-377598-3). This book is required for this course.'
 
 }
 
