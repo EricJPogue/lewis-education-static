@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const Discord = () => { return externalLink('Discord', 'https://discord.com/') }
-export const OReillyBooks = () => { return externalLink('O’Reilly Books', 'https://lewisu.libguides.com/az.php?q=o%27reilly') }
+export const OReillyBooks = () => { return externalLink('O’Reilly Books', 'https://go.oreilly.com/lewis-univ') }
 export const ExampleCode = () => { return externalLink('example code', 'https://github.com/EricJPogue/cpsc-example-code') }
 export const CommandLine = () => { return externalLink('Command Line Interface', 'https://www.w3schools.com/whatis/whatis_cli.asp' )}
 export const FileExplorer = () => { return externalLink('File Explorer', 'https://www.tutorialspoint.com/windows10/windows10_file_explorer.htm' )}
