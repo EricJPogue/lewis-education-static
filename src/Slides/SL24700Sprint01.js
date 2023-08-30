@@ -31,7 +31,7 @@ const web_1_2of6_PreworkAnnouncementAndAgenda = {
 }
 
 export const web_1_2of6 = () => { 
-	const announcements =  () => { return basicSlideWithLogo('Announcements', ['Dr. Martinez is looking for someone to do some Web development work for her research project.']) }
+	const announcements =  () => { return basicSlideWithLogo('Announcements', ['Friday will be remote.']) }
 	const sprintProgressPolling = () => { return prework('Sprint Progress Polling', prework_1_1of6_list, sprint, list24700Sprint01) }
 
 	return mwf_1_2of6(announcements, prework_1_1of6, sprintProgressPolling, web_prework_1_2of6)
