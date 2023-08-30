@@ -41,7 +41,7 @@ const breakoutSDLCs = () => {
 }
 const se_1_3of6_PreworkAnnouncementsAndAgenda = {
 	'prework':[
-		'Complete through activity 9 prior to next class', '',
+		'Complete through activity 10 prior to next class', '',
 		`Be prepared for “${breakoutSDLCsName}” breakout`],
 	'announcements':[ 
 		'Reminder that Monday is Martin Luther King Jr. Day with no classes' ],
