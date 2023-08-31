@@ -30,7 +30,7 @@ export const oop_1_2of6 = () => { return xyz_1_2of6(sprint, oop_1_2of6_PreworkAn
 // Session 3 of 6: Friday
 const oop_1_3of6_PreworkAnnouncementsAndAgenda = {
 	'announcements':[ 
-		'Reminder that Monday is Martin Luther King Jr. Day with no classes' ],
+		'Reminder that Monday is Labor Day with no classes' ],
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
 		'Be prepared for “Object-Oriented Programming Concepts & Practices” Breakout'],

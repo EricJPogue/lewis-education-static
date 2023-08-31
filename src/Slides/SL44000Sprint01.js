@@ -44,7 +44,7 @@ const se_1_3of6_PreworkAnnouncementsAndAgenda = {
 		'Complete through activity 10 prior to next class', '',
 		`Be prepared for “${breakoutSDLCsName}” breakout`],
 	'announcements':[ 
-		'Reminder that Monday is Martin Luther King Jr. Day with no classes' ],
+		'Reminder that Monday is Labor Day with no classes' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Programming Together: Azure Website with Node.js',
