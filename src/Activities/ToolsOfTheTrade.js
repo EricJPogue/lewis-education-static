@@ -95,11 +95,7 @@ install, configure, and utilize the following tools and services. By the end of 
 </ol>
 
 <br />
-<h6>Install Using Standard Methods:</h6>
-<p>Feel free to install these tools in the standard methods of application stores and web sites.</p>
-
-<br />
-<h6>Install Using Package Mangers (recommended):</h6>
+<h6>Install Using Package Mangers (optional):</h6>
 <p>The alternative and recommended method of installing, updating, and deleting these tools is utilizing a package 
 manager and your command the line interface (CLI).</p>
 <ol>
@@ -116,6 +112,17 @@ and then execute the following script:
 `choco list
 `}</pre>
 
+
+
+<p>Homebrew (MacOS): Complete the {homebrew()} to install Visual Studio Code, Python3, Visual Studio Code Python 
+extension, MS Teams, Git, Node.js, and OpenJDK.</p>
+
+</div>
+
+	);
+}
+
+/*
 Proceed to execute some or all of the following lines to install the associated tools:
 <pre style={{color:"brown", fontFamily: 'monospace'}}>{
 `choco install python -y
@@ -172,12 +179,4 @@ javac --version
 node --version
 npm --version
 mvn --version`}</pre>
-
-<p>Homebrew (MacOS): Complete the {homebrew()} to install Visual Studio Code, Python3, Visual Studio Code Python 
-extension, MS Teams, Git, Node.js, and OpenJDK.</p>
-
-</div>
-
-	);
-}
-
+*/
