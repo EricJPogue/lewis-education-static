@@ -8,13 +8,8 @@ import { xyz_1_1of6  } from './SL00000Sprint01'
 // Sprint 1 integrated slide decks are defined below.
 const sprint = 1
 
-// Web & Distributed Programming (WEB)
-// export const web_1_1of6 = () => { return mwf_1_1of6(prework_1_1of6) }
-
 const activityList = () => { return list24700Sprint01(sprint) }
 export const web_1_1of6 = () => { return xyz_1_1of6(activityList, web_1_2of6_PreworkAnnouncementAndAgenda.prework) }
-
-// **BugBug: Update below. 
 
 // Session 2 of 6: Wednesday
 const web_1_2of6_PreworkAnnouncementAndAgenda = {
@@ -70,7 +65,6 @@ export const web_1_3of6 = () => {
 		'Breakout: Web Development Workflows and HTML', 
 		'In this breakout session on Web development workflows and HTML your team will:', [
 		'Web Development Workflow... What is our web development workflow and tooling?',
-		'HTML history and evolution... What HTML standard will we use?',
 		'Syntax and basic structure... What are other popular markup languages?',
 		'How do we Verify correct HTML syntax... Can you demo this activity?' ])
 	}
