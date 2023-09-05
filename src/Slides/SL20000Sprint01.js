@@ -10,10 +10,10 @@ const sprint = 1
 const activityList = () => { return list20000Sprint01(sprint) }
 
 // Sprint 1 session 1 of 6: Monday
-export const ics_1_1of6 = () => { return xyz_1_1of6(activityList, ics_1_2of6_PreworkAnnouncementAndAgenda.prework) }
+export const ics_1_1of6 = () => { return xyz_1_1of6(activityList, ics_1_2of6_PAaA.prework) }
 
 // Session 2 of 6: Wednesday
-const ics_1_2of6_PreworkAnnouncementAndAgenda = {
+const ics_1_2of6_PAaA = {
 	'prework':[
 		'Complete through activity 7 prior to next class', '',
 		`Be prepared to complete sprint ${sprint} planning` ],
@@ -25,7 +25,7 @@ const ics_1_2of6_PreworkAnnouncementAndAgenda = {
 		`Sprint ${sprint} Planning (continued)`,
 		`Sprint ${sprint} Scrum Team Breakout` ]
 }
-export const ics_1_2of6 = () => { return xyz_1_2of6(sprint, ics_1_2of6_PreworkAnnouncementAndAgenda, ics_1_3of6_PreworkAnnouncementAndAgenda, activityList) }
+export const ics_1_2of6 = () => { return xyz_1_2of6(sprint, ics_1_2of6_PAaA, ics_1_3of6_PAaA, activityList) }
 
 const lab = () => {
 	return bulletListSlide('Programming Together (Lab)', 
@@ -39,7 +39,7 @@ const lab = () => {
 }
 
 // Session 3 of 6: Friday
-const ics_1_3of6_PreworkAnnouncementAndAgenda = {
+const ics_1_3of6_PAaA = {
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared for “File Systems, Directories, and Files” Breakout' ],
@@ -52,8 +52,8 @@ const ics_1_3of6_PreworkAnnouncementAndAgenda = {
 		'Breakout: File Systems, Directories, and Files' ]
 }
 export const ics_1_3of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_3of6_PreworkAnnouncementAndAgenda, sprint, activityList)
-	const poll = () => { return tPrework('Sprint Progress Polling', ics_1_3of6_PreworkAnnouncementAndAgenda.prework, sprint, activityList) }
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_3of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_1_3of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_1_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
 
 	const breakout = () => { return breakoutFileSystemsDirectoriesAndFile() }
