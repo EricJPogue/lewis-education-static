@@ -82,6 +82,13 @@ export const agendaSlide = (agendaItems) => {
 	</div>)
 }
 
+export const recapSlide = (agendaItems) => {
+	return ( <div>
+		{renderLogo()}
+		{orderedListSlide('Recap:', '', agendaItems)}
+	</div>)
+}
+
 export const preworkSlide = (preworkItems) => { return basicSlideWithTitle('Prework', preworkItems) }
 export const preworkForNextClass = (preworkItems) => { return basicSlideWithTitle('Prework for Next Class', preworkItems) }
 

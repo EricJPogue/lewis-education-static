@@ -58,5 +58,8 @@ export const list20000Sprint01 = (sprint) => {
 // Certified for SP23 (01/02/23)
 // Certified for FA23 (08/23/23)
 
+// Todo: Move some material to sprint 2. There is too much to cover in the first two weeks, particularly given that 
+//     the second Monday is almost always a holiday.
+
 
 
