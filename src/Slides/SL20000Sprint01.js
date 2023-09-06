@@ -29,7 +29,7 @@ export const ics_1_2of6 = () => { return xyz_1_2of6(sprint, ics_1_2of6_PAaA, ics
 
 const lab = () => {
 	return bulletListSlide('Programming Together (Lab)', 
-		'Let’s spend a few minutes programming together utilizing our Command Line Interface (CLI) to explore Directories and Files by:', [
+		'Let’s use our knowledge of Directories and Files to help each other set up a directory for this class and for tool-of-the-trade-screenshots by:', [
 		'Quick review of graphical directory and file management tools', 
 		'Launching File Explorer or Finder',
 		'Launching PowerShell or Terminal', 
@@ -127,8 +127,8 @@ const breakoutFileSystemsDirectoriesAndFile = () => {
 			'File Systems, Directories, and Hidden Directories... Do hidden folders keep information safe? ',
 			'Files, Hidden Files, File Types, and File Extensions... How do we see hidden files and file extensions?', 
 			'How would we utilize graphical and command line tools to view and update File Systems?',
-			'Where would be a good place to store files for this class? Why?', 
-			'What would be a good answer to the lab question on where to store files for this class?' ])
+			'What would be a good place to store files for this class? Why? See lab question.', 
+			'What would be examples of questionable places to store files for this class? Why? See lab question.' ])
 }
 
 // Todo: Fix syllabus Final Exam time that says Friday... when it should be Wednesday.
