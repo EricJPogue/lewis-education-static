@@ -74,10 +74,11 @@ const ics_1_5of6_PreworkAnnouncementsAndAgenda = {
 		'Make your initial post for Discussion 1',
 		'Be prepared to continue “File Systems, Directories, and Files” Breakout',
 		'Be certain to have your GitHub account available',
-		'Be prepared for Programming Together with “Hello World for the Web - Part 1”'],
+		'Be prepared for Programming Together with “Directories and Files”'],
 	'announcements':[
 		'Your initial Discussion 1 post is due... please submit it by the end of the day',
-		'All sprint 1 activities and assignments due Sunday'],
+		'All sprint 1 activities and assignments due Sunday', '',
+		'Our special guest today is Dr. Chris White Dean of the College of Aviation, Science, and Technology'],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Breakout: File Systems, Directories, and Files (continued)',
