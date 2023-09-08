@@ -1,6 +1,6 @@
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 import { xyz_1_1of6, xyz_1_2of6,  } from './SL00000Sprint01'
-import { tPrework, tQuizExpectations, tQuiz, basicSlide, basicSlideWithLogo, bulletListSlide, breakoutStandard, recapSlide } from './SLSprint00'
+import { tPrework, tQuizExpectations, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, recapSlide } from './SLSprint00'
 
 import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
 import { ics_2_1of6_PAaA } from './SL20000Sprint02'
@@ -38,6 +38,18 @@ const lab = () => {
 		'Utilizing mkdir and rmdir' ])
 }
 
+// Share between multiple sessions
+const breakoutFileSystemsDirectoriesAndFile = () => {
+	return breakoutStandard(
+		'Breakout: File Systems, Directories, and Files', 
+		'In this breakout session on File Systems, Directories, and Files (including Dale chapter 11 content) your team will:', [
+			'File Systems, Directories, and Hidden Directories... Do hidden folders keep information safe? ',
+			'Files, Hidden Files, File Types, and File Extensions... How do we see hidden files and file extensions?', 
+			'How would we utilize graphical and command line tools to view and update File Systems?',
+			'What would be a good place to store files for this class? Why? See lab question.', 
+			'What would be examples of questionable places to store files for this class? Why? See lab question.' ])
+}
+
 // Session 3 of 6: Friday
 const ics_1_3of6_PAaA = {
 	'prework':[
@@ -54,7 +66,7 @@ const ics_1_3of6_PAaA = {
 export const ics_1_3of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_3of6_PAaA, sprint, activityList)
 	const poll = () => { return tPrework('Sprint Progress Polling', ics_1_3of6_PAaA.prework, sprint, activityList) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_1_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_1_5of6_PAaA.prework, sprint, activityList) }
 
 	const breakout = () => { return breakoutFileSystemsDirectoriesAndFile() }
 
@@ -68,7 +80,7 @@ export const ics_1_4of6 = () => {
 }
 
 // Session 5 of 6: Wednesday
-const ics_1_5of6_PreworkAnnouncementsAndAgenda = {
+const ics_1_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 13 prior to next class', '',
 		'Make your initial post for Discussion 1',
@@ -86,17 +98,17 @@ const ics_1_5of6_PreworkAnnouncementsAndAgenda = {
 		'Programming Together with “Directories and Files”']
 }
 export const ics_1_5of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_5of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
-	const poll = () => { return tPrework('Sprint Progress Polling', ics_1_5of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_1_6of6_PreworkAnnouncementsAndAgenda.prework, sprint, activityList) }
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_5of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_1_5of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_1_6of6_PAaA.prework, sprint, activityList) }
 	const breakout = () => { return breakoutFileSystemsDirectoriesAndFile() }
-	const recap = () => { return recapSlide(ics_1_5of6_PreworkAnnouncementsAndAgenda.agenda)}
+	const recap = () => { return recapSlide(ics_1_5of6_PAaA.agenda)}
 
 	return completeDeck(slideDeck, [poll, breakout, lab, recap, preworkNext])
 }
 
 // Session 6 of 6: Friday
-const ics_1_6of6_PreworkAnnouncementsAndAgenda = {
+const ics_1_6of6_PAaA = {
 	'prework': [
 		'Complete through activity 14 and working on 15 prior to next class', '',
 		'Be prepared for Lab & Programming Together',
@@ -105,28 +117,16 @@ const ics_1_6of6_PreworkAnnouncementsAndAgenda = {
 	'announcements':[
 		`All sprint ${sprint} assignments due Sunday!`],
 	'agenda':[
-		`Quiz ${sprint} “Phone a Friend”`,
 		'Quiz 1',
 		'Lab']
 }
 export const ics_1_6of6 = () => { 
-	const slideDeck =  checklistAnnouncementsPreworkAndAgenda(ics_1_6of6_PreworkAnnouncementsAndAgenda, sprint, activityList)
-	const quizPhoneAFriend = () => { return basicSlide(`Quiz ${sprint} “Phone a Friend”`, [`Let’s play Quiz ${sprint} “Phone a Friend”`]) }
+	const slideDeck =  checklistAnnouncementsPreworkAndAgenda(ics_1_6of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_1of6_PAaA.prework, sprint, activityList) }
 	const quizExpectations = () => { return tQuizExpectations() }
 	const quiz = () => { return tQuiz(sprint) }
 
-	return completeDeck(slideDeck, [quizPhoneAFriend, preworkNext, quizExpectations, quiz, tLab])
+	return completeDeck(slideDeck, [preworkNext, quizExpectations, quiz, tLab])
 }
 
-// Share between multiple sessions
-const breakoutFileSystemsDirectoriesAndFile = () => {
-	return breakoutStandard(
-		'Breakout: File Systems, Directories, and Files', 
-		'In this breakout session on File Systems, Directories, and Files (including Dale chapter 11 content) your team will:', [
-			'File Systems, Directories, and Hidden Directories... Do hidden folders keep information safe? ',
-			'Files, Hidden Files, File Types, and File Extensions... How do we see hidden files and file extensions?', 
-			'How would we utilize graphical and command line tools to view and update File Systems?',
-			'What would be a good place to store files for this class? Why? See lab question.', 
-			'What would be examples of questionable places to store files for this class? Why? See lab question.' ])
-}
+

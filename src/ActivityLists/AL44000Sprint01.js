@@ -68,10 +68,4 @@ export const list44000Sprint01 = (sprint) => {
 // Certified for SP23 (01/02/23)
 // Certified for FA23 (08/24/23)
 
-
-
-
-
-
-
-
+// Todo: Reduce sprint 1 content and move quiz 1 to second Wednesday even though the second Monday is likely a holiday.
