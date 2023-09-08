@@ -60,18 +60,9 @@ export const list20000Sprint02 = (sprint) => {
 }
 
 // Certified for FA22 (08/27/2022)
-
-// Todo: Consider adding Git/GitHub activity / tutorial. 
-// Todo: Consider lining up certain discussion topics with Friendly Conversation Topics.
-// Todo: Consider removing Office 365 from the tools of the trade? Maybe it should be left for any writing assignments?
-// Todo: Figure out why when a link is clicked (i.e. Syllabus) the page scrolls to the same position on the page as
-//     the current page is on. This is confusing because you would assume clicking on the link takes you to the top of
-//     the destination page. 
-
-// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
-// Todo: Strongly consider moving HTML to sprint 1 and moving Python to a later sprint. 
-
 // Certified for SP23 (01/15/2023)
+// Todo: Consider adding Git/GitHub activity / tutorial. 
+// Todo: Consider removing Office 365 from the tools of the trade? Maybe it should be left for any writing assignments?
 // Todo: Add slide for Metrics (Rule #9)... “Anything that is measured and watched, improves.” – Bob Parsons
 /* Todo: Add slide:
 	The Beauty of Starting Early
@@ -85,6 +76,5 @@ export const list20000Sprint02 = (sprint) => {
 	Kaizen: Small improvements eventually result in huge benefits
 */
 // Todo: Consider adding licensing topic to all classes. 
+// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
 
-// Todo: Consider where the following activity should go. 
-//    <li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface through Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>

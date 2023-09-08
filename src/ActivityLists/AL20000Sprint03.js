@@ -61,4 +61,7 @@ export const list20000Sprint03 = (sprint) => {
 // Todo: Verify that Unicode representation question fixed to more than 100,000 as best answer. This should be changed now. 
 // Todo: CSS source code review. 
 
+// Todo: Consider where the following activity should go. 
+//    <li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface through Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
+
 

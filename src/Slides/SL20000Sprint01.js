@@ -130,5 +130,3 @@ const breakoutFileSystemsDirectoriesAndFile = () => {
 			'What would be a good place to store files for this class? Why? See lab question.', 
 			'What would be examples of questionable places to store files for this class? Why? See lab question.' ])
 }
-
-// Todo: Fix syllabus Final Exam time that says Friday... when it should be Wednesday.
