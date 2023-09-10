@@ -6,7 +6,7 @@ import { externalLink } from '../DataAndAPIs/Links'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
 export const CHECKLIST_ROUTE = 'checklist'
-export const checklist = () => { return [ preflightChecklist, instructorChecklist ] }
+export const checklist = () => { return [ preflightChecklist ] }
 export const defaultDeck = () => { return [ noSlidesFound ] }
 
 const noSlidesFound = () => {

@@ -1,9 +1,6 @@
 import { getClass } from '../DataAndAPIs/Classes'
 
 import { checklist } from './SLSprint00' // Shared slide decks.
-import { sprint4Router } from './SLSprint04'
-import { sprint5Router } from './SLSprint05'
-import { sprint6Router } from './SLSprint06'
 	
 import { tutorialRouter } from './Tutorials'
 
@@ -49,20 +46,9 @@ import { ssc_8_1of4 } from './SL49200Sprint08'
 // the second Monday is Labor day so the final Friday of the sprint for Software Engineering would have a rout of 
 // '44000-1-6' which implies the integrated slide deck is for Software Engineering sprint 1 session 6.
 
-// Todo: Refactor slideDeckRouter so that it only utilizes the current sprint3Router. And then rename sprint3Router.
-
 export const slideDeckRouter = (route) => {
 	// Todo: Make sprint3Router the only slide router.
-	let currentSlideDeck = sprint3Router(route)
-	if (currentSlideDeck === null) {
-		currentSlideDeck = sprint4Router(route)
-	}
-	if (currentSlideDeck === null) {
-		currentSlideDeck = sprint5Router(route)
-	}
-	if (currentSlideDeck === null) {
-		currentSlideDeck = sprint6Router(route)
-	}
+	let currentSlideDeck = sprintRouter(route)
 	if (currentSlideDeck === null) {
 		currentSlideDeck = tutorialRouter(route)
 	}
@@ -72,7 +58,7 @@ export const slideDeckRouter = (route) => {
 	return currentSlideDeck
 }
 
-const sprint3Router = (route) => {
+const sprintRouter = (route) => {
 	const courseNumberPlusRoute = getClass().number + '-' + route
 	switch(courseNumberPlusRoute) {
 		case '20000-1-1': return ics_1_1of6()
