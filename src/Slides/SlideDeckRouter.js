@@ -13,14 +13,7 @@ import { ics_6_1of6, ics_6_2of6, ics_6_3of6, ics_6_4of6, ics_6_5of6, ics_6_6of6 
 import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6 } from './SL20000Sprint07'
 import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6, ics_8_7of6 } from './SL20000Sprint08'
 
-import { web_1_1of6, web_1_2of6, web_1_3of6, web_1_4of6, web_1_5of6, web_1_6of6 } from './SL24700Sprint01'
-import { web_2_1of6, web_2_2of6, web_2_3of6, web_2_4of6, web_2_5of6, web_2_6of6 } from './SL24700Sprint02'
-import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6, web_3_5of6, web_3_6of6 } from './SL24700Sprint03'
-import { web_4_1of6, web_4_2of6, web_4_3of6, web_4_4of6, web_4_5of6, web_4_6of6 } from './SL24700Sprint04'
-import { web_5_1of6, web_5_2of6, web_5_3of6, web_5_4of6, web_5_5of6, web_5_6of6 } from './SL24700Sprint05'
-import { web_6_1of6, web_6_2of6, web_6_3of6, web_6_4of6, web_6_5of6, web_6_6of6	} from './SL24700Sprint06'
-import { web_7_1of6, web_7_2of6, web_7_3of6, web_7_4of6, web_7_5of6, web_7_6of6 } from './SL24700Sprint07'
-import { web_8_1of6, web_8_2of6, web_8_3of6, web_8_4of6, web_8_5of6, web_8_6of6 } from './SL24700Sprint08'
+import { web_2_1of6 } from './SL24700Sprint02'
 
 import { se_1_1of6, se_1_2of6, se_1_3of6, se_1_4of6, se_1_5of6, se_1_6of6 } from './SL44000Sprint01'
 import { se_2_1of6, se_2_2of6, se_2_3of6, se_2_4of6, se_2_5of6, se_2_6of6 } from './SL44000Sprint02'
@@ -118,61 +111,7 @@ const sprintRouter = (route) => {
 		case '20000-8-6': return ics_8_6of6()
 		case '20000-8-7': return ics_8_7of6()
 
-		case '24700-1-1': return web_1_1of6()
-		case '24700-1-2': return web_1_2of6()
-		case '24700-1-3': return web_1_3of6()
-		case '24700-1-4': return web_1_4of6()
-		case '24700-1-5': return web_1_5of6()
-		case '24700-1-6': return web_1_6of6()
-
 		case '24700-2-1': return web_2_1of6()
-		case '24700-2-2': return web_2_2of6()
-		case '24700-2-3': return web_2_3of6()
-		case '24700-2-4': return web_2_4of6()
-		case '24700-2-5': return web_2_5of6()
-		case '24700-2-6': return web_2_6of6()
-
-		case '24700-3-1': return web_3_1of6()
-		case '24700-3-2': return web_3_2of6()
-		case '24700-3-3': return web_3_3of6()
-		case '24700-3-4': return web_3_4of6()
-		case '24700-3-5': return web_3_5of6()
-		case '24700-3-6': return web_3_6of6()
-
-		case '24700-4-1': return web_4_1of6()
-		case '24700-4-2': return web_4_2of6()
-		case '24700-4-3': return web_4_3of6()
-		case '24700-4-4': return web_4_4of6()
-		case '24700-4-5': return web_4_5of6()
-		case '24700-4-6': return web_4_6of6()
-
-		case '24700-5-1': return web_5_1of6()
-		case '24700-5-2': return web_5_2of6()
-		case '24700-5-3': return web_5_3of6()
-		case '24700-5-4': return web_5_4of6()
-		case '24700-5-5': return web_5_5of6()
-		case '24700-5-6': return web_5_6of6()
-
-		case '24700-6-1': return web_6_1of6()
-		case '24700-6-2': return web_6_2of6()
-		case '24700-6-3': return web_6_3of6()
-		case '24700-6-4': return web_6_4of6()
-		case '24700-6-5': return web_6_5of6()
-		case '24700-6-6': return web_6_6of6()
-
-		case '24700-7-1': return web_7_1of6()
-		case '24700-7-2': return web_7_2of6()
-		case '24700-7-3': return web_7_3of6()
-		case '24700-7-4': return web_7_4of6()
-		case '24700-7-5': return web_7_5of6()
-		case '24700-7-6': return web_7_6of6()
-
-		case '24700-8-1': return web_8_1of6()
-		case '24700-8-2': return web_8_2of6()
-		case '24700-8-3': return web_8_3of6()
-		case '24700-8-4': return web_8_4of6()
-		case '24700-8-5': return web_8_5of6()
-		case '24700-8-6': return web_8_6of6()
 
 		case '44000-1-1': return se_1_1of6()
 		case '44000-1-2': return se_1_2of6()

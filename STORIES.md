@@ -6,3 +6,4 @@ s1001: Update version.
 s1002: Remove last year's ECaMS image.
 s1003: Remove OOP slides.
 s1004: Update default "no slides" slide. 
+s1006: Update WEB session 2-1 slides.
