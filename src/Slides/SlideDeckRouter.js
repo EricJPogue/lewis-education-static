@@ -16,15 +16,6 @@ import { ics_6_1of6, ics_6_2of6, ics_6_3of6, ics_6_4of6, ics_6_5of6, ics_6_6of6 
 import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6 } from './SL20000Sprint07'
 import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6, ics_8_7of6 } from './SL20000Sprint08'
 
-import { oop_1_1of6, oop_1_2of6, oop_1_3of6, oop_1_4of6, oop_1_5of6, oop_1_6of6 } from './SL24500Sprint01'
-import { oop_2_1of6, oop_2_2of6, oop_2_3of6, oop_2_4of6, oop_2_5of6, oop_2_6of6 } from './SL24500Sprint02'
-import { oop_3_1of6, oop_3_2of6, oop_3_3of6, oop_3_4of6, oop_3_5of6, oop_3_6of6 } from './SL24500Sprint03'
-import { oop_4_1of6, oop_4_2of6, oop_4_3of6, oop_4_4of6, oop_4_5of6 } from './SL24500Sprint04'
-import { oop_5_1of6, oop_5_2of6, oop_5_3of6, oop_5_4of6, oop_5_5of6, oop_5_6of6 } from './SL24500Sprint05'
-import { oop_6_1of6, oop_6_2of6, oop_6_3of6, oop_6_5of6 } from './SL24500Sprint06'
-import { oop_7_2of6, oop_7_3of6, oop_7_4of6, oop_7_5of6, oop_7_6of6 } from './SL24500Sprint07'
-import { oop_8_1of6, oop_8_2of6, oop_8_3of6, oop_8_4of6, oop_8_5of6, oop_8_6of6, oop_8_7of6 } from './SL24500Sprint08'
-
 import { web_1_1of6, web_1_2of6, web_1_3of6, web_1_4of6, web_1_5of6, web_1_6of6 } from './SL24700Sprint01'
 import { web_2_1of6, web_2_2of6, web_2_3of6, web_2_4of6, web_2_5of6, web_2_6of6 } from './SL24700Sprint02'
 import { web_3_1of6, web_3_2of6, web_3_3of6, web_3_4of6, web_3_5of6, web_3_6of6 } from './SL24700Sprint03'
@@ -140,59 +131,6 @@ const sprint3Router = (route) => {
 		case '20000-8-5': return ics_8_5of6()
 		case '20000-8-6': return ics_8_6of6()
 		case '20000-8-7': return ics_8_7of6()
-
-		case '24500-1-1': return oop_1_1of6()
-		case '24500-1-2': return oop_1_2of6()
-		case '24500-1-3': return oop_1_3of6()
-		case '24500-1-4': return oop_1_4of6()
-		case '24500-1-5': return oop_1_5of6()
-		case '24500-1-6': return oop_1_6of6()
-
-		case '24500-2-1': return oop_2_1of6()
-		case '24500-2-2': return oop_2_2of6()
-		case '24500-2-3': return oop_2_3of6()
-		case '24500-2-4': return oop_2_4of6()
-		case '24500-2-5': return oop_2_5of6()
-		case '24500-2-6': return oop_2_6of6()
-
-		case '24500-3-1': return oop_3_1of6()
-		case '24500-3-2': return oop_3_2of6()
-		case '24500-3-3': return oop_3_3of6()
-		case '24500-3-4': return oop_3_4of6()
-		case '24500-3-5': return oop_3_5of6()
-		case '24500-3-6': return oop_3_6of6()
-
-		case '24500-4-1': return oop_4_1of6()
-		case '24500-4-2': return oop_4_2of6()
-		case '24500-4-3': return oop_4_3of6()
-		case '24500-4-4': return oop_4_4of6()
-		case '24500-4-5': return oop_4_5of6()
-
-		case '24500-5-1': return oop_5_1of6()
-		case '24500-5-2': return oop_5_2of6()
-		case '24500-5-3': return oop_5_3of6()
-		case '24500-5-4': return oop_5_4of6()
-		case '24500-5-5': return oop_5_5of6()
-		case '24500-5-6': return oop_5_6of6()
-
-		case '24500-6-1': return oop_6_1of6()
-		case '24500-6-2': return oop_6_2of6()
-		case '24500-6-3': return oop_6_3of6()
-		case '24500-6-5': return oop_6_5of6()
-
-		case '24500-7-2': return oop_7_2of6()
-		case '24500-7-3': return oop_7_3of6()
-		case '24500-7-4': return oop_7_4of6()
-		case '24500-7-5': return oop_7_5of6()
-		case '24500-7-6': return oop_7_6of6()
-
-		case '24500-8-1': return oop_8_1of6()
-		case '24500-8-2': return oop_8_2of6()
-		case '24500-8-3': return oop_8_3of6()
-		case '24500-8-4': return oop_8_4of6()
-		case '24500-8-5': return oop_8_5of6()
-		case '24500-8-6': return oop_8_6of6()
-		case '24500-8-7': return oop_8_7of6()
 
 		case '24700-1-1': return web_1_1of6()
 		case '24700-1-2': return web_1_2of6()
