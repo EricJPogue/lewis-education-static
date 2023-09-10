@@ -148,7 +148,7 @@ npm ERR! code ELIFECYCLE
 
 npm install react-scripts --save
 
-Wow - then it ran. Hmmmm... I thought I would need to install more packages. Cool... and strange. 
+Wow - then it ran. Hmmm... I thought I would need to install more packages. Cool... and strange. 
 
 Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 
