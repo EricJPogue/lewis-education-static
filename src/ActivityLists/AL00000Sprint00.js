@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink, Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether, successfulProgrammer } from '../DataAndAPIs/Links'
+import { ExampleCode, internalLink, gitCommands, codingStandards, calendarLink, scheduleLink, Blended, scrumIn7Min, blackboardChangePhoto, programmingTogether, successfulProgrammer, overcomingProcrastination } from '../DataAndAPIs/Links'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 import { sprintEndDateWithoutTime } from '../CalendarAndSchedule/SprintDates'
 
@@ -79,6 +79,7 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 	const sprint2StandardActivities = () => {
 		return ( <div>
 			<li>Review our class {ExampleCode()} and study our {codingStandards()}</li>
+			<li>Embrace the 30-for-30 plan {overcomingProcrastination()}</li>
 		</div> )
 	}
 	const sprintTopics = (sprint) =>  {
@@ -225,3 +226,15 @@ export const finalProjectsAndMoreResponsibility = () => {
 	</div> )
 }
 
+export const justinaPiwoniQuote = () => {
+	return ( <div>
+		<p>Quote on Overcoming Procrastination:</p>
+		<h5> 
+		<div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+		“The difference of starting early instead of leaving everything for the last minute truly amazes me.</div>
+		<div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+		I am proud of myself for getting everything done and not feeling so overwhelmed."</div><br />
+		<div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+		- Justina Piwoni, Introduction to Computer Science, Sprint 6 Reflection</div></h5>
+	</div> )
+}

@@ -64,4 +64,8 @@ export const list20000Sprint03 = (sprint) => {
 // Todo: Consider where the following activity should go. 
 //    <li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface through Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
 
+// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
+// Todo: Consider adding licensing topic to all classes. 
+// Todo: Consider adding Git/GitHub activity / tutorial. 
+
 

@@ -42,6 +42,7 @@ export const list44000Sprint03 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
+		<li>** Within {oreillyPlaylistSE()} scan “Essential Scrum” Chapters 1 and 2</li>
 			{standardActivities(sprint, assignmentPortfolioWithNodeJSLink(), oreillyPlaylistSE(), false)}
 			<li>Read “Engineering Software as a Service” chapter 7 on Requirements and review the associated {foxChapter7Lecture()}</li>
 			<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapters 1 and 2 while completing each of the exercises</li>
@@ -93,4 +94,12 @@ ORM (Object-Relational-Mapper) and NoSQL Databases
 // Todo: Consider adding image mapper: https://www.image-map.net/
 // Todo: Consider moving  some of the Waterfall Project Management video and assignment from Sprint 5 to sprint 3.
 // Todo: Consider moving something related to “Dogs, JavaScript & An API 🐶 Fetch, Promises & Async Await” from sprint 4 to sprint 3
+
+// Todo: Add "Whatever Happened to Ruby" article currently in sprint 3. 
+// Todo: Review https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
+// Todo: Consider Git centric topic sprint 2 
+// Todo: Identify where quiz answers originate from. 
+// Todo: Fix the end of the Fox Preface video.
+// Todo: Review https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository
+// Todo: Consider adding W3C Validator VS code add-in to several classes. 
 

@@ -37,7 +37,7 @@ export const list44000Sprint02 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-			<li>** Within {oreillyPlaylistSE()} scan “Essential Scrum” Chapters 1 and 2</li>
+
 
 			{standardActivities(sprint, assignmentPortfolioLink())}
 			<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated {foxChapter2Lecture()}</li>
@@ -57,17 +57,9 @@ export const list44000Sprint02 = (sprint) => {
 
 // Certified for FA22 (08/27/2022)
 // Certified for SP23 (01/15/2023)
-// Todo: Add "Whatever Happened to Ruby" article currently in sprint 3. 
-// Todo: Consider adding lab 2 question relating to overcoming procrastination article. 
-// Todo: Consider adding CSS and JavaScript example after reviewing if they are already available. 
-// Todo: Review https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
-// Todo: Consider Git centric topic sprint 2 
-// Todo: Only go over Azure hosting once.
-// Todo: Identify where quiz answers originate from. 
-// Todo: Fix the end of the Fox Preface video.
-// Todo: Review https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository
-// Todo: Consider updating Static Website and Node.js website assignments. The final Node.js Assignment Portfolio implementation 
-//     does not really make sense as it is slower than the Static Website.
-// Todo: Consider adding W3C Validator VS code add-in to several classes. 
+// Certified for FA23 (09/09/2023)
+// Certified for FA23 (09/09/2023)
+
+
 
 

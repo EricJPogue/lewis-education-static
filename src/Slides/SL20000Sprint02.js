@@ -16,6 +16,7 @@ const activityList = () => { return list20000Sprint02(sprint) }
 export const ics_2_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const ics_2_1of6 = () => { return xyz_n_1of6(sprint, ics_2_1of6_PAaA.prework, activityListPrevious, ics_2_1of6_PAaA.agenda, ics_2_2of6_PAaA.prework, activityList, xyz_2_1of6_sprintPlanning(sprint)) }
 
+// Todo: Add slide on "Kaizen": Small improvements eventually result in huge benefits
 // Session 2 of 6: Wednesday
 const ics_2_2of6_PAaA = {
 	'prework': [
@@ -41,6 +42,7 @@ export const ics_2_2of6 = () => {
 	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab ])
 }
 
+// Todo: Add slide for Metrics (Rule #9)... “Anything that is measured and watched, improves.” – Bob Parsons
 // Session 3 of 6: Friday
 const ics_2_3of6_PAaA = {
 	'prework': [
