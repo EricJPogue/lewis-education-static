@@ -41,6 +41,7 @@ export const al20000Sprint02 = () => {
 }
 
 export const list20000Sprint02 = (sprint) => {
+	const ECaMSStudyTables = () => internalLink('ECaMS Study Tables', '/activity/study-table')
 	const daleChapter2Lecture = () => { return internalLink('lecture', '/activity-dale/2') }
 	const daleChapter3Lecture = () => { return internalLink('lecture', '/activity-dale/3') }
 
@@ -49,6 +50,7 @@ export const list20000Sprint02 = (sprint) => {
 		<ol>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
 			<li>Read “Computer Science Illuminated” The Information Layer and review our associated {daleChapter2Lecture()}</li>
+			<li>Visit the {ECaMSStudyTables()}, say “Hi,” and get the name of the ECaMS tutor</li>
 			<li>Review {toolsOfTheTradeLink()}</li>
 			<li>Review {SequenceSelectionAndRepetition()}</li>
 			{initialPost(sprint)}
