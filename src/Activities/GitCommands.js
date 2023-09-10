@@ -54,7 +54,7 @@ D1082, the sequence of Git commands might include:</p>
 <pre>{`git pull
 git branch "D1082" 
 git checkout "D1082"
-[[ Do Work... ]]
+[[ jDo Work... ]]
 git add -A
 git commit -m "Implement fix for defect D1082"
 git checkout master
