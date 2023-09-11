@@ -83,10 +83,10 @@ export const ics_2_3of6 = () => {
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Wow! 100% submission percentage in sprint 1',
+			'Very good submission percentage in sprint 1',
 			'All assignments are graded and posted', 
 			'Thank you for your reflection comments',
-			'Lots of nice comments about scrum teammates', 
+			'Lots of nice comments about scrum teammates and the benefit of seeing classmates displaying their work', 
 			'Be **sure** to put something in for each question so that I can give you at least a point or two',
 			'Riddles continue to be my Kryptonite for me :-) ... and now funny YouTube videos?!?!', 
 			'... What did the computer do at lunchtime?', 
