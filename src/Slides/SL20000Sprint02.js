@@ -89,7 +89,6 @@ export const ics_2_3of6 = () => {
 			'Lots of nice comments about scrum teammates and the benefit of seeing classmates displaying their work', 
 			'Be **sure** to put something in for each question so that I can give you at least a point or two',
 			'Riddles continue to be my Kryptonite for me :-) ... and now funny YouTube videos?!?!', 
-			'... What did the computer do at lunchtime?', 
 			'If you are not where you want to be in the class after sprint 1, I encourage you to come and talk with me' ])
 	}
 	const retrospectiveBreakout = () => {
