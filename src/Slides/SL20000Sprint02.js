@@ -39,7 +39,7 @@ export const ics_2_2of6 = () => {
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_3of6_PAaA.prework, sprint, activityList) }
 	const introducingDemos = () => {
-		return bulletListSlide('Foreshadowing Wednesday’s Sprint Demos', 
+		return bulletListSlide('Foreshadowing Friday’s Sprint Demos', 
 			'Sprint demos are a key part of Agile software development and Scrum.', [
 			'They occur at the beginning of each new sprint ',
 			'They are an opportunity to show what was completed in the previous sprint',
