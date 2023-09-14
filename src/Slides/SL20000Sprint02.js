@@ -6,6 +6,7 @@ import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submis
 
 import { xyz_2_1of6_sprintPlanning, xyz_2_6of6_PreworkAnnouncementsAndAgenda, theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
 import { ics_3_1of6_PAaA } from './SL20000Sprint03'
+import { getClass } from '../DataAndAPIs/Classes'
 
 // Introduction to Computer Science (ICS) sprint 2 shared values.
 const sprint = 2
@@ -73,11 +74,20 @@ export const ics_2_3of6 = () => {
 			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
 	}
 	const metricsSubmissionPercentage = () => {
-		return submissionPercentage([
-			{ name: 'Discussion', due:14, submitted:14 },
-			{ name: 'Quiz', due:14, submitted:14 },
-			{ name: 'Lab', due:14, submitted:14},
-			{ name: 'Reflection', due: 14, submitted: 14 }])
+		if (getClass().section === '002') {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:27 },
+				{ name: 'Quiz', due:27, submitted:26 },
+				{ name: 'Lab', due:27, submitted:26 },
+				{ name: 'Reflection', due: 27, submitted: 26 }])
+		}
+		else {
+			return submissionPercentage([
+				{ name: 'Discussion', due:25, submitted:25 },
+				{ name: 'Quiz', due:25, submitted:25 },
+				{ name: 'Lab', due:25, submitted:24 },
+				{ name: 'Reflection', due: 25, submitted: 24 }])
+		}
 	}
 	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
 	const retrospective = () => {
@@ -87,8 +97,8 @@ export const ics_2_3of6 = () => {
 			'All assignments are graded and posted', 
 			'Thank you for your reflection comments',
 			'Lots of nice comments about scrum teammates and the benefit of seeing classmates displaying their work', 
+			'A couple comments about going a little too fast to cover all of the sprint 1 topics... I agree',
 			'Be **sure** to put something in for each question so that I can give you at least a point or two',
-			'Riddles continue to be my Kryptonite for me :-) ... and now funny YouTube videos?!?!', 
 			'If you are not where you want to be in the class after sprint 1, I encourage you to come and talk with me' ])
 	}
 	const retrospectiveBreakout = () => {
@@ -99,6 +109,7 @@ export const ics_2_3of6 = () => {
 			'What improvements should we make as a class, team, or individual going forward' ])
 	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_4of6_PAaA.prework, sprint, activityList) }
+
 
 	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
 		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
