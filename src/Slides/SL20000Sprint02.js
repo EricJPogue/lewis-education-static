@@ -71,6 +71,7 @@ export const ics_2_3of6 = () => {
 
 	const metrics = () => {
 		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			'What is Bob Parsons Rule #9?', '',
 			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
 	}
 	const metricsSubmissionPercentage = () => {

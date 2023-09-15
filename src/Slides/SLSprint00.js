@@ -319,7 +319,6 @@ export const breakout = (slideTitle, introduction, orderedList, sectionTitle, un
 	</div> )
 }
 
-
 const styleBodyText = { fontSize:20 }
 const breakoutNoteExample = (sprint) => {
 	return ( <div>
@@ -358,7 +357,7 @@ export const sprintDemos = () => {
 	return bulletListSlide('Sprint Demo Listeners', 
 		'As a demo listener your responsibilities include:', [
 		'Actively listening and watching what your classmate is demoing',
-		'Come up with a meaningful yet easy to answer question to ask',
+		'Coming up with a meaningful yet easy to answer question to ask',
 		'Clapping for the presenter when they have finished' ])
 }
 export const demoAssignment = () => {
