@@ -60,6 +60,7 @@ export const list20000Sprint01 = (sprint) => {
 
 // Todo: Move some material to sprint 2. There is too much to cover in the first two weeks, particularly given that 
 //     the second Monday is almost always a holiday.
+// BugBug: Fix Hello World for the Web Part 1 so that the overall description does NOT include part 2 requirements. 
 
 
 

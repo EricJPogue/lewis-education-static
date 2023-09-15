@@ -4,8 +4,14 @@ import { list24700Sprint02 } from '../ActivityLists/AL24700Sprint02'
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
 
-import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
+import { completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 import { bulletListSlide, tDiscussionBreakout, tPrework } from './SLSprint00'
+
+
+import {checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
+import { basicSlide, orderedListSlide, submissionPercentage, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+
+
 
 //  Web & Distributed Programming (WEB) sprint 2 shared values.
 const sprint = 2
@@ -55,7 +61,7 @@ export const web_2_2of6 = () => {
 const web_2_3of6_PAaA = {
 	'prework': [
 		'Complete through activity 9 prior to next class', '',
-		'Be prepared to discuss “The Information Layer”' ],
+		'Be prepared for Demos and Retrospectives' ],
 	'announcements':[ 
 		'Any announcements?' ],
 	'agenda':[
@@ -63,4 +69,54 @@ const web_2_3of6_PAaA = {
 		`Sprint ${sprint-1} Retrospective`,
 		`Breakout for Sprint ${sprint-1} Retrospective`,
 		'Prework for Next Class' ]
+}
+
+// Session 3 of 6: Friday
+export const web_2_3of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_2_3of6_PAaA, sprint, activityList)
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			'What is Bob Parsons Rule #9?', '',
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
+	}
+	const metricsSubmissionPercentage = () => {
+			return submissionPercentage([
+				{ name: 'Discussion', due:10, submitted:9 },
+				{ name: 'Quiz', due:10, submitted:10 },
+				{ name: 'Lab', due:10, submitted:9 },
+				{ name: 'Reflection', due: 10, submitted:9 }])
+	}
+	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Solid submission percentage in sprint 1',
+			'All assignments are graded and posted', 
+			'Thank you for your reflection comments',
+			'A couple of nice comments about scrum teammates and the benefit of seeing classmates displaying their work', 
+			'If you are not where you want to be in the class after sprint 1, I encourage you to come and talk with me' ])
+	}
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_2_4of6_PAaA.prework, sprint, activityList) }
+
+
+	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
+		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
+}
+
+// Session 3 of 6: Friday
+const web_2_4of6_PAaA = {
+	'prework': [
+		'Complete through activity 12 prior to next class', '',
+		'Be prepared for Learning Web Development and Software License breakout' ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		`TBD` ]
 }

@@ -68,7 +68,6 @@ const ics_2_3of6_PAaA = {
 }
 export const ics_2_3of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_3of6_PAaA, sprint, activityList)
-
 	const metrics = () => {
 		return basicSlide(`Sprint ${sprint-1} Metrics`, [
 			'What is Bob Parsons Rule #9?', '',
