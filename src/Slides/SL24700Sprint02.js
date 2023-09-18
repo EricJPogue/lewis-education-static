@@ -7,6 +7,7 @@ import { xyz_2_1of6_sprintPlanning } from './SL00000Sprint02'
 import { completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 import { bulletListSlide, tDiscussionBreakout, tPrework } from './SLSprint00'
 
+import { breakoutStandard } from './SLSprint00'
 
 import {checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 import { basicSlide, orderedListSlide, submissionPercentage, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
@@ -110,13 +111,45 @@ export const web_2_3of6 = () => {
 		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
 }
 
-// Session 3 of 6: Friday
+// Session 4 of 6: Monday
+const breakoutCSSName = 'Cascading Style Sheets (CSS) '
+const breakoutCSS = () => {
+	return breakoutStandard( 
+		`Breakout: ${breakoutCSSName}`, 
+		`In this breakout session on ${breakoutCSSName} reading and lecture your team will discuss:`, [
+		'Rulesets, Comments, Padding, Border, and Margin',
+		'Selectors, Classes, and Pseudoclasses',
+		'Cascading rules including inline, internal, and external', 
+		'CSS and Bootstrap' ])
+}
 const web_2_4of6_PAaA = {
 	'prework': [
 		'Complete through activity 12 prior to next class', '',
 		'Be prepared for Learning Web Development and Software License breakout' ],
 	'announcements':[ 
 		'Any announcements?' ],
-	'agenda':[
-		`TBD` ]
+	'agenda':[ 
+		'Sprint Progress Polling',
+		'The Humble Text File (abbreviated)',
+		`Breakout: ${breakoutCSSName}`,
+		'Lab (as time allows)' ]
+}
+export const web_2_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_2_4of6_PAaA, sprint, activityList)
+	const theHumbleTextFile = () => { return basicSlide('The Humble Text File (abbreviated)', ['Let’s explore the evolution of the humble text file.']) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_2_5of6_PAaA.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ theHumbleTextFile, breakoutCSS, preworkNext, tLab ])
+}
+
+// Session 5 of 6: Wednesday
+const web_2_5of6_PAaA = {
+	'prework': [
+		'Complete through activity 14 prior to next class', '',
+		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		'Any announcements or questions?' ],
+	'agenda':[ 
+		'Sprint Progress Polling',
+		`Quiz ${sprint}` ],
 }

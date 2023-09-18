@@ -113,13 +113,13 @@ const se_2_4of6_PAaA = {
 	'announcements':[ 
 		'Any teams interested in working on a Lewis Signage class product?' ],
 	'agenda':[ 
-		'The Humble Text File',
+		'The Humble Text File (abbreviated)',
 		`Breakout: ${breakoutSaaSArchitectureName}`,
 		'Lab (as time allows)' ]
 }
 export const se_2_4of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_2_4of6_PAaA, sprint, activityList)
-	const theHumbleTextFile = () => { return basicSlide('The Humble Text File', ['Let’s explore the evolution of the humble text file.']) }
+	const theHumbleTextFile = () => { return basicSlide('The Humble Text File (abbreviated)', ['Let’s explore the evolution of the humble text file.']) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_5of6_PAaA.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ theHumbleTextFile, breakoutSaaSArchitecture, preworkNext, tLab ])

@@ -41,7 +41,7 @@ export const list24700Sprint02 = (sprint) => {
 			<li>Implement CI/CD with {azureWebsiteLink()} and then enhance the site by completing {assignmentPortfolioLink()}{estimated('4 hours')}</li>
 			{initialPost(sprint)}
 
-			<li>Scan Sebesta chapter 3 on Cascading Style Sheets (CSS) and review the associated {sebestaChapter3Lecture()}</li>
+			<li>Review the {sebestaChapter3Lecture()} on Cascading Style Sheets</li>
 			<li>Complete {CSSW3C()} Tutorial from W3C{estimated('2 hours')}</li>
 			<li>Within {oreillyPlaylistWeb()} read “Learning Web Development” Chapter 3 on CSS while implementing Amazeriffic{estimated('2 hours')}</li>
 			<li>Review {typesOfSoftwareLicenses()} and {choosingASoftwareLicense()}</li>
@@ -56,4 +56,5 @@ export const list24700Sprint02 = (sprint) => {
 // Certified for FA22 (08/27/2022)
 
 // Todo: Move sprint 2 programming assignments from Lab 2 to the sprint 2 activities list for consistency. 
-// Todo: Consider moving Sebesta CSS reading above initial post. 
+// Todo: Remove or replace Sebesta CSS lecture above initial post. 
+
