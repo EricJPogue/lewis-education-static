@@ -150,10 +150,11 @@ const ics_2_5of6_PAaA = {
 		'Be prepared for “Data Representation” breakout',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
-		'Any announcements or questions?' ],
+		'Mass of the Holy Spirit at St Charles Borromeo Hall at 11 AM' ],
 	'agenda':[ 
 		'Sprint Progress Polling',
-		'Breakout: Data Representation',
+		'Breakout: Data Representation... moved to Friday',
+		`Complete Data Representation and ${theHumbleTextFileName}`,
 		`Quiz ${sprint}` ],
 }
 export const ics_2_5of6 = () => {
