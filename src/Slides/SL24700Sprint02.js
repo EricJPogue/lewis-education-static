@@ -12,6 +12,9 @@ import { breakoutStandard } from './SLSprint00'
 import {checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 import { basicSlide, orderedListSlide, submissionPercentage, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
+import { tQuiz, tQuizExpectations } from './SLSprint00'
+import { xyz_2_6of6_PreworkAnnouncementsAndAgenda } from './SL00000Sprint02'
+
 
 
 //  Web & Distributed Programming (WEB) sprint 2 shared values.
@@ -143,6 +146,15 @@ export const web_2_4of6 = () => {
 }
 
 // Session 5 of 6: Wednesday
+const breakoutCICDAzureWebsiteAndLicenseName = 'CI/CD, Azure Website, and Software Licenses'
+const breakoutCICDAzureWebsiteAndLicense = () => {
+	return breakoutStandard( 
+		`Breakout: ${breakoutCICDAzureWebsiteAndLicenseName}`, 
+		`In this breakout session on ${breakoutCICDAzureWebsiteAndLicenseName} reading and lectures your team will discuss:`, [
+		'CI/CD... what are the tools we will be using for CI/CD?',
+		'Azure Website... how will we host and implement CI/CD using Azure',
+		'Software Licenses... make a case for a GPL license. Why would I choose MIT?' ])
+}
 const web_2_5of6_PAaA = {
 	'prework': [
 		'Complete through activity 14 prior to next class', '',
@@ -151,5 +163,19 @@ const web_2_5of6_PAaA = {
 		'Any announcements or questions?' ],
 	'agenda':[ 
 		'Sprint Progress Polling',
+		`Breakout: ${breakoutCICDAzureWebsiteAndLicenseName}`,
+		'Lab... as time allows',
 		`Quiz ${sprint}` ],
 }
+export const web_2_5of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_2_5of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', web_2_5of6_PAaA.prework, sprint, activityList) }
+	const breakout = () => { return breakoutCICDAzureWebsiteAndLicense() }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_2_6of6_PAaA.prework, sprint, activityList) }
+	const quizExpectations = () => { return tQuizExpectations(sprint)}
+	const quiz = () => { return tQuiz(sprint) }
+
+	return 	completeDeck(slideDeck, [ poll, breakout, tLab, preworkNext, quizExpectations, quiz ])
+}
+
+const web_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('activity 14 and actively working on 15', sprint)
