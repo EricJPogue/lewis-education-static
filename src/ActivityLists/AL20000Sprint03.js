@@ -6,7 +6,9 @@ import { oreillyPlaylistICS, SequenceSelectionAndRepetition, CSSW3C, internalLin
 import { htmlLink } from '../Activities/HTML'
 import { GetCommandsLink } from '../Activities/GitCommands'
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
-import { azureWebsiteLink } from '../Activities/AzureWebsite'
+import { continuousIntegration } from '../DataAndAPIs/Links'
+
+import { gettingToKnowEachOtherWebLink } from '../Activities/WebGettingToKnowEachOther'
 
 export const al20000Sprint03 = () => {
 	const sprint = 3
@@ -38,8 +40,9 @@ export const list20000Sprint03 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 			<ol>
-				{standardActivities(sprint, azureWebsiteLink(), oreillyPlaylistICS())}
+				{standardActivities(sprint, gettingToKnowEachOtherWebLink(), oreillyPlaylistICS())}
 				<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Gates and Circuits and review our associated {daleChapter4Lecture()}</li>
+				<li>Read {continuousIntegration()}</li>
 				<li>Within {oreillyPlaylistICS()} review “Learning Web Development” Chapter 2 on HTML and read Chapter 3 on CSS</li>
 				<li>Study and consistently utilize the basic {GetCommandsLink()}</li>
 				<li>Review {SequenceSelectionAndRepetition()}</li>
@@ -49,7 +52,6 @@ export const list20000Sprint03 = (sprint) => {
 				<li>Review {htmlLink()} Part 1 and complete {htmlLink()} Part 2{estimated('1 hour maximum')}</li>
 				<li>Complete {CSSW3C()} tutorial{estimated('2 hours')}</li>
 				<li>Utilize what you learned in “Learning Web Development” and W3C tutorials to enhance {gettingToKnowEachOtherLink()}{estimated('2 hours')}</li>
-				<li>Deploy your enhanced version of {gettingToKnowEachOtherLink()} to an {azureWebsiteLink()}{estimated('2 hours')}</li>
 				{standardActivitiesClosing(sprint)}
 			</ol>
 	</div> )

@@ -5,6 +5,8 @@ import { learningObjectivesIntro, activitiesListIntro, standardActivities, initi
 import { oreillyPlaylistICS, SequenceSelectionAndRepetition, IntroducingPythonSampleCode, internalLink } from '../DataAndAPIs/Links'
 import { numberingSystemsLink} from '../Activities/PythonNumberingSystems'
 import { matchmakerPythonLink } from '../Activities/Matchmaker'
+import { HelloWorldWebLink } from '../Activities/HelloWorld'
+import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 
 export const al20000Sprint04 = () => {
 	let sprint = 4
@@ -37,6 +39,8 @@ export const list20000Sprint04 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
+			<li>Review {HelloWorldWebLink()} and utilize GitHub and GitHub Pages to create a new “Project site” with a theme of your choice</li>
+			<li>Move your {gettingToKnowEachOtherLink()} content to your new themed GitHub site</li>
 			{standardActivities(sprint, matchmakerPythonLink(), oreillyPlaylistICS())}
 			<li>Complete {numberingSystemsLink()}{estimated('2 hours')}</li>
 			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>

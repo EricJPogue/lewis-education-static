@@ -26,6 +26,7 @@ import { FINAL_PROJECT_SPRINT_6_ROUTE, finalProjectSprint6 } from './FinalProjec
 import { FINAL_PROJECT_SPRINT_7_ROUTE, finalProjectSprint7 } from './FinalProject'
 import { FINAL_PROJECT_SPRINT_8_ROUTE, finalProjectSprint8 } from './FinalProject'
 import { GETTING_TO_KNOW_EACH_OTHER_ROUTE, gettingToKnowEachOther } from './WebGettingToKnowEachOther'
+import { GETTING_TO_KNOW_EACH_OTHER_WEB_ROUTE, gettingToKnowEachOtherWeb } from './WebGettingToKnowEachOther'
 import { GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE, gettingToKnowEachOtherAbbreviated } from './WebGettingToKnowEachOtherAbbreviated'
 import { GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE, gettingToKnowEachOthersTeams } from './WebGettingToKnowEachOthersTeams'
 import { HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE, healthRiskCalculatorTeamWeb } from './HealthRiskCalculatorTeam'
@@ -94,6 +95,7 @@ export const routeActivity = (activityRoute) => {
 		case FINAL_PROJECT_SPRINT_8_ROUTE: return finalProjectSprint8()
 		case GETTING_TO_KNOW_EACH_OTHER_ROUTE: return gettingToKnowEachOther()
 		case GETTING_TO_KNOW_EACH_OTHER_ABBREVIATED_ROUTE: return gettingToKnowEachOtherAbbreviated()
+		case GETTING_TO_KNOW_EACH_OTHER_WEB_ROUTE: return gettingToKnowEachOtherWeb()
 		case GETTING_TO_KNOW_EACH_OTHER_TEAMS_ROUTE: return gettingToKnowEachOthersTeams()
 		case HEALTH_RISK_CALCULATOR_TEAM_WEB_ROUTE: return healthRiskCalculatorTeamWeb()
 		case HELLO_WORLD_WEB_ROUTE: return HelloWorldWeb()
