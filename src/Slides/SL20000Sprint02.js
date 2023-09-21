@@ -1,10 +1,10 @@
 import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02'
 
-import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_6of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, tQuizExpectations, tQuiz, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
-import { xyz_2_1of6_sprintPlanning, xyz_2_6of6_PreworkAnnouncementsAndAgenda, theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
+import { xyz_2_1of6_sprintPlanning,theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
 import { ics_3_1of6_PAaA } from './SL20000Sprint03'
 import { getClass } from '../DataAndAPIs/Classes'
 
@@ -157,25 +157,44 @@ const ics_2_5of6_PAaA = {
 		`Complete Data Representation and ${theHumbleTextFileName}`,
 		`Quiz ${sprint}` ],
 }
+const breakoutRepresentation = () => { 
+	return breakoutStandard('Breakout: Data Representation', 
+		'In this breakout session on Data Representation (reading and lecture) your team will:', [
+		'Analog and Digital Data',
+		'Binary Representation of Numeric Data',
+		'Text including ASCII, Unicode, UTF-8, UTF-16 Representations, and PDF',
+		'Photo and Audio Representation Priorities',
+		'Video Representation priorities' ])
+}
 export const ics_2_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_5of6_PAaA, sprint, activityList)
-	const breakout = () => { 
-		return breakoutStandard('Breakout: Data Representation', 
-			'In this breakout session on Data Representation (reading and lecture) your team will:', [
-			'Analog and Digital Data',
-			'Binary Representation of Numeric Data',
-			'Text including ASCII, Unicode, UTF-8, UTF-16 Representations, and PDF',
-			'Photo and Audio Representation Priorities',
-			'Video Representation priorities' ])
-	}
+
 	const poll = () => { return tPrework('Sprint Progress Polling', ics_2_5of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_6of6_PAaA.prework, sprint, activityList) }
 	const quizExpectations = () => { return tQuizExpectations(sprint)}
 	const quiz = () => { return tQuiz(sprint) }
 
-	return 	completeDeck(slideDeck, [ poll, breakout, preworkNext, quizExpectations, quiz ])
+	return 	completeDeck(slideDeck, [ poll, breakoutRepresentation, preworkNext, quizExpectations, quiz ])
 }
 
 // Session 6 of 6: Friday
-const ics_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('activity 13 and actively working on 14', sprint)
-export const ics_2_6of6 = () => { return  xyz_n_6of6(sprint, ics_2_6of6_PAaA, ics_3_1of6_PAaA.prework, activityList) }
+const ics_2_6of6_PAaA = {
+	'prework': [
+		'Complete activity 13 and actively working on 14', '',
+		'Be prepared for Breakout on Data Representation',
+		'Be prepared for Lab & Programming Together',
+		`All sprint ${sprint} assignments are due Sunday!` ],
+	'announcements':[
+		`All sprint ${sprint} assignments are due Sunday!`],
+	'agenda':[
+		'Breakout: Data Representation',
+		'Lab']
+}
+export const ics_2_6of6 = () => {
+	const finalReviewActivityListAndAssignments = () => { return basicSlide(
+		`Final sprint ${sprint} activity list and assignment Q&A`, [`Any sprint ${sprint} activity list or assignment questions?`]) }
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_6of6_PAaA, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_1of6_PAaA.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ finalReviewActivityListAndAssignments, breakoutRepresentation, preworkNext, tLab ])
+}

@@ -163,5 +163,5 @@ export const se_2_5of6 = () => {
 }
 
 // Session 6 of 6: Friday
-const se_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('activity 15 and actively working on 16', sprint)
+const se_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('Complete activity 15 and be actively working on 16', sprint)
 export const se_2_6of6 = () => { return  xyz_n_6of6(sprint, se_2_6of6_PAaA, se_3_1of6_PAaA.prework, activityList) }
