@@ -179,7 +179,7 @@ export const web_2_5of6 = () => {
 	return 	completeDeck(slideDeck, [ poll, breakout, tLab, preworkNext, quizExpectations, quiz ])
 }
 
-const web_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('activity 16 and actively working on 17', sprint)
+const web_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('Complete activity 14 and actively working on 15', sprint)
 export const web_2_6of6 = () => { return  xyz_n_6of6(sprint, web_2_6of6_PAaA, web_3_1of6_PAaA.prework, activityList) }
 
 export const web_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
