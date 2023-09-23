@@ -60,7 +60,13 @@ export const list20000Sprint04 = (sprint) => {
 
 // Certified for FA22 (10/06/2022)
 // Certified for SP22 (02/12/2022)
+
 // BugBug: Movie “Artificial Intelligence” up on the list so that it is before the breakout session which is on the first Wednesday.
 // Todo: Consider adding MatchmakerLite tutorials to ActivityList (and/or the Matchmaker assignment) instead of just in the Programming Together section. 
 // Todo: Make sure that Matchmaker expectations of Lite topics vs features to learn on your own. 
+// Todo: Consider where the following activity should go. 
+//    <li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface through Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
+// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
+// Todo: Consider adding licensing topic to all classes. 
+// Todo: Consider adding Git/GitHub activity / tutorial. 
 

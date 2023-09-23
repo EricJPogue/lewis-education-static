@@ -60,16 +60,10 @@ export const list20000Sprint03 = (sprint) => {
 }
 
 // Certified for FA22 (09/20/2022)
-
 // Certified for SP22 (01/29/2022)
+// Certified for FA23 (09/23/2023)
+
 // Todo: Verify that Unicode representation question fixed to more than 100,000 as best answer. This should be changed now. 
-// Todo: CSS source code review. 
 
-// Todo: Consider where the following activity should go. 
-//    <li>Within {oreillyPlaylistICS()} read “Introducing Python” Preface through Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
-
-// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
-// Todo: Consider adding licensing topic to all classes. 
-// Todo: Consider adding Git/GitHub activity / tutorial. 
 
 

@@ -33,7 +33,6 @@ export const al49200Sprint03 = () => {
 
 		{list49200Sprint03(sprint)}
 		{closing(sprint)}
-
 	</div> )
 }
 
@@ -41,7 +40,7 @@ export const list49200Sprint03 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-			{standardActivities(classProductSprint3Link(), oreillyPlaylistSC(), true )}
+			{standardActivities(sprint, classProductSprint3Link(), oreillyPlaylistSC(), false)}
 			<li>Review our sprint 3 planning {lectureRecordingPlaylist()}</li>
 			<li>Within {oreillyPlaylistSC()} scan “Essential Scrum” chapters 13 through 18{estimated('1 hour maximum')}</li>
 			{initialPost(sprint)}
@@ -52,6 +51,5 @@ export const list49200Sprint03 = (sprint) => {
 	</div> )
 }
 
-// Node.js in sprint 3?
-// Todo: Add lecture playlist activity. 
+// Certified for FA23 (09/23/2023)
 
