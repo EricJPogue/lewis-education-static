@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
-import { oreillyPlaylistSE, overcomingProcrastination, HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C, internalLink } from '../DataAndAPIs/Links'
+import { oreillyPlaylistSE, HTMLW3C, CSSW3C, JavaScriptW3C, RegularExpressionsW3C, internalLink } from '../DataAndAPIs/Links'
 
 import { assignmentPortfolioLink } from '../Activities/WebAssignmentPortfolio'
 import { azureWebsiteLink } from '../Activities/AzureWebsite'
@@ -37,12 +37,9 @@ export const list44000Sprint02 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-
-
 			{standardActivities(sprint, assignmentPortfolioLink())}
 			<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated {foxChapter2Lecture()}</li>
 			<li>Complete {azureWebsiteLink()}{estimated('2 hours')}</li>
-			<li>Embrace the 30-for-30 plan {overcomingProcrastination()}</li>
 			<li>Review the Potpourri web application from our example code GitHub repository</li>
 			<li>Within {oreillyPlaylistSE()} scan “Learning Web Development” Preface through Chapter 4</li>
 			<li>Implement your {webResumeLink()} while completing the W3Schools {HTMLW3C()} and {CSSW3C()} tutorials{estimated('6 hours')}</li>

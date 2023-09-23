@@ -42,7 +42,6 @@ export const list44000Sprint03 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-		<li>** Within {oreillyPlaylistSE()} scan “Essential Scrum” Chapters 1 and 2</li>
 			{standardActivities(sprint, assignmentPortfolioWithNodeJSLink(), oreillyPlaylistSE(), false)}
 			<li>Read “Engineering Software as a Service” chapter 7 on Requirements and review the associated {foxChapter7Lecture()}</li>
 			<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapters 1 and 2 while completing each of the exercises</li>
@@ -70,13 +69,16 @@ const extras = () => {
 			<li>Review {imageMap()} </li>
 			<li>Read {whateverHappenedToRuby()}</li>
 			<li>If you are looking for an interesting challenge, complete {introToReactTicTacToeTutorial()}</li>
-
 		</ul>
 	</div>)
 }
 // Certified for SU22 (05/20/2022)
 
 // Certified for SP22 (01/29/2022)
+
+// Consider adding back <li>Within {oreillyPlaylistSE()} scan “Essential Scrum” Chapters 1 and 2</li>
+
+
 // Todo: Update to reflect Zac’s fix (see related announcement). 
 // Todo: Move Whatever Happened to Ruby to earlier sprints.
 // Todo: Consider reviewing and enhancing Quiz 3.

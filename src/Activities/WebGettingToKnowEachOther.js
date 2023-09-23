@@ -90,7 +90,7 @@ export const gettingToKnowEachOtherWeb = () => {
 			<li>Fully test your hosted {gettingToKnowEachOtherLink()} webpage</li>
 			<li>Validate your HTML utilizing the W3C HTML validator</li>
 			<li>Fully test your page in both the FireFox and Chrome browsers</li>
-			<li>Carefully save and track your work</li>
+			<li>Finally, add just a touch of JavaScript to your web page by making your name change to your favorite color when clicked</li>
 		</ol>
 	</div> )
 }
