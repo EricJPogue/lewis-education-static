@@ -211,32 +211,6 @@ export class SprintClassActivities extends Component {
 		)
 	}
 
-	renderTThSchedule = () => {
-		// Tuesday, Thursday class schedules. 
-		const TSchedule = {
-			'FirstTuesday':   'Lab',
-			'FirstThursday':  'Alternate lab day for teams that can’t meet Tuesday',
-			'SecondTuesday':  'Lab',
-			'SecondThursday': 'Alternate lab day for teams that can’t meet Tuesday'
-		}
-
-		const schedule = TSchedule
-		const calendar = getClassCalendar()
-		const dates = calendar[this.currentSprint()]
-		return ( <div>
-				{this.renderScheduleHeader()}
-				<Table striped bordered hover>
-					<thead><tr><th>Day</th><th>Schedule</th></tr></thead>
-					<tbody>
-						{this.renderScheduleRow(incrementDate(dates.start,1),schedule.FirstTuesday,1)}
-						{this.renderScheduleRow(incrementDate(dates.start,3),schedule.FirstThursday,2)}
-						{this.renderScheduleRow(incrementDate(dates.start,8),schedule.SecondTuesday,3)}
-						{this.renderScheduleRow(incrementDate(dates.start,10),schedule.SecondThursday,4)}
-					</tbody>
-				</Table>
-		</div> )
-	}
-
 	renderTSchedule = () => {
 		// Tuesday class schedules. 
 		const TSchedule = {

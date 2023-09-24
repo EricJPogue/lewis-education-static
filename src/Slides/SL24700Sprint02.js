@@ -16,6 +16,8 @@ import { tQuiz, tQuizExpectations } from './SLSprint00'
 import { xyz_2_6of6_PreworkAnnouncementsAndAgenda } from './SL00000Sprint02'
 import { xyz_n_6of6 } from './SL00000Sprint00'
 
+import { web_3_1of6_PAaA } from './SL24700Sprint03'
+
 
 
 //  Web & Distributed Programming (WEB) sprint 2 shared values.
@@ -182,4 +184,3 @@ export const web_2_5of6 = () => {
 const web_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('Complete activity 14 and actively working on 15', sprint)
 export const web_2_6of6 = () => { return  xyz_n_6of6(sprint, web_2_6of6_PAaA, web_3_1of6_PAaA.prework, activityList) }
 
-export const web_3_1of6_PAaA = xyz_n_1of6_lists(sprint)

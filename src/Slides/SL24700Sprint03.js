@@ -1,4 +1,4 @@
-import { makeSlideDeck, xyz_n_1of6, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
+import { makeSlideDeck, xyz_n_1of6, xyz_n_1of6_lists, tLab, tAnnouncementPreworkOrAgenda } from './SL00000Sprint00'
 
 import { breakoutStandard, tPreworkWithLogo, tPrework, agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, orderedListSlide, submissionPercentage, tQuiz } from './SLSprint00'
 import { sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveBreakout } from './SLSprint00'
@@ -8,9 +8,32 @@ import { list24700Sprint03 } from '../ActivityLists/AL24700Sprint03'
 
 import { web_4_1of6_prework_list } from './SL24700Sprint04'
 
+
+
 const sprint = 3
 const activityListPrevious = () => { return list24700Sprint02(sprint-1) }
 const activityList = () => { return list24700Sprint03(sprint) }
+
+
+// Session 1 of 6: Monday
+export const web_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
+export const web_3_1of6 = () => { return xyz_n_1of6(sprint, web_3_1of6_PAaA.prework, activityListPrevious, web_3_1of6_PAaA.agenda, web_3_2of6_PAaA.prework, activityList) }
+
+const web_3_2of6_PAaA = {
+	'prework': [
+		'Complete through activity 4 prior to next class', '',
+		'Be prepared Discussion Board 3',
+		'Be prepared for Lab & Programming Together' ],
+	'announcements':[ 
+		'Any announcements or questions?' ],
+	'agenda':[ 
+		'Sprint Progress Polling',
+		'Lab... as time allows',
+		`Quiz ${sprint}` ],
+}
+
+
+
 
 
 //BugBug: Fix this
@@ -27,7 +50,7 @@ const ics_3_1of6_agenda_list = [
 
 export const web_3_1of6_prework_list = ics_3_1of6_prework_list
 const web_3_1of6_agenda_list = ics_3_1of6_agenda_list
-export const web_3_1of6 = () => { return xyz_n_1of6(sprint, web_3_1of6_prework_list, activityListPrevious, web_3_1of6_agenda_list, web_3_2of6_prework_list, activityList) }
+export const web_3_1of6X = () => { return xyz_n_1of6(sprint, web_3_1of6_prework_list, activityListPrevious, web_3_1of6_agenda_list, web_3_2of6_prework_list, activityList) }
 
 const web_3_2of6_prework_list = [
 	'Complete through activity 4 prior to next class', '',
