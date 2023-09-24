@@ -211,7 +211,6 @@ export class SprintClassActivities extends Component {
 		)
 	}
 
-	/*
 	renderTThSchedule = () => {
 		// Tuesday, Thursday class schedules. 
 		const TSchedule = {
@@ -237,7 +236,7 @@ export class SprintClassActivities extends Component {
 				</Table>
 		</div> )
 	}
-*/
+
 	renderTSchedule = () => {
 		// Tuesday class schedules. 
 		const TSchedule = {

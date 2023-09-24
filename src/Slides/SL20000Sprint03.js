@@ -21,7 +21,6 @@ const ics_3_2of6_prework_list = [
 	'Be prepared Discussion Board 3',
 	'Be prepared for Lab & Programming Together' ]
 export const ics_3_2of6_agenda_list = [
-	'Previewing midterm exam during sprint 4 in-person on Wednesday, October 18',
 	`Discussion Board ${sprint} as a Scrum Team`,
 	'Lab & Programming Together',
 	'Review Demo Schedule for Next Class',
