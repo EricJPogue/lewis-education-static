@@ -43,7 +43,7 @@ export const list24500Sprint03 = (sprint) => {
 			{initialPost(sprint)}
 			<li>Within {oreillyPlaylistOOP()} read “Learning Java” chapters 6 and 7</li>
 			<li>Read {jsonArticle()} and complete the W3C {jsonW3CTutorial()}{estimated('2 hours')}</li>
-			{standardActivitiesClosing(sprint, faceDrawJavaLink(), '8 hours')}
+			{standardActivitiesClosing(sprint, faceDrawJavaLink(), '4 hours')}
 		</ol>
 	</div> )
 }
