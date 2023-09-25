@@ -132,9 +132,9 @@ export const _CPSC_20000 = {
 	],
 	textBook: 'Computer Science Illuminated, Nell Dale and John Lewis, Jones & Bartlett Learning. This book is required for this course.',
 	modules: [
-		'The Big Picture, Files Systems, Tools of the Trade, and HyperText Markup Language',
-		'Numbering Systems, Data Representation, and HyperText Markup Language (HTML)',
-		'Gates and Circuits, Computing Components, and Cloud Computing with HTML, CSS, and JavaScript',
+		'The Big Picture, Files Systems, Tools of the Trade, and HyperText Markup Language (HTML)',
+		'Numbering Systems, Data Representation, Cascading Style Sheets (CSS)',
+		'Gates and Circuits, Computing Components, and JavaScript',
 		'Artificial Intelligence, Functions, and Objects and Drawing',
 		'Networks, Class Project Proposal, and Objects and Drawing with Python',
 		'Full Stack Development with Web Browser, Web Server, and NoSQL Database',

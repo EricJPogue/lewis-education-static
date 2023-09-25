@@ -18,8 +18,6 @@ import { xyz_n_6of6 } from './SL00000Sprint00'
 
 import { web_3_1of6_PAaA } from './SL24700Sprint03'
 
-
-
 //  Web & Distributed Programming (WEB) sprint 2 shared values.
 const sprint = 2
 const activityListPrevious = () => { return list24700Sprint01(sprint-1) }

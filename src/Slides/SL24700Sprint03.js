@@ -8,8 +8,6 @@ import { list24700Sprint03 } from '../ActivityLists/AL24700Sprint03'
 
 import { web_4_1of6_prework_list } from './SL24700Sprint04'
 
-
-
 const sprint = 3
 const activityListPrevious = () => { return list24700Sprint02(sprint-1) }
 const activityList = () => { return list24700Sprint03(sprint) }

@@ -10,6 +10,7 @@ import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOt
 import { continuousIntegration } from '../DataAndAPIs/Links'
 
 import { gettingToKnowEachOtherWebLink } from '../Activities/WebGettingToKnowEachOther'
+import { matchmakerWebLink } from '../Activities/Matchmaker'
 
 export const al20000Sprint03 = () => {
 	const classSection = getClass()
@@ -54,6 +55,7 @@ export const list20000Sprint03 = (sprint) => {
 				<li>Complete {CSSW3C()} tutorial{estimated('2 hours')}</li>
 				<li>Start {JavaScriptW3C()} tutorial {estimated('1 hour')}</li>
 				<li>Utilize what you learned about CSS and JavaScript to enhance and complete {gettingToKnowEachOtherLink()}{estimated('2 hours')}</li>
+				<li>Review {matchmakerWebLink()} assignment and complete “Matchmaker for the Web - Part 1”{estimated('2 hours')}</li>
 				{standardActivitiesClosing(sprint)}
 			</ol>
 	</div> )
@@ -62,7 +64,6 @@ export const list20000Sprint03 = (sprint) => {
 // Certified for FA22 (09/20/2022)
 // Certified for SP22 (01/29/2022)
 // Certified for FA23 (09/23/2023)
-
 // Todo: Verify that Unicode representation question fixed to more than 100,000 as best answer. This should be changed now. 
 
 
