@@ -40,11 +40,8 @@ export const web_3_2of6 = () => {
 	const programmingTogether = () => {
 		return bulletListSlide('Lab & Programming Together', 
 			'Let’s commit to making 30 minutes of focused effort to our Lab assignment by:', [
-			'Understanding and setting up a GitHub organization for your scrum team',
-			'Setting up and hosting a public “Getting to Know Each Other Teams” repository',
-			'Successfully adding all team members to your “Getting to Know Each Other Teams” repository',
-			'Having each team member individually update the README.md file with their name and email address',
-			'Reviewing the repository commit history to see everyone’s commit'])
+			'Understanding the “right way” to set up and edit an Azure static website',
+			'Setting up and hosting a public “Dogs, JavaScript & An API 🐶 Fetch, Promises & Async Await” website' ])
 	}
 
 	return makeSlideDeck([ prework, announcements, agenda, discussion3Breakout, preworkNext, programmingTogether ])

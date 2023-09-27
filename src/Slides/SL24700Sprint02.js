@@ -1,3 +1,5 @@
+/*
+
 import { list24700Sprint01 } from '../ActivityLists/AL24700Sprint01'
 import { list24700Sprint02 } from '../ActivityLists/AL24700Sprint02'
 
@@ -182,3 +184,4 @@ export const web_2_5of6 = () => {
 const web_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('Complete activity 14 and actively working on 15', sprint)
 export const web_2_6of6 = () => { return  xyz_n_6of6(sprint, web_2_6of6_PAaA, web_3_1of6_PAaA.prework, activityList) }
 
+*/

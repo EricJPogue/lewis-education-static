@@ -23,7 +23,7 @@ export const al20000Sprint01 = () => {
 		<ul style={{listStyleType:'square'}}>
 			<li>Effectively participate in a blended classroom environment and as part of a scrum team</li>
 		    <li>Understand the basics of Computer Science</li>
-			<li>Define and utilize files, files systems, and Zip files</li>
+			<li>Define and utilize files, file systems, and Zip files</li>
 			<li>Utilize graphical and command line tools to manage files and file systems</li>
 			<li>Utilize important developer tools to create and update basic software applications</li>
 		</ul>
