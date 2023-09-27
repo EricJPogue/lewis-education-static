@@ -27,7 +27,7 @@ export const ics_3_2of6_agenda_list = [
 	'Prework for Next Class' ]
 export const ics_3_2of6 = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_2of6_prework_list, sprint, activityList) }
-	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Any announcements?']) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['No class next Friday (October 6)']) }
 	const agenda = () => { return agendaSlide(ics_3_2of6_agenda_list) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_3of6_PAaA.prework, sprint, activityList) }
 

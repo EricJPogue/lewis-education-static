@@ -30,8 +30,39 @@ const web_3_2of6_PAaA = {
 		`Quiz ${sprint}` ],
 }
 
+export const web_3_2of6 = () => {
+	const prework = () => { return tPreworkWithLogo('Prework For Today', web_3_2of6_prework_list, sprint, activityList) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['No class next Friday (October 6)']) }
+	const agenda = () => { return agendaSlide(web_3_2of6_agenda_list) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_3of6_PAaA.prework, sprint, activityList) }
 
+	const discussion3Breakout = () => { return discussionBreakout(sprint) } 
+	const programmingTogether = () => {
+		return bulletListSlide('Lab & Programming Together', 
+			'Let’s commit to making 30 minutes of focused effort to our Lab assignment by:', [
+			'Understanding and setting up a GitHub organization for your scrum team',
+			'Setting up and hosting a public “Getting to Know Each Other Teams” repository',
+			'Successfully adding all team members to your “Getting to Know Each Other Teams” repository',
+			'Having each team member individually update the README.md file with their name and email address',
+			'Reviewing the repository commit history to see everyone’s commit'])
+	}
 
+	return makeSlideDeck([ prework, announcements, agenda, discussion3Breakout, preworkNext, programmingTogether ])
+}
+
+const web_3of6_PAaA = {
+	'prework': [
+		'Complete through activity 9 prior to next class', '',
+		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
+		'Those scheduled to demo please be a couple of minutes early to class' ],
+	'announcements':[ 
+		'Any announcements?' ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class' ]
+}
 
 
 //BugBug: Fix this
@@ -58,7 +89,7 @@ const web_3_2of6_agenda_list = [
 	`Discussion Board ${sprint} as a Scrum Team`,
 	'Prework for Next Class',
 	'Lab & Programming Together' ]
-export const web_3_2of6 = () => {
+export const web_3_2of6X = () => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', web_3_2of6_prework_list, sprint, activityList) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Any announcements?']) }
 	const agenda = () => { return agendaSlide(web_3_2of6_agenda_list) }
