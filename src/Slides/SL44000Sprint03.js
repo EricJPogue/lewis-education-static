@@ -70,19 +70,17 @@ export const se_3_3of6 = () => {
 	}
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:26, submitted:25 },
-			{ name: 'Quiz', due:26, submitted:26 },
-			{ name: 'Lab', due:26, submitted:25 },
-			{ name: 'Reflection', due: 26, submitted: 25 }])
+			{ name: 'Discussion', due:14, submitted:14 },
+			{ name: 'Quiz', due:14, submitted:14 },
+			{ name: 'Lab', due:14, submitted:13 },
+			{ name: 'Reflection', due: 14, submitted: 13 }])
 	}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
 			'Solid submission percentage',
-			'All assignments are graded and posted', 
-			'Thank you for your reflection comments',
-			'Comments and feedback immensely different depending on Web development background', 
-			'Azure static website are much better for static content!' ])
+			'My grading this sprint is a bit of a mess :-(', 
+			'Thank you for your reflection comments' ])
 	}
 	const breakout = () => { return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_3_4of6_PAaA.prework, sprint, activityList) }
