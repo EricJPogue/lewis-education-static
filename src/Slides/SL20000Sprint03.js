@@ -1,10 +1,17 @@
-import { makeSlideDeck, xyz_n_1of6, xyz_n_1of6_lists, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6_PAaA, xyz_n_6of6 } from './SL00000Sprint00'
+import { makeSlideDeck, xyz_n_1of6, xyz_n_1of6_lists, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6_PAaA, xyz_n_6of6 } from './SL00000Sprint00'
 import { agendaSlide, basicSlideWithLogo, breakoutStandard, bulletListSlide, orderedListSlide, discussionBreakout, submissionPercentage, tPrework, tPreworkWithLogo } from './SLSprint00'
 
 import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02' 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 
 import { ics_4_1of6_prework_list } from './SL20000Sprint04'
+
+import { getClass } from '../DataAndAPIs/Classes'
+import { basicSlide } from './SLSprint00'
+import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
+import { tReviewDemoSchedule } from './SL00000Sprint00'
+import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+import { completeDeck } from './SL00000Sprint00'
 
 // Constants
 const sprint = 3
@@ -44,38 +51,63 @@ export const ics_3_2of6 = () => {
 }
 
 // Session 3 of 6: Friday
-// Todo: Consider where “Gates & Circuits” and “Computing Components” breakout should occur.
 const ics_3_3of6_PAaA = {
 	'prework': [
 		'Complete through activity 9 prior to next class', '',
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
 		'Those scheduled to demo please be a couple of minutes early to class' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'No class next Friday (October 6)' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
 		`Breakout for Sprint ${sprint-1} Retrospective`,
 		'Prework for Next Class' ]
 }
-export const ics_3_3of6 = () => {
-	const metricsSubmissionPercentage = () => {
-		return submissionPercentage([
-			{ name: 'Discussion', due:14, submitted:14 },
-			{ name: 'Quiz', due:14, submitted:14 },
-			{ name: 'Lab', due:14, submitted:14},
-			{ name: 'Reflection', due: 14, submitted: 13 }])
+export const ics_3_3of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_3_3of6_PAaA, sprint, activityList)
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			'What is Bob Parsons Rule #9?', '',
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
 	}
+	const metricsSubmissionPercentage = () => {
+		if (getClass().section === '002') {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:27 },
+				{ name: 'Quiz', due:27, submitted:27 },
+				{ name: 'Lab', due:27, submitted:27 },
+				{ name: 'Reflection', due: 27, submitted: 26 }])
+		}
+		else {
+			return submissionPercentage([
+				{ name: 'Discussion', due:24, submitted:24 },
+				{ name: 'Quiz', due:24, submitted:24 },
+				{ name: 'Lab', due:24, submitted:23 },
+				{ name: 'Reflection', due: 24, submitted: 23 }])
+		}
+	}
+	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Fantastic submission percentage!',
-			'All assignments are graded and posted', 
-			'Can you see your scores?',
-			'Can you see the answers to all quiz questions?',
-			'Thank you for your reflection comments' ])
+			'Excellent submission percentage',
+			'Do not go searching for the person who forgot to submit their Reflection', 
+			'Grading is a bit of a work in process',
+			'We still need some work on creating, testing, and submitting Zip files' ])
 	}
-	return xyz_n_3of6(sprint, ics_3_4of6_PAaA, ics_3_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_4of6_PAaA.prework, sprint, activityList) }
+
+
+	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
+		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
 }
 
 // Session 4 of 6: Monday
