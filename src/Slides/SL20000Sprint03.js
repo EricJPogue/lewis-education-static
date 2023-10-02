@@ -129,7 +129,9 @@ const ics_3_4of6_PAaA = {
 		'Be prepared for Lab and Programming Together' ],
 	'announcements':[ 
 		'No class next Friday (October 6)',
-		`All sprint ${sprint} assignments due Sunday` ],
+		`All sprint ${sprint} assignments due Sunday`, '',
+		'Sprint 2 assignments all posted',
+		'If you need to resubmit your “Getting to Know Each Other” zip file, email it to me today' ],
 	'agenda':[
 		'Sprint Progress Polling', 
 		`“${breakoutGateAndCircuitsName}”s Breakout`,
