@@ -107,15 +107,14 @@ const se_3_4of6_PAaA = {
 		`Be prepared for a breakout session on ${breakoutRequirementsName}`,
 		'Be prepared for Lab and Programming Together as time allows' ],
 	'announcements':[ 
-		'I have updated Lab 3 to reflect specific exercises to complete in “Web Development with Node.js and Express”',
-		'Is anyone having difficulties accessing O’Reilly?' ],
+		'No class next Friday (October 6)',
+		`All sprint ${sprint} assignments due Sunday` ],
 	'agenda':[
 		'Sprint Progress Polling', 
 		`${breakoutRequirementsName} Breakout`,
 		'Lab and Programming Together as time allows' ]
 }
 export const se_3_4of6 = () => { return xyz_n_4of6(sprint, se_3_4of6_PAaA, se_3_5of6_PAaA.prework, activityList, breakoutRequirements) }
-
 
 // Session 5 of 6: Wednesday
 const se_3_5of6_PAaA = {
