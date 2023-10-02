@@ -178,7 +178,7 @@ export const web_3_3of6 = () => {
 		`All sprint ${sprint} assignments are due Sunday!`]
 	const web_3_5of6_prework_list = [
 		'Prework For Today', 
-		'Complete through activity 14 prior to next class', '',
+		'Complete through activity 12 prior to next class', '',
 		'Be prepared for Lab and Programming Together',
 		'Be prepared for Quiz 3' ]
 	const web_3_5of6_agenda_list = [
