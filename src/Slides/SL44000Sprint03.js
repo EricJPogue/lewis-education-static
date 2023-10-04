@@ -123,18 +123,31 @@ const se_3_5of6_PAaA = {
 		'Be prepared for Lab and Programming Together as time allows',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
-		'I have updated “Assignment Portfolio with Node.js”',
-		'Any announcements or questions?' ],
+		'No class next Friday (October 6)',
+		`All sprint ${sprint} assignments due Sunday` ],
 	'agenda':[
 		'Lab and Programming Together',
 		'Prework for Next Class',
 		`Quiz ${sprint}` ]
 }
-export const se_3_5of6 = () => { return xyz_n_5of6(sprint, se_3_5of6_PAaA, se_3_6of6_PAaA.prework, activityList) }
+export const se_3_5of6 = () => { return xyz_n_5of6(sprint, se_3_5of6_PAaA, se_4_1of6_prework_list, activityList) }
 
 // Session 6 of 6: Friday
+	// No “web_3_6of6...” prework or agenda structures as there is no class Friday due to Fall Break.
+	export const se_3_6of6 = () => {
+		const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
+			'No class', 
+			`All sprint ${sprint} assignments are due Sunday!`]) 
+		}
+	
+		return [ announcements ]
+	}
+
+
+
+
 const se_3_6of6_PAaA = xyz_n_6of6_PAaA('Complete through activity activity 14 and actively working on 15', sprint)
-export const se_3_6of6 = () => { return  xyz_n_6of6(sprint, se_3_6of6_PAaA, se_4_1of6_prework_list, activityList) }
+export const se_3_6of6X = () => { return  xyz_n_6of6(sprint, se_3_6of6_PAaA, se_4_1of6_prework_list, activityList) }
 
 // Todo: Update Lab 3 Question 3 to specifically ask for more detail. 
 
