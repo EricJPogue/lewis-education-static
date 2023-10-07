@@ -65,6 +65,7 @@ export const list20000Sprint03 = (sprint) => {
 // Certified for SP22 (01/29/2022)
 // Certified for FA23 (09/23/2023)
 // Todo: Verify that Unicode representation question fixed to more than 100,000 as best answer. This should be changed now. 
+// Todo: Assignments with GitHub and JavaScript turning text red very challenging given that Friday was a holiday.
 
 
 
