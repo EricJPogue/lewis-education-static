@@ -8,7 +8,7 @@ import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 export const al20000Sprint04 = () => {
 	let sprint = 4
 	return ( <div>
-		<h5>Sprint 4: JavaScript including Sequences, Selections, and Loops (Repetition), Strings, and Lists</h5>
+		<h5>Sprint 4: The World Wide Web, JavaScript, Sequences, Selections, and Loops (Repetition)</h5>
 
 		<p>Sprint 4. Let’s write some JavaScript. <span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084; </span> 
 		for the Web will be challenging application but I think you will enjoy it.</p>
@@ -16,7 +16,7 @@ export const al20000Sprint04 = () => {
 		{learningObjectivesIntro(sprint)}
 		<ul style={{ listStyleType:'square' }}>
 			<li>Master {SequenceSelectionAndRepetition()}</li>
-			<li>Develop a basic understanding of artificial intelligence</li>
+			<li>Continue to enhance your understanding of the World Wide Web (WWW)</li>
 			<li>Create, update, and test HTML, CSS, and JavaScript applications</li>
 			<li>Understand variables, strings, expressions, and functions</li>
 		</ul>
