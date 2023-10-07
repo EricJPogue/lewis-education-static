@@ -38,7 +38,7 @@ export const list20000Sprint04 = (sprint) => {
 			<li>Within “Computer Science Illuminated” The World Wide Web and review our associated {daleWWWLecture()}</li>
 
 			<li>Complete “Matchmaker Lite for the Web - Part 1” from our programming together tutorials</li>
-			<li>Create a {gitHubPages()} GitHub Pages themed website that will eventually host your {finalProjectProposalLink()}</li>
+			<li>Create a {gitHubPages()} themed website that will eventually host your {finalProjectProposalLink()}</li>
 
 			{initialPost(sprint)}
 			<li>Master {SequenceSelectionAndRepetition()}</li>
