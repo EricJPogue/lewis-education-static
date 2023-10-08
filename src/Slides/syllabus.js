@@ -312,7 +312,7 @@ const renderGradingCriteriaTable = () => {
 		{ name: 'Lab', points:70, number:8 },
 		{ name: 'Reflection', points:4, number:8 },
 		{ name: 'Demo', points:12, number:1 },
-		{ name: 'Final Project Presentation', points:20, number:1 }
+		{ name: 'BugBug: **Remove this file** Final Project Presentation', points:20, number:1 }
 	]
 
 	const renderBody = (assignmentGradingIn) => {

@@ -18,12 +18,17 @@ export const al49200Sprint04 = () => {
 			<li>Delivered a few features to our production application</li>
 			<li>And spent the last six weeks optimizing how we work as a team in a scrum environment</li>
 		</ul>
-		<p>it’s time to deliver features that real users can use. Since the beginning of the semester we have tried to keep the 
+		<p>It’s time to deliver features that real users can use. Since the beginning of the semester we have tried to keep the 
 		goal of delivering an MVP product by the end of sprint 4. Now we are here. What can we do to have something to show 
 		potential customers? Maybe we were not able to commit to all the features of the MVP in our sprint 4 planning. That 
 		happens. Stay focused on delivering something of value to production. Always remember that being “done” with a 
 		something small and delivering it to production is <em>immensely</em> more valuable than being “almost done” with 
 		something great.</p>
+
+		<p>It is also time to start considering the longevity of your product. Who is going to continue the legacy? Is anyone on 
+		your current team willing to recruit and guide a second team starting in sprint 5? Or is anyone from the team available 
+		next semester for an independent project? Would someone on your team be willing to mentor and guide an additional team 
+		member? All possibilities that I want you to discuss during sprint 4 planning.</p>
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>

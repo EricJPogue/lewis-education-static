@@ -19,6 +19,10 @@ export const al44000Sprint04 = () => {
 		<p>It is important to remember that this is our final sprint before we become 100% focused on developing complex 
 		software as a Agile team in sprints 5 through 8 utilizing our full software-as-a-service (Saas) architecture.</p>
 
+		<p>What will your team be working on for the last half of the semester? Would you like to work with all or part of 
+		your team on the same project for your capstone? How about working as a second scrum team on an existing capstone 
+		product? Or maybe signing up individually to work with an existing capstone team?</p>
+
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Understand testing and test-driven development</li>
