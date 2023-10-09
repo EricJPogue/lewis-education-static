@@ -15,12 +15,27 @@ const sprint = 4
 const activityListPrevious = () => { return list24700Sprint03(sprint-1) }
 const activityList = () => { return list24700Sprint04(sprint) }
 
-
 // Session 1 of 6.
 // Todo: Review Sprint 4 Session 1 (below) as it was fixed but not reviewed after the session.
 export const web_4_1of6_prework_list = xyz_n_1of6_prework_list(sprint)  
 const web_4_1of6_agenda_list = xyz_n_1of6_agenda_list(sprint)
-export const web_4_1of6 = () => { return xyz_n_1of6(sprint, web_4_1of6_prework_list, activityListPrevious, web_4_1of6_agenda_list, web_4_2of6_lists.prework, activityList) }
+export const web_4_1of6 = () => { 
+	const changes = () => {
+		return bulletListSlide('Class Projects & Class Changes', 
+			'Class Projects & Class Changes:', [
+			'When I first came to Lewis, I thought class projects were a copout', 
+			'... I was 100% wrong, wrong, wrong', 
+			'I have worked to continuously improved my classes and to give more time to class projects',
+			'This semester you will have 30 hours to on a class project of **your** choice',
+			'Sprint 7 & sprint 8: 9 + 9 + 9 + 9 -> 12 + 12 + 12',
+			'My suggestion? Do something that will make you proud... and that you could show to a perspective employer',
+			'What will you do?' ])
+	}
+	let slides = xyz_n_1of6(sprint, web_4_1of6_prework_list, activityListPrevious, web_4_1of6_agenda_list, web_4_2of6_lists.prework, activityList)
+	slides.splice(4, 0, changes)
+	return slides
+}
+
 
 //export const web_4_1of6_prework_list = xyz_n_1of6_prework_list(sprint)  
 
