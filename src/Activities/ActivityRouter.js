@@ -4,6 +4,7 @@ import { ARDUINO_DRONE_ROUTE, arduinoDrone } from './ArduinoDrone'
 import { ASSIGNMENT_PORTFOLIO_ROUTE, assignmentPortfolio } from './WebAssignmentPortfolio'
 import { ASSIGNMENT_PORTFOLIO_NODEJS_ROUTE, assignmentPortfolioWithNodeJS } from './WebAssignmentPortfolioWithNodeJS'
 import { AZURE_FUNCTION_ROUTE, azureFunction } from './AzureFunction'
+import { AZURE_STATIC_WEBSITE_ROUTE, azureStaticWebsite } from './AzureStaticWebsite'
 import { AZURE_WEBSITE_ROUTE, azureWebsite } from './AzureWebsite'
 import { CAPACITY_COMMITTED_EFFORT_DELIVERED_ROUTE, capacityCommittedEffortDelivered } from './CapacityCommittedEffortDelivered'
 import { CLASS_PRODUCT_SPRINT_1_ROUTE, classProductSprint1 } from './ClassProduct'
@@ -72,6 +73,7 @@ export const routeActivity = (activityRoute) => {
 		case ASSIGNMENT_PORTFOLIO_ROUTE: return assignmentPortfolio()
 		case ASSIGNMENT_PORTFOLIO_NODEJS_ROUTE: return assignmentPortfolioWithNodeJS()
 		case AZURE_FUNCTION_ROUTE: return azureFunction()
+		case AZURE_STATIC_WEBSITE_ROUTE: return azureStaticWebsite()
 		case AZURE_WEBSITE_ROUTE: return azureWebsite()
 		case CAPACITY_COMMITTED_EFFORT_DELIVERED_ROUTE: return capacityCommittedEffortDelivered()
 		case CLASS_PRODUCT_SPRINT_1_ROUTE: return classProductSprint1()

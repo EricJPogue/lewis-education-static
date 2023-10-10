@@ -103,6 +103,42 @@ export const xyz_n_1of6 = (sprint, preworkList, activityListPrevious, agendaList
 	return makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, preworkNext ])
 }
 
+export const ssc_n_1of1_lists = (sprint) => {
+	return {
+		'prework':[ 
+			'Everything is due Sunday!', '',
+			`Be prepared for Sprint ${sprint} Planning` ],
+		'announcements':[ 
+			`Sprint ${sprint} starts now.` ],
+		'agenda':[ 
+			`Sprint ${sprint} Planning` ]
+	}
+}
+export const ssc_n_1of1 = (sprint, preworkList, activityListPrevious, agendaList, preworkListNext, activityList, substituteSprintPlanning = null) => {
+	const prework = () => { return tPreworkWithLogo('Prework For Today', preworkList, sprint-1, activityListPrevious) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['The Lab assignment has been split into two parts']) }
+	const agenda = () => { return agendaSlide(agendaList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
+
+	const sprintPlanning = () => {
+		if (substituteSprintPlanning != null) {
+			return substituteSprintPlanning
+		} else {
+			return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
+				'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
+				'The Lab assignment has been split into two parts',
+				'We need to start making progress on class Demos' ])
+		}
+	}
+	const activitiesReview = () => {
+		return basicSlide('Activity List and Assignments Review', [
+			'Let’s open our Blackboard shell and review the activity list and assignments together.' ]
+		)
+	}
+
+	return makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, preworkNext ])
+}
+
 export const xyz_n_2of6 = (sprint, sessionLists, preworkListNext, activityList) => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
