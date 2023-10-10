@@ -191,9 +191,7 @@ const sprintRouter = (route) => {
 		case '49200-2-4': return ssc_2_3of4()
 
 		case '49200-3-1': return ssc_3_1of1()
-
-		case '49200-4-1a': return ssc_4_1of1()
-
+		case '49200-4-1': return ssc_4_1of1()
 
 		case '49200-5-1': return ssc_5_1of4()
 		case '49200-6-1': return ssc_6_1of4()
