@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { makeInternalURL } from './ActivityRouter'
 
 import { internalLink } from '../DataAndAPIs/Links'
+import { externalLink } from '../DataAndAPIs/Links';
 
 import BloodPressureImage from './HealthRiskCalculatorBloodPressure.png';
 import BodyMassIndexImage from './HealthRiskCalculatorBodyMassIndex.png';
@@ -21,16 +22,18 @@ const HealthRiskCalculatorTeamWebWithNodeJSProperties = {
 }	
 	
 const HealthRiskCalculatorTeam = (appProps) => {
+	const azureStaticWebsite = () => externalLink('Azure Static Web App', 'https://learn.microsoft.com/en-us/azure/static-web-apps/?WT.mc_id=build2020_swa-docs-cxa')
+	const azureStaticWebsiteQuickStart = () => externalLink('Quickstart', 'https://learn.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript')
+	const azureStaticWebsiteAPI = () => externalLink('Add an API to Azure Static Web Apps with Azure Functions', 'https://learn.microsoft.com/en-us/azure/static-web-apps/add-api?tabs=vanilla-javascript')
 	const sharedGitHubRepository = () => internalLink('Shared GitHub Repository', '/activity/repository')
-	return (
-
-<div>
+	return ( <div>
 <br />
 <h4>{appProps.name}</h4>
 <h5>Summary: Work with your scrum team to create a {appProps.language} application that will calculate the health risk 
-of a new insurance company customer utilizing a static website for the client, a separate Node.js server to implement an 
-API for **all** calculations, and utilizing a new GitHub Organization to manage the two separate Shared GitHub 
-repositories.</h5>
+of a new insurance company customer utilizing an {azureStaticWebsite()} and following the associated {azureStaticWebsiteQuickStart()} for 
+the client, continue with {azureStaticWebsiteAPI()} to add an API to your Azure Static 
+Web App with Azure Functions to implement **all** calculations, and utilizing a new GitHub Organization to manage the 
+two separate Shared GitHub repositories.</h5>
 <h5>Prerequisites: {appProps.prerequisites}</h5>
 
 <p>In this assignment, you will create a tool a health insurance company could use to determine the risk associated with 

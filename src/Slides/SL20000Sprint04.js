@@ -44,8 +44,8 @@ const ics_4_2of6_lists = {
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
 	'announcements':[ 
-		'Sprint 5 Planning will be Monday, March 13th',
-		'Last day to drop 16 week courses with a grade of “W” is March 24' ],
+		'Upcoming registration dates are available in the Spring and Summer 2023 Course Schedule',
+		'Are you interested (or at least aware of) the Software Engineering concentration and 4+1 programs?' ],
 	'agenda':[
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
