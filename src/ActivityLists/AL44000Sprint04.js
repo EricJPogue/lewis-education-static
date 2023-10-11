@@ -1,9 +1,12 @@
 import React from 'react'
 
-import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
+import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
 
 import { oreillyPlaylistSE, internalLink, JSONWebServicesTutorial } from '../DataAndAPIs/Links'
 import { healthRiskCalculatorTeamWebLink } from '../Activities/HealthRiskCalculatorTeam'
+
+import { ServerlessAzure, ServerlessGoogle, ServerlessAWS } from '../DataAndAPIs/Links'
+import { externalLink } from '../DataAndAPIs/Links'
 
 export const al44000Sprint4Topics = 'Team Final Project Proposal, Testing, Support, and Application Programming Interfaces'
 export const al44000Sprint04 = () => {
@@ -27,7 +30,7 @@ export const al44000Sprint04 = () => {
 		<ul style={{listStyleType:'square'}}>
 			<li>Understand testing and test-driven development</li>
 			<li>Implement HTML, CSS, and JavaScript based client web applications that consume Application Programming Interfaces (APIs)</li>
-			<li>Create Node.js base server-side applications that implement Application Programming Interfaces (APIs)</li>
+			<li>Understand Serverless Computing and utilize Azure Functions to implement Application Programming Interfaces (APIs)</li>
 			<li>Work as part of a software development team utilizing GitHub, Azure, and Node.js</li>
 		</ul>
 
@@ -38,22 +41,23 @@ export const al44000Sprint04 = () => {
 
 export const list44000Sprint04 = (sprint) => {
 	const foxChapter8Lecture = () => { return internalLink('lecture', '/activity/fox-chapter-08') }
+	const azureStaticWebApps = () => { return externalLink('Azure Static Web Apps', 'https://learn.microsoft.com/en-us/azure/static-web-apps/?WT.mc_id=build2020_swa-docs-cxa')}
+	const azureFunctions = () => { return externalLink('Azure Functions', 'https://learn.microsoft.com/en-us/azure/azure-functions/')}
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, healthRiskCalculatorTeamWebLink(), oreillyPlaylistSE())}
+			<li>Review {azureStaticWebApps()} and start “QUICKSTART: Deploy an app with no front-end framework” utilizing the “Azure portal” </li>
 			<li>Read Chapter 8 of Fox on Test-Driven Development and review the associated class {foxChapter8Lecture()}</li>
-			<li>Within {oreillyPlaylistSE()} briefly scan “Web Development with Node and Express” chapters 5 through 14</li>
+
 			<li>Complete {JSONWebServicesTutorial()}</li>
 
 			{initialPost(sprint)}
-			<li>Within {oreillyPlaylistSE()} watch “Project Management” by Jeffrey Pinto Lessons 1 through 5 focussing on:{estimated('2 hours')}</li>
-			<ul style={{listStyleType:'square'}}>
-					<li>Lesson 1: Why Projects?</li>
-					<li>Lesson 4: Creating the Project Network</li>
-					<li>Lesson 5: Duration Estimation and Critical Path</li>
-			</ul>
-			<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapter 15</li>
+			<li>Review and understand Serverless Computing by analyzing {ServerlessAzure()}, {ServerlessGoogle()}, and {ServerlessAWS()}</li>
+			<li>Review {azureStaticWebApps()} and complete “QUICKSTART: Deploy an app with no front-end framework” utilizing the “Azure portal” </li>
+			<li>Review {azureFunctions()} and complete “QUICKSTART: JavaScript”</li>
+
+			<li>Review {azureStaticWebApps()} and complete “QUICKSTART: Deploy an app with no front-end framework” utilizing the “Azure portal” </li>
 			{standardActivitiesClosing(sprint, healthRiskCalculatorTeamWebLink(), '6 hours per team member')}
 		</ol>
 	</div> )

@@ -8,6 +8,7 @@ import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityComm
 
 import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
 
+
 export const al44000Sprint5Topics = 'Team Final Project utilizing Scrum Events, Artifacts, and Roles plus Software Maintenance'
 export const al44000Sprint05 = () => {
 	const sprint = 5
@@ -40,6 +41,14 @@ export const list44000Sprint05 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
+<li>***... Within {oreillyPlaylistSE()} briefly scan “Web Development with Node and Express” chapters 5 through 14</li>
+<li>***... Within {oreillyPlaylistSE()} watch “Project Management” by Jeffrey Pinto Lessons 1 through 5 focussing on:{estimated('2 hours')}</li>
+<li>***... Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapter 15</li>
+			<ul style={{listStyleType:'square'}}>
+					<li>Lesson 1: Why Projects?</li>
+					<li>Lesson 4: Creating the Project Network</li>
+					<li>Lesson 5: Duration Estimation and Critical Path</li>
+			</ul>
 			{standardActivities(sprint, finalProjectProposalLink(), oreillyPlaylistSE())}
 			<li>Start working on {finalProjectSprint5Link()}</li>
 			<li>Read Chapter 9 of Fox on Software Maintenance</li>
