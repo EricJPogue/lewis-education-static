@@ -1,12 +1,16 @@
 import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6, completeDeck, checklistAnnouncementsPreworkAndAgenda, tLab } from './SL00000Sprint00'
 
 import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule } from './SLSprint00'
-import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard, tQuiz } from './SLSprint00'
+import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, orderedListSlide, breakoutStandard, tQuiz } from './SLSprint00'
 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 import { list20000Sprint04 } from '../ActivityLists/AL20000Sprint04'
 
 import { ics_5_1of6_lists } from './SL20000Sprint05'
+
+import { tReviewDemoSchedule } from './SL00000Sprint00'
+import { basicSlide } from './SLSprint00'
+import { getClass } from '../DataAndAPIs/Classes'
 
 // Sprint 4 Introduction to Computer Science (ICS) values.
 const sprint = 4
@@ -72,10 +76,7 @@ export const ics_4_2of6 = () => {
 // Session 3 of 6: Friday
 const ics_4_3of6_lists = {
 	'announcements':[ 
-		'You rock!', 
-		`If you are enjoying creating websites, you may want to consider taking Web & Distributed Programming... I will 
-		happily wave the Programming Fundamentals prerequisite if you have completed this section of Intro to Computer
-		Science` ],
+		'Registration is coming' ],
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
@@ -86,30 +87,57 @@ const ics_4_3of6_lists = {
 		`Breakout for Sprint ${sprint-1} Retrospective`,
 		'Prework for Next Class' ]
 }
-export const ics_4_3of6 = () => {
+export const ics_4_3of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_3of6_lists, sprint, activityList)
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			'What is Bob Parsons Rule #9?', '',
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
+	}
 	const metricsSubmissionPercentage = () => {
-		return submissionPercentage([
-			{ name: 'Discussion', due:14, submitted:13 },
-			{ name: 'Quiz', due:14, submitted:14 },
-			{ name: 'Lab', due:14, submitted:14},
-			{ name: 'Reflection', due: 14, submitted: 13 }])
+		if (getClass().section === '002') {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:27 },
+				{ name: 'Quiz', due:27, submitted:27 },
+				{ name: 'Lab', due:27, submitted:27 },
+				{ name: 'Reflection', due: 27, submitted: 27 }])
+		}
+		else {
+			return submissionPercentage([
+				{ name: 'Discussion', due:24, submitted:24 },
+				{ name: 'Quiz', due:24, submitted:23 },
+				{ name: 'Lab', due:24, submitted:23 },
+				{ name: 'Reflection', due: 24, submitted: 22 }])
+		}
 	}
-	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
+	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
 	const retrospective = () => {
-		return orderedListSlide('Class Retrospective',
-			'Feedback from Assignments & Reflections', [
-			'Excellent submission percentage... very well done!',
-			'100% Submission Percentage === Food... what does “===” mean in Python?',
-			'All assignments are graded and posted', 
-			'Some difficulties creating GitHub Repositories and Azure Websites',
-			'It feels like our changes to help us get started earlier had a positive impact... thoughts?', 
-			'Very impressive work! Thank you!' ])
+		if (getClass().section === '002') {
+			return orderedListSlide('Class Retrospective',
+				'Feedback from Assignments & Reflections', [
+				'Wow, 100% submission percentage... with 27 in the class!',
+				'Some confusion on Azure and which Requirements',
+				'Grading is a bit of a work in process' ])
+		} else {
+			return orderedListSlide('Class Retrospective',
+				'Feedback from Assignments & Reflections', [
+				'Very good submission percentage',
+				'Some confusion on Azure and which Requirements',
+				'Grading is a bit of a work in process' ])
+		}
 	}
-	const breakout = () =>{ return retrospectiveBreakout(sprint) }
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_4of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
+
+	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
+		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
 }
 
 // Session 4 of 6: Monday
