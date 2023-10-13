@@ -94,8 +94,7 @@ export const web_4_3of6 = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
 			'Okay submission percentage... it does’t feel good to have multiple Labs not submitted',
-			'All assignments are graded and posted',
-			'Several very nice API implementations' ])
+			'My grading is a of a work in process this semester' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', web_4_4of6_lists.prework, sprint, activityList) }
