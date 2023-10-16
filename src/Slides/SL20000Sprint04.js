@@ -133,7 +133,7 @@ export const ics_4_3of6 = () => {
 			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
 			'What improvements should we make as a class, team, or individual going forward' ])
 	}
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_4of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_4of6_PAaA.prework, sprint, activityList) }
 
 
 	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
@@ -141,21 +141,22 @@ export const ics_4_3of6 = () => {
 }
 
 // Session 4 of 6: Monday
-const ics_4_4of6_lists = {
+const ics_4_4of6_PAaA = {
 	'announcements':[ 
 		'Any announcements?' ],
 	'prework':[
-		'Complete through activity 11 prior to next class', '',
-		'Focus on “Sequences, Selections, and Loops” and “Python Programming”',
-		'Be prepared for “Sequences, Selections, and Loops with Python Breakout”' ],
+		'Complete through activity 9 prior to next class', '',
+		'Focus on “Sequences, Selections, and Loops” and “JavaScript Programming”',
+		'Be prepared for “Sequences, Selections, and Loops with JavaScript Breakout”' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Sequences, Selections, and Loops with Python Breakout',
+		'Sequences, Selections, and Loops with JavaScript Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
 export const ics_4_4of6 = () => {
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_4of6_lists, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_4of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_4_4of6_PAaA.prework, sprint, activityList) }
 	const breakout = () => { 
 		return breakoutStandard( 
 			'Breakout: Sequences, Selections, and Loops with Python', 
@@ -178,7 +179,7 @@ export const ics_4_4of6 = () => {
 	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ breakout, preworkNext, programmingTogether ])
+	return completeDeck(slideDeck, [ poll, breakout, preworkNext, programmingTogether ])
 }
 
 // Session 5 of 6: Wednesday
