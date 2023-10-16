@@ -104,13 +104,13 @@ export const se_4_3of6 = () => {
 }
 
 // Session 4 of 6: Monday
-// Todo: Reduce prework to less than activity 10. 
 const se_4_4of6_lists = {
 	'prework':[
 		'Complete through activity 8 and working on activity 9', '',
 		'Be prepared for a breakout session on “Software Testing: Test-Driven Development”' ],
 	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, March 13th' ],
+		'Your team’s sprint 5 planning is required, in-person, and scheduled for next Monday (October 23rd)',
+		'ECaMS Billboard will be at high noon also on Monday, October 23rd'],
 	'agenda':[
 		'Sprint Progress Polling',
 		'“Software Testing: Test-Driven Development” breakout',
