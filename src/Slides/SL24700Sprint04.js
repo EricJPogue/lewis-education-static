@@ -109,7 +109,7 @@ const web_4_4of6_lists = {
 		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
-		'Be prepared for a discussion on the Node.js local server environment, AJAX, and JSON' ],
+		'Be prepared for a discussion on AJAX and JSON' ],
 	'agenda':[
 		'Node.js The Server breakout',
 		'Prework for Next Class',
@@ -119,15 +119,11 @@ export const web_4_4of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_4_4of6_lists, sprint, activityList)
 	const breakout = () => { 
 		return breakoutStandard( 
-			'Breakout: Node.js The Server breakout', 
-			'In this breakout session your team will discuss Node.js server environment:', [
-			'Software Configuration Management (SCM)... Wikipedia',
-			'Unit testing and the Node.js local environment', 
-			'Azure Static Website vs. Azure Node.js Website', 
-			'Hosting Map Mania... static website or Node.js', 
-			'Local development and testing of Node.js website vs. local testing of a static website', 
-			'Local development and testing of Node.js “Learning Web Development” vs. suggested environment', 
-			'JSON, AJAX, and CORS'
+			'Breakout: AJAX, JSON, and CORS', 
+			'In this breakout session your team will discuss AJAX, JSON, and CORS:', [
+			'JSON',
+			'AJAX', 
+			'CORS'
 		])
 	}
 
