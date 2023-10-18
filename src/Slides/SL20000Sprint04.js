@@ -177,14 +177,14 @@ export const ics_4_4of6 = () => {
 			'Zipped the files as if we were going to submit them for Lab 4',
 			'Started work on MatchMaker' ])
 	}
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_lists.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_PAaA.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ poll, breakout, preworkNext, programmingTogether ])
 }
 
 // Session 5 of 6: Wednesday
 // Todo: Consider adding quiz expectation to slide deck. 
-const ics_4_5of6_lists = {
+const ics_4_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 9 and working on activity 13 prior to next class', '',
 		'Be prepared for Lab & Programming Together',
@@ -192,24 +192,26 @@ const ics_4_5of6_lists = {
 	'announcements':[ 
 		'Registration is coming...' ],
 	'agenda':[
+		'Sprint Progress Polling',
 		'Lab & Programming Together',
 		'Prework for Next Class',
 		'Quiz 4' ]
 }
 export const ics_4_5of6 = () => {
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_5of6_lists, sprint, activityList)
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_lists.prework, sprint, activityList) }
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_5of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_4_5of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_6of6_PAaA.prework, sprint, activityList) }
 	const quiz = () => { return tQuiz(sprint) }
 
-	return completeDeck(slideDeck, [ preworkNext, quiz ])
+	return completeDeck(slideDeck, [ poll, tLab, preworkNext, quiz ])
 }
 
 // Session 6 of 6: Friday
-const ics_4_6of6_lists = {
+const ics_4_6of6_PAaA = {
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
-		'Be at mostly complete with activity 13 prior to next class', '',
+		'Be complete with activity 10 working on activity 11 prior to next class', '',
 		'Be prepared for Lab & Programming together' ],
 	'agenda':[
 		'Sprint Progress Polling',
@@ -217,7 +219,7 @@ const ics_4_6of6_lists = {
 		'Lab and Programming Together' ]
 }
 export const ics_4_6of6 = () => {
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_6of6_lists, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_6of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_1of6_lists.prework, sprint, activityList) }
 
 	return completeDeck(slideDeck, [ preworkNext, tLab ])
