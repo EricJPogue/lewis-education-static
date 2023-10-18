@@ -73,8 +73,8 @@ const extras = () => {
 	</div>)
 }
 // Certified for SU22 (05/20/2022)
-
 // Certified for SP22 (01/29/2022)
+// Certified for FA23 (09/23/2023)
 
 // Consider adding back <li>Within {oreillyPlaylistSE()} scan “Essential Scrum” Chapters 1 and 2</li>
 

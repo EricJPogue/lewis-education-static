@@ -183,35 +183,25 @@ export const ics_4_4of6 = () => {
 }
 
 // Session 5 of 6: Wednesday
+// Todo: Consider adding quiz expectation to slide deck. 
 const ics_4_5of6_lists = {
 	'prework':[
-		'Complete through activity 12 and working on activity 13 prior to next class', '',
-		'Be prepared for “Computer Science Illuminated” Artificial Intelligence Breakout',
+		'Complete through activity 9 and working on activity 13 prior to next class', '',
+		'Be prepared for Lab & Programming Together',
 		'Be prepared for Quiz 4' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'Registration is coming...' ],
 	'agenda':[
-		'“Computer Science Illuminated” Artificial Intelligence Breakout',
+		'Lab & Programming Together',
 		'Prework for Next Class',
 		'Quiz 4' ]
 }
 export const ics_4_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_5of6_lists, sprint, activityList)
-	const breakout = () => { 
-		return breakoutStandard( 
-			'Breakout: Artificial Intelligence', 
-			'In this breakout will discuss Artificial Intelligence (reading and lecture):', [
-			'Thinking Machines',
-			'Knowledge Representation and Data Quality',
-			'Expert Systems',
-			'Neural Networks',
-			'Natural Language Processing',
-			'Robotics' ])
-	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_lists.prework, sprint, activityList) }
 	const quiz = () => { return tQuiz(sprint) }
 
-	return completeDeck(slideDeck, [ breakout, preworkNext, quiz ])
+	return completeDeck(slideDeck, [ preworkNext, quiz ])
 }
 
 // Session 6 of 6: Friday

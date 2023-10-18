@@ -77,6 +77,18 @@ const ics_5_3of6_lists = {
 }
 export const ics_5_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_3of6_lists, sprint, activityList)
+	// BugBug: Figure out where this goes. 
+	const aIbreakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Artificial Intelligence', 
+			'In this breakout will discuss Artificial Intelligence (reading and lecture):', [
+			'Thinking Machines',
+			'Knowledge Representation and Data Quality',
+			'Expert Systems',
+			'Neural Networks',
+			'Natural Language Processing',
+			'Robotics' ])
+	}
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
 			{ name: 'Discussion', due:13, submitted:13 },
@@ -97,7 +109,7 @@ export const ics_5_3of6 = () => {
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_4of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
+	return completeDeck(slideDeck, [aIbreakout, sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
 const programmingTogetherWithTurtleDraw = () => {

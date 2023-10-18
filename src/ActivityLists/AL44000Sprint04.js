@@ -65,6 +65,9 @@ export const list44000Sprint04 = (sprint) => {
 
 // Certified for FA22 (10/06/2022) 
 // Certified for SP22 (02/12/2022)
+// Certified for FA23 (10/17/2023)
+// Todo: Add production web link to lab 4 question 2.
+
 // Todo: Consider updating Lab 4 in that the spike doesn’t seem like a totally natural fit.  
 // Todo: Move some of the Waterfall Project Management video and assignment from Sprint 5 to sprint 4.
 // Todo: Add something to lab 4 to validate Dogs, JavaScript & An API 🐶 Fetch, Promises & Async Await.
