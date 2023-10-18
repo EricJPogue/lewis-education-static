@@ -40,10 +40,10 @@ export const MatchmakerPythonProperties = {
 export const MatchmakerWebProperties = {
 	'name': 'Matchmaker for the Web', 
 	'language': 'Web',
-	'prerequisites': 'HTML, CSS, JavaScript, VS Code, and Terminal',
+	'prerequisites': 'HTML, CSS, JavaScript, and VS Code',
 	'type': 'Web application using HTML, CSS, and JavaScript',
-	'requirement1_1': 'Is implemented in a single file name “index.html”',
-	'requirement1_2': 'Is hosted as a public website in Microsoft Azure'
+	'requirement1_1': 'Is implemented in a single file name “index.html” or with separate CSS and JavaScript files',
+	'requirement1_2': 'Is hosted as a public website using GitHub Pages or Microsoft Azure'
 }
 
 export const MatchmakerJavaProperties = {
@@ -81,15 +81,13 @@ answers are to your desired “true love” answers the better match the two of 
 disagree) because you really don’t like broccoli. If the application user entered 4 (agree), then the two of you would 
 not be a very good match based on that question. In the broccoli example above you would want to calculate your 
 <em> question compatibility score</em> for this question by taking the absolute value of the difference between their answer and 
-your desired answer. In addition, each question should have a weighting of 1 to 3 based on how important that question 
-is to you. For example, the “Broccoli is delicious.” statement may only have a weighting of 1 where a “I could play 
-Fortnight for hours.” question may be more important to you and deserve a weighting of 3.</p>
+your desired answer.</p>
 
-<p>After all five questions are answered, you will need to add up the <em>weighted question compatibility scores </em> 
-for each of the five questions and subtract the value from 100 to calculate a final <em>compatibility score</em> that
+<p>After all five questions are answered, you will need to add up the <em>question compatibility scores</em> for each 
+of the questions and subtract the value from 100 to calculate a final <em>compatibility score</em> that
 has a maximum value of 100.</p>
 
-<p>You will also need to set three threshold scores. One for true love, one for possible friends, and one for run away. 
+<p>You will also need to set three threshold scores. One for “true love,” one for possible “friends,” and one for “run away.” 
 You utilize your programming knowledge, creativity, and good taste to set and adjust the thresholds, phase the results, 
 and share the results to the user. Be sure to review and test your ideas for the application with a friend or classmate 
 to get some usability feedback.</p>
@@ -112,27 +110,24 @@ sure you can improve on his design.
 <p>Be sure that application also:</p>
 <ol>
 	<li>Asks five questions as described above</li>
-	<li>Calculates <em>question compatibility scores</em> and <em>weighted question compatibility scores</em> for each question</li>
-	<li>Calculates the total weighted compatibility scores across all questions</li>
-	<li>Calculates the total <em>compatibility score</em> across all questions</li>
+	<li>Calculates <em>question compatibility scores</em> for each question</li>
+	<li>Calculates the total compatibility scores across all questions</li>
 </ol>
 
 <em>Requirement 3</em>
 <p>Enhance the application so that it:</p>
 <ol>
-	<li>Displays a summary of each question’s compatibility score and weighted compatibility score</li>
-	<li>Displays a summary of the overall weighted compatibility score as a percentage</li>
-	<li>Displays an interesting closing remark based on predetermined compatibility ranges</li>
-	<li>Validates user input, displays meaningful error messages, and asks the question again if the user enters 
-		invalid text</li>
+	<li>Displays a summary of each question’s compatibility score</li>
+	<li>Displays a summary of the overall compatibility score as a percentage</li>
+	<li>Displays an interesting closing remark based on the identified threshold scores</li>
+	<li>Validates user input, displays meaningful error messages as, and asks the question again as needed</li>
 </ol>
 
 <em>Requirement 4</em>
 <p>Finally test and refactor the application so that it:</p>
 <ol>
-	<li>Utilizes constants at the top of the file or in a separate file for <em>all</em> desired answers, question weightings,
-		and compatibility ranges</li>
-	<li>Utilizes a single function called “validate” to validate user input and displays and error message for all questions</li>
+	<li>Utilizes constants at the top of the file or in a separate file where possible</li>
+	<li>Utilizes a single function called “validate” to validate user input and displays and error message for all questions as needed</li>
 </ol>
 
 </div> )
