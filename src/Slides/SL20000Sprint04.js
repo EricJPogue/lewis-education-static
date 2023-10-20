@@ -220,9 +220,10 @@ const ics_4_6of6_PAaA = {
 }
 export const ics_4_6of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_6of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_4_5of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_1of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ preworkNext, tLab ])
+	return completeDeck(slideDeck, [ poll, preworkNext, tLab ])
 }
 
 
