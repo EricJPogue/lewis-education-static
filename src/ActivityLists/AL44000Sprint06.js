@@ -8,6 +8,8 @@ import { finalProjectSprint6Link } from '../Activities/FinalProject'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
 
+import { estimated } from './AL00000Sprint00'
+
 export const al44000Sprint6Topics = 'Team Final Project utilizing Scrum, Software Metrics, and Serverless Computing'
 export const al44000Sprint06 = () => {
 	const sprint = 6
@@ -35,6 +37,14 @@ export const list44000Sprint06 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
+		<li>***... Within {oreillyPlaylistSE()} watch “Project Management” by Jeffrey Pinto Lessons 1 through 5 focussing on:{estimated('2 hours')}</li>
+
+<ul style={{listStyleType:'square'}}>
+		<li>Lesson 1: Why Projects?</li>
+		<li>Lesson 4: Creating the Project Network</li>
+		<li>Lesson 5: Duration Estimation and Critical Path</li>
+</ul>
+
 			{standardActivities(sprint, finalProjectSprint6Link(), oreillyPlaylistSE())}
 			<li>Review and update {finalProjectProposalLink()}</li>
 			<li>Review {softwareMetrics()} lecture</li>
@@ -55,6 +65,8 @@ export const list44000Sprint06 = (sprint) => {
 //     because of Easter Break. Consider adding some of these items back in FA23 as there will likely be more time. 
 // Add activity for completing metrics
 
+// BugBug: Remove one question from Quiz 6 so that it also totals 40 points. Recall that the question was added to make 
+//    everything balance.
 
 
 

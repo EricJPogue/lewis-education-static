@@ -11,6 +11,7 @@ import { quizMasterMERNLink } from './QuizMasterMERN'
 import { seatSelectorMERNLink } from './SeatSelectorMERN'
 
 import { capacityCommittedEffortDeliveredLink } from './CapacityCommittedEffortDelivered'
+import { getClass } from '../DataAndAPIs/Classes'
 
 const name1 = 'Class Product Sprint 1'
 export const CLASS_PRODUCT_SPRINT_1_ROUTE = 'class-product-sprint-1'
@@ -185,7 +186,7 @@ most likely to entice a person to use this product?” It is expected that each 
 <em>Requirement 3</em>
 <p>Execute sprint 3:</p>
 <ol>
-	<li>Verify that each team member is committed to delivering User Stories that are estimated at lest 12 hours effort</li>
+	<li>Verify that each team member is committed to delivering User Stories that are estimated at least 12 hours effort</li>
 	<li>Develop, unit test, and deploy committed User Stories</li>
 	<li>Verify that each story that is complete meets your team’s definition of {done()}</li>
 	<li>Complete any production version upgrade conversions verifying that production data from previous version is not lost</li>
@@ -245,7 +246,7 @@ approximately {effort} hours to the activity.</p>
 <em>Requirement 3</em>
 <p>Execute sprint {sprint}:</p>
 <ol>
-	<li>Verify that each team member is committed to delivering User Stories that are estimated at lest {effort} hours effort</li>
+	<li>Verify that each team member is committed to delivering User Stories that are estimated at least {effort} hours effort</li>
 	<li>Develop, unit test, and deploy committed User Stories</li>
 	<li>Verify that each story that is complete meets your team’s definition of {done()}</li>
 	<li>Complete any production version upgrade conversions verifying that production data from previous version is not lost</li>
@@ -268,20 +269,24 @@ export const CLASS_PRODUCT_SPRINT_5_ROUTE = 'class-product-sprint-5'
 export const classProductSprint5Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_5_ROUTE)}>{name5Plus(5)}</NavLink>)}
 export const classProductSprint5 = () => {
 	const sprint = 5
-	const effort = 14
+	let effort = 14
+
+	// Todo: Consider implementing a more elegant way of getting the expected effort for a given course.
+	if (getClass().number === '44000' )
+		effort = 6
+
 	return ( <div>
 		<h5>{name5Plus(5)}</h5>
-		<p>Prerequisites: {classProductSprint4Link()} </p>
 		{classProduct(sprint, effort)}
 	</div> )
 }
 
 const classProduct = (sprint, effort ) => {
 	return ( <div>
-		<p><em>Summary:</em> Stay focused on delivering and enhancing your team’s MVP.</p>
+		<p><em>Summary:</em> Stay focused on delivering and enhancing the most valuable stories.</p>
 
-		<p>In sprint {sprint} you and your team will continue to focus on implementing the most valuable features from your 
-		MVP. <em>Value should always be viewed from a customer perspective</em> by constantly asking the question, ”What 
+		<p>In sprint {sprint} you and your team will continue to focus on implementing the most valuable stories. <em>Value should 
+		always be viewed from a customer perspective</em> by constantly asking the question, ”What 
 		feature would be most likely to entice a person to use this product?” It is expected that each team member will contribute 
 		approximately {effort} hours to the activity.</p>
 
@@ -297,20 +302,20 @@ const classProduct = (sprint, effort ) => {
 		</ol>
 
 		<em>Requirement 2</em>
-		<p>Sprint Planning{sprint}:</p>
+		<p>Sprint Planning {sprint}:</p>
 		<ol>
 			<li>Review {scrum()} while focusing on Events, Artifacts, and Rolls</li>
 			<li>Review, understand, and utilize {userStory()}, {userStoryTemplate()}, and {iNVEST()}</li>
 			<li>Review {agileAllianceAgile101()} from {agileAlliance()} while creating your {productBacklog()}</li>
 			<li>Complete {sprintPlanning()} to finalize to the team’s {sprintBacklog()}</li>
-			<li>Define {done()} for your team</li>
-			<li>Assign each {userStory()} to a single team member and commit as a team to delivering the {sprintBacklog()}</li>
+			<li>Define {done()} for your team and assign each {userStory()} to a single team member </li>
+			<li>Complete your immutable sprint {sprint} backlog and commit as a team to delivering the {sprintBacklog()}</li>
 		</ol>
 
 		<em>Requirement 3</em>
 		<p>Execute sprint {sprint}:</p>
 		<ol>
-			<li>Verify that each team member is committed to delivering User Stories that are estimated at lest {effort} hours effort</li>
+			<li>Verify that each team member is committed to delivering User Stories that are estimated at least {effort} hours effort</li>
 			<li>Develop, unit test, and deploy committed User Stories</li>
 			<li>Verify that each story that is complete meets your team’s definition of {done()}</li>
 			<li>Complete any production version upgrade conversions verifying that production data from previous version is not lost</li>

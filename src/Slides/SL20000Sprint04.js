@@ -183,7 +183,7 @@ export const ics_4_4of6 = () => {
 }
 
 // Session 5 of 6: Wednesday
-// Todo: Consider adding quiz expectation to slide deck. 
+// Todo: Consider adding quiz expectations to slide deck. 
 const ics_4_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 9 and working on activity 13 prior to next class', '',

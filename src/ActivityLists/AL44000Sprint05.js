@@ -3,8 +3,9 @@ import React from 'react'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated, finalProjectsAndMoreResponsibility } from './AL00000Sprint00'
 
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
-import { finalProjectSprint5Link } from '../Activities/FinalProject'
+
 import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
+import { classProductSprint5Link } from '../Activities/ClassProduct'
 
 import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
 
@@ -41,30 +42,26 @@ export const list44000Sprint05 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-<li>***... Within {oreillyPlaylistSE()} briefly scan “Web Development with Node and Express” chapters 5 through 14</li>
-<li>***... Within {oreillyPlaylistSE()} watch “Project Management” by Jeffrey Pinto Lessons 1 through 5 focussing on:{estimated('2 hours')}</li>
-<li>***... Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapter 15</li>
-			<ul style={{listStyleType:'square'}}>
-					<li>Lesson 1: Why Projects?</li>
-					<li>Lesson 4: Creating the Project Network</li>
-					<li>Lesson 5: Duration Estimation and Critical Path</li>
-			</ul>
-			{standardActivities(sprint, finalProjectProposalLink(), oreillyPlaylistSE())}
-			<li>Start working on {finalProjectSprint5Link()}</li>
+			{standardActivities(sprint, classProductSprint5Link(), oreillyPlaylistSE())}
 			<li>Read Chapter 9 of Fox on Software Maintenance</li>
 			<li>Review {softwareMaintenanceAndSupport()} lecture</li>
+			<li>Complete on {finalProjectProposalLink()} and </li>
 			<li>Review {capacityCommittedEffortDeliveredLink()}</li>
 
 			{initialPost(sprint)}
 			<li>Review {agileAlliance()} by analyzing “Agile 101” and reviewing the “Agile Glossary”</li>
+			<li>Within {oreillyPlaylistSE()} briefly scan “Web Development with Node and Express” chapters 5 through 14</li>
+			<li>Within {oreillyPlaylistSE()} read “Web Development with Node and Express” chapter 15</li>
 			<li>Update and finalize your team’s {finalProjectProposalLink()}{estimated('2 hours per team member')}</li>
-			<li>Complete {capacityCommittedEffortDeliveredLink()}</li>
-			{standardActivitiesClosing(sprint, finalProjectSprint5Link(), '6 hours per team member')}
+			<li>Complete {classProductSprint5Link()}{estimated('6 hours per team member')} </li>
+			{standardActivitiesClosing(sprint, capacityCommittedEffortDeliveredLink(), '')}
 		</ol>
 	</div> )
 }
 
 // Certified for FA22 (10/21/2022)
+// Certified for SP23 (02/28/2023)
+// Certified for FA23 (10/21/2023)
 
 // Todo: Add multiple-choice question on refactoring vs re-engineering.
 // Todo: Add multiple-choice question on “Describe the similarities and differences normally observed when maintaining a
@@ -72,7 +69,6 @@ export const list44000Sprint05 = (sprint) => {
 
 // Todo: Integrate Software Maintenance, Support, and Metrics into all appropriate classes.
 // Todo: Consider doing the same thing for testing.
-// Todo: Add lots of links from the Agile Alliance to various activity lists.
 // Todo: Where should mediaatoz/software-engineering/* videos go? Are they already included?
 
 // Review GitHub Organization tutorials:
@@ -80,11 +76,6 @@ export const list44000Sprint05 = (sprint) => {
 // https://www.youtube.com/watch?v=SUu6cmcC-3A
 // https://developers.sap.com/tutorials/webide-github-creating-org.html 
 
-
-// Certified for SP23 (02/28/2023)
-// BugBug: Add one question to Quiz 5 so that the quiz totals 40 points.
-// BugBug: Remove one question from Quiz 6 so that it also totals 40 points. Recall that the question was added to make 
-//    everything balance.
 // Toto: Consider updating and enhancing Quiz 5 as it is not very good. 
 // Todo: Move capacityCommittedEffortDeliveredLink() to after finalProjectSprint5Link() like Software Systems Capstone.
 // Todo: Add Support and Maintenance lecture video topics to Quiz 5. Are they already there?
