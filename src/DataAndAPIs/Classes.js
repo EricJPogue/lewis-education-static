@@ -135,8 +135,8 @@ export const _CPSC_20000 = {
 		'The Big Picture, File Systems, Tools of the Trade, and HyperText Markup Language (HTML)',
 		'Numbering Systems, Data Representation, Cascading Style Sheets (CSS)',
 		'Gates and Circuits, Computing Components, and JavaScript',
-		'Artificial Intelligence, Functions, and Objects and Drawing',
-		'Networks, Class Project Proposal, and Objects and Drawing with Python',
+		'The World Wide Web, JavaScript, Sequences, Selections, and Loops (Repetition)',
+		'Networks, Python, and Class Project Proposal',
 		'Full Stack Development with Web Browser, Web Server, and NoSQL Database',
 		'Class Project Security, More HTML, CSS, and more JavaScript or more Python',
 		'Final Exam'

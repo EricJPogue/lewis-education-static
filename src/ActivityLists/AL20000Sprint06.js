@@ -60,5 +60,28 @@ export const list20000Sprint06 = (sprint) => {
 
 // Certified for SP22 (03/24/2022)
 // Certified for FA22 (10/21/2022)
+// TurtleDraw! Optional MatchMaker for Python
+// 			<li>Complete {programmingTogether()} with TurtleDrawLite Parts 1 &amp; 2</li>
+// <li>Complete {programmingTogether()} with TurtleDrawLite Part 3</li>
+// <li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 7 through 9 and review the associated {introducingPythonCodeExamples()}</li>
 // Todo: Move Matchmaker Lite - Part 2 up on the activity list. 
 // Todo: Consider adding funny video https://www.youtube.com/watch?v=Uo3cL4nrGOk
+
+// Todo: Consider adding MatchmakerLite tutorials to ActivityList (and/or the Matchmaker assignment) instead of just in the Programming Together section. 
+// Todo: Consider where the following activities should go. 
+//    const pythonW3CPart1 = () => { return internalLink('Python Programming - Part 1', '/activity/python-w3c') }
+//    const pythonW3CPart2 = () => { return internalLink('Python Programming - Part 2', '/activity/python-w3c') }
+
+//    <li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
+//    <li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 3 and 4 while reviewing associated {IntroducingPythonSampleCode()}</li>
+//    <li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 5 and 6 while reviewing associated {IntroducingPythonSampleCode()}</li>
+//    
+//   
+// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
+// Todo: Consider adding licensing topic to all classes. 
+// Todo: Consider adding Git/GitHub activity / tutorial. 
+// Todo: Where should the following go? Sprint 7?
+//	   const daleArtificialIntelligenceLecture = () => { return internalLink('lecture', '/activity-dale/13' )}
+//	   <li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>
+//     import { matchmakerPythonLink } from '../Activities/Matchmaker'
+//// Todo: Cloud Computing from sprint 3? Move or remove (do we need this)?

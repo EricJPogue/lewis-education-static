@@ -52,6 +52,7 @@ import { SWISS_ARMY_KNIFE_SERVER_ROUTE, swissArmyKnifeServer } from './SwissArmy
 import { thunderbird } from './Thunderbird'
 import { TURTLEDRAW_ROUTE, turtledraw } from './PythonTurtleDraw'
 import { PIT_HUB_ROUTE, pitHub } from './PitHub'
+import { PYTHON_ADD_COMMIT_PUSH_ROUTE, pythonAddCommitPush } from './PythonAddCommitPush'
 import { QUIZ_MASTER_MERN_ROUTE, quizMasterMERN } from './QuizMasterMERN'
 import { WEB_DICE_ROLLER_ROUTE, webDiceRoller } from './WebDiceRoller'
 import { WEB_RESUME_ROUTE, webResume } from './WebResume'
@@ -120,6 +121,7 @@ export const routeActivity = (activityRoute) => {
 		case SWISS_ARMY_KNIFE_SERVER_ROUTE: return swissArmyKnifeServer()
 		case TURTLEDRAW_ROUTE: return turtledraw()
 		case PIT_HUB_ROUTE: return pitHub()
+		case PYTHON_ADD_COMMIT_PUSH_ROUTE: return pythonAddCommitPush()
 		case QUIZ_MASTER_MERN_ROUTE: return quizMasterMERN()
 		case WEB_DICE_ROLLER_ROUTE: return webDiceRoller()
 		case WEB_RESUME_ROUTE: return webResume()
