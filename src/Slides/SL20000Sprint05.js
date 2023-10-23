@@ -22,7 +22,6 @@ export const ics_5_1of6_lists = xyz_n_1of6_lists(sprint)
 export const ics_5_1of6 = () => { return xyz_n_1of6(sprint, ics_5_1of6_lists.prework, activityListPrevious, ics_5_1of6_lists.agenda, ics_5_2of6_PAaA.prework, activityList) }
 
 // Sprint 5 session 2 of 6: Wednesday
-
 const ics_5_2of6_PAaA = {
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
