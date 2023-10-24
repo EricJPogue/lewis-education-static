@@ -30,7 +30,7 @@ import { ssc_3_1of1 } from './SL49200Sprint03'
 
 import { ssc_4_1of1 } from './SL49200Sprint04'
 
-import { ssc_5_1of4 } from './SL49200Sprint05'
+import { ssc_5_1of1 } from './SL49200Sprint05'
 import { ssc_6_1of4 } from './SL49200Sprint06'
 import { ssc_7_1of4 } from './SL49200Sprint07'
 import { ssc_8_1of4 } from './SL49200Sprint08'
@@ -185,7 +185,7 @@ const sprintRouter = (route) => {
 		case '49200-3-1': return ssc_3_1of1()
 		case '49200-4-1': return ssc_4_1of1()
 
-		case '49200-5-1': return ssc_5_1of4()
+		case '49200-5-1': return ssc_5_1of1()
 		case '49200-6-1': return ssc_6_1of4()
 		case '49200-7-1': return ssc_7_1of4()
 		case '49200-8-1': return ssc_8_1of4()

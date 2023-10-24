@@ -116,7 +116,6 @@ export const ssc_n_1of1_lists = (sprint) => {
 }
 export const ssc_n_1of1 = (sprint, preworkList, activityListPrevious, agendaList, preworkListNext, activityList, substituteSprintPlanning = null) => {
 	const prework = () => { return tPreworkWithLogo('Prework For Today', preworkList, sprint-1, activityListPrevious) }
-	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['The Lab assignment has been split into two parts']) }
 	const agenda = () => { return agendaSlide(agendaList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', preworkListNext, sprint, activityList) }
 
@@ -126,7 +125,7 @@ export const ssc_n_1of1 = (sprint, preworkList, activityListPrevious, agendaList
 		} else {
 			return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
 				'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
-				'The Lab assignment has been split into two parts',
+				'The Lab assignment continues to be separated into two parts',
 				'We need to start making progress on class Demos' ])
 		}
 	}
@@ -136,7 +135,7 @@ export const ssc_n_1of1 = (sprint, preworkList, activityListPrevious, agendaList
 		)
 	}
 
-	return makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, preworkNext ])
+	return makeSlideDeck([ prework, agenda, sprintPlanning, activitiesReview, preworkNext ])
 }
 
 export const xyz_n_2of6 = (sprint, sessionLists, preworkListNext, activityList) => {
