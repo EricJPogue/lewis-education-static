@@ -12,6 +12,8 @@ import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 
 import { ics_6_1of6_PAaA } from './SL20000Sprint06'
 
+import { basicSlide } from './SLSprint00'
+
 // Sprint 5 Introduction to Computer Science (ICS) global values.
 const sprint = 5
 const activityListPrevious = () => { return list20000Sprint04(sprint-1) }
@@ -21,6 +23,15 @@ const activityList = () => { return list20000Sprint05(sprint) }
 export const ics_5_1of6_lists = xyz_n_1of6_lists(sprint)
 export const ics_5_1of6 = () => { return xyz_n_1of6(sprint, ics_5_1of6_lists.prework, activityListPrevious, ics_5_1of6_lists.agenda, ics_5_2of6_PAaA.prework, activityList) }
 
+const theSocialDilemma = () => {
+	return bulletListSlide('Technology Business Models', 
+		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models', [
+		'YouTube',
+		'Eric’s Trip to Google',
+		'The Social Dilemma',
+		'Technology Business Models' ])
+}
+
 // Sprint 5 session 2 of 6: Wednesday
 const ics_5_2of6_PAaA = {
 	'prework':[
@@ -28,9 +39,9 @@ const ics_5_2of6_PAaA = {
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
 	'announcements':[ 
-		'What is the last day to withdraw from Spring, 2023 16-week classes with a grade of “W”' ],
+		'Registration is coming...' ],
 	'agenda':[
-		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
+		'Previous Class Projects',
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
 		'Prework for Next Class',
@@ -38,13 +49,9 @@ const ics_5_2of6_PAaA = {
 }
 export const ics_5_2of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_2of6_PAaA, sprint, activityList)
-	const theSocialDilemma = () => {
-		return bulletListSlide('Technology Business Models', 
-			'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models', [
-			'YouTube',
-			'Eric’s Trip to Google',
-			'The Social Dilemma',
-			'Technology Business Models' ])
+	const previousClassProjects = () => {
+		return basicSlide('Previous Class Projects', [
+			'Review previous class project from example code.'])
 	}
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_3of6_lists.prework, sprint, activityList) }
@@ -58,13 +65,13 @@ export const ics_5_2of6 = () => {
 		)
 	}
 
-	return completeDeck(slideDeck, [ theSocialDilemma, discussionBreakout, preworkNext, reviewDemoSchedule, tLab ])
+	return completeDeck(slideDeck, [ previousClassProjects, discussionBreakout, preworkNext, reviewDemoSchedule, tLab ])
 }
 
 // Sprint 5 session 3 of 6: Friday
 const ics_5_3of6_lists = {
 	'prework':[
-		'Complete through activity 6 and working on activity 7 prior to next class', '',
+		'Complete through activity 7 and working on activity 8 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
 	'announcements':[ 
 		'Any announcements?' ],
@@ -129,6 +136,7 @@ const ics_5_4of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
 	'agenda':[
+		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
 		'Sprint Progress Polling',
 		'Networks Breakout',
 		'Prework for Next Class',
@@ -150,7 +158,7 @@ export const ics_5_4of6 = () => {
 	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_5of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ poll, breakoutNetworks, preworkNext, programmingTogetherWithTurtleDraw ])
+	return completeDeck(slideDeck, [ poll, breakoutNetworks, theSocialDilemma, preworkNext, programmingTogetherWithTurtleDraw ])
 }
 
 // Sprint 5 session 5 of 6: Wednesday
