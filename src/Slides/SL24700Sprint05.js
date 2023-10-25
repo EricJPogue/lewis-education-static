@@ -25,14 +25,12 @@ export const web_5_1of6 = () => { return xyz_n_1of6(sprint, web_5_1of6_lists.pre
 // Sprint 5 session 2 of 6: Wednesday
 const web_5_2of6_lists = {
 	'announcements':[ 
-		'Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
-		'Any other announcements?' ],
+		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
-		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
 		'Prework for Next Class',
@@ -100,6 +98,7 @@ export const web_5_4of6_lists = {
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared for Networks breakout' ],
 	'agenda':[
+		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
 		'“Database Access Through the Web” Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
