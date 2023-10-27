@@ -13,6 +13,7 @@ import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 import { ics_6_1of6_PAaA } from './SL20000Sprint06'
 
 import { basicSlide } from './SLSprint00'
+import { getClass } from '../DataAndAPIs/Classes'
 
 // Sprint 5 Introduction to Computer Science (ICS) global values.
 const sprint = 5
@@ -83,39 +84,45 @@ const ics_5_3of6_lists = {
 }
 export const ics_5_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_3of6_lists, sprint, activityList)
-	// BugBug: Figure out where this goes. 
-	const aIbreakout = () => { 
-		return breakoutStandard( 
-			'Breakout: Artificial Intelligence', 
-			'In this breakout will discuss Artificial Intelligence (reading and lecture):', [
-			'Thinking Machines',
-			'Knowledge Representation and Data Quality',
-			'Expert Systems',
-			'Neural Networks',
-			'Natural Language Processing',
-			'Robotics' ])
-	}
+
 	const metricsSubmissionPercentage = () => {
-		return submissionPercentage([
-			{ name: 'Discussion', due:13, submitted:13 },
-			{ name: 'Quiz', due:13, submitted:13 },
-			{ name: 'Lab', due:13, submitted:13},
-			{ name: 'Reflection', due: 13, submitted: 13 }])
+		if (getClass().section === '002') {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:27 },
+				{ name: 'Quiz', due:27, submitted:27 },
+				{ name: 'Lab', due:27, submitted:27 },
+				{ name: 'Reflection', due: 27, submitted: 27 }])
+		}
+		else {
+			return submissionPercentage([
+				{ name: 'Discussion', due:24, submitted:24 },
+				{ name: 'Quiz', due:24, submitted:23 },
+				{ name: 'Lab', due:24, submitted:23 },
+				{ name: 'Reflection', due: 24, submitted: 22 }])
+		}
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {
+		if (getClass().section === '002') {
 			return orderedListSlide('Class Retrospective',
-			'Feedback from Assignments & Reflections', [
-			'Exceptional submission percentage... very well done!',
-			'100% Submission Percentage === Food... what does “===” mean in Python?',
-			'All assignments are graded and posted',
-			'Multiple Reflection comments about successfully getting started earlier', 
-			'Very nice Python work!' ])
+				'Feedback from Assignments & Reflections', [
+				'Incredible, 100% submission percentage, two times in a row... with 27 in the class!',
+				'Matchmaker feedback... Difficult but Fun',
+				'Positive comments about tutorials and programming together time',
+				'All assignments are graded and posted' ])
+		} else {
+			return orderedListSlide('Class Retrospective',
+				'Feedback from Assignments & Reflections', [
+				'Very good submission percentage',
+				'Matchmaker feedback... Difficult but Fun',
+				'Positive comments about tutorials and programming together time',
+				'All assignments are graded and posted' ])
+		}
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_4of6_lists.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [aIbreakout, sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
+	return completeDeck(slideDeck, [ sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
 const programmingTogetherWithTurtleDraw = () => {
@@ -131,7 +138,7 @@ const programmingTogetherWithTurtleDraw = () => {
 // Session 4 of 6: Monday
 const ics_5_4of6_lists = {
 	'prework':[
-		'Complete through activity 10 prior to next class', '',
+		'Complete through activity 11 prior to next class', '',
 		'Be prepared for Networks breakout' ],
 	'announcements':[ 
 		'Any announcements?' ],

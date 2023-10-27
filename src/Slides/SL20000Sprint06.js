@@ -65,6 +65,18 @@ const ics_6_3of6_PAaA = {
 }
 
 export const ics_6_3of6 = () => {
+	/*
+	const aIbreakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Artificial Intelligence', 
+			'In this breakout will discuss Artificial Intelligence (reading and lecture):', [
+			'Thinking Machines',
+			'Knowledge Representation and Data Quality',
+			'Expert Systems',
+			'Neural Networks',
+			'Natural Language Processing',
+			'Robotics' ])
+	}*/
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
 			{ name: 'Discussion', due:13, submitted:13 },
