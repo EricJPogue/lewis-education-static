@@ -59,7 +59,7 @@ const web_5_3of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],
 	'prework':[
-		'Complete through activity 6 and working on activity 7 prior to next class', '',
+		'Complete through activity 5 and working on activity 6 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
@@ -71,18 +71,19 @@ export const web_5_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(web_5_3of6_lists, sprint, activityList)
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:14, submitted:14 },
-			{ name: 'Quiz', due:14, submitted:14 },
-			{ name: 'Lab', due:14, submitted:13 },
-			{ name: 'Reflection', due:14, submitted:13 }
+			{ name: 'Discussion', due:10, submitted:10 },
+			{ name: 'Quiz', due:10, submitted:10 },
+			{ name: 'Lab', due:10, submitted:10 },
+			{ name: 'Reflection', due:10, submitted:10 }
 		])
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Solid submission percentage',
-			'Discuss 4 and Quiz 4 graded and posted... 50% of Lab 4 and Reflection 4 graded and posted' ])
+			'Fantastic submission percentage! Very well done!',
+			'Grading is a work in process',
+			'It looks like there were some challenges with Map Mania' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', web_5_4of6_lists.prework, sprint, activityList) }
@@ -95,7 +96,7 @@ export const web_5_4of6_lists = {
 	'announcements':[ 
 		'Any announcements?' ],		
 	'prework':[
-		'Complete through activity 10 prior to next class', '',
+		'Complete through activity 9 prior to next class', '',
 		'Be prepared for Networks breakout' ],
 	'agenda':[
 		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',

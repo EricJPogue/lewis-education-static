@@ -91,24 +91,19 @@ const se_5_3of6_PAaA = {
 export const se_5_3of6 = () => {
 	const metrics = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:26, submitted:26 },
-			{ name: 'Quiz', due:26, submitted:26 },
-			{ name: 'Lab', due:26, submitted:26},
-			{ name: 'Reflection', due: 26, submitted: 26 }
+			{ name: 'Discussion', due:13, submitted:13 },
+			{ name: 'Quiz', due:13, submitted:13 },
+			{ name: 'Lab', due:13, submitted:12},
+			{ name: 'Reflection', due:13, submitted:12 }
 		])
 	}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 		'Feedback from Assignments & Reflections', [
-		'Yet again. Perfect submission percentage! Very well done.',
-		'All assignments graded and posted',
-		'Great comments about teammates',
-		'Not so great comments about working in teams... working in teams is HARD',
-		'Videos were long and I will consider breaking the topics between sprints in the future',
-		'If you are struggling with server-side APIs, need to get on that quickly',
-		'Bootstrap is your contribution for future teams :-) Thank you',
-		'Very nice work!',
-		'THE 1975 - Robbers (Piano Cover)... Thank you' ])
+		'Solid submission percentage! Well done.',
+		'Azure functions are NOT a panacea',
+		'Node.js is not the mess that it was at the beginning of the sprint',
+		'My grading is a of a work in process this semester' ])
 	}
 
 	return  xyz_n_3of6(sprint, se_5_3of6_PAaA, se_5_4of6_PAaA.prework, activityList, metrics, retrospective)
@@ -116,7 +111,7 @@ export const se_5_3of6 = () => {
 
 const se_5_4of6_PAaA = {
 	'prework':[
-		'Complete through activity 9 prior to next class', '',
+		'Complete through activity 10 prior to next class', '',
 		'Be prepared for “Software Maintenance and Support” breakout' ],
 	'announcements':[ 
 		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`,
