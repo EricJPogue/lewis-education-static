@@ -94,9 +94,9 @@ export const web_5_3of6 = () => {
 // Sprint 5 session 4 of 6: Monday
 export const web_5_4of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],		
+		'Sprint 4 assignments graded and posted' ],		
 	'prework':[
-		'Complete through activity 9 prior to next class', '',
+		'Complete through activity 10 prior to next class', '',
 		'Be prepared for Networks breakout' ],
 	'agenda':[
 		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',

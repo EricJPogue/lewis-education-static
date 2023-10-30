@@ -141,11 +141,11 @@ const ics_5_4of6_lists = {
 		'Complete through activity 11 prior to next class', '',
 		'Be prepared for Networks breakout' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'Assignments graded and posted' ],
 	'agenda':[
-		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
 		'Sprint Progress Polling',
 		'Networks Breakout',
+		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
