@@ -96,8 +96,8 @@ export const web_5_4of6_lists = {
 	'announcements':[ 
 		'Sprint 4 assignments graded and posted' ],		
 	'prework':[
-		'Complete through activity 10 prior to next class', '',
-		'Be prepared for Networks breakout' ],
+		'Complete through activity 8 prior to next class', '',
+		'Be prepared for “Database Access Through the Web” breakout' ],
 	'agenda':[
 		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
 		'“Database Access Through the Web” Breakout',

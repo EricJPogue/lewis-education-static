@@ -37,7 +37,7 @@ export const list24700Sprint05 = (sprint) => {
 			<li>Complete {mapManiaVersion2Link()} requirements 5 & 6{estimated('6 hours')}</li>
 
 			{initialPost(sprint)}
-			<li>Read Sebesta chapter 13 and review our Database Access through the Web {sebestaChapter13Lecture()}</li>
+			<li>Review Database Access through the Web {sebestaChapter13Lecture()}</li>
 			<li>Complete {finalProjectProposalLink()}{estimated('2 hours')}</li>
 			{standardActivitiesClosing(sprint, mapManiaVersion2Link(), '6 hours')}
 		</ol>
