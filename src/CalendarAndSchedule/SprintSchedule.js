@@ -78,8 +78,8 @@ export class SprintClassActivities extends Component {
 		'FirstWednesday':  'Discussion Board & Lab',
 		'FirstFriday':     'Demos & Retrospectives',
 		'SecondMonday':    'Topic Discussion & Quiz',
-		'SecondWednesday': 'Lab',
-		'SecondFriday':    'Easter Holiday Recess: No Classes'
+		'SecondWednesday': 'Quiz',
+		'SecondFriday':    'Lab'
 	}
 
 	MWFScheduleSprint7 = {

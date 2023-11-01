@@ -3,12 +3,8 @@ import React from 'react'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
 
 import { oreillyPlaylistICS, programmingTogether, internalLink } from '../DataAndAPIs/Links'
-import { matchmakerWebLink } from '../Activities/Matchmaker'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
-import { azureWebsiteLink } from '../Activities/AzureWebsite'
-import { matchmakerPythonLink } from '../Activities/Matchmaker'
-import { htmlLink } from '../Activities/HTML'
-import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
+
 import { getClass } from '../DataAndAPIs/Classes'
 import { turtledrawLink } from '../Activities/PythonTurtleDraw'
 import { PythonTurtleLibrary } from '../DataAndAPIs/Links'
@@ -46,45 +42,25 @@ export const list20000Sprint06 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, turtledrawLink(), oreillyPlaylistICS())}
-			<li>Complete {programmingTogether()} with TurtleDrawLite Parts 1 &amp; 2</li>
+			<li>Complete {programmingTogether()} with TurtleDrawLite part 1</li>
 			<li>Review {pythonW3CPart1()} and {pythonW3CPart2()}</li>
+			<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
+			<li>Complete {programmingTogether()} with TurtleDrawLite part 2</li>
 			<li>Read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>
 			<li>Update {finalProjectProposalLink()}</li>
 			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The World Wide Web and review our associated {daleWWWLecture()}</li>
-			<li>Review the following activities that were completed previously:</li>
-			<ul style={{listStyleType:'square'}}>
-				<li>{azureWebsiteLink()}</li>
-				<li>{matchmakerPythonLink()}</li>
-				<li>{htmlLink()}</li>
-				<li>{gettingToKnowEachOtherLink()}</li>
-			</ul>
-
 			{initialPost(sprint)}
 			<li>Complete {programmingTogether()} with TurtleDrawLite Part 3</li>
-			<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapter 2 while reviewing “quotes.py” from the {IntroducingPythonSampleCode()}</li>
 			<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 3 and 4 while reviewing associated {IntroducingPythonSampleCode()}</li>
 			<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 5 and 6 while reviewing associated {IntroducingPythonSampleCode()}</li>
-
-
-			{standardActivitiesClosing(sprint, matchmakerWebLink(), '8 hours')}
+			{standardActivitiesClosing(sprint, turtledrawLink(), '8 hours')}
 		</ol>
 	</div> )
 }
 
 // Certified for SP22 (03/24/2022)
 // Certified for FA22 (10/21/2022)
-// TurtleDraw! Optional MatchMaker for Python
+// Certified for SP23 (11/01/2023)
+// Certified for FA23 (11/01/2023)
 
-// 
-// <li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 7 through 9 and review the associated {introducingPythonCodeExamples()}</li>
-// Todo: Move Matchmaker Lite - Part 2 up on the activity list. 
-
-
-// Todo: Consider adding MatchmakerLite tutorials to ActivityList (and/or the Matchmaker assignment) instead of just in the Programming Together section. 
-
-
-
-//    
-//   
-//    
-//   
+// Consider adding Optional activity of MatchMaker for Python

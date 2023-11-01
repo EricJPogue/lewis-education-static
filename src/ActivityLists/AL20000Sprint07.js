@@ -69,3 +69,19 @@ export const list20000Sprint07 = () => {
 //	   <li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>
 //     import { matchmakerPythonLink } from '../Activities/Matchmaker'
 //// Todo: Cloud Computing from sprint 3? Move or remove (do we need this)?
+
+/* Consider:
+			import { azureWebsiteLink } from '../Activities/AzureWebsite'
+			import { matchmakerPythonLink } from '../Activities/Matchmaker'
+			import { htmlLink } from '../Activities/HTML'
+			import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther' 
+
+
+			<li>Review the following activities that were completed previously:</li>
+			<ul style={{listStyleType:'square'}}>
+				<li>{azureWebsiteLink()}</li>
+				<li>{matchmakerPythonLink()}</li>
+				<li>{htmlLink()}</li>
+				<li>{gettingToKnowEachOtherLink()}</li>
+			</ul>
+*/
