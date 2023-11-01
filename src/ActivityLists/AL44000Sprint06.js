@@ -68,5 +68,4 @@ export const list44000Sprint06 = (sprint) => {
 // BugBug: Remove one question from Quiz 6 so that it also totals 40 points. Recall that the question was added to make 
 //    everything balance.
 
-
-
+// Todo: Consider adding funny video https://www.youtube.com/watch?v=Uo3cL4nrGOk

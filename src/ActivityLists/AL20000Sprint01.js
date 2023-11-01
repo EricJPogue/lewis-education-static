@@ -58,6 +58,8 @@ export const list20000Sprint01 = (sprint) => {
 // Certified for SP23 (01/02/23)
 // Certified for FA23 (08/23/23)
 
+// Todo: Consider covering “The Web“ instead of the “The Big Picture”... or maybe it is still too much to cover in 
+//     sprint 1 and we should also move “File Systems” to sprint 2. 
 // Todo: Move some material to sprint 2. There is too much to cover in the first two weeks, particularly given that 
 //     the second Monday is almost always a holiday.
 // BugBug: Fix Hello World for the Web Part 1 so that the overall description does NOT include part 2 requirements. 

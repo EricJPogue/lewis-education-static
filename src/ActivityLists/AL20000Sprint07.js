@@ -60,3 +60,12 @@ export const list20000Sprint07 = () => {
 
 // BugBug: Fix Quiz 7 question "This is a security attack that attempts to disrupt services of a host connected to the Internet by overwriting memory."
 // BugBug: Fix Lab 7 final question as it should not be a repeat of "Coding Standards"
+
+// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
+// Todo: Consider adding licensing topic to all classes. 
+// Todo: Consider adding Git/GitHub activity / tutorial. 
+// Todo: Where should the following go? Sprint 7?
+//	   const daleArtificialIntelligenceLecture = () => { return internalLink('lecture', '/activity-dale/13' )}
+//	   <li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>
+//     import { matchmakerPythonLink } from '../Activities/Matchmaker'
+//// Todo: Cloud Computing from sprint 3? Move or remove (do we need this)?

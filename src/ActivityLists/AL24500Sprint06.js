@@ -57,3 +57,5 @@ export const list24500Sprint06 = (sprint) => {
 }
 
 // Certified for SP22 (03/26/2022)
+
+// Todo: Consider adding funny video https://www.youtube.com/watch?v=Uo3cL4nrGOk

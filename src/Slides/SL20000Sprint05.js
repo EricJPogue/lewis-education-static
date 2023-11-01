@@ -171,15 +171,14 @@ export const ics_5_4of6 = () => {
 // Sprint 5 session 5 of 6: Wednesday
 const ics_5_5of6_lists = {
 	'announcements':[ 
-		'Last warning that Friday, November 4 is the last day to withdraw from Fall 16-week classes with a grade of “W”',
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 11', '',
-		'Be prepared for Programming Together with TurtleDraw',
+		'Be prepared for Programming Together',
 		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Lab & Programming Together with TurtleDraw',
+		'Lab & Programming Together',
 		`Quiz ${sprint}` ]
 }
 export const ics_5_5of6 = () => { 
@@ -188,7 +187,7 @@ export const ics_5_5of6 = () => {
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_6of6_lists.prework, sprint, activityList) }
 	const quiz = () => { return tQuiz(sprint) }
 
-	return 	completeDeck(slideDeck, [ poll, programmingTogetherWithTurtleDraw, preworkNext, quiz ])
+	return 	completeDeck(slideDeck, [ poll, tLab, /*programmingTogetherWithTurtleDraw,*/ preworkNext, quiz ])
 }
 
 // Sprint 5 session 6 of 6: Friday
@@ -197,10 +196,10 @@ const ics_5_6of6_lists = {
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 12', '',
-		'Be prepared for Programming Together with TurtleDraw OR Final Project Proposals' ],
+		'Be prepared for Programming Together with “acp” and/or ”Final Project Proposals”' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Lab & Programming Together with TurtleDraw' ]
+		'Lab & Programming Together' ]
 }
 export const ics_5_6of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_6of6_lists, sprint, activityList)
