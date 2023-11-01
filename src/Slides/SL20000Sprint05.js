@@ -24,7 +24,7 @@ const activityList = () => { return list20000Sprint05(sprint) }
 export const ics_5_1of6_lists = xyz_n_1of6_lists(sprint)
 export const ics_5_1of6 = () => { return xyz_n_1of6(sprint, ics_5_1of6_lists.prework, activityListPrevious, ics_5_1of6_lists.agenda, ics_5_2of6_PAaA.prework, activityList) }
 
-const theSocialDilemma = () => {
+export const theSocialDilemma = () => {
 	return bulletListSlide('Technology Business Models', 
 		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models', [
 		'YouTube',
