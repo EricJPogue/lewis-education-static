@@ -148,10 +148,9 @@ export const web_5_5of6 = () => {
 
 const web_5_6of6_lists = {
 	'announcements':[ 
-		'Today is the last day to withdraw from Fall 16-week classes with a grade of “W”',
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
-		'Complete through activity 12', '',
+		'Complete through activity 10', '',
 		'Be prepared for Lab' ],
 	'agenda':[
 		'Sprint Progress Polling',
