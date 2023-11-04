@@ -167,9 +167,6 @@ export const finalProjectDistributedV2 = () => {
 	</div> )
 }
 
-
-
-
 const FINAL_PROJECT_SPRINT_5_NAME = 'Final Project Sprint 5'
 export const FINAL_PROJECT_SPRINT_5_ROUTE = 'final-project-sprint-5'
 export const finalProjectSprint5Link = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_SPRINT_5_ROUTE)}>{FINAL_PROJECT_SPRINT_5_NAME}</NavLink>)}
@@ -206,7 +203,7 @@ test, and production environments?</p>
 </div> )
 }
 
-const FINAL_PROJECT_SPRINT_6_NAME = 'Final Project Sprint 6'
+const FINAL_PROJECT_SPRINT_6_NAME = 'Class Product Sprint 6'
 export const FINAL_PROJECT_SPRINT_6_ROUTE = 'final-project-sprint-6'
 export const finalProjectSprint6Link = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_SPRINT_6_ROUTE)}>{FINAL_PROJECT_SPRINT_6_NAME}</NavLink>)}
 export const finalProjectSprint6 = () => {
@@ -214,8 +211,8 @@ export const finalProjectSprint6 = () => {
 	
 <div>
 <br />
-<h4>Final Project Sprint 6</h4>
-<h5>Summary: Let’s deliver sprint 6 of our final project.</h5>
+<h4>Class Product Sprint 6</h4>
+<h5>Summary: Let’s deliver sprint 6 of our class product.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
 	<li><NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink></li>
@@ -238,17 +235,46 @@ the story. There is no such thing as “almost complete” or even ”99% comple
 	<li>Complete {backlogGrooming()} to create and update groom your {productBacklog()} while creating appropriate <em>artifacts</em></li>
 </ol>
 
-<p>Now let’s focus on sprint 6, stay focused, and work toward delivering something that you will be proud of creating.</p>
+<p>Now let’s focus on sprint 6, stay focused, and work toward delivering something that you will be proud of creating. 
+Each requirement should have an artifact that includes participants and an activity summary at a minimum. Artifacts are 
+preferred as PDF files.</p>
 {sprintRequirements(6)}
 </div> )
 }
 
 const sprintRequirements = (sprint) => {
 	return ( <div>
-		<h6>Requirement 1: Complete sprint {sprint-1} Review and Retrospective</h6>
-		<h6>Requirement 2: Complete sprint {sprint} Planning by the end of the first class session</h6>
-		<h6>Requirement 3: Execute sprint {sprint}</h6>
-		<h6>Requirement 4: Complete sprint {sprint} backlog grooming in preparation for sprint {sprint+1} planning</h6>
+		<h6>Requirement 1: Complete sprint {sprint-1} Review and Retrospective:</h6>
+		<ol>
+			<li>Complete Sprint {sprint-1} Review</li>
+			<li>Complete Sprint {sprint-1} Retrospective</li>
+		</ol>
+
+		<h6>Requirement 2: Complete sprint {sprint} Planning:</h6>
+		<ol>
+			<li>Review and update your team’s definition of “done”</li>
+			<li>Complete Sprint {sprint} Planning including the team’s immutable Sprint {sprint} Backlog</li>
+			<li>Complete Sprint {sprint} initial Metrics including individual story commitments</li>
+		</ol>
+
+		<h6>Requirement 3: Execute sprint {sprint} by delivering and testing Sprint {sprint} Backlog commitments:</h6>
+		<ol>
+			<li>Deliver, test, and demo each story</li>
+			<li>Promptly update Sprint {sprint} Backlog to reflect current story status including “done” throughout the sprint</li>
+			<li>Complete final Sprint {sprint} Backlog including final story status including “done”</li>
+			<li>Complete Sprint {sprint} Metrics</li>
+		</ol>
+
+		<h6>Requirement 4: Complete Product Backlog grooming in preparation for sprint {sprint+1} planning including:</h6>
+		<ol>
+			<li>Incorporates only valid stories in story format</li>
+			<li>Immutable unique identifier for each story</li>    
+			<li>Story point estimates for each “important” story based on “Done” and assuming that 1 story point ~ 1 hour effort</li>
+			<li>More estimated and “ready” stories included than your team can get Done in the next sprint</li>
+			<li>Each story must be deliverable in a single sprint</li>
+			<li>Only a “small” percentage of spikes</li>
+			<li>All stories must be force ranked</li>
+		</ol>
 	</div> )
 }
 

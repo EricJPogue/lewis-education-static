@@ -1,13 +1,10 @@
 import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
-import { ServerlessAzure, ServerlessGoogle, ServerlessAWS } from '../DataAndAPIs/Links'
 import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
-
 import { finalProjectSprint6Link } from '../Activities/FinalProject'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
-
 import { estimated } from './AL00000Sprint00'
 
 export const al44000Sprint6Topics = 'Team Final Project utilizing Scrum, Software Metrics, and Serverless Computing'
@@ -37,23 +34,20 @@ export const list44000Sprint06 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-		<li>***... Within {oreillyPlaylistSE()} watch “Project Management” by Jeffrey Pinto Lessons 1 through 5 focussing on:{estimated('2 hours')}</li>
-
-<ul style={{listStyleType:'square'}}>
-		<li>Lesson 1: Why Projects?</li>
-		<li>Lesson 4: Creating the Project Network</li>
-		<li>Lesson 5: Duration Estimation and Critical Path</li>
-</ul>
-
 			{standardActivities(sprint, finalProjectSprint6Link(), oreillyPlaylistSE())}
 			<li>Review and update {finalProjectProposalLink()}</li>
 			<li>Review {softwareMetrics()} lecture</li>
+			<li>Within {oreillyPlaylistSE()} “Scaling Software Agility” read chapters 1 and 2 focussing on “Assumptions Underlying the Model”</li>
 
 			{initialPost(sprint)}
-			<li>Within {oreillyPlaylistSE()} “Scaling Software Agility” read chapters 1 and 2 focussing on “Assumptions Underlying the Model”</li>
-			<li>Review and analyze {ServerlessAzure()}, {ServerlessGoogle()}, and {ServerlessAWS()}</li>
+			<li>Within {oreillyPlaylistSE()} watch “Project Management” by Jeffrey Pinto Lessons 1 through 5 focussing on:{estimated('2 hours')}</li>
+			<ul style={{listStyleType:'square'}}>
+					<li>Lesson 1: Why Projects?</li>
+					<li>Lesson 4: Creating the Project Network</li>
+					<li>Lesson 5: Duration Estimation and Critical Path</li>
+			</ul>
 			<li>Complete {capacityCommittedEffortDeliveredLink()}</li>
-			{standardActivitiesClosing(sprint, finalProjectSprint6Link(), '6 hours')}
+			{standardActivitiesClosing(sprint, finalProjectSprint6Link(), '7 hours')}
 		</ol>
 	</div> )
 }
@@ -61,11 +55,6 @@ export const list44000Sprint06 = (sprint) => {
 // Certified for SP22 (03/25/2022)
 // Certified for FA22 (10/21/2022)
 // Certified for SP23 (03/24/2023)
-// Todo: Note that several activities were removed in SP23 and the expected capacity was reduced from 8 to 6 hours 
-//     because of Easter Break. Consider adding some of these items back in FA23 as there will likely be more time. 
-// Add activity for completing metrics
-
-// BugBug: Remove one question from Quiz 6 so that it also totals 40 points. Recall that the question was added to make 
-//    everything balance.
+// Certified for FA23 (11/04/2023)
 
 // Todo: Consider adding funny video https://www.youtube.com/watch?v=Uo3cL4nrGOk
