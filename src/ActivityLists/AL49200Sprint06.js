@@ -27,7 +27,7 @@ export const al49200Sprint06 = () => {
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Continuously improve sprint planning by successfully completing sprint {sprint} planning within the first three days of the sprint</li>
-			<li>Continuously improve your MVP plan and implementation{sprint}</li>
+			<li>Continuously improve your MVP plan and implementation {sprint}</li>
 			<li>Continuously improve “done” and keep it in mind at all times while you are working on features</li>
 			<li>Continuously improve sprint reviews (demos) and sprint retrospectives as you complete them for sprint {sprint-1}</li>
 		</ul>
@@ -51,8 +51,6 @@ export const list49200Sprint06 = (sprint) => {
 		</ol>
 	</div> )
 }
-
-
 
 // Certified for SP22 (03/27/2022)
 

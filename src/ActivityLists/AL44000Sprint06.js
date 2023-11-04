@@ -47,7 +47,7 @@ export const list44000Sprint06 = (sprint) => {
 					<li>Lesson 5: Duration Estimation and Critical Path</li>
 			</ul>
 			<li>Complete {capacityCommittedEffortDeliveredLink()}</li>
-			{standardActivitiesClosing(sprint, finalProjectSprint6Link(), '7 hours')}
+			{standardActivitiesClosing(sprint, finalProjectSprint6Link(), '8 hours')}
 		</ol>
 	</div> )
 }

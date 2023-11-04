@@ -36,7 +36,7 @@ export const amazerifficFullStack = () => {
 		version of Amazeriffic successfully running locally and successfully hosted in Azure. If this assumption is 
 		true for you, you have already completed a majority of requirement 1 below.</p>
 
-		<p><em>Update June 16, 2022:</em> If you are struggling with completing requirements 1-4 below with Amazeriffic, 
+		<p><em>Alternative Assignment:</em> If you are struggling with completing requirements 1-4 below with Amazeriffic, 
 		you may alternately complete MovieCRUD Full Stack such that it meets all of the following requirements while 
 		fully implementing Create, Read, Update, and Delete (CRUD). If you choose this path, you will likely find 
 		the {movieCRUDLite()} tutorial and related {movieCRUDLiteCode()} beneficial.</p>
