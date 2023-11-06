@@ -24,13 +24,10 @@ export const ics_6_1of6 = () => {
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
 			'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
-			'The Easter Holiday Recess will cause us a a few scheduling challenges',
 			'We will complete our scrum team Discussion Board breakout session on Wednesday',
-			'Demos and Retrospectives Friday',
-			`We will have sprint ${sprint-1} Demos and Retrospective on Friday`,
-			'You will have until the end of the day Monday, April 10th to submit assignments' ])
+			`We will have sprint ${sprint-1} Demos and Retrospective on Friday` ])
 	}
-
+	
 	return xyz_n_1of6(sprint, ics_6_1of6_PAaA.prework, activityListPrevious, ics_6_1of6_PAaA.agenda, ics_6_2of6_PAaA.prework, activityList, sprintPlanning) 
 }
 
