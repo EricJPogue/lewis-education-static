@@ -38,7 +38,8 @@ const ics_6_2of6_PAaA = {
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
 	'announcements':[ 
-		'Registration for Fall 2023 starts April 11' ],
+		'Registration for Sprint 2024 begins Monday, November 13th and continues through November 17',
+		'Summer 2024 courses begins Tuesday, November 28th' ],
 	'agenda':[
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
@@ -50,7 +51,7 @@ export const ics_6_2of6 = () => { return xyz_n_2of6(sprint, ics_6_2of6_PAaA, ics
 // Session 3 of 6: Friday
 const ics_6_3of6_PAaA = {
 	'prework':[
-		'Complete through activity 7 prior to next class', '',
+		'Complete through activity 8 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
 	'announcements':[ 
 		'Any announcements?' ],
