@@ -67,9 +67,9 @@ export const se_6_1of6 = () => {
 // Session 2 of 6: Wednesday
 const se_6_2of6_PAaA = {
 	'announcements':[ 
-		'Software Systems Capstone section now available',
-		'Registration open April 11th... class size limited to 10 or 10-ish',
-		'Available projects include Aidan, PitHub, QuizMaster, Ultimate Seat Selector, possibly Arduino Drone' ],
+		'Software Systems Capstone section available... class size limited to 10 or 10-ish',
+		'Registration for Sprint 2024 begins Monday, November 13th and continues through November 17',
+		'Summer 2024 courses begins Tuesday, November 28th' ],
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}` ],

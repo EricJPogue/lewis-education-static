@@ -36,7 +36,7 @@ export const CALENDAR_LIST =  [
 			{ 'start':'Mon Oct 23 2023 08:00:00 GMT-0500', 'end':'Sun Nov 05 2023 23:59:00 GMT-0600', 'notes':'' },
 			{ 'start':'Mon Nov 06 2023 08:00:00 GMT-0500', 'end':'Sun Nov 19 2023 23:59:00 GMT-0600', 'notes':'' },
 			{ 'start':'Mon Nov 20 2023 08:00:00 GMT-0500', 'end':'Sun Dec 10 2023 23:59:00 GMT-0600', 'notes':'Thanksgiving Recess' },
-			{ 'start':'Mon Dec 11 2023 08:00:00 GMT-0500', 'end':'Fri Dec 15 2023 23:59:00 GMT-0600', 'notes':'Final Exam' }
+			{ 'start':'Mon Dec 11 2023 08:00:00 GMT-0500', 'end':'Thu Dec 14 2023 23:59:00 GMT-0600', 'notes':'Final Exam' }
 		]
 	},
 	{ 
