@@ -35,30 +35,31 @@ export const web_6_2of6 = () => { return xyz_n_2of6(sprint, web_6_2of6_lists, we
 
 const web_6_3of6_lists = {
 	'announcements':[ 
-		'John Deere job openings' ],
+		'Registration is next week' ],
 	'prework':[
 		'Complete through activity 6 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
+		'Discussion 6... Instead of Breakout'
 		`Breakout for Sprint ${sprint-1} Retrospective`,
 		'Prework for Next Class' ]
 }
 export const web_6_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:11, submitted:10 },
-			{ name: 'Quiz', due:11, submitted:9 },
-			{ name: 'Lab', due:11, submitted:9 },
-			{ name: 'Reflection', due: 11, submitted: 9 }
+			{ name: 'Discussion', due:10, submitted:10 },
+			{ name: 'Quiz', due:10, submitted:9 },
+			{ name: 'Lab', due:10, submitted:9 },
+			{ name: 'Reflection', due:10, submitted:9 }
 		])
 	}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 		'Feedback from Assignments & Reflections', [
-		'I am quite confused by the number of assignments that are not being submitted... any insights?',
-		'All assignments are graded and posted', 
+		'Okay submission percentage',
+		'Grades are posted... let me know if you have any questions', 
 		'Nice work with Map Mania' ])
 	}
 	return xyz_n_3of6(sprint, web_6_3of6_lists, web_6_4of6_lists.prework, activityList, metricsSubmissionPercentage, retrospective)

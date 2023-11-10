@@ -99,7 +99,7 @@ export const se_6_2of6 = () => {
 
 const se_6_3of6_PAaA = {
 	'announcements':[ 
-		'John Deere job openings' ],
+		'Registration starts next week' ],
 	'prework':[
 		'Complete through activity 7 prior to next class', '',
 		`Be prepared scrum team sprint ${sprint-1} Demos and Retrospectives` ],
@@ -114,22 +114,17 @@ const se_6_3of6_PAaA = {
 export const se_6_3of6 = () => { 
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:26, submitted:26 },
-			{ name: 'Quiz', due:26, submitted:26 },
-			{ name: 'Lab', due:26, submitted:25},
-			{ name: 'Reflection', due: 26, submitted: 26 }
+			{ name: 'Discussion', due:13, submitted:12 },
+			{ name: 'Quiz', due:13, submitted:12 },
+			{ name: 'Lab', due:13, submitted:11 },
+			{ name: 'Reflection', due:13, submitted:11 }
 		])
 	}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 		'Feedback from Assignments & Reflections', [
-		`Wonderful sprint ${sprint-1} submission percentage`,
-		'Lot’s of great comments about working with teammates', 
-		'Lot’s of obvious pride in your work',
-		'I am running behind on grading assignments... sorry for the generic comments to many of your reflections',
-		'Planning is hard... and having more time (without experimentation) does not make it easier or better', 
-		'Estimation is hard... and having more time (without experimentation) does not make it easier or better',  
-		'Very well done!... this is hard!' ])
+		`Not such a good ${sprint-1} submission percentage`,
+		'I am very excited about the joint team planning and work that is occurring' ])
 	}
 	const scrumTeamDemos = () => {
 		return orderedListSlide('Scrum Team Demos',
