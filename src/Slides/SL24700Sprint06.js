@@ -42,7 +42,7 @@ const web_6_3of6_lists = {
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
-		'Discussion 6... Instead of Breakout'
+		'Discussion 6... Instead of Breakout',
 		`Breakout for Sprint ${sprint-1} Retrospective`,
 		'Prework for Next Class' ]
 }
