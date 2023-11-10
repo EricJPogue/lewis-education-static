@@ -54,7 +54,7 @@ const ics_6_3of6_PAaA = {
 		'Complete through activity 8 prior to next class', '',
 		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'Registration starts next week' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
@@ -76,27 +76,37 @@ export const ics_6_3of6 = () => {
 			'Robotics' ])
 	}*/
 	const metricsSubmissionPercentage = () => {
-		return submissionPercentage([
-			{ name: 'Discussion', due:13, submitted:13 },
-			{ name: 'Quiz', due:13, submitted:13 },
-			{ name: 'Lab', due:13, submitted:12 },
-			{ name: 'Reflection', due: 13, submitted: 13 }])
+		if (getClass().section === '002') {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:26 },
+				{ name: 'Quiz', due:27, submitted:27 },
+				{ name: 'Lab', due:27, submitted:25 },
+				{ name: 'Reflection', due: 27, submitted: 25 }])
+		}
+		else {
+			return submissionPercentage([
+				{ name: 'Discussion', due:24, submitted:23 },
+				{ name: 'Quiz', due:24, submitted:23 },
+				{ name: 'Lab', due:24, submitted:23 },
+				{ name: 'Reflection', due: 24, submitted: 23 }])
+		}
 	}
 	const retrospective = () => {
 		if (getClass().section === '002') {
 			return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Solid submission percentage... well done.',
+			'A little week on our submission percentage',
+			'I still owe you two sets of treats',
 			'Not all assignments are graded', 
-			'Multiple Reflection comments about successfully getting started earlier', 
+			'Programming assignment was challenging', 
 			'Very nice work!' ])
 		} else {
 			return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Wonderful submission percentage... very well done!',
-			'Assignments are graded and posted', 
-			'Multiple Reflection comments about successfully getting started earlier', 
-			'Very nice work!' ])
+				'A little week on our submission percentage',
+				'Not all assignments are graded', 
+				'Programming assignment was challenging', 
+				'Very nice work!' ])
 		}
 	}
 	return xyz_n_3of6(sprint, ics_6_3of6_PAaA, ics_6_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)

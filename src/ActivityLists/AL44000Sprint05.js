@@ -63,6 +63,8 @@ export const list44000Sprint05 = (sprint) => {
 // Certified for SP23 (02/28/2023)
 // Certified for FA23 (10/21/2023)
 
+// Todo: Add new team adoption activities and assignments. 
+
 // TODO: Update Quiz 5 and remove "tqb-quiz-05" test bank
 // Todo: Add multiple-choice question on refactoring vs re-engineering.
 // Todo: Add multiple-choice question on “Describe the similarities and differences normally observed when maintaining a

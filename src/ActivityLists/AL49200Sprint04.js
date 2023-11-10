@@ -59,4 +59,4 @@ export const list49200Sprint04 = (sprint) => {
 }
 
 // Node.js in sprint 3?
-
+// Todo: Add new team adoption activities and assignments. 
