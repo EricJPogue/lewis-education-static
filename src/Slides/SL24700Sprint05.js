@@ -1,3 +1,5 @@
+/*
+
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
@@ -163,3 +165,5 @@ export const web_5_6of6 = () => {
 
 	return completeDeck(slideDeck, [ poll, preworkNext, tLab ])
 }
+
+*/

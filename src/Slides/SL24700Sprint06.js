@@ -67,7 +67,7 @@ export const web_6_3of6 = () => {
 
 const web_6_4of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		'Registration starts today.' ],
 	'prework':[
 		'Complete through activity 11 prior to next class', '',
 		'Be prepared for breakout PHP session' ],

@@ -1,5 +1,5 @@
 import { submissionPercentage, orderedListSlide, retrospectiveIntroduction } from '../Slides/SLSprint00'
-import { breakoutStandard, bulletListSlide, tDiscussionBreakout, tPrework, tQuiz } from './SLSprint00'
+import { breakoutStandard, bulletListSlide, tDiscussionBreakout, tPrework } from './SLSprint00'
 import { tPreworkWithLogo, basicSlideWithLogo, agendaSlide, basicSlide } from '../Slides/SLSprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab, makeSlideDeck } from './SL00000Sprint00'
@@ -153,8 +153,7 @@ const se_6_4of6_PAaA = {
 	'agenda':[
 		'Metrics Breakout',
 		'Prework for Next Class',
-		'Lab & Programming Together (as time allows)',
-		`Quiz ${sprint}` ]
+		'Lab & Programming Together (as time allows)' ]
 }
 export const se_6_4of6 = () => {
 	const breakout = () => { 
@@ -172,9 +171,8 @@ export const se_6_4of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_6_4of6_PAaA, sprint, activityList)
 	const poll = () => { return tPrework('Sprint Progress Polling', se_6_4of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_6_5of6_PAaA.prework, sprint, activityList) }
-	const quiz = () => { return tQuiz(sprint) }
 
-	return completeDeck(slideDeck, [poll, breakout, preworkNext, tLab, quiz])
+	return completeDeck(slideDeck, [poll, breakout, preworkNext, tLab])
 }
 
 const se_6_5of6_PAaA = {
