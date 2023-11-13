@@ -33,7 +33,7 @@ export const al20000Sprint06 = () => {
 }
 
 export const list20000Sprint06 = (sprint) => {
-	const daleWWWLecture = () => { return internalLink('lecture', '/activity-dale/16' )}
+	// const daleWWWLecture = () => { return internalLink('lecture', '/activity-dale/16' )}
 	const pythonW3CPart1 = () => { return internalLink('Python Programming - Part 1', '/activity/python-w3c') }
 	const pythonW3CPart2 = () => { return internalLink('Python Programming - Part 2', '/activity/python-w3c') }
 	const daleArtificialIntelligenceLecture = () => { return internalLink('lecture', '/activity-dale/13' )}
@@ -48,7 +48,6 @@ export const list20000Sprint06 = (sprint) => {
 			<li>Complete {programmingTogether()} with TurtleDrawLite part 2</li>
 			<li>Read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>
 			<li>Update {finalProjectProposalLink()}</li>
-			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” The World Wide Web and review our associated {daleWWWLecture()}</li>
 			{initialPost(sprint)}
 			<li>Complete {programmingTogether()} with TurtleDrawLite Part 3</li>
 			<li>Within {oreillyPlaylistICS()} read “Introducing Python” Chapters 3 and 4 while reviewing associated {IntroducingPythonSampleCode()}</li>

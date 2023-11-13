@@ -3,7 +3,6 @@ import { getClass } from '../DataAndAPIs/Classes'
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 import { xyz_n_2of6, xyz_n_3of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, breakoutStandard } from './SLSprint00'
-import { tQuiz } from './SLSprint00'
 import { ics_7_1of6_PAaA } from './SL20000Sprint07'
 
 import { tPrework } from './SLSprint00'
@@ -63,18 +62,6 @@ const ics_6_3of6_PAaA = {
 }
 
 export const ics_6_3of6 = () => {
-	/*
-	const aIbreakout = () => { 
-		return breakoutStandard( 
-			'Breakout: Artificial Intelligence', 
-			'In this breakout will discuss Artificial Intelligence (reading and lecture):', [
-			'Thinking Machines',
-			'Knowledge Representation and Data Quality',
-			'Expert Systems',
-			'Neural Networks',
-			'Natural Language Processing',
-			'Robotics' ])
-	}*/
 	const metricsSubmissionPercentage = () => {
 		if (getClass().section === '002') {
 			return submissionPercentage([
@@ -121,37 +108,38 @@ const ics_6_4of6_PAaA = {
 		`All sprint ${sprint} assignments due “Sunday”! ... grace period until Tuesday morning at 6 AM`,
 		'Sprint 7 Planning will be next Wednesday' ],
 	'agenda':[
-		'World Wide Web Breakout',
+		'Sprint Progress Poll',
+		'Artificial Intelligence Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together (as time allows)',
 		`Quiz ${sprint}` ]
 }
 export const ics_6_4of6 = () => {
-	const breakout = () => { 
+	const aIbreakout = () => { 
 		return breakoutStandard( 
-			'Breakout: The World Wide Web', 
-			'In this breakout session we will explore The World Wide Web:', [
-				'The Internet vs. The World Wide Web plus HTML, CSS, and Javascript',
-				'HTTP, SSL, HTTPs, and DNS',
-				'Java Applets, Java Servlets, and Java Server Pages',
-				'XML, DTDs, and JSON',
-				'Search Engines, Social Networks, Cookies, Web Analytics, and Web 3.0',
-				'Where does ChatGPT fit into this?' ]
-		)
+			'Breakout: Artificial Intelligence', 
+			'In this breakout will discuss Artificial Intelligence (reading and lecture):', [
+			'Thinking Machines',
+			'Knowledge Representation and Data Quality',
+			'Expert Systems',
+			'Neural Networks',
+			'Natural Language Processing',
+			'Robotics' ])
 	}
 	const poll = () => { return tPrework('Sprint Progress Polling', ics_6_4of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_6_5of6_PAaA.prework, sprint, activityList) }
-	const quiz = () => { return tQuiz(sprint) }
+
 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_6_4of6_PAaA, sprint, activityList)
-	return completeDeck(slideDeck, [poll, breakout, preworkNext, tLab, quiz])
+	return completeDeck(slideDeck, [poll, aIbreakout, preworkNext, tLab])
 }
 
 // Session 5 of 6: Wednesday
 const ics_6_5of6_PAaA = {
 	'prework':[
-		'Complete through activity 11', '',
-		'Be prepared for Lab' ],
+		'Complete through activity 13', '',
+		'Be prepared for Lab',
+		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
 		`All sprint ${sprint} assignments due “Sunday”! ... grace period until Tuesday morning at 6 AM` ],
 	'agenda':[
