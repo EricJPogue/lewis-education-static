@@ -94,7 +94,7 @@ export const web_6_4of6 = () => {
 // Sprint 6 session 5 of 6: Wednesday
 const web_6_5of6_lists = {
 	'announcements':[ 
-		'Any announcements?' ],
+		'Registration, registration, and more registration' ],
 	'prework':[
 		'Complete through activity 12 prior to next class', '',
 		`Be prepared for Quiz ${sprint}` ],

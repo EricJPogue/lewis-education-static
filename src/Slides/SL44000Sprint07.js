@@ -25,6 +25,7 @@ const activityListPrevious = () => { return list44000Sprint06(sprint-1) }
 const activityList = () => { return list44000Sprint07(sprint) }
 
 // Session 1 of 6: Monday
+export const se_7_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const se_7_1of6 = () => { return [ tNoClassToday ] }
 
 // Session 2 of 6: Wednesday

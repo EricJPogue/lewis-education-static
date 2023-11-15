@@ -5,12 +5,13 @@ import { tPreworkWithLogo, basicSlideWithLogo, agendaSlide, basicSlide } from '.
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab, makeSlideDeck } from './SL00000Sprint00'
 import { insertInto } from './SLSprintPlanning'
 import { sprintPlanningSlideDeck } from './SLSprintPlanning'
-import { tNoClassToday } from './SL00000Sprint00'
-
-import { se_7_2of6_PAaA } from './SL44000Sprint07'
 
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
+
+import { xyz_n_5of6 } from './SL00000Sprint00'
+import { xyz_n_6of6 } from './SL00000Sprint00'
+import { se_7_1of6_PAaA } from './SL44000Sprint07'
 
 // Sprint 6 Software Engineering (SE) global values.
 const sprint = 6
@@ -177,24 +178,41 @@ export const se_6_4of6 = () => {
 
 const se_6_5of6_PAaA = {
 	'prework':[
-		'Complete through activity 11 prior to next class', '',
+		'Complete through activity 9 prior to next class', '',
 		`Be prepared for Backlog Grooming in Preparation for Sprint ${sprint+1} Planning`,
 		'Be prepared for Lab' ],
 	'announcements':[ 
-		`Reminder that your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for next Wednesday`,
-		'Two new MongoDB programming together tutorial added' ],
+		`Reminder that your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for next Monday`,
+		'Reminder MongoDB programming together tutorial added' ],
 	'agenda':[
-		'Backlog Grooming',
-		'Lab' ]
+		'Lab / Backlog Grooming',
+		'Quiz' ]
 }
+/*
 export const se_6_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_6_5of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_2of6_PAaA.prework, sprint, activityList) }
 	const slideDeckWithPrework = completeDeck(slideDeck, [ preworkNext ]) 
-	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), 5 /* index to insert */)
+	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), 5 )
 }
+*/
+export const se_6_5of6 = () => { return xyz_n_5of6(sprint, se_6_5of6_PAaA, se_6_6of6_PAaA.prework, activityList) }
+
 
 // Session 6 of 6
-export const se_6_6of6 = () => { return [ tNoClassToday ] }
+//export const se_6_6of6 = () => { return [ tNoClassToday ] }
+
+// Session 6 of 6: Friday
+const se_6_6of6_PAaA = {
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		'Complete through activity 12', '',
+		'Be prepared for Programming Together' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+}
+export const se_6_6of6 = () => { return xyz_n_6of6(sprint, se_6_6of6_PAaA, se_7_1of6_PAaA.prework, activityList) }
 
 
