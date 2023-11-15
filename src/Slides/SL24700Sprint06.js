@@ -105,7 +105,6 @@ const web_6_5of6_lists = {
 }
 export const web_6_5of6 = () => { return xyz_n_5of6(sprint, web_6_5of6_lists, web_6_6of6_lists.prework, activityList) }
 
-
 // Sprint 6 session 6 of 6: Friday
 const web_6_6of6_lists = {
 	'announcements':[ 

@@ -12,6 +12,8 @@ import { checklistAnnouncementsPreworkAndAgenda, tLab, completeDeck } from './SL
 import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 
+import { tQuiz } from './SLSprint00'
+
 // Introduction to Computer Science (ICS) sprint 6 global values.
 const sprint = 6
 const activityListPrevious = () => { return list20000Sprint05(sprint-1) }
@@ -141,11 +143,19 @@ const ics_6_5of6_PAaA = {
 		'Be prepared for Lab',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
-		`All sprint ${sprint} assignments due “Sunday”! ... grace period until Tuesday morning at 6 AM` ],
+		'Registration, registration, and more registration' ],
 	'agenda':[
-		'Lab' ]
+		'Lab',
+		`Quiz ${sprint}` ]
 }
-export const ics_6_5of6 = () => { return xyz_n_6of6(sprint, ics_6_5of6_PAaA, ics_7_1of6_PAaA.prework, activityList) }
+export const ics_6_5of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_6_5of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_6_5of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_6_6of6_PAaA.prework, sprint, activityList) }
+	const quiz = () => { return tQuiz(sprint) }
+
+	return 	completeDeck(slideDeck, [ poll, tLab, /*programmingTogetherWithTurtleDraw,*/ preworkNext, quiz ])
+}
 
 // Session 6 of 6: Friday
 const ics_6_6of6_PAaA = {
@@ -153,7 +163,7 @@ const ics_6_6of6_PAaA = {
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 12', '',
-		'Be prepared for Programming Together with Matchmaker for the Web' ],
+		'Be prepared for Programming Together' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
