@@ -163,9 +163,9 @@ const ics_6_6of6_PAaA = {
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
 		'Complete through activity 12', '',
-		'Be prepared for Programming Together' ],
+		'Be prepared for Lab & Programming Together' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+		'Lab & Programming Together' ]
 }
 export const ics_6_6of6 = () => { return xyz_n_6of6(sprint, ics_6_6of6_PAaA, ics_7_1of6_PAaA.prework, activityList) }
