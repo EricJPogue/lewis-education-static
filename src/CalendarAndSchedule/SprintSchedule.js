@@ -83,12 +83,15 @@ export class SprintClassActivities extends Component {
 	}
 
 	MWFScheduleSprint7 = {
-		'FirstMonday':     'Easter Holiday Recess: No Classes',
-		'FirstWednesday':  'Sprint Planning',
-		'FirstFriday':     'Discussion Board, Demos, and Retrospectives',
-		'SecondMonday':    'Topic Discussion',
-		'SecondWednesday': 'Lab & Quiz',
-		'SecondFriday':    'Lab'
+		'FirstMonday':     'Sprint Planning',
+		'FirstWednesday':  'No class: Thanksgiving Holiday',
+		'FirstFriday':     'No class: Thanksgiving Holiday',
+		'SecondMonday':    'Discussion Board & Lab',
+		'SecondWednesday': 'Topic Discussion',
+		'SecondFriday':    'Quiz 7',
+		'ThirdMonday':	   'Lab',
+		'ThirdWednesday':  'Quiz 8 (in-person attendance required)',
+		'ThirdFriday':     'Presentations'
 	}
 
 	MWFScheduleSprint8 = {
@@ -136,23 +139,56 @@ export class SprintClassActivities extends Component {
 
 		const calendar = getClassCalendar()
 		const dates = calendar[this.currentSprint()]
-		return (
-			<div>
-				{this.renderScheduleHeader()}
-				<Table striped bordered hover>
-					<thead><tr><th style={{width:'300px'}}>Day</th><th>Schedule and Slides</th></tr></thead>
-					<tbody>
-						{this.renderScheduleRow(incrementDate(dates.start,0),schedule.FirstMonday,1)}
-						{this.renderScheduleRow(incrementDate(dates.start,2),schedule.FirstWednesday,2)}
-						{this.renderScheduleRow(incrementDate(dates.start,4),schedule.FirstFriday,3)}
-						{this.renderScheduleRow(incrementDate(dates.start,7),schedule.SecondMonday,4)}
-						{this.renderScheduleRow(incrementDate(dates.start,9),schedule.SecondWednesday,5)}
-						{this.renderScheduleRow(incrementDate(dates.start,11),schedule.SecondFriday,6)}
-					</tbody>
-				</Table>
-				{this.finalExamDateAndTimeTextForFinalSprint()}
-			</div>
-		)
+		if (this.currentSprintBaseOne() === 8) {
+			return (
+				<div>
+					{this.renderScheduleHeader()}
+					<br />
+					<b>Final Exam</b><br /><br />
+					{this.finalExamDateAndTimeTextForFinalSprint()}
+				</div>
+			)
+		} else if (this.currentSprintBaseOne() === 7) {
+			return (
+				<div>
+					{this.renderScheduleHeader()}
+					<Table striped bordered hover>
+						<thead><tr><th style={{width:'300px'}}>Day</th><th>Schedule and Slides</th></tr></thead>
+						<tbody>
+							{this.renderScheduleRow(incrementDate(dates.start,0),schedule.FirstMonday,1)}
+							{this.renderScheduleRow(incrementDate(dates.start,2),schedule.FirstWednesday,2)}
+							{this.renderScheduleRow(incrementDate(dates.start,4),schedule.FirstFriday,3)}
+							{this.renderScheduleRow(incrementDate(dates.start,7),schedule.SecondMonday,4)}
+							{this.renderScheduleRow(incrementDate(dates.start,9),schedule.SecondWednesday,5)}
+							{this.renderScheduleRow(incrementDate(dates.start,11),schedule.SecondFriday,6)}
+							{this.renderScheduleRow(incrementDate(dates.start,14),schedule.ThirdMonday,7)}
+							{this.renderScheduleRow(incrementDate(dates.start,16),schedule.ThirdWednesday,8)}
+							{this.renderScheduleRow(incrementDate(dates.start,18),schedule.ThirdFriday,9)}
+						</tbody>
+					</Table>
+					{this.finalExamDateAndTimeTextForFinalSprint()}
+				</div>
+			)
+		}
+		else {
+			return (
+				<div>
+					{this.renderScheduleHeader()}
+					<Table striped bordered hover>
+						<thead><tr><th style={{width:'300px'}}>Day</th><th>Schedule and Slides</th></tr></thead>
+						<tbody>
+							{this.renderScheduleRow(incrementDate(dates.start,0),schedule.FirstMonday,1)}
+							{this.renderScheduleRow(incrementDate(dates.start,2),schedule.FirstWednesday,2)}
+							{this.renderScheduleRow(incrementDate(dates.start,4),schedule.FirstFriday,3)}
+							{this.renderScheduleRow(incrementDate(dates.start,7),schedule.SecondMonday,4)}
+							{this.renderScheduleRow(incrementDate(dates.start,9),schedule.SecondWednesday,5)}
+							{this.renderScheduleRow(incrementDate(dates.start,11),schedule.SecondFriday,6)}
+						</tbody>
+					</Table>
+					{this.finalExamDateAndTimeTextForFinalSprint()}
+				</div>
+			)
+		}
 	}
 
 	// Tuesday, Thursday class schedules. 

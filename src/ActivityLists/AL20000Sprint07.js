@@ -2,19 +2,25 @@ import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
 
-import { healthRiskCalculatorWebOrPythonLink } from '../Activities/HealthRiskCalculator'
 import { oreillyPlaylistICS, internalLink } from '../DataAndAPIs/Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
 
+import { finalProjectLink } from '../Activities/FinalProject'
+
+import { getClass } from '../DataAndAPIs/Classes'
+
 export const al20000Sprint07 = () => {
 	const sprint = 7
+	const classSection = getClass()
 	return ( <div>
-		<h5>Sprint 7: Security, JavaScript, and you setting the direction</h5>
+		<h5>Sprint 7: {classSection.class.modules[sprint-1]}</h5>
 
-		<p>Welcome to sprint 7. Sprint 7 puts you in the driver’s seat. You get to decide if you would benefit more by focusing 
-		on developing more sophisticated terminal applications using Python, or if your energy would be better spent mastering 
-		Web development with HTML, CSS, and JavaScript. But never forget the legendary phrase:</p>
+		<p>Welcome to sprint 7. Sprint 7 puts you in the driver’s seat. It is time for us to work on our Class Projects. 
+		We each have <em>three weeks and 20 hours</em> to deliver something uniquely your own. There is time to build something 
+		that makes you proud. The only requirement is that you demonstrate what you have learned in class and demonstrate 
+		that you are able to extend that learning to something new.</p>
+		<p>You have the	power.</p>
 
 		<h5> 
 		<div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -27,10 +33,8 @@ export const al20000Sprint07 = () => {
 		<p><i>What will you do with all that power... and responsibility?</i></p>
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
+			<li>Deliver something uniquely your own in the the form of your Class Project</li>
 			<li>Understand Computer Security</li>
-			<li>Deliver more sophisticated Web applications using HTML, CSS, and JavaScript Website</li>
-			<li>... Or deliver more sophisticated Python applications</li>
-			<li>Finalize and commit to your Final Project</li> 
 		</ul>
 
 		{list20000Sprint07()}
@@ -44,13 +48,14 @@ export const list20000Sprint07 = () => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-			{standardActivities(sprint, healthRiskCalculatorWebOrPythonLink(), oreillyPlaylistICS())}
-			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Security and review our associated {daleSecurityLecture()}</li>
+			{standardActivities(sprint, finalProjectLink(), oreillyPlaylistICS())}
+			<li>Verify that you will be presenting your Class Project on <em>{getFinalExamDateAndTime()}</em></li>
+			<li>Review your {finalProjectProposalLink()}</li>
 		
 			{initialPost(sprint)}
-			<li>Verify that you will be presenting your Final Project on <em>{getFinalExamDateAndTime()}</em></li>
-			<li>Make and last updates to your {finalProjectProposalLink()}</li>
-			{standardActivitiesClosing(sprint, healthRiskCalculatorWebOrPythonLink(), '8 hours')}
+			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Security and review our associated {daleSecurityLecture()}</li>
+			<li>Class Project, Class Project, and more Class Project</li>
+			{standardActivitiesClosing(sprint, finalProjectLink(), '20 hours')}
 		</ol>
 	</div>)
 }
@@ -64,24 +69,3 @@ export const list20000Sprint07 = () => {
 // Todo: Update syllabus with Activity List headers... or update Activity list headers. 
 // Todo: Consider adding licensing topic to all classes. 
 // Todo: Consider adding Git/GitHub activity / tutorial. 
-// Todo: Where should the following go? Sprint 7?
-//	   const daleArtificialIntelligenceLecture = () => { return internalLink('lecture', '/activity-dale/13' )}
-//	   <li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Artificial Intelligence and review our associated {daleArtificialIntelligenceLecture()}</li>
-//     import { matchmakerPythonLink } from '../Activities/Matchmaker'
-//// Todo: Cloud Computing from sprint 3? Move or remove (do we need this)?
-
-/* Consider:
-			import { azureWebsiteLink } from '../Activities/AzureWebsite'
-			import { matchmakerPythonLink } from '../Activities/Matchmaker'
-			import { htmlLink } from '../Activities/HTML'
-			import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther' 
-
-
-			<li>Review the following activities that were completed previously:</li>
-			<ul style={{listStyleType:'square'}}>
-				<li>{azureWebsiteLink()}</li>
-				<li>{matchmakerPythonLink()}</li>
-				<li>{htmlLink()}</li>
-				<li>{gettingToKnowEachOtherLink()}</li>
-			</ul>
-*/

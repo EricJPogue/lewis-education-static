@@ -98,7 +98,7 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 			case 5: return ( <em>Review sprint {sprint} assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em> )
 			case 6: return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em>)
 			case 7: return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Lab Demo</em>)
-			case 8: return ( <em>Review assignments including Discussion, Quiz, Lab, Reflection, and Final Project Presentation</em>)
+			case 8: return ( <em>Review assignments including Discussion, Quiz, Lab, and Reflection</em>)
 			default: return null
 		}
 	}

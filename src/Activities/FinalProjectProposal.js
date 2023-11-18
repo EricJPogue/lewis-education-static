@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { makeInternalURL } from './ActivityRouter'
 
-const FINAL_PROJECT_PROPOSAL_NAME = 'Class Product Proposal'
+const FINAL_PROJECT_PROPOSAL_NAME = 'Class Project Proposal'
 export const FINAL_PROJECT_PROPOSAL_ROUTE = 'final-project-proposal'
 export const finalProjectProposalLink = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_PROPOSAL_ROUTE)}>{FINAL_PROJECT_PROPOSAL_NAME}</NavLink>)}
 

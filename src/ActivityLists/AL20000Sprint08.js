@@ -10,12 +10,12 @@ export const al20000Sprint08 = () => {
 	return ( <div>
 		<h5>Sprint 8: Final Project, Final Project, and more Final Project</h5>
 		<p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 
-		strong and deliver a Final Project that makes you proud. </p>  
+		strong and bring closure to your Class Project and to present it to you classmates and instructor. </p>  
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
-			<li>Independently deliver and present meaningful working software as part of your Final Project</li>
-			<li>Present your Final Project to your classmates and instructor</li>
+			<li>Independently deliver and present meaningful working software as part of your Class Project</li>
+			<li>Present your Class Project to your classmates and instructor</li>
 		</ul>
 
 		{list20000Sprint08()}
@@ -29,7 +29,7 @@ export const list20000Sprint08 = () => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, finalProjectLink(), oreillyPlaylistICS())}
-			{standardActivitiesClosing(sprint, finalProjectLink(), '8 hours')}
+			{standardActivitiesClosing(sprint, finalProjectLink(), '4 hours')}
 		</ol>
 	</div>)
 }

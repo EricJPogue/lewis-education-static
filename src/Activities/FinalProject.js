@@ -327,5 +327,5 @@ export const FinalProjectSprint8 = () => {
 	</div> )
 }
 
-export const finalProject = { 'name':'Final Project', 'route':'final-project', 'function': FinalProject }
+export const finalProject = { 'name':'Class Project', 'route':'final-project', 'function': FinalProject }
 export const finalProjectLink = () => { return makeNavigationLink(finalProject) }
