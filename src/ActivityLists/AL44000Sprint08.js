@@ -2,7 +2,7 @@ import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, standardActivitiesClosing, closing } from './AL00000Sprint00'
 import { finalProjectSprint8Link } from '../Activities/FinalProject'
-import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
+import { oreillyPlaylistSE } from '../DataAndAPIs/Links'
 
 export const al44000Sprint8Topics = 'Team Final Project, Design Patterns, and Security'
 export const al44000Sprint08 = () => {
@@ -26,14 +26,12 @@ export const al44000Sprint08 = () => {
 }
 
 export const list44000Sprint08 = (sprint) => {
-	const agileCoachInterview = () => { return externalLink('Interview with an Agile Coach', 'https://www.youtube.com/watch?v=bB340S0tGf8')}
+
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, finalProjectSprint8Link(), oreillyPlaylistSE())}
-			<li>Watch the very funny {agileCoachInterview()} video when you need a few minutes to reflect and laugh</li>
 			<li>Read Fox Chapter 11 on Design Patterns</li>
-			<li>Within {oreillyPlaylistSE()} read “Design Patterns” through chapter 1</li>
 			{standardActivitiesClosing(sprint, finalProjectSprint8Link(), '10 hours')}
 		</ol>
 	</div>)

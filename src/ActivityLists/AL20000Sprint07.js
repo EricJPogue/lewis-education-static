@@ -63,9 +63,4 @@ export const list20000Sprint07 = () => {
 // Certified for SP22 (04/05/2022)
 // Certified for FA22 (11/30/2022)
 
-// BugBug: Fix Quiz 7 question "This is a security attack that attempts to disrupt services of a host connected to the Internet by overwriting memory."
-// BugBug: Fix Lab 7 final question as it should not be a repeat of "Coding Standards"
 
-// Todo: Update syllabus with Activity List headers... or update Activity list headers. 
-// Todo: Consider adding licensing topic to all classes. 
-// Todo: Consider adding Git/GitHub activity / tutorial. 

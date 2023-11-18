@@ -289,11 +289,11 @@ const renderCourseScheduleTable = (modules) => {
 const renderGradingCriteriaTable = () => {
 	const assignmentGrading = [
 		{ name: 'Discussion', points:8, number:7 },
-		{ name: 'Quiz', points:40, number:7 },
-		{ name: 'Lab', points:70, number:6 },
-		{ name: 'Reflection', points:4, number:7 },
-		{ name: 'Demo', points:16, number:1 },
-		{ name: 'Class Project', points:200, number:1 }
+		{ name: 'Quiz', points:40, number:8 },
+		{ name: 'Lab', points:70, number:8 },
+		{ name: 'Reflection', points:4, number:8 },
+		{ name: 'Demo', points:12, number:1 },
+		{ name: 'Class Project Presentation', points:20, number:1 }
 	]
 
 	const renderBody = (assignmentGradingIn) => {

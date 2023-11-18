@@ -65,6 +65,8 @@ export const list20000Sprint01 = (sprint) => {
 // BugBug: Fix Hello World for the Web Part 1 so that the overall description does NOT include part 2 requirements. 
 // Todo: Consider adding HTML Quiz questions.
 // Todo: Consider adding CSS Quiz questions.
+// Todo: Consider adding licensing topic to all classes. 
+// Todo: Consider adding Git/GitHub activity / tutorial. 
 
 
 

@@ -278,13 +278,13 @@ const sprintRequirements = (sprint) => {
 	</div> )
 }
 
-const FINAL_PROJECT_SPRINT_7_NAME = 'Final Project Sprint 7'
+const FINAL_PROJECT_SPRINT_7_NAME = 'Class Product Sprint 7'
 export const FINAL_PROJECT_SPRINT_7_ROUTE = 'final-project-sprint-7'
 export const finalProjectSprint7Link = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_SPRINT_7_ROUTE)}>{FINAL_PROJECT_SPRINT_7_NAME}</NavLink>)}
 export const finalProjectSprint7 = () => { 
 	return ( <div>
 		<br />
-		<h4>Final Project Sprint 7</h4>
+		<h4>{FINAL_PROJECT_SPRINT_7_NAME}</h4>
 		<h5>Summary: Let’s keep building on we have already delivered.</h5>
 
 		<p>We should be gaining a rhythm as we continue to work together as a team by now. Hopefully we delivered something 
