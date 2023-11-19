@@ -34,7 +34,7 @@ export const list49200Sprint08 = (sprint) => {
 			{standardActivities(sprint, classProductSprint8Link(), oreillyPlaylistSC(), true)}
 			<li>Review our sprint {sprint} planning {lectureRecordingPlaylist()}</li>
 			<li>Within {oreillyPlaylistSC()} review “Essential Scrum” looking for topics that your team can focus on improving</li>
-			{standardActivitiesClosing(sprint, classProductSprint8Link(),'14 hours per team member')}
+			{standardActivitiesClosing(sprint, classProductSprint8Link(),'4 hours per team member')}
 		</ol>
 	</div> )
 }

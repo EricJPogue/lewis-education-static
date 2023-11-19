@@ -16,7 +16,8 @@ export const al44000Sprint08 = () => {
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
-			<li>Utilize your knowledge of Agile development and Saas to deliver a final project that you are proud of creating</li>
+			<li>Bring closure to your class project by presenting it to your classmates and instructor</li>
+			<li>Complete all transitioning activities for current and upcoming class products</li>
 			<li>Understand Design Patterns</li>
 		</ul>
 
@@ -31,20 +32,14 @@ export const list44000Sprint08 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, finalProjectSprint8Link(), oreillyPlaylistSE())}
-			<li>Read Fox Chapter 11 on Design Patterns</li>
-			{standardActivitiesClosing(sprint, finalProjectSprint8Link(), '10 hours')}
+			{standardActivitiesClosing(sprint, finalProjectSprint8Link(), '4 hours')}
 		</ol>
 	</div>)
 }
 
 // Certified for FA22 (12/03/2022)
-
-// Todo: Consider updating and adding the following Architecture videos back into the class:
-//	import { architecturePart1, architecturePart2 } from '../DataAndAPIs/Links'
-// <li>Complete {architecturePart1()}</li>
-// <li>Scan {architecturePart2()}</li>
-
-// Consider adding https://www.youtube.com/watch?v=A-H-xZ5ZXgo
-
 // Certified for SP23 (04/23/2023)
+// Certified for FA23 (11/19/2023)
+
+
 

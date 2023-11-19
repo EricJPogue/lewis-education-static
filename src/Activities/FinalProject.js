@@ -9,6 +9,7 @@ import { agileAlliance, agileAllianceAgile101, backlogGrooming, epic, iNVEST, pr
 
 import { finalProjectProposalLink } from './FinalProjectProposal'
 import { amazerifficFullStackLink } from './AmazerifficFullStack';
+import { capacityCommittedEffortDeliveredLink } from './CapacityCommittedEffortDelivered'
 
 export const Start_FinalProject = () => { return (<div>Start working on your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
 export const Complete_FinalProject = () => { return (<div>Complete your <NavLink to='/activity/final-project'>Final Project</NavLink></div>) }
@@ -295,30 +296,57 @@ export const finalProjectSprint7 = () => {
 	</div> )
 }
 
-const FINAL_PROJECT_SPRINT_8_NAME = 'Final Project Sprint 8'
+const FINAL_PROJECT_SPRINT_8_NAME = 'Class Product Sprint 8'
 export const FINAL_PROJECT_SPRINT_8_ROUTE = 'final-project-sprint-8'
 export const finalProjectSprint8Link = () => {return (<NavLink to={makeInternalURL(FINAL_PROJECT_SPRINT_8_ROUTE)}>{FINAL_PROJECT_SPRINT_8_NAME}</NavLink>)}
 export const finalProjectSprint8 = () => { return FinalProjectSprint8() }
 
-export const Start_FinalProjectSprint8 = () => { return (<div>Start working on <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink></div>) }
-export const Complete_FinalProjectSprint8 = () => { return (<div>Complete <NavLink to='/activity/final-project-sprint-8'>Final Project Sprint 8</NavLink><sup>~12 hours per team member</sup></div>) }
+export const Start_FinalProjectSprint8 = () => { return (<div>Start working on <NavLink to='/activity/final-project-sprint-8'>Class Product Sprint 8</NavLink></div>) }
+export const Complete_FinalProjectSprint8 = () => { return (<div>Complete <NavLink to='/activity/final-project-sprint-8'>Class Product Sprint 8</NavLink><sup>~12 hours per team member</sup></div>) }
 export const FinalProjectSprint8 = () => {
 	return ( <div>
 		<br />
-		<h4>Final Project Sprint 8</h4>
-		<h5>Summary: This is it our final sprint. Let’s build something special.</h5>
+		<h4>Class Project Sprint 8</h4>
+		<h5>Summary: This is it our final sprint. Let’s bring this development cycle to a successful closure, put a bow
+		on our Product Backlog, deliver/test all committed stories, and <em>transition the product to the next team</em>.</h5>
 
-		<p>We should be working with a solid cadence. Now it’s time to focus all of our energy on building something 
-		special. It is also time to commit to making it sustainable so that you or someone else could pick up where
-		you left off with the product.</p>
+		<p>We should be working with a solid cadence. Now it’s time to focus on sustainability and make it possible for 
+		us or someone else to continue developing the product.</p>
 
-		<p>Our cadence should include:</p>
-		<ul style={{listStyleType:'square'}}>
-		<li>Demo, release, and reflect on what was delivered in the previous sprint</li>
-			<li>Plan for the current sprint</li>
-			<li>Deliver committed stories in current sprint</li>
-			<li>In the spirit of Agile we will not be grooming the backlog or planning for the next sprint</li>
-		</ul>
+		<h6>Requirement 1: Complete sprint 7 Review and Retrospective:</h6>
+		<ol>
+			<li>Complete Sprint 7 Review</li>
+			<li>Complete Sprint 7 Retrospective</li>
+		</ol>
+
+		<h6>Requirement 2: Complete sprint 8 Planning:</h6>
+		<ol>
+			<li>**The theme for sprint 8 is to fully transition the product to the product’s ongoing delivery team</li>
+			<li>Finalize and fully groom your single integrated Product Backlog</li>
+			<li>Complete Sprint 8 Planning including the team’s immutable Sprint 8 Backlog... be very conservative</li>
+			<li>Complete Sprint 8 initial Metrics including individual story commitments</li>
+		</ol>
+
+		<h6>Requirement 3: Execute sprint 8 by delivering and testing Sprint 8 Backlog commitments:</h6>
+		<ol>
+			<li>**Focus on completing the product’s transition to the ongoing delivery team</li>
+			<li>List the ongoing Scrum Master and Product Owner</li>
+			<li>Deliver, test, and demo each story</li>
+			<li>Promptly update Sprint 8 Backlog to reflect current story status including “done” throughout the sprint</li>
+			<li>Complete final Sprint 8 Backlog including final story status including “done”</li>
+			<li>Complete Sprint 8 Metrics including	{capacityCommittedEffortDeliveredLink()}</li>
+		</ol>
+
+		<h6>Requirement 4: Complete Product Backlog grooming:</h6>
+		<ol>
+			<li>Incorporates only valid stories in story format</li>
+			<li>Immutable unique identifier for each story</li>    
+			<li>Story point estimates for each “important” story based on “Done” and assuming that 1 story point ~ 1 hour effort</li>
+			<li>More estimated and “ready” stories included than your team can get Done in the next sprint</li>
+			<li>Each story must be deliverable in a single sprint</li>
+			<li>Only a “small” percentage of spikes</li>
+			<li>All stories must be force ranked</li>
+		</ol>
 
 		<p>Once again, high performing scrum teams are able to consistently allocate 80% or more of their effort to Delivery of 
 		current sprint stories while still effectively completing demo, release, reflect, and planning activities. We don’t need 

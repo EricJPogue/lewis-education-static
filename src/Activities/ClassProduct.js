@@ -304,32 +304,32 @@ const classProduct = (sprint, effort ) => {
 		<em>Requirement 2</em>
 		<p>Sprint Planning {sprint}:</p>
 		<ol>
-			<li>Review {scrum()} while focusing on Events, Artifacts, and Rolls</li>
-			<li>Review, understand, and utilize {userStory()}, {userStoryTemplate()}, and {iNVEST()}</li>
-			<li>Review {agileAllianceAgile101()} from {agileAlliance()} while creating your {productBacklog()}</li>
-			<li>Complete {sprintPlanning()} to finalize to the team’s {sprintBacklog()}</li>
-			<li>Define {done()} for your team and assign each {userStory()} to a single team member </li>
-			<li>Complete your immutable sprint {sprint} backlog and commit as a team to delivering the {sprintBacklog()}</li>
+			<li>**The theme for sprint 8 is to fully transition the product to the product’s ongoing delivery team</li>
+			<li>Finalize and fully groom your single integrated Product Backlog</li>
+			<li>Complete Sprint 8 Planning including the team’s immutable Sprint 8 Backlog... be very conservative</li>
+			<li>Complete Sprint 8 initial Metrics including individual story commitments</li>
 		</ol>
 
 		<em>Requirement 3</em>
 		<p>Execute sprint {sprint}:</p>
 		<ol>
-			<li>Verify that each team member is committed to delivering User Stories that are estimated at least {effort} hours effort</li>
-			<li>Develop, unit test, and deploy committed User Stories</li>
-			<li>Verify that each story that is complete meets your team’s definition of {done()}</li>
-			<li>Complete any production version upgrade conversions verifying that production data from previous version is not lost</li>
+			<li>**Focus on completing the product’s transition to the ongoing delivery team</li>
+			<li>List the ongoing Scrum Master and Product Owner</li>
+			<li>Deliver, test, and demo each story</li>
+			<li>Promptly update Sprint 8 Backlog to reflect current story status including “done” throughout the sprint</li>
+			<li>Complete final Sprint 8 Backlog including final story status including “done”</li>
+			<li>Complete Sprint 8 Metrics including {capacityCommittedEffortDeliveredLink()}</li>
 		</ol>
 
-		<em>Requirement 4</em>
-		<p>Test stories, deploy to production, CI/CD, story sign-off, and Metrics:</p>
+		<h6>Requirement 4: Complete Product Backlog grooming:</h6>
 		<ol>
-			<li>System test your stories in the development and production environments</li>
-			<li>Acceptance test one other team members stories in the development and production environments</li>
-			<li>Update CI/CD documentation so that it is verified current, maintained as MarkDown, and linked to README.md</li>
-			<li>Do <em>not</em> break the production environment</li>
-			<li>Review and sign-off on "Done" stories</li>
-			<li>Complete metrics including {capacityCommittedEffortDeliveredLink()}</li>
+			<li>Incorporates only valid stories in story format</li>
+			<li>Immutable unique identifier for each story</li>    
+			<li>Story point estimates for each “important” story based on “Done” and assuming that 1 story point ~ 1 hour effort</li>
+			<li>More estimated and “ready” stories included than your team can get Done in the next sprint</li>
+			<li>Each story must be deliverable in a single sprint</li>
+			<li>Only a “small” percentage of spikes</li>
+			<li>All stories must be force ranked</li>
 		</ol>
 	</div>)
 }

@@ -69,3 +69,17 @@ export const list44000Sprint01 = (sprint) => {
 // Certified for FA23 (08/24/23)
 
 // Todo: Reduce sprint 1 content and move quiz 1 to second Wednesday even though the second Monday is likely a holiday.
+// Todo: Consider updating and adding the following Architecture videos back into the class:
+//	import { architecturePart1, architecturePart2 } from '../DataAndAPIs/Links'
+// <li>Complete {architecturePart1()}</li>
+// <li>Scan {architecturePart2()}</li>
+
+// Consider adding https://www.youtube.com/watch?v=A-H-xZ5ZXgo
+
+
+
+// Todo: Consider adding back in Architecture lecture or removing SQL questions from quiz.
+// Todo: Make sure that in sprints 7 & 8 that “individual” lab questions are identified. 
+// Todo: Review Zac’s quiz and update quiz 7. 
+// Todo: Consider '<li>Complete {AzureFunctionsWithVSCodeAndJavaScript()} and build your <em>personal</em> serverless function</li>'
+// Todo: Consider '<li>Within {oreillyPlaylistSE()} search for “Azure Functions” and “Serverless Computing” and document the best resources</li>'

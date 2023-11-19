@@ -20,7 +20,7 @@ export const al44000Sprint07 = () => {
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
-			<li>Utilize your knowledge of Agile development and SaaS to deliver sprint backlog stories</li>
+			<li>Utilize your knowledge of Agile development and SaaS to deliver a class product that you are proud of creating</li>
 			<li>Understand Design Patterns with a particular focus on the Model-View-Controller pattern</li>
 			<li>Understand basic React application in Azure</li>
 		</ul>
@@ -50,9 +50,6 @@ export const list44000Sprint07 = (sprint) => {
 }
 
 // Certified for SP22 (04/08/2022)
-// Todo: Consider adding back in Architecture lecture or removing SQL questions from quiz.
-// Todo: Make sure that in sprints 7 & 8 that “individual” lab questions are identified. 
-// Todo: Review Zac’s quiz and update quiz 7. 
-// Todo: Consider '<li>Complete {AzureFunctionsWithVSCodeAndJavaScript()} and build your <em>personal</em> serverless function</li>'
-// Todo: Consider '<li>Within {oreillyPlaylistSE()} search for “Azure Functions” and “Serverless Computing” and document the best resources</li>'
+// Certified for FA23 (11/19/2023)
+
 
