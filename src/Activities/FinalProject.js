@@ -60,7 +60,7 @@ are <em>greater in complexity</em> than features we delivered in previous applic
 </div> )
 }
 
-const FINAL_PROJECT_DISTRIBUTED_NAME = 'Final Project version 1'
+const FINAL_PROJECT_DISTRIBUTED_NAME = 'Class Project'
 export const FINAL_PROJECT_DISTRIBUTED_ROUTE = 'final-project-distributed'
 export const finalProjectDistributedLink = () => { return makeActivityLink(FINAL_PROJECT_DISTRIBUTED_NAME, FINAL_PROJECT_DISTRIBUTED_ROUTE) }
 export const finalProjectDistributed = () => { 
@@ -120,7 +120,7 @@ export const finalProjectDistributed = () => {
 	</div> )
 }
 
-const FINAL_PROJECT_DISTRIBUTED_V2_NAME = 'Final Project version 2'
+const FINAL_PROJECT_DISTRIBUTED_V2_NAME = 'Class Project Sprint 8'
 export const FINAL_PROJECT_DISTRIBUTED_V2_ROUTE = 'final-project-distributed-v2'
 export const finalProjectDistributedV2Link = () => { return makeActivityLink(FINAL_PROJECT_DISTRIBUTED_V2_NAME, FINAL_PROJECT_DISTRIBUTED_V2_ROUTE) }
 export const finalProjectDistributedV2 = () => { 

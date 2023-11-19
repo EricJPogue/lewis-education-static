@@ -7,7 +7,7 @@ import { finalProjectDistributedV2Link } from '../Activities/FinalProject';
 export const al24700Sprint08 = () => {
 	const sprint = 8
 	return ( <div>
-		<h5>Sprint 8: Final Project</h5>
+		<h5>Sprint 8: Class Project and Class Project Presentation</h5>
 
 		<p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 
 		strong and deliver a Final Project that makes you proud. Don’t do it for me, don’t do it for the grade, do it for 
@@ -16,8 +16,7 @@ export const al24700Sprint08 = () => {
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Deliver a sophisticated Full Stack Web application utilizing HTML, CSS, JavaScript, Node.js, MongoDB, and Microsoft Azure</li>
-			<li>Explore leading edge web development technology trends and determine where you would like to focus your future learning 
-				efforts</li>
+			<li>Present your Class Project to your classmates and instructor</li>
 		</ul>  
 
 		{list24700Sprint08(sprint)}
@@ -30,7 +29,7 @@ export const list24700Sprint08 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, finalProjectDistributedV2Link(), oreillyPlaylistWeb())}
-			{standardActivitiesClosing(sprint, finalProjectDistributedV2Link(), '12 hours')}
+			{standardActivitiesClosing(sprint, finalProjectDistributedV2Link(), '4 hours')}
 		</ol>
 	</div> )
 }
