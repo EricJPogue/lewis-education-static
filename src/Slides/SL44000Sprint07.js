@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_4of6_PAaA, xyz_n_5of6, tNoClassToday } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_4of6_PAaA, xyz_n_5of6 } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
 import { se_8_1of6_PAaA } from './SL44000Sprint08'
@@ -19,6 +19,8 @@ import { breakoutStandard } from './SLSprint00'
 import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
 import { list44000Sprint07 } from '../ActivityLists/AL44000Sprint07'
 
+import { xyz_n_1of6 } from './SL00000Sprint00'
+
 // Software Engineering (SE) sprint 7 global values.
 const sprint = 7
 const activityListPrevious = () => { return list44000Sprint06(sprint-1) }
@@ -26,7 +28,18 @@ const activityList = () => { return list44000Sprint07(sprint) }
 
 // Session 1 of 6: Monday
 export const se_7_1of6_PAaA = xyz_n_1of6_lists(sprint)
-export const se_7_1of6 = () => { return [ tNoClassToday ] }
+export const se_7_1of6 = () => { 
+	const sprintPlanning = () => {
+		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
+			'Similar to previous sprints only in that it has a Discussion, Quiz, Lab, and Reflection',
+			'Everything else about sprint 7 is different from other sprints',
+			`Sprint ${sprint} is different that sprint ${sprint} has ever been in the past`,
+			`Sprint ${sprint+1} is connected with sprint ${sprint}`,
+			'I will be looking for your feedback on if these are good changes' ])
+	}
+
+	return xyz_n_1of6(sprint, se_7_1of6_PAaA.prework, activityListPrevious, se_7_1of6_PAaA.agenda, se_7_4of6_PAaA.prework, activityList, sprintPlanning) 
+}
 
 // Session 2 of 6: Wednesday
 export const se_7_2of6_PAaA = xyz_n_1of6_lists(sprint)

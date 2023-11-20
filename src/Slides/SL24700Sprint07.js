@@ -18,14 +18,15 @@ const activityList = () => { return list24700Sprint07(sprint) }
 export const web_7_1of6_lists = xyz_n_1of6_lists(sprint)
 export const web_7_1of6 = () => { 
 	const sprintPlanning = () => {
-		return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
-			'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
-			'Not having class on Wednesday or Friday will be challenging',
-			'We will complete our scrum team Discussion Board next Monday',
-			`We will also have our sprint ${sprint-1} Demos and Retrospective next Monday` ])
+		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
+			'Similar to previous sprints only in that it has a Discussion, Quiz, Lab, and Reflection',
+			'Everything else about sprint 7 is different from other sprints',
+			`Sprint ${sprint} is different that sprint ${sprint} has ever been in the past`,
+			`Sprint ${sprint+1} is connected with sprint ${sprint}`,
+			'I will be looking for your feedback on if these are good changes' ])
 	}
 
-	return xyz_n_1of6(sprint, web_7_1of6_lists.prework, activityListPrevious, web_7_1of6_lists.agenda, web_7_4of6_lists.prework, activityList, sprintPlanning()) 
+	return xyz_n_1of6(sprint, web_7_1of6_lists.prework, activityListPrevious, web_7_1of6_lists.agenda, web_7_4of6_lists.prework, activityList, sprintPlanning) 
 }
 
 // Sprint 7 session 2 of 6: Wednesday
