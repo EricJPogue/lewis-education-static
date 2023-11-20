@@ -87,7 +87,7 @@ export class SprintClassActivities extends Component {
 		'FirstWednesday':  'No class: Thanksgiving Holiday',
 		'FirstFriday':     'No class: Thanksgiving Holiday',
 		'SecondMonday':    'Discussion Board & Lab',
-		'SecondWednesday': 'Topic Discussion',
+		'SecondWednesday': 'Demos, Retrospective, and Topic Discussion',
 		'SecondFriday':    'Quiz 7',
 		'ThirdMonday':	   'Lab',
 		'ThirdWednesday':  'Quiz 8 (in-person attendance required)',
