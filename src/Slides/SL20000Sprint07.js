@@ -1,5 +1,6 @@
-import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_4of6_PAaA, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6, tNoClassToday } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_4of6_PAaA, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, tDiscussionBreakout, breakoutStandard } from './SLSprint00'
+import { tNoClassToday } from './SL00000Sprint00'
 
 import { ics_8_1of6_PAaA } from './SL20000Sprint08'
 
@@ -20,11 +21,37 @@ const activityList = () => { return list20000Sprint07(sprint) }
 
 // Session 1 of 6: Monday
 export const ics_7_1of6_PAaA = xyz_n_1of6_lists(sprint)
-export const ics_7_1of6 = () => { return [ tNoClassToday ] }
+export const ics_7_1of6 = () => { 
+	const sprintPlanning = () => {
+		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
+			'Similar to previous sprints only in that it has a Discussion, Quiz, Lab, and Reflection',
+			'Everything else about sprint 7 is different from other sprints',
+			`Sprint ${sprint} is different that sprint ${sprint} has ever been in the past`,
+			`Sprint ${sprint+1} is connected with sprint ${sprint}`,
+			'I will be looking for your feedback on if these are good changes' ])
+	}
+
+	return xyz_n_1of6(sprint, ics_7_1of6_PAaA.prework, activityListPrevious, ics_7_1of6_PAaA.agenda, ics_7_4of6_PAaA.prework, activityList, sprintPlanning) 
+}
 
 // Session 2 of 6: Wednesday
-export const ics_7_2of6_PAaA = xyz_n_1of6_lists(sprint)
-export const ics_7_2of6 = () => { 
+export const ics_7_2of6_PAaA = {
+	'prework':[
+		'Recognize that there is no class Wednesday or Friday', '',
+		`Decide. Do you want to be done with sprints ${sprint} & ${sprint+1} at the end of sprint ${sprint}... this will take work over the break`,
+		'Be prepared for Discussion Board & Lab on Monday' ],
+	'announcements':[ 
+		'TBD' ],
+	'agenda':[
+		`Discussion Board ${sprint} as a scrum team`,
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		'Lab' ]
+}
+export const ics_7_2of6 = () => { return [ tNoClassToday ] }
+
+/*
+=> { 
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
 			'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
@@ -36,7 +63,7 @@ export const ics_7_2of6 = () => {
 
 	return xyz_n_1of6(sprint, ics_7_1of6_PAaA.prework, activityListPrevious, ics_7_1of6_PAaA.agenda, ics_7_4of6_PAaA.prework, activityList, sprintPlanning) 
 }
-
+*/
 // Session 3 of 6: Friday
 const ics_7_3of6_PAaA = {
 	'prework':[

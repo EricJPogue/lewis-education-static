@@ -33,7 +33,7 @@ export const al20000Sprint07 = () => {
 		<p><i>What will you do with all that power... and responsibility?</i></p>
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
-			<li>Deliver something uniquely your own in the the form of your Class Project</li>
+			<li>Deliver something uniquely your own that makes you proud</li>
 			<li>Understand Computer Security</li>
 		</ul>
 
@@ -62,5 +62,6 @@ export const list20000Sprint07 = () => {
 
 // Certified for SP22 (04/05/2022)
 // Certified for FA22 (11/30/2022)
+// Certified for FA23 (11/19/2023)
 
 
