@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_4of6_PAaA, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, tDiscussionBreakout, breakoutStandard } from './SLSprint00'
 import { tNoClassToday } from './SL00000Sprint00'
 
@@ -50,20 +50,6 @@ export const ics_7_2of6_PAaA = {
 }
 export const ics_7_2of6 = () => { return [ tNoClassToday ] }
 
-/*
-=> { 
-	const sprintPlanning = () => {
-		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
-			'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
-			'We missed Monday due to the Easter Holiday recess which is challenging',
-			'Demos will be occurring Friday... including Aidan',
-			'We will complete our scrum team Discussion Board on Friday',
-			`We will have sprint ${sprint-1} Retrospective on Friday also if possible` ])
-	}
-
-	return xyz_n_1of6(sprint, ics_7_1of6_PAaA.prework, activityListPrevious, ics_7_1of6_PAaA.agenda, ics_7_4of6_PAaA.prework, activityList, sprintPlanning) 
-}
-*/
 // Session 3 of 6: Friday
 const ics_7_3of6_PAaA = {
 	'prework':[
@@ -117,13 +103,23 @@ export const ics_7_3of6 = () => {
 }
 
 // Sprint 7 session 4 of 6: Monday
-const ics_7_4of6_PAaA = xyz_n_4of6_PAaA(sprint, 
-	'Complete through activity 7 prior to next class', 
-	'Project Management, Scrum, Pairs, and Version Control')
+const ics_7_4of6_PAaA = {
+	'prework':[
+		'Complete through activity 5 prior to next class', '',
+		`Be prepared Discussion Board ${sprint}`,
+		'Be prepared Lab' ],
+	'announcements':[ 
+		'You need to have a solid start on your Class Project by Wednesday if you intend to present it at the end of sprint 7' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		`Discussion Board ${sprint} as a scrum team`,
+		'Lab' ]
+}
+
 export const ics_7_4of6 = () => { 
 	const breakout = () => { 
 		return breakoutStandard( 
-			'Breakout: Security', 
+			'Breakout: Security... next class', 
 			'In this breakout session we will explore Security:', [
 				'Information Security and Confidentiality, Availability, and Integrity',
 				'Access, Authentication, Authorization, CAPTCHA',
@@ -143,8 +139,9 @@ const ics_7_5of6_PAaA = {
 		'Any Announcements?' ],
 	'prework':[
 		'Complete through activity 8 prior to next class', '',
+		'Be prepared for Demos and Retrospectives',
 		'Be prepared for Security Breakout',
-		`Be prepared for Quiz ${sprint}` ],
+		 ],
 	'agenda': [
 		'Security Breakout',
 		'Lab & Programming Together',
@@ -175,6 +172,7 @@ export const ics_7_5of6 = () => {
 const ics_7_6of6_PAaA = {
 	'prework':[
 		`All sprint ${sprint} assignments due Sunday!`, '',
+		`Be prepared for Quiz ${sprint}`,
 		'Be prepared for Programming Together' ],
 	'announcements':[ 
 		`Monday starts sprint ${sprint}` ],
