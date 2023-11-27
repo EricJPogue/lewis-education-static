@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_4of6_PAaA, xyz_n_5of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
 import { se_8_1of6_PAaA } from './SL44000Sprint08'
@@ -129,13 +129,23 @@ export const se_7_3of6 = () => {
 }
 
 // Sprint 7 session 4 of 6: Monday
-const se_7_4of6_PAaA = xyz_n_4of6_PAaA(sprint, 
-	'Complete through activity 8 prior to next class', 
-	'Project Management, Scrum, Pairs, and Version Control')
+const se_7_4of6_PAaA = {
+	'prework':[
+		'Complete through activity 8 prior to next class', '',
+		`Be prepared Discussion Board ${sprint}`,
+		'Be prepared Lab' ],
+	'announcements':[ 
+		'You need to have a solid start on your Class Project by Wednesday if you intend to present it at the end of sprint 7' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		`Discussion Board ${sprint} as a scrum team`,
+		'Lab' ]
+}
+
 export const se_7_4of6 = () => { 
 	const breakout = () => { 
 		return breakoutStandard( 
-			'Breakout: Project Management, Scrum, Pairs, and Version Control', 
+			'Breakout: Project Management, Scrum, Pairs, and Version Control... next class', 
 			'In this breakout session we will explore Project Management, Scrum, Pairs, and Version Control:', [
 				'Team sizes, SDLCs, and key Scrum Roles & Rituals',
 				'Project Managers, Project Management, and the Six Phases of a Project',
@@ -153,8 +163,8 @@ export const se_7_4of6 = () => {
 // Sprint 7 session 5 of 6: Wednesday
 const se_7_5of6_PAaA = {
 	'prework':[
-		'Complete through activity 9 prior to next class', '',
-		`Be prepared for Lab & Quiz ${sprint}` ],
+		'Complete through activity 8 prior to next class', '',
+		'Project Management, Scrum, Pairs, and Version Control Breakout' ],
 	'announcements':[ 
 		`Monday is sprint ${sprint+1} planning with in-person attendance required`,
 		'In retrospect several Quiz 6 questions were really bad questions', 

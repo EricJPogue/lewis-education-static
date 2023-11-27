@@ -140,8 +140,7 @@ const ics_7_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 8 prior to next class', '',
 		'Be prepared for Demos and Retrospectives',
-		'Be prepared for Security Breakout',
-		 ],
+		'Be prepared for Security Breakout' ],
 	'agenda': [
 		'Security Breakout',
 		'Lab & Programming Together',

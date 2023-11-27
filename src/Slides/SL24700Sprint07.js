@@ -9,6 +9,8 @@ import { breakoutStandard } from './SLSprint00'
 import { list24700Sprint06 } from '../ActivityLists/AL24700Sprint06'
 import { list24700Sprint07 } from '../ActivityLists/AL24700Sprint07'
 
+import { xyz_n_4of6 } from './SL00000Sprint00'
+
 // Introduction to Computer Science (ICS) sprint 6 global values.
 const sprint = 7
 const activityListPrevious = () => { return list24700Sprint06(sprint-1) }
@@ -35,6 +37,41 @@ export const web_7_2of6 = () => { return [ tNoClassToday ] }
 // Sprint 7 session 3 of 6: Friday
 export const web_7_3of6 = () => { return [ tNoClassToday ] }
 
+
+// Sprint 7 session 4 of 6: Monday
+const web_7_4of6_PAaA = {
+	'prework':[
+		'Complete through activity 8 prior to next class', '',
+		`Be prepared Discussion Board ${sprint}`,
+		'Be prepared Lab' ],
+	'announcements':[ 
+		'You need to have a solid start on your Class Project by Wednesday if you intend to present it at the end of sprint 7' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		`Discussion Board ${sprint} as a scrum team`,
+		'Lab' ]
+}
+
+export const web_7_4of6 = () => { 
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Project Management, Scrum, Pairs, and Version Control... next class', 
+			'In this breakout session we will explore Project Management, Scrum, Pairs, and Version Control:', [
+				'Team sizes, SDLCs, and key Scrum Roles & Rituals',
+				'Project Managers, Project Management, and the Six Phases of a Project',
+				'Priority of specialized vs generalized skills in Agile vs Waterfall or Iterative',
+				'Configuration management, version control, merge conflicts, and branching',
+				'Reporting and fixing bugs: The five R’s', 
+				'Paired Programming',
+				'The two most important books about managing people (according to the authors)' ]
+		)
+	}
+	
+	return xyz_n_4of6(sprint, web_7_4of6_PAaA, web_7_4of6_lists.prework, activityList, breakout)
+}
+
+
+
 // Sprint 7 session 4 of 6: Monday
 const web_7_4of6_lists = {
 	'announcements':[ 
@@ -50,7 +87,8 @@ const web_7_4of6_lists = {
 		`Discussion Board ${sprint} as a scrum team`,
 		'Prework for Next Class' ]
 }
-export const web_7_4of6 = () => { 
+
+export const web_7_4of6X = () => { 
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
 			{ name: 'Discussion', due:11, submitted:10 },
