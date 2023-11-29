@@ -1,4 +1,4 @@
-import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_5of6, xyz_n_1of6, xyz_n_6of6 } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_1of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, tDiscussionBreakout, breakoutStandard } from './SLSprint00'
 import { tNoClassToday } from './SL00000Sprint00'
 
@@ -13,6 +13,8 @@ import { tDemos } from './SL00000Sprint00'
 
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
+
+import { getClass } from '../DataAndAPIs/Classes'
 
 // Introduction to Computer Science (ICS) sprint 7 global values.
 const sprint = 7
@@ -136,15 +138,15 @@ export const ics_7_4of6 = () => {
 // Sprint 7 session 5 of 6: Wednesday
 const ics_7_5of6_PAaA = {
 	'announcements':[ 
-		'Any Announcements?' ],
+		'I need to know if you are likely to be ready to demo your class project next Friday' ],
 	'prework':[
 		'Complete through activity 8 prior to next class', '',
 		'Be prepared for Demos and Retrospectives',
 		'Be prepared for Security Breakout' ],
 	'agenda': [
-		'Security Breakout',
-		'Lab & Programming Together',
-		`Quiz ${sprint}` ]
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		'Security Breakout' ]
 }
 export const ics_7_5of6 = () => { 
 	const breakout = () => { 
@@ -160,14 +162,37 @@ export const ics_7_5of6 = () => {
 		)
 	}
 
-	const slides = xyz_n_5of6(sprint, ics_7_5of6_PAaA, ics_7_6of6_PAaA.prework, activityList)
-	const agendaSlide = 3
-	slides.splice(agendaSlide+1, 0, breakout)
-	return slides 
+	const metricsSubmissionPercentage = () => {
+		if (getClass().section === '002') {
+			return submissionPercentage([
+				{ name: 'Discussion', due:27, submitted:26 },
+				{ name: 'Quiz', due:27, submitted:27 },
+				{ name: 'Lab', due:27, submitted:25 },
+				{ name: 'Reflection', due: 27, submitted: 25 }])
+		}
+		else {
+			return submissionPercentage([
+				{ name: 'Discussion', due:24, submitted:23 },
+				{ name: 'Quiz', due:24, submitted:23 },
+				{ name: 'Lab', due:24, submitted:23 },
+				{ name: 'Reflection', due: 24, submitted: 23 }])
+		}
+	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+		'Feedback from Assignments & Reflections', [
+		'Solid submission percentage',
+		'Grading is a work in process', 
+		'Let’s make our final push to deliver a class project that we can be proud of delivering' ])
+	}
+
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_5of6_PAaA, sprint, activityList)
+	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_4of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ sprintDemosIntro, sprintDemos, tDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
 // Sprint 7 session 6 of 6: Friday
-
 const ics_7_6of6_PAaA = {
 	'prework':[
 		`All sprint ${sprint} assignments due Sunday!`, '',
