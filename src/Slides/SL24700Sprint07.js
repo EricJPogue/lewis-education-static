@@ -11,6 +11,15 @@ import { list24700Sprint07 } from '../ActivityLists/AL24700Sprint07'
 
 import { xyz_n_4of6 } from './SL00000Sprint00'
 
+import { demoAssignment } from './SLSprint00'
+import { tDemos } from './SL00000Sprint00'
+import { sprintDemos } from './SLSprint00'
+import { completeDeck } from './SL00000Sprint00'
+import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
+import { retrospectiveIntroduction } from './SLSprint00'
+import { tPrework } from './SLSprint00'
+import { sprintDemosIntro } from './SLSprint00'
+
 // Introduction to Computer Science (ICS) sprint 6 global values.
 const sprint = 7
 const activityListPrevious = () => { return list24700Sprint06(sprint-1) }
@@ -132,7 +141,7 @@ const web_7_5of6_lists = {
 		'Lab and Programming Together',
 		`Quiz ${sprint}` ]
 }
-export const web_7_5of6 = () => { 
+export const web_7_5of6X = () => { 
 	const breakout = () => { 
 		return breakoutStandard( 
 			'Breakout: Angular, React, and Vue', 
@@ -161,3 +170,53 @@ const web_7_6of6_lists = {
 		'Global Software Development / Practical Diversity' ]
 }
 export const web_7_6of6 = () => { return xyz_n_6of6(sprint, web_7_6of6_lists, web_8_1of6_lists.prework, activityList) }
+
+
+// Sprint 7 session 5 of 6: Wednesday
+const ics_7_5of6_PAaA = {
+	'announcements':[ 
+		'I need to know if you are likely to be ready to demo your class project next Friday' ],
+	'prework':[
+		'Complete through activity 8 prior to next class', '',
+		'Be prepared for Demos and Retrospectives',
+		'Be prepared for Security Breakout' ],
+	'agenda': [
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		'Security Breakout' ]
+}
+export const web_7_5of6 = () => { 
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Security', 
+			'In this breakout session we will explore Security:', [
+				'Information Security and Confidentiality, Availability, and Integrity',
+				'Access, Authentication, Authorization, CAPTCHA',
+				'Malicious Code, Malware, Worms, Trojan Horses, Phishing, and DoS',
+				'Cryptography, Encryption/Decryption, ciphers, public-key cryptography, and digital signatures',
+				'Protecting Online Information',
+				'Security and Usability Tradeoffs' ]
+		)
+	}
+
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:10, submitted:9 },
+			{ name: 'Quiz', due:10, submitted:10 },
+			{ name: 'Lab', due:10, submitted:9 },
+			{ name: 'Reflection', due:10, submitted:8 }
+		])
+	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+		'Feedback from Assignments & Reflections', [
+		'Solid submission percentage',
+		'Grading is a work in process', 
+		'Let’s make our final push to deliver a class project that we can be proud of delivering' ])
+	}
+
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_5of6_PAaA, sprint, activityList)
+	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_7_4of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ sprintDemosIntro, sprintDemos, tDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
+}
