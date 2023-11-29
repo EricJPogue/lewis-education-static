@@ -210,7 +210,7 @@ export const web_7_5of6 = () => {
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 		'Feedback from Assignments & Reflections', [
-		'Solid submission percentage',
+		'Not a very good submission percentage',
 		'Grading is a work in process', 
 		'Let’s make our final push to deliver a class project that we can be proud of delivering' ])
 	}
