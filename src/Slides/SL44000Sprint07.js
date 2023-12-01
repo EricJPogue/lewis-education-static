@@ -1,8 +1,6 @@
 import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_5of6 } from './SL00000Sprint00'
 import { orderedListSlide } from './SLSprint00'
 
-import { se_8_1of6_PAaA } from './SL44000Sprint08'
-
 import { submissionPercentage, tPrework, retrospectiveIntroduction, basicSlideWithTitle } from './SLSprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 
@@ -25,6 +23,7 @@ import { sprintDemos } from './SLSprint00'
 import { sprintDemosIntro } from './SLSprint00'
 import { tDemos } from './SL00000Sprint00'
 import { demoAssignment } from './SLSprint00'
+import { tQuiz } from './SLSprint00'
 
 // Software Engineering (SE) sprint 7 global values.
 const sprint = 7
@@ -188,7 +187,7 @@ export const se_7_5of6X = () => {
 				`What is the appropriate individual and team capacity for sprint ${sprint+1}?` ]) 
 
 	}
-	const slides = xyz_n_5of6(sprint, se_7_5of6_PAaA, se_7_6of6_lists.prework, activityList)
+	const slides = xyz_n_5of6(sprint, se_7_5of6_PAaA, se_7_6of6_PAaA.prework, activityList)
 	const agendaSlide = 3
 	slides.splice(agendaSlide+1, 0, backlogGrooming)
 	return slides 
@@ -244,6 +243,7 @@ export const se_7_5of6 = () => {
 
 
 
+/*
 // Sprint 7 session 6 of 6: Friday
 const se_7_6of6_lists = {
 	'prework':[
@@ -272,7 +272,32 @@ export const se_7_6of6 = () => {
 	const insertIndex = 5
 	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), insertIndex)
  }
+*/
+ // Sprint 7 session 6 of 6: Friday
+const se_7_6of6_PAaA = {
+	'prework':[
+		`Be prepared for Quiz ${sprint}`,
+		'Be prepared for Lab' ],
+	'announcements':[ 
+		'Monday is Lab and Programming Together' ],
+	'agenda':[
+		'Sprint Progress Polling', 
+		'Quiz',
+		'Lab & Programming Together' ]
+}
+export const se_7_6of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_6of6_PAaA, sprint, activityList)
+	const quiz = () => { return tQuiz(sprint) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', tWeb_7_7of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ quiz, tLab, preworkNext]) 
+}
 
- 
-
- 
+const tWeb_7_7of6_PAaA = {
+	'prework':[
+		'Be prepared for Lab' ],
+	'announcements':[ 
+		'Wednesday is required in-person Quiz 8' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together' ]
+}

@@ -194,7 +194,6 @@ export const ics_7_5of6 = () => {
 // Sprint 7 session 6 of 6: Friday
 const ics_7_6of6_PAaA = {
 	'prework':[
-		`All sprint ${sprint} assignments due Sunday!`, '',
 		`Be prepared for Quiz ${sprint}`,
 		'Be prepared for Lab' ],
 	'announcements':[ 
@@ -207,6 +206,6 @@ const ics_7_6of6_PAaA = {
 export const ics_7_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_6of6_PAaA, sprint, activityList)
 	const quiz = () => { return tQuiz(sprint) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_4of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_5of6_PAaA.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ quiz, tLab, preworkNext]) 
 }

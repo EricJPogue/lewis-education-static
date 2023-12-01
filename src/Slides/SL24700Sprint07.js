@@ -20,6 +20,9 @@ import { retrospectiveIntroduction } from './SLSprint00'
 import { tPrework } from './SLSprint00'
 import { sprintDemosIntro } from './SLSprint00'
 
+import { tQuiz } from './SLSprint00'
+import { tLab } from './SL00000Sprint00'
+
 // Introduction to Computer Science (ICS) sprint 6 global values.
 const sprint = 7
 const activityListPrevious = () => { return list24700Sprint06(sprint-1) }
@@ -124,9 +127,6 @@ export const web_7_4of6X = () => {
 	return slides
 }
 
-
-
-
 // Sprint 7 session 5 of 6: Wednesday
 const web_7_5of6_lists = {
 	'announcements':[ 
@@ -219,4 +219,33 @@ export const web_7_5of6 = () => {
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const preworkNext = () => { return tPrework('Prework For Next Class', web_7_4of6_PAaA.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ sprintDemosIntro, sprintDemos, tDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
+}
+
+// Sprint 7 session 6 of 6: Friday
+const tWeb_7_6of6_PAaA = {
+	'prework':[
+		`Be prepared for Quiz ${sprint}`,
+		'Be prepared for Lab' ],
+	'announcements':[ 
+		'Monday is Lab and Programming Together' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Quiz',
+		'Lab & Programming Together' ]
+}
+export const tWeb_7_6of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(tWeb_7_6of6_PAaA, sprint, activityList)
+	const quiz = () => { return tQuiz(sprint) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', tWeb_7_7of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ quiz, tLab, preworkNext]) 
+}
+
+const tWeb_7_7of6_PAaA = {
+	'prework':[
+		'Be prepared for Lab' ],
+	'announcements':[ 
+		'Wednesday is required in-person Quiz 8' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together' ]
 }

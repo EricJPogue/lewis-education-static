@@ -1,3 +1,5 @@
+/*
+
 import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_2of6, xyz_n_3of6, xyz_n_4of6, xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, breakoutStandard } from '../Slides/SLSprint00'
 
@@ -118,3 +120,5 @@ const web_6_6of6_lists = {
 		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
 }
 export const web_6_6of6 = () => { return xyz_n_6of6(sprint, web_6_6of6_lists, web_7_1of6_lists.prework, activityList) }
+
+*/
