@@ -21,6 +21,11 @@ import { list44000Sprint07 } from '../ActivityLists/AL44000Sprint07'
 
 import { xyz_n_1of6 } from './SL00000Sprint00'
 
+import { sprintDemos } from './SLSprint00'
+import { sprintDemosIntro } from './SLSprint00'
+import { tDemos } from './SL00000Sprint00'
+import { demoAssignment } from './SLSprint00'
+
 // Software Engineering (SE) sprint 7 global values.
 const sprint = 7
 const activityListPrevious = () => { return list44000Sprint06(sprint-1) }
@@ -174,7 +179,7 @@ const se_7_5of6_PAaA = {
 		'Lab',
 		`Quiz ${sprint}` ]
 }
-export const se_7_5of6 = () => {
+export const se_7_5of6X = () => {
 	const backlogGrooming = () => {
 		return basicSlideWithTitle(
 			'Backlog Grooming', [
@@ -188,6 +193,56 @@ export const se_7_5of6 = () => {
 	slides.splice(agendaSlide+1, 0, backlogGrooming)
 	return slides 
 }
+
+// Sprint 7 session 5 of 6: Wednesday
+const ics_7_5of6_PAaA = {
+	'announcements':[ 
+		'I need to know if you are likely to be ready to demo your class project next Friday' ],
+	'prework':[
+		'Complete through activity 8 prior to next class', '',
+		'Be prepared for Best-of-the-Best Demos and Retrospectives' ],
+	'agenda': [
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		'Security Breakout' ]
+}
+export const se_7_5of6 = () => { 
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Security', 
+			'In this breakout session we will explore Security:', [
+				'Information Security and Confidentiality, Availability, and Integrity',
+				'Access, Authentication, Authorization, CAPTCHA',
+				'Malicious Code, Malware, Worms, Trojan Horses, Phishing, and DoS',
+				'Cryptography, Encryption/Decryption, ciphers, public-key cryptography, and digital signatures',
+				'Protecting Online Information',
+				'Security and Usability Tradeoffs' ]
+		)
+	}
+
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:13, submitted:13 },
+			{ name: 'Quiz', due:13, submitted:12 },
+			{ name: 'Lab', due:13, submitted:12 },
+			{ name: 'Reflection', due:13, submitted:12 }
+		])
+	}
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+		'Feedback from Assignments & Reflections', [
+		'Not a very good submission percentage',
+		'Grading is a work in process', 
+		'Let’s make our final push to deliver a class project that we can be proud of delivering' ])
+	}
+
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_5of6_PAaA, sprint, activityList)
+	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_4of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ sprintDemosIntro, sprintDemos, tDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
+}
+
+
 
 // Sprint 7 session 6 of 6: Friday
 const se_7_6of6_lists = {
@@ -217,5 +272,7 @@ export const se_7_6of6 = () => {
 	const insertIndex = 5
 	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), insertIndex)
  }
+
+ 
 
  
