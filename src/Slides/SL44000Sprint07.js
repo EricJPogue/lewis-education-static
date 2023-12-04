@@ -276,7 +276,6 @@ export const se_7_6of6 = () => {
  // Sprint 7 session 6 of 6: Friday
 const se_7_6of6_PAaA = {
 	'prework':[
-		`Be prepared for Quiz ${sprint}`,
 		'Be prepared for Lab' ],
 	'announcements':[ 
 		'Monday is Lab and Programming Together' ],
@@ -295,6 +294,23 @@ export const se_7_6of6 = () => {
 const tWeb_7_7of6_PAaA = {
 	'prework':[
 		'Be prepared for Lab' ],
+	'announcements':[ 
+		'Wednesday is required in-person Quiz 8' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together' ]
+}
+
+// Sprint 7 session 7 of 6: Monday
+export const se_7_7of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(tWeb_7_7of6_PAaA, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_8of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ tLab, preworkNext]) 
+}
+
+const se_7_8of6_PAaA = {
+	'prework':[
+		`Be prepared for Quiz ${sprint+1} in-person during class` ],
 	'announcements':[ 
 		'Wednesday is required in-person Quiz 8' ],
 	'agenda':[

@@ -246,6 +246,23 @@ const tWeb_7_7of6_PAaA = {
 	'announcements':[ 
 		'Wednesday is required in-person Quiz 8' ],
 	'agenda':[
+		'Review Class Project Presentation Schedule',
+		'Lab & Programming Together' ]
+}
+
+// Sprint 7 session 7 of 6: Monday
+export const tWeb_7_7of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(tWeb_7_7of6_PAaA, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', tWeb_7_8of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ tLab, preworkNext]) 
+}
+
+const tWeb_7_8of6_PAaA = {
+	'prework':[
+		`Be prepared for Quiz ${sprint+1} in-person during class` ],
+	'announcements':[ 
+		'Wednesday is required in-person Quiz 8' ],
+	'agenda':[
 		'Sprint Progress Polling',
 		'Lab & Programming Together' ]
 }
