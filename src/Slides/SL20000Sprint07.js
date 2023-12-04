@@ -194,7 +194,6 @@ export const ics_7_5of6 = () => {
 // Sprint 7 session 6 of 6: Friday
 const ics_7_6of6_PAaA = {
 	'prework':[
-		`Be prepared for Quiz ${sprint}`,
 		'Be prepared for Lab' ],
 	'announcements':[ 
 		'Monday is Lab and Programming Together' ],
@@ -208,4 +207,30 @@ export const ics_7_6of6 = () => {
 	const quiz = () => { return tQuiz(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_5of6_PAaA.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ quiz, tLab, preworkNext]) 
+}
+
+// Sprint 7 session 6 of 6: Friday
+const ics_7_7of6_PAaA = { 
+	'prework':[
+		'Be prepared for Lab' ],
+	'announcements':[ 
+		'Wednesday is Quiz 8 (in-person attendance required)' ],
+	'agenda':[
+		'Confirm Friday class project presentation schedule',
+		'Lab & Programming Together' ]
+}
+export const ics_7_7of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_7of6_PAaA, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_8of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ tLab, preworkNext]) 
+}
+
+const ics_7_8of6_PAaA = { 
+	'prework':[
+		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		'Friday is class project presentations (remote)' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Quiz' ]
 }

@@ -10,7 +10,7 @@ import { ics_3_1of6, ics_3_2of6, ics_3_3of6, ics_3_4of6, ics_3_5of6, ics_3_6of6 
 import { ics_4_1of6, ics_4_2of6, ics_4_3of6, ics_4_4of6, ics_4_5of6, ics_4_6of6 } from './SL20000Sprint04'
 import { ics_5_1of6, ics_5_2of6, ics_5_3of6, ics_5_4of6, ics_5_5of6, ics_5_6of6 } from './SL20000Sprint05'
 import { ics_6_1of6, ics_6_2of6, ics_6_3of6, ics_6_4of6, ics_6_5of6, ics_6_6of6 } from './SL20000Sprint06'
-import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6 } from './SL20000Sprint07'
+import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6, ics_7_7of6 } from './SL20000Sprint07'
 import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6, ics_8_7of6 } from './SL20000Sprint08'
 
 import { tWeb_7_6of6 } from './SL24700Sprint07'
@@ -22,9 +22,9 @@ import { se_4_1of6, se_4_2of6, se_4_3of6, se_4_4of6, se_4_5of6, se_4_6of6 } from
 import { se_5_1of6, se_5_2of6, se_5_3of6, se_5_4of6, se_5_5of6, se_5_6of6 } from './SL44000Sprint05'
 import { se_6_1of6, se_6_2of6, se_6_3of6, se_6_4of6, se_6_5of6, se_6_6of6 } from './SL44000Sprint06'
 import { se_7_1of6, se_7_2of6, se_7_3of6, se_7_4of6, se_7_5of6, se_7_6of6 } from './SL44000Sprint07'
-import { se_8_1of6, se_8_2of6, se_8_3of6, se_8_4of6, se_8_5of6, se_8_6of6, se_8_7of6 } from './SL44000Sprint08'
+import { se_8_1of6, se_8_2of6, se_8_3of6, se_8_4of6, se_8_5of6, se_8_6of6 } from './SL44000Sprint08'
 
-import { ssc_1_1of4, ssc_1_2of4, ssc_1_3of4, ssc_1_4of4 } from './SL49200Sprint01'
+import { ssc_1_1of4, ssc_1_2of4, ssc_1_3of4, ssc_1_4of4 } from './SL49200Sprint01' 
 import { ssc_2_1of4, ssc_2_3of4 } from './SL49200Sprint02'
 import { ssc_3_1of1 } from './SL49200Sprint03'
 
@@ -104,6 +104,7 @@ const sprintRouter = (route) => {
 		case '20000-7-4': return ics_7_4of6()
 		case '20000-7-5': return ics_7_5of6()
 		case '20000-7-6': return ics_7_6of6()
+		case '20000-7-7': return ics_7_7of6()
 
 		case '20000-8-1': return ics_8_1of6()
 		case '20000-8-2': return ics_8_2of6()
@@ -170,7 +171,6 @@ const sprintRouter = (route) => {
 		case '44000-8-4': return se_8_4of6()
 		case '44000-8-5': return se_8_5of6()
 		case '44000-8-6': return se_8_6of6()
-		case '44000-8-7': return se_8_7of6()
 
 		case '49200-1-1': return ssc_1_1of4()
 		case '49200-1-2': return ssc_1_2of4()
