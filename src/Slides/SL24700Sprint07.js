@@ -22,6 +22,7 @@ import { sprintDemosIntro } from './SLSprint00'
 
 import { tQuiz } from './SLSprint00'
 import { tLab } from './SL00000Sprint00'
+import { basicSlide } from './SLSprint00'
 
 // Introduction to Computer Science (ICS) sprint 6 global values.
 const sprint = 7
@@ -257,12 +258,42 @@ export const tWeb_7_7of6 = () => {
 	return completeDeck(slideDeck, [ tLab, preworkNext]) 
 }
 
-const tWeb_7_8of6_PAaA = {
+const tWeb_7_8of6_PAaA = { 
 	'prework':[
-		`Be prepared for Quiz ${sprint+1} in-person during class` ],
+		`Be prepared for Quiz ${sprint+1} (final exam)` ],
 	'announcements':[ 
-		'Wednesday is required in-person Quiz 8' ],
+		'Friday is Class Project presentations in classroom plus remote' ],
 	'agenda':[
-		'Sprint Progress Polling',
-		'Lab & Programming Together' ]
+		'Review Class Project Presentation Schedule',
+		`Quiz ${sprint+1} (final exam)` ] 
+}
+
+// Sprint 7 session 8 of 6: Wednesday
+export const web_7_8of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(tWeb_7_8of6_PAaA, sprint, activityList)
+	const reviewPresentationSchedule = () => { return basicSlide('Class Project Presentation Schedule', [
+		'Let’s take a last look at our presentation schedule for Friday and for next week.' ])}
+	const quiz = () => { return tQuiz(sprint+1) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_7_9of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ reviewPresentationSchedule, preworkNext, quiz]) 
+}
+
+const web_7_9of6_PAaA = { 
+	'prework':[
+		`Be prepared for a quick sprint ${sprint+1} planning review`,
+		'Be prepared for class project presentations in classroom plus remote' ],
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday`,
+		`All sprint ${sprint+1} assignment due Thursday next week`,
+		`If you are presenting today, your sprint ${sprint} and sprint ${sprint+1} assignments are due Sunday` ],
+	'agenda':[
+		`Brief review of sprint ${sprint+1} expectations`,
+		'Class Project presentations' ]
+}
+export const web_7_9of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(tWeb_7_8of6_PAaA, sprint, activityList)
+
+	const quiz = () => { return tQuiz(sprint+1) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', web_7_9of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ quiz, preworkNext]) 
 }

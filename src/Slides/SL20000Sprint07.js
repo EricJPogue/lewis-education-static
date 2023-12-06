@@ -228,11 +228,10 @@ export const ics_7_7of6 = () => {
 	return completeDeck(slideDeck, [ tLab, preworkNext]) 
 }
 
-// Sprint 7 session 8 of 6: Monday
+// Sprint 7 session 8 of 6: Wednesday
 const ics_7_8of6_PAaA = { 
 	'prework':[
-		`Be prepared for Quiz ${sprint+1} (final exam)`,
-		'Be prepared for class project presentations in classroom plus remote' ],
+		`Be prepared for Quiz ${sprint+1} (final exam)` ],
 	'announcements':[ 
 		'Friday is Class Project presentations in classroom plus remote' ],
 	'agenda':[

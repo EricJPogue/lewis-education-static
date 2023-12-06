@@ -308,12 +308,39 @@ export const se_7_7of6 = () => {
 	return completeDeck(slideDeck, [ tLab, preworkNext]) 
 }
 
-const se_7_8of6_PAaA = {
+// Sprint 7 session 8 of 6: Wednesday
+const se_7_8of6_PAaA = { 
 	'prework':[
-		`Be prepared for Quiz ${sprint+1} in-person during class` ],
+		`Be prepared for Quiz ${sprint+1} (final exam)` ],
 	'announcements':[ 
-		'Wednesday is required in-person Quiz 8' ],
+		'Friday is Class Project presentations in classroom plus remote' ],
 	'agenda':[
-		'Sprint Progress Polling',
-		'Lab & Programming Together' ]
+		'Review Class Project Presentation Schedule',
+		`Quiz ${sprint+1} (final exam)` ] 
+}
+export const se_7_8of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_8of6_PAaA, sprint, activityList)
+	const reviewPresentationSchedule = () => { return basicSlide('Class Project Presentation Schedule', [
+		'Let’s take a last look at our presentation schedule for Friday and for next week.' ])}
+	const quiz = () => { return tQuiz(sprint+1) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_9of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ reviewPresentationSchedule, preworkNext, quiz]) 
+}
+
+const se_7_9of6_PAaA = { 
+	'prework':[
+		`Be prepared for a quick sprint ${sprint} planning review` ],
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday`,
+		`All sprint ${sprint+1} assignment due Thursday next week` ],
+	'agenda':[
+		`Brief review of sprint ${sprint+1} expectations`,
+		'Class Project presentations' ]
+}
+export const se_7_9of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_8of6_PAaA, sprint, activityList)
+
+	const quiz = () => { return tQuiz(sprint+1) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_9of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ quiz, preworkNext]) 
 }
