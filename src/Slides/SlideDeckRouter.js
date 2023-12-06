@@ -10,7 +10,7 @@ import { ics_3_1of6, ics_3_2of6, ics_3_3of6, ics_3_4of6, ics_3_5of6, ics_3_6of6 
 import { ics_4_1of6, ics_4_2of6, ics_4_3of6, ics_4_4of6, ics_4_5of6, ics_4_6of6 } from './SL20000Sprint04'
 import { ics_5_1of6, ics_5_2of6, ics_5_3of6, ics_5_4of6, ics_5_5of6, ics_5_6of6 } from './SL20000Sprint05'
 import { ics_6_1of6, ics_6_2of6, ics_6_3of6, ics_6_4of6, ics_6_5of6, ics_6_6of6 } from './SL20000Sprint06'
-import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6, ics_7_7of6 } from './SL20000Sprint07'
+import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6, ics_7_7of6, ics_7_8of6, ics_7_9of6 } from './SL20000Sprint07' 
 import { ics_8_1of6, ics_8_2of6, ics_8_3of6, ics_8_4of6, ics_8_5of6, ics_8_6of6, ics_8_7of6 } from './SL20000Sprint08'
 
 import { tWeb_7_7of6 } from './SL24700Sprint07'
@@ -105,6 +105,8 @@ const sprintRouter = (route) => {
 		case '20000-7-5': return ics_7_5of6()
 		case '20000-7-6': return ics_7_6of6()
 		case '20000-7-7': return ics_7_7of6()
+		case '20000-7-8': return ics_7_8of6()
+		case '20000-7-9': return ics_7_9of6()
 
 		case '20000-8-1': return ics_8_1of6()
 		case '20000-8-2': return ics_8_2of6()
