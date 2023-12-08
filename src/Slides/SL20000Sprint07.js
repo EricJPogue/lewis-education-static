@@ -262,7 +262,7 @@ const ics_7_9of6_PAaA = {
 export const ics_7_9of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_9of6_PAaA, sprint, activityList)
 	const quickSprint8PlanningReview = () => { return basicSlide(`Be prepared for a quick sprint ${sprint+1} planning review`, [
-		`Let’s look at our ${sprint+1} assignments and remaining Class Project presentation schdule.` ])}
+		`Let’s look at our ${sprint+1} assignments and remaining Class Project presentation schedule.` ])}
 	const finalProjectPresentation = () => {
 		return orderedListSlide('Final Project Presentations', `Recall that your final project presentation should including a/an:`, [
 			'Brief introduction of yourself',
