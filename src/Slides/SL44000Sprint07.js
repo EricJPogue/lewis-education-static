@@ -329,7 +329,8 @@ export const se_7_8of6 = () => {
 
 const se_7_9of6_PAaA = { 
 	'prework':[
-		`Be prepared for a quick sprint ${sprint} planning review` ],
+		`Be prepared for a quick sprint ${sprint} planning review`,
+		'Be prepared for select Class Project presentations'],
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday`,
 		`All sprint ${sprint+1} assignment due Thursday next week` ],
@@ -337,10 +338,38 @@ const se_7_9of6_PAaA = {
 		`Brief review of sprint ${sprint+1} expectations`,
 		'Class Project presentations' ]
 }
-export const se_7_9of6 = () => { 
+export const se_7_9of6X = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_8of6_PAaA, sprint, activityList)
 
 	const quiz = () => { return tQuiz(sprint+1) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_9of6_PAaA.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ quiz, preworkNext]) 
+}
+
+export const se_7_9of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_9of6_PAaA, sprint, activityList)
+	const finalProjectPresentation = () => {
+		return orderedListSlide('Final Project Presentations', `Recall that your final project presentation should including a/an:`, [
+			'Brief introduction of your team and yourself',
+			'Overview of your final project proposal',
+			'One team member review the overall project',
+			'Each team member demonstrate a feature that they personally delivered that they are most proud of delivering',
+			'Description of what else you expect to complete by the end of the day Thursday' ])
+	}
+	const nextSteps = () => { return tPrework('Next Steps', 
+		[ 
+			`All sprint ${sprint} assignments are due Sunday`,
+			`All sprint ${sprint+1} assignments are due next Thursday!`, 
+			'If you completed your Class Project presentation today, please submit all assignment Sunday' ], sprint, activityList) }
+	const finalComments = () => {
+		return orderedListSlide('Thank you!',
+			'', [
+			'Thank you for making this a wonderful experience for me',
+			'Don’t hesitate to reach out in the future',
+			'Hope to see you in a future class', 
+			'Reach out to me if you are interested in taking Web & Distributed Programming',
+			'Very nice work! I am impressed with what you have accomplished.' ])
+	}
+
+	return completeDeck(slideDeck, [ finalProjectPresentation, nextSteps, finalComments ]) 
 }

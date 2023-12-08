@@ -249,20 +249,42 @@ export const ics_7_8of6 = () => {
 
 const ics_7_9of6_PAaA = { 
 	'prework':[
-		`Be prepared for a quick sprint ${sprint} planning review`,
+		`Be prepared for a quick sprint ${sprint+1} planning review`,
 		'Be prepared for class project presentations in classroom plus remote' ],
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday`,
 		`All sprint ${sprint+1} assignment due Thursday next week`,
 		`If you are presenting today, your sprint ${sprint} and sprint ${sprint+1} assignments are due Sunday` ],
 	'agenda':[
-		`Brief review of sprint ${sprint+1} expectations`,
+		`Brief review of sprint ${sprint+1} assignments & expectations`,
 		'Class Project presentations' ]
 }
 export const ics_7_9of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_8of6_PAaA, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_9of6_PAaA, sprint, activityList)
+	const quickSprint8PlanningReview = () => { return basicSlide(`Be prepared for a quick sprint ${sprint+1} planning review`, [
+		`Let’s look at our ${sprint+1} assignments and remaining Class Project presentation schdule.` ])}
+	const finalProjectPresentation = () => {
+		return orderedListSlide('Final Project Presentations', `Recall that your final project presentation should including a/an:`, [
+			'Brief introduction of yourself',
+			'Overview of your final project proposal',
+			'Demonstration standard and advanced feature',
+			'Overview of the project source code',
+			'Description of what else you expect to complete by the end of the day Thursday' ])
+	}
+	const nextSteps = () => { return tPrework('Next Steps', [ 
+		`All sprint ${sprint} assignments due Sunday`,
+		'Remaining Class Project presentations next week on...'
+	], sprint, activityList) }
+	const finalComments = () => {
+		return orderedListSlide('For those of you who presented today... Thank you!',
+			'', [
+			'Thank you for making this a wonderful experience for me',
+			'Don’t hesitate to reach out in the future',
+			'I hope to see you in a future class', 
+			'Reach out to me if you are interested in taking Web & Distributed Programming',
+			'Very nice work! I am impressed with what you have accomplished.' ])
+	}
 
-	const quiz = () => { return tQuiz(sprint+1) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_9of6_PAaA.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ quiz, preworkNext]) 
+	return completeDeck(slideDeck, [ quickSprint8PlanningReview, finalProjectPresentation, nextSteps, finalComments ]) 
 }
+
