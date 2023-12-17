@@ -13,8 +13,6 @@ import { ics_6_1of6, ics_6_2of6, ics_6_3of6, ics_6_4of6, ics_6_5of6, ics_6_6of6 
 import { ics_7_1of6, ics_7_2of6, ics_7_3of6, ics_7_4of6, ics_7_5of6, ics_7_6of6, ics_7_7of6, ics_7_8of6, ics_7_9of6 } from './SL20000Sprint07' 
 import { ics_8_7of6 } from './SL20000Sprint08'
 
-import { web_8_7of6 } from './SL24700Sprint08'
-
 import { se_1_1of6, se_1_2of6, se_1_3of6, se_1_4of6, se_1_5of6, se_1_6of6 } from './SL44000Sprint01'
 import { se_2_1of6, se_2_2of6, se_2_3of6, se_2_4of6, se_2_5of6, se_2_6of6 } from './SL44000Sprint02'
 import { se_3_1of6, se_3_2of6, se_3_3of6, se_3_4of6, se_3_5of6, se_3_6of6 } from './SL44000Sprint03'
@@ -109,8 +107,6 @@ const sprintRouter = (route) => {
 		case '20000-7-9': return ics_7_9of6()
 
 		case '20000-8-7': return ics_8_7of6()
-
-		case '24700-8-7': return web_8_7of6()
 
 		case '44000-1-1': return se_1_1of6()
 		case '44000-1-2': return se_1_2of6()
