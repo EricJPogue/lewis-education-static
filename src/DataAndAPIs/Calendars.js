@@ -1,3 +1,4 @@
+export const _SPRING_2024_01_09_16 = '2024-01-09-16'
 export const _FALL_2023_08_28_16 = '2023-08-28-16'
 export const _SPRING_2023_01_09_16 = '2023-01-09-16'
 
