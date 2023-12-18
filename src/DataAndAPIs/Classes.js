@@ -1,4 +1,4 @@
-import { getCalendarByCalendarID, _FALL_2023_08_28_16, _CURRENT_CALENDAR } from "./Calendars"
+import { getCalendarByCalendarID, _FALL_2023_08_28_16, _SPRING_2024_01_15_16, _CURRENT_CALENDAR } from "./Calendars"
 
 import { al44000Sprint1Topics } from '../ActivityLists/AL44000Sprint01'
 import { al44000Sprint2Topics } from '../ActivityLists/AL44000Sprint02'
@@ -407,6 +407,11 @@ export const _TTR = 'TTh'
 export const _ASYNCHRONOUS = 'Asynchronous' 
 
 export const classSectionList = [
+	{ 'classID':'sp23-cpsc-20000-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 'crn':'11319', 
+		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 
+		'time':'1-1:50 pm', 'finalExam':'Wednesday, May 8 from 1:30 to 3:30 PM CT' },
+
+
 	{ 'classID':'fa23-cpsc-20000-002', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 'crn':'80006', 
 		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'10-10:50 pm', 'finalExam':'Monday, Dec 11 from 10:30 AM to 12:30 PM CT' },
 
