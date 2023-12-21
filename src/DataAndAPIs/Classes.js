@@ -248,6 +248,56 @@ export const _CPSC_24500 = {
 	]
 }
 
+export const _CPSC_44500 = {
+	name:'Application Frameworks',
+	id:'CPSC-44500',
+	number: 44500,
+	creditHours:3,
+	description: 
+		`This course exposes students to a variety of current programming languages that are not the focus of other 
+		courses in the major. The goal of the course is to increase students' programming skills while helping them 
+		develop good programming methodology and style. This course also gives students experience using code management 
+		systems and working on open-source programming projects.`,
+	prerequisites:'CPSC-24500 Object-Oriented Programming',
+	learningOutcomes:[
+		'create moderately complex applications using multiple programming languages and frameworks',
+		'improve programming style through effective coding standards', 
+		'optimizing programming, testing, enhancements, and fixes through modularization',
+		'write well-documented, easy-to-understand, clearly organized code that others may extend',
+		'use source code management tools to coordinate changes and create high quality releases',
+		'implement defect tracking to manage and prioritize a backlog of application improvements',
+		'use debuggers and profilers to analyze, troubleshoot, and enhance code',
+		'utilize scripting to automate build, testing, and deployment tasks',
+		'effectively work on software applications with small teams',
+		'develop and implement unit tests and integration tests',
+		'contribute to open-source programming projects'
+	],
+	programOutcomes:[
+		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
+		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
+		{'value':3, outcome:'work in a team to design and implement complex data processing systems collaboratively'},
+		{'value':7, outcome:'explain how programming languages are designed and implemented'}
+	],
+	baccalaureateCharacteristics:[
+		{'value':1, outcome:'Essential Skills'},
+		{'value':2, outcome:'Major Approaches to Knowledge'},
+		{'value':6, outcome:'Critical Thinking'},
+		{'value':7, outcome:'Lifelong Learning'}
+	],
+	textBook: 'Reading assignments well be made from the O’Reilly online book service which Lewis University provides to students at no cost.',
+	modules: [
+		'Programming Languages, Object-Oriented Programming (OOP) Concepts, Getting Started with Go',
+		'OOP Patterns and Principles, Functional Programming, Configuration Management, Structs, Interfaces, and Packages',
+		'Inheritance and Polymorphism, Classes (including Constructors and Destructors), Exceptions, Templates, Overloading, and Testing',
+		'Concurrency and Next Steps',
+		'Web Development with HTML, CSS, JavaScript, React plus Final Project Proposal',
+		'Cloud Computing with Microsoft Azure, Azure Functions, Final Project Proposal Review and Updates',
+		'Containers, More React, Final Project – Version 0',
+		'Application Architecture, Even More React, Final Project – Version 1'
+	]
+}
+
+
 export const _CPSC_36000 = {
 	name:'Applied Programming Languages',
 	id:'CPSC-36000',
@@ -399,7 +449,7 @@ export const _CPSC_49200 = {
 	]
 }
 
-// Application Constants
+// Sections
 export const URLCLASSID = 'cpsc'
 export const _MWF = 'MWF'
 const _T = 'T'
@@ -407,33 +457,45 @@ export const _TTR = 'TTh'
 export const _ASYNCHRONOUS = 'Asynchronous' 
 
 export const classSectionList = [
-	{ 'classID':'sp23-cpsc-20000-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 'crn':'11319', 
-		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 
-		'time':'1-1:50 pm', 'finalExam':'Wednesday, May 8 from 1:30 to 3:30 PM CT' },
+	{ 'classID':'sp23-cpsc-44500-001', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_44500, 'number':'44500', 'section':'001', 
+		'crn':'11383', 'title':'Application Frameworks', 'location':'Arts and Sciences (AS) 101S and Friday remote via Zoom', 
+		'schedule':_MWF, 'time':'9-9:50 am', 'finalExam':'Wednesday May 8 from 10:30 am to 12:30 pm CP' },
 
+	{ 'classID':'sp23-cpsc-44000-001', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_44000, 'number':'44000', 'section':'001', 
+		'crn':'11382', 'title':'Software Engineering', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 
+		'schedule':_MWF, 'time':'11-11:50 am', 'finalExam':'Friday, May 10 from 10:30 am to 12:30 pm CT' },
 
-	{ 'classID':'fa23-cpsc-20000-002', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 'crn':'80006', 
-		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'10-10:50 pm', 'finalExam':'Monday, Dec 11 from 10:30 AM to 12:30 PM CT' },
+	{ 'classID':'sp23-cpsc-20000-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 
+		'crn':'11319', 'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 
+		'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, May 8 from 1:30 to 3:30 PM CT' },
 
-	{ 'classID':'fa23-cpsc-20000-003', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_20000, 'number':'20000', 'section':'003', 'crn':'80007', 
-		'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'11-11:50 pm', 'finalExam':'Friday, Dec 15 from 10:30 AM to 12:30 PM CT' },
-
-	{ 'classID':'fa23-cpsc-24700-001', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_24700, 'number':'24700', 'section':'001', 'crn':'80024', 
-		'title':'Web and Distributed Programming', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, Dec 13 from 1:30 AM to 3:30 PM CT' },
-
-	{ 'classID':'fa23-cpsc-44000-001', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_44000, 'number':'44000', 'section':'001', 'crn':'80053', 
-		'title':'Software Engineering', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 'schedule':_MWF, 'time':'2-2:50 am', 'finalExam':'Monday, Dec 11 from 4 pm to 6 pm CT' },
-
-	{ 'classID':'fa23-cpsc-49200-001', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_49200, 'number':'49200', 'section':'001', 'crn':'80056', 
-		'title':'Software Systems Capstone', 'location':'Arts and Sciences (AS) 101A and remote via Zoom', 'schedule':_T, 'time':'11-12:15', 'finalExam':'Tuesday, Dec 12 from 10:30 to 12:30 pm CT' },
+	{ 'classID':'sp23-cpsc-49200-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_49200, 'number':'49200', 'section':'001', 
+		'crn':'11391', 'title':'Software Systems Capstone', 'location':'Arts and Sciences (AS) 101A and remote via Zoom', 
+		'schedule':_T, 'time':'12:30-1:45', 'finalExam':'Thursday May 9 from 10:30 to 12:30 pm CT' },
 
 	{ 'classID':'cpsc-24500', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_24500, 'number':'24500', 'section':'XXX', 'crn':'00000',
 		'title':'Object-Oriented Programming', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' },
+
+	{ 'classID':'cpsc-24700', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_24700, 'number':'24700', 'section':'XXX', 'crn':'00000',
+		'title':'Web and Distributed Programming', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' },
 	
 	{ 'classID':'cpsc-36000', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_36000, 'number':'36000', 'section':'XXX', 'crn':'00000',
 		'title':'Applied Programming Languages', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' }	
 ]
 
+// Sections - Future:
+const _MWF_1PM_AS104A = {
+	'time': '1-1:50 PM ',
+	'timeFinal': 'Wednesday, May 8 from 1:30 to 3:30 PM CT',
+	'location': 'Arts and Sciences (AS) 104A and Friday remote via Zoom'
+}
 
+export const _SP23_CPSC_20000_002 = {
+	'id': 'sp23-cpsc-20000-002',
+	'crn': 11382,
 
-
+	'timeAndLocation': _MWF_1PM_AS104A,
+	'course': _CPSC_20000,
+	'calendar': _SPRING_2024_01_15_16,
+	'instructor': null
+}
