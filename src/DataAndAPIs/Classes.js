@@ -491,11 +491,10 @@ const _MWF_1PM_AS104A = {
 }
 
 export const _SP23_CPSC_20000_002 = {
-	'id': 'sp23-cpsc-20000-002',
-	'crn': 11382,
+	'id': 'sp23-cpsc-20000-002', 'number': 20000, 'section': 2, 'crn': 11382,
 
-	'timeAndLocation': _MWF_1PM_AS104A,
+	'daysTimesAndLocations': _MWF_1PM_AS104A,
 	'course': _CPSC_20000,
 	'calendar': _SPRING_2024_01_15_16,
 	'instructor': null
-}
+} 
