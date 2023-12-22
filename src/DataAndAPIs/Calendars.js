@@ -50,7 +50,7 @@ export const CALENDAR_LIST =  [
 			{ 'start':'Mon Feb 26 2024 08:00:00 GMT-0500', 'end':'Sun Mar 17 2024 23:59:00 GMT-0600', 'notes':'Spring Break' },
 			{ 'start':'Mon Mar 18 2024 08:00:00 GMT-0500', 'end':'Sun Mar 31 2024 23:59:00 GMT-0600', 'notes':'Easter Holiday' },
 			{ 'start':'Mon Apr 01 2024 08:00:00 GMT-0500', 'end':'Sun Apr 14 2024 23:59:00 GMT-0600', 'notes':'Easter Holiday (continued)' },
-			{ 'start':'Mon Apr 15 2024 08:00:00 GMT-0500', 'end':'Sun May 05 2024 23:59:00 GMT-0600', 'notes':'Class Projects' },
+			{ 'start':'Mon Apr 15 2024 08:00:00 GMT-0500', 'end':'Sun May 05 2024 23:59:00 GMT-0600', 'notes':'Class Project' },
 			{ 'start':'Mon May 06 2024 08:00:00 GMT-0500', 'end':'Thu May 09 2024 23:59:00 GMT-0600', 'notes':'Final Exams' }
 		]
 	}

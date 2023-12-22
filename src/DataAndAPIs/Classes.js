@@ -457,19 +457,19 @@ export const _TTR = 'TTh'
 export const _ASYNCHRONOUS = 'Asynchronous' 
 
 export const classSectionList = [
-	{ 'classID':'sp23-cpsc-44500-001', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_44500, 'number':'44500', 'section':'001', 
+	{ 'classID':'sp24-cpsc-44500-001', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_44500, 'number':'44500', 'section':'001', 
 		'crn':'11383', 'title':'Application Frameworks', 'location':'Arts and Sciences (AS) 101S and Friday remote via Zoom', 
 		'schedule':_MWF, 'time':'9-9:50 am', 'finalExam':'Wednesday May 8 from 10:30 am to 12:30 pm CP' },
 
-	{ 'classID':'sp23-cpsc-44000-001', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_44000, 'number':'44000', 'section':'001', 
+	{ 'classID':'sp24-cpsc-44000-001', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_44000, 'number':'44000', 'section':'001', 
 		'crn':'11382', 'title':'Software Engineering', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 
 		'schedule':_MWF, 'time':'11-11:50 am', 'finalExam':'Friday, May 10 from 10:30 am to 12:30 pm CT' },
 
-	{ 'classID':'sp23-cpsc-20000-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 
+	{ 'classID':'sp24-cpsc-20000-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 
 		'crn':'11319', 'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 
 		'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, May 8 from 1:30 to 3:30 PM CT' },
 
-	{ 'classID':'sp23-cpsc-49200-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_49200, 'number':'49200', 'section':'001', 
+	{ 'classID':'sp24-cpsc-49200-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_49200, 'number':'49200', 'section':'001', 
 		'crn':'11391', 'title':'Software Systems Capstone', 'location':'Arts and Sciences (AS) 101A and remote via Zoom', 
 		'schedule':_T, 'time':'12:30-1:45', 'finalExam':'Thursday May 9 from 10:30 to 12:30 pm CT' },
 

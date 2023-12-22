@@ -29,7 +29,7 @@ export const al44000Sprint01 = () => {
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
-			<li>Effectively participate in a blended classroom environment and as part of a Scrum team</li>
+			<li>Effectively participate in a blended classroom environment and as part of a scrum team</li>
 			<li>Compare and contrast the steps in leading Software Development Life Cycles</li>
 			<li>Explain why agile development has become the preferred software development process</li>
 			<li>Describe the benefits of application architectures including software as a service and cloud computing</li>
@@ -69,6 +69,7 @@ export const list44000Sprint01 = (sprint) => {
 // Certified for FA23 (08/24/23)
 
 // Todo: Reduce sprint 1 content and move quiz 1 to second Wednesday even though the second Monday is likely a holiday.
+// Todo: Move client-server and architecture stuff to sprint 2
 // Todo: Consider updating and adding the following Architecture videos back into the class:
 //	import { architecturePart1, architecturePart2 } from '../DataAndAPIs/Links'
 // <li>Complete {architecturePart1()}</li>
