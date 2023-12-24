@@ -9,26 +9,6 @@ import { al44000Sprint6Topics } from '../ActivityLists/AL44000Sprint06'
 import { al44000Sprint7Topics } from '../ActivityLists/AL44000Sprint07'
 import { al44000Sprint8Topics } from '../ActivityLists/AL44000Sprint08'
 
-export const getIsScheduleT = () => {
-	return (getClass().schedule === _T)
-}
-
-export const getIsScheduleTTr = () => {
-	return (getClass().schedule === _TTR)
-}
-
-export const getIsScheduleOnline = () => {
-	return (getClass().schedule === _ASYNCHRONOUS)
-}
-
-export const getFinalExamDateAndTime = () => {
-	const course = getClass()
-	if (course === null) {
-		return ''
-	}
-	return course.finalExam
-}
-
 export const getClassIDfromURL = () => {
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
@@ -280,7 +260,6 @@ export const _CPSC_44500 = {
 	]
 }
 
-
 export const _CPSC_36000 = {
 	name:'Applied Programming Languages',
 	id:'CPSC-36000',
@@ -437,7 +416,6 @@ export const URLCLASSID = 'cpsc'
 export const _MWF = 'MWF'
 const _T = 'T'
 export const _TTR = 'TTh'
-export const _ASYNCHRONOUS = 'Asynchronous' 
 
 const classSectionList = [
 	{ 'classID':'sp24-cpsc-20000-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 

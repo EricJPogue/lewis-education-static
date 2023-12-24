@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { CSTDate, incrementDate, isToday, pastDate, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
-import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
+import { getFinalExamDateAndTime } from '../DataAndAPIs/ClassSections'
 
-import { getIsScheduleT, getIsScheduleTTr, getIsScheduleOnline } from '../DataAndAPIs/Classes'
 import { getClass } from '../DataAndAPIs/Classes'
 import { getClassCalendar } from '../DataAndAPIs/Classes'
 import { internalLink } from '../DataAndAPIs/Links'
+
+import { getIsScheduleT, getIsScheduleTTr, getIsScheduleOnline } from '../DataAndAPIs/ClassSections'
 
 export class SprintClassActivities extends Component {
 	// Todo: Update 'currentSprint()+1' to 'currentSprintBaseOne()'.

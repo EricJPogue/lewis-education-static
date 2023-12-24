@@ -4,7 +4,7 @@ import { learningObjectivesIntro, activitiesListIntro, standardActivities, initi
 
 import { oreillyPlaylistICS, internalLink } from '../DataAndAPIs/Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
-import { getFinalExamDateAndTime } from '../DataAndAPIs/Classes'
+import { getFinalExamDateAndTime } from '../DataAndAPIs/ClassSections'
 
 import { finalProjectLink } from '../Activities/FinalProject'
 

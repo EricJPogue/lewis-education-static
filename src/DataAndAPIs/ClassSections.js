@@ -16,6 +16,41 @@ export const getAllClassSections = () => {
 	return _CLASS_SECTION_LIST
 }
 
+export const getIsScheduleT = () => {
+	return (getCurrentClassSection().meetingDays === _T)
+}
+
+export const getIsScheduleTTr = () => {
+	return (getCurrentClassSection().meetingDay === _TTR)
+}
+
+export const getIsScheduleOnline = () => {
+	return (getCurrentClassSection().meetingDay === _ASYNCHRONOUS)
+}
+
+export const getFinalExamDateAndTime = () => {
+	return getCurrentClassSection().finalExam
+}
+
+const URLCLASSID = 'cpsc'
+const getClassSectionIDfromURL = () => {
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	const cpscParam = urlParams.get(URLCLASSID)
+	if (cpscParam === null) {
+		return ''
+	}
+	return cpscParam
+}
+
+const _T = 'T'
+const _TTR = 'TTh'
+const _ASYNCHRONOUS = 'Asynchronous' 
+
+const getCurrentClassSection = () => {
+	return getClassSectionByID(getClassSectionIDfromURL())
+}
+
 const _SP24_CPSC_20000_002 = {
 	'id':'sp24-cpsc-20000-002', 
 	'section':'002',
@@ -62,7 +97,7 @@ const _SP24_CPSC_49200_002 = {
 	'id':'sp24-cpsc-49200-002',
 	'section':'002',
 	'crn':'11391',
-	'meetingDays':'T',
+	'meetingDays':_T,
 	'meetingTimes':'11 am-12:15 pm',
 	'finalExam':'Wednesday, May 8 from 10:30 am to 12:30 pm CT',
 	'meetingLocation':'Arts and Sciences (AS) 104A and Friday remote via Zoom',
