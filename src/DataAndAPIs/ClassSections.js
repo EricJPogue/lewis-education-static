@@ -59,7 +59,7 @@ const _SP24_CPSC_44500_001 = {
 }
 
 const _SP24_CPSC_49200_002 = {
-	'id':'sp24-cpsc-9200-002',
+	'id':'sp24-cpsc-49200-002',
 	'section':'002',
 	'crn':'11391',
 	'meetingDays':'T',

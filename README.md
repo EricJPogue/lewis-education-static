@@ -155,5 +155,4 @@ Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 
 
 Backlog:
-s003: Create new ClassList.js page.
-s004: Delete existing Home.js page
+s005: Fix Capstone. 

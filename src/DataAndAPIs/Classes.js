@@ -29,14 +29,6 @@ export const getFinalExamDateAndTime = () => {
 	return course.finalExam
 }
 
-export const getClasses = () => {
-	const classes = []
-	for (let i = 0; i < classSectionList.length; i++) {
-		classes.push(classSectionList[i])
-	}
-	return classes
-}
-
 export const getClassIDfromURL = () => {
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
@@ -447,7 +439,7 @@ const _T = 'T'
 export const _TTR = 'TTh'
 export const _ASYNCHRONOUS = 'Asynchronous' 
 
-export const classSectionList = [
+const classSectionList = [
 	{ 'classID':'sp24-cpsc-20000-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 
 		'crn':'11319', 'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 
 		'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, May 8 from 1:30 to 3:30 PM CT' },
