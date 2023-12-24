@@ -6,7 +6,10 @@ import Table from 'react-bootstrap/Table'
 import LewisUniversityLogo from '../Slides/LewisUniversityLogo.png'
 import { externalLink } from '../DataAndAPIs/Links'
 
-export const syllabus = (course, courseSection, instructor) => {
+export const syllabus = (courseSection) => {
+	const course = courseSection.course
+	const instructor = courseSection.instructor
+
 	const header = (itemArray) => {
 		return (<tr><td style={{width:'50px' }}><b>{itemArray[0]}</b></td><td style={{width:'200px' }} colSpan={2}><b>{itemArray[1]}</b></td></tr>)
 	} 
@@ -61,7 +64,8 @@ export const syllabus = (course, courseSection, instructor) => {
 						<b><i>{course.name}</i></b><br />
 						<b><i>CPSC-{course.number}-{courseSection.section}</i></b><br />
 						<b>Syllabus</b><br />
-						{courseSection.description}
+
+						{courseSection.calendar.description}
 					</td>
 				</tr>
 			</tbody>
@@ -87,7 +91,7 @@ export const syllabus = (course, courseSection, instructor) => {
 				<tr><td></td><td colSpan={2}>{course.description}</td></tr>
 				{row(['', 'Prerequisites:', course.prerequisites])}
 				{row(['', 'Course Meeting Times:', courseSection.meetingTimes])}
-				{row(['', 'Course Meeting Dates:', courseSection.meetingDates])}
+				{row(['', 'Course Meeting Dates:', courseSection.calendar.meetingDates])}
 				{row(['', 'Meeting Location:', courseSection.meetingLocation])}
 				{row(['', 'Course Final:', courseSection.finalExam])}
 				<tr>

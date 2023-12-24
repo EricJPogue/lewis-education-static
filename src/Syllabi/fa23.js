@@ -1,3 +1,4 @@
+/*
 import { getClassSection, _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from '../DataAndAPIs/Classes'
 import { getCalendarPlusByCalendarID } from '../DataAndAPIs/Calendars'
 
@@ -29,4 +30,4 @@ export const fa23_cpsc_49200_001 = () => { return syllabus( _CPSC_49200, fa23Mak
 // Supported courses that are not being offered during the Fall 2023 semester. 
 export const cpsc_24500 = () => { return syllabus( _CPSC_24500, fa23MakeDefaultClassSection(), _INSTRUCTOR) }
 export const cpsc_36000 = () => { return syllabus( _CPSC_36000, fa23MakeDefaultClassSection(), _INSTRUCTOR) }
-
+*/
