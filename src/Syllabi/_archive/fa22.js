@@ -1,5 +1,6 @@
 // fa22.js is depreciated and should be removed.
 
+/*
 import { getClassSection, _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from '../../DataAndAPIs/Classes'
 import { syllabus } from '../SyllabiShared'
 
@@ -29,3 +30,4 @@ export const fa22_cpsc_44000_001 = () => { return syllabus( _CPSC_44000, makeDef
 export const cpsc_24500 = () => { return syllabus( _CPSC_24500, makeDefaultClassSection(), _INSTRUCTOR ) }
 export const cpsc_36000 = () => { return syllabus( _CPSC_36000, makeDefaultClassSection(), _INSTRUCTOR ) }
 export const cpsc_49200 = () => { return syllabus( _CPSC_49200, makeDefaultClassSection(), _INSTRUCTOR ) }
+*/

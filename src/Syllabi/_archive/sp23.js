@@ -1,3 +1,4 @@
+/*
 import { getClassSection, _CPSC_20000, _CPSC_24500, _CPSC_36000, _CPSC_44000, _CPSC_49200, _INSTRUCTOR } from '../../DataAndAPIs/Classes'
 import { getCalendarPlusByCalendarID } from '../../DataAndAPIs/Calendars'
 
@@ -28,3 +29,4 @@ export const sp23_cpsc_49200_004 = () => { return syllabus( _CPSC_49200, sp23Mak
 
 // Supported courses that are not being offered currently. 
 export const cpsc_36000 = () => { return syllabus( _CPSC_36000, sp23MakeDefaultClassSection(), _INSTRUCTOR ) }
+*/

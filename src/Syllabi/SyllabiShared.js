@@ -1,3 +1,5 @@
+
+/*
 // BugBug: Update syllabus sections on COVID, etc.
 
 import React from 'react'
@@ -6,7 +8,7 @@ import Table from 'react-bootstrap/Table'
 import LewisUniversityLogo from '../Slides/LewisUniversityLogo.png'
 import { externalLink } from '../DataAndAPIs/Links'
 
-export const syllabus = (courseSection) => {
+export const renderSyllabus = (courseSection) => {
 	const course = courseSection.course
 	const instructor = courseSection.instructor
 
@@ -529,3 +531,4 @@ const renderAdditionalPolicyAndResources = () => {
 		https://www.lewisu.edu/osp/pdf/Intellectual%20Property%20Rights%20Policy.pd</p>
 	</div> )
 }
+*/
