@@ -155,4 +155,4 @@ Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 
 
 Backlog:
-s001: Remove extra syllabus source files. 
+s002: Move syllabus.js to root src directory.

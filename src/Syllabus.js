@@ -1,11 +1,11 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 
-import LewisUniversityLogo from '../Slides/LewisUniversityLogo.png'
-import { externalLink } from '../DataAndAPIs/Links'
+import LewisUniversityLogo from './Slides/LewisUniversityLogo.png'
+import { externalLink } from './DataAndAPIs/Links'
 
-import { getClassIDfromURL } from '../DataAndAPIs/Classes'
-import { getClassSectionByID } from '../DataAndAPIs/ClassSections'
+import { getClassIDfromURL } from './DataAndAPIs/Classes'
+import { getClassSectionByID } from './DataAndAPIs/ClassSections'
 
 export const Syllabus = () => {
 	const classSectionIDfromURL = getClassIDfromURL()
