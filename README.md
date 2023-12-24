@@ -155,4 +155,5 @@ Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 
 
 Backlog:
-s002: Move syllabus.js to root src directory.
+s003: Create new ClassList.js page.
+s004: Delete existing Home.js page

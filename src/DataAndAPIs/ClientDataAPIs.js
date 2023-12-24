@@ -5,7 +5,7 @@ import { pastDate } from '../CalendarAndSchedule/SprintDates'
 // Exported APIs
 export const getCurrentSprintBase1 = () => { return getCurrentSprintByCalendar(getClassCalendar())+1}
 
-const getCurrentSprintByCalendar = (calendar) => {
+export const getCurrentSprintByCalendar = (calendar) => {
 	const minSprint = 0 
 	const maxSprint = 7
 

@@ -3,8 +3,7 @@ import './Main.css';
 import React, { Component } from 'react';
 import { Route, HashRouter } from 'react-router-dom';
 import { HeaderNavigation } from './HeaderNavigation'
-
-import { Home } from './Home'
+import { ClassList } from './ClassList';
 import { welcome } from '../ActivityVideo/Panopto';
 import { Syllabus } from '../Syllabus' 
 import { Sprint } from '../ActivityLists/Sprint'
@@ -34,8 +33,8 @@ class Main extends Component {
 				<HeaderNavigation />
 				<HashRouter>
 					<div className='Main'>
-						<Route exact path='/' component={Home}/>
-						<Route exact path='/home' component={Home}/>
+						<Route exact path='/' component={ClassList}/>
+						<Route exact path='/home' component={ClassList}/>
 						<Route path='/welcome' component={welcome}/>
 						<Route path='/syllabus' component={Syllabus}/>
 						<Route path='/sprint/:reference' component={Sprint}/>
