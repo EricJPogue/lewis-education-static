@@ -1,6 +1,6 @@
 import React from 'react'
 import { pastDate } from '../CalendarAndSchedule/SprintDates'
-import { getClassCalendar } from '../DataAndAPIs/Classes'
+import { getClassCalendar } from '../DataAndAPIs/ClassSections'
 
 // Todo: Review licensing of preview stamp.
 import ALPreviewStamp from './ALPreviewStamp.png'

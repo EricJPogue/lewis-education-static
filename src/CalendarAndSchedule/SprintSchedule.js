@@ -5,7 +5,7 @@ import { CSTDate, incrementDate, isToday, pastDate, sprintStartDate, sprintEndDa
 import { getFinalExamDateAndTime } from '../DataAndAPIs/ClassSections'
 
 import { getClass } from '../DataAndAPIs/Classes'
-import { getClassCalendar } from '../DataAndAPIs/Classes'
+import { getClassCalendar } from '../DataAndAPIs/ClassSections'
 import { internalLink } from '../DataAndAPIs/Links'
 
 import { getIsScheduleT, getIsScheduleTTr, getIsScheduleOnline } from '../DataAndAPIs/ClassSections'

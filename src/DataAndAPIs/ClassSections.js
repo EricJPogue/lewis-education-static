@@ -16,6 +16,10 @@ export const getAllClassSections = () => {
 	return _CLASS_SECTION_LIST
 }
 
+export const getClassCalendar = () => { 
+	return getCurrentClassSection().calendar.sprintDates
+}
+
 export const getIsScheduleT = () => {
 	return (getCurrentClassSection().meetingDays === _T)
 }
@@ -32,6 +36,15 @@ export const getFinalExamDateAndTime = () => {
 	return getCurrentClassSection().finalExam
 }
 
+export const getCurrentClassTitle = () => {
+	return getCurrentClassSection().course.name
+}
+
+export  const getClassNumber = () => {
+	return getCurrentClassSection().number
+}
+
+
 const URLCLASSID = 'cpsc'
 const getClassSectionIDfromURL = () => {
 	const queryString = window.location.search;
@@ -43,6 +56,7 @@ const getClassSectionIDfromURL = () => {
 	return cpscParam
 }
 
+const _MWF = 'MWF'
 const _T = 'T'
 const _TTR = 'TTh'
 const _ASYNCHRONOUS = 'Asynchronous' 
@@ -53,9 +67,10 @@ const getCurrentClassSection = () => {
 
 const _SP24_CPSC_20000_002 = {
 	'id':'sp24-cpsc-20000-002', 
+	'number':'20000',
 	'section':'002',
 	'crn':'11319',
-	'meetingDays':'MWF',
+	'meetingDays':_MWF,
 	'meetingTimes':'1-1:50 pm',
 	'finalExam':'Wednesday, May 8 from 1:30 to 3:30 PM CT',
 	'meetingLocation':'Arts and Sciences (AS) 104A and Friday remote via Zoom',
@@ -67,9 +82,10 @@ const _SP24_CPSC_20000_002 = {
 
 const _SP24_CPSC_44000_001 = {
 	'id':'sp24-cpsc-44000-001',
+	'number':'44000',
 	'section':'001',
 	'crn':'11382',
-	'meetingDays':'MWF',
+	'meetingDays':_MWF,
 	'meetingTimes':'9-9:50 am',
 	'finalExam':'Wednesday, May 8 from 10:30 am to 12:30 pm CT',
 	'meetingLocation':'Arts and Sciences (AS) 104A and Friday remote via Zoom',
@@ -81,9 +97,10 @@ const _SP24_CPSC_44000_001 = {
 
 const _SP24_CPSC_44500_001 = {
 	'id':'sp24-cpsc-44500-001',
+	'number':'44500',
 	'section':'001',
 	'crn':'11383',
-	'meetingDays':'MWF',
+	'meetingDays':_MWF,
 	'meetingTimes':'9-9:50 am',
 	'finalExam':'Wednesday, May 8 from 10:30 am to 12:30 pm CT',
 	'meetingLocation':'Arts and Sciences (AS) 104A and Friday remote via Zoom',
@@ -95,6 +112,7 @@ const _SP24_CPSC_44500_001 = {
 
 const _SP24_CPSC_49200_002 = {
 	'id':'sp24-cpsc-49200-002',
+	'number':'49200',
 	'section':'002',
 	'crn':'11391',
 	'meetingDays':_T,
@@ -108,18 +126,21 @@ const _SP24_CPSC_49200_002 = {
 }
 
 const _XXXX_CPSC_24500 = {
+	'number':'24500',
 	'course':_CPSC_24500,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
 	'calendar':_CALENDAR_SPRING_2024_01_15_16
 }
 
 const _XXXX_CPSC_24700 = {
+	'number':'24700',
 	'course':_CPSC_24700,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
 	'calendar':_CALENDAR_SPRING_2024_01_15_16
 }
 
 const _XXXX_CPSC_36000 = {
+	'number':'36000',
 	'course':_CPSC_36000,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
 	'calendar':_CALENDAR_SPRING_2024_01_15_16

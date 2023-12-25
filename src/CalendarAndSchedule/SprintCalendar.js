@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table'
 import { CSTDate, duration, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
 import { getClass } from '../DataAndAPIs/Classes'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/ClassSections'
-import { getClassCalendar } from '../DataAndAPIs/Classes' 
+import { getClassCalendar } from '../DataAndAPIs/ClassSections' 
 
 export class SprintCalendar extends Component {
 	headerClicked = (input) => {

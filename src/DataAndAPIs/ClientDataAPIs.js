@@ -1,5 +1,6 @@
 import { getCalendarByCalendarID } from './Calendars'
-import { getClassCalendar, getClassByClassID } from './Classes'
+import { getClassByClassID } from './Classes'
+import { getClassCalendar } from './ClassSections'
 import { pastDate } from '../CalendarAndSchedule/SprintDates'
 
 // Exported APIs

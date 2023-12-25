@@ -1,4 +1,4 @@
-import { getCalendarByCalendarID, _FALL_2023_08_28_16, _SPRING_2024_01_15_16, _CURRENT_CALENDAR } from "./Calendars"
+import { _SPRING_2024_01_15_16 } from "./Calendars"
 
 import { al44000Sprint1Topics } from '../ActivityLists/AL44000Sprint01'
 import { al44000Sprint2Topics } from '../ActivityLists/AL44000Sprint02'
@@ -19,10 +19,6 @@ export const getClassIDfromURL = () => {
 	return cpscParam
 }
 
-export const getClassCalendar = () => { 
-	return getCalendarByCalendarID(getClass().calendarID) 
-}
-
 // getClass() depreciated... replace getClass() with getClassSection()
 export const getClass = () => {
 	const classID = getClassIDfromURL()
@@ -30,18 +26,6 @@ export const getClass = () => {
 		return null
 	}
 	return getClassByClassID(classID)
-}
-
-export const getClassSection = () => {
-	const classID = getClassIDfromURL()
-	if (classID  === '') {
-		return null
-	}
-	return getClassByClassID(classID)
-}
-
-export  const getClassNumber = () => {
-	return getClass().number
 }
 
 export const getClassByClassID = (classID) => {
@@ -412,36 +396,13 @@ export const _CPSC_49200 = {
 }
 
 // Sections
-export const URLCLASSID = 'cpsc'
-export const _MWF = 'MWF'
-const _T = 'T'
-export const _TTR = 'TTh'
+const URLCLASSID = 'cpsc'
+const _MWF = 'MWF'
 
 const classSectionList = [
 	{ 'classID':'sp24-cpsc-20000-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 
 		'crn':'11319', 'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 
 		'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, May 8 from 1:30 to 3:30 PM CT' },
-
-	{ 'classID':'sp24-cpsc-44500-001', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_44500, 'number':'44500', 'section':'001', 
-		'crn':'11383', 'title':'Application Frameworks', 'location':'Arts and Sciences (AS) 101S and Friday remote via Zoom', 
-		'schedule':_MWF, 'time':'9-9:50 am', 'finalExam':'Wednesday May 8 from 10:30 am to 12:30 pm CP' },
-
-	{ 'classID':'sp24-cpsc-44000-001', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_44000, 'number':'44000', 'section':'001', 
-		'crn':'11382', 'title':'Software Engineering', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 
-		'schedule':_MWF, 'time':'11-11:50 am', 'finalExam':'Friday, May 10 from 10:30 am to 12:30 pm CT' },
-
-	{ 'classID':'sp24-cpsc-49200-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_49200, 'number':'49200', 'section':'001', 
-		'crn':'11391', 'title':'Software Systems Capstone', 'location':'Arts and Sciences (AS) 101A and remote via Zoom', 
-		'schedule':_T, 'time':'12:30-1:45', 'finalExam':'Thursday May 9 from 10:30 to 12:30 pm CT' },
-
-	{ 'classID':'cpsc-24500', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_24500, 'number':'24500', 'section':'XXX', 'crn':'00000',
-		'title':'Object-Oriented Programming', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' },
-
-	{ 'classID':'cpsc-24700', 'calendarID':_FALL_2023_08_28_16, 'class':_CPSC_24700, 'number':'24700', 'section':'XXX', 'crn':'00000',
-		'title':'Web and Distributed Programming', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' },
-	
-	{ 'classID':'cpsc-36000', 'calendarID':_CURRENT_CALENDAR, 'class':_CPSC_36000, 'number':'36000', 'section':'XXX', 'crn':'00000',
-		'title':'Applied Programming Languages', 'location':'', 'schedule':'', 'time':'', 'finalExam':'' }	
 ]
 
 

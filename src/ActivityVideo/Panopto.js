@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getClassSection, getClassNumber } from '../DataAndAPIs/Classes'
+import { getCurrentClassTitle, getClassNumber } from '../DataAndAPIs/ClassSections'
 import { Blended, externalLink, scrumIn7Min } from '../DataAndAPIs/Links'
 
 const panoptoWelcomeIFrameTag = () => {
@@ -9,7 +9,7 @@ const panoptoWelcomeIFrameTag = () => {
 
 export const welcome = () => {
 	return ( <div>
-		<h4>{getClassSection().title}</h4>
+		<h4>{getCurrentClassTitle}</h4>
 		<h5>Welcome! Please take a few minutes to view your welcome message.</h5>
 		<IFrameComponent iframe={panoptoWelcomeIFrameTag()} />
 		<br />
