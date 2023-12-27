@@ -156,5 +156,5 @@ Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 
 Backlog:
 s005: Fix Capstone. 
-s006: Move all class section functionality to classSection.js. - part 1.
-s007: Move remaining section functionality to classSection.js. - part 2.
+s008: Move class number from class section. Instead us the class number in class but be sure to convert it to a string.
+s009: Consolidate ClientDataAPIs.js.

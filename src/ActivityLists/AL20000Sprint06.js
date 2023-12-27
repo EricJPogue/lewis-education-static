@@ -5,16 +5,15 @@ import { learningObjectivesIntro, activitiesListIntro, standardActivities, initi
 import { oreillyPlaylistICS, programmingTogether, internalLink } from '../DataAndAPIs/Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 
-import { getClass } from '../DataAndAPIs/Classes'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 import { turtledrawLink } from '../Activities/PythonTurtleDraw'
 import { PythonTurtleLibrary } from '../DataAndAPIs/Links'
 import { IntroducingPythonSampleCode } from '../DataAndAPIs/Links'
 
 export const al20000Sprint06 = () => {
-	const classSection = getClass()
 	const sprint = 6
 	return ( <div>
-		<h5>Sprint 6: {classSection.class.modules[sprint-1]}</h5>
+		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
 
 		<p>Welcome to sprint 6. What is {PythonTurtleLibrary()} you ask? Why Turtle Graphics is a popular Python drawing library 
 		that we will be using to create our {turtledrawLink()} application. In fact one of the main reasons for Python’s vast 

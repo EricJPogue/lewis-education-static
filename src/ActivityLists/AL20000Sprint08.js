@@ -4,11 +4,12 @@ import { learningObjectivesIntro, activitiesListIntro, standardActivities, stand
 
 import { finalProjectLink } from '../Activities/FinalProject'
 import { oreillyPlaylistICS } from '../DataAndAPIs/Links'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 
 export const al20000Sprint08 = () => {
 	const sprint = 8
-	return ( <div>
-		<h5>Sprint 8: Final Project, Final Project, and more Final Project</h5>
+	return ( <div> 
+		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
 		<p>You made it. Very well done! Thank you for your dedication, support, and participation. All that’s left is to finish 
 		strong and bring closure to your Class Project and to present it to you classmates and instructor. </p>  
 

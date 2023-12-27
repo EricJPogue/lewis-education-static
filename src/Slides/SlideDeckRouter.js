@@ -1,4 +1,4 @@
-import { getClass } from '../DataAndAPIs/Classes'
+import { getClassNumber } from '../DataAndAPIs/ClassSections'
 
 import { checklist } from './SLSprint00' // Shared slide decks.
 	
@@ -52,7 +52,7 @@ export const slideDeckRouter = (route) => {
 }
 
 const sprintRouter = (route) => {
-	const courseNumberPlusRoute = getClass().number + '-' + route
+	const courseNumberPlusRoute = getClassNumber() + '-' + route
 	switch(courseNumberPlusRoute) {
 		case '20000-1-1': return ics_1_1of6()
 		case '20000-1-2': return ics_1_2of6()

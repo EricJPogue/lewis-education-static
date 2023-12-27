@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { getClass } from '../DataAndAPIs/Classes';
+import { getClassTitle } from '../DataAndAPIs/ClassSections'
 
 import { baseLink, videoLink } from '../Activities/Activity'
 import { designPrinciplesLink } from '../Slides/Breakout';
@@ -25,7 +25,7 @@ export class ActivityOOP extends Component {
 	render() {
 		return (
 			<div>
-				<h4>{getClass().title}</h4>
+				<h4>{getClassTitle()}</h4>
 				{this.activity()}
 				<br /><br />
 				{this.getDiscussionLink()}

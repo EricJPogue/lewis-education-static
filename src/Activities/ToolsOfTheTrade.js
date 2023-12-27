@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { getClass } from '../DataAndAPIs/Classes'
+//import { getClass } from '../DataAndAPIs/Classes'
+import { getClassNumber } from '../DataAndAPIs/ClassSections'
 import { internalLink, externalLink } from '../DataAndAPIs/Links'
 
 import { Discord, OReillyBooks, Firefox, Chrome, VSCode, FileExplorer, Finder, ZipFiles, Office365, PowerShell, Terminal, ScreenCapture, Git, 
@@ -16,42 +17,42 @@ const link = '/activity/tools'
 const name = 'Tools of the Trade'
 export const Tools = () => {
 	const checkNodeJS = () => {
-		if ((getClass().number === '24700') || (getClass().number === '44000') || (getClass().number === '49200')) {
+		if ((getClassNumber() === '24700') || (getClassNumber() === '44000') || (getClassNumber() === '49200')) {
 			return ( <li>{NodeJS()} development environment</li> )
 		}
 		return null
 	}
 
 	const checkJava = () => {
-		if (getClass().number === '24500') {
+		if (getClassNumber() === '24500') {
 			return ( <li>{microsoftOpenJDK()} development environment reviewing the associated {JavaTutorial()}</li> )
 		}
 		return null
 	}
 
 	const checkGo = () => {
-		if (getClass().number === '36000') {
+		if (getClassNumber() === '36000') {
 			return ( <li>{Go()} development environment</li> )
 		}
 		return null
 	}
 
 	const checkFirebase = () => {
-		if (getClass().number === '49200') {
+		if (getClassNumber() === '49200') {
 			return ( <li>{firebase()} application hosting service</li> )
 		}
 		return null
 	}
 
 	const checkMongoDBAtlas = () => {
-		if (getClass().number === '49200') {
+		if (getClassNumber() === '49200') {
 			return ( <li>{mongoDBAtlas()} database hosting service</li> )
 		}
 		return null
 	}
 
 	const checkGrammarly = () => {
-		if (getClass().number === '49200') {
+		if (getClassNumber() === '49200') {
 			return ( <li>{grammarly()} writing assistant / validator</li> )
 		}
 		return null

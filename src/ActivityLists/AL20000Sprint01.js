@@ -1,21 +1,20 @@
 import React from 'react'
 
-import { getClass } from '../DataAndAPIs/Classes'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 import { CommandLine, internalLink } from '../DataAndAPIs/Links'
 import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
 import { HelloWorldWebPart1Link } from '../Activities/HelloWorld'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 
 export const al20000Sprint01 = () => {
-	const classSection = getClass()
 	const sprint = 1
 	return ( <div>
-		<h5>Sprint 1: {classSection.class.modules[sprint-1]}</h5>
+		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
 
 		<p>Welcome to Introduction to Computer Science! In this course we will be exploring the field of computer 
 		science. The course will cover computer architecture, software engineering, data organization, 
 		networking, and security. We will also explore algorithms, abstractions, computational 
-		problem-solving, and programming.</p>
+		problem-solving, and programming.</p> 
 
 		{scrumIntro()}
 

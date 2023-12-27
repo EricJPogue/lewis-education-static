@@ -44,6 +44,22 @@ export  const getClassNumber = () => {
 	return getCurrentClassSection().number
 }
 
+export const getClassTitle = () => {
+	return getCurrentClassSection().course.name
+}
+
+export const getClassSectionID = () => {
+	return getCurrentClassSection().course.id
+}
+
+export const getClassSection = () => {
+	return getCurrentClassSection().section
+}
+
+export const getModuleDescription = (moduleIndex) => {
+	return getCurrentClassSection().course.modules[moduleIndex]
+}
+
 
 const URLCLASSID = 'cpsc'
 const getClassSectionIDfromURL = () => {

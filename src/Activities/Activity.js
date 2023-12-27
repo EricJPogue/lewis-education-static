@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player'
 
-import { getClass } from '../DataAndAPIs/Classes';
+import { getClassTitle } from '../DataAndAPIs/ClassSections';
 
 import { routeActivity } from './ActivityRouter';
 
 import { SeatSelector } from './SeatSelector'
 import { StudyTable } from './StudyTable'
-import { HelloWorldPython, HelloWorldJava, HelloWorldGo, /*HelloWorldWeb*/ } from './HelloWorld'
+import { HelloWorldPython, HelloWorldJava, HelloWorldGo } from './HelloWorld'
 import { MatchmakerExamples } from './Matchmaker';
 import { HealthRiskCalculatorPython, HealthRiskCalculatorWeb, HealthRiskCalculatorJava, HealthRiskCalculatorGo, HealthRiskCalculatorExamples } from './HealthRiskCalculator'
 
@@ -27,7 +27,6 @@ import { PythonW3C } from './PythonW3C'
 import { SuccessfulDeveloper } from './SuccessfulDeveloper'
 
 import { WebAssignmentPortfolioWithNodeJS } from './WebAssignmentPortfolioWithNodeJS'
-// import { WebDiceRoller } from './WebDiceRoller'
 import { gettingToKnowEachOther } from './WebGettingToKnowEachOther'
 import { WebCourseSchedule } from './WebCourseSchedule'
 import { WebMapManiaVersion2 } from './WebMapManiaVersion2'
@@ -197,7 +196,7 @@ class Activity extends Component {
 	render() {
 		return (
 			<div>
-				<h4>{getClass().title}</h4>
+				<h4>{getClassTitle()}</h4>
 				{this.activity()}
 			</div>
 		)

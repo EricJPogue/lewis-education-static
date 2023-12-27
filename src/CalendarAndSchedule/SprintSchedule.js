@@ -3,9 +3,7 @@ import Table from 'react-bootstrap/Table'
 
 import { CSTDate, incrementDate, isToday, pastDate, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/ClassSections'
-
-import { getClass } from '../DataAndAPIs/Classes'
-import { getClassCalendar } from '../DataAndAPIs/ClassSections'
+import { getClassCalendar, getClassTitle } from '../DataAndAPIs/ClassSections'
 import { internalLink } from '../DataAndAPIs/Links'
 
 import { getIsScheduleT, getIsScheduleTTr, getIsScheduleOnline } from '../DataAndAPIs/ClassSections'
@@ -35,7 +33,7 @@ export class SprintClassActivities extends Component {
 		let sprint = this.currentSprint()+1
 		return( 
 		<div>
-			<h4>{getClass().title}</h4>
+			<h4>{getClassTitle()}</h4>
 			<p>Sprint {sprint} starts <em>{sprintStartDate(sprint-1)}</em> and ends <u><em>{sprintEndDateWithoutTime(sprint-1)} at 11:59 PM CT.</em></u></p>
 			<h5 style={{marginTop:'32px', color: "grey"}} onClick={() => this.headerClicked(sprint)}>Calendar | <span style={{color: "black"}}>Schedule</span></h5>
 		</div>	

@@ -11,7 +11,7 @@ import { quizMasterMERNLink } from './QuizMasterMERN'
 import { seatSelectorMERNLink } from './SeatSelectorMERN'
 
 import { capacityCommittedEffortDeliveredLink } from './CapacityCommittedEffortDelivered'
-import { getClass } from '../DataAndAPIs/Classes'
+import { getClassNumber } from '../DataAndAPIs/ClassSections'
 
 const name1 = 'Class Product Sprint 1'
 export const CLASS_PRODUCT_SPRINT_1_ROUTE = 'class-product-sprint-1'
@@ -272,7 +272,7 @@ export const classProductSprint5 = () => {
 	let effort = 14
 
 	// Todo: Consider implementing a more elegant way of getting the expected effort for a given course.
-	if (getClass().number === '44000' )
+	if (getClassNumber() === '44000' )
 		effort = 6
 
 	return ( <div>

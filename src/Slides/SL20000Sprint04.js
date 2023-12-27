@@ -10,7 +10,7 @@ import { ics_5_1of6_lists } from './SL20000Sprint05'
 
 import { tReviewDemoSchedule } from './SL00000Sprint00'
 import { basicSlide } from './SLSprint00'
-import { getClass } from '../DataAndAPIs/Classes'
+import { getClassSection } from '../DataAndAPIs/ClassSections'
 
 // Sprint 4 Introduction to Computer Science (ICS) values.
 const sprint = 4
@@ -95,7 +95,7 @@ export const ics_4_3of6 = () => {
 			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
 	}
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
+		if (getClassSection() === '002') {
 			return submissionPercentage([
 				{ name: 'Discussion', due:27, submitted:27 },
 				{ name: 'Quiz', due:27, submitted:27 },
@@ -112,7 +112,7 @@ export const ics_4_3of6 = () => {
 	}
 	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
 	const retrospective = () => {
-		if (getClass().section === '002') {
+		if (getClassSection() === '002') {
 			return orderedListSlide('Class Retrospective',
 				'Feedback from Assignments & Reflections', [
 				'Wow, 100% submission percentage... with 27 in the class!',

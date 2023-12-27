@@ -8,13 +8,12 @@ import { getFinalExamDateAndTime } from '../DataAndAPIs/ClassSections'
 
 import { finalProjectLink } from '../Activities/FinalProject'
 
-import { getClass } from '../DataAndAPIs/Classes'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 
 export const al20000Sprint07 = () => {
 	const sprint = 7
-	const classSection = getClass()
 	return ( <div>
-		<h5>Sprint 7: {classSection.class.modules[sprint-1]}</h5>
+		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
 
 		<p>Welcome to sprint 7. Sprint 7 puts you in the driver’s seat. It is time for us to work on our Class Projects. 
 		We each have <em>three weeks and 20 hours</em> to deliver something uniquely your own. There is time to build something 

@@ -1,7 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { getClass } from '../DataAndAPIs/Classes'
+// import { getClass } from '../DataAndAPIs/Classes'
+import { getClassTitle } from '../DataAndAPIs/ClassSections';
+
 import { Git, GitTutorial, GitHub } from '../DataAndAPIs/Links'
 
 export const GetCommandsLink = () => {return (<NavLink to={internalLink}>{name}</NavLink>)}
@@ -24,7 +26,7 @@ on some basic Git commands including:</p>
 
 <p>The first Git command that most of us learn is <span style={mono}>“git clone”</span> which allows us to make a 
 complete local copy of a remote repository. For example, the command to make a copy of the example code 
-for {getClass().title} is:</p>
+for {getClassTitle()} is:</p>
 <pre>{`git clone https://github.com/EricJPogue/cpsc-example-code.git`}</pre><br />
 
 <p>When initially creating our own repositories, it is usually easiest to create the initial repository in GitHub and 

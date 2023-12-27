@@ -1,7 +1,7 @@
 // Dale chapter lecture sessions with embedded video and links to slides provided below.
 import React, { Component } from 'react'
 
-import { getClass } from '../DataAndAPIs/Classes'
+import { getClassTitle } from '../DataAndAPIs/ClassSections'
 import { daleLectureVideo } from './Panopto'
 
 export class ActivityDale extends Component {
@@ -10,7 +10,7 @@ export class ActivityDale extends Component {
 		const chapter = this.props.match.params.reference
 		return (
 			<div>
-				<h4>{getClass().title}</h4>
+				<h4>{getClassTitle()}</h4>
 				<h5>“Computer Science Illuminated” Chapter {chapter} Lecture</h5>
 				{daleLectureVideo(chapter)}
 			</div>

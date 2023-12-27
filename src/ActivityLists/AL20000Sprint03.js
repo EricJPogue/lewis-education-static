@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getClass } from '../DataAndAPIs/Classes'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
 import { oreillyPlaylistICS, SequenceSelectionAndRepetition, CSSW3C, internalLink, JavaScriptW3C } from '../DataAndAPIs/Links'
 
@@ -13,10 +13,9 @@ import { gettingToKnowEachOtherWebLink } from '../Activities/WebGettingToKnowEac
 import { matchmakerWebLink } from '../Activities/Matchmaker'
 
 export const al20000Sprint03 = () => {
-	const classSection = getClass()
 	const sprint = 3
 	return ( <div>
-		<h5>Sprint 3: {classSection.class.modules[sprint-1]}</h5>
+		<h5>Sprint 2: {getModuleDescription(sprint-1)}</h5>
 
 		<p>Welcome to sprint 3. I hope you enjoyed our work with HTML and your introduction to CSS because we are going to be 
 		continuing that journey by enhancing our web applications with more sophisticated HTML and CSS while hosting your 

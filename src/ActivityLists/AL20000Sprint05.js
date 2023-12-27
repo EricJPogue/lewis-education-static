@@ -2,7 +2,7 @@ import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated, finalProjectsAndMoreResponsibility } from './AL00000Sprint00'
 import { oreillyPlaylistICS, internalLink, externalLink, IntroducingPythonSampleCode } from '../DataAndAPIs/Links'
-import { getClass } from '../DataAndAPIs/Classes'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 
 import { matchmakerWebLink } from '../Activities/Matchmaker'
 import { HelloWorldPythonLink } from '../Activities/HelloWorld'
@@ -12,11 +12,10 @@ import { pythonAddCommitPushLink } from '../Activities/PythonAddCommitPush'
 
 export const al20000Sprint05 = () => {
 	const tiobeIndex = () => externalLink('TIOBE Index', 'https://www.tiobe.com/tiobe-index/')
-	const classSection = getClass()
 	let sprint = 5
 
 	return ( <div>
-		<h5>Sprint 5: {classSection.class.modules[sprint-1]}</h5>
+		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
 		<p><em>Wow!</em> Here we are in sprint 5. Very well done with {matchmakerWebLink()}.This sprint we switch gears 
 		and focusing on Python the #1 most popular computing language in the world according to the {tiobeIndex()}.</p>
 

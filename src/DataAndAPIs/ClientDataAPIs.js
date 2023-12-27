@@ -1,11 +1,8 @@
-import { getCalendarByCalendarID } from './Calendars'
-import { getClassByClassID } from './Classes'
-import { getClassCalendar } from './ClassSections'
 import { pastDate } from '../CalendarAndSchedule/SprintDates'
+import { getClassCalendar } from './ClassSections'
 
 // Exported APIs
 export const getCurrentSprintBase1 = () => { return getCurrentSprintByCalendar(getClassCalendar())+1}
-
 export const getCurrentSprintByCalendar = (calendar) => {
 	const minSprint = 0 
 	const maxSprint = 7
@@ -26,12 +23,7 @@ export const getCurrentSprintByCalendar = (calendar) => {
 	return maxSprint 
 }
 
-export const getCurrentSprintByClassID = (classID) => {
-	const classDetails = getClassByClassID(classID)
-	const calendar = getCalendarByCalendarID(classDetails.calendarID)
-	const currentSprint = getCurrentSprintByCalendar(calendar)
-	return currentSprint + 1
-}
+
 
 
 

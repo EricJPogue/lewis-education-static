@@ -13,7 +13,7 @@ import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 import { ics_6_1of6_PAaA } from './SL20000Sprint06'
 
 import { basicSlide } from './SLSprint00'
-import { getClass } from '../DataAndAPIs/Classes'
+import { getClassSection } from '../DataAndAPIs/ClassSections'
 
 // Sprint 5 Introduction to Computer Science (ICS) global values.
 const sprint = 5
@@ -86,7 +86,7 @@ export const ics_5_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_3of6_lists, sprint, activityList)
 
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
+		if (getClassSection() === '002') {
 			return submissionPercentage([
 				{ name: 'Discussion', due:27, submitted:27 },
 				{ name: 'Quiz', due:27, submitted:27 },
@@ -103,7 +103,7 @@ export const ics_5_3of6 = () => {
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {
-		if (getClass().section === '002') {
+		if (getClassSection() === '002') {
 			return orderedListSlide('Class Retrospective',
 				'Feedback from Assignments & Reflections', [
 				'Incredible, 100% submission percentage, two times in a row... with 27 in the class!',

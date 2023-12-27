@@ -1,20 +1,17 @@
 import React from 'react'
 
-import { getClass } from '../DataAndAPIs/Classes'
-
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated, justinaPiwoniQuote } from './AL00000Sprint00'
 import { SequenceSelectionAndRepetition, oreillyPlaylistICS, internalLink } from '../DataAndAPIs/Links'
-
 import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOther'
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
 import { HelloWorldWebLink } from '../Activities/HelloWorld'
 
 export const al20000Sprint02 = () => {
-	const classSection = getClass()
 	const sprint = 2
 	return ( <div>
-		<h5>Sprint 2: {classSection.class.modules[sprint-1]}</h5>
+		<h5>Sprint 2: {getModuleDescription(sprint-1)}</h5>
 
 		<p>Welcome to sprint 2 of Introduction to Computer Science. In sprint 2 we are going to continue our journey 
 		into data representation and also take look at some of the key technologies that make up the Web. Our sprint 

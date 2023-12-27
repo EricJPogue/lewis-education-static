@@ -2,15 +2,14 @@ import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
 import { oreillyPlaylistICS, SequenceSelectionAndRepetition, internalLink, externalLink } from '../DataAndAPIs/Links'
-import { getClass } from '../DataAndAPIs/Classes'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 import { matchmakerWebLink } from '../Activities/Matchmaker'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 
 export const al20000Sprint04 = () => {
-	const classSection = getClass()
 	let sprint = 4
 	return ( <div>
-		<h5>Sprint 4: {classSection.class.modules[sprint-1]}</h5>
+		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
 		<p>Sprint 4. Let’s write some JavaScript. <span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084; </span> 
 		for the Web will be challenging application but I think you will enjoy it.</p>
 

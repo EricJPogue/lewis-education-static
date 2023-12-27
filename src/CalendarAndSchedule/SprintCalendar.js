@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
 import { CSTDate, duration, sprintStartDate, sprintEndDateWithoutTime } from './SprintDates'
-import { getClass } from '../DataAndAPIs/Classes'
+import { getClassTitle } from '../DataAndAPIs/ClassSections'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/ClassSections'
 import { getClassCalendar } from '../DataAndAPIs/ClassSections' 
 
@@ -70,7 +70,7 @@ export class SprintCalendar extends Component {
 	render = () => {
 		return (
 			<div>
-			<h4>{getClass().title}</h4>
+			<h4>{getClassTitle()}</h4>
 			{this.renderSummaryText(this.currentSprint())}
 
 			<h5 style={{marginTop:'32px'}} onClick={() => this.headerClicked(this.currentSprint()+1)}>Calendar | <span style={{color: "grey"}}>Schedule</span></h5>

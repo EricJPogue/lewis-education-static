@@ -12,7 +12,7 @@ import { tDemos } from './SL00000Sprint00'
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
 
-import { getClass } from '../DataAndAPIs/Classes'
+import { getClassSection } from '../DataAndAPIs/ClassSections'
 import { tQuiz } from './SLSprint00'
 import { basicSlide } from './SLSprint00'
 
@@ -163,7 +163,7 @@ export const ics_7_5of6 = () => {
 	}
 
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
+		if (getClassSection() === '002') {
 			return submissionPercentage([
 				{ name: 'Discussion', due:27, submitted:26 },
 				{ name: 'Quiz', due:27, submitted:27 },

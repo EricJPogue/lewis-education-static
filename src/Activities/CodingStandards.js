@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-import { getClass } from '../DataAndAPIs/Classes'
+// import { getClass } from '../DataAndAPIs/Classes'
+import { getClassNumber } from '../DataAndAPIs/ClassSections';
 import { makeInternalURL } from './ActivityRouter';
 
 export const CodingStandards = () => {
-	if (getClass().number === '20000') return CodingStandardsAbbreviated()
+	if (getClassNumber() === '20000') return CodingStandardsAbbreviated()
 	return (
 
 <div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 
-import { getClass, getClassIDfromURL } from '../DataAndAPIs/Classes'
+import { getClassTitle, getClassSectionID } from '../DataAndAPIs/ClassSections'
 import { externalLink } from '../DataAndAPIs/Links'
 import LewisUniversityLogo from './LewisUniversityLogo.png'
 
@@ -18,7 +18,7 @@ export const preflightChecklist = () => {
 		{renderLogo()}
 		{bulletListSlide(
 			'Preflight Checklist',
-			`In preparation for our ${getClass().title} class please:`, [
+			`In preparation for our ${getClassTitle()} class please:`, [
 			'Sign into our Blackboard course shell',
 			'Sign into Zoom through the Zoom link in our Blackboard course shell',
 			'Mute your microphone and speakers as needed',
@@ -27,7 +27,7 @@ export const preflightChecklist = () => {
 		)}<br />
 		{renderBulletList(
 			'Instructor Checklist:', [
-			`Verify this is  ${getClass().title} (${getClassIDfromURL()})`,
+			`Verify this is  ${getClassTitle()} (${getClassSectionID()})`,
 			'Update Zoom polls and start Zoom session', 
 			'Share desktop and open slides (using ”&hide-nav=y” option as needed)', 
 			'Check camera, microphone, and speakers',
@@ -42,7 +42,7 @@ export const instructorChecklist = () => {
 		{renderLogo()}
 		{bulletListSlide(
 			'Instructor Checklist',
-			`In preparation for ${getClass().title} section ${getClassIDfromURL()}`, [
+			`In preparation for ${getClassTitle()} section ${getClassSectionID()}`, [
 			'Share slides with ”&hide-nav=y” option',
 			'Access Zoom series and load/update polls as needed',
 			'Start Zoom session',

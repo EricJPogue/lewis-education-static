@@ -1,5 +1,3 @@
-import { _SPRING_2024_01_15_16 } from "./Calendars"
-
 import { al44000Sprint1Topics } from '../ActivityLists/AL44000Sprint01'
 import { al44000Sprint2Topics } from '../ActivityLists/AL44000Sprint02'
 import { al44000Sprint3Topics } from '../ActivityLists/AL44000Sprint03'
@@ -9,6 +7,10 @@ import { al44000Sprint6Topics } from '../ActivityLists/AL44000Sprint06'
 import { al44000Sprint7Topics } from '../ActivityLists/AL44000Sprint07'
 import { al44000Sprint8Topics } from '../ActivityLists/AL44000Sprint08'
 
+
+// Sections
+const URLCLASSID = 'cpsc'
+
 export const getClassIDfromURL = () => {
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
@@ -17,26 +19,6 @@ export const getClassIDfromURL = () => {
 		return ''
 	}
 	return cpscParam
-}
-
-// getClass() depreciated... replace getClass() with getClassSection()
-export const getClass = () => {
-	const classID = getClassIDfromURL()
-	if (classID  === '') {
-		return null
-	}
-	return getClassByClassID(classID)
-}
-
-export const getClassByClassID = (classID) => {
-	for (let i = 0; i < classSectionList.length; i++) {
-		if (classSectionList[i].classID === classID) {
-			return classSectionList[i]
-		}
-	}
-
-	console.log('Error: Class not found (class= “'+classID+'”).')
-	return classSectionList[0]
 }
 
 // Todo: Figure out where the master list of program outcomes and baccalaureate characteristics reside. 
@@ -395,15 +377,9 @@ export const _CPSC_49200 = {
 	]
 }
 
-// Sections
-const URLCLASSID = 'cpsc'
-const _MWF = 'MWF'
 
-const classSectionList = [
-	{ 'classID':'sp24-cpsc-20000-002', 'calendarID':_SPRING_2024_01_15_16, 'class':_CPSC_20000, 'number':'20000', 'section':'002', 
-		'crn':'11319', 'title':'Introduction to Computer Science', 'location':'Arts and Sciences (AS) 104A and Friday remote via Zoom', 
-		'schedule':_MWF, 'time':'1-1:50 pm', 'finalExam':'Wednesday, May 8 from 1:30 to 3:30 PM CT' },
-]
+
+
 
 
 

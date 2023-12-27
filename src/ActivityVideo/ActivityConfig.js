@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
-import { getClass } from '../DataAndAPIs/Classes';
-
+import { getClassTitle } from '../DataAndAPIs/ClassSections'
 import { baseLink, videoLink } from '../Activities/Activity'
 
 const configLink = (fileName) => {
@@ -17,7 +15,7 @@ export class ActivityConfig extends Component {
 	render() {
 		return (
 			<div>
-				<h4>{getClass().title}</h4>
+				<h4>{getClassTitle()}</h4>
 				{this.activity()}
 			</div>
 		)

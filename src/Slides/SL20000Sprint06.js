@@ -1,4 +1,4 @@
-import { getClass } from '../DataAndAPIs/Classes'
+import { getClassSection } from '../DataAndAPIs/ClassSections'
 
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 import { xyz_n_2of6, xyz_n_3of6, xyz_n_6of6 } from './SL00000Sprint00'
@@ -65,7 +65,7 @@ const ics_6_3of6_PAaA = {
 
 export const ics_6_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
-		if (getClass().section === '002') {
+		if (getClassSection() === '002') {
 			return submissionPercentage([
 				{ name: 'Discussion', due:27, submitted:26 },
 				{ name: 'Quiz', due:27, submitted:27 },
@@ -81,7 +81,7 @@ export const ics_6_3of6 = () => {
 		}
 	}
 	const retrospective = () => {
-		if (getClass().section === '002') {
+		if (getClassSection() === '002') {
 			return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
 			'A little week on our submission percentage',
