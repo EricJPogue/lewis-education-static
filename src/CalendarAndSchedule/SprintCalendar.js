@@ -75,9 +75,9 @@ export class SprintCalendar extends Component {
 
 			<h5 style={{marginTop:'32px'}} onClick={() => this.headerClicked(this.currentSprint()+1)}>Calendar | <span style={{color: "grey"}}>Schedule</span></h5>
 			<Table striped bordered hover>
-				<thead><tr>
+				<thead><tr  style={{backgroundColor:'#C0C0C0'}}>
 					<th style={{textAlign:'center'}}>Sprint</th>
-					<th>End Date and Time</th>
+					<th>End Date</th>
 					<th>Duration</th>
 					<th>Notes</th>
 				</tr></thead>

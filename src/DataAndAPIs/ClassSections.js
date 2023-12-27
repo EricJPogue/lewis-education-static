@@ -31,20 +31,38 @@ export const getIsScheduleOnline = () => {
 }
 
 export const getClassSectionID = () => {
-	return getCurrentClassSection().course.id
-}
-
-export const getClassSection = () => {
-	return getCurrentClassSection().section
+	return getCurrentClassSection().id
 }
 
 export const getModuleDescription = (moduleIndex) => {
 	return getCurrentClassSection().course.modules[moduleIndex]
 }
 
+export const getModuleDescriptions = () => {
+	return getCurrentClassSection().course.modules
+}
+
+const moduleAssignments = [
+	'Discussion, Quiz, Lab, and Reflection',
+	'Discussion, Quiz, Lab, and Reflection',
+	'Discussion, Quiz, Lab, and Reflection',
+	'Discussion, Midterm Exam, Lab, and Reflection',
+	'Discussion, Quiz, Lab, and Reflection',
+	'Discussion, Quiz, Lab, and Reflection',
+	'Discussion, Final Exam, Lab, Reflection, and Lab Demo',
+	'Lab, Reflection'
+]
+export const getModuleAssignment = (module) => {
+	return moduleAssignments[module]
+}
+
 // To promote encapsulation use 'getAllClassSections()' and 'getClassSectionByID()' sparingly. 
 export const getAllClassSections = () => {
 	return _CLASS_SECTION_LIST
+}
+
+export const getClassSection = () => {
+	return getCurrentClassSection().section
 }
 
 export const getClassSectionByID = (classSectionID) => {

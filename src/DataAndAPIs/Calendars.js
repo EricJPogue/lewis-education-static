@@ -9,7 +9,7 @@ export const _CALENDAR_SPRING_2024_01_15_16 = {
 		{ 'start':'Mon Mar 18 2024 08:00:00 GMT-0500', 'end':'Sun Mar 31 2024 23:59:00 GMT-0600', 'notes':'Easter Holiday' },
 		{ 'start':'Mon Apr 01 2024 08:00:00 GMT-0500', 'end':'Sun Apr 14 2024 23:59:00 GMT-0600', 'notes':'Easter Holiday (continued)' },
 		{ 'start':'Mon Apr 15 2024 08:00:00 GMT-0500', 'end':'Sun May 05 2024 23:59:00 GMT-0600', 'notes':'Class Project' },
-		{ 'start':'Mon May 06 2024 08:00:00 GMT-0500', 'end':'Thu May 09 2024 23:59:00 GMT-0600', 'notes':'Final Exams' }
+		{ 'start':'Mon May 06 2024 08:00:00 GMT-0500', 'end':'Wed May 08 2024 23:59:00 GMT-0600', 'notes':'Final Exams' }
 	]
 }
 
@@ -29,3 +29,25 @@ export const _CALENDAR_FALL_2024_08_28_16 = {
 		{ 'start':'Mon Dec 11 2023 08:00:00 GMT-0500', 'end':'Thu Dec 14 2023 23:59:00 GMT-0600', 'notes':'Final Exam' }
 	]
 }
+
+/*
+const getCurrentSprintByCalendar = (calendar) => {
+	const minSprint = 0 
+	const maxSprint = 7
+
+	// Start date of the first sprint is in the future so return minSprint (likely sprint 0).
+	if (!pastDate(calendar[0].start)) {
+		return minSprint
+	}
+
+	for (let sprint = 0; sprint <= (maxSprint); sprint++) {
+		// Start date of the sprint is in the past and the end date is in the future so this is the current sprint.
+		if ((pastDate(calendar[sprint].start)) && (!pastDate(calendar[sprint].end))) {
+			return sprint
+		}
+	}
+
+	// All dates are in the past so return maxSprint (likely sprint 7)
+	return maxSprint 
+}
+*/

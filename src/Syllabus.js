@@ -5,7 +5,7 @@ import LewisUniversityLogo from './Slides/LewisUniversityLogo.png'
 import { externalLink } from './DataAndAPIs/Links'
 
 import { getClassIDfromURL } from './DataAndAPIs/Classes'
-import { getClassSectionByID } from './DataAndAPIs/ClassSections'
+import { getClassSectionByID, getModuleAssignment } from './DataAndAPIs/ClassSections'
 
 export const Syllabus = () => {
 	const classSectionIDfromURL = getClassIDfromURL()
@@ -278,19 +278,8 @@ const renderCourseScheduleTable = (modules) => {
 		return ( <tr key={moduleNumber+1}><td style={{textAlign:'center'}}>{moduleNumber}</td><td>{topics}</td><td>{assignments}</td></tr> )
 	}
 
-	const moduleAssignments = [
-		'Discussion, Quiz, Lab, and Reflection',
-		'Discussion, Quiz, Lab, and Reflection',
-		'Discussion, Quiz, Lab, and Reflection',
-		'Discussion, Midterm Exam, Lab, and Reflection',
-		'Discussion, Quiz, Lab, and Reflection',
-		'Discussion, Quiz, Lab, and Reflection',
-		'Discussion, Final Exam, Lab, Reflection, and Lab Demo',
-		'Lab, Reflection'
-	]
-
 	const renderModule = (moduleNumber, topics) => {
-		return renderModuleTableRow(moduleNumber, topics, moduleAssignments[moduleNumber-1]) 
+		return renderModuleTableRow(moduleNumber, topics, getModuleAssignment(moduleNumber-1)) 
 	}
 
 	return ( <div>

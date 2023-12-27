@@ -9,7 +9,7 @@ import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 export const al20000Sprint04 = () => {
 	let sprint = 4
 	return ( <div>
-		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
+		<h5>Sprint {sprint}: {getModuleDescription(sprint-1)}</h5>
 		<p>Sprint 4. Let’s write some JavaScript. <span style={{color: "red"}}> &#10084;&#10084;&#10084;</span> Matchmaker <span style={{color: "red"}}>&#10084;&#10084;&#10084; </span> 
 		for the Web will be challenging application but I think you will enjoy it.</p>
 

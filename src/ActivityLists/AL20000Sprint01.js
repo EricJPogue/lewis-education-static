@@ -9,7 +9,7 @@ import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 export const al20000Sprint01 = () => {
 	const sprint = 1
 	return ( <div>
-		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
+		<h5>Sprint {sprint}: {getModuleDescription(sprint-1)}</h5>
 
 		<p>Welcome to Introduction to Computer Science! In this course we will be exploring the field of computer 
 		science. The course will cover computer architecture, software engineering, data organization, 

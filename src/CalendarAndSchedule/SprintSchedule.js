@@ -152,7 +152,7 @@ export class SprintClassActivities extends Component {
 				<div>
 					{this.renderScheduleHeader()}
 					<Table striped bordered hover>
-						<thead><tr><th style={{width:'300px'}}>Day</th><th>Schedule and Slides</th></tr></thead>
+						<thead><tr style={{backgroundColor:'#C0C0C0'}}><th style={{width:'300px'}}>Day</th><th>Topics and Slides</th></tr></thead>
 						<tbody>
 							{this.renderScheduleRow(incrementDate(dates.start,0),schedule.FirstMonday,1)}
 							{this.renderScheduleRow(incrementDate(dates.start,2),schedule.FirstWednesday,2)}
@@ -174,7 +174,7 @@ export class SprintClassActivities extends Component {
 				<div>
 					{this.renderScheduleHeader()}
 					<Table striped bordered hover>
-						<thead><tr><th style={{width:'300px'}}>Day</th><th>Schedule and Slides</th></tr></thead>
+						<thead><tr style={{backgroundColor:'#C0C0C0'}}><th style={{width:'300px'}}>Day</th><th>Topics and Slides</th></tr></thead>
 						<tbody>
 							{this.renderScheduleRow(incrementDate(dates.start,0),schedule.FirstMonday,1)}
 							{this.renderScheduleRow(incrementDate(dates.start,2),schedule.FirstWednesday,2)}

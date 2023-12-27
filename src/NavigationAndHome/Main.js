@@ -1,10 +1,11 @@
-import './Main.css';
+import './Main.css'
 
-import React, { Component } from 'react';
-import { Route, HashRouter } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Route, HashRouter } from 'react-router-dom'
 import { HeaderNavigation } from './HeaderNavigation'
-import { ClassList } from './ClassList';
-import { welcome } from '../ActivityVideo/Panopto';
+import { ClassList } from './ClassList'
+import { ModuleList } from './ModuleList'
+import { welcome } from '../ActivityVideo/Panopto'
 import { Syllabus } from '../Syllabus' 
 import { Sprint } from '../ActivityLists/Sprint'
 import { SprintCalendar } from '../CalendarAndSchedule/SprintCalendar'
@@ -15,7 +16,7 @@ import { Credits } from '../Info/Credits'
 import { Version } from '../Info/Version'
 import { StudyTable } from '../Activities/StudyTable'
 
-import { Deck } from '../Slides/SlideDeck';
+import { Deck } from '../Slides/SlideDeck'
 import { Breakout } from '../Slides/Breakout'
 
 import { Test } from '../Test/Test'
@@ -35,6 +36,8 @@ class Main extends Component {
 					<div className='Main'>
 						<Route exact path='/' component={ClassList}/>
 						<Route exact path='/home' component={ClassList}/>
+						<Route exact path='/modules' component={ModuleList}/>
+						
 						<Route path='/welcome' component={welcome}/>
 						<Route path='/syllabus' component={Syllabus}/>
 						<Route path='/sprint/:reference' component={Sprint}/>

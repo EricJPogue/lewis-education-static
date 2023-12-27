@@ -11,7 +11,7 @@ import { HelloWorldWebLink } from '../Activities/HelloWorld'
 export const al20000Sprint02 = () => {
 	const sprint = 2
 	return ( <div>
-		<h5>Sprint 2: {getModuleDescription(sprint-1)}</h5>
+		<h5>Sprint {sprint}: {getModuleDescription(sprint-1)}</h5>
 
 		<p>Welcome to sprint 2 of Introduction to Computer Science. In sprint 2 we are going to continue our journey 
 		into data representation and also take look at some of the key technologies that make up the Web. Our sprint 

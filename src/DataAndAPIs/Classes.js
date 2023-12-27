@@ -56,7 +56,7 @@ export const _CPSC_20000 = {
 		'Networks, The Internet, Cloud Computing, Class Project Proposal, and Python',
 		'Artificial Intelligence, Machine Learning, update Class Project Proposal, and more Python',
 		'Class Project and Security',
-		'Final Exam'
+		'Class Project Presentation'
 	]
 }
 

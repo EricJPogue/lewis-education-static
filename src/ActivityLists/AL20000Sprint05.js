@@ -15,7 +15,7 @@ export const al20000Sprint05 = () => {
 	let sprint = 5
 
 	return ( <div>
-		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
+		<h5>Sprint {sprint}: {getModuleDescription(sprint-1)}</h5>
 		<p><em>Wow!</em> Here we are in sprint 5. Very well done with {matchmakerWebLink()}.This sprint we switch gears 
 		and focusing on Python the #1 most popular computing language in the world according to the {tiobeIndex()}.</p>
 
