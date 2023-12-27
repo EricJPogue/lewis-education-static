@@ -7,12 +7,12 @@ import { healthRiskCalculatorTeamWebLink } from '../Activities/HealthRiskCalcula
 
 import { ServerlessAzure, ServerlessGoogle, ServerlessAWS } from '../DataAndAPIs/Links'
 import { externalLink } from '../DataAndAPIs/Links'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 
-export const al44000Sprint4Topics = 'Team Final Project Proposal, Testing, Support, and Application Programming Interfaces'
 export const al44000Sprint04 = () => {
 	let sprint = 4
 	return ( <div>
-		<h5>Sprint 4: {al44000Sprint4Topics}</h5>
+		<h5>Sprint 4: {getModuleDescription(sprint-1)}</h5>
 
 		<p>Welcome to sprint 4. This sprint we are will be focused on learning about Testing and Test-Driven Development while 
 		we practice server-side Node.js programming. Although the features of {healthRiskCalculatorTeamWebLink()} are not 

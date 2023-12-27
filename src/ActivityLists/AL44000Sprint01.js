@@ -6,12 +6,13 @@ import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOt
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
 import { HelloWorldWebLink } from '../Activities/HelloWorld'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 
-export const al44000Sprint1Topics = 'Software Engineering Life Cycles, Software as a Service, Cloud Computing, HTML, and CSS'
 export const al44000Sprint01 = () => {
 	const sprint = 1
 	return ( <div>
-		<h5>Sprint 1: {al44000Sprint1Topics}</h5>
+		<h5>Sprint 1: {getModuleDescription(sprint-1)}</h5>
+		
 		<p><em>Welcome to Software Engineering!</em> By this point in your software development journey I’m sure you are 
 		confident in writing moderately complicated software programs. You’ve learned about structured programming techniques 
 		like sequence, selection, and repetition. You've learned how to break complicated programs down into more manageable 

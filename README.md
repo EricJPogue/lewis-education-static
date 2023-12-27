@@ -155,4 +155,3 @@ Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 Backlog:
 s005: Fix Capstone. 
 s010: Remove dependencies from "data" files.
-s011: Remove extra calendars.

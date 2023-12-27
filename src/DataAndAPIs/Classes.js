@@ -1,15 +1,7 @@
-import { al44000Sprint1Topics } from '../ActivityLists/AL44000Sprint01'
-import { al44000Sprint2Topics } from '../ActivityLists/AL44000Sprint02'
-import { al44000Sprint3Topics } from '../ActivityLists/AL44000Sprint03'
-import { al44000Sprint4Topics } from '../ActivityLists/AL44000Sprint04'
-import { al44000Sprint5Topics } from '../ActivityLists/AL44000Sprint05'
-import { al44000Sprint6Topics } from '../ActivityLists/AL44000Sprint06'
-import { al44000Sprint7Topics } from '../ActivityLists/AL44000Sprint07'
-import { al44000Sprint8Topics } from '../ActivityLists/AL44000Sprint08'
+// No dependencies is important
+// Todo: Figure out where the master list of program outcomes and baccalaureate characteristics reside. 
 
-// Sections
-const URLCLASSID = 'cpsc'
-
+export const URLCLASSID = 'cpsc'
 export const getClassIDfromURL = () => {
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
@@ -19,9 +11,6 @@ export const getClassIDfromURL = () => {
 	}
 	return cpscParam
 }
-
-// Todo: Figure out where the master list of program outcomes and baccalaureate characteristics reside. 
-// Todo: Remove course 'title' from classSectionList and use 'name' from _CPSC data.
 
 export const _CPSC_20000 = {
 	name:'Introduction to Computer Science',
@@ -310,14 +299,14 @@ export const _CPSC_44000 = {
 	],
 	textBook: 'Fox and Patterson. Engineering Software as a Service: An Agile Approach Using Cloud Computing.  ISBN: 978-0984881246.',
 	modules: [
-		`${al44000Sprint1Topics}`,
-		`${al44000Sprint2Topics}`,
-		`${al44000Sprint3Topics}`, 
-		`${al44000Sprint4Topics}`, 
-		`${al44000Sprint5Topics}`, 
-		`${al44000Sprint6Topics}`,
-		`${al44000Sprint7Topics}`,
-		`${al44000Sprint8Topics}`,
+		'Software Engineering Life Cycles, Software as a Service, Cloud Computing, HTML, and CSS',
+		'Agile, Scrum, Software-As-A-Service, Microsoft Azure, JavaScript, and Ruby on Rails',
+		'Live Scrum Teams, Application Requirements, GitHub, Static Websites, Node.js, and Azure', 
+		'Team Final Project Proposal, Testing, Support, and Application Programming Interfaces', 
+		'Team Final Project utilizing Scrum Events, Artifacts, and Roles plus Software Maintenance', 
+		'Team Final Project utilizing Scrum, Software Metrics, and Serverless Computing',
+		'Team Final Project, Application Frameworks, and React',
+		'Team Final Project, Design Patterns, and Security'
 	]
 }
 

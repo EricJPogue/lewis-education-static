@@ -5,13 +5,13 @@ import { oreillyPlaylistSE, internalLink, externalLink, gitCommands, jsonArticle
 
 import { assignmentPortfolioWithNodeJSLink } from '../Activities/WebAssignmentPortfolioWithNodeJS'
 import { gettingToKnowEachOthersTeamsLink } from '../Activities/WebGettingToKnowEachOthersTeams'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 
-export const al44000Sprint3Topics = 'Live Scrum Teams, Application Requirements, GitHub, Static Websites, Node.js, and Azure'
 export const al44000Sprint03 = () => {
 	const sprint = 3
 
 	return ( <div>
-		<h5>Sprint 3: {al44000Sprint3Topics}</h5>
+		<h5>Sprint 3: {getModuleDescription(sprint-1)}</h5>
 
 		<p>Welcome to sprint 3. This sprint we will be focused on Node.js as a platform for Saas. We will be
 		utilizing a book from O’Reilly Books to learn more about the Node.js and Express platform. The book that we are 

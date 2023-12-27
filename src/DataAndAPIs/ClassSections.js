@@ -1,4 +1,4 @@
-import { _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_44500, _CPSC_49200 } from "./Classes"
+import { _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_44500, _CPSC_49200, URLCLASSID } from "./Classes"
 import { _CALENDAR_SPRING_2024_01_15_16 } from "./Calendars"
 import { _INSTRUCTOR_ERIC_POGUE } from "./Instructors"
 
@@ -57,7 +57,6 @@ export const getClassSectionByID = (classSectionID) => {
 	return null
 }
 
-const URLCLASSID = 'cpsc'
 const getClassSectionIDfromURL = () => {
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);

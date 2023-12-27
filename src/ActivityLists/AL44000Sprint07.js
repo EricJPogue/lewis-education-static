@@ -9,12 +9,12 @@ import { introductionToReactLink } from '../Activities/IntroductionToReact'
 import { oreillyPlaylistSE, internalLink } from '../DataAndAPIs/Links'
 
 import { externalLink } from '../DataAndAPIs/Links'
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 
-export const al44000Sprint7Topics = 'Team Final Project, Application Frameworks, and React'
 export const al44000Sprint07 = () => {
 	const sprint = 7
 	return ( <div>
-		<h5>Sprint 7: {al44000Sprint7Topics}</h5>
+		<h5>Sprint 7: {getModuleDescription(sprint-1)}</h5>
 		<p>Welcome to sprint 7. This sprint will bring closure to our class project. We will be delivering stories, 
 		cleaning up our products, and transferring or accepting product ownership.</p>
 
