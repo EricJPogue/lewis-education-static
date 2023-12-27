@@ -71,6 +71,7 @@ const _MWF = 'MWF'
 const _T = 'T'
 const _TTR = 'TTh'
 const _ASYNCHRONOUS = 'Asynchronous' 
+const _SEMESTER_PREFIX = 'sp24'
 
 const getCurrentClassSection = () => {
 	return getClassSectionByID(getClassSectionIDfromURL())
@@ -79,6 +80,7 @@ const getCurrentClassSection = () => {
 const _SP24_CPSC_20000_002 = {
 	'id':'sp24-cpsc-20000-002', 
 	'section':'002',
+
 	'crn':'11319',
 	'meetingDays':_MWF,
 	'meetingTimes':'1-1:50 pm',
@@ -133,18 +135,24 @@ const _SP24_CPSC_49200_002 = {
 }
 
 const _XXXX_CPSC_24500 = {
+	'id':`${_SEMESTER_PREFIX}-${_CPSC_24500.id}`,
+
 	'course':_CPSC_24500,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
 	'calendar':_CALENDAR_SPRING_2024_01_15_16
 }
 
 const _XXXX_CPSC_24700 = {
+	'id':`${_SEMESTER_PREFIX}-${_CPSC_24700.id}`,
+
 	'course':_CPSC_24700,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
 	'calendar':_CALENDAR_SPRING_2024_01_15_16
 }
 
 const _XXXX_CPSC_36000 = {
+	'id':`${_SEMESTER_PREFIX}-${_CPSC_36000.id}`,
+
 	'course':_CPSC_36000,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
 	'calendar':_CALENDAR_SPRING_2024_01_15_16

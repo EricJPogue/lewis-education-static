@@ -14,7 +14,7 @@ export const getClassIDfromURL = () => {
 
 export const _CPSC_20000 = {
 	name:'Introduction to Computer Science',
-	id:'CPSC-20000',
+	id:'cpsc-20000',
 	number: 20000,
 	creditHours:3,
 	description: 
@@ -62,7 +62,7 @@ export const _CPSC_20000 = {
 
 export const _CPSC_24700 = {
 	name:'Web and Distributed Programming',
-	id:'CPSC-24700',
+	id:'cpsc-24700',
 	number: 24700,
 	creditHours:3,
 	description: 
@@ -107,7 +107,7 @@ export const _CPSC_24700 = {
 
 export const _CPSC_24500 = {
 	name:'Object-Oriented Programming',
-	id:'CPSC-24500',
+	id:'cpsc-24500',
 	number: 24500,
 	creditHours:3,
 	description: 
@@ -167,7 +167,7 @@ export const _CPSC_24500 = {
 
 export const _CPSC_44500 = {
 	name:'Application Frameworks',
-	id:'CPSC-44500',
+	id:'cpsc-44500',
 	number: 44500,
 	creditHours:3,
 	description: 
@@ -216,7 +216,7 @@ export const _CPSC_44500 = {
 
 export const _CPSC_36000 = {
 	name:'Applied Programming Languages',
-	id:'CPSC-36000',
+	id:'cpsc-36000',
 	number: 36000,
 	creditHours:3,
 	description: 
@@ -265,7 +265,7 @@ export const _CPSC_36000 = {
 
 export const _CPSC_44000 = {
 	name:'Software Engineering',
-	id:'CPSC-44000',
+	id:'cpsc-44000',
 	number: 44000,
 	creditHours:3,
 	description: 
@@ -312,7 +312,7 @@ export const _CPSC_44000 = {
 
 export const _CPSC_49200 = {
 	name:'Software Systems Capstone',
-	id:'CPSC-49200',
+	id:'cpsc-49200',
 	number: 49200,
 	creditHours:3,
 	description: 
