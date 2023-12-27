@@ -41,7 +41,7 @@ export const getCurrentClassTitle = () => {
 }
 
 export  const getClassNumber = () => {
-	return getCurrentClassSection().number
+	return getCurrentClassSection().course.number.toString()
 }
 
 export const getClassTitle = () => {
@@ -59,7 +59,6 @@ export const getClassSection = () => {
 export const getModuleDescription = (moduleIndex) => {
 	return getCurrentClassSection().course.modules[moduleIndex]
 }
-
 
 const URLCLASSID = 'cpsc'
 const getClassSectionIDfromURL = () => {
@@ -83,7 +82,6 @@ const getCurrentClassSection = () => {
 
 const _SP24_CPSC_20000_002 = {
 	'id':'sp24-cpsc-20000-002', 
-	'number':'20000',
 	'section':'002',
 	'crn':'11319',
 	'meetingDays':_MWF,
@@ -98,7 +96,6 @@ const _SP24_CPSC_20000_002 = {
 
 const _SP24_CPSC_44000_001 = {
 	'id':'sp24-cpsc-44000-001',
-	'number':'44000',
 	'section':'001',
 	'crn':'11382',
 	'meetingDays':_MWF,
@@ -113,7 +110,6 @@ const _SP24_CPSC_44000_001 = {
 
 const _SP24_CPSC_44500_001 = {
 	'id':'sp24-cpsc-44500-001',
-	'number':'44500',
 	'section':'001',
 	'crn':'11383',
 	'meetingDays':_MWF,
@@ -128,7 +124,6 @@ const _SP24_CPSC_44500_001 = {
 
 const _SP24_CPSC_49200_002 = {
 	'id':'sp24-cpsc-49200-002',
-	'number':'49200',
 	'section':'002',
 	'crn':'11391',
 	'meetingDays':_T,
@@ -142,21 +137,18 @@ const _SP24_CPSC_49200_002 = {
 }
 
 const _XXXX_CPSC_24500 = {
-	'number':'24500',
 	'course':_CPSC_24500,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
 	'calendar':_CALENDAR_SPRING_2024_01_15_16
 }
 
 const _XXXX_CPSC_24700 = {
-	'number':'24700',
 	'course':_CPSC_24700,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
 	'calendar':_CALENDAR_SPRING_2024_01_15_16
 }
 
 const _XXXX_CPSC_36000 = {
-	'number':'36000',
 	'course':_CPSC_36000,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
 	'calendar':_CALENDAR_SPRING_2024_01_15_16

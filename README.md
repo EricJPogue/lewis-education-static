@@ -157,5 +157,4 @@ Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 Backlog:
 s005: Fix Capstone. 
 s008: Move class number from class section. Instead us the class number in class but be sure to convert it to a string.
-s009: Consolidate ClientDataAPIs.js.
 s010: Remove dependencies from "data" files.
