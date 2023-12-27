@@ -152,9 +152,7 @@ Wow - then it ran. Hmmm... I thought I would need to install more packages. Cool
 
 Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 
-
-
 Backlog:
 s005: Fix Capstone. 
-s008: Move class number from class section. Instead us the class number in class but be sure to convert it to a string.
 s010: Remove dependencies from "data" files.
+s011: Remove extra calendars.

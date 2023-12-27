@@ -7,7 +7,6 @@ import { al44000Sprint6Topics } from '../ActivityLists/AL44000Sprint06'
 import { al44000Sprint7Topics } from '../ActivityLists/AL44000Sprint07'
 import { al44000Sprint8Topics } from '../ActivityLists/AL44000Sprint08'
 
-
 // Sections
 const URLCLASSID = 'cpsc'
 

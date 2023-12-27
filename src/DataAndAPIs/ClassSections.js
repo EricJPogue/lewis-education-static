@@ -2,22 +2,20 @@ import { _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_
 import { _CALENDAR_SPRING_2024_01_15_16 } from "./Calendars"
 import { _INSTRUCTOR_ERIC_POGUE } from "./Instructors"
 
-export const getClassSectionByID = (classSectionID) => {
-	for (let i = 0; i < _CLASS_SECTION_LIST.length; i++) {
-		if (_CLASS_SECTION_LIST[i].id === classSectionID)
-			return _CLASS_SECTION_LIST[i]
-	}
-
-	console.log(`Error: Class Section ID “${classSectionID}” not found.`)
-	return null
+export const getClassTitle = () => {
+	return getCurrentClassSection().course.name
 }
 
-export const getAllClassSections = () => {
-	return _CLASS_SECTION_LIST
+export const getClassNumber = () => {
+	return getCurrentClassSection().course.number.toString()
 }
 
 export const getClassCalendar = () => { 
 	return getCurrentClassSection().calendar.sprintDates
+}
+
+export const getFinalExamDateAndTime = () => {
+	return getCurrentClassSection().finalExam
 }
 
 export const getIsScheduleT = () => {
@@ -32,22 +30,6 @@ export const getIsScheduleOnline = () => {
 	return (getCurrentClassSection().meetingDay === _ASYNCHRONOUS)
 }
 
-export const getFinalExamDateAndTime = () => {
-	return getCurrentClassSection().finalExam
-}
-
-export const getCurrentClassTitle = () => {
-	return getCurrentClassSection().course.name
-}
-
-export  const getClassNumber = () => {
-	return getCurrentClassSection().course.number.toString()
-}
-
-export const getClassTitle = () => {
-	return getCurrentClassSection().course.name
-}
-
 export const getClassSectionID = () => {
 	return getCurrentClassSection().course.id
 }
@@ -58,6 +40,21 @@ export const getClassSection = () => {
 
 export const getModuleDescription = (moduleIndex) => {
 	return getCurrentClassSection().course.modules[moduleIndex]
+}
+
+// To promote encapsulation use 'getAllClassSections()' and 'getClassSectionByID()' sparingly. 
+export const getAllClassSections = () => {
+	return _CLASS_SECTION_LIST
+}
+
+export const getClassSectionByID = (classSectionID) => {
+	for (let i = 0; i < _CLASS_SECTION_LIST.length; i++) {
+		if (_CLASS_SECTION_LIST[i].id === classSectionID)
+			return _CLASS_SECTION_LIST[i]
+	}
+
+	console.log(`Error: Class Section ID “${classSectionID}” not found.`)
+	return null
 }
 
 const URLCLASSID = 'cpsc'
