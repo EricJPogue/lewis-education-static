@@ -278,17 +278,21 @@ const renderCourseScheduleTable = (modules) => {
 		return ( <tr key={moduleNumber+1}><td style={{textAlign:'center'}}>{moduleNumber}</td><td>{topics}</td><td>{assignments}</td></tr> )
 	}
 
+	const moduleAssignments = [
+		'Discussion, Quiz, Lab, and Reflection',
+		'Discussion, Quiz, Lab, and Reflection',
+		'Discussion, Quiz, Lab, and Reflection',
+		'Discussion, Midterm Exam, Lab, and Reflection',
+		'Discussion, Quiz, Lab, and Reflection',
+		'Discussion, Quiz, Lab, and Reflection',
+		'Discussion, Final Exam, Lab, Reflection, and Lab Demo',
+		'Lab, Reflection'
+	]
+
 	const renderModule = (moduleNumber, topics) => {
-		if (moduleNumber < 4) { 
-			return renderModuleTableRow(moduleNumber, topics, `Discussion ${moduleNumber}, Quiz ${moduleNumber}, Lab ${moduleNumber}, and Reflection ${moduleNumber}`) 
-		} else if (moduleNumber < 7 ) {
-			return renderModuleTableRow(moduleNumber, topics, 'Discussion, Quiz, Lab, and Reflection') 
-		} else if (moduleNumber === 7 ) {
-			return renderModuleTableRow(moduleNumber, topics, 'Discussion, Quiz, Lab, Reflection, and Lab Demo') 
-		} else if (moduleNumber > 7 ) {
-			return renderModuleTableRow(moduleNumber, topics, 'Discussion, Quiz, Lab, Reflection, and Final Project Presentation') 
-		}
+		return renderModuleTableRow(moduleNumber, topics, moduleAssignments[moduleNumber-1]) 
 	}
+
 	return ( <div>
 		<Table style={styleSmall} striped bordered hover>
 			{renderHeader()}
@@ -300,11 +304,12 @@ const renderCourseScheduleTable = (modules) => {
 const renderGradingCriteriaTable = () => {
 	const assignmentGrading = [
 		{ name: 'Discussion', points:8, number:7 },
-		{ name: 'Quiz', points:40, number:8 },
-		{ name: 'Lab', points:70, number:8 },
+		{ name: 'Quiz', points:20, number:5 },
+		{ name: 'Lab', points:80, number:8 },
 		{ name: 'Reflection', points:4, number:8 },
 		{ name: 'Demo', points:12, number:1 },
-		{ name: 'Class Project Presentation', points:20, number:1 }
+		{ name: 'Midterm Exam', points:80, number:1 },
+		{ name: 'Final Exam', points:80, number:1 }
 	]
 
 	const renderBody = (assignmentGradingIn) => {

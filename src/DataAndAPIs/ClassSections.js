@@ -77,6 +77,7 @@ const getCurrentClassSection = () => {
 	return getClassSectionByID(getClassSectionIDfromURL())
 }
 
+// Confirmed.
 const _SP24_CPSC_20000_002 = {
 	'id':'sp24-cpsc-20000-002', 
 	'section':'002',
@@ -92,12 +93,13 @@ const _SP24_CPSC_20000_002 = {
 	'calendar':_CALENDAR_SPRING_2024_01_15_16
 }
 
+// Confirmed.
 const _SP24_CPSC_44000_001 = {
 	'id':'sp24-cpsc-44000-001',
 	'section':'001',
 	'crn':'11382',
 	'meetingDays':_MWF,
-	'meetingTimes':'9-9:50 am',
+	'meetingTimes':'11-11:50 am',
 	'finalExam':'Wednesday, May 8 from 10:30 am to 12:30 pm CT',
 	'meetingLocation':'Arts and Sciences (AS) 104A and Friday remote via Zoom',
 
@@ -106,6 +108,7 @@ const _SP24_CPSC_44000_001 = {
 	'calendar':_CALENDAR_SPRING_2024_01_15_16
 }
 
+// Confirmed.
 const _SP24_CPSC_44500_001 = {
 	'id':'sp24-cpsc-44500-001',
 	'section':'001',
@@ -113,7 +116,7 @@ const _SP24_CPSC_44500_001 = {
 	'meetingDays':_MWF,
 	'meetingTimes':'9-9:50 am',
 	'finalExam':'Wednesday, May 8 from 10:30 am to 12:30 pm CT',
-	'meetingLocation':'Arts and Sciences (AS) 104A and Friday remote via Zoom',
+	'meetingLocation':'Arts and Sciences (AS) 101S',
 
 	'course':_CPSC_44500,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
@@ -126,8 +129,8 @@ const _SP24_CPSC_49200_002 = {
 	'crn':'11391',
 	'meetingDays':_T,
 	'meetingTimes':'11 am-12:15 pm',
-	'finalExam':'Wednesday, May 8 from 10:30 am to 12:30 pm CT',
-	'meetingLocation':'Arts and Sciences (AS) 104A and Friday remote via Zoom',
+	'finalExam':'Tuesday, May 7 from 10:30 am to 12:30 pm CT',
+	'meetingLocation':'Arts and Sciences (AS) 140S',
 
 	'course':_CPSC_49200,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,

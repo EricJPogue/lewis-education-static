@@ -154,7 +154,8 @@ Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 
 Backlog:
 s005: Fix Capstone. 
-s012: Update class list to include sections, schedules, and times so that students see information for all classes.
 s013: Consolidate Applied Programming Languages and Application Frameworks as appropriate so that students do not see two overlapping classes. 
-s014:
+s014: Update syllabus for Intro so students can review syllabus. 
+s015: Remove archived/unused files.
+s016
 

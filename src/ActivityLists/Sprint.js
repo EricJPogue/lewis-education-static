@@ -8,7 +8,7 @@ export class Sprint extends Component {
 	render = () => {
 		const activityListSprint = parseInt(this.props.match.params.reference)
 		return ( <div>
-			<h4>{getClassTitle}</h4>
+			<h4>{getClassTitle()}</h4>
 			{al(getClassNumber(), activityListSprint)}
 			{displayPreviewStampIfNeeded(activityListSprint)}
 		</div> )
