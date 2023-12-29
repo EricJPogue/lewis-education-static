@@ -70,10 +70,9 @@ export const standardActivities = (sprint=1, programmingAssignmentLink='', playl
 		const toolsOfTheTrade = () => internalLink('Tools of the Trade', '/activity/tools' )
 		return ( <div>
 			<li>Review our course {syllabus()}</li>
-			<li>Understand blended learning by watching {Blended()}</li>
-			<li>Be prepared to participate in your scrum team by watching {scrumIn7Min()}</li>
-			<li>Become comfortable with logging into and adding a representative photo of yourself to your {blackboardChangePhoto()} and Zoom profiles</li>
-			<li>Start working on {toolsOfTheTrade()} by setting up Discord, GitHub, and O’Reilly Books</li>
+			<li>Watch {Blended()} and {scrumIn7Min()}</li>
+			<li>Add a representative photo of yourself to {blackboardChangePhoto()}</li>
+			<li>Set up GitHub, Discord, and O’Reilly Books by following the instruction in {toolsOfTheTrade()}</li>
 		</div> )
 	}
 	const sprint2StandardActivities = () => {

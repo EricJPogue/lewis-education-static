@@ -58,6 +58,7 @@ import { WEB_DICE_ROLLER_ROUTE, webDiceRoller } from './WebDiceRoller'
 import { WEB_RESUME_ROUTE, webResume } from './WebResume'
 
 // The following includes represent an new alternative method of implementing activities.
+import { introductionsWebsite } from './IntroductionsWebsite'
 import { introductionToReact } from './IntroductionToReact'
 import { finalProject } from './FinalProject'
 
@@ -127,7 +128,8 @@ export const routeActivity = (activityRoute) => {
 		case WEB_RESUME_ROUTE: return webResume()
 
 		// The following case statements represent an new alternative method of implementing activities.
-		case introductionToReact.route: return introductionToReact.function()
+		case introductionsWebsite.route: return introductionsWebsite.render()
+		case introductionToReact.route: return introductionToReact.render()
 		case thunderbird.route: return thunderbird.function()
 		case finalProject.route: return finalProject.function()
 

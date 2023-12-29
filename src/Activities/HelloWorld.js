@@ -10,12 +10,9 @@ import { programmingTogetherHelloWorldPython } from '../ActivityVideo/Panopto'
 
 export const HelloWorldJavaLink = () => {return (<NavLink to={JavaProperties.internalLink}>{JavaProperties.name}</NavLink>)}
 export const HelloWorldPythonLink = () => {return (<NavLink to={PythonProperties.internalLink}>{PythonProperties.name}</NavLink>)}
-
-
 export const HelloWorldPython = () => { return HelloWorld(PythonProperties) }
 export const HelloWorldJava = () => { return HelloWorld(JavaProperties) }
 export const HelloWorldGo = () => { return HelloWorld(GoProperties) }
-
 
 const PythonProperties = {
 	'name': 'Hello World with Python',
@@ -62,7 +59,8 @@ const HelloWorld = (app) => {
 
 		<p>Why do we need to utilize a curly apostrophe? Well, it turns out that curly quotes and curly apostrophes should always
 		be utilized in written text. The following article from Practical Typography does a nice job of explaining the 
-		rational {externalLink('Practical Typography', 'https://practicaltypography.com/straight-and-curly-quotes.html')} <a href='https://practicaltypography.com/straight-and-curly-quotes.html' target='_blank' rel='noopener noreferrer'>[link]</a>.
+		rational {externalLink('Practical Typography', 'https://practicaltypography.com/straight-and-curly-quotes.html')} 
+		<a href='https://practicaltypography.com/straight-and-curly-quotes.html' target='_blank' rel='noopener noreferrer'>[link]</a>.
 		Equally important, becoming comfortable with utilizing curly quotes and curly apostrophes is a good starting point for 
 		understanding how to utilize special characters and eventually multiple languages in software applications.</p>
 
@@ -84,20 +82,14 @@ export const HELLO_WORLD_WEB_PART_1_ROUTE = 'hello-world-web-part-1'
 export const HelloWorldWebPart1Link = () => {return (<NavLink to={makeInternalURL(HELLO_WORLD_WEB_PART_1_ROUTE)}>{HELLO_WORLD_WEB_PART_1_NAME}</NavLink>)}
 
 export const HelloWorldWebPart1 = () => {
-	const practicalTypographyArticle = () => { return externalLink('Practical Typography article', 'https://practicaltypography.com/straight-and-curly-quotes.html') }
 	return ( <div>
 		<h4>Hello World for the Web</h4>
 		<h5>Summary: Create and host Hello World for the Web using GitHub Pages</h5>
 		<h5>Prerequisites: GitHub</h5>
 					
 		<p>Instructions: Complete Hello World for the Web using GitHub and HTML. We are going to display our preferred 
-		first name followed by our last name in possessive form along with a curly apostrophe (“ ’ ”). For example, my 
-		hello world output would be “Eric Pogue’s Hello World” including the curly apostrophe.</p>
-
-		<p>Why do we want need to utilize a curly apostrophe? Well, it turns out that curly quotes and curly apostrophes 
-		should always be utilized in written text. This {practicalTypographyArticle()} explains the rational. Equally 
-		important, becoming comfortable with utilizing curly quotes and curly apostrophes is a good starting point for 
-		understanding how to utilize special characters and eventually multiple languages in software applications.</p>
+		first name followed by our last name in possessive form. For example, my hello world output would be “Eric 
+		Pogue's Hello World.”</p>
 
 		<h5>Specific requirements for the application include:</h5>
 <		em>Requirement 1</em>
@@ -116,8 +108,31 @@ export const HELLO_WORLD_WEB_ROUTE = 'hello-world-web'
 export const HelloWorldWebLink = () => {return (<NavLink to={makeInternalURL(HELLO_WORLD_WEB_ROUTE)}>{HELLO_WORLD_WEB_NAME}</NavLink>)}
 
 export const HelloWorldWeb = () => { 
+	const practicalTypographyArticle = () => { return externalLink('Practical Typography article', 'https://practicaltypography.com/straight-and-curly-quotes.html') }
 	return ( <div>
-		{HelloWorldWebPart1()}
+		<h4>Hello World for the Web</h4>
+		<h5>Summary: Create and host Hello World for the Web using GitHub Pages</h5>
+		<h5>Prerequisites: GitHub</h5>
+					
+		<p>Instructions: Complete Hello World for the Web using GitHub and HTML. We are going to display our preferred 
+		first name followed by our last name in possessive form along with a curly apostrophe (“ ’ ”). For example, my 
+		hello world output would be “Eric Pogue’s Hello World” including the curly apostrophe.</p>
+
+		<p>Why do we want need to utilize a curly apostrophe? Well, it turns out that curly quotes and curly apostrophes 
+		should always be utilized in written text. This {practicalTypographyArticle()} explains the rational. Equally 
+		important, becoming comfortable with utilizing curly apostrophes is a good starting point for understanding how 
+		to utilize special characters and multiple languages in software applications.</p>
+
+		<h5>Specific requirements for the application include:</h5>
+<		em>Requirement 1</em>
+		<p>Create and host a website utilizing GitHub Pages by:</p>
+		<ol>
+			<li>Signing into your GitHub account</li>
+			<li>Reviewing {gitHubPages()} and completing {HelloWorldWebT1Link()}</li>
+			<li>Utilizing GitHub Pages and the {helloWorldTemplate()} to create and host a website</li>
+			<li>Implementing a Hello World website</li>
+		</ol>
+
 
 		<em>Requirement 2</em>
 		<p>Enhance your application so that it:</p>
@@ -131,7 +146,7 @@ export const HelloWorldWeb = () => {
 }
 
 // const HELLO_WORLD_WEB_T1_NAME = 'Hello World for the Web - Tutorial Part 1'
-const HELLO_WORLD_WEB_T1_NAME = 'Hello World for the Web - Tutorial'
+const HELLO_WORLD_WEB_T1_NAME = 'Hello World for the Web - Video Tutorial'
 export const HELLO_WORLD_WEB_T1_ROUTE = 'hello-world-web-t1'
 export const HelloWorldWebT1Link = () => {return (<NavLink to={makeInternalURL(HELLO_WORLD_WEB_T1_ROUTE)}>{HELLO_WORLD_WEB_T1_NAME}</NavLink>)}
 

@@ -1,8 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
-import { BASE_ACTIVITY_ROUTE } from './ActivityRouter'
 import { oreillyPlaylistSE, externalLink } from '../DataAndAPIs/Links'
+import { makeNavigationLink } from './ActivityLink'
 
 const renderIntroductionToReact = () => {
 	const reactOrg = () => { return externalLink('React.org', 'https://reactjs.org/') }
@@ -28,13 +27,11 @@ const renderIntroductionToReact = () => {
 	</div> )
 }
 
-export const introductionToReact = { 'name':'Introduction to React', 'route':'introduction-to-react', 'function': renderIntroductionToReact }
-export const introductionToReactLink = () => { return makeNavigationLink(introductionToReact) }
-
-const makeNavigationLink = (activity) => {
-	return ( <NavLink to={BASE_ACTIVITY_ROUTE+introductionToReact.route}>{introductionToReact.name}</NavLink> )
+export const introductionToReact = { 
+	'name':'Introduction to React', 
+	'route':'introduction-to-react', 
+	'render': renderIntroductionToReact 
 }
-
-
+export const introductionToReactLink = () => { return makeNavigationLink(introductionToReact) }
 
 

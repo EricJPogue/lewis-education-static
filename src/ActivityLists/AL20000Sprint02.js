@@ -22,6 +22,7 @@ export const al20000Sprint02 = () => {
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
+			<li>***Understand the basics of Computer Science</li>
 			<li>Describe the concept of abstraction</li>
 			<li>Develop browser-based HTML5 applications that utilize common HTML and CSS</li>
 			<li>Utilize important software developer tools and services to create, update, and deploy basic software applications</li>
@@ -39,12 +40,15 @@ export const al20000Sprint02 = () => {
 
 export const list20000Sprint02 = (sprint) => {
 	const ECaMSStudyTables = () => internalLink('ECaMS Study Tables', '/activity/study-table')
+	const daleChapter1Lecture = () => { return internalLink('chapter 1 lecture', '/activity-dale/1') }
 	const daleChapter2Lecture = () => { return internalLink('lecture', '/activity-dale/2') }
 	const daleChapter3Lecture = () => { return internalLink('lecture', '/activity-dale/3') }
 
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
+
+			<li>***Read Computer Science Illuminated chapter 1, review our {daleChapter1Lecture()}, and be prepared for a scrum team discussion</li>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
 			<li>Read “Computer Science Illuminated” The Information Layer and review our associated {daleChapter2Lecture()}</li>
 			<li>Visit the {ECaMSStudyTables()}, say “Hi,” and get the name of the ECaMS tutor</li>
