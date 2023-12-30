@@ -53,6 +53,6 @@ export const list20000Sprint01 = (sprint) => {
 }
 
 // Certified for FA22 on 08/27/22, SP23 on 01/02/23, and FA23 on 08/23/23.
+// Certified for SP24 on 12/19/23
 
-
-
+// Todo: Consider adding some more quiz bank questions for quiz 1 including topics like command line and tools of the trade.

@@ -16,7 +16,7 @@ const renderIntroductionsWebsite = () => {
 					
 		<h5>Instruction & Requirements</h5>
 		<p>Complete the following steps to create, update, and host your own introductions website.</p>
-		<em>Requirements</em>
+		<em>Requirement 1</em>
 		<ol type='n'>
 			<li>Sign into your {GitHub()} account</li>
 			<li>Complete or review {HelloWorldWebPart1Link()}</li>

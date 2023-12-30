@@ -50,12 +50,12 @@ export const _CPSC_20000 = {
 	textBook: 'Computer Science Illuminated, Nell Dale and John Lewis, Jones & Bartlett Learning. This book is required for this course.',
 	modules: [
 		'HyperText Markup Language (HTML), Tools of the Trade, and Files and File Systems',
-		'The Big Picture, Numbering Systems, Data Representation, Cascading Style Sheets (CSS)',
-		'Gates and Circuits, Computing Components, and JavaScript',
-		'The World Wide Web, Sequences, Selections, and Loops (Repetition), and more JavaScript',
-		'Networks, The Internet, Cloud Computing, Class Project Proposal, and Python',
-		'Artificial Intelligence, Machine Learning, update Class Project Proposal, and more Python',
-		'Class Project and Security',
+		'Cascading Style Sheets (CSS), The Big Picture, and The World Wide Web, ',
+		'JavaScript, Numbering Systems, and Data RepresentationGates',
+		'More JavaScript, Circuits, and Computing Components',
+		'Python, Class Project Proposal, Sequences, Selections, and Loops, Networks, The Internet',
+		'More Python, Update Class Project Proposal, Artificial Intelligence, and Machine Learning',
+		'Class Project, Cloud Computing, and Information Security',
 		'Class Project Presentation'
 	]
 }

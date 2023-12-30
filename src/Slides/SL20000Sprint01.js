@@ -50,6 +50,28 @@ const breakoutFileSystemsDirectoriesAndFile = () => {
 			'What would be examples of questionable places to store files for this class? Why? See lab question.' ])
 }
 
+/* Cover the following:
+
+Assume I was creating a directory to store source files for a class named “cpsc-20000” and that I was working on my sprint 1 “Hello World” assignment. 
+First, explain why the directory below is a very good location to choose to store my source files.
+
+/users/epogue/lewis/cpsc-20000/sprint-1/hello-world
+
+Second, explain the potential issue(s) with each of the following directories:
+
+./lewis/cpsc-2000/sprint-1/hello-world
+
+/Users/epogue/Desktop/lewis/sprint-1/hello-world
+
+/Users/epogue/Documents/lewis/sprint-1/hello-world
+
+./Recents
+
+/Users/epogue/lewis/cpsc 2000/sprint 1/helloworld
+
+/lewis/sprint-1/hello-world
+*/
+
 // Session 3 of 6: Friday
 const ics_1_3of6_PAaA = {
 	'prework':[
