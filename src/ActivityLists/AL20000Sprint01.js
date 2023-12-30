@@ -1,13 +1,12 @@
 import React from 'react'
 
-import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
-
 import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 import { CommandLine, internalLink } from '../DataAndAPIs/Links'
+import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing, estimated } from './AL00000Sprint00'
 
 import { HelloWorldWebPart1Link } from '../Activities/HelloWorld'
-import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { introductionsWebsiteLink } from '../Activities/IntroductionsWebsite'
+import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 
 export const al20000Sprint01 = () => {
 	const sprint = 1
@@ -24,9 +23,10 @@ export const al20000Sprint01 = () => {
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Participate in a blended classroom environment and as part of a scrum team</li>
+			<li>Utilize HTML to create a website</li>
+			<li>Utilize important developer tools like GitHub to create and update software applications</li>
 			<li>Effectively utilize files, file systems, and zip files</li>
 			<li>Use both graphical and command line tools to manage files and file systems</li>
-			<li>Utilize important developer tools to create and update software applications</li>
 		</ul>
 
 		{list20000Sprint01(sprint)}
@@ -56,11 +56,8 @@ export const list20000Sprint01 = (sprint) => {
 // Certified for SP23 (01/02/23)
 // Certified for FA23 (08/23/23)
 
-
-// BugBug: Fix Hello World for the Web Part 1 so that the overall description does NOT include part 2 requirements. 
 // Todo: Consider adding HTML Quiz questions.
 // Todo: Consider adding CSS Quiz questions.
-// Todo: Consider adding licensing topic to all classes. 
 
 
 

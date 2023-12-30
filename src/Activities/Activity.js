@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player'
 
-import { getClassTitle } from '../DataAndAPIs/ClassSections';
-
 import { routeActivity } from './ActivityRouter';
 
 import { SeatSelector } from './SeatSelector'
@@ -196,7 +194,6 @@ class Activity extends Component {
 	render() {
 		return (
 			<div>
-				<h4>{getClassTitle()}</h4>
 				{this.activity()}
 			</div>
 		)

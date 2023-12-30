@@ -7,12 +7,17 @@ import { GitHub, externalLink } from '../DataAndAPIs/Links'
 const renderIntroductionsWebsite = () => {
 	const introductionsWebsiteTemplate = () => { return externalLink('Introductions Website Template', 'https://github.com/EricPogueExampleCode-Web/introductions-2024')}
 	return ( <div><br />
-		<h4>{introductionsWebsite.name}</h4>
-		<h5>Summary: Create an Introductions Website for yourself and host the website using GitHub Pages</h5>
-		<h5>Prerequisites: A {GitHub()} account and an interest in HTML and CSS</h5>
+		<h3>{introductionsWebsite.name}</h3>
+		<h5>Summary</h5>
+		<p>Create an Introductions Website for yourself and host the website using GitHub Pages</p>
+		<h5>Prerequisites</h5>
+		<p>In order to complete this activity you will need a {GitHub()} account and an interest in HyperText Markup 
+		Language (HTML) and Cascading Style Sheets (CSS).</p>
 					
-		<p>Complete the following activities to create and host your own introductions website:</p>
-		<ol type="n">
+		<h5>Instruction & Requirements</h5>
+		<p>Complete the following steps to create, update, and host your own introductions website.</p>
+		<em>Requirements</em>
+		<ol type='n'>
 			<li>Sign into your {GitHub()} account</li>
 			<li>Complete or review {HelloWorldWebPart1Link()}</li>
 			<li>Follow the instructions at {introductionsWebsiteTemplate()} to create an Introductions Website using GitHub Pages</li>
@@ -20,7 +25,7 @@ const renderIntroductionsWebsite = () => {
 			<li>Fix the “Fun Fact” section to match the CSS styling of the other sections</li>
 			<li>Add an unstyled “Last Updated on dd/mm/yyyy” line at the bottom of the page that includes the date the page was last updated</li>
 		</ol>
-		<h5>Next Steps:</h5>
+		<h5>Next Steps</h5>
 		<p>Do you know what would happen if you added a Theme? Want to give it a try next time you create a website?</p>
 	</div> )
 }
