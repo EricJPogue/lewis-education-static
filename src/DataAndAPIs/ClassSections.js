@@ -118,7 +118,7 @@ const _SP24_CPSC_44000_001 = {
 	'crn':'11382',
 	'meetingDays':_MWF,
 	'meetingTimes':'11-11:50 am',
-	'finalExam':'Wednesday, May 8 from 10:30 am to 12:30 pm CT',
+	'finalExam':'Friday, May 10 from 10:30 am to 12:30 pm CT',
 	'meetingLocation':'Arts and Sciences (AS) 104A and Friday remote via Zoom',
 
 	'course':_CPSC_44000,
