@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+
+import { internalLink } from '../DataAndAPIs/Links'
 import { makeInternalURL } from './ActivityRouter'
 
 import { HelloWorldWebLink } from './HelloWorld'
@@ -8,51 +10,56 @@ const NAME = 'Getting to Know Each Other'
 export const GETTING_TO_KNOW_EACH_OTHER_ROUTE = 'getting-to-know-each-other'
 export const gettingToKnowEachOtherLink = () => {return (<NavLink to={makeInternalURL(GETTING_TO_KNOW_EACH_OTHER_ROUTE)}>{NAME}</NavLink>)}
 export const gettingToKnowEachOther = () => {
+	const introductionsDiscussion = () => { return internalLink('Introduction Discussion', 'introductions-website')}
 	return ( <div>
 		<br />
 		<h4>{NAME}</h4>
-		<h5>Summary: Create an HTML page describing yourself</h5>
-		<h5>Prerequisites: Windows 10 or MacOS, VS Code, FireFox, Chrome, HTML, and CSS</h5>
+		<h5>Summary: Create an HTML page describing yourself and host it as a GitHub Pages web application</h5>
+		<h5>Prerequisites: GitHub, Windows or MacOS, VS Code, FireFox, Chrome, HTML, and CSS</h5>
 					
-		<p>In this project you will create an HTML and CSS based web page about yourself. You will need to hand code this page 
-		in VS Code so that you can fully understand the HTML and CSS that makes up a web page.</p>
+		<p>In this project you will create and host an HTML and CSS based web page about yourself. You will need to hand code this page 
+		in VS Code so that you can fully understand the HTML and CSS that makes up a web page. You will also want to review 
+		the {introductionsDiscussion()}	activity for more detail on how to create and host your web site.</p>
 
 		<em>Requirement 1</em>
-		<p>Create an aesthetically pleasing web page in HTML and CSS that includes:</p>
+		<p>Create a web page using HTML and CSS that:</p>
 		<ol>
-			<li>A heading section at the top of the page with your preferred full name</li>
-			<li>A separate line with your Lewis email address as an HTML email link</li>
+			<li>Is hosted as GitHub Pages project website utilizing a public <em>GitHub repository named "me"</em></li>
+			<li>Includes a heading section at the top of the page with your preferred and last name</li>
+			<li>Includes a separate line with your Lewis email address as an HTML email link</li>
 			<li>A separate line with your Discord information </li>
-			<li>A high quality and representative head and shoulders photo of yourself appropriately sized and centered</li>
 		</ol>
 
 		<em>Requirement 2</em>
-		<p>Enhance your web page by adding:</p>
+		<p>Enhance your web page by:</p>
 		<ol>
-			<li>A sub-heading labeled “Introduction” with a paragraph about yourself, your family, and your major/minor</li>
-			<li>A sub-heading labeled “What I Hope to Learn in this Course” with a bulleted list of topics</li>
-			<li>A sub-heading labeled “My Favorite Hobby / Activity” with a paragraph about your favorite hobby or activity</li>
-			<li>A sub-heading labeled “Fun Fact” that includes something about you that is uniquely you</li>
+			<li>Adding a representative head and shoulders photo in PNG format named <em>"me.png"</em> of yourself appropriately sized and centered</li>
+			<li>Resizing the native version of your photo so that it is optimized for the web page</li>
+			<li>Placing the photo so that appears centered and appropriately sized at the top of your page</li>
+			<li>Including image alt text of your <em>preferred</em> name</li>
 		</ol>
 
 		<em>Requirement 3</em>
 		<p>Enhance your web page so that it includes:</p>
 		<ol>
-			<li>A section labeled “Greatest Innovation” that includes:
-				<ul style={{listStyleType:'square'}}>
-					<li>A list of the three greatest innovations in computing history with square icons (like this list)</li>
-					<li>Each list item should include and external link to another web page that also describes the innovation</li>	
-				</ul></li>
-			<li>Refactor you code so that all of you unordered lists use square list icons</li>
+			<li>A sub-heading labeled “Introduction” with a paragraph about yourself, your family, and your major/minor</li>
+			<li>A sub-heading labeled “What I Hope to Learn in this Course” with a bulleted list of topics</li>
+			<li>A sub-heading labeled “My Favorite Hobby / Activity” that includes: </li>
+			<ul style={{listStyleType:'square'}}>
+				<li>A list of at least two hobbies or activities</li>
+				<li>Square list icons (like this list) for all list items</li>
+				<li>An HTML link to an external web page that describes the activity or hobby in greater detail</li>	
+			</ul>
+			<li>A sub-heading labeled “Fun Fact” that includes something about you that is uniquely you</li>
 		</ol>
 
 		<em>Requirement 4</em>
 		<p>Test and validate your web page:</p>
 		<ol>
-			<li>Validate that you are following our HTML and CSS coding standards</li>
+			<li>Refactor your code so that all unordered lists use square icons</li>
 			<li>Throughout the development process you should validate your HTML utilizing the W3C HTML validator</li>
+			<li>Review and refactor your code so that all quotes and apostrophes are “curly”</li>
 			<li>Fully test your page by viewing and testing it in both the FireFox and Chrome browsers</li>
-			<li>Be careful to save and track your work as you will likely need to submit and publish the page later</li>
 		</ol>
 	</div> )
 }
