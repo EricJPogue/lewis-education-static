@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { scrumIntro, learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, estimated, closing } from './AL00000Sprint00'
+
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { classProductSprint1Link } from '../Activities/ClassProduct'
 import { oreillyPlaylistSC } from '../DataAndAPIs/Links'
@@ -57,3 +58,5 @@ export const list49200Sprint01 = (sprint) => {
 		</ol>
 	</div> )
 }
+
+// Certified for SP24 on 08-Jan-24

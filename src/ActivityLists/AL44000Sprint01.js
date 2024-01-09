@@ -66,5 +66,5 @@ export const list44000Sprint01 = (sprint) => {
 	</div> )
 }
 
-// Certified for FA23 (08/24/23)
-// Certified for SP24 on 12/19/23
+// Certified for FA23 on 08/24/23
+// Certified for SP24 on 08-Jan-24
