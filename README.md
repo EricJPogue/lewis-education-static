@@ -153,6 +153,5 @@ Wow - then it ran. Hmmm... I thought I would need to install more packages. Cool
 Passing parameters reference: https://www.youtube.com/watch?v=nmbX2QL7ZJc
 
 Backlog:
-s005: Fix Capstone. 
 s013: Consolidate Applied Programming Languages and Application Frameworks as appropriate so that students do not see two overlapping classes. 
 

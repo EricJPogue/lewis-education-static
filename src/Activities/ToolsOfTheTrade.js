@@ -31,7 +31,7 @@ export const Tools = () => {
 	}
 
 	const checkGo = () => {
-		if (getClassNumber() === '36000') {
+		if ((getClassNumber() === '36000') || (getClassNumber() === '44500')) {
 			return ( <li>{Go()} development environment</li> )
 		}
 		return null
@@ -63,7 +63,7 @@ export const Tools = () => {
 <div>
 <h5>{name}</h5>
 <h6>Summary: Install, configure, and utilize important software development tools</h6>
-<p>Prerequisites: Windows 11 or MacOS</p>
+<p>Prerequisites: Windows or MacOS</p>
 
 <p>To be a successful successful software developer and to be successful in this course you will need to effectively 
 install, configure, and utilize the following tools and services. By the end of this tutorial you will be able to:</p>

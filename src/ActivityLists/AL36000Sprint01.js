@@ -28,9 +28,9 @@ export const al36000Sprint01 = (syllabusURL) => {
 		<ul style={{listStyleType:'square'}}>
 			<li>Effectively participate in a blended classroom environment and as part of a Scrum team</li>
 			<li>Compare and contrast key software development language and environment features</li>
-			<li>Explain why agile development and scrum have impacted our choice of programming languages</li>
-			<li>Explain why the prevalence of multithreaded programming has impacted our choice of programming languages</li>
-			<li>Begin to understand the Go language and how it compares with other languages</li>
+			<li>Explain why agile development and scrum have impacted our choice of programming techniques and languages</li>
+			<li>Explain why the prevalence of multithreaded programming has impacted our choice of techniques and languages</li>
+			<li>Understand the Go language and how it compares with other languages</li>
 		</ul>
 
 		{list36000Sprint01(sprint)}
@@ -61,5 +61,5 @@ export const list36000Sprint01 = (sprint) => {
 	</div> )
 }
 
-// Todo: Add Git/GitHub activity / tutorial. 
+
 // BugBug: There is no Programming Together playlist for this class so the closing link does not work. 

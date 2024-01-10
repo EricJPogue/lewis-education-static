@@ -13,11 +13,10 @@ export const estimated = (estimate) => {
 }
 
 export const scrumIntro = (sprint = 0) => {
-	return ( <p>You likely noticed that I am using the term “sprint 1” to describe our first set of course activities. 
-		Sprints are part of the scrum software development process and describe a set of work that we have 
-		committed to deliver by a given date. We will be learning more about sprints and scrum. For now, it is 
-		sufficient to know that our sprint 1 activities will take approximately 18 hours of effort to complete and that 
-		we are committed to completing the activities by the end of sprint 1, which is <em>{sprintEndDateWithoutTime(sprint)}</em>.</p> )
+	return ( <p>I am using the term “sprint 1” to describe our first set of activities. Sprints are part of the scrum 
+		software development process and describe a set of work to be delivered by a specific date. Our sprint 1
+		activities are described below, are estimated to take about 18 hours of total effort, and need to be completed 
+		by <em>{sprintEndDateWithoutTime(sprint)}</em>.</p> ) 
 }
 
 export const learningObjectivesIntro = (sprint = 1) => {
@@ -31,9 +30,8 @@ export const learningObjectivesIntro = (sprint = 1) => {
 export const activitiesListIntro = (sprint = 1) => {
 	switch(sprint) {
 		case 1: return (
-				<p>Below is our sprint 1 activities list. Although you are welcome to pursue the activities in any order, they are
-				listed in the order I think will be the most efficient to complete. Expect each item to take 20 to 40 minutes of 
-				focused time unless otherwise noted. <em>Bold</em> items are graded assignments.</p>
+				<p>Below is our sprint 1 activities list. Expect each item to take 10 to 30 minutes of focused time 
+				unless otherwise noted. <em>Bold</em> items are graded assignments.</p>
 		)
 		case 2: return (
 				<p>Below is our sprint {sprint} activities list. Activities are listed in the order that I think will be the most efficient 

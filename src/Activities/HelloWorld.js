@@ -10,6 +10,9 @@ import { programmingTogetherHelloWorldPython } from '../ActivityVideo/Panopto'
 
 export const HelloWorldJavaLink = () => {return (<NavLink to={JavaProperties.internalLink}>{JavaProperties.name}</NavLink>)}
 export const HelloWorldPythonLink = () => {return (<NavLink to={PythonProperties.internalLink}>{PythonProperties.name}</NavLink>)}
+export const HelloWorldGoLink = () => {return (<NavLink to={GoProperties.internalLink}>{GoProperties.name}</NavLink>)}
+
+
 export const HelloWorldPython = () => { return HelloWorld(PythonProperties) }
 export const HelloWorldJava = () => { return HelloWorld(JavaProperties) }
 export const HelloWorldGo = () => { return HelloWorld(GoProperties) }
@@ -31,9 +34,11 @@ const JavaProperties = {
 }
 
 const GoProperties = {
+	'name': 'Hello World with Go',
 	'language': 'Go',
 	'prerequisites': 'Go, VS Code, and Terminal',
-	'tutorial': null
+	'tutorial': null,
+	'internalLink': '/activity/hello-world-go'
 }
 
 const Tutorial = (app) => {

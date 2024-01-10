@@ -165,54 +165,7 @@ export const _CPSC_24500 = {
 	]
 }
 
-export const _CPSC_44500 = {
-	name:'Application Frameworks',
-	id:'cpsc-44500',
-	number: 44500,
-	creditHours:3,
-	description: 
-		`This course exposes students to a variety of current programming languages that are not the focus of other 
-		courses in the major. The goal of the course is to increase students' programming skills while helping them 
-		develop good programming methodology and style. This course also gives students experience using code management 
-		systems and working on open-source programming projects.`,
-	prerequisites:'CPSC-24500 Object-Oriented Programming',
-	learningOutcomes:[
-		'create moderately complex applications using multiple programming languages and frameworks',
-		'improve programming style through effective coding standards', 
-		'optimizing programming, testing, enhancements, and fixes through modularization',
-		'write well-documented, easy-to-understand, clearly organized code that others may extend',
-		'use source code management tools to coordinate changes and create high quality releases',
-		'implement defect tracking to manage and prioritize a backlog of application improvements',
-		'use debuggers and profilers to analyze, troubleshoot, and enhance code',
-		'utilize scripting to automate build, testing, and deployment tasks',
-		'effectively work on software applications with small teams',
-		'develop and implement unit tests and integration tests',
-		'contribute to open-source programming projects'
-	],
-	programOutcomes:[
-		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
-		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
-		{'value':3, outcome:'work in a team to design and implement complex data processing systems collaboratively'},
-		{'value':7, outcome:'explain how programming languages are designed and implemented'}
-	],
-	baccalaureateCharacteristics:[
-		{'value':1, outcome:'Essential Skills'},
-		{'value':2, outcome:'Major Approaches to Knowledge'},
-		{'value':6, outcome:'Critical Thinking'},
-		{'value':7, outcome:'Lifelong Learning'}
-	],
-	textBook: 'Reading assignments well be made from the O’Reilly online book service which Lewis University provides to students at no cost.',
-	modules: [
-		'Programming Languages, Object-Oriented Programming (OOP) Concepts, Getting Started with Go',
-		'OOP Patterns and Principles, Functional Programming, Configuration Management, Structs, Interfaces, and Packages',
-		'Inheritance and Polymorphism, Classes (including Constructors and Destructors), Exceptions, Templates, Overloading, and Testing',
-		'Concurrency and Next Steps',
-		'Web Development with HTML, CSS, JavaScript, React plus Final Project Proposal',
-		'Cloud Computing with Microsoft Azure, Azure Functions, Final Project Proposal Review and Updates',
-		'Containers, More React, Final Project – Version 0',
-		'Application Architecture, Even More React, Final Project – Version 1'
-	]
-}
+
 
 export const _CPSC_36000 = {
 	name:'Applied Programming Languages',
@@ -307,6 +260,55 @@ export const _CPSC_44000 = {
 		'Team Final Project utilizing Scrum, Software Metrics, and Serverless Computing',
 		'Team Final Project, Application Frameworks, and React',
 		'Team Final Project, Design Patterns, and Security'
+	]
+}
+
+export const _CPSC_44500 = {
+	name:'Application Frameworks',
+	id:'cpsc-44500',
+	number: 44500,
+	creditHours:3,
+	description: 
+		`This course exposes students to a variety of current programming languages that are not the focus of other 
+		courses in the major. The goal of the course is to increase students' programming skills while helping them 
+		develop good programming methodology and style. This course also gives students experience using code management 
+		systems and working on open-source programming projects.`,
+	prerequisites:'CPSC-24500 Object-Oriented Programming',
+	learningOutcomes:[
+		'create moderately complex applications using multiple programming languages and frameworks',
+		'improve programming style through effective coding standards', 
+		'optimizing programming, testing, enhancements, and fixes through modularization',
+		'write well-documented, easy-to-understand, clearly organized code that others may extend',
+		'use source code management tools to coordinate changes and create high quality releases',
+		'implement defect tracking to manage and prioritize a backlog of application improvements',
+		'use debuggers and profilers to analyze, troubleshoot, and enhance code',
+		'utilize scripting to automate build, testing, and deployment tasks',
+		'effectively work on software applications with small teams',
+		'develop and implement unit tests and integration tests',
+		'contribute to open-source programming projects'
+	],
+	programOutcomes:[
+		{'value':1, outcome:'develop programs using languages having different programming paradigms and for a variety of platforms'},
+		{'value':2, outcome:'select the most appropriate data structures and algorithms for the given problem'},
+		{'value':3, outcome:'work in a team to design and implement complex data processing systems collaboratively'},
+		{'value':7, outcome:'explain how programming languages are designed and implemented'}
+	],
+	baccalaureateCharacteristics:[
+		{'value':1, outcome:'Essential Skills'},
+		{'value':2, outcome:'Major Approaches to Knowledge'},
+		{'value':6, outcome:'Critical Thinking'}, 
+		{'value':7, outcome:'Lifelong Learning'}
+	],
+	textBook: 'Reading assignments well be made from the O’Reilly online book service which Lewis University provides to students at no cost.',
+	modules: [
+		'Programming Languages & Techniques, Frameworks, and Getting Started with Go',
+		'OOP Patterns and Principles, Functional Programming, Configuration Management, Structs, Interfaces, and Packages',
+		'Inheritance and Polymorphism, Classes (including Constructors and Destructors), Exceptions, Templates, Overloading, and Testing',
+		'Concurrency and Next Steps',
+		'Web Development with HTML, CSS, JavaScript, React plus Final Project Proposal',
+		'Cloud Computing with Microsoft Azure, Azure Functions, Final Project Proposal Review and Updates',
+		'Containers, More React, Final Project – Version 0',
+		'Application Architecture, Even More React, Final Project – Version 1'
 	]
 }
 
