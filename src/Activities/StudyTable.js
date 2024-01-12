@@ -1,6 +1,6 @@
 
 import React from 'react';
-import StudyTableImage from './StudyTable2023.png';
+import StudyTableImage from './StudyTable2024.png';
 
 export const StudyTable = () => {
 	return ( <div>

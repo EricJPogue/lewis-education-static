@@ -9,7 +9,7 @@ const xyz_1_1of6_PAaA = {
 		'Review Introduction to Scrum',
 		'Review Course Syllabus' ],
 	'announcements':[ 
-		'Welcome back! I hope you had a wonderful summer break.' ],
+		'Welcome back! I hope you had a wonderful Christmas break.' ],
 	'agenda':[
 		'Progress Polling',
 		'Class Format',
