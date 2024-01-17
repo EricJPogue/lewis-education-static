@@ -36,9 +36,7 @@ export const xyz_1_2of6 = (sprint, currentSession, nextSession, sprintActivities
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(currentSession, sprint, sprintActivitiesList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', nextSession.prework, sprint, sprintActivitiesList) }
 	const introductionsContinued = () => {
-		return basicSlide('PowerPoint', [
-			'Switch slide decks' ]
-		)
+		return basicSlide('Switch slide decks...', [ '' ] )
 	}
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning (continued)', `Sprint ${sprint} Expectations:`, [

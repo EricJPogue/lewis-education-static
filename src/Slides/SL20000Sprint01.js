@@ -15,15 +15,19 @@ export const ics_1_1of6 = () => { return xyz_1_1of6(activityList, ics_1_2of6_PAa
 // Session 2 of 6: Wednesday
 const ics_1_2of6_PAaA = {
 	'prework':[
-		'Complete through activity 7 prior to next class', '',
-		`Be prepared to complete sprint ${sprint} planning` ],
+		'Review welcome message', 
+		'Review Blended Learning',
+		'Review Scrum',
+		'Take a quick look at the course syllabus' ],
 	'announcements':[ 
+		'Welcome back! I hope you had a wonderful Christmas break',
 		'Friday’s class will be remote via Zoom' ],
-	'agenda':[
-		'Sprint Progress Polling', 
-		'Introductions and Scrum Team Assignments (continued)',
-		`Sprint ${sprint} Planning (continued)`,
-		`Sprint ${sprint} Scrum Team Breakout` ]
+	'agenda':[ 'Progress Polling',
+		'Class Format',
+		'Introductions - Part 1',
+		'Sprint 1 Planning (abbreviated)',
+		'Introductions - Part 2 and Scrum Team Assignments',
+		'Prework for Next Class' ]
 }
 export const ics_1_2of6 = () => { return xyz_1_2of6(sprint, ics_1_2of6_PAaA, ics_1_3of6_PAaA, activityList) }
 
