@@ -1,6 +1,7 @@
 import { _CPSC_20000, _CPSC_24500, _CPSC_24700, _CPSC_36000, _CPSC_44000, _CPSC_44500, _CPSC_49200, URLCLASSID } from "./Classes"
 import { _CALENDAR_SPRING_2024_01_15_16 } from "./Calendars"
 import { _INSTRUCTOR_ERIC_POGUE } from "./Instructors"
+import { students_SP24_CPSC_49200_002 } from "./Students"
 
 export const getClassTitle = () => {
 	return getCurrentClassSection().course.name
@@ -152,7 +153,8 @@ const _SP24_CPSC_49200_002 = {
 
 	'course':_CPSC_49200,
 	'instructor':_INSTRUCTOR_ERIC_POGUE,
-	'calendar':_CALENDAR_SPRING_2024_01_15_16
+	'calendar':_CALENDAR_SPRING_2024_01_15_16,
+	'students':students_SP24_CPSC_49200_002
 }
 
 const _XXXX_CPSC_24500 = {

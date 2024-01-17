@@ -22,7 +22,7 @@ export const xyz_1_1of6 = (activityList, xyz_1_2of6Prework) => {
 	const sprint = 1
 
 	const poll = () => { return tPrework('Sprint Progress Polling', xyz_1_1of6_PAaA.prework, sprint, activityList) }
-	const switchDeck = () => { return bulletListSlide('PowerPoint', 'Switch to PowerPoint slides.', [])}
+	const switchDeck = () => { return bulletListSlide('Introductions', 'Introductions - Part 1 (slides).', [])}
 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(xyz_1_1of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', xyz_1_2of6Prework, sprint, activityList) }
@@ -36,10 +36,8 @@ export const xyz_1_2of6 = (sprint, currentSession, nextSession, sprintActivities
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(currentSession, sprint, sprintActivitiesList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', nextSession.prework, sprint, sprintActivitiesList) }
 	const introductionsContinued = () => {
-		return basicSlide('Introductions and Scrum Team Assignments (continued)', [
-			'Review scrum team assignments from Monday',
-			'Continue with introductions and scrum team assignments',
-			'Did we miss anyone?' ]
+		return basicSlide('PowerPoint', [
+			'Switch slide decks' ]
 		)
 	}
 	const sprintPlanning = () => {
