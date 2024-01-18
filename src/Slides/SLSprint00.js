@@ -82,10 +82,11 @@ export const agendaSlide = (agendaItems) => {
 	</div>)
 }
 
-export const recapSlide = (agendaItems) => {
+export const tRecap = (agendaItems) => {
 	return ( <div>
 		{renderLogo()}
-		{orderedListSlide('Recap:', '', agendaItems)}
+		{renderHeader('Recap:')}
+		{renderBulletList('', agendaItems)}
 	</div>)
 }
 

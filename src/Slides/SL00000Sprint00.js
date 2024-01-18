@@ -3,7 +3,7 @@ import { agendaSlide, orderedListSlide, bulletListSlide, basicSlideWithLogo, tPr
 
 import { retrospectiveIntroduction, retrospectiveBreakout, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00'
 
-import { tDiscussionBreakout } from './SLSprint00'
+import { tDiscussionBreakout, tRecap, breakoutStandard } from './SLSprint00'
 
 export const makeSlideDeck = (slides) => { 
 	return [ preflightChecklist ].concat(slides).concat(end) 
@@ -45,6 +45,38 @@ export const tNoClassToday = () => {
 export const tNoRegularClassToday = () => {
 	return basicSlideWithLogo('Finals Week', [
 		'No regular class this week.'])
+}
+
+
+// Sprint 1 class 2 is intended to be the second time the class meets. For example, this may be the third session if the first
+// session was a holiday (i.e. Martin Luther King day)
+export const sprint1_class_2_PAaA = {
+	'prework':[
+		'Complete through activity 6', '', 
+		'Scrum Master to set up team Discord server' ],
+	'announcements':[ 
+		'Welcome Back!' ],
+	'agenda':[ 
+		'Sprint Progress Polling',
+		'Introductions and Scrum Team Assignments (continued)',
+		'Sprint 1 Planning (continued)',
+		'Sprint 1 Planning Breakout',
+		'Prework for Next Class' ]
+}
+export const sprint1_class_2 = (sprint, activityList, pAaA, preworkNextSession) => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(pAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', pAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', preworkNextSession, sprint, activityList) }
+	const breakoutSprint1Planning = () => {
+		return breakoutStandard(
+			'Breakout: Sprint 1 Planning (as time allows)', 
+			'In this breakout session discuss discuss 1 thing the team is concerned about and 1 thing the team is looking forward to in sprint 1:', [
+				'Presenter volunteers to report out... or Scrum Master assigns a presenter',
+				'Discuss at least 1 activity that is a concern', 
+				'Discuss at least 1 activity that looks interesting' ])
+	}
+	const recap = () => { return tRecap(pAaA.agenda.slice(1))}
+	return completeDeck(slideDeck, [poll, breakoutSprint1Planning, preworkNext, recap])
 }
 
 export const xyz_n_1of6_agenda_list = (sprint) => { 

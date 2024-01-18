@@ -38,12 +38,12 @@ export const al44500Sprint01 = () => {
 
 		{scrumIntro()}
 
-		{list44000Sprint01(sprint)}
+		{list44500Sprint01(sprint)}
 		{closing(sprint)}	
 	</div> )
 }
 
-export const list44000Sprint01 = (sprint) => {
+export const list44500Sprint01 = (sprint) => {
 	const conceptsAndPractices = () => { return internalLink('Object-Oriented Programming Concepts and Practices', '/activity-oop/concepts-and-practices') }
 
 	return ( <div>

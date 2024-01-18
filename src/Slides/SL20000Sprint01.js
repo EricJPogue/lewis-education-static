@@ -1,9 +1,12 @@
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 import { xyz_1_1of6, xyz_1_2of6,  } from './SL00000Sprint01'
-import { tPrework, tQuizExpectations, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, recapSlide } from './SLSprint00'
+import { tPrework, tQuizExpectations, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, tRecap } from './SLSprint00'
 
 import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
 import { ics_2_1of6_PAaA } from './SL20000Sprint02'
+
+import { sprint1_class_2_PAaA, sprint1_class_2 } from './SL00000Sprint00'
+
 
 // Introduction to Computer Science (ICS) sprint 1 global values.
 const sprint = 1
@@ -54,6 +57,11 @@ const breakoutFileSystemsDirectoriesAndFile = () => {
 			'What would be examples of questionable places to store files for this class? Why? See lab question.' ])
 }
 
+// Session 3 of 6: Friday
+const ics_1_3of6_PAaA = sprint1_class_2_PAaA
+export const ics_1_3of6 = () => { return sprint1_class_2(sprint, activityList, sprint1_class_2_PAaA, ics_1_4of6_PAaA.prework) }
+
+
 /* Cover the following:
 
 Assume I was creating a directory to store source files for a class named “cpsc-20000” and that I was working on my sprint 1 “Hello World” assignment. 
@@ -76,33 +84,29 @@ Second, explain the potential issue(s) with each of the following directories:
 /lewis/sprint-1/hello-world
 */
 
-// Session 3 of 6: Friday
-const ics_1_3of6_PAaA = {
+// Session 4 of 6: Wednesday
+const ics_1_4of6_PAaA = {
 	'prework':[
-		'Complete through activity 10 prior to next class', '',
-		'Be prepared for “File Systems, Directories, and Files” Breakout' ],
+		'Complete through activity 9 prior to next class', '',
+		'Be prepared to complete Discussion 1'],
 	'announcements':[ 
-		'Reminder that Monday is Labor Day with no classes' ],
-	'agenda':[
-		'Sprint Progress Polling plus Command Line Interfaces (CLI) and Directories',
-		'Programming Together with graphical and CLI tool to manage directories and files',
-		'Prework for Next Class',
-		'Breakout: File Systems, Directories, and Files' ]
+		'Welcome back! I hope you had a wonderful Christmas break',
+		'Friday’s class will be remote via Zoom' ],
+	'agenda':[ 'Progress Polling',
+		'Class Format',
+		'Introductions - Part 1',
+		'Sprint 1 Planning (abbreviated)',
+		'Introductions - Part 2 and Scrum Team Assignments',
+		'Prework for Next Class' ]
 }
-export const ics_1_3of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_3of6_PAaA, sprint, activityList)
-	const poll = () => { return tPrework('Sprint Progress Polling', ics_1_3of6_PAaA.prework, sprint, activityList) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_1_5of6_PAaA.prework, sprint, activityList) }
 
-	const breakout = () => { return breakoutFileSystemsDirectoriesAndFile() }
 
-	return completeDeck(slideDeck, [poll, lab, breakout, preworkNext])
-}
 
 // Session 4 of 6: Monday
 export const ics_1_4of6 = () => { 
 	const announcement = () => { return basicSlideWithLogo('Announcement', ['In recognition of Labor Day there is no class.']) }
-	return [ announcement ] 
+	const breakout = () => { return breakoutFileSystemsDirectoriesAndFile() }
+	return [ announcement, breakout, lab ] 
 }
 
 // Session 5 of 6: Wednesday
@@ -128,7 +132,7 @@ export const ics_1_5of6 = () => {
 	const poll = () => { return tPrework('Sprint Progress Polling', ics_1_5of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_1_6of6_PAaA.prework, sprint, activityList) }
 	const breakout = () => { return breakoutFileSystemsDirectoriesAndFile() }
-	const recap = () => { return recapSlide(ics_1_5of6_PAaA.agenda)}
+	const recap = () => { return tRecap(ics_1_5of6_PAaA.agenda)}
 
 	return completeDeck(slideDeck, [poll, breakout, lab, recap, preworkNext])
 }
