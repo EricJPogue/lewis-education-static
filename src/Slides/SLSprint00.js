@@ -170,7 +170,7 @@ export const quiz = (sprint) => {
 }
 
 export const end = () => {
-	return basicSlideWithTitle('End of Session', [
+	return basicSlideWithLogo('End of Session', [
 		'Thank you for your time and participation.'])
 }
 

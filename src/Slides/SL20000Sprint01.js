@@ -8,12 +8,16 @@ import { ics_2_1of6_PAaA } from './SL20000Sprint02'
 import { sprint1_class_2_PAaA, sprint1_class_2 } from './SL00000Sprint00'
 
 
+
 // Introduction to Computer Science (ICS) sprint 1 global values.
 const sprint = 1
 const activityList = () => { return list20000Sprint01(sprint) }
 
 // Sprint 1 session 1 of 6: Monday
 export const ics_1_1of6 = () => { return xyz_1_1of6(activityList, ics_1_2of6_PAaA.prework) }
+
+// Todo: Consolidate xyz_1_1of6 and sprint11_class_2... the are mostly the same. The main issue is that sometime 
+// session 1 is a holiday and sometimes it is session 4 depending on the semester. 
 
 // Session 2 of 6: Wednesday
 const ics_1_2of6_PAaA = {
@@ -99,8 +103,6 @@ const ics_1_4of6_PAaA = {
 		'Introductions - Part 2 and Scrum Team Assignments',
 		'Prework for Next Class' ]
 }
-
-
 
 // Session 4 of 6: Monday
 export const ics_1_4of6 = () => { 

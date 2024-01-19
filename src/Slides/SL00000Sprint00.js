@@ -55,7 +55,9 @@ export const sprint1_class_2_PAaA = {
 		'Complete through activity 6', '', 
 		'Scrum Master to set up team Discord server' ],
 	'announcements':[ 
-		'Welcome Back!' ],
+		'Welcome Back!',
+		'Do you know where to find our Zoom recordings?',
+		'Please be sure to email me directly with questions... and not Blackboard Message me' ],
 	'agenda':[ 
 		'Sprint Progress Polling',
 		'Introductions and Scrum Team Assignments (continued)',
@@ -67,6 +69,18 @@ export const sprint1_class_2 = (sprint, activityList, pAaA, preworkNextSession) 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(pAaA, sprint, activityList)
 	const poll = () => { return tPrework('Sprint Progress Polling', pAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', preworkNextSession, sprint, activityList) }
+	const introductions = () => {
+		return orderedListSlide('Introductions & Team Assignments (continued)', 'Review and complete introductions and team assignments by:', [
+			'Reviewing teams that have completed introductions',
+			'Completing any remaining introductions and team assignments',
+			'Seeing who has not yet been introduced and assigned to a team' ])
+	}
+	const sprintPlanning = () => {
+		return orderedListSlide('Sprint Planning (continued)', `Sprint ${sprint} Expectations:`, [
+			'Similar to future sprints with Discussion, Quiz, Lab, and Reflection',
+			'Monday is a holiday which makes this sprint a little more challenging than most',
+			'We will complete our scrum team Discussion Board breakout session today as time allows' ])
+	}
 	const breakoutSprint1Planning = () => {
 		return breakoutStandard(
 			'Breakout: Sprint 1 Planning (as time allows)', 
@@ -76,7 +90,7 @@ export const sprint1_class_2 = (sprint, activityList, pAaA, preworkNextSession) 
 				'Discuss at least 1 activity that looks interesting' ])
 	}
 	const recap = () => { return tRecap(pAaA.agenda.slice(1))}
-	return completeDeck(slideDeck, [poll, breakoutSprint1Planning, preworkNext, recap])
+	return completeDeck(slideDeck, [poll, introductions, sprintPlanning, breakoutSprint1Planning, preworkNext, recap])
 }
 
 export const xyz_n_1of6_agenda_list = (sprint) => { 
