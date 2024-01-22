@@ -230,6 +230,7 @@ export const xyz_n_4of6_PAaA = (sprint, completeThrough, breakoutTopic) => {
 	}
 	return preworkAnnouncementsAndAgenda
 }
+
 export const xyz_n_4of6 = (sprint, sessionLists, preworkListNext, activityList, breakout) => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(sessionLists, sprint, activityList)
 	const poll = () => { return tPrework('Sprint Progress Polling', sessionLists.prework, sprint, activityList) }

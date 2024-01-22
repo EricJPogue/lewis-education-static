@@ -301,7 +301,7 @@ export const _CPSC_44500 = {
 	],
 	textBook: 'Reading assignments well be made from the O’Reilly online book service which Lewis University provides to students at no cost.',
 	modules: [
-		'Programming Languages & Techniques, Frameworks, and Getting Started with Go',
+		'Programming Languages, Functional Programming, Frameworks, and Getting Started with Go',
 		'OOP Patterns and Principles, Functional Programming, Configuration Management, Structs, Interfaces, and Packages',
 		'Inheritance and Polymorphism, Classes (including Constructors and Destructors), Exceptions, Templates, Overloading, and Testing',
 		'Concurrency and Next Steps',
