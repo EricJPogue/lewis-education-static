@@ -46,6 +46,6 @@ const af_1_5of6_PAaA = {
 	'announcements':[ 
 		'' ],
 	'agenda':[ 
-		'Discussion 1',
-		'Lab' ]
+		'',
+		'' ]
 } 

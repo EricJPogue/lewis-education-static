@@ -1,6 +1,6 @@
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 import { xyz_1_1of6, xyz_1_2of6,  } from './SL00000Sprint01'
-import { tPrework, tQuizExpectations, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, tRecap } from './SLSprint00'
+import { tPrework, tQuizExpectations, tQuiz, bulletListSlide, breakoutStandard, tRecap } from './SLSprint00'
 
 import { list20000Sprint01 } from '../ActivityLists/AL20000Sprint01'
 import { ics_2_1of6_PAaA } from './SL20000Sprint02'
@@ -88,27 +88,33 @@ Second, explain the potential issue(s) with each of the following directories:
 /lewis/sprint-1/hello-world
 */
 
-// Session 4 of 6: Wednesday
+// Session 4 of 6: Monday
 const ics_1_4of6_PAaA = {
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
-		'Be prepared to complete Discussion 1'],
+		'Be prepared to complete Discussion 1', 
+		'Be prepared for Lab'],
 	'announcements':[ 
-		'Welcome back! I hope you had a wonderful Christmas break',
-		'Friday’s class will be remote via Zoom' ],
-	'agenda':[ 'Progress Polling',
-		'Class Format',
-		'Introductions - Part 1',
-		'Sprint 1 Planning (abbreviated)',
-		'Introductions - Part 2 and Scrum Team Assignments',
-		'Prework for Next Class' ]
+		'Welcome back for week 2!',
+		'Today is a busy day' ],
+	'agenda':[ 
+		'Sprint Progress Poll',
+		'Discussion 1 & Lab',
+		'Preview of Wednesday’s topic' ]
 }
 
-// Session 4 of 6: Monday
 export const ics_1_4of6 = () => { 
-	const announcement = () => { return basicSlideWithLogo('Announcement', ['In recognition of Labor Day there is no class.']) }
-	const breakout = () => { return breakoutFileSystemsDirectoriesAndFile() }
-	return [ announcement, breakout, lab ] 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_4of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_1_4of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_1_5of6_PAaA.prework, sprint, activityList) }
+	const lab = () => { return bulletListSlide('Lab & Programming Together', 
+		'Let’s focus on completing our activities and assignments by:', [
+		'Discussing “Hello World for the Web”', 
+		'Completing Discussion 1' ])
+	}
+	const recap = () => { return tRecap(ics_1_4of6_PAaA.agenda.slice(1))}
+
+	return completeDeck(slideDeck, [poll, lab, preworkNext, breakoutFileSystemsDirectoriesAndFile, recap])
 }
 
 // Session 5 of 6: Wednesday

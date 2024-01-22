@@ -1,16 +1,21 @@
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
-import { xyz_1_1of6, xyz_1_2of6 } from './SL00000Sprint01'
+import { xyz_1_2of6 } from './SL00000Sprint01'
 import { tPrework, tQuiz, basicSlideWithLogo, bulletListSlide, breakoutStandard, tQuizExpectations } from './SLSprint00'
 
 import { list44000Sprint01 } from '../ActivityLists/AL44000Sprint01'
 import { se_2_1of6_PAaA } from './SL44000Sprint02'
+import { tRecap } from './SLSprint00'
 
 // Software Engineering (SE) sprint 1 global values.
 const sprint = 1
 const activityList = () => { return list44000Sprint01(sprint) }
 
 // Session 1 of 6: Monday
-export const se_1_1of6 = () => { return xyz_1_1of6(activityList, se_1_2of6_PAaA.prework) }
+export const se_1_1of6 = () => 
+{ 
+	const announcement = () => { return basicSlideWithLogo('Announcement', ['In recognition of Martin Luther King Jr. Day day there is no class.']) }
+	return [ announcement ] 
+}
 
 // Session 2 of 6: Wednesday
 const se_1_2of6_PAaA = {
@@ -72,10 +77,35 @@ export const se_1_3of6 = () => {
 }
 
 // Session 4 of 6: Monday
-export const se_1_4of6 = () => { 
-	const announcement = () => { return basicSlideWithLogo('Announcement', ['In recognition of Martin Luther King Jr. Day day there is no class.']) }
-	return [ announcement ] 
+const se_1_4of6_PAaA = {
+	'prework':[
+		'Complete through activity 8 prior to next class', '',
+		'Be prepared to complete Discussion 1', 
+		'Be prepared for Lab'],
+	'announcements':[ 
+		'Welcome back for week 2!',
+		'Today is a busy day' ],
+	'agenda':[ 
+		'Sprint Progress Poll',
+		'Discussion 1 & Lab',
+		'Preview of Wednesday’s topic']
 }
+
+export const se_1_4of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_1_4of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', se_1_4of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_1_5of6_PAaA.prework, sprint, activityList) }
+	const lab = () => { return bulletListSlide('Lab & Programming Together', 
+		'Let’s focus on completing our activities and assignments by:', [
+		'Discussing “Hello World for the Web”', 
+		'Completing Discussion 1' ])
+	}
+	const recap = () => { return tRecap(se_1_4of6_PAaA.agenda.slice(1))}
+
+	return completeDeck(slideDeck, [poll, lab, preworkNext, breakoutSaaS, recap])
+}
+
+// Session 5 of 6: Wednesday
 
 const breakoutSaaSName = 'SaaS, Cloud, and Frameworks & Tools'
 const breakoutSaaS = () => { 
