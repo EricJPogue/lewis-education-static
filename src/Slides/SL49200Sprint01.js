@@ -38,6 +38,7 @@ export const ssc_1_3of4 = () => {
 			'Each team member adding one story to the Product Backlog ',
 			'Deciding how we can best utilize our time today', 
 			'Completing the most important activities and assignments together',
+			'Identify sprint 3 Scrum Master and Product Owner (we will not change for sprint 2)',
 			'** Confirm how your team will be meeting for next Tuesday... I will not be there.' ])
 	}
 

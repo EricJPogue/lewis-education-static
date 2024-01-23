@@ -13,6 +13,7 @@ export const students_SP24_CPSC_49200_002 = [
         "first-name": "Hamzeh",
         "user-name": "halbaz",
         "lewis-id": "L30074032",
+		"preferred-name": "Z",
 		"team": "ScramJets",
 		"roles": ["Team Member"],
 		"product": "QuizMaster"
@@ -31,7 +32,7 @@ export const students_SP24_CPSC_49200_002 = [
         "first-name": "Shane",
         "user-name": "sfrantz",
         "lewis-id": "L30047721",
-		"team": "",
+		"team": "ECaMS Billboard",
 		"roles": ["Team Member"],
 		"product": ""
     },
@@ -40,62 +41,62 @@ export const students_SP24_CPSC_49200_002 = [
         "first-name": "Evan",
         "user-name": "ehartke",
         "lewis-id": "L30049946",
-		"team": "",
+		"team": "ScramJets",
 		"roles": ["Team Member"],
-		"product": ""
+		"product": "QuizMaster"
     },
     {
         "last-name": "Hernandez",
         "first-name": "Alex",
         "user-name": "ahernandez35",
         "lewis-id": "L30073891",
-		"team": "",
+		"team": "ScramJets",
 		"roles": ["Team Member"],
-		"product": ""
+		"product": "QuizMaster"
     },
     {
         "last-name": "Kaminski",
         "first-name": "Alex",
         "user-name": "akaminski1",
         "lewis-id": "L30045415",
-		"team": "",
+		"team": "ScamJets",
 		"roles": ["Team Member"],
-		"product": ""
+		"product": "QuizMaster"
     },
     {
         "last-name": "Mackowiak",
         "first-name": "James",
         "user-name": "jmackowiak",
         "lewis-id": "L30049180",
-		"team": "ScrmJets",
-		"roles": ["Team Member"],
-		"product": ""
+		"team": "ScramJets",
+		"roles": ["Team Member", "Product Owner"],
+		"product": "QuizMaster"
     },
     {
         "last-name": "Mendiola",
         "first-name": "Luke",
         "user-name": "lmendiola",
         "lewis-id": "L30045100",
-		"team": "",
+		"team": "All Passers",
 		"roles": ["Team Member"],
-		"product": ""
+		"product": "QuizMaster"
     },
     {
         "last-name": "Prince",
         "first-name": "Jacob",
         "user-name": "jprince",
         "lewis-id": "L30047064",
-		"team": "",
+		"team": "All Passers",
 		"roles": ["Team Member"],
-		"product": ""
+		"product": "ECaMS Billboard"
     },
     {
         "last-name": "Rocha",
         "first-name": "Julian",
         "user-name": "jrocha",
         "lewis-id": "L30048034",
-		"team": "",
-		"roles": ["Team Member"],
+		"team": "CoShoppers",
+		"roles": ["Team Member", "Scrum Master"],
 		"product": "CoShop"
     },
     {
@@ -103,8 +104,8 @@ export const students_SP24_CPSC_49200_002 = [
         "first-name": "Amna",
         "user-name": "atasneem",
         "lewis-id": "L30047454",
-		"team": "",
-		"roles": ["Team Member"],
+		"team": "CoShoppers",
+		"roles": ["Team Member", "Product Owner"],
 		"product": "CoShop"
     }
 ]
