@@ -12,21 +12,20 @@ const activityList = () => { return list49200Sprint01(sprint) }
 // Session 1 of 4: Tuesday (there are 4 potential sessions)
 export const ssc_1_1of4 = () => { return xyz_1_1of6(activityList, ssc_1_3of4_PreworkAnnouncementsAndAgenda.prework) }
 
-// Session 2 of 4: Monday
-const announcement = () => { return basicSlideWithLogo('Announcement', ['Thursdays are reserved for teams that are not able to meet on Tuesday.']) }
-export const ssc_1_2of4 = () => { return [ announcement ] }
+// Session 2 of 4: Thursday
+const thursdayAnnouncement = () => { return basicSlideWithLogo('Announcement', ['Thursdays are reserved for teams that are not able to meet on Tuesday.']) }
+export const ssc_1_2of4 = () => { return [ thursdayAnnouncement ] }
 
-
-// Session 3 of 4: Tuesday (week 2)
+// Session 3 of 4: Tuesday of week 2
 const ssc_1_3of4_PreworkAnnouncementsAndAgenda = {
 	'prework':[
-		'Complete activity 1 (Class Product Sprint 1) by sending me an email before you leave today', 
-		'Complete through activity 12 prior to next class' ],
+		'Team and product assignments complete', 
+		'Discord, Product Organizations, and Repository Access complete' ],
 	'announcements':[ 
-		'I have decided to do Sprint Planning as a recorded session going forward',
+		'Recall that Sprint Planning is provided as a recording',
 		'All sprint 1 assignments are due Sunday!' ],
 	'agenda':[
-		'Team Assignments to GitHub organizations',
+		'Review Team Assignments to GitHub organizations',
 		'Lab' ]
 }
 export const ssc_1_3of4 = () => { 
@@ -36,25 +35,22 @@ export const ssc_1_3of4 = () => {
 		return bulletListSlide('Lab & Programming Together', 
 			'Let’s focus on completing our activities and assignments by:', [
 			'Discussing GitHub organizations and initial code',
-			'Assignment scrum master to GitHub organization as “administrator”',
-			'Adding additional team members to GitHub organization', 
+			'Each team member adding one story to the Product Backlog ',
 			'Deciding how we can best utilize our time today', 
-			'Completing the most important activities and assignments together' ])
+			'Completing the most important activities and assignments together',
+			'** Confirm how your team will be meeting for next Tuesday... I will not be there.' ])
 	}
 
 	return completeDeck(slideDeck, [lab, preworkNext])
 }
 
-export const ssc_1_4of4 = () => { return [ announcement ] }
-
+// Session 4 of 4: Thursday of week 2
+export const ssc_1_4of4 = () => { return [ thursdayAnnouncement ] }
 const ssc_2_1of4_PreworkAnnouncementsAndAgenda = {
 	'announcements':[ 
 		`${sprint} starts now.` ],
 	'prework':[ 
 		'Everything is due Sunday!', '',
-		`Be prepared for Sprint ${sprint} Planning via recorded session` ],
-	'agenda':[ 
-		`Sprint ${sprint} Planning`,
-		`Sprint ${sprint} Planning Breakout`,
-		'Prework for Next Class' ]
+		`Be prepared for Sprint ${sprint} Planning via recording early next week`,
+		'Tuesday next week will be ' ],
 }
