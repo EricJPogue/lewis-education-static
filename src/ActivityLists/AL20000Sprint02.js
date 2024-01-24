@@ -22,13 +22,12 @@ export const al20000Sprint02 = () => {
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
-			<li>***Understand the basics of Computer Science</li>
+			<li>Understand the big picture of Computer Science</li>
 			<li>Describe the concept of abstraction</li>
 			<li>Develop browser-based HTML5 applications that utilize common HTML and CSS</li>
 			<li>Utilize important software developer tools and services to create, update, and deploy basic software applications</li>
 			<li>Understand and utilize numbering systems</li>
-			<li>Understand sequences, selections, and loops (repetition)</li>
-			<li>Identify, define, and discuss data representation, programming, and algorithmic thinking</li>
+			<li>Begin to understand sequences, selections, and loops (repetition)</li>
 		</ul> 
 
 		{list20000Sprint02(sprint)}
@@ -39,25 +38,22 @@ export const al20000Sprint02 = () => {
 }
 
 export const list20000Sprint02 = (sprint) => {
-	const ECaMSStudyTables = () => internalLink('ECaMS Study Tables', '/activity/study-table')
 	const daleChapter1Lecture = () => { return internalLink('chapter 1 lecture', '/activity-dale/1') }
 	const daleChapter2Lecture = () => { return internalLink('lecture', '/activity-dale/2') }
-	const daleChapter3Lecture = () => { return internalLink('lecture', '/activity-dale/3') }
 
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 
-			<li>***Read Computer Science Illuminated chapter 1, review our {daleChapter1Lecture()}, and be prepared for a scrum team discussion</li>
 			{standardActivities(sprint, gettingToKnowEachOtherLink())}
-			<li>Read “Computer Science Illuminated” The Information Layer and review our associated {daleChapter2Lecture()}</li>
-			<li>Visit the {ECaMSStudyTables()}, say “Hi,” and get the name of the ECaMS tutor</li>
+			<li>Read “Computer Science Illuminated” The Big Picture and review our {daleChapter1Lecture()}</li>
+
 			<li>Review {toolsOfTheTradeLink()}</li>
 			<li>Review {SequenceSelectionAndRepetition()}</li>
 			{initialPost(sprint)}
 
 			<li>Complete {HelloWorldWebLink()}</li>
-			<li>Read “Computer Science Illuminated” Data Representation and review our associated {daleChapter3Lecture()}</li>
+			<li>Read “Computer Science Illuminated” The Information Layer and review our associated {daleChapter2Lecture()}</li>
 			<li>Within {oreillyPlaylistICS()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
 			<li>Complete {htmlLink()} - Part 1{estimated('3 hours')}</li>
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
@@ -68,8 +64,9 @@ export const list20000Sprint02 = (sprint) => {
 // Certified for FA22 (08/27/2022)
 // Certified for SP23 (01/15/2023)
 // Certified for FA23 (09/09/2023)
+// Certified for SP24 (01/24/2024)
+
 // Todo: Add 30-by-30 master questions to quiz 2
-// Todo: Consider moving something from sprint 2 to sprint 3
 // Todo: Consider adding licensing topic to all classes. 
 // Todo: Consider adding HTML Quiz questions.
 // Todo: Consider adding CSS Quiz questions.

@@ -126,7 +126,6 @@ export const standardActivitiesClosing = (sprint=1, programmingAssignmentLink=''
 	}
 	const sprint2StandardActivitiesClosing = () => { 
 		return (<div>
-			<li>Verify that you added a representative photo of yourself to {blackboardChangePhoto()} and Zoom</li>
 			<li>Complete {programmingAssignmentLink}{estimated(programmingAssignmentEstimate)}</li>
 			<li><em>Complete Discussion {sprint} by responding to at least two of your classmates’ posts</em></li>
 			<li><em>Submit sprint {sprint} assignments including Quiz {sprint}, Lab {sprint}, and Reflection {sprint}</em></li>

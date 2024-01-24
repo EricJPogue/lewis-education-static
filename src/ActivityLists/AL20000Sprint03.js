@@ -24,6 +24,7 @@ export const al20000Sprint03 = () => {
 
 		{learningObjectivesIntro(sprint)}
 		<ul style={{ listStyleType:'square' }}>
+			<li>***Identify, define, and discuss data representation, programming, and algorithmic thinking</li>
 			<li>Understand and discuss gates and circuits</li>
 			<li>Understand and discuss computing components</li>
 			<li>Utilize more more sophisticated HTML, plus CSS, and JavaScript to develop Web applications</li>
@@ -35,12 +36,14 @@ export const al20000Sprint03 = () => {
 }
 
 export const list20000Sprint03 = (sprint) => {
+	const daleChapter3Lecture = () => { return internalLink('lecture', '/activity-dale/3') }
 	const daleChapter4Lecture = () => { return internalLink('lecture', '/activity-dale/4') }
 	const daleChapter5Lecture = () => { return internalLink('lecture', '/activity-dale/5') }
 
 	return ( <div>
 		{activitiesListIntro(sprint)}
 			<ol>
+				<li>***Read “Computer Science Illuminated” Data Representation and review our associated {daleChapter3Lecture()}</li>
 				{standardActivities(sprint, gettingToKnowEachOtherWebLink(), oreillyPlaylistICS())}
 				<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Gates and Circuits and review our associated {daleChapter4Lecture()}</li>
 				<li>Read {continuousIntegration()}</li>
