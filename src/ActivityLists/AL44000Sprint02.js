@@ -55,22 +55,8 @@ export const list44000Sprint02 = (sprint) => {
 // Certified for FA22 (08/27/2022)
 // Certified for SP23 (01/15/2023)
 // Certified for FA23 (09/09/2023)
+// Certified for SP24 (01/24/2024)
 
-// Todo: Move client-server and architecture stuff to sprint 2
-// Todo: Consider updating and adding the following Architecture videos back into the class:
-//	import { architecturePart1, architecturePart2 } from '../DataAndAPIs/Links'
-// <li>Complete {architecturePart1()}</li>
-// <li>Scan {architecturePart2()}</li>
-
-// Consider adding https://www.youtube.com/watch?v=A-H-xZ5ZXgo
-
-
-
-// Todo: Consider adding back in Architecture lecture or removing SQL questions from quiz.
-// Todo: Make sure that in sprints 7 & 8 that “individual” lab questions are identified. 
-// Todo: Review Zac’s quiz and update quiz 7. 
-// Todo: Consider '<li>Complete {AzureFunctionsWithVSCodeAndJavaScript()} and build your <em>personal</em> serverless function</li>'
-// Todo: Consider '<li>Within {oreillyPlaylistSE()} search for “Azure Functions” and “Serverless Computing” and document the best resources</li>'
 
 
 

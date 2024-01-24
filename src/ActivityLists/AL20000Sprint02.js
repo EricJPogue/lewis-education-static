@@ -66,7 +66,6 @@ export const list20000Sprint02 = (sprint) => {
 // Certified for FA23 (09/09/2023)
 // Certified for SP24 (01/24/2024)
 
-// Todo: Add 30-by-30 master questions to quiz 2
 // Todo: Consider adding licensing topic to all classes. 
 // Todo: Consider adding HTML Quiz questions.
 // Todo: Consider adding CSS Quiz questions.
