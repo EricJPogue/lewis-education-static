@@ -41,3 +41,5 @@ export const al36000Sprint02 = () => {
 }
 
 // Todo: Review https://www.educba.com/functional-programming-vs-oop/.
+
+// Certified for SP24 (01/24/2024)

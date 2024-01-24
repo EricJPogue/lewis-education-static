@@ -99,12 +99,10 @@ export const codingStandardsValidatorLink = () => {return (<NavLink to={makeInte
 export const codingStandardsValidator = () => { return CodingStandardsValidator() }
 
 export const CodingStandardsValidator = () => {
-	return (
-
-<div>
+	return ( <div>
 <br />
 <h4>Coding Standards Validator</h4>
-<h5>Summary: Create a Go command line application that validates our coding standards</h5>
+<h5>Summary: Utilize a Go CLI Framework to create a Go command line application that validates our coding standards</h5>
 <h5>Prerequisites: Go</h5>
 
 <p>It is important to automatically validate as many software development activities as possible. There are many 
@@ -116,12 +114,14 @@ code to see if it meets a subset of our coding standards <NavLink to='/activity/
 will pick four (4) coding standards to validate and document those standards in your README.md file with a brief 
 overview of how you will be validating each standard.</p> 
 
-<h5>Part 1: Implementation</h5>
+<p>In addition, you will evaluate and select a Go CLI Framework to process command line arguments. </p>
+
+<h5>Part 1: Go Validator</h5>
 <em>Requirement 1</em>
 <p>Create an application that:</p>
 <ol>
 	<li>Is implemented in multiple Go (.go) files with a primary Go file named “val.go” (short for “validator”)</li>
-	<li>Successfully compiles from the command line by typing “go val.go</li>
+	<li>Successfully compiles from the command line by typing “go run val.go</li>
 	<li>Has a simple yet an aesthetically pleasing user interface</li>
 	<li>Includes user instructions that succinctly describe the application when “val help” is executed</li>
 </ol>
@@ -129,13 +129,21 @@ overview of how you will be validating each standard.</p>
 <em>Requirement 2</em>
 <p>Be sure that application also:</p>
 <ol>
-	<li>Defines an interface that allows us to polymorphically access each validation feature</li>
-	<li>Utilizes the above interface when implementing coding standard validation</li>
-	<li>Defines a separate module for each coding standard validation implementation</li>
-	<li>Implements maximum encapsulation across modules</li>
+	<li>Utilizes a Go Framework (like Cobra, kingpin, or cli-init) to process command line arguments</li>
+	<li>Includes appropriate command line arguments for each validation function and a standard help feature</li>
+	<li>Utilizes the preferred Framework code organization and maintains the minimal</li>
+	<li>Store all code to process each standard in a separate Go file</li>
 </ol>
 
 <em>Requirement 3</em>
+<p>Be sure that application also:</p>
+<ol>
+	<li>Defines an interface that allows us to polymorphically access each validation feature</li>
+	<li>Utilizes the above interface when implementing coding standard validation</li>
+	<li>Implements maximum encapsulation</li>
+</ol>
+
+<em>Requirement 4</em>
 <p>Enhance the application so that it:</p>
 <ol>
 	<li>Successfully validates four (4) of our coding standards for a Go project</li>
@@ -145,14 +153,7 @@ overview of how you will be validating each standard.</p>
 
 </ol>
 
-<em>Requirement 4</em>
-<p>Enhance the application so that it:</p>
-<ol>
-	<li>Provide the total number of failures for a standard across all project files in the current folder</li>
-	<li>Supports “val detail” feature that reports the location of each failed validation occurrence including file and line 
-		number</li>
-</ol>
-<br />
+<br /><br /><br />
 <h5>Part 2: Manual and Automated Testing</h5>
 <em>Requirement 5</em>
 <p>Enhance the application so that it provides 100% coverage utilizing manual testing and:</p>
