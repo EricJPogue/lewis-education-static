@@ -122,18 +122,18 @@ const ics_1_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 13 prior to next class', '',
 		'Make your initial post for Discussion 1',
-		'Be prepared to continue “File Systems, Directories, and Files” Breakout',
-		'Be certain to have your GitHub account available',
-		'Be prepared for Programming Together with “Directories and Files”'],
+		'Be prepared for “File Systems, Directories, and Files” Breakout',
+		'Be prepared for Programming Together with “Directories and Files”',
+		'Be prepared for Quiz 1'],
 	'announcements':[
-		'Your initial Discussion 1 post is due... please submit it by the end of the day',
-		'All sprint 1 activities and assignments due Sunday', '',
-		'Our special guest today is Dr. Chris White Dean of the College of Aviation, Science, and Technology'],
+		'Your initial Discussion 1 post was due Monday',
+		'All sprint 1 activities and assignments due Sunday'],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Breakout: File Systems, Directories, and Files (continued)',
+		'Breakout: File Systems, Directories, and Files',
+		'Programming Together with “Directories and Files”', 
 		'Prework for Next Class',
-		'Programming Together with “Directories and Files”']
+		'Quiz 1']
 }
 export const ics_1_5of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_1_5of6_PAaA, sprint, activityList)
@@ -141,8 +141,9 @@ export const ics_1_5of6 = () => {
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_1_6of6_PAaA.prework, sprint, activityList) }
 	const breakout = () => { return breakoutFileSystemsDirectoriesAndFile() }
 	const recap = () => { return tRecap(ics_1_5of6_PAaA.agenda)}
+	const quiz = () => { return tQuiz(sprint) }
 
-	return completeDeck(slideDeck, [poll, breakout, lab, recap, preworkNext])
+	return completeDeck(slideDeck, [poll, breakout, lab, tQuizExpectations, quiz, recap, preworkNext])
 }
 
 // Session 6 of 6: Friday
