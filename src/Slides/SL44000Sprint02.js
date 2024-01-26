@@ -16,6 +16,21 @@ const activityList = () => { return list44000Sprint02(sprint) }
 export const se_2_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const se_2_1of6 = () => { return xyz_n_1of6(sprint, se_2_1of6_PAaA.prework, activityListPrevious, se_2_1of6_PAaA.agenda, se_2_2of6_PAaA.prework, activityList, xyz_2_1of6_sprintPlanning(sprint)) }
 
+/* BugBug: Integrate this into sprint 2. 
+
+const breakoutSaaSName = 'SaaS, Cloud, and Frameworks & Tools'
+const breakoutSaaS = () => { 
+	return breakoutStandard(
+	'Breakout: SaaS, Cloud, and Frameworks & Tools', 
+	'In this breakout session on Software Development Life Cycles (SDLCs), Software as a Service, Cloud Computing, and Highly Productive Frameworks & Tools your team will:', [
+	'SaaService architectures including SOA, APIs, and Web Services',
+	'Cloud Computing including Azure, AWS, Google, GoDaddy, and Cloud9... How have costs evolved?',
+	'Highly Effective Frameworks including Ruby/Rails, React, and MERN and more... what is our framework?', 
+	'Highly Effective Tools Git, GitHub, JUnit,  and more',
+	'Testing including Verification and Validation... How does Waterfall accomplish Validation?' ])
+}
+*/
+
 // Session 2 of 6: Wednesday
 const se_2_2of6_PAaA = {
 	'prework': [

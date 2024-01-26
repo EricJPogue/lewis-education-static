@@ -151,7 +151,6 @@ const ics_1_6of6_PAaA = {
 	'prework': [
 		'Complete through activity 14 and working on 15 prior to next class', '',
 		'Be prepared for Lab & Programming Together',
-		'Be prepared for Quiz 1',
 		`Be prepared to submit all sprint ${sprint} assignments Sunday!` ],
 	'announcements':[
 		`All sprint ${sprint} assignments due Sunday!`],

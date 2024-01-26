@@ -44,8 +44,9 @@ const breakoutSDLCs = () => {
 		'In this breakout session your team will', [
 		'The Virtuous Triangle... Could Saas on Cloud Computing and Frameworks and Tools be combined?',
 		'Software Development Life Cycles including Plan and Document, Iterative, and Agile',
-		'SDLCs including Waterfall, Spiral, RUP, Agile, and Scrum',
+		'SDLCs including Waterfall, Spiral, RUP',
 		'Agile Manifesto',
+		'SDLCs including Agile, and Scrum',
 		'Agile methodologies including Kanban, XP (formerly Extreme Programming), and Test-Driven Development' ])
 }
 const se_1_3of6_PAaA = {
@@ -102,36 +103,19 @@ export const se_1_4of6 = () => {
 	}
 	const recap = () => { return tRecap(se_1_4of6_PAaA.agenda.slice(1))}
 
-	return completeDeck(slideDeck, [poll, lab, preworkNext, breakoutSaaS, recap])
-}
-
-// Session 5 of 6: Wednesday
-
-const breakoutSaaSName = 'SaaS, Cloud, and Frameworks & Tools'
-const breakoutSaaS = () => { 
-	return breakoutStandard(
-	'Breakout: SaaS, Cloud, and Frameworks & Tools', 
-	'In this breakout session on Software Development Life Cycles (SDLCs), Software as a Service, Cloud Computing, and Highly Productive Frameworks & Tools your team will:', [
-	'SaaService architectures including SOA, APIs, and Web Services',
-	'Cloud Computing including Azure, AWS, Google, GoDaddy, and Cloud9... How have costs evolved?',
-	'Highly Effective Frameworks including Ruby/Rails, React, and MERN and more... what is our framework?', 
-	'Highly Effective Tools Git, GitHub, JUnit,  and more',
-	'Testing including Verification and Validation... How does Waterfall accomplish Validation?' ])
+	return completeDeck(slideDeck, [poll, lab, preworkNext, recap])
 }
 
 // Session 5 of 6: Wednesday
 const se_1_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 12 prior to next class', '',
-		'Make your initial post for Discussion 1',
 		`Be prepared for “${breakoutSDLCsName}” breakout`],
 	'announcements':[
-		'Your initial Discussion 1 post is due... please submit it by the end of the day',
-		'All sprint 1 activities and assignments due Sunday' ],
+		'All sprint 1 activities and assignments due Sunday!' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		`Breakout: ${breakoutSDLCsName}`,
-		`Preview Breakout: ${breakoutSaaSName}`,
 		'Prework for Next Class',
 		'Quiz 1']
 }
@@ -142,25 +126,23 @@ export const se_1_5of6 = () => {
 	const quizExpectations = () => { return tQuizExpectations() }
 	const quiz = () => { return tQuiz(sprint) }
 
-	return completeDeck(slideDeck, [poll, breakoutSDLCs, breakoutSaaS, quizExpectations, preworkNext, quiz ])
+	return completeDeck(slideDeck, [poll, breakoutSDLCs, quizExpectations, preworkNext, quiz ])
 }
 
 // Sprint 1 session 6 of 6: Friday
 const se_1_6of6_PAaA = {
 	'prework': [
 		'Complete through activity 15 prior to next class', '',
-		`Be prepared for “${breakoutSaaSName}” breakout`,
 		'Be prepared for Lab & Programming Together',
 		'Be prepared to submit all sprint 1 assignments Sunday!' ],
 	'announcements':[
 		`All sprint ${sprint} assignments due Sunday!`],
 	'agenda':[
-		`Breakout: ${breakoutSaaSName}`,
 		'Lab' ]
 }
 export const se_1_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_1_6of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_1of6_PAaA.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [breakoutSaaS, preworkNext, tLab ])
+	return completeDeck(slideDeck, [preworkNext, tLab ])
 }
