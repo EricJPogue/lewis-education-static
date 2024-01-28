@@ -24,6 +24,13 @@ export const al44500Sprint02 = () => {
 			<li>Utilize structs, interfaces, and packages to implement polymorphic and encapsulated programs</li>
 		</ul>
 
+		{list44500Sprint02(sprint)}
+		{closing(sprint)}
+	</div> )
+}
+
+export const list44500Sprint02 = (sprint) => {
+	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, codingStandardsValidatorLink())}
@@ -36,8 +43,6 @@ export const al44500Sprint02 = () => {
 
 			{standardActivitiesClosing(sprint, codingStandardsValidatorLink(), '8 hours')}
 		</ol>
-
-		{closing(sprint)}
 	</div> )
 }
 

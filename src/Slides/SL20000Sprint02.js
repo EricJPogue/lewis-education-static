@@ -4,7 +4,7 @@ import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02'
 import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, tQuizExpectations, tQuiz, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
-import { xyz_2_1of6_sprintPlanning,theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
+import { theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
 import { ics_3_1of6_PAaA } from './SL20000Sprint03'
 import { getClassSection } from '../DataAndAPIs/ClassSections'
 
@@ -14,8 +14,16 @@ const activityListPrevious = () => { return list20000Sprint01(sprint-1) }
 const activityList = () => { return list20000Sprint02(sprint) }
 
 // Session 1 of 6: Monday
+export const sprint2Planning = () => {
+	return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
+		'Similar to previous sprint with Discussion, Quiz, Lab, and Reflection',
+		'We will complete our scrum team Discussion Board breakout session on Wednesday',
+		`We will have sprint ${sprint-1} Demos and Retrospective on Friday`,
+		`Sprint ${sprint} should be a little easier since we don’t have a holiday during the sprint` ])
+}
+
 export const ics_2_1of6_PAaA = xyz_n_1of6_lists(sprint)
-export const ics_2_1of6 = () => { return xyz_n_1of6(sprint, ics_2_1of6_PAaA.prework, activityListPrevious, ics_2_1of6_PAaA.agenda, ics_2_2of6_PAaA.prework, activityList, xyz_2_1of6_sprintPlanning(sprint)) }
+export const ics_2_1of6 = () => { return xyz_n_1of6(sprint, ics_2_1of6_PAaA.prework, activityListPrevious, ics_2_1of6_PAaA.agenda, ics_2_2of6_PAaA.prework, activityList, sprint2Planning) }
 
 // Todo: Add slide on "Kaizen": Small improvements eventually result in huge benefits
 // Session 2 of 6: Wednesday

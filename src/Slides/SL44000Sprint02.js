@@ -4,8 +4,9 @@ import { list44000Sprint02 } from '../ActivityLists/AL44000Sprint02'
 import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_6of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 import { basicSlide, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, tQuiz, tQuizExpectations, breakoutStandard, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
-import { xyz_2_1of6_sprintPlanning, xyz_2_6of6_PreworkAnnouncementsAndAgenda } from './SL00000Sprint02'
 import { se_3_1of6_PAaA } from './SL44000Sprint03'
+
+import { sprint2Planning } from './SL20000Sprint02'
 
 // Software Engineering (SE) sprint 2 global values.
 const sprint = 2
@@ -14,7 +15,7 @@ const activityList = () => { return list44000Sprint02(sprint) }
 
 // SE Sprint 2 session 1 of 6: Monday
 export const se_2_1of6_PAaA = xyz_n_1of6_lists(sprint)
-export const se_2_1of6 = () => { return xyz_n_1of6(sprint, se_2_1of6_PAaA.prework, activityListPrevious, se_2_1of6_PAaA.agenda, se_2_2of6_PAaA.prework, activityList, xyz_2_1of6_sprintPlanning(sprint)) }
+export const se_2_1of6 = () => { return xyz_n_1of6(sprint, se_2_1of6_PAaA.prework, activityListPrevious, se_2_1of6_PAaA.agenda, se_2_2of6_PAaA.prework, activityList, sprint2Planning ) }
 
 /* BugBug: Integrate this into sprint 2. 
 
@@ -178,5 +179,19 @@ export const se_2_5of6 = () => {
 }
 
 // Session 6 of 6: Friday
-const se_2_6of6_PAaA = xyz_2_6of6_PreworkAnnouncementsAndAgenda('Complete activity 15 and be actively working on 16', sprint)
+const se_2_6of6_PAaA = () => {
+	const preworkAnnouncementsAndAgenda = {
+		'prework': [
+			'Complete activity 15 and be actively working on 16', '',
+			'Be prepared for Lab & Programming Together',
+			`All sprint ${sprint} assignments are due Sunday!` ],
+		'announcements':[
+			`All sprint ${sprint} assignments are due Sunday!`],
+		'agenda':[
+			`Quiz ${sprint} “Phone a Friend”`,
+			'Lab']
+	}
+	return preworkAnnouncementsAndAgenda
+}
+
 export const se_2_6of6 = () => { return  xyz_n_6of6(sprint, se_2_6of6_PAaA, se_3_1of6_PAaA.prework, activityList) }
