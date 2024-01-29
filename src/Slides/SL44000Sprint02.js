@@ -7,6 +7,7 @@ import { basicSlide, bulletListSlide, orderedListSlide, submissionPercentage, tD
 import { se_3_1of6_PAaA } from './SL44000Sprint03'
 
 import { sprint2Planning } from './SL20000Sprint02'
+import { tRecap } from './SLSprint00'
 
 // Software Engineering (SE) sprint 2 global values.
 const sprint = 2
@@ -46,15 +47,16 @@ const se_2_2of6_PAaA = {
 		`Discussion Board ${sprint} as a scrum team`,
 		'Confirm scrum team Demos for Next Class',
 		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		'Lab' ]
 }
 export const se_2_2of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_2_2of6_PAaA, sprint, activityList)
 	const qAndA = () => { return bulletListSlide(`Sprint ${sprint} Planning Questions & Answers`, `What questions do you have about sprint ${sprint}?`, [ ]) }
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_3of6_PAaA.prework, sprint, activityList) }
+	const recap = () => { return tRecap(se_2_2of6_PAaA.agenda)}
 
-	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab ])
+	return completeDeck(slideDeck, [ qAndA, discussionBreakout, tReviewDemoSchedule, preworkNext, tLab, recap ])
 }
 
 // Session 3 of 6: Friday

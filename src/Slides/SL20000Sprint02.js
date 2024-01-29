@@ -7,6 +7,7 @@ import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submis
 import { theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
 import { ics_3_1of6_PAaA } from './SL20000Sprint03'
 import { getClassSection } from '../DataAndAPIs/ClassSections'
+import { tRecap } from './SLSprint00'
 
 // Introduction to Computer Science (ICS) sprint 2 shared values.
 const sprint = 2
@@ -30,7 +31,7 @@ export const ics_2_1of6 = () => { return xyz_n_1of6(sprint, ics_2_1of6_PAaA.prew
 const ics_2_2of6_PAaA = {
 	'prework': [
 		'Complete through activity 6 prior to next class', '',
-		'Be prepared for Lab & Programming Together Wednesday',
+		'Be prepared for Discussion  & Lab Wednesday',
 		'Demos and retrospectives will be Friday' ],
 	'announcements':[
 		'Reducing procrastination is on the agenda',
@@ -40,7 +41,7 @@ const ics_2_2of6_PAaA = {
 		`Discussion Board ${sprint} as a scrum team`,
 		'Confirm Demos for Next Class',
 		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		'Lab' ]
 }
 export const ics_2_2of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_2of6_PAaA, sprint, activityList)
@@ -56,8 +57,9 @@ export const ics_2_2of6 = () => {
 			'Also a chance to see how others solved a problem and to see some of the challenges they faces',
 			'We will each be doing at least on sprint demo during the semester during class' ])
 	}
+	const recap = () => { return tRecap(ics_2_2of6_PAaA.agenda)}
 
-	return completeDeck(slideDeck, [ qAndA, discussionBreakout, introducingDemos, tReviewDemoSchedule, preworkNext, tLab ])
+	return completeDeck(slideDeck, [ qAndA, discussionBreakout, introducingDemos, tReviewDemoSchedule, preworkNext, tLab, recap ])
 }
 
 // Todo: Add slide for Metrics (Rule #9)... “Anything that is measured and watched, improves.” – Bob Parsons

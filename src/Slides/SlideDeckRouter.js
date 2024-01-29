@@ -23,7 +23,7 @@ import { se_7_1of6, se_7_2of6, se_7_3of6, se_7_4of6, se_7_5of6, se_7_6of6, se_7_
 import { se_8_7of6 } from './SL44000Sprint08'
 
 import { af_1_3of6, af_1_4of6, af_1_5of6, af_1_6of6 } from './SL44500Sprint01'
-import { af_2_1of6 } from './SL44500Sprint02'
+import { af_2_1of6, af_2_2of6 } from './SL44500Sprint02'
 
 
 import { ssc_1_1of4, ssc_1_2of4, ssc_1_3of4, ssc_1_4of4 } from './SL49200Sprint01' 
@@ -171,6 +171,7 @@ const sprintRouter = (route) => {
 		case '44500-1-6': return af_1_6of6()
 
 		case '44500-2-1': return af_2_1of6()
+		case '44500-2-2': return af_2_2of6()
 
 		case '49200-1-1': return ssc_1_1of4()
 		case '49200-1-2': return ssc_1_2of4()
