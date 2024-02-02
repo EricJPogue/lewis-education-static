@@ -7,6 +7,8 @@ import { list44500Sprint02 } from '../ActivityLists/AL44500Sprint02'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 import { bulletListSlide, tDiscussionBreakout, tPrework } from './SLSprint00'
 
+import { basicSlide, submissionPercentage, sprintDemos, sprintDemosIntro, demoAssignment } from './SLSprint00' 
+
 
 import { tRecap } from './SLSprint00'
 
@@ -75,5 +77,56 @@ const af_2_3of6_PAaA = {
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
 		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class' ]
+}
+
+export const af_2_3of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_2_3of6_PAaA, sprint, activityList)
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			'What is Bob Parsons Rule #9?', '',
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:4, submitted:4 },
+			{ name: 'Quiz', due:4, submitted:4 },
+			{ name: 'Lab', due:4, submitted:4 },
+			{ name: 'Reflection', due:4, submitted:4 }])
+	}
+	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Very good submission percentage in sprint 1',
+			'All assignments are graded and posted', 
+			'Thank you for your reflection comments',
+			'Lots of nice comments about scrum teammates', 
+			'Be **sure** to put something in for each question so that I can give you at least a point or two',
+			'Feel free to bring up quiz questions during class',
+			'If you are not where you want to be in the class after sprint 1, I encourage you to come and talk with me' ])
+	}
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', af_2_4of6_PAaA.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
+		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext ])
+}
+
+// Session 4 of 6: Monday
+const af_2_4of6_PAaA = {
+	'prework': [
+		'Complete through activity 11 prior to next class', '',
+		`Be prepared for “The Information Layer” breakout` ],
+	'announcements':[ 
+		'Any announcements or questions?' ],
+	'agenda':[ 
+		'Breakout: The Information Layer',
 		'Prework for Next Class' ]
 }
