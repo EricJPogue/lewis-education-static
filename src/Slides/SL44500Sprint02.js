@@ -123,10 +123,23 @@ export const af_2_3of6 = () => {
 const af_2_4of6_PAaA = {
 	'prework': [
 		'Complete through activity 11 prior to next class', '',
-		`Be prepared for “The Information Layer” breakout` ],
+		'Be prepared to define what we are each committing to deliver in this sprint' ],
 	'announcements':[ 
 		'Any announcements or questions?' ],
 	'agenda':[ 
 		'Breakout: The Information Layer',
 		'Prework for Next Class' ]
+}
+export const af_2_4of6 = () => {
+	const retrospectiveBreakout = () => {
+		return bulletListSlide(`What will we deliver at the end of ${sprint}?`, 
+			'Let’s spend this class defining what we will each are committing to deliver at the end of the sprint:', [
+			'Requirement 1',
+			'Requirement 2',
+			'Requirement 3',
+			'Requirement 4' ])
+	}
+
+	return [ retrospectiveBreakout ]
+
 }

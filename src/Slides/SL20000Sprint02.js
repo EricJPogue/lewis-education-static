@@ -4,7 +4,7 @@ import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02'
 import { xyz_n_1of6_lists, xyz_n_1of6, checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 import { basicSlide, breakoutStandard, bulletListSlide, orderedListSlide, submissionPercentage, tDiscussionBreakout, tPrework, tQuizExpectations, tQuiz, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
-import { theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
+
 import { ics_3_1of6_PAaA } from './SL20000Sprint03'
 import { tRecap } from './SLSprint00'
 
@@ -25,7 +25,6 @@ export const sprint2Planning = () => {
 export const ics_2_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const ics_2_1of6 = () => { return xyz_n_1of6(sprint, ics_2_1of6_PAaA.prework, activityListPrevious, ics_2_1of6_PAaA.agenda, ics_2_2of6_PAaA.prework, activityList, sprint2Planning) }
 
-// Todo: Add slide on "Kaizen": Small improvements eventually result in huge benefits
 // Session 2 of 6: Wednesday
 const ics_2_2of6_PAaA = {
 	'prework': [
@@ -34,15 +33,16 @@ const ics_2_2of6_PAaA = {
 		'Demos and retrospectives will be Friday' ],
 	'announcements':[
 		'Reducing procrastination is on the agenda',
-		'Does everyone know where to find the class recordings?'],
+		'Does everyone know where to find class recordings?'],
 	'agenda':[
 		`Sprint ${sprint} Planning Questions & Answers`,
 		`Discussion Board ${sprint} as a scrum team`,
 		'Confirm Demos for Next Class',
-		'Prework for Next Class',
-		'Lab' ]
+		'Lab',
+		'Prework for Next Class' ]
 }
 export const ics_2_2of6 = () => { 
+	// Todo: Add slide on "Kaizen": Small improvements eventually result in huge benefits
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_2of6_PAaA, sprint, activityList)
 	const qAndA = () => { return bulletListSlide(`Sprint ${sprint} Planning Questions & Answers`, `What questions do you have about sprint ${sprint}?`, [ ]) }
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
@@ -61,7 +61,6 @@ export const ics_2_2of6 = () => {
 	return completeDeck(slideDeck, [ qAndA, discussionBreakout, introducingDemos, tReviewDemoSchedule, preworkNext, tLab, recap ])
 }
 
-// Todo: Add slide for Metrics (Rule #9)... “Anything that is measured and watched, improves.” – Bob Parsons
 // Session 3 of 6: Friday
 const ics_2_3of6_PAaA = {
 	'prework': [
@@ -76,6 +75,8 @@ const ics_2_3of6_PAaA = {
 		'Prework for Next Class' ]
 }
 export const ics_2_3of6 = () => { 
+	// Todo: Add slide for Metrics (Rule #9)... “Anything that is measured and watched, improves.” – Bob Parsons
+	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_3of6_PAaA, sprint, activityList)
 	const metrics = () => {
 		return basicSlide(`Sprint ${sprint-1} Metrics`, [
@@ -89,7 +90,7 @@ export const ics_2_3of6 = () => {
 			{ name: 'Lab', due:16, submitted:15 },
 			{ name: 'Reflection', due: 16, submitted: 16 }])
 	}
-	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
+
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
@@ -115,78 +116,84 @@ export const ics_2_3of6 = () => {
 }
 
 // Session 4 of 6: Monday
+const breakoutTheBigPictureName = 'The Big Picture'
+const breakoutTheBigPicture = () => { 
+	return breakoutStandard( 
+		`Breakout: ${breakoutTheBigPictureName}`, 
+		`In this breakout session on our ${breakoutTheBigPictureName} reading and lecture your team will discuss:`, [
+		'History', 
+		'Abstraction', 
+		'Data & Information',
+		'Programming',
+		'The Internet & The Web',
+		'Artificial Intelligence' ])
+}
+
 const ics_2_4of6_PAaA = {
 	'prework': [
 		'Complete through activity 11 prior to next class', '',
-		`Be prepared for “The Information Layer” breakout` ],
+		`Be prepared for ${breakoutTheBigPictureName} breakout` ],
 	'announcements':[ 
 		'Any announcements or questions?' ],
 	'agenda':[ 
-		'Breakout: The Information Layer',
-		`Data Representation and ${theHumbleTextFileName}`,
-		'Prework for Next Class' ]
+		'Sprint Progress Polling',
+		`Breakout: ${breakoutTheBigPictureName}`,
+		'Prework for Next Class',
+		'Lab' ]
 }
 export const ics_2_4of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_4of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', ics_2_5of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_5of6_PAaA.prework, sprint, activityList) }
-	const breakoutTheInformationLayer = () => { 
-		return breakoutStandard('Breakout: The Information Layer', 
-			'In this breakout session on The Information Layer (reading and lecture) your team will discuss:', [
-			'Numbers and Computing', 
-			'Positional Notation', 
-			'Binary, Octal, and Hexadecimal',
-			'Why Hex? How does this relate to files?',
-			'What about conversion calculators?' ])
-	}
 
-	return completeDeck(slideDeck, [ breakoutTheInformationLayer, theHumbleTextFile, preworkNext, tLab ])
+	return completeDeck(slideDeck, [ poll, breakoutTheBigPicture, tLab, preworkNext ])
+}
+
+const breakoutNumberingSystemsName = 'Numbering Systems'
+const breakoutNumberingSystems = () => { 
+	return breakoutStandard(
+		`Breakout: ${breakoutNumberingSystemsName}`, 
+		`In this breakout session on ${breakoutNumberingSystemsName} your team will discuss:`, [
+		'Numbers and Computing', 
+		'Positional Notation', 
+		'Binary, Octal, and Hexadecimal',
+		'Why Hex? How does this relate to files?',
+		'What about conversion calculators?' ])
 }
 
 // Session 5 of 6: Wednesday
 const ics_2_5of6_PAaA = {
 	'prework': [
 		'Complete through activity 13 prior to next class', '',
-		'Be prepared for “Data Representation” breakout',
+		`Be prepared for ${breakoutNumberingSystemsName} breakout`,
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
-		'Mass of the Holy Spirit at St Charles Borromeo Hall at 11 AM' ],
+		'Any announcements?' ],
 	'agenda':[ 
 		'Sprint Progress Polling',
-		'Breakout: Data Representation... moved to Friday',
-		`Complete Data Representation and ${theHumbleTextFileName}`,
+
 		`Quiz ${sprint}` ],
 }
-const breakoutRepresentation = () => { 
-	return breakoutStandard('Breakout: Data Representation', 
-		'In this breakout session on Data Representation (reading and lecture) your team will:', [
-		'Analog and Digital Data',
-		'Binary Representation of Numeric Data',
-		'Text including ASCII, Unicode, UTF-8, UTF-16 Representations, and PDF',
-		'Photo and Audio Representation Priorities',
-		'Video Representation priorities' ])
-}
+
 export const ics_2_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_5of6_PAaA, sprint, activityList)
-
 	const poll = () => { return tPrework('Sprint Progress Polling', ics_2_5of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_6of6_PAaA.prework, sprint, activityList) }
 	const quizExpectations = () => { return tQuizExpectations(sprint)}
 	const quiz = () => { return tQuiz(sprint) }
 
-	return 	completeDeck(slideDeck, [ poll, breakoutRepresentation, preworkNext, quizExpectations, quiz ])
+	return 	completeDeck(slideDeck, [ poll, breakoutNumberingSystems, preworkNext, quizExpectations, quiz ])
 }
 
 // Session 6 of 6: Friday
 const ics_2_6of6_PAaA = {
 	'prework': [
-		'Complete activity 13 and actively working on 14', '',
-		'Be prepared for Breakout on Data Representation',
-		'Be prepared for Lab & Programming Together',
+		'Complete through activity 13 and be actively working on activity 14', '',
+		'Be prepared for Lab',
 		`All sprint ${sprint} assignments are due Sunday!` ],
 	'announcements':[
 		`All sprint ${sprint} assignments are due Sunday!`],
 	'agenda':[
-		'Breakout: Data Representation',
 		'Lab']
 }
 export const ics_2_6of6 = () => {
@@ -195,5 +202,5 @@ export const ics_2_6of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_6of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_1of6_PAaA.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ finalReviewActivityListAndAssignments, breakoutRepresentation, preworkNext, tLab ])
+	return completeDeck(slideDeck, [ finalReviewActivityListAndAssignments, preworkNext, tLab ])
 }

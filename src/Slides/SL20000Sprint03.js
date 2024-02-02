@@ -17,6 +17,10 @@ const sprint = 3
 const activityList = () => { return list20000Sprint03(sprint) }
 const activityListPrevious = () => { return list20000Sprint02(sprint-1) }
 
+
+
+
+
 // Session 1 of 6: Monday
 export const ics_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const ics_3_1of6 = () => { return xyz_n_1of6(sprint, ics_3_1of6_PAaA.prework, activityListPrevious, ics_3_1of6_PAaA.agenda, ics_3_2of6_prework_list, activityList) }
@@ -110,6 +114,25 @@ export const ics_3_3of6 = () => {
 }
 
 // Session 4 of 6: Monday
+/* Include Representation and theHumbleTextFile
+const breakoutRepresentation = () => { 
+	return breakoutStandard('Breakout: Data Representation', 
+		'In this breakout session on Data Representation (reading and lecture) your team will:', [
+		'Analog and Digital Data',
+		'Binary Representation of Numeric Data',
+		'Text including ASCII, Unicode, UTF-8, UTF-16 Representations, and PDF',
+		'Photo and Audio Representation Priorities',
+		'Video Representation priorities' ])
+}
+
+import { theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
+
+		'Breakout: Data Representation... moved to Friday',
+		`Complete Data Representation and ${theHumbleTextFileName}`,
+*/
+
+
+
 const breakoutGateAndCircuitsName = 'Gates & Circuits'
 const breakoutGateAndCircuits = () => { 
 	return breakoutStandard( 

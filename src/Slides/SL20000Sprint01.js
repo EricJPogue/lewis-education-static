@@ -7,8 +7,6 @@ import { ics_2_1of6_PAaA } from './SL20000Sprint02'
 
 import { sprint1_class_2_PAaA, sprint1_class_2 } from './SL00000Sprint00'
 
-
-
 // Introduction to Computer Science (ICS) sprint 1 global values.
 const sprint = 1
 const activityList = () => { return list20000Sprint01(sprint) }
