@@ -1,10 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { internalLink } from '../DataAndAPIs/Links'
+import { continuousIntegration, internalLink } from '../DataAndAPIs/Links'
 import { makeInternalURL } from './ActivityRouter'
-
-import { HelloWorldWebLink } from './HelloWorld'
 
 const NAME = 'Getting to Know Each Other'
 export const GETTING_TO_KNOW_EACH_OTHER_ROUTE = 'getting-to-know-each-other'
@@ -64,8 +62,8 @@ export const gettingToKnowEachOther = () => {
 	</div> )
 }
 
-const GETTING_TO_KNOW_EACH_OTHER_WEB_NAME = 'Getting to Know Each Other Web'
-export const GETTING_TO_KNOW_EACH_OTHER_WEB_ROUTE = 'getting-to-know-each-other-web'
+const GETTING_TO_KNOW_EACH_OTHER_WEB_NAME = 'Getting to Know Each Other Enhanced'
+export const GETTING_TO_KNOW_EACH_OTHER_WEB_ROUTE = 'getting-to-know-each-other-enhanced'
 export const gettingToKnowEachOtherWebLink = () => {return (<NavLink to={makeInternalURL(GETTING_TO_KNOW_EACH_OTHER_WEB_ROUTE)}>{GETTING_TO_KNOW_EACH_OTHER_WEB_NAME}</NavLink>)}
 export const gettingToKnowEachOtherWeb = () => {
 	return ( <div>
@@ -77,18 +75,23 @@ export const gettingToKnowEachOtherWeb = () => {
 		<p>In this activity you will utilize GitHub Pages to host an HTML and CSS based web page about yourself.</p>
 
 		<em>Requirement 1</em>
-		<p>Complete {HelloWorldWebLink()}</p>
-
-		<em>Requirement 2</em>
 		<p>Complete {gettingToKnowEachOtherLink()}</p>
 
-		<em>Requirement 3</em>
+		<em>Requirement 2</em>
 		<p>Utilize GitHub pages to host your {gettingToKnowEachOtherLink()} web page:</p>
 		<ol>
-			<li>Move a copy of your {gettingToKnowEachOtherLink()} to your {HelloWorldWebLink()} and rename it “me.html”</li>
+			<li>Copy of your {gettingToKnowEachOtherLink()} to a GitHub pages website and rename it “me.html”</li>
 			<li>Verify that your photo from {gettingToKnowEachOtherLink()} is a “png” file and rename it to “me.png”</li>
 			<li>Relink your “me.png” photo to “me.html” and retest your hosted version of ”me.html”</li>
 			<li>If necessary, rename your external {gettingToKnowEachOtherLink()} CSS file to “me.css” and relink the CSS file</li>
+		</ol>
+
+		<em>Requirement 3</em>
+		<ol>
+			<li>Review {continuousIntegration()} and emphasize the CI/CD techniques for all enhancements</li>
+			<li>Implement one (1) substantial HTML based enhancement to {gettingToKnowEachOtherLink()}</li>
+			<li>Implement one (1) substantial CSS based enhancement to {gettingToKnowEachOtherLink()}</li>
+			<li>Implement one (2) substantial JavaScript based enhancement to {gettingToKnowEachOtherLink()}</li>
 		</ol>
 
 		<em>Requirement 4</em>

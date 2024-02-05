@@ -29,9 +29,11 @@ export const al20000Sprint04 = () => {
 export const list20000Sprint04 = (sprint) => {
 	const gitHubPages = () => externalLink('GitHub Pages', 'https://pages.github.com/')
 
+	const daleChapter5Lecture = () => { return internalLink('lecture', '/activity-dale/5') }
 	const daleWWWLecture = () => { return internalLink('lecture', '/activity-dale/16' )}
 
 	return ( <div>
+		<li>****Read “Computer Science Illuminated” Computing Components and review our associated {daleChapter5Lecture()}</li>
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, matchmakerWebLink(), oreillyPlaylistICS())}

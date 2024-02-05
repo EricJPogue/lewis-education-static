@@ -7,6 +7,7 @@ import { gettingToKnowEachOtherLink } from '../Activities/WebGettingToKnowEachOt
 import { toolsOfTheTradeLink } from '../Activities/ToolsOfTheTrade'
 import { htmlLink } from '../Activities/HTML'
 import { HelloWorldWebLink } from '../Activities/HelloWorld'
+import { HTMLW3C, CSSW3C } from '../DataAndAPIs/Links'
 
 export const al20000Sprint02 = () => {
 	const sprint = 2
@@ -24,7 +25,7 @@ export const al20000Sprint02 = () => {
 		<ul style={{listStyleType:'square'}}>
 			<li>Understand the big picture of Computer Science</li>
 			<li>Describe the concept of abstraction</li>
-			<li>Develop browser-based HTML5 applications that utilize common HTML and CSS</li>
+			<li>Develop HTML and CSS based web applications</li>
 			<li>Utilize important software developer tools and services to create, update, and deploy basic software applications</li>
 			<li>Understand and utilize numbering systems</li>
 			<li>Begin to understand sequences, selections, and loops (repetition)</li>
@@ -54,7 +55,8 @@ export const list20000Sprint02 = (sprint) => {
 
 			<li>Complete {HelloWorldWebLink()}</li>
 			<li>Read “Computer Science Illuminated” The Information Layer and review our associated {daleChapter2Lecture()}</li>
-			<li>Within {oreillyPlaylistICS()} read “Learning Web Development” Preface through Chapter 2 while focusing on Command Line functions</li>
+			<li>Within {oreillyPlaylistICS()} read “Learning Web Development” Preface through Chapter 3</li>
+			<li>Review W3Schools {HTMLW3C()} and {CSSW3C()} tutorials{estimated('2 hours')}</li>
 			<li>Complete {htmlLink()} - Part 1{estimated('3 hours')}</li>
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
 		</ol>

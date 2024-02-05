@@ -38,7 +38,7 @@ export const list44000Sprint02 = (sprint) => {
 		{activitiesListIntro(sprint)}
 		<ol>
 			{standardActivities(sprint, assignmentPortfolioLink())}
-			<li>Read “Engineering Software as a Service” Chapter 2 of and review our associated {foxChapter2Lecture()}</li>
+			<li>Read “Engineering Software as a Service” Chapter 2 and 3 and review our associated {foxChapter2Lecture()}</li>
 			<li>Complete {azureWebsiteLink()}{estimated('2 hours')}</li>
 			<li>Review the Potpourri web application from our example code GitHub repository</li>
 			<li>Within {oreillyPlaylistSE()} scan “Learning Web Development” Preface through Chapter 4</li>

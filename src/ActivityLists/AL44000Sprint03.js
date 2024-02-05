@@ -76,6 +76,10 @@ const extras = () => {
 // Certified for SP22 (01/29/2022)
 // Certified for FA23 (09/23/2023)
 
+// Modify "chapters 3 through 5" to "chapters 4 and 5" as chapter 4 has has been moved to sprint 2 for the SP24 semester already.
+
+
+
 // Consider adding back <li>Within {oreillyPlaylistSE()} scan “Essential Scrum” Chapters 1 and 2</li>
 
 
@@ -97,9 +101,7 @@ ORM (Object-Relational-Mapper) and NoSQL Databases
 // Todo: Consider moving  some of the Waterfall Project Management video and assignment from Sprint 5 to sprint 3.
 // Todo: Consider moving something related to “Dogs, JavaScript & An API 🐶 Fetch, Promises & Async Await” from sprint 4 to sprint 3
 
-// Todo: Add "Whatever Happened to Ruby" article currently in sprint 3. 
 // Todo: Review https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
-// Todo: Consider Git centric topic sprint 2 
 // Todo: Identify where quiz answers originate from. 
 // Todo: Fix the end of the Fox Preface video.
 // Todo: Review https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository
