@@ -141,5 +141,16 @@ export const af_2_4of6 = () => {
 	}
 
 	return [ retrospectiveBreakout ]
+}
 
+export const af_2_5of6 = () => {
+	const retrospectiveBreakout = () => {
+		return bulletListSlide('Today', 
+			'Let’s spend this class reviewing our commitments / assignment and looking at the “SillyMa” direction:', [
+			'Review updated activity / assignment',
+			'Review JSON structures',
+			'Review Syllabus examples' ])
+	}
+
+	return [ retrospectiveBreakout ]
 }

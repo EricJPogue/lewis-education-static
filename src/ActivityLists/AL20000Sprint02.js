@@ -57,7 +57,7 @@ export const list20000Sprint02 = (sprint) => {
 			<li>Read “Computer Science Illuminated” The Information Layer and review our associated {daleChapter2Lecture()}</li>
 			<li>Within {oreillyPlaylistICS()} read “Learning Web Development” Preface through Chapter 3</li>
 			<li>Review W3Schools {HTMLW3C()} and {CSSW3C()} tutorials{estimated('2 hours')}</li>
-			<li>Complete {htmlLink()} - Part 1{estimated('3 hours')}</li>
+			<li>Complete {htmlLink()} - Part 1{estimated('2 hours')}</li>
 			{standardActivitiesClosing(sprint, gettingToKnowEachOtherLink(), '6 hours')}
 		</ol>
 	</div> )

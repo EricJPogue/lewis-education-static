@@ -171,7 +171,7 @@ const ics_2_5of6_PAaA = {
 		'Any announcements?' ],
 	'agenda':[ 
 		'Sprint Progress Polling',
-
+		`Breakout: ${breakoutNumberingSystemsName}`,
 		`Quiz ${sprint}` ],
 }
 
@@ -180,9 +180,10 @@ export const ics_2_5of6 = () => {
 	const poll = () => { return tPrework('Sprint Progress Polling', ics_2_5of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_2_6of6_PAaA.prework, sprint, activityList) }
 	const quizExpectations = () => { return tQuizExpectations(sprint)}
+	const recap = () => { return tRecap(ics_2_5of6_PAaA.agenda.slice(1))}
 	const quiz = () => { return tQuiz(sprint) }
 
-	return 	completeDeck(slideDeck, [ poll, breakoutNumberingSystems, preworkNext, quizExpectations, quiz ])
+	return 	completeDeck(slideDeck, [ poll, breakoutNumberingSystems, preworkNext, recap, quizExpectations, quiz ])
 }
 
 // Session 6 of 6: Friday
@@ -201,6 +202,7 @@ export const ics_2_6of6 = () => {
 		`Final sprint ${sprint} activity list and assignment Q&A`, [`Any sprint ${sprint} activity list or assignment questions?`]) }
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_2_6of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_1of6_PAaA.prework, sprint, activityList) }
+	
 
 	return completeDeck(slideDeck, [ finalReviewActivityListAndAssignments, preworkNext, tLab ])
 }
