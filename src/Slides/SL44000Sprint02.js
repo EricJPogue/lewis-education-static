@@ -163,26 +163,26 @@ const se_2_5of6_PAaA = {
 		`Be prepared for “${breakoutSaaSClientFrameworkJavaScriptName}” breakout`,
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
-		'Any announcements or questions?' ],
+		'You are responsible for chapters 2 and 3**in “Engineering Software as a Service”',
+		'We will have lab today instead of doing a breakout on chapter 3' ],
 	'agenda':[ 
 		'Sprint Progress Polling',
-		`Breakout: ${breakoutSaaSClientFrameworkJavaScriptName}`,
+		`Breakout: ${breakoutSaaSClientFrameworkJavaScriptName}... Lab instead`,
 		`Quiz ${sprint}` ],
 }
 export const se_2_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_2_5of6_PAaA, sprint, activityList)
-	const poll = () => { return tPrework('Sprint Progress Polling', se_2_5of6_PAaA.prework, sprint, activityList) }
+	const poll = () => { return tPrework('Sprint Progress Polling', se_2_4of6_PAaA.prework, sprint, activityList) }
 	const breakout = () => { return breakoutSaaSClientFrameworkJavaScript() }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_2_6of6_PAaA.prework, sprint, activityList) }
 	const quizExpectations = () => { return tQuizExpectations(sprint)}
 	const quiz = () => { return tQuiz(sprint) }
 
-	return 	completeDeck(slideDeck, [ poll, breakout, preworkNext, quizExpectations, quiz ])
+	return 	completeDeck(slideDeck, [ poll, breakout, tLab, preworkNext, quizExpectations, quiz ])
 }
 
 // Session 6 of 6: Friday
-const se_2_6of6_PAaA = () => {
-	const preworkAnnouncementsAndAgenda = {
+const se_2_6of6_PAaA = {
 		'prework': [
 			'Complete activity 15 and be actively working on 16', '',
 			'Be prepared for Lab & Programming Together',
@@ -192,8 +192,6 @@ const se_2_6of6_PAaA = () => {
 		'agenda':[
 			`Quiz ${sprint} “Phone a Friend”`,
 			'Lab']
-	}
-	return preworkAnnouncementsAndAgenda
 }
 
 export const se_2_6of6 = () => { return  xyz_n_6of6(sprint, se_2_6of6_PAaA, se_3_1of6_PAaA.prework, activityList) }
