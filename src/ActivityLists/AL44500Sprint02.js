@@ -5,7 +5,7 @@ import { externalLink } from '../DataAndAPIs/Links';
 import { getModuleDescription } from '../DataAndAPIs/ClassSections';
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
-import { codingStandardsValidatorLink } from '../Activities/CodingStandards';
+import { goWebServerLink } from '../Activities/GoWebServer'
 
 export const al44500Sprint02 = () => {
 	const sprint = 2
@@ -33,7 +33,7 @@ export const list44500Sprint02 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-			{standardActivities(sprint, codingStandardsValidatorLink())}
+			{standardActivities(sprint, goWebServerLink())}
 			<li>Read “Introducing Go” chapters 7 and 8 on Structs, Interfaces, and Packages</li>
 			<li>Within O’Reilly Books perform a searches for Golang and ReactJS</li>
 			{initialPost(sprint)}
@@ -41,7 +41,7 @@ export const list44500Sprint02 = (sprint) => {
 			<li>Review <NavLink to='/activity-oop/patterns'>Object-Oriented Programming Patterns</NavLink></li>
 			<li>Review  <NavLink to='/activity-oop/principles'>Object-Oriented Programming Principles</NavLink></li>
 
-			{standardActivitiesClosing(sprint, codingStandardsValidatorLink(), '8 hours')}
+			{standardActivitiesClosing(sprint, goWebServerLink(), '8 hours')}
 		</ol>
 	</div> )
 }

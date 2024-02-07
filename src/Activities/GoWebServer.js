@@ -38,7 +38,7 @@ const renderGoWebServer = () => {
 		<p>Enhance your application so that it also:</p>
 		<ol>
 			<li>Utilizes the “/net/http” Go Framework to process HTTP request</li>
-			<li>Implements hello-world by responding in plane text with “Hello World – GWS”</li>
+			<li>Implements <pre>hello-world</pre> by responding in plane text with “Hello World – GWS”</li>
 			<li>Implements hello-world-html by responding in HTML with “Hello World – GWS” including the “header 1” font and 
 				an mDash between “Hello World” and “GWS”</li>
 			<li>Implements hello-world-json by responding in JSON “&#123;“message”:”Hello World - GWS”&#125;</li>
@@ -57,7 +57,7 @@ const renderGoWebServer = () => {
 		<p>Enhance your application so that it also:</p>
 		<ol>
 			<li>Implements Create and Update both of which respond with “create-stubbed” and “update-stubbed” respectively</li>
-			<li>embed</li>
+			<li>Implements the “help” API returning API help that includes links to each of the other APIs</li>
 		</ol>
 
 		<h5>Next Steps</h5>
@@ -65,5 +65,5 @@ const renderGoWebServer = () => {
 	</div> )
 }
 
-export const goWebServer = { 'name':'Building Your First Website with GitHub Pages', 'route':'go-web-server', 'render': renderGoWebServer }
+export const goWebServer = { 'name':'Go Web Server', 'route':'go-web-server', 'render': renderGoWebServer }
 export const goWebServerLink = () => { return makeNavigationLink(goWebServer) }
