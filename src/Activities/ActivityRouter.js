@@ -129,12 +129,30 @@ export const routeActivity = (activityRoute) => {
 		case WEB_RESUME_ROUTE: return webResume()
 
 		// The following case statements represent an new alternative method of implementing activities.
-		case introductionsWebsite.route: return introductionsWebsite.render()
-		case introductionToReact.route: return introductionToReact.render()
 		case thunderbird.route: return thunderbird.function()
 		case finalProject.route: return finalProject.function()
+
+		// Updated naming to .render()
+		case introductionsWebsite.route: return introductionsWebsite.render()
+		case introductionToReact.route: return introductionToReact.render()
 		case goWebServer.route: return goWebServer.render()
 
 		default: return null
 	}
 }
+
+
+/*
+
+const activityIndex = [
+	introductionsWebsite,
+	introductionToReact,
+	goWebServer
+]
+
+const getRender = (route) = {
+	activityIndex.forEach(element => {
+		
+	});
+}
+*/
