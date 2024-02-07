@@ -21,12 +21,12 @@ const renderGoWebServer = () => {
 			<li>Is implemented in multiple Go (.go) files with a primary Go file named “gws.go” (short for “Go Web Server”)</li>
 			<li>Successfully compiles from the command line by typing “go run gws.go</li>
 			<li>Store all code to process each standard in a separate Go file</li>
-			<li>Includes user instructions that succinctly describe the application when “gws help” is executed</li>
+			<li>Includes user instructions that describe the application when “gws help” is executed</li>
 		</ol>
 
 		<em>Requirement 2</em>
 		<p>Enhance your application so that it also:</p>
-		<ol>
+		<ol type='n'>
 			<li>Utilizes the “/net/http” Go Framework to process HTTP request</li>
 			<li>Implements hello-world by responding in plane text with “Hello World – GWS”</li>
 			<li>Implements hello-world-html by responding in HTML with “Hello World – GWS” including the “header 1” font and 
@@ -34,19 +34,9 @@ const renderGoWebServer = () => {
 			<li>Implements hello-world-json by responding in JSON “&#123;“message”:”Hello World - GWS”&#125;</li>
 		</ol>
 
-		<em>Requirement 2</em>
-		<p>Enhance your application so that it also:</p>
-		<ol>
-			<li>Utilizes the “/net/http” Go Framework to process HTTP request</li>
-			<li>Implements <pre>hello-world</pre> by responding in plane text with “Hello World – GWS”</li>
-			<li>Implements hello-world-html by responding in HTML with “Hello World – GWS” including the “header 1” font and 
-				an mDash between “Hello World” and “GWS”</li>
-			<li>Implements hello-world-json by responding in JSON “&#123;“message”:”Hello World - GWS”&#125;</li>
-		</ol>
-
 		<em>Requirement 3</em>
 		<p>Be sure that the application also:</p>
-		<ol>
+		<ol type='n'>
 			<li>Implements the embedding of JSON file GWS using the “embed” Go library</li>
 			<li>Embed a “Syllabus” JSON file in each in a separate Go file</li>
 			<li>Implement the “syllabus” API first implementing Read (of CRUD) in response to the “GET” HTTP request</li>
@@ -55,13 +45,10 @@ const renderGoWebServer = () => {
 
 		<em>Requirement 4</em>
 		<p>Enhance your application so that it also:</p>
-		<ol>
+		<ol type='n'>
 			<li>Implements Create and Update both of which respond with “create-stubbed” and “update-stubbed” respectively</li>
 			<li>Implements the “help” API returning API help that includes links to each of the other APIs</li>
 		</ol>
-
-		<h5>Next Steps</h5>
-		<p>Do you know what would happen if you added a Theme? Want to give it a try next time you create a website?</p> 
 	</div> )
 }
 
