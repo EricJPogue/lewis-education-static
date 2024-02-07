@@ -107,7 +107,7 @@ sure you can improve on his design.
 </ol>
 
 <em>Requirement 2</em>
-<p>Be sure that application also:</p>
+<p>Be sure that the application also:</p>
 <ol>
 	<li>Asks five questions as described above</li>
 	<li>Calculates <em>question compatibility scores</em> for each question</li>

@@ -61,6 +61,7 @@ import { WEB_RESUME_ROUTE, webResume } from './WebResume'
 import { introductionsWebsite } from './IntroductionsWebsite'
 import { introductionToReact } from './IntroductionToReact'
 import { finalProject } from './FinalProject'
+import { goWebServer } from './GoWebServer'
 
 export const BASE_ACTIVITY_ROUTE = '/activity/'
 export const makeInternalURL = (activityRoute) => {
@@ -132,6 +133,7 @@ export const routeActivity = (activityRoute) => {
 		case introductionToReact.route: return introductionToReact.render()
 		case thunderbird.route: return thunderbird.function()
 		case finalProject.route: return finalProject.function()
+		case goWebServer.route: return goWebServer.render()
 
 		default: return null
 	}
