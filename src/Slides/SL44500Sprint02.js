@@ -154,3 +154,26 @@ export const af_2_5of6 = () => {
 
 	return [ retrospectiveBreakout ]
 }
+
+// Session 6 of 6: Friday
+const af_2_6of6_PAaA = {
+	'prework': [
+		'Complete through activity 13 and be actively working on activity 14', '',
+		'Be prepared for Lab',
+		`All sprint ${sprint} assignments are due Sunday!` ],
+	'announcements':[
+		`All sprint ${sprint} assignments are due Sunday!`],
+	'agenda':[
+		'Lab']
+}
+export const af_2_6of6 = () => {
+	const finalReviewActivityListAndAssignments = () => { return basicSlide(
+		`Final sprint ${sprint} activity list and assignment Q&A`, [`Any sprint ${sprint} activity list or assignment questions?`]) }
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_2_6of6_PAaA, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', af_3_1of6_PAaA.prework, sprint, activityList) }
+	
+
+	return completeDeck(slideDeck, [ finalReviewActivityListAndAssignments, preworkNext, tLab ])
+}
+
+export const af_3_1of6_PAaA = xyz_n_1of6_lists(sprint)

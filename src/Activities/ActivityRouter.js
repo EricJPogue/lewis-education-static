@@ -68,7 +68,23 @@ export const makeInternalURL = (activityRoute) => {
 	return BASE_ACTIVITY_ROUTE + activityRoute
 }
 
+const activityIndex = [
+	introductionsWebsite,
+	introductionToReact,
+	goWebServer
+]
+
+const getRender = (route) => {
+		console.log('test')
+		console.log(activityIndex)
+		//activityIndex.forEach((item, index) => { 
+		//	console.log(item, index)
+		//})
+
+}
+
 export const routeActivity = (activityRoute) => {
+	getRender(activityRoute)	
 	switch(activityRoute) {
 		case AIDAN_ROUTE: return aidan()
 		case AMAZERIFFIC_FULL_STACK_ROUTE: return amazerifficFullStack()
@@ -142,17 +158,4 @@ export const routeActivity = (activityRoute) => {
 }
 
 
-/*
 
-const activityIndex = [
-	introductionsWebsite,
-	introductionToReact,
-	goWebServer
-]
-
-const getRender = (route) = {
-	activityIndex.forEach(element => {
-		
-	});
-}
-*/

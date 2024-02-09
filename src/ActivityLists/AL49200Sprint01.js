@@ -60,3 +60,4 @@ export const list49200Sprint01 = (sprint) => {
 }
 
 // Certified for SP24 on 08-Jan-24
+// Todo: Lab 1 is too easy. Particularly the question about TEAM.md is not specific or challenging given 30 points. 
