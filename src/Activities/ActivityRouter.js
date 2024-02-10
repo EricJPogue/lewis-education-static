@@ -62,29 +62,14 @@ import { introductionsWebsite } from './IntroductionsWebsite'
 import { introductionToReact } from './IntroductionToReact'
 import { finalProject } from './FinalProject'
 import { goWebServer } from './GoWebServer'
+import { reactTicTacToe } from './ReactTicTacToe'
 
 export const BASE_ACTIVITY_ROUTE = '/activity/'
 export const makeInternalURL = (activityRoute) => {
 	return BASE_ACTIVITY_ROUTE + activityRoute
 }
 
-const activityIndex = [
-	introductionsWebsite,
-	introductionToReact,
-	goWebServer
-]
-
-const getRender = (route) => {
-		console.log('test')
-		console.log(activityIndex)
-		//activityIndex.forEach((item, index) => { 
-		//	console.log(item, index)
-		//})
-
-}
-
-export const routeActivity = (activityRoute) => {
-	getRender(activityRoute)	
+export const routeActivity = (activityRoute) => {	
 	switch(activityRoute) {
 		case AIDAN_ROUTE: return aidan()
 		case AMAZERIFFIC_FULL_STACK_ROUTE: return amazerifficFullStack()
@@ -152,6 +137,7 @@ export const routeActivity = (activityRoute) => {
 		case introductionsWebsite.route: return introductionsWebsite.render()
 		case introductionToReact.route: return introductionToReact.render()
 		case goWebServer.route: return goWebServer.render()
+		case reactTicTacToe.route: return reactTicTacToe.render()
 
 		default: return null
 	}

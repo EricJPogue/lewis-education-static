@@ -17,10 +17,6 @@ const sprint = 3
 const activityList = () => { return list20000Sprint03(sprint) }
 const activityListPrevious = () => { return list20000Sprint02(sprint-1) }
 
-
-
-
-
 // Session 1 of 6: Monday
 export const ics_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const ics_3_1of6 = () => { return xyz_n_1of6(sprint, ics_3_1of6_PAaA.prework, activityListPrevious, ics_3_1of6_PAaA.agenda, ics_3_2of6_prework_list, activityList) }
