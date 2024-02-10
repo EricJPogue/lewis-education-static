@@ -88,7 +88,7 @@ export const gettingToKnowEachOtherWeb = () => {
 
 		<em>Requirement 3</em>
 		<ol>
-			<li>Review {continuousIntegration()} and emphasize the CI/CD techniques for all enhancements</li>
+			<li>Review {continuousIntegration()} and emphasize the CI/CD</li>
 			<li>Implement one (1) substantial HTML based enhancement to {gettingToKnowEachOtherLink()}</li>
 			<li>Implement one (1) substantial CSS based enhancement to {gettingToKnowEachOtherLink()}</li>
 			<li>Implement one (2) substantial JavaScript based enhancement to {gettingToKnowEachOtherLink()}</li>

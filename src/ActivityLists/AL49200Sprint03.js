@@ -52,4 +52,5 @@ export const list49200Sprint03 = (sprint) => {
 }
 
 // Certified for FA23 (09/23/2023)
+// Certified for SP24 (10/10/2024)
 

@@ -66,8 +66,33 @@ export const list44000Sprint04 = (sprint) => {
 // Certified for FA22 (10/06/2022) 
 // Certified for SP22 (02/12/2022)
 // Certified for FA23 (10/17/2023)
+
 // Todo: Add production web link to lab 4 question 2.
 
+// Consider adding back <li>Within {oreillyPlaylistSE()} scan “Essential Scrum” Chapters 1 and 2</li>
+// Todo: Update to reflect Zac’s fix (see related announcement). 
+// Todo: Move Whatever Happened to Ruby to earlier sprints.
+// Todo: Consider reviewing and enhancing Quiz 3.
+
+// Todo: Consider moving  some of the Waterfall Project Management video and assignment from Sprint 5 to sprint 3.
+// Todo: Consider moving something related to “Dogs, JavaScript & An API 🐶 Fetch, Promises & Async Await” from sprint 4 to sprint 3
+
+// Todo: Review https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
+// Todo: Identify where quiz answers originate from. 
+// Todo: Fix the end of the Fox Preface video.
+// Todo: Review https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository
+// Todo: Consider adding W3C Validator VS code add-in to several classes. 
+
+// Todo: Consider updating and adding the following Architecture videos back into the class:
+//	import { architecturePart1, architecturePart2 } from '../DataAndAPIs/Links'
+// <li>Complete {architecturePart1()}</li>
+// <li>Scan {architecturePart2()}</li>
+// Consider adding https://www.youtube.com/watch?v=A-H-xZ5ZXgo
+// Todo: Consider adding back in Architecture lecture or removing SQL questions from quiz.
+// Todo: Make sure that in sprints 7 & 8 that “individual” lab questions are identified. 
+// Todo: Review Zac’s quiz and update quiz 7. 
+// Todo: Consider '<li>Complete {AzureFunctionsWithVSCodeAndJavaScript()} and build your <em>personal</em> serverless function</li>'
+// Todo: Consider '<li>Within {oreillyPlaylistSE()} search for “Azure Functions” and “Serverless Computing” and document the best resources</li>'
 // Todo: Consider moving final project proposals to sprint 4. 
 // Todo: Consider updating Lab 4 in that the spike doesn’t seem like a totally natural fit.  
 // Todo: Move some of the Waterfall Project Management video and assignment from Sprint 5 to sprint 4.

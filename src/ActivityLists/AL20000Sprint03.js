@@ -60,9 +60,9 @@ export const list20000Sprint03 = (sprint) => {
 // Certified for FA22 (09/20/2022)
 // Certified for SP22 (01/29/2022)
 // Certified for FA23 (09/23/2023)
-// Todo: Assignments with GitHub and JavaScript turning text red very challenging given that Friday was a holiday.
+// Certified for SP24 (10/10/2024)
 
-// Certified for SP24 (10/05/2024)
+// Todo: Consider adding back JavaScript turning text red requirement back even though it was quite challenging.
 
 
 
