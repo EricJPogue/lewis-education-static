@@ -50,5 +50,5 @@ const renderReactTicTacToe = () => {
 	</div> )
 }
 
-export const reactTicTacToe = { 'name':'Lewis Toe', 'route':'lewis-toe', 'render':renderReactTicTacToe }
+export const reactTicTacToe = { 'name':'Lewis-Tac-Toe', 'route':'lewis-toe', 'render':renderReactTicTacToe }
 export const reactTicTacToeLink = () => { return makeNavigationLink(reactTicTacToe) }

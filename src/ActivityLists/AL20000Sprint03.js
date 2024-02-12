@@ -23,7 +23,7 @@ export const al20000Sprint03 = () => {
 		<ul style={{ listStyleType:'square' }}>
 			<li>Understand and discuss data representation</li>
 			<li>Understand and discuss gates and circuits</li>
-			<li>Understand and discuss computing components</li>
+			<li>Utilize Git and GitHub to edit and test applications locally</li>
 			<li>Utilize more sophisticated HTML, CSS, and JavaScript to develop Web applications</li>
 		</ul>
 
