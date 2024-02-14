@@ -16,21 +16,26 @@ const activityList = () => { return list44000Sprint03(sprint) }
 
 // Session 1 of 6: Monday
 export const se_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
-export const se_3_1of6 = () => { return xyz_n_1of6(sprint, se_3_1of6_PAaA.prework, activityListPrevious, se_3_1of6_PAaA.agenda, se_3_2of6_prework_list, activityList) }
+export const se_3_1of6 = () => { return xyz_n_1of6(sprint, se_3_1of6_PAaA.prework, activityListPrevious, se_3_1of6_PAaA.agenda, se_3_1of6_PAaA.prework, activityList) }
 
-// Todo: Update session 2 so that it utilizes the integrated lists format like se_3_3of6_PAaA. 
 // Session 2 of 6: Wednesday
-const se_3_2of6_prework_list = [
-	'Complete through activity 4 prior to next class', '',
-	`Be prepared for team Discussion ${sprint} and Lab` ]
-const se_3_2of6_agenda_list = [
-	`Discussion Board ${sprint} as a Scrum Team`,
-	'Prework for Next Class',
-	'Lab & Programming Together' ]
+const se_3_2of6_PAaA = {
+	'prework': [
+		'Complete through activity 4 prior to next class', '',
+		`Be prepared for team Discussion ${sprint} and Lab` ],
+	'announcements':[
+		'Any questions or announcements?' ],
+	'agenda':[
+		`Sprint ${sprint} Planning Questions & Answers`,
+		`Discussion Board ${sprint} as a scrum team`,
+		'Confirm Demos for Next Class',
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
+} 
 export const se_3_2of6 = () => {
-	const prework = () => { return tPreworkWithLogo('Prework For Today', se_3_2of6_prework_list, sprint, activityList) }
-	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['No class next Friday (October 6)']) }
-	const agenda = () => { return agendaSlide(se_3_2of6_agenda_list) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', se_3_2of6_PAaA.prework, sprint, activityList) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', se_3_2of6_PAaA.announcements ) }
+	const agenda = () => { return agendaSlide(se_3_2of6_PAaA.agenda) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_3_3of6_PAaA.prework, sprint, activityList) }
 
 	const discussion3Breakout = () => { return discussionBreakout(sprint) } 
