@@ -6,10 +6,9 @@ import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 
 import { ics_4_1of6_prework_list } from './SL20000Sprint04'
 import { getClassSection } from '../DataAndAPIs/ClassSections'
-import { basicSlide } from './SLSprint00'
 import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 import { tReviewDemoSchedule } from './SL00000Sprint00'
-import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
+import { basicSlide, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 import { completeDeck } from './SL00000Sprint00'
 
 // Constants
@@ -19,22 +18,26 @@ const activityListPrevious = () => { return list20000Sprint02(sprint-1) }
 
 // Session 1 of 6: Monday
 export const ics_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
-export const ics_3_1of6 = () => { return xyz_n_1of6(sprint, ics_3_1of6_PAaA.prework, activityListPrevious, ics_3_1of6_PAaA.agenda, ics_3_2of6_prework_list, activityList) }
+export const ics_3_1of6 = () => { return xyz_n_1of6(sprint, ics_3_1of6_PAaA.prework, activityListPrevious, ics_3_1of6_PAaA.agenda, ics_3_1of6_PAaA.prework, activityList) }
 
 // Session 2 of 6: Wednesday
-const ics_3_2of6_prework_list = [
-	'Complete through activity 5 prior to next class', '',
-	'Be prepared Discussion Board 3',
-	'Be prepared for Lab & Programming Together' ]
-export const ics_3_2of6_agenda_list = [
-	`Discussion Board ${sprint} as a Scrum Team`,
-	'Lab & Programming Together',
-	'Review Demo Schedule for Next Class',
-	'Prework for Next Class' ]
+const ics_3_2of6_PAaA = {
+	'prework': [
+		'Complete through activity 5 prior to next class', '',
+		'Be prepared Discussion Board 3',
+		'Be prepared for Lab & Programming Together' ],
+	'announcements':[ 
+		'Any questions or announcements?' ],
+	'agenda':[
+		`Discussion Board ${sprint} as a Scrum Team`,
+		'Lab & Programming Together',
+		'Review Demo Schedule for Next Class',
+		'Prework for Next Class' ]
+}
 export const ics_3_2of6 = () => {
-	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_2of6_prework_list, sprint, activityList) }
-	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['No class next Friday (October 6)']) }
-	const agenda = () => { return agendaSlide(ics_3_2of6_agenda_list) }
+	const prework = () => { return tPreworkWithLogo('Prework For Today', ics_3_2of6_PAaA.prework, sprint, activityList) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ics_3_2of6_PAaA.announcements ) }
+	const agenda = () => { return agendaSlide(ics_3_2of6_PAaA.agenda) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_3_3of6_PAaA.prework, sprint, activityList) }
 
 	const discussion3Breakout = () => { return discussionBreakout(sprint) } 
@@ -42,8 +45,10 @@ export const ics_3_2of6 = () => {
 		return bulletListSlide('Lab & Programming Together', 
 			'Let’s commit to making 30 minutes of focused effort to our Lab assignment by:', [
 			'Discussing and Implementing our README.md and LICENSE file in GitHub', 
-			'Adding a index.html file', 
-			'Pushing the index.html file to GitHub' ])
+			'Clone',
+			'Edit, Test Local... Repeat (every 5 minutes)', 
+			'Git Add, Git Commit, Git Push, Test Production (Every hour)',
+			'Pus everything at the end of each day' ])
 	}
 
 	return makeSlideDeck([ prework, announcements, agenda, discussion3Breakout, programmingTogether, preworkNext ])
@@ -56,7 +61,7 @@ const ics_3_3of6_PAaA = {
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
 		'Those scheduled to demo please be a couple of minutes early to class' ],
 	'announcements':[ 
-		'No class next Friday (October 6)' ],
+		'Any questions or announcements?' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,

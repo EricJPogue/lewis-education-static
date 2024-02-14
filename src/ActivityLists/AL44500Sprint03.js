@@ -30,9 +30,11 @@ export const al44500Sprint03 = () => {
 
 export const list44500Sprint03 = (sprint) => {
 	const react = () => { return externalLink('React', 'https://react.dev/')}
-	const reactQuickStart = () => { return externalLink('React', 'https://react.dev/learn')}
+	const reactQuickStart = () => { return externalLink('React Quick Start', 'https://react.dev/learn')}
 	const reactTicTacToe = () => { return externalLink('Intro to React - Tic-Tac-Toe', 'https://reactjs.org/tutorial/tutorial.html')}
 	const reactMax = () => { return externalLink('React - The Complete Guide” ', 'https://learning.oreilly.com/videos/react-the/9781789132229/')}
+	const azureStaticWebApps = () => { return externalLink('Azure Static Web Apps', 'https://aka.ms/swadocs')}
+	const azureStaticReactWithPortal = () => { return externalLink('Quickstart: Azure Static site with React and using Azure portal', 'https://learn.microsoft.com/en-us/azure/static-web-apps/getting-started')}
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
@@ -42,6 +44,8 @@ export const list44500Sprint03 = (sprint) => {
 			<li>Review {react()} and complete {reactQuickStart()} </li>
 			{initialPost(sprint)}
 			<li>Within O’Reilly Books Complete {reactMax()} by Maximilian Schwarzmüller</li>
+			<li>Focus on CI/CD with React by studying {azureStaticWebApps()}</li>
+			<li>Complete {azureStaticReactWithPortal()} </li>
 			<li>Complete {reactTicTacToe()}</li>
 			{standardActivitiesClosing(sprint, reactTicTacToeLink(), '8 hours')}
 		</ol>
