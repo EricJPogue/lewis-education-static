@@ -3,7 +3,8 @@ import { list44500Sprint03 } from '../ActivityLists/AL44500Sprint03'
 
 import { xyz_n_1of6_lists, xyz_n_1of6, makeSlideDeck } from './SL00000Sprint00'
 import { agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, tPrework, tPreworkWithLogo } from './SLSprint00'
-
+import { basicSlide, submissionPercentage, sprintDemos, sprintDemosIntro, demoAssignment, orderedListSlide } from './SLSprint00' 
+import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 // Constants
 const sprint = 3
 const activityList = () => { return list44500Sprint03(sprint) }
@@ -51,6 +52,55 @@ export const af_3_2of6 = () => {
 
 // Session 3 of 6: Friday
 const af_3_3of6_PAaA = {
+	'prework': [
+		'Complete through activity 9 prior to next class', '',
+		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
+		'Those scheduled to demo please be a couple of minutes early to class' ],
+	'announcements':[ 
+		'Any questions or announcements?' ],
+	'agenda':[
+		`Sprint ${sprint-1} Demos`,
+		`Sprint ${sprint-1} Retrospective`,
+		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Prework for Next Class' ]
+}
+export const af_3_3of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_3_3of6_PAaA, sprint, activityList)
+	const metrics = () => {
+		return basicSlide(`Sprint ${sprint-1} Metrics`, [
+			'What is Bob Parsons Rule #9?', '',
+			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
+	}
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:4, submitted:4 },
+			{ name: 'Quiz', due:4, submitted:4 },
+			{ name: 'Lab', due:4, submitted:4 },
+			{ name: 'Reflection', due:4, submitted:4 }])
+	}
+	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
+	const retrospective = () => {
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Perfect submission percentage... again',
+			'All assignments are partially graded and posted', 
+			'Thank you for your reflection comments' ])
+	}
+	const retrospectiveBreakout = () => {
+		return orderedListSlide('Breakout Session for Team Retrospective', 
+			'As a scrum team consider:', [
+			`How does your team feel about sprint ${sprint-1} now that it is over`,
+			`What could be done to make sprint ${sprint-1} or the class overall better or more manageable`,
+			'What improvements should we make as a class, team, or individual going forward' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', af_3_4of6_PAaA.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ tReviewDemoSchedule, sprintDemosIntro, sprintDemos, demoAssignment, metrics, 
+		metricsSubmissionPercentage, retrospective, retrospectiveBreakout, preworkNext, tLab ])
+}
+
+// Session 4 of 6: Monday
+const af_3_4of6_PAaA = {
 	'prework': [
 		'Complete through activity 9 prior to next class', '',
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,

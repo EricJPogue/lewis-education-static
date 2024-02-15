@@ -77,3 +77,4 @@ const extras = () => {
 // Certified for FA23 (09/23/2023)
 // Certified for SP24 (10/10/2024)
 
+// Todo: Update Lab 3 Question 3 to specifically ask for more detail. 

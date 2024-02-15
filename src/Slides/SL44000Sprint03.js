@@ -18,7 +18,7 @@ const activityList = () => { return list44000Sprint03(sprint) }
 export const se_3_1of6_PAaA = xyz_n_1of6_lists(sprint)
 export const se_3_1of6 = () => { return xyz_n_1of6(sprint, se_3_1of6_PAaA.prework, activityListPrevious, se_3_1of6_PAaA.agenda, se_3_1of6_PAaA.prework, activityList) }
 
-// Session 2 of 6: Wednesday
+// Session 2 of 6: Wednesdayarn sta
 const se_3_2of6_PAaA = {
 	'prework': [
 		'Complete through activity 4 prior to next class', '',
@@ -52,7 +52,6 @@ export const se_3_2of6 = () => {
 	return makeSlideDeck([ prework, announcements, agenda, discussion3Breakout, preworkNext, programmingTogether ])
 }
 
-// Todo: Update the following session to be similar to ics.
 const se_3_3of6_PAaA = {
 	'prework': [
 		'Complete through activity 8 prior to next class', '',
@@ -148,11 +147,8 @@ export const se_3_5of6 = () => { return xyz_n_5of6(sprint, se_3_5of6_PAaA, se_4_
 		return [ announcements ]
 	}
 
-
-
-
 const se_3_6of6_PAaA = xyz_n_6of6_PAaA('Complete through activity activity 14 and actively working on 15', sprint)
 export const se_3_6of6X = () => { return  xyz_n_6of6(sprint, se_3_6of6_PAaA, se_4_1of6_prework_list, activityList) }
 
-// Todo: Update Lab 3 Question 3 to specifically ask for more detail. 
+
 
