@@ -58,7 +58,7 @@ const se_3_3of6_PAaA = {
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
 		'Those scheduled to demo please be a couple of minutes early to class' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'Wednesday, March 6 will be our midterm Exam your in person attendance is required' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
@@ -112,7 +112,7 @@ const se_3_4of6_PAaA = {
 		`Be prepared for a breakout session on ${breakoutRequirementsName}`,
 		'Be prepared for Lab and Programming Together as time allows' ],
 	'announcements':[ 
-		'No class next Friday (October 6)',
+		'Wednesday, March 6 will be our midterm Exam your in person attendance is required',
 		`All sprint ${sprint} assignments due Sunday` ],
 	'agenda':[
 		'Sprint Progress Polling', 
@@ -138,6 +138,7 @@ const se_3_5of6_PAaA = {
 export const se_3_5of6 = () => { return xyz_n_5of6(sprint, se_3_5of6_PAaA, se_4_1of6_prework_list, activityList) }
 
 // Session 6 of 6: Friday
+// BugBug: This is not correct.
 	// No “web_3_6of6...” prework or agenda structures as there is no class Friday due to Fall Break.
 	export const se_3_6of6 = () => {
 		const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
