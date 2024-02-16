@@ -82,8 +82,9 @@ export const se_3_3of6 = () => {
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
-			'Solid submission percentage',
-			'My grading this sprint is a bit of a mess :-(', 
+			'Very good submission percentage',
+			'Grading is complete and grades are posted',
+			'You should be able to see the answers to all quiz questions', 
 			'Thank you for your reflection comments' ])
 	}
 	const breakout = () => { return retrospectiveBreakout(sprint) }
