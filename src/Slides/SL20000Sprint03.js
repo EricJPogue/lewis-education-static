@@ -5,7 +5,6 @@ import { list20000Sprint02 } from '../ActivityLists/AL20000Sprint02'
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 
 import { ics_4_1of6_prework_list } from './SL20000Sprint04'
-import { getClassSection } from '../DataAndAPIs/ClassSections'
 import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 import { tReviewDemoSchedule } from './SL00000Sprint00'
 import { basicSlide, sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
@@ -61,7 +60,7 @@ const ics_3_3of6_PAaA = {
 		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
 		'Those scheduled to demo please be a couple of minutes early to class' ],
 	'announcements':[ 
-		'Any questions or announcements?' ],
+		'Your in person attendance is required for your midterm exam (during sprint 4)' ],
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
@@ -76,29 +75,21 @@ export const ics_3_3of6 = () => {
 			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
 	}
 	const metricsSubmissionPercentage = () => {
-		if (getClassSection() === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:27 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:27 },
-				{ name: 'Reflection', due: 27, submitted: 26 }])
-		}
-		else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:24, submitted:24 },
-				{ name: 'Quiz', due:24, submitted:24 },
-				{ name: 'Lab', due:24, submitted:23 },
-				{ name: 'Reflection', due: 24, submitted: 23 }])
-		}
+		return submissionPercentage([
+			{ name: 'Discussion', due:16, submitted:15 },
+			{ name: 'Quiz', due:16, submitted:16 },
+			{ name: 'Lab', due:16, submitted:16 },
+			{ name: 'Reflection', due: 16, submitted: 16 }])
 	}
 	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
 			'Excellent submission percentage',
-			'Do not go searching for the person who forgot to submit their Reflection', 
-			'Grading is a bit of a work in process',
-			'We still need some work on creating, testing, and submitting Zip files' ])
+			'Do not go searching for the person who forgot to submit their Discussion', 
+			'Grading is complete and grades are posted',
+			'You should be able to see the answers to all quiz questions', 
+			'Thank you for your reflection comments' ])
 	}
 	const retrospectiveBreakout = () => {
 		return orderedListSlide('Breakout Session for Team Retrospective', 
