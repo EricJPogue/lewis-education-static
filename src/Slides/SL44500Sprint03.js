@@ -103,13 +103,42 @@ export const af_3_3of6 = () => {
 const af_3_4of6_PAaA = {
 	'prework': [
 		'Complete through activity 9 prior to next class', '',
-		`Be prepared for sprint ${sprint-1} demos and retrospectives`,
-		'Those scheduled to demo please be a couple of minutes early to class' ],
+		`Be prepared for Lab`, ],
 	'announcements':[ 
-		'Any questions or announcements?' ],
+		'Recall that sprint 4 will be our midterm and that your in class participation is required' ],
 	'agenda':[
-		`Sprint ${sprint-1} Demos`,
-		`Sprint ${sprint-1} Retrospective`,
-		`Breakout for Sprint ${sprint-1} Retrospective`,
+		`Lab`,
 		'Prework for Next Class' ]
+}
+export const af_3_4of6 = () => {
+	const prework = () => { return tPreworkWithLogo('Prework For Today', af_3_4of6_PAaA.prework, sprint, activityList) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', af_3_2of6_PAaA.announcements ) }
+	const agenda = () => { return agendaSlide(af_3_2of6_PAaA.agenda) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', af_3_5of6_PAaA.prework, sprint, activityList) }
+
+	const programmingTogether = () => {
+		return bulletListSlide('Lab & Programming Together', 
+			'Let’s commit to making 40 minutes of focused effort to our Lab assignment by:', [
+			'Discussing and Implementing our README.md and LICENSE file in GitHub', 
+			'Clone from Azure React template',
+			'Edit, Test Local... Repeat (every 5 minutes)', 
+			'Git Add, Git Commit, Git Push, Test Production (Every hour)',
+			'Pus everything at the end of each day' ])
+	}
+
+	return makeSlideDeck([ prework, announcements, agenda, programmingTogether, preworkNext ])
+}
+
+// Session 5 of 6: Wednesday
+const af_3_5of6_PAaA = {
+	'prework': [
+		'Complete through activity 10 prior to next class', '',
+		'Be prepared for “What is React” discussion'
+		`Be prepared for Lab`, ],
+	'announcements':[ 
+		'Recall that sprint 4 will be our midterm and that your in class participation is required' ],
+		'agenda':[
+			'“What is React” Discussion'
+			`Lab`,
+			'Prework for Next Class' ]
 }
