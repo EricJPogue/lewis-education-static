@@ -133,12 +133,12 @@ export const af_3_4of6 = () => {
 const af_3_5of6_PAaA = {
 	'prework': [
 		'Complete through activity 10 prior to next class', '',
-		'Be prepared for “What is React” discussion'
+		'Be prepared for “What is React” discussion',
 		`Be prepared for Lab`, ],
 	'announcements':[ 
 		'Recall that sprint 4 will be our midterm and that your in class participation is required' ],
 		'agenda':[
-			'“What is React” Discussion'
+			'“What is React” Discussion',
 			`Lab`,
 			'Prework for Next Class' ]
-}
+} 
