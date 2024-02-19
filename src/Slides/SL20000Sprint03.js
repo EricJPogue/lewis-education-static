@@ -106,9 +106,9 @@ export const ics_3_3of6 = () => {
 }
 
 // Session 4 of 6: Monday
-/* Include Representation and theHumbleTextFile
+const breakoutRepresentationName = 'Data Representation'
 const breakoutRepresentation = () => { 
-	return breakoutStandard('Breakout: Data Representation', 
+	return breakoutStandard(`Breakout: ${breakoutRepresentationName}`, 
 		'In this breakout session on Data Representation (reading and lecture) your team will:', [
 		'Analog and Digital Data',
 		'Binary Representation of Numeric Data',
@@ -116,15 +116,29 @@ const breakoutRepresentation = () => {
 		'Photo and Audio Representation Priorities',
 		'Video Representation priorities' ])
 }
+const ics_3_4of6_PAaA = {
+	'prework': [
+		'Complete through activity 11 prior to next class', '',
+		`Focus on “${breakoutRepresentationName}” and the “${breakoutRepresentation}” chapters and lectures`,
+		'Be prepared for Lab and Programming Together' ],
+	'announcements':[ 
+		'Wednesday, March 6 will be our midterm Exam your in person attendance is required',
+		`All sprint ${sprint} assignments due Sunday` ],
+	'agenda':[
+		'Sprint Progress Polling', 
+		`${breakoutRepresentationName} Breakout`,
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
+}
+export const ics_3_4of6 = () => { return xyz_n_4of6(sprint, ics_3_4of6_PAaA, ics_3_5of6_PAaA.prework, activityList, breakoutRepresentation) }
 
-import { theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
+
+/* import { theHumbleTextFileName, theHumbleTextFile } from './SL00000Sprint02'
 
 		'Breakout: Data Representation... moved to Friday',
 		`Complete Data Representation and ${theHumbleTextFileName}`,
 */
-
-
-
+// Session 5 of 6: Wednesday
 const breakoutGateAndCircuitsName = 'Gates & Circuits'
 const breakoutGateAndCircuits = () => { 
 	return breakoutStandard( 
@@ -136,25 +150,9 @@ const breakoutGateAndCircuits = () => {
 		'OR, XOR, NAND, and NOR gates and share which one is consistent with English language "or"',
 		'Integrated Circuits, CPU Chips, and how much does it cost to buy 100,000,000 (100 million) gates' ])
 }
-const ics_3_4of6_PAaA = {
-	'prework': [
-		'Complete through activity 11 prior to next class', '',
-		`Focus on “${breakoutGateAndCircuitsName}” and the “${breakoutGateAndCircuitsName}” chapters and lectures`,
-		'Be prepared for Lab and Programming Together' ],
-	'announcements':[ 
-		'No class next Friday (October 6)',
-		`All sprint ${sprint} assignments due Sunday`, '',
-		'Sprint 2 assignments all posted',
-		'If you need to resubmit your “Getting to Know Each Other” zip file, email it to me today' ],
-	'agenda':[
-		'Sprint Progress Polling', 
-		`“${breakoutGateAndCircuitsName}”s Breakout`,
-		'Prework for Next Class',
-		'Lab & Programming Together' ]
-}
-export const ics_3_4of6 = () => { return xyz_n_4of6(sprint, ics_3_4of6_PAaA, ics_3_5of6_PAaA.prework, activityList, breakoutGateAndCircuits) }
 
-// Session 5 of 6: Wednesday
+/* Move to next sprint. 
+
 const breakoutComputingComponentsName = 'Computing Components'
 const breakoutComputingComponents = () => { 
 	return breakoutStandard( 
@@ -166,10 +164,11 @@ const breakoutComputingComponents = () => {
 		'Embedded Systems',
 		'Parallel Architectures plus Classes of Parallel Hardware' ])
 }
+*/
 const ics_3_5of6_PAaA = {
 	'prework': [
 		'Complete through activity 14 prior to next class', '',
-		`Be prepared for ${breakoutComputingComponentsName}`,
+		`Be prepared for ${breakoutGateAndCircuitsName}`,
 		'Be prepared for Lab and Programming Together as time allows',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
@@ -177,13 +176,13 @@ const ics_3_5of6_PAaA = {
 		`All sprint ${sprint} assignments due Sunday` ],
 	'agenda':[
 		'Lab and Programming Together',
-		`${breakoutComputingComponentsName}`,
+		`${breakoutGateAndCircuitsName}`,
 		'Prework for Next Class',
 		`Quiz ${sprint}` ]
 }
 export const ics_3_5of6 = () => { 
 	let slides = xyz_n_5of6(sprint, ics_3_5of6_PAaA, ics_3_6of6_PAaA.prework, activityList)
-	slides.splice(slides.length-3, 0, breakoutComputingComponents)
+	slides.splice(slides.length-3, 0, breakoutGateAndCircuits)
 	return slides 
 }
 
