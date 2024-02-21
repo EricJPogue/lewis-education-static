@@ -21,6 +21,22 @@ const activityList = () => { return list20000Sprint04(sprint) }
 // Todo: Create xyz_n_1of6 version 2 that includes optional null (or default_announcements) announcements and makes prework_list 
 // and agenda_list optionally null (or default_prework_list and default_agenda_list)
 
+/* Moved from last sprint. 
+
+const breakoutComputingComponentsName = 'Computing Components'
+const breakoutComputingComponents = () => { 
+	return breakoutStandard( 
+		`Breakout: ${breakoutComputingComponentsName}`, 
+		`In this breakout session on our ${breakoutComputingComponentsName} reading and lecture your team will discuss:`, [
+		'Computing Components',
+		'Stored Program plus Von Neumann Architecture',
+		'Ram and Rom plus Secondary Storage',
+		'Embedded Systems',
+		'Parallel Architectures plus Classes of Parallel Hardware' ])
+}
+*/
+
+
 // Session 1 of 6: Monday
 export const ics_4_1of6_prework_list = xyz_n_1of6_prework_list(sprint)  
 const ics_4_1of6_agenda_list = xyz_n_1of6_agenda_list(sprint)

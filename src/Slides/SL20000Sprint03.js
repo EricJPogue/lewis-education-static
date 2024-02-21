@@ -151,20 +151,6 @@ const breakoutGateAndCircuits = () => {
 		'Integrated Circuits, CPU Chips, and how much does it cost to buy 100,000,000 (100 million) gates' ])
 }
 
-/* Move to next sprint. 
-
-const breakoutComputingComponentsName = 'Computing Components'
-const breakoutComputingComponents = () => { 
-	return breakoutStandard( 
-		`Breakout: ${breakoutComputingComponentsName}`, 
-		`In this breakout session on our ${breakoutComputingComponentsName} reading and lecture your team will discuss:`, [
-		'Computing Components',
-		'Stored Program plus Von Neumann Architecture',
-		'Ram and Rom plus Secondary Storage',
-		'Embedded Systems',
-		'Parallel Architectures plus Classes of Parallel Hardware' ])
-}
-*/
 const ics_3_5of6_PAaA = {
 	'prework': [
 		'Complete through activity 14 prior to next class', '',
@@ -172,7 +158,7 @@ const ics_3_5of6_PAaA = {
 		'Be prepared for Lab and Programming Together as time allows',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
-		'No class next Friday (October 6)',
+		'Wednesday, March 6 will be our midterm Exam your in person attendance is required',
 		`All sprint ${sprint} assignments due Sunday` ],
 	'agenda':[
 		'Lab and Programming Together',
