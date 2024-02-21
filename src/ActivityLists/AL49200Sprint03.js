@@ -54,3 +54,5 @@ export const list49200Sprint03 = (sprint) => {
 // Certified for FA23 (09/23/2023)
 // Certified for SP24 (10/10/2024)
 
+// Todo: Review Lab 3 Question 7 to make sure that the link to the team MVP is provided.
+// Todo: Review Lab 3 Question 3 to make it more challenging and verifiable to justify the 10 points. 

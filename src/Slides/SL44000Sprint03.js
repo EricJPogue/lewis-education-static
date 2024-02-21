@@ -127,30 +127,20 @@ const se_3_5of6_PAaA = {
 		'Complete through activity 11 prior to next class', '',
 		'Be prepared for Lab and Programming Together as time allows',
 		`Be prepared for Quiz ${sprint}` ],
-	'announcements':[ 
-		'No class next Friday (October 6)',
+	'announcements':[
+		'Wednesday, March 6 will be our midterm Exam your in person attendance is required',
 		`All sprint ${sprint} assignments due Sunday` ],
 	'agenda':[
+		'QuizMaster Demonstration',
 		'Lab and Programming Together',
 		'Prework for Next Class',
 		`Quiz ${sprint}` ]
 }
-export const se_3_5of6 = () => { return xyz_n_5of6(sprint, se_3_5of6_PAaA, se_4_1of6_prework_list, activityList) }
+export const se_3_5of6 = () => { return xyz_n_5of6(sprint, se_3_5of6_PAaA, se_3_6of6_PAaA.prework, activityList) }
 
 // Session 6 of 6: Friday
-// BugBug: This is not correct.
-	// No “web_3_6of6...” prework or agenda structures as there is no class Friday due to Fall Break.
-	export const se_3_6of6 = () => {
-		const announcements =  () => { return basicSlideWithLogo( 'Announcements', [
-			'No class', 
-			`All sprint ${sprint} assignments are due Sunday!`]) 
-		}
-	
-		return [ announcements ]
-	}
-
 const se_3_6of6_PAaA = xyz_n_6of6_PAaA('Complete through activity activity 14 and actively working on 15', sprint)
-export const se_3_6of6X = () => { return  xyz_n_6of6(sprint, se_3_6of6_PAaA, se_4_1of6_prework_list, activityList) }
+export const se_3_6of6 = () => { return  xyz_n_6of6(sprint, se_3_6of6_PAaA, se_4_1of6_prework_list, activityList) }
 
 
 
