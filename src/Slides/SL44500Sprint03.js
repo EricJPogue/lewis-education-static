@@ -1,10 +1,14 @@
 import { list44500Sprint02 } from '../ActivityLists/AL44500Sprint02'
 import { list44500Sprint03 } from '../ActivityLists/AL44500Sprint03'
 
-import { xyz_n_1of6_lists, xyz_n_1of6, makeSlideDeck } from './SL00000Sprint00'
+import { xyz_n_1of6_lists, xyz_n_1of6, xyz_n_6of6_PAaA, xyz_n_6of6, makeSlideDeck } from './SL00000Sprint00'
 import { agendaSlide, basicSlideWithLogo, bulletListSlide, discussionBreakout, tPrework, tPreworkWithLogo } from './SLSprint00'
 import { basicSlide, submissionPercentage, sprintDemos, sprintDemosIntro, demoAssignment, orderedListSlide } from './SLSprint00' 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tReviewDemoSchedule, tLab } from './SL00000Sprint00'
+
+import { af_4_1of6_prework_list } from './SL44500Sprint04'
+
+
 // Constants
 const sprint = 3
 const activityList = () => { return list44500Sprint03(sprint) }
@@ -142,3 +146,10 @@ const af_3_5of6_PAaA = {
 			`Lab`,
 			'Prework for Next Class' ]
 } 
+
+// Session 5 of 6: Wednesday
+// No slide created for this session. 
+
+// Session 6 of 6: Friday
+const af_3_6of6_PAaA = xyz_n_6of6_PAaA('Complete through activity activity 11 and actively working on 12', sprint)
+export const af_3_6of6 = () => { return  xyz_n_6of6(sprint, af_3_6of6_PAaA, af_4_1of6_prework_list, activityList) }

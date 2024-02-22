@@ -52,7 +52,7 @@ export const _CPSC_20000 = {
 		'HyperText Markup Language (HTML), Tools of the Trade, and Files and File Systems',
 		'Cascading Style Sheets (CSS), The Big Picture, and Numbering Systems',
 		'JavaScript, Data Representation, and Gates & Circuits',
-		'More JavaScript, Circuits, and Computing Components',
+		'More JavaScript, Computing Components, and The World Wide Web',
 		'Python, Class Project Proposal, Sequences, Selections, and Loops, Networks, The Internet, and The World Wide Web',
 		'More Python, Update Class Project Proposal, Artificial Intelligence, and Machine Learning',
 		'Class Project, Cloud Computing, and Information Security',
@@ -165,8 +165,6 @@ export const _CPSC_24500 = {
 	]
 }
 
-
-
 export const _CPSC_36000 = {
 	name:'Applied Programming Languages',
 	id:'cpsc-36000',
@@ -254,12 +252,12 @@ export const _CPSC_44000 = {
 	modules: [
 		'Software Engineering Life Cycles, Software as a Service, Cloud Computing, HTML, and CSS',
 		'Agile, Scrum, Software-As-A-Service, Microsoft Azure, JavaScript, and Ruby on Rails',
-		'Live Scrum Teams, Application Requirements, GitHub, Static Websites, Node.js, and Azure', 
-		'Team Final Project Proposal, Testing, Support, and Application Programming Interfaces', 
-		'Team Final Project utilizing Scrum Events, Artifacts, and Roles plus Software Maintenance', 
-		'Team Final Project utilizing Scrum, Software Metrics, and Serverless Computing',
-		'Team Final Project, Application Frameworks, and React',
-		'Team Final Project, Design Patterns, and Security'
+		'Live Scrum Teams, Application Requirements, GitHub, Static Websites, and Node.js', 
+		'Class Project Proposal, Testing, Support, and Application Programming Interfaces', 
+		'Class Project utilizing Scrum Events, Artifacts, and Roles plus Software Maintenance', 
+		'Class Final Project utilizing Scrum, Software Metrics, and Serverless Computing',
+		'Class Project, Application Frameworks, and React',
+		'Class Final Project, Design Patterns, and Security'
 	]
 }
 

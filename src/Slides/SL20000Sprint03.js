@@ -169,7 +169,7 @@ const ics_3_5of6_PAaA = {
 export const ics_3_5of6 = () => { 
 	let slides = xyz_n_5of6(sprint, ics_3_5of6_PAaA, ics_3_6of6_PAaA.prework, activityList)
 	slides.splice(slides.length-3, 0, breakoutGateAndCircuits)
-	return slides 
+	return slides
 }
 
 // Session 6 of 6: Friday
