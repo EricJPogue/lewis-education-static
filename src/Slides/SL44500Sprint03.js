@@ -141,14 +141,14 @@ const af_3_5of6_PAaA = {
 		`Be prepared for Lab`, ],
 	'announcements':[ 
 		'Recall that sprint 4 will be our midterm and that your in class participation is required' ],
-		'agenda':[
-			'“What is React” Discussion',
-			`Lab`,
-			'Prework for Next Class' ]
+	'agenda':[
+		'“What is React” Discussion',
+		`Lab`,
+		'Prework for Next Class' ]
 } 
 
 // Session 5 of 6: Wednesday
-// No slide created for this session. 
+// No slides were created for this session. 
 
 // Session 6 of 6: Friday
 const af_3_6of6_PAaA = xyz_n_6of6_PAaA('Complete through activity activity 11 and actively working on 12', sprint)
