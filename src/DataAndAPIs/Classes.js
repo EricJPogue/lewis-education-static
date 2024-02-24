@@ -302,7 +302,7 @@ export const _CPSC_44500 = {
 		'Programming Languages, Functional Programming, Frameworks, and Getting Started with Go',
 		'Go Interfaces, Packages, and Frameworks plus OOP Patterns and Principles',
 		'Web Development with HTML, CSS, JavaScript, and React',
-		'Inheritance and Polymorphism, Classes (including Constructors and Destructors), Exceptions, Templates, Overloading, and Testing',
+		'Authentication, Authorization, Azure, APIs, and Auth0',
 		'Concurrency and Next Steps',
 		'Web Development with HTML, CSS, JavaScript, React plus Final Project Proposal',		'Containers, More React, Final Project – Version 0',
 		'Application Architecture, Even More React, Final Project – Version 1'

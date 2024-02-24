@@ -63,6 +63,7 @@ import { introductionToReact } from './IntroductionToReact'
 import { finalProject } from './FinalProject'
 import { goWebServer } from './GoWebServer'
 import { reactTicTacToe } from './ReactTicTacToe'
+import { reactTicTacToeLeaderBoard } from './ReactTicTacToeLeaderBoard'
 
 export const BASE_ACTIVITY_ROUTE = '/activity/'
 export const makeInternalURL = (activityRoute) => {
@@ -138,6 +139,7 @@ export const routeActivity = (activityRoute) => {
 		case introductionToReact.route: return introductionToReact.render()
 		case goWebServer.route: return goWebServer.render()
 		case reactTicTacToe.route: return reactTicTacToe.render()
+		case reactTicTacToeLeaderBoard.route: return reactTicTacToeLeaderBoard.render() 
 
 		default: return null
 	}

@@ -72,6 +72,15 @@ export class SprintClassActivities extends Component {
 		'SecondFriday':    'Lab'
 	}
 
+	MWFScheduleSprint4 = {
+		'FirstMonday':     'Sprint Planning',
+		'FirstWednesday':  'Discussion Board & Lab',
+		'FirstFriday':     'Demos & Retrospectives',
+		'SecondMonday':    'Topic Discussion',
+		'SecondWednesday': 'Midterm Exam (in-person attendance required)',
+		'SecondFriday':    'Lab'
+	}
+
 	MWFScheduleSprint6 = {
 		'FirstMonday':     'Sprint Planning',
 		'FirstWednesday':  'Discussion Board & Lab',
@@ -130,6 +139,7 @@ export class SprintClassActivities extends Component {
 		switch(this.currentSprintBaseOne()) {
 			case 1: schedule = this.MWFScheduleSprint1; break;
 			case 3: schedule = this.MWFScheduleSprint3; break;
+			case 4: schedule = this.MWFScheduleSprint4; break;
 			case 6: schedule = this.MWFScheduleSprint6; break;
 			case 7: schedule = this.MWFScheduleSprint7; break;
 			case 8: schedule = this.MWFScheduleSprint8; break;
