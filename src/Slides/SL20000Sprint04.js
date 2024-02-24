@@ -38,6 +38,7 @@ const breakoutComputingComponents = () => {
 
 
 // Session 1 of 6: Monday
+// Add https://witty-sand-028b04910.2.azurestaticapps.net/index.html
 export const ics_4_1of6_prework_list = xyz_n_1of6_prework_list(sprint)  
 const ics_4_1of6_agenda_list = xyz_n_1of6_agenda_list(sprint)
 export const ics_4_1of6 = () => { 

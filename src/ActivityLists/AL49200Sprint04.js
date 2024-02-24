@@ -6,6 +6,7 @@ import { activitiesListIntro, closing, learningObjectivesIntro, standardActiviti
 import { classProductSprint4Link } from '../Activities/ClassProduct'
 
 import { lectureRecordingPlaylist } from './AL49200Sprint02'
+import { capacityCommittedEffortDeliveredLink } from '../Activities/CapacityCommittedEffortDelivered'
 
 export const al49200Sprint04 = () => {
 	const sprint = 4
@@ -49,14 +50,18 @@ export const list49200Sprint04 = (sprint) => {
 		<ol>
 			{standardActivities(sprint, classProductSprint4Link())}
 			<li>Review our sprint {sprint} planning {lectureRecordingPlaylist()}</li>
+			<li>Review {capacityCommittedEffortDeliveredLink()}</li>
 			<li>Within {oreillyPlaylistSC()} review and fully implement “Essential Scrum” chapters 19 through 22</li>
+
 			{initialPost(sprint)}
 
 			<li>Within {oreillyPlaylistSC()} rigorously read “Essential Scrum” chapters 14 through 18{estimated('2 hour')}</li>
-			{standardActivitiesClosing(sprint, classProductSprint4Link(),'12 hours per team member')}
+			<li>Complete and have the Scrum Master and Product Owner sign off on {capacityCommittedEffortDeliveredLink()}</li>
+			{standardActivitiesClosing(sprint, classProductSprint4Link(),'12 hours per team member')} 
 		</ol>
 	</div> )
 }
 
-// Node.js in sprint 3?
-// Todo: Add new team adoption activities and assignments. 
+// Certified for SP24 on February 24, 2024
+// Todo: in FA24 move “free writing assignment” from Spring Break to a different sprint that has a holiday.
+
