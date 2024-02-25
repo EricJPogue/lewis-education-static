@@ -42,20 +42,27 @@ const breakoutComputingComponents = () => {
 export const ics_4_1of6_prework_list = xyz_n_1of6_prework_list(sprint)  
 const ics_4_1of6_agenda_list = xyz_n_1of6_agenda_list(sprint)
 export const ics_4_1of6 = () => { 
-	const changes = () => {
-		return bulletListSlide('Class Projects & Class Changes', 
-			'Class Projects & Class Changes:', [
-			'When I first came to Lewis, I thought class projects were a copout', 
-			'... I was 100% wrong, wrong, wrong', 
-			'I have worked to continuously improved my classes and to give more time to class projects',
-			'This semester you will have 30 hours to on a class project of **your** choice',
-			'Sprint 7 & sprint 8: 9 + 9 + 9 + 9 -> 12 + 12 + 12',
-			'My suggestion? Do something that will make you proud... and that you could show to a perspective employer',
-			'What will you do?' ])
-	}
-	let slides = xyz_n_1of6(sprint, ics_4_1of6_prework_list, activityListPrevious, ics_4_1of6_agenda_list, ics_4_2of6_lists.prework, activityList)
-	slides.splice(4, 0, changes)
+	let slides = xyz_n_1of6(sprint, ics_4_1of6_prework_list, activityListPrevious, ics_4_1of6_agenda_list, ics_4_2of6_lists.prework, activityList, substituteSprintPlanning)
+	slides.splice(4, 0, classProjects)
 	return slides
+}
+export const classProjects = () => {
+	return bulletListSlide('Class Projects & Sprints 4 through 8', 
+		'Class Projects & Sprints 4 through 8:', [
+		'When I first came to Lewis, I thought class projects were a copout', 
+		'... I was 100% wrong, wrong, wrong', 
+		'I have worked to continuously improved my classes and to give more time to class projects',
+		'This semester you will have 30 hours to on a class project of **your** choice',
+		'Sprint 7 & sprint 8 Expectation: 18 hours + 18 hours -> 27 hours + 9 hours',
+		'My suggestion? Do something that will make you proud... and that you could show to a perspective employer',
+		'What will you do?' ])
+}
+export const substituteSprintPlanning = () => {
+	return orderedListSlide('Planning', `Sprint ${sprint} Expectations:`, [
+		'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
+		'Similar in that we will complete our scrum team Discussion Board breakout session on Wednesday',
+		`And will have sprint ${sprint-1} Demos and Retrospective on Friday`,
+		'Different in that we have Spring Break the week of March 11 causing the sprint to expand to 3 weeks duration ' ])
 }
 
 // Session 2 of 6: Wednesday

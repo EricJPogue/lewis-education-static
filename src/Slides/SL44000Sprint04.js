@@ -4,6 +4,8 @@ import { completeDeck, checklistAnnouncementsPreworkAndAgenda } from './SL00000S
 import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule, backlogGrooming } from './SLSprint00'
 import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard, tQuiz } from './SLSprint00'
 
+import { classProjects, substituteSprintPlanning } from './SL20000Sprint04'
+
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 
@@ -19,22 +21,10 @@ const activityList = () => { return list44000Sprint04(sprint) }
 export const se_4_1of6_prework_list = xyz_n_1of6_prework_list(sprint)  
 const se_4_1of6_agenda_list = xyz_n_1of6_agenda_list(sprint)
 export const se_4_1of6 = () => { 
-	const changes = () => {
-		return bulletListSlide('Class Projects & Class Changes', 
-			'Class Projects & Class Changes:', [
-			'When I first came to Lewis, I thought class projects were a copout', 
-			'... I was 100% wrong, wrong, wrong', 
-			'I have worked to continuously improved my classes and to give more time to class projects',
-			'This semester you will have 30 hours to on a class project of **your** choice',
-			'Sprint 7 & sprint 8: 9 + 9 + 9 + 9 -> 12 + 12 + 12',
-			'My suggestion? Do something that will make you proud... and that you could show to a perspective employer',
-			'What will you do?' ])
-	}
-	let slides = xyz_n_1of6(sprint, se_4_1of6_prework_list, activityListPrevious, se_4_1of6_agenda_list, se_4_2of6_lists.prework, activityList)
-	slides.splice(4, 0, changes)
+	let slides = xyz_n_1of6(sprint, se_4_1of6_prework_list, activityListPrevious, se_4_1of6_agenda_list, se_4_2of6_lists.prework, activityList, substituteSprintPlanning)
+	slides.splice(4, 0, classProjects)
 	return slides
 }
-
 
 // Session 2 of 6: Wednesday
 const se_4_2of6_lists = {
