@@ -167,7 +167,7 @@ export const ssc_n_1of1 = (sprint, preworkList, activityListPrevious, agendaList
 
 	const sprintPlanning = () => {
 		if (substituteSprintPlanning != null) {
-			return substituteSprintPlanning
+			return substituteSprintPlanning()
 		} else {
 			return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
 				'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
