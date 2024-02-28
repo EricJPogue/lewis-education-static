@@ -29,8 +29,8 @@ export const se_4_1of6 = () => {
 // Session 2 of 6: Wednesday
 const se_4_2of6_lists = {
 	'announcements':[ 
-		'Your team’s Sprint 5 Planning will be Monday, March 13th',
-		'**Each of the remaining sprint planning sessions require in-person attendance' ],
+		'Your team’s Sprint 5 Planning will be Monday, March 18th',
+		'**Each of the remaining sprint planning sessions (including March 18th) require in-person attendance' ],
 	'prework':[
 		'Complete through activity 5 prior to next class', '',
 		`Be prepared Discussion Board ${sprint}`,
