@@ -72,8 +72,7 @@ const ics_4_2of6_lists = {
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Lab & Programming Together' ],
 	'announcements':[ 
-		'Upcoming registration dates are available in the Spring and Summer 2023 Course Schedule',
-		'Are you interested (or at least aware of) the Software Engineering concentration and 4+1 programs?' ],
+		'Fall registration is coming... do you know what you want to take?' ],
 	'agenda':[
 		`Discussion Board ${sprint} as a scrum team`,
 		'Review Demo Schedule for Next Class',
