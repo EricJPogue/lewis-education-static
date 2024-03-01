@@ -91,13 +91,13 @@ export const se_2_3of6 = () => {
 		return basicSlide(`Sprint ${sprint-1} Metrics`, [
 			`Let’s take a minute and review our Sprint ${sprint-1} Submission Percentage class metric.` ])
 	}
-	const metricsSubmissionPercentage = () => {
+	const metricsSubmissionPercentage = () =>{
 		return submissionPercentage([
 			{ name: 'Discussion', due:26, submitted:26 },
 			{ name: 'Quiz', due:26, submitted:26 },
 			{ name: 'Lab', due:26, submitted:26},
 			{ name: 'Reflection', due: 26, submitted: 26 }])
-	}
+	} 
 	// Todo: Consider adding the pretty slides back into slide deck for Demos and Retrospectives. 
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',

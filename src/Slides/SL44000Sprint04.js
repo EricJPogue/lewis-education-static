@@ -74,17 +74,19 @@ const se_4_3of6_lists = {
 export const se_4_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:14, submitted:13 },
-			{ name: 'Quiz', due:14, submitted:14 },
-			{ name: 'Lab', due:14, submitted:14 },
-			{ name: 'Reflection', due: 14, submitted: 14 }])
-	}
+			{ name: 'Discussion', due:30, submitted:27 },
+			{ name: 'Quiz', due:30, submitted:30 },
+			{ name: 'Lab', due:30, submitted:30 },
+			{ name: 'Reflection', due:30, submitted: 30 }])
+	} 
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
 			'Excellent submission percentage... I still owe you donuts from before?',
-			'My grading is a of a work in process this semester' ])
+			'Everything is graded and posted',
+			'Sprint 3 was quite challenging',
+			'Several requests for more time to work together in class' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_4_4of6_lists.prework, sprint, activityList) }
