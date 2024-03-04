@@ -10,6 +10,7 @@ import { tPrework, bulletListSlide, discussionBreakout } from './SLSprint00'
 
 import { submissionPercentage, sprintDemos, sprintDemosIntro, demoAssignment, orderedListSlide } from './SLSprint00' 
 import { tReviewDemoSchedule, tLab } from './SL00000Sprint00'
+import { breakoutStandard } from './SLSprint00'
 
 
 import { list44500Sprint03 } from '../ActivityLists/AL44500Sprint03'
@@ -104,6 +105,33 @@ export const af_4_3of6 = () => {
 
 // Session 4 of 6: Monday
 const af_4_4of6_PAaA = {
+	'prework': [
+		'Complete through activity 9 prior to next class', '',
+		`Be prepared for Lab`, ],
+	'announcements':[ 
+		'Recall that sprint 4 will be our midterm and that your in class participation is required' ],
+	'agenda':[
+		`Lab`,
+		'Prework for Next Class' ]
+}
+export const af_4_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_4_4of6_PAaA, sprint, activityList)
+	const breakout = () => { 
+		return breakoutStandard( 
+			'Breakout: Auth0 and Authentication Services', 
+			'In this breakout session your team will discuss Auth0 and Authentication Services:', [
+			'Historical positioning of Authentication, Authorization, and Application Development', 
+			'Puppy [[This was Amelia helping make slides this morning]]', 
+			'Auth0 vs. Passport'
+		])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', af_4_5of6_PAaA.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ])
+}
+
+// Session 5 of 6: Wednesday
+const af_4_5of6_PAaA = {
 	'prework': [
 		'Complete through activity 9 prior to next class', '',
 		`Be prepared for Lab`, ],
