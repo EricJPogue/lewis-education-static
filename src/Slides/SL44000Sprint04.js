@@ -29,6 +29,7 @@ export const se_4_1of6 = () => {
 // Session 2 of 6: Wednesday
 const se_4_2of6_lists = {
 	'announcements':[ 
+		'Wednesday, March 6 will be our midterm Exam your in person attendance is required',
 		'Your team’s Sprint 5 Planning will be Monday, March 18th',
 		'**Each of the remaining sprint planning sessions (including March 18th) require in-person attendance' ],
 	'prework':[
@@ -101,8 +102,9 @@ const se_4_4of6_lists = {
 		'Complete through activity 8 and working on activity 9', '',
 		'Be prepared for a breakout session on “Software Testing: Test-Driven Development”' ],
 	'announcements':[ 
-		'Your team’s sprint 5 planning is required, in-person, and scheduled for next Monday (October 23rd)',
-		'ECaMS Billboard will be at high noon also on Monday, October 23rd'],
+		'**Next class (Wednesday, March 6) is our midterm Exam your in person attendance is required',
+		'Your team’s Sprint 5 Planning will be Monday, March 18th',
+		'Each of the remaining sprint planning sessions (including March 18th) require in-person attendance' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'“Software Testing: Test-Driven Development” breakout',
@@ -130,8 +132,7 @@ export const se_4_4of6 = () => {
 // Session 5 of 6: Wednesday
 const se_4_5of6_lists = {
 	'prework':[
-		'Complete through activity 10 and be working on activity 11', '',
-		'Be prepared for Quiz 4' ],
+		'**Be prepared to take you midterm exam in person on Wednesday' ],
 	'announcements':[ 
 		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, March 13th', '',
 		`All sprint ${sprint} assignments due Sunday, March 12th!` ],
