@@ -161,10 +161,7 @@ const se_4_6of6_lists = {
 		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, March 13th', '',
 		`All sprint ${sprint} assignments due Sunday, March 12th!` ],
 	'agenda':[
-		'Sprint Progress Polling',
-		'Backlog Grooming in Preparation for Sprint 5 Planning',
-		'Prework for Next Class',
-		'Lab and Programming Together' ]
+		'Midterm Exam' ]
 }
 export const se_4_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_4_6of6_lists, sprint, activityList)

@@ -20,20 +20,7 @@ const activityList = () => { return list20000Sprint04(sprint) }
 // Todo: Create xyz_n_1of6 version 2 that includes optional null (or default_announcements) announcements and makes prework_list 
 // and agenda_list optionally null (or default_prework_list and default_agenda_list)
 
-/* Moved from last sprint. 
 
-const breakoutComputingComponentsName = 'Computing Components'
-const breakoutComputingComponents = () => { 
-	return breakoutStandard( 
-		`Breakout: ${breakoutComputingComponentsName}`, 
-		`In this breakout session on our ${breakoutComputingComponentsName} reading and lecture your team will discuss:`, [
-		'Computing Components',
-		'Stored Program plus Von Neumann Architecture',
-		'Ram and Rom plus Secondary Storage',
-		'Embedded Systems',
-		'Parallel Architectures plus Classes of Parallel Hardware' ])
-}
-*/
 
 
 // Session 1 of 6: Monday
@@ -147,61 +134,53 @@ export const ics_4_3of6 = () => {
 }
 
 // Session 4 of 6: Monday
+const breakoutComputingComponentsName = 'Computing Components'
+const breakoutComputingComponents = () => { 
+	return breakoutStandard( 
+		`Breakout: ${breakoutComputingComponentsName}`, 
+		`In this breakout session on our ${breakoutComputingComponentsName} reading and lecture your team will discuss:`, [
+		'Computing Components',
+		'Stored Program plus Von Neumann Architecture',
+		'Ram and Rom plus Secondary Storage',
+		'Embedded Systems',
+		'Parallel Architectures plus Classes of Parallel Hardware' ])
+}
+
 const ics_4_4of6_PAaA = {
-	'announcements':[ 
-		'Any announcements?' ],
 	'prework':[
 		'Complete through activity 9 prior to next class', '',
-		'Focus on “Sequences, Selections, and Loops” and “JavaScript Programming”',
-		'Be prepared for “Sequences, Selections, and Loops with JavaScript Breakout”' ],
+		`Be prepared for ${breakoutComputingComponentsName} Breakout` ],
+	'announcements':[ 
+		'**Next class (Wednesday, March 6) is our midterm Exam your in person attendance is required' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Sequences, Selections, and Loops with JavaScript Breakout',
+		`${breakoutComputingComponentsName} Breakout`,
 		'Prework for Next Class',
 		'Lab & Programming Together' ]
 }
 export const ics_4_4of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_4of6_PAaA, sprint, activityList)
 	const poll = () => { return tPrework('Sprint Progress Polling', ics_4_4of6_PAaA.prework, sprint, activityList) }
-	const breakout = () => { 
-		return breakoutStandard( 
-			'Breakout: Sequences, Selections, and Loops with Python', 
-			'In this breakout session we will demonstrate our mastery of Sequences, Selections, and Loops using our knowledge of Python:', [
-			'Sequence and selection “Numbering Systems with Python”', 
-			'Loops in “Numbering Systems with Python”', 
-			'Sequences in “Matchmaker Lite - Part 1 and Part 2”',
-			'Selections in “Matchmaker Lite - Part 1 and Part 2”',
-			'Repetition in “Matchmaker Lite - Part 1 and Part 2”... what is the relationship between Loops and Repetition?'
-		])
-	}
 	const programmingTogether = () => {
 		return bulletListSlide('Lab & Programming Together', 
 			'How can we best make progress on Matchmaker given that we have already:', [
-			'Started MatchMakerLite tutorial by implementing a README.md and LICENSE file in GitHub', 
-			'Added a MatchMakerLite.py file', 
-			'Pushed the updated files to GitHub',
-			'Zipped the files as if we were going to submit them for Lab 4',
-			'Started work on MatchMaker' ])
+			'Matchmaker for the Web',
+			'Do you know where to find the source code if you need it?' ])
 	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_5of6_PAaA.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ poll, breakout, preworkNext, programmingTogether ])
+	return completeDeck(slideDeck, [ poll, breakoutComputingComponents, preworkNext, programmingTogether ])
 }
 
 // Session 5 of 6: Wednesday
 // Todo: Consider adding quiz expectations to slide deck. 
 const ics_4_5of6_PAaA = {
 	'prework':[
-		'Complete through activity 9 and working on activity 13 prior to next class', '',
-		'Be prepared for Lab & Programming Together',
-		'Be prepared for Quiz 4' ],
+		'**Be prepared to take you midterm exam in person on Wednesday' ],
 	'announcements':[ 
-		'Registration is coming...' ],
+		`All sprint ${sprint} assignments due Sunday, March 12th!` ],
 	'agenda':[
-		'Sprint Progress Polling',
-		'Lab & Programming Together',
-		'Prework for Next Class',
-		'Quiz 4' ]
+		'Midterm Exam' ],
 }
 export const ics_4_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_5of6_PAaA, sprint, activityList)
