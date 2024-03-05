@@ -169,6 +169,22 @@ export const quiz = (sprint) => {
 	</div> )
 }
 
+export const tExamExpectations = () => {
+	return orderedListSlide('Exam Expectations', 
+		'Exam Expectations include:', [
+		'You may use any naturally available documentation including books, notes, and web browser',
+		'You may not use exam or quiz specific specific content like the answers to previous quizzes or exam attempts',
+		'The exam is an individual assignment so asking others would be inappropriate',
+		'Your final graded attempt must be submitted before you leave the room',
+		'Your final attempt with be the grade your receive and you will not have the ability to take the exam later' ])
+}
+export const tExam = () => {
+	return ( <div>		
+		{renderHeader('Exam')}
+		<p style={styleBasic} >Your final graded Exam needs to be submitted before you leave class today.</p>
+	</div> )
+}
+
 export const end = () => {
 	return basicSlideWithLogo('End of Session', [
 		'Thank you for your time and participation.'])

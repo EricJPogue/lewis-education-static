@@ -1,7 +1,7 @@
 import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6, completeDeck, checklistAnnouncementsPreworkAndAgenda, tLab } from './SL00000Sprint00'
 
-import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule } from './SLSprint00'
-import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, orderedListSlide, breakoutStandard, tQuiz } from './SLSprint00'
+import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule, tExamExpectations, tExam } from './SLSprint00'
+import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, orderedListSlide, breakoutStandard } from './SLSprint00'
 
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 import { list20000Sprint04 } from '../ActivityLists/AL20000Sprint04'
@@ -172,23 +172,20 @@ export const ics_4_4of6 = () => {
 	return completeDeck(slideDeck, [ poll, breakoutComputingComponents, preworkNext, programmingTogether ])
 }
 
-// Session 5 of 6: Wednesday
-// Todo: Consider adding quiz expectations to slide deck. 
+// Session 5 of 6: Wednesday (midterm Exam)
 const ics_4_5of6_PAaA = {
 	'prework':[
 		'**Be prepared to take you midterm exam in person on Wednesday' ],
 	'announcements':[ 
-		`All sprint ${sprint} assignments due Sunday, March 12th!` ],
+		`All sprint ${sprint} assignments due Sunday, March 17th!` ],
 	'agenda':[
 		'Midterm Exam' ],
 }
 export const ics_4_5of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_5of6_PAaA, sprint, activityList)
-	const poll = () => { return tPrework('Sprint Progress Polling', ics_4_5of6_PAaA.prework, sprint, activityList) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_4_6of6_PAaA.prework, sprint, activityList) }
-	const quiz = () => { return tQuiz(sprint) }
 
-	return completeDeck(slideDeck, [ poll, tLab, preworkNext, quiz ])
+	return completeDeck(slideDeck, [ preworkNext, tExamExpectations, tExam ])
 }
 
 // Session 6 of 6: Friday
