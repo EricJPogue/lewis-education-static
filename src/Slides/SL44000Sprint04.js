@@ -1,7 +1,7 @@
 import { xyz_n_1of6_agenda_list, xyz_n_1of6_prework_list, xyz_n_1of6, tLab } from './SL00000Sprint00'
 import { completeDeck, checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 
-import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule, backlogGrooming, tExam, tExamExpectations } from './SLSprint00'
+import { sprintDemosIntro, sprintDemos, demoAssignment, reviewDemoSchedule, tExam, tExamExpectations } from './SLSprint00'
 import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, retrospectiveBreakout, orderedListSlide, retrospectiveIntroduction, breakoutStandard } from './SLSprint00'
 
 import { classProjects, substituteSprintPlanning } from './SL20000Sprint04'
@@ -9,7 +9,9 @@ import { classProjects, substituteSprintPlanning } from './SL20000Sprint04'
 import { list44000Sprint03 } from '../ActivityLists/AL44000Sprint03'
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 
-import { se_5_1of6_PAaA } from './SL44000Sprint05'
+import { basicSlide } from './SLSprint00'
+
+//import { se_5_1of6_PAaA } from './SL44000Sprint05'
 
 // Sprint 4 Software Engineering (SE) values.
 const sprint = 4
@@ -148,21 +150,37 @@ export const se_4_5of6 = () => {
 
 // Session 6 of 6: Friday
 const se_4_6of6_PAaA = {
-	'prework':[
-		`All sprint ${sprint} assignments due Sunday, March 12th!`, '',
-		'Be prepared for Backlog Grooming in Preparation for Sprint 5 Planning',
-		'Be prepared for Lab & Programming Together' ],
 	'announcements':[ 
-		'Reminder that your team’s sprint 5 planning is required, in-person, and scheduled for Monday, March 13th', '',
-		`All sprint ${sprint} assignments due Sunday, March 12th!` ],
+		`All sprint ${sprint} assignments due Sunday, March 17!` ],
+	'prework':[
+		'Be complete with activity 12 working on activity 13 prior to next class', '',
+		'Be prepared for Lab & Programming together' ],
 	'agenda':[
-		'Midterm Exam' ]
+		'Final Activity List & Assignment Review',
+		'Prework for Next Class',
+		'Lab', 
+		'Backlog Grooming' ]
 }
-export const se_4_6of6 = () => { 
+export const se_4_6of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_4_6of6_PAaA, sprint, activityList)
-	const breakout = () => { return backlogGrooming(sprint+1) }
+	const finalReviewActivityListAndAssignments = () => { return basicSlide(
+		`Final sprint ${sprint} activity list and assignment Q&A`, [`Any sprint ${sprint} activity list or assignment questions?`]) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_1of6_PAaA.prework, sprint, activityList) }
+	const breakout = () => {
+		return basicSlide('Backlog Grooming', [
+			`Start backlog grooming in preparation for sprint ${sprint+1} planning.`, 
+			`Who is your scrum master, product owner, and mentor for sprint ${sprint+1}` ])
+	}
 
-	return completeDeck(slideDeck, [ breakout, preworkNext, tLab ])
+	return completeDeck(slideDeck, [ finalReviewActivityListAndAssignments,preworkNext, tLab, breakout ])
 }
 
+const se_5_1of6_PAaA = {
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday, March 17!`, '',
+		`'**Sprint 5 planning is March 18th your  require in-person attendance'Be prepared for sprint 5 planning` ],
+	'announcements':[ 
+		`` ],
+	'agenda':[
+		'' ]
+}
