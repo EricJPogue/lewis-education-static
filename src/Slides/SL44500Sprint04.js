@@ -13,6 +13,7 @@ import { tReviewDemoSchedule, tLab } from './SL00000Sprint00'
 import { breakoutStandard } from './SLSprint00'
 
 import { tExamExpectations, tExam } from './SLSprint00'
+import { basicSlide } from './SLSprint00'
 
 
 import { list44500Sprint03 } from '../ActivityLists/AL44500Sprint03'
@@ -151,12 +152,30 @@ export const af_4_5of6 = () => {
 // Session 6 of 6: Friday
 const af_4_6of6_PAaA = {
 	'announcements':[ 
-		`All sprint ${sprint} assignments due Sunday!` ],
+		`All sprint ${sprint} assignments due Sunday, March 17!` ],
 	'prework':[
-		'Be complete with activity 10 working on activity 11 prior to next class', '',
+		'Be complete with activity 8 working on activity 9 prior to next class', '',
 		'Be prepared for Lab & Programming together' ],
 	'agenda':[
-		'Sprint Progress Polling',
+		'Final Activity List & Assignment Review',
 		'Prework for Next Class',
 		'Lab and Programming Together' ]
+}
+export const af_4_6of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_4_6of6_PAaA, sprint, activityList)
+	const finalReviewActivityListAndAssignments = () => { return basicSlide(
+		`Final sprint ${sprint} activity list and assignment Q&A`, [`Any sprint ${sprint} activity list or assignment questions?`]) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', af_5_1of6_PAaA.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ finalReviewActivityListAndAssignments,preworkNext, tLab ])
+}
+
+const af_5_1of6_PAaA = {
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday, March 17!`, '',
+		`Be prepared for sprint 5 planning` ],
+	'announcements':[ 
+		`` ],
+	'agenda':[
+		'' ]
 }

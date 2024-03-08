@@ -6,8 +6,6 @@ import { tPrework, bulletListSlide, discussionBreakout, submissionPercentage, or
 import { list20000Sprint03 } from '../ActivityLists/AL20000Sprint03'
 import { list20000Sprint04 } from '../ActivityLists/AL20000Sprint04'
 
-import { ics_5_1of6_lists } from './SL20000Sprint05'
-
 import { tReviewDemoSchedule } from './SL00000Sprint00'
 import { basicSlide } from './SLSprint00'
 
@@ -191,22 +189,30 @@ export const ics_4_5of6 = () => {
 // Session 6 of 6: Friday
 const ics_4_6of6_PAaA = {
 	'announcements':[ 
-		`All sprint ${sprint} assignments due Sunday!` ],
+		`All sprint ${sprint} assignments due Sunday, March 17!` ],
 	'prework':[
 		'Be complete with activity 10 working on activity 11 prior to next class', '',
 		'Be prepared for Lab & Programming together' ],
 	'agenda':[
-		'Sprint Progress Polling',
+		'Final Activity List & Assignment Review',
 		'Prework for Next Class',
 		'Lab and Programming Together' ]
 }
 export const ics_4_6of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_4_6of6_PAaA, sprint, activityList)
-	const poll = () => { return tPrework('Sprint Progress Polling', ics_4_5of6_PAaA.prework, sprint, activityList) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_1of6_lists.prework, sprint, activityList) }
+	const finalReviewActivityListAndAssignments = () => { return basicSlide(
+		`Final sprint ${sprint} activity list and assignment Q&A`, [`Any sprint ${sprint} activity list or assignment questions?`]) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_1of6_PAaA.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ poll, preworkNext, tLab ])
+	return completeDeck(slideDeck, [ finalReviewActivityListAndAssignments,preworkNext, tLab ])
 }
 
-
-
+const ics_5_1of6_PAaA = {
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday, March 17!`, '',
+		`Be prepared for sprint 5 planning` ],
+	'announcements':[ 
+		`` ],
+	'agenda':[
+		'' ]
+}
