@@ -285,18 +285,18 @@ const classProduct = (sprint, effort ) => {
 	return ( <div>
 		<p><em>Summary:</em> Stay focused on delivering and enhancing the most valuable stories.</p>
 
-		<p>In sprint {sprint} you and your team will continue to focus on implementing the most valuable stories. <em>Value should 
+		<p>In sprint {sprint} you and your team will focus on implementing the most valuable stories. <em>Value should 
 		always be viewed from a customer perspective</em> by constantly asking the question, ”What 
 		story would be most likely to entice a person to use this product?.” <em>In sprint {sprint} each team member will commit to 
 		and deliver (make "Done) at least {effort} story points worth of stories.</em></p>
 
-		<p>As your team completes each requirement, be sure to complete an appropriate <em>artifact (in PDF format)</em> for each 
-		activity.</p>
+		<p>Review {scrum()} as needed to make sure that you understand the identified Roles, Events, and Artifacts. As your team 
+		completes each requirement, be sure to complete the appropriate <em>artifact (in PDF format)</em> for each event.</p>
 
 		<p>Prerequisites: {classProductSprint4Link()} </p>
 
 		<em>Requirement 1</em>
-		<p>Review {scrum()} and complete your team’s Sprint {scrum()} {sprint-1} Review and Retrospective while documenting the events 
+		<p>Complete the team’s Sprint {sprint-1} Review and Retrospective while while documenting the events 
 		in an artifact named “sprint-{sprint-1}-review-retrospective.pdf” that includes:</p>
 		<ol>
 			<li>The team’s immutable Sprint {sprint-1} Backlog</li>
@@ -306,7 +306,7 @@ const classProduct = (sprint, effort ) => {
 		</ol>
 
 		<em>Requirement 2</em>
-		<p>Review {scrum()} and complete your team’s Sprint {sprint-1} Planning while documenting the event in an artifact named 
+		<p>Complete your team’s Sprint {sprint-1} Planning while documenting the event in an artifact named 
 		“sprint-{sprint}-immutable-backlog.pdf” that includes:</p>
 		<ol>
 			<li>The names of the team’s Scrum Master and Product Owner for both sprint {sprint} and sprint {sprint+1} </li>
@@ -316,21 +316,21 @@ const classProduct = (sprint, effort ) => {
 		</ol>
 
 		<em>Requirement 3</em>
-		<p>Execute sprint {sprint}:</p>
+		<p>Execute sprint while updating the Sprint Backlog and team Metrics {sprint}:</p>
 		<ol>
-			<li>Deliver, test, demo, and mark as “Done” each story</li>
+			<li>Deliver each story including develop, test, demo, and mark as “Done” as the story is completed</li>
 			<li>Sprint {sprint} Backlog updates should occur promptly throughout the the sprint</li>
 			<li>Complete final Sprint {sprint} Backlog updates</li>
 			<li>Complete Sprint {sprint} Metrics including {capacityCommittedEffortDeliveredLink()}</li>
 		</ol>
 
 		<em>Requirement 4: :</em>
-		<p>Review {scrum()} and complete your team’s Product Backlog Brooming event while documenting the event in an Artifact
-		names “sprint-{sprint}-groomed-backlog.pdf” that includes</p>
+		<p>Complete Product Backlog Grooming while documenting the event in an artifact names 
+			“sprint-{sprint}-groomed-backlog.pdf” that includes</p>
 		<ol>
-			<li>A list of prioritized stories in valid story format including unique identifiers</li>
-			<li>Story Point Estimates for a sufficient number of “Ready” stories for Sprint {sprint+1} Planning</li>    
-			<li>Stories that are each deliverable in a single sprint</li>
+			<li>The updated Product Backlog containing valid, prioritized, and estimated stories that are not in the Sprint {sprint} Backlog</li>
+			<li>Story Point Estimates for a sufficient number of “Ready” stories for the upcoming Sprint {sprint+1} Planning</li>    
+			<li>Stories that can be assigned to one person and are each deliverable in a single sprint</li>
 			<li>Only a “small” percentage of spikes</li>
 		</ol>
 	</div>)
