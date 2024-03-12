@@ -51,3 +51,6 @@ export const list44500Sprint04 = (sprint) => {
 }
 
 // Certified for SP24 on February 24, 2024
+
+// Todo: Look to add back something to make the programming assignment more challenging. Maybe add back FaceDraw? The
+// entire sprint was a little too easy overall. 

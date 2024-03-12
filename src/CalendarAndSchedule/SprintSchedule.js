@@ -81,10 +81,19 @@ export class SprintClassActivities extends Component {
 		'SecondFriday':    'Lab'
 	}
 
-	MWFScheduleSprint6 = {
+	MWFScheduleSprint5 = {
 		'FirstMonday':     'Sprint Planning',
 		'FirstWednesday':  'Discussion Board & Lab',
 		'FirstFriday':     'Demos & Retrospectives',
+		'SecondMonday':    'Topic Discussion',
+		'SecondWednesday': 'Quiz & Lab',
+		'SecondFriday':    'Easter: No Classes'
+	}
+
+	MWFScheduleSprint6 = {
+		'FirstMonday':     'Easter: No Classes',
+		'FirstWednesday':  'Sprint Planning',
+		'FirstFriday':     'Discussion Board, Demos, and Retrospectives',
 		'SecondMonday':    'Topic Discussion',
 		'SecondWednesday': 'Quiz',
 		'SecondFriday':    'Lab'
@@ -92,13 +101,13 @@ export class SprintClassActivities extends Component {
 
 	MWFScheduleSprint7 = {
 		'FirstMonday':     'Sprint Planning',
-		'FirstWednesday':  'No class: Thanksgiving Holiday',
-		'FirstFriday':     'No class: Thanksgiving Holiday',
-		'SecondMonday':    'Discussion Board & Lab',
-		'SecondWednesday': 'Demos, Retrospective, and Topic Discussion',
-		'SecondFriday':    'Quiz 7',
-		'ThirdMonday':	   'Lab',
-		'ThirdWednesday':  'Quiz 8 (in-person attendance required)',
+		'FirstWednesday':  'Discussion Board & Lab',
+		'FirstFriday':     'Demos & Retrospectives',
+		'SecondMonday':    'Topic Discussion & Lab',
+		'SecondWednesday': 'Topic Discussion & Lab',
+		'SecondFriday':    'Lab',
+		'ThirdMonday':	   'Presentation & Lab',
+		'ThirdWednesday':  'Final Exam (in-person attendance required)',
 		'ThirdFriday':     'Presentations'
 	}
 
@@ -140,6 +149,7 @@ export class SprintClassActivities extends Component {
 			case 1: schedule = this.MWFScheduleSprint1; break;
 			case 3: schedule = this.MWFScheduleSprint3; break;
 			case 4: schedule = this.MWFScheduleSprint4; break;
+			case 5: schedule = this.MWFScheduleSprint5; break;
 			case 6: schedule = this.MWFScheduleSprint6; break;
 			case 7: schedule = this.MWFScheduleSprint7; break;
 			case 8: schedule = this.MWFScheduleSprint8; break;
