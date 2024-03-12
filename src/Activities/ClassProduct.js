@@ -287,49 +287,51 @@ const classProduct = (sprint, effort ) => {
 
 		<p>In sprint {sprint} you and your team will continue to focus on implementing the most valuable stories. <em>Value should 
 		always be viewed from a customer perspective</em> by constantly asking the question, ”What 
-		feature would be most likely to entice a person to use this product?” It is expected that each team member will contribute 
-		approximately {effort} hours to the activity.</p>
+		story would be most likely to entice a person to use this product?.” <em>In sprint {sprint} each team member will commit to 
+		and deliver (make "Done) at least {effort} story points worth of stories.</em></p>
 
-		<p>As your team completes each requirement, be sure to appropriately <em>document</em> each activity.</p>
+		<p>As your team completes each requirement, be sure to complete an appropriate <em>artifact (in PDF format)</em> for each 
+		activity.</p>
+
+		<p>Prerequisites: {classProductSprint4Link()} </p>
 
 		<em>Requirement 1</em>
-		<p>Bring closure to sprint {sprint-1} by completing Review/Demos and Retrospective:</p>
+		<p>Review {scrum()} and complete your team’s Sprint {scrum()} {sprint-1} Review and Retrospective while documenting the events 
+		in an artifact named “sprint-{sprint-1}-review-retrospective.pdf” that includes:</p>
 		<ol>
-			<li>Review {scrum()} and complete your team’s Sprint {sprint-1} Review</li>
-			<li>Make sure that each team member Demos the stories they completed</li>
-			<li>Note that each team member will also need to demo at least one time during the semester their instructor</li>
-			<li>Complete your team’s Sprint {sprint-1} Retrospective</li>
+			<li>The team’s immutable Sprint {sprint-1} Backlog</li>
+			<li>The final "Done" status for each story in the team’s Sprint {sprint-1} Backlog</li>
+			<li>Each story that was Demoed, who demoed it, the date/time it was demoed, and if it was the “best-of-the-best” demo</li>
+			<li>Each team members who participated in the Retrospective along with resulting continuous improvement prioritized list</li>
 		</ol>
 
 		<em>Requirement 2</em>
-		<p>Sprint Planning {sprint}:</p>
+		<p>Review {scrum()} and complete your team’s Sprint {sprint-1} Planning while documenting the event in an artifact named 
+		“sprint-{sprint}-immutable-backlog.pdf” that includes:</p>
 		<ol>
-			<li>**The theme for sprint 8 is to fully transition the product to the product’s ongoing delivery team</li>
-			<li>Finalize and fully groom your single integrated Product Backlog</li>
-			<li>Complete Sprint 8 Planning including the team’s immutable Sprint 8 Backlog... be very conservative</li>
-			<li>Complete Sprint 8 initial Metrics including individual story commitments</li>
+			<li>The names of the team’s Scrum Master and Product Owner for both sprint {sprint} and sprint {sprint+1} </li>
+			<li>The team’s immutable Sprint {sprint} Backlog of prioritized, estimated, and assigned stories</li>
+			<li>Each story must be in valid story format, include a unique story identifier, and identify if it is a spike</li>
+			<li>Totals stories committed, story points committed, stories/story points per team member, and percent spike story points</li>
 		</ol>
 
 		<em>Requirement 3</em>
 		<p>Execute sprint {sprint}:</p>
 		<ol>
-			<li>**Focus on completing the product’s transition to the ongoing delivery team</li>
-			<li>List the ongoing Scrum Master and Product Owner</li>
-			<li>Deliver, test, and demo each story</li>
-			<li>Promptly update Sprint 8 Backlog to reflect current story status including “done” throughout the sprint</li>
-			<li>Complete final Sprint 8 Backlog including final story status including “done”</li>
-			<li>Complete Sprint 8 Metrics including {capacityCommittedEffortDeliveredLink()}</li>
+			<li>Deliver, test, demo, and mark as “Done” each story</li>
+			<li>Sprint {sprint} Backlog updates should occur promptly throughout the the sprint</li>
+			<li>Complete final Sprint {sprint} Backlog updates</li>
+			<li>Complete Sprint {sprint} Metrics including {capacityCommittedEffortDeliveredLink()}</li>
 		</ol>
 
-		<h6>Requirement 4: Complete Product Backlog grooming:</h6>
+		<em>Requirement 4: :</em>
+		<p>Review {scrum()} and complete your team’s Product Backlog Brooming event while documenting the event in an Artifact
+		names “sprint-{sprint}-groomed-backlog.pdf” that includes</p>
 		<ol>
-			<li>Incorporates only valid stories in story format</li>
-			<li>Immutable unique identifier for each story</li>    
-			<li>Story point estimates for each “important” story based on “Done” and assuming that 1 story point ~ 1 hour effort</li>
-			<li>More estimated and “ready” stories included than your team can get Done in the next sprint</li>
-			<li>Each story must be deliverable in a single sprint</li>
+			<li>A list of prioritized stories in valid story format including unique identifiers</li>
+			<li>Story Point Estimates for a sufficient number of “Ready” stories for Sprint {sprint+1} Planning</li>    
+			<li>Stories that are each deliverable in a single sprint</li>
 			<li>Only a “small” percentage of spikes</li>
-			<li>All stories must be force ranked</li>
 		</ol>
 	</div>)
 }

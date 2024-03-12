@@ -296,7 +296,7 @@ const renderGradingCriteriaTable = () => {
 		{ name: 'Quiz', points:20, number:5 },
 		{ name: 'Lab', points:80, number:8 },
 		{ name: 'Reflection', points:4, number:8 },
-		{ name: 'Demo', points:12, number:1 },
+		{ name: 'Lab Demo', points:12, number:1 },
 		{ name: 'Midterm Exam', points:80, number:1 },
 		{ name: 'Final Exam', points:80, number:1 }
 	]

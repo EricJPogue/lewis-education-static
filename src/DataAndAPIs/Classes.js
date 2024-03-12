@@ -53,7 +53,7 @@ export const _CPSC_20000 = {
 		'Cascading Style Sheets (CSS), The Big Picture, and Numbering Systems',
 		'JavaScript, Data Representation, and Gates & Circuits',
 		'More JavaScript, Computing Components, and The World Wide Web',
-		'Python, Class Project Proposal, Sequences, Selections, and Loops, Networks, The Internet, and The World Wide Web',
+		'Python, Class Project Proposal, Networks, and The Internet',
 		'More Python, Update Class Project Proposal, Artificial Intelligence, and Machine Learning',
 		'Class Project, Cloud Computing, and Information Security',
 		'Class Project Presentation'

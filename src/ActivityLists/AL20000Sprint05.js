@@ -22,7 +22,7 @@ export const al20000Sprint05 = () => {
 		{finalProjectsAndMoreResponsibility()}
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
-			<li>Explore Networks</li>
+			<li>Explore Networks and The Internet</li>
 			<li>Learn to program with Python</li>
 			<li>Master Functions</li>
 			<li>Utilize Python to automate repetitive activities</li>
@@ -37,6 +37,7 @@ export const al20000Sprint05 = () => {
 export const list20000Sprint05 = (sprint) => {
 	const pythonW3CPart1 = () => { return internalLink('Python Programming - Part 1', '/activity/python-w3c') }
 	const pythonW3CPart2 = () => { return internalLink('Python Programming - Part 2', '/activity/python-w3c') }
+	const daleChapter2Lecture = () => { return internalLink('lecture', '/activity-dale/2') }
 	const daleNetworks = () => { return internalLink('lecture', '/activity-dale/15' )}
 	return ( <div>
 		{activitiesListIntro(sprint)}
@@ -45,6 +46,7 @@ export const list20000Sprint05 = (sprint) => {
 			<li>Complete {HelloWorldPythonLink()}</li>
 			<li>Review {pythonW3CPart1()} from W3C</li>
 			<li>Start working on {finalProjectProposalLink()}</li>
+			<li>Review “Computer Science Illuminated” The Information Layer focusing on Numbering Systems including the {daleChapter2Lecture()}</li>
 			<li>Complete {numberingSystemsLink()}{estimated('2 hours')}</li>
 
 			{initialPost(sprint)}
@@ -57,9 +59,7 @@ export const list20000Sprint05 = (sprint) => {
 	</div> )
 }
 
-// Certified for FA22 (10/21/2022)
-// Certified for SP23 (02/28/2023)
-// Certified for FA23 (10/22/2023)
+// Certified for SP24 on 03/12/2024. EJP
 
 
 
