@@ -64,6 +64,7 @@ import { finalProject } from './FinalProject'
 import { goWebServer } from './GoWebServer'
 import { reactTicTacToe } from './ReactTicTacToe'
 import { reactTicTacToeLeaderBoard } from './ReactTicTacToeLeaderBoard'
+import { reactTicTacToeLeaderBoardMongoDB } from './ReactTicTacToeLeaderBoard'
 
 export const BASE_ACTIVITY_ROUTE = '/activity/'
 export const makeInternalURL = (activityRoute) => {
@@ -140,6 +141,7 @@ export const routeActivity = (activityRoute) => {
 		case goWebServer.route: return goWebServer.render()
 		case reactTicTacToe.route: return reactTicTacToe.render()
 		case reactTicTacToeLeaderBoard.route: return reactTicTacToeLeaderBoard.render() 
+		case reactTicTacToeLeaderBoardMongoDB.route: return reactTicTacToeLeaderBoardMongoDB.render()  
 
 		default: return null
 	}

@@ -13,6 +13,12 @@ const renderReactTicTacToeLeaderBoard = () => {
 		<h5>Instruction & Requirements</h5>
 		<p>Enhance the {reactTicTacToeLink()} application by creating a secure Lewis-Tac-Toe Leader Board. Be sure to utilize
 			CI/CD throughout the implementation so that you don’t paint yourself into a corner.</p>
+		{ requirementList()}
+	</div> )
+}
+
+const requirementList = () => {
+	return ( <div>
 		<em>Requirement 1</em>
 		<p>Create an application that:</p>
 		<ol type='n'>
@@ -53,3 +59,35 @@ const renderReactTicTacToeLeaderBoard = () => {
 
 export const reactTicTacToeLeaderBoard = { 'name':'Lewis-Tac-Toe Leader Board', 'route':'lewis-toe-leader-board', 'render':renderReactTicTacToeLeaderBoard }
 export const reactTicTacToeLeaderBoardLink = () => { return makeNavigationLink(reactTicTacToeLeaderBoard) }
+
+// ReactTicTacToeLeaderBoardMongoDB
+const renderReactTicTacToeLeaderBoardMongoDB = () => {
+	return ( <div><br />
+		<h3>{reactTicTacToeLeaderBoardMongoDB.name}</h3>
+		<h5>Summary</h5>
+		<p>Update {reactTicTacToeLeaderBoardLink()} so that it utilizes MongoDB Atlas as its database.</p>
+		<h5>Prerequisites</h5>
+		<p>{reactTicTacToeLeaderBoardLink()} and MongoDB Atlas account</p>
+		<h5>Instruction & Requirements</h5>
+		<p>Enhance the {reactTicTacToeLeaderBoardLink()} application by utilizing MongoDB Atlas as the MERNa Application 
+			Framework database. Be sure to utilize CI/CD throughout the implementation so that you don’t paint yourself 
+			into a corner.</p>
+
+		<em>Recall Requirements 1 through 4 from {reactTicTacToeLeaderBoardLink()}:</em><br />
+		{ requirementList()}<br />
+		
+
+		<em>Requirement 5 in the only new requirement. It is likely to be challenging.</em><br />
+		<em>Requirement 5</em>
+		<p>Enhance {reactTicTacToeLeaderBoardLink()} so that it:</p>
+		<ol type='n'>
+			<li>Utilizes a locally installed version of MongoDB for development and testing of both public and secure APIs</li>
+			<li>Utilizes MongoDB Atlas as the database for the production Azure hosted React and Node.js implementations</li>
+			<li>Provide detailed documentation in the README.md file how public and secure APIs can be tested locally</li>
+			<li>Utilizes identical code and configurations in local test and production cloud environments with the exception of the .env file</li>
+		</ol>
+	</div> )
+}
+
+export const reactTicTacToeLeaderBoardMongoDB = { 'name':'Lewis-Tac-Toe Leader Board with MongoDB', 'route':'lewis-toe-leader-board-mongo', 'render':renderReactTicTacToeLeaderBoardMongoDB }
+export const reactTicTacToeLeaderBoardMongoDBLink = () => { return makeNavigationLink(reactTicTacToeLeaderBoardMongoDB) }

@@ -303,9 +303,10 @@ export const _CPSC_44500 = {
 		'Go Interfaces, Packages, and Frameworks plus OOP Patterns and Principles',
 		'Web Development with HTML, CSS, JavaScript, and React',
 		'Authentication, Authorization, Azure, APIs, and Auth0',
-		'Concurrency and Next Steps',
-		'Web Development with HTML, CSS, JavaScript, React plus Final Project Proposal',		'Containers, More React, Final Project – Version 0',
-		'Application Architecture, Even More React, Final Project – Version 1'
+		'Databases, MongoDB Atlas, and JSON',
+		'React, Node.js, MongoDB, Azure, Atlas, and Authentication',
+		'MERNa and Class Projects',
+		'Class Project Presentations'
 	]
 }
 
