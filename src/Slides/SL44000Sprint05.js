@@ -8,6 +8,7 @@ import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 
 import { theSocialDilemma } from './SL20000Sprint05'
+import { xyz_5_1of6SprintPlanning } from './SL20000Sprint05'
 
 // Sprint 5 Software Engineering (SE) values.
 const sprint = 5
@@ -31,12 +32,6 @@ export const se_5_1of6 = () => {
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Today is going to be challenging so let’s stay relaxed and focused']) }
 	const agenda = () => { return agendaSlide(se_5_1of6_PAaA.agenda) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_2of6_PAaA.prework, sprint, activityList) }
-	const sprintPlanning = () => {
-		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
-			'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
-			'We will complete our scrum team Discussion Board breakout session on Wednesday',
-			`We will have sprint ${sprint-1} Demos and Retrospective on Friday` ])
-	}
 	const activitiesReview = () => {
 		return basicSlide('Activity List and Assignments Review', [
 			'Let’s open our Blackboard shell and briefly review the activity list and assignments together.' ]
@@ -48,7 +43,7 @@ export const se_5_1of6 = () => {
 		)
 	}
 
-	const slideDeck = makeSlideDeck([ prework, announcements, agenda, sprintPlanning, activitiesReview, planningBreakout, preworkNext ])
+	const slideDeck = makeSlideDeck([ prework, announcements, agenda, xyz_5_1of6SprintPlanning, activitiesReview, planningBreakout, preworkNext ])
 	const slideDeckWithSprintPlanning = insertInto(slideDeck, sprintPlanningSlideDeck(sprint), 8)
 	return slideDeckWithSprintPlanning
 }

@@ -22,7 +22,14 @@ const activityList = () => { return list20000Sprint05(sprint) }
 
 // Sprint 5 session 1 of 6: Monday
 export const ics_5_1of6_lists = xyz_n_1of6_lists(sprint)
-export const ics_5_1of6 = () => { return xyz_n_1of6(sprint, ics_5_1of6_lists.prework, activityListPrevious, ics_5_1of6_lists.agenda, ics_5_2of6_PAaA.prework, activityList) }
+export const xyz_5_1of6SprintPlanning = () => {
+	return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
+		'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
+		'We will complete our scrum team Discussion Board breakout session on Wednesday',
+		`We will have sprint ${sprint-1} Demos and Retrospective on Friday`,
+		'However, the final Friday of the sprint with be Easter Break which will be a challenge' ])
+}
+export const ics_5_1of6 = () => { return xyz_n_1of6(sprint, ics_5_1of6_lists.prework, activityListPrevious, ics_5_1of6_lists.agenda, ics_5_2of6_PAaA.prework, activityList, xyz_5_1of6SprintPlanning) }
 
 export const theSocialDilemma = () => {
 	return bulletListSlide('Technology Business Models', 
