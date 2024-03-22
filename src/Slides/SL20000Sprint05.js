@@ -13,7 +13,6 @@ import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 import { ics_6_1of6_PAaA } from './SL20000Sprint06'
 
 import { basicSlide } from './SLSprint00'
-import { getClassSection } from '../DataAndAPIs/ClassSections'
 
 // Sprint 5 Introduction to Computer Science (ICS) global values.
 const sprint = 5
@@ -91,44 +90,23 @@ const ics_5_3of6_lists = {
 }
 export const ics_5_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_3of6_lists, sprint, activityList)
-
 	const metricsSubmissionPercentage = () => {
-		if (getClassSection() === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:27 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:27 },
-				{ name: 'Reflection', due: 27, submitted: 27 }])
-		}
-		else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:24, submitted:24 },
-				{ name: 'Quiz', due:24, submitted:23 },
-				{ name: 'Lab', due:24, submitted:23 },
-				{ name: 'Reflection', due: 24, submitted: 22 }])
-		}
+		return submissionPercentage([
+			{ name: 'Discussion', due:15, submitted:12 },
+			{ name: 'Quiz', due:15, submitted:15 },
+			{ name: 'Lab', due:15, submitted:14 },
+			{ name: 'Reflection', due:15, submitted:14 }])
 	}
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {
-		if (getClassSection() === '002') {
-			return orderedListSlide('Class Retrospective',
-				'Feedback from Assignments & Reflections', [
-				'Incredible, 100% submission percentage, two times in a row... with 27 in the class!',
-				'Matchmaker feedback... Difficult but Fun',
-				'Positive comments about tutorials and programming together time',
-				'All assignments are graded and posted' ])
-		} else {
-			return orderedListSlide('Class Retrospective',
-				'Feedback from Assignments & Reflections', [
-				'Very good submission percentage',
-				'Matchmaker feedback... Difficult but Fun',
-				'Positive comments about tutorials and programming together time',
-				'All assignments are graded and posted' ])
-		}
+		return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+			'Okay submission percentage',
+			'Matchmaker feedback... challenging but fun',
+			'All assignments are graded and posted' ])
 	}
 	const breakout = () =>{ return retrospectiveBreakout(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_4of6_lists.prework, sprint, activityList) }
-
 	return completeDeck(slideDeck, [ sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
@@ -145,7 +123,7 @@ const programmingTogetherWithTurtleDraw = () => {
 // Session 4 of 6: Monday
 const ics_5_4of6_lists = {
 	'prework':[
-		'Complete through activity 11 prior to next class', '',
+		'Complete through activity 12 prior to next class', '',
 		'Be prepared for Networks breakout' ],
 	'announcements':[ 
 		'Assignments graded and posted' ],
