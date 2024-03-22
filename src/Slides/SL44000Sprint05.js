@@ -1,7 +1,9 @@
-import { makeSlideDeck, xyz_n_2of6, xyz_n_3of6 } from './SL00000Sprint00'
+import { makeSlideDeck, xyz_n_2of6 } from './SL00000Sprint00'
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 import { agendaSlide, basicSlide, basicSlideWithLogo, breakoutStandard, orderedListSlide, submissionPercentage, tPrework, tPreworkWithLogo, tQuiz } from './SLSprint00'
 import { insertInto, sprintPlanningSlideDeck } from './SLSprintPlanning'
+import { retrospectiveBreakout, retrospectiveIntroduction } from './SLSprint00'
+import { sprintDemosIntro, sprintDemos, demoAssignment } from './SLSprint00'
 
 import { se_6_1of6_PAaA } from './SL44000Sprint06'
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
@@ -84,28 +86,30 @@ const se_5_3of6_PAaA = {
 		`Breakout for Sprint ${sprint-1} Retrospective`,
 		'Prework for Next Class' ]
 }
-
 export const se_5_3of6 = () => {
-	const metrics = () => {
+	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:13, submitted:13 },
-			{ name: 'Quiz', due:13, submitted:13 },
-			{ name: 'Lab', due:13, submitted:12},
-			{ name: 'Reflection', due:13, submitted:12 }
-		])
-	}
+			{ name: 'Discussion', due:28, submitted:25 },
+			{ name: 'Quiz', due:28, submitted:28 },
+			{ name: 'Lab', due:28, submitted:28 },
+			{ name: 'Reflection', due:28, submitted: 28 }])
+	} 
+	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
-		'Feedback from Assignments & Reflections', [
-		'Solid submission percentage! Well done.',
-		'Azure functions are NOT a panacea',
-		'Node.js is not the mess that it was at the beginning of the sprint',
-		'My grading is a of a work in process this semester' ])
+			'Feedback from Assignments & Reflections', [
+			'Excellent submission percentage... I still owe you donuts from before?',
+			'Everything is graded and posted',
+			'I was not sure how to grade Discussion 4... so I just gave out points like candy',
+			'Thank you, thank you, thank you for your Reflection 4 comments',
+			'Working with teams is challenging, can be enjoyable, and is essential' ])
 	}
+	const breakout = () =>{ return retrospectiveBreakout(sprint) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_4of6_PAaA.prework, sprint, activityList) }
 
-	return  xyz_n_3of6(sprint, se_5_3of6_PAaA, se_5_4of6_PAaA.prework, activityList, metrics, retrospective)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_5_3of6_PAaA, sprint, activityList)
+	return completeDeck(slideDeck, [sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
-
 const se_5_4of6_PAaA = {
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
