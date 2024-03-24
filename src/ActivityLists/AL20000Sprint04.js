@@ -53,6 +53,8 @@ export const list20000Sprint04 = (sprint) => {
 }
 
 // Certified for SP24 on 02/22/2024. EJP
+// Todo: Consider where Networking should fit in relative to WWW as it feels more than a little awkward covering it in sprint 5 after
+//     we have already covered the WWW here in sprint 4. Maybe add it here as a quick read? 
 
 
 

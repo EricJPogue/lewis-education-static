@@ -110,15 +110,7 @@ export const ics_5_3of6 = () => {
 	return completeDeck(slideDeck, [ sprintDemosIntro, sprintDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
 }
 
-const programmingTogetherWithTurtleDraw = () => {
-	return bulletListSlide('Lab & Programming Together', 
-		'How can we best make progress on TurtleDraw?', [
-		'Review the differences between TurtleDraw Lite and TurtleDraw',
-		'Implementing a README.md and LICENSE file in GitHub', 
-		'Added TurtleDraw.py file', 
-		'Pushed the updated files to GitHub',
-		'Start working on TurtleDraw' ])
-}
+
 
 // Session 4 of 6: Monday
 const ics_5_4of6_lists = {
@@ -126,13 +118,12 @@ const ics_5_4of6_lists = {
 		'Complete through activity 12 prior to next class', '',
 		'Be prepared for Networks breakout' ],
 	'announcements':[ 
-		'Assignments graded and posted' ],
+		'Any announcements?' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Networks Breakout',
-		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
 		'Prework for Next Class',
-		'Lab & Programming Together' ]
+		'Lab' ]
 }
 export const ics_5_4of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_4of6_lists, sprint, activityList)
@@ -149,8 +140,7 @@ export const ics_5_4of6 = () => {
 		)
 	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_5of6_lists.prework, sprint, activityList) }
-
-	return completeDeck(slideDeck, [ poll, breakoutNetworks, theSocialDilemma, preworkNext, programmingTogetherWithTurtleDraw ])
+	return completeDeck(slideDeck, [ poll, breakoutNetworks, preworkNext, tLab ])
 }
 
 // Sprint 5 session 5 of 6: Wednesday

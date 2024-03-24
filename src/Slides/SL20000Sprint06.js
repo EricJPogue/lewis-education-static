@@ -14,6 +14,24 @@ import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 
 import { tQuiz } from './SLSprint00'
 
+// Todo:
+//		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
+// theSocialDilemma, 
+
+/*
+const programmingTogetherWithTurtleDraw = () => {
+	return bulletListSlide('Lab & Programming Together', 
+		'How can we best make progress on TurtleDraw?', [
+		'Review the differences between TurtleDraw Lite and TurtleDraw',
+		'Implementing a README.md and LICENSE file in GitHub', 
+		'Added TurtleDraw.py file', 
+		'Pushed the updated files to GitHub',
+		'Start working on TurtleDraw' ])
+}
+
+, programmingTogetherWithTurtleDraw
+*/
+
 // Introduction to Computer Science (ICS) sprint 6 global values.
 const sprint = 6
 const activityListPrevious = () => { return list20000Sprint05(sprint-1) }

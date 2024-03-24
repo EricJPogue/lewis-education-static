@@ -26,7 +26,6 @@ export const al44500Sprint05 = () => {
 			<li>Implement MongoDB locally and MongoDB on the MongoDB Atlas cloud service</li>
 			<li>Configuring the development and production environments so the Application Framework can be utilized effectively</li>
 		</ul>
-
 		{list44500Sprint05(sprint)} 
 		{closing(sprint)}
 	</div> ) 
@@ -52,8 +51,7 @@ export const list44500Sprint05 = (sprint) => {
 			<li>Review {architecturePart1()}</li>
 			{initialPost(sprint)}
 			<li>Complete {connectToAMongoDBDatabaseUsingNodeJSTutorialDBTutorial()} tutorial{estimated('3 hours')}</li>
-			<li>Complete {movieCRUDLite()} tutorial</li>
-			<li>Review the {movieCRUDLiteCode()} as needed</li>
+			<li>Complete {movieCRUDLite()} tutorial while reviewing the {movieCRUDLiteCode()} as needed</li>
 			<li>Review {architecturePart2()}</li>
 			{standardActivitiesClosing(sprint, reactTicTacToeLeaderBoardMongoDBLink(), '8 hours')}
 		</ol>

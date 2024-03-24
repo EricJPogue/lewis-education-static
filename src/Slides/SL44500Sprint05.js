@@ -5,6 +5,7 @@ import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL
 import { basicSlide } from './SLSprint00'
 import { submissionPercentage, sprintDemos, sprintDemosIntro, demoAssignment, orderedListSlide } from './SLSprint00' 
 import { tReviewDemoSchedule } from './SL00000Sprint00'
+import { breakoutStandard } from './SLSprint00'
 
 import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
 import { tUnderConstruction } from './SL00000Sprint00'
@@ -111,17 +112,43 @@ export const af_5_3of6 = () => {
 // Sprint 5 session 4 of 6: Monday
 const af_5_4of6_PAaA = {
 	'prework':[
-		'Complete through activity 7 and working on activity 8 prior to next class', '',
-		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
+		'Complete through activity 9' ],
 	'announcements':[ 
-		'Any announcements?' ],
+		'Stay focused as Wednesday will be our last class for this sprint' ],
 	'agenda':[
-		`Sprint ${sprint-1} Demos`,
-		`Sprint ${sprint-1} Retrospective`,
-		`Breakout for Sprint ${sprint-1} Retrospective`,
+		'Remote Procedure Calls (RPCs) and Web Services',
+		'Lab',
 		'Prework for Next Class' ]
 }
 
-export const af_5_4of6 = () => { return [ tUnderConstruction ] }
+export const af_5_4of6 = () =>  {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_5_4of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', af_5_4of6_PAaA.prework, sprint, activityList) }
+	const breakoutRPCs = () => { 
+		return breakoutStandard( 
+			'Breakout: Remote Procedure Calls (RPCs)', 
+			'In this breakout session we will explore various RPCs methods used by various Application FrameworksNetworks:', [
+				'“Old school web” URL paths and parameters responding with HTML, CSS, and JavaScript',
+				'REST and SOAP with POST, GET, DELETE, and PUT',
+				'Variations of parameter passing with REST and SOAP',
+				'GraphQL',
+				'gRPC',
+				'Apache Thrift',
+				'WebSocket' ]
+		)
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', af_5_5of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ poll, breakoutRPCs, preworkNext, tLab ])
+}
+
+// Sprint 5 session 4 of 6: Monday
+const af_5_5of6_PAaA = {
+	'prework':[
+		'Complete through activity 11' ],
+	'announcements':[ 
+		'' ],
+	'agenda':[
+		'' ]
+}
 export const af_5_5of6 = () => { return [ tUnderConstruction ] }
 export const af_5_6of6 = () => { return [ tUnderConstruction ] }
