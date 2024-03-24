@@ -17,15 +17,15 @@ export const Complete_FinalProject = () => { return (<div>Complete your <NavLink
 export const FinalProject = () => {
 	return ( <div>
 <br />
-<h4>Final Project</h4>
-<h5>Summary: Based on your final project proposal, you are going to have the opportunity to deliver something uniquely 
+<h4>Class Project</h4>
+<h5>Summary: Based on your Class Project proposal, you are going to have the opportunity to deliver something uniquely 
 your own.</h5>
 <h5>Prerequisites:</h5>
 <ul style={{listStyleType:'square'}}>
 	<li>{finalProjectProposalLink()}</li>
 </ul>
 
-<p>In this activity you will deliver a final project that is uniquely your own. What you create should include the 
+<p>In this activity you will deliver a class project that is uniquely your own. What you create should include the 
 features defined in your final project proposal. As much as possible the features should be implemented in the priority 
 order that you identified in your proposal.</p>
 
@@ -33,30 +33,41 @@ order that you identified in your proposal.</p>
 need to make sure that your finished product implements sufficient features to be a complete and usable product.</p>
 
 <em>Requirement 1</em>
-<p>Create a product based on your <NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink> by:</p>
+<p>Create a product based on your {finalProjectProposalLink()} by:</p>
 <ol>
 	<li>Successfully deploying your application to an appropriate production environment</li>
-	<li>Making the source code available for review</li>
-	<li>Creating a simple yet visually pleasing user interface</li>
-	<li>Including and help system and user instructions that succinctly describes the application and how it works</li>
+	<li>Making the source code available for review by sharing your public GitHub repository URL</li>
+	<li>Include a help system and user instructions that succinctly describes the application and how it works</li>
+	<li>Update your README.md to reference your {finalProjectProposalLink()} and to document what was delivered from the proposal</li>
 </ol>
 
 <em>Requirement 2</em>
 <p>Implement at least four (4) meaningful features that are of <em>similar complexity</em> to 
-features we delivered in previous applications.</p>
+features we delivered in previous applications. Identify them in your {finalProjectProposalLink()}</p>
 
 <em>Requirement 3</em>
 <p>Enhance your application so that it implements at least two (2) meaningful features that 
-are <em>greater in complexity</em> than features we delivered in previous applications.</p>
+are <em>greater in complexity</em> than features we delivered previously in class. Identify them in 
+your {finalProjectProposalLink()}</p>
 
 <em>Requirement 4</em>
-<p>Update your <NavLink to='/activity/final-project-proposal'>Final Project Proposal</NavLink> and README.md file so they reflect:</p>
+<p>Create and deliver a Class Project Presentation to your classmates during our scheduled Final Exam time:</p>
 <ol>
-	<li>What was originally planned for your final project</li>
-	<li>What was delivered in your Final Project</li>
-	<li>What would be the next feature(s) you would add if you had more time</li>
-	<li>Contact information for yourself if someone wanted to contact you about continuing to enhance your application</li>
+	<li>An overview of your {finalProjectProposalLink()} including a description of what was completed</li>
+	<li>A demonstration of your product running focusing on the <em>greater in complexity</em> features that were delivered</li>
+	<li>Show your code while once again focusing on your <em>greater in complexity</em> code</li>
+	<li>Finally, provide a quick overview of what you would have liked to complete if you had more time</li>
 </ol>
+<br /><br />
+<em>If you are unable to attend the scheduled Final Exam session (which was a requirement for this class)and present 
+your Class Project  then notify your instructor and follow the “Alternate Requirement 4” instructions below in order 
+to receive partial credit.</em>
+<br /><br />
+<em>Alternate Requirement 4</em><br />
+Prepare a detailed presentation in MS Word or PowerPoint format that discusses each of the above items fully and succinctly, include 
+screenshots of each item executing. Also include all project source code in a zip file named “class-project-xxxxx” with ”xxxxx” 
+as the name of your application. Submit the presentation and zip files in response to this question. Once again, you only need 
+to submit the presentation and zip file if you cannot meet to review your Class Project in person.
 </div> )
 }
 

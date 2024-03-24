@@ -56,9 +56,5 @@ export const list20000Sprint06 = (sprint) => {
 	</div> )
 }
 
-// Certified for SP22 (03/24/2022)
-// Certified for FA22 (10/21/2022)
-// Certified for SP23 (11/01/2023)
-// Certified for FA23 (11/01/2023)
-
+// Certified for SP24 on 03/22/2024. EJP
 // Consider adding Optional activity of MatchMaker for Python
