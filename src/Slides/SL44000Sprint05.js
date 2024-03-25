@@ -115,9 +115,9 @@ const se_5_4of6_PAaA = {
 		'Complete through activity 10 prior to next class', '',
 		'Be prepared for “Software Maintenance and Support” breakout' ],
 	'announcements':[ 
-		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`,
-		`Sprint ${sprint+1} product backlog grooming with be Friday... plan on coming Monday with a fully groomed product backlog`,
-		'Very well done with your sprint 1 planning and sign off' ],
+		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Wednesday`,
+		`Sprint ${sprint+1} product backlog grooming with be Wednesday... plan on coming Wednesday with a fully groomed product backlog`,
+		'Lab 5 - Planning, Demos, and Retrospective was due last week... please get it submitted today' ],
 	'agenda':[
 		'Sprint Progress Polling', 
 		'Prework for Next Class',
@@ -132,6 +132,7 @@ export const se_5_4of6 = () => {
 			'Breakout: Maintenance and Support', 
 			'In this breakout session we will explore Maintenance and Support:', [
 				'Maintenance including daily activities of a development and/or maintenance team',
+				'Issues vs. Defects',
 				'Support including daily activities of a support team',
 				'Maintenance in Waterfall and Iterative',
 				'Maintenance in Agile',
