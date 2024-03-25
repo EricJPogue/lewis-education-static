@@ -343,7 +343,7 @@ export const xyz_8_7of6 = (session) => {
 
 
 export const tLab = () => {
-	return bulletListSlide('Lab & Programming Together', 
+	return bulletListSlide('Lab', 
 		'Let’s focus on completing our activities and assignments by:', [
 		'Deciding how we can best utilize our time today', 
 		'Completing the most important activities and assignments together' ])
