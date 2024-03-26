@@ -32,6 +32,7 @@ const programmingTogetherWithTurtleDraw = () => {
 , programmingTogetherWithTurtleDraw
 */
 
+/*programmingTogetherWithTurtleDraw,*/
 // Introduction to Computer Science (ICS) sprint 6 global values.
 const sprint = 6
 const activityListPrevious = () => { return list20000Sprint05(sprint-1) }

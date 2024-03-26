@@ -47,6 +47,10 @@ export const tNoRegularClassToday = () => {
 		'No regular class this week.'])
 }
 
+export const tFinalReviewActivityListAndAssignments = (sprint) => { return basicSlide(
+	`Final sprint ${sprint} activity list and assignment Q&A`, 
+	[ `Any sprint ${sprint} activity list or assignment questions?` ]) 
+}
 
 // Sprint 1 class 2 is intended to be the second time the class meets. For example, this may be the third session if the first
 // session was a holiday (i.e. Martin Luther King day)

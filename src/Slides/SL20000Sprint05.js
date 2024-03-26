@@ -1,4 +1,4 @@
-import { xyz_n_1of6, xyz_n_1of6_lists } from './SL00000Sprint00'
+import { tFinalReviewActivityListAndAssignments, tNoClassToday, xyz_n_1of6, xyz_n_1of6_lists } from './SL00000Sprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL00000Sprint00'
 import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
@@ -9,8 +9,6 @@ import { breakoutStandard } from './SLSprint00'
 
 import { list20000Sprint04 } from '../ActivityLists/AL20000Sprint04'
 import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
-
-import { ics_6_1of6_PAaA } from './SL20000Sprint06'
 
 import { basicSlide } from './SLSprint00'
 
@@ -153,33 +151,26 @@ const ics_5_5of6_lists = {
 		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Lab & Programming Together',
+		'Final Assignment Review' ,
+		'Lab',
 		`Quiz ${sprint}` ]
 }
 export const ics_5_5of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_5of6_lists, sprint, activityList)
 	const poll = () => { return tPrework('Sprint Progress Polling', ics_5_5of6_lists.prework, sprint, activityList) }
+	const assignmentReview = () => { return tFinalReviewActivityListAndAssignments(sprint) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_5_6of6_lists.prework, sprint, activityList) }
 	const quiz = () => { return tQuiz(sprint) }
 
-	return 	completeDeck(slideDeck, [ poll, tLab, /*programmingTogetherWithTurtleDraw,*/ preworkNext, quiz ])
+	return 	completeDeck(slideDeck, [ poll, assignmentReview, tLab,  preworkNext, quiz ])
 }
 
 // Sprint 5 session 6 of 6: Friday
 const ics_5_6of6_lists = {
-	'announcements':[ 
-		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
-		'Complete through activity 12', '',
-		'Be prepared for Programming Together with “acp” and/or ”Final Project Proposals”' ],
-	'agenda':[
-		'Sprint Progress Polling',
-		'Lab & Programming Together' ]
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'announcements':[ ],
+	'agenda':[ ]
 }
-export const ics_5_6of6 = () => {
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_5_6of6_lists, sprint, activityList)
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_6_1of6_PAaA.prework, sprint, activityList) }
-
-	return completeDeck(slideDeck, [ preworkNext, tLab ])
-}
+export const ics_5_6of6 = () => { return [ tNoClassToday ] }
 

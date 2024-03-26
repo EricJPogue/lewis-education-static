@@ -6,6 +6,8 @@ import { basicSlide } from './SLSprint00'
 import { submissionPercentage, sprintDemos, sprintDemosIntro, demoAssignment, orderedListSlide } from './SLSprint00' 
 import { tReviewDemoSchedule } from './SL00000Sprint00'
 import { breakoutStandard } from './SLSprint00'
+import { tFinalReviewActivityListAndAssignments } from './SL00000Sprint00'
+import { tQuiz } from './SLSprint00'
 
 import { tPrework, bulletListSlide, tDiscussionBreakout } from './SLSprint00'
 import { tUnderConstruction } from './SL00000Sprint00'
@@ -141,14 +143,44 @@ export const af_5_4of6 = () =>  {
 	return completeDeck(slideDeck, [ poll, breakoutRPCs, preworkNext, tLab ])
 }
 
-// Sprint 5 session 4 of 6: Monday
+// Sprint 5 session 5 of 6: Wednesday
 const af_5_5of6_PAaA = {
-	'prework':[
-		'Complete through activity 11' ],
 	'announcements':[ 
-		'' ],
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		'Complete through activity 11', '',
+		'Be prepared for Programming Together',
+		`Be prepared for Quiz ${sprint}` ],
 	'agenda':[
-		'' ]
+		'Sprint Progress Polling',
+		'Final Assignment Review' ,
+		'Lab',
+		`Quiz ${sprint}` ]
 }
-export const af_5_5of6 = () => { return [ tUnderConstruction ] }
+export const af_5_5of6 = () => { 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_5_5of6_PAaA, sprint, activityList)
+	const poll = () => { return tPrework('Sprint Progress Polling', af_5_5of6_PAaA.prework, sprint, activityList) }
+	const assignmentReview = () => { return tFinalReviewActivityListAndAssignments(sprint) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', af_5_6of6_PAaA.prework, sprint, activityList) }
+	const quiz = () => { return tQuiz(sprint) }
+
+	return 	completeDeck(slideDeck, [ poll, assignmentReview, tLab,  preworkNext, quiz ])
+}
+
+// Sprint 5 session 6 of 6: Friday
+const af_5_6of6_PAaA = {
+	'prework':[
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'announcements':[ ],
+	'agenda':[ ]
+}
+
+
+
+
+
+
+
+
+
 export const af_5_6of6 = () => { return [ tUnderConstruction ] }
