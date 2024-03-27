@@ -9,7 +9,6 @@ import { se_6_1of6_PAaA } from './SL44000Sprint06'
 import { list44000Sprint04 } from '../ActivityLists/AL44000Sprint04'
 import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
 
-import { theSocialDilemma } from './SL20000Sprint05'
 import { xyz_5_1of6SprintPlanning } from './SL20000Sprint05'
 
 // Sprint 5 Software Engineering (SE) values.
@@ -147,16 +146,13 @@ export const se_5_4of6 = () => {
 const se_5_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 10 prior to next class', '',
-		'Be prepared for Lab',
+		'Be prepared for Backlog Grooming',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 
-		`In-person attendance in required for Monday for sprint ${sprint+1} planning`,
-		`Sprint ${sprint+1} product backlog grooming with be Friday... plan on coming Monday with a fully groomed product backlog`,
-		'Lab Demo assignments have been graded' ],
+		`In-person attendance in required for Wednesday for sprint ${sprint+1} planning` ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
-		'Lab',
+		'Backlog Grooming',
 		`Quiz ${sprint}` ]
 }
 export const se_5_5of6 = () => {
@@ -165,7 +161,8 @@ export const se_5_5of6 = () => {
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_5_6of6_PAaA.prework, sprint, activityList) }
 	const quiz = () => { return tQuiz(sprint) }
 	
-	return completeDeck(slideDeck, [ poll, theSocialDilemma, tLab, preworkNext, quiz ]) 
+	const slideDeckWithPrework = completeDeck(slideDeck, [ poll, tLab, preworkNext, quiz ]) 
+	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), 5)
 }
 
 // Session 6 of 6
