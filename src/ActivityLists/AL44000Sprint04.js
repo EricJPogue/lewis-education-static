@@ -64,6 +64,7 @@ export const list44000Sprint04 = (sprint) => {
 }
 
 // Certified for SP24 on February 22, 2024
+// Todo: Consider turning Health Insurance Risk Calculator into a sprint project that need to be reviewed in sprint 5. Maybe it could be a backlog? 
 
 
 

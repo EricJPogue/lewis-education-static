@@ -59,8 +59,8 @@ export const list44000Sprint05 = (sprint) => {
 }
 
 // Certified for SP24 on 03/12/2024. EJP
-
 // Toto: Consider updating and enhancing Quiz 5 as it is not very good. 
+// Todo: Consider turning Health Insurance Risk Calculator into a sprint project that need to be reviewed in sprint 5. Maybe it could be a backlog? 
 
 
 
