@@ -65,6 +65,7 @@ import { goWebServer } from './GoWebServer'
 import { reactTicTacToe } from './ReactTicTacToe'
 import { reactTicTacToeLeaderBoard } from './ReactTicTacToeLeaderBoard'
 import { reactTicTacToeLeaderBoardMongoDB } from './ReactTicTacToeLeaderBoard'
+import { MERNaMa } from './MERNaMa'
 
 export const BASE_ACTIVITY_ROUTE = '/activity/'
 export const makeInternalURL = (activityRoute) => {
@@ -142,6 +143,7 @@ export const routeActivity = (activityRoute) => {
 		case reactTicTacToe.route: return reactTicTacToe.render()
 		case reactTicTacToeLeaderBoard.route: return reactTicTacToeLeaderBoard.render() 
 		case reactTicTacToeLeaderBoardMongoDB.route: return reactTicTacToeLeaderBoardMongoDB.render()  
+		case MERNaMa.route: return MERNaMa.render() 
 
 		default: return null
 	}
