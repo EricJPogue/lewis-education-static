@@ -1,7 +1,7 @@
 import { getClassSection } from '../DataAndAPIs/ClassSections'
 
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
-import { xyz_n_2of6, xyz_n_3of6, xyz_n_6of6 } from './SL00000Sprint00'
+import { xyz_n_3of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, breakoutStandard } from './SLSprint00'
 import { ics_7_1of6_PAaA } from './SL20000Sprint07'
 
@@ -51,28 +51,23 @@ export const ics_6_1of6 = () => {
 	return xyz_n_1of6(sprint, ics_6_1of6_PAaA.prework, activityListPrevious, ics_6_1of6_PAaA.agenda, ics_6_2of6_PAaA.prework, activityList, sprintPlanning) 
 }
 
-// Session 2 of 6: Wednesday
-const ics_6_2of6_PAaA = {
-	'prework':[
-		'Complete through activity 5 prior to next class', '',
-		`Be prepared Discussion Board ${sprint}`,
-		'Be prepared for Lab & Programming Together' ],
-	'announcements':[ 
-		'Registration for Sprint 2024 begins Monday, November 13th and continues through November 17',
-		'Summer 2024 courses begins Tuesday, November 28th' ],
-	'agenda':[
-		`Discussion Board ${sprint} as a scrum team`,
-		'Review Demo Schedule for Next Class',
-		'Prework for Next Class',
-		'Lab & Programming Together' ]
+export const ics_6_2of6_PAaA = xyz_n_1of6_lists(sprint)
+export const xyz_6_2of6SprintPlanning = () => {
+	return orderedListSlide('Sprint Planning', `Sprint ${sprint} Expectations:`, [
+		'Similar to previous sprints with Discussion, Quiz, Lab, and Reflection',
+		'Having a holiday on Monday set us back a bit',
+		'We will complete our scrum team Discussion Board breakout session on Friday',
+		`We will also have sprint ${sprint-1} Demos and Retrospective on Friday`,
+		'Recall that sprint 7 and 8 will be different' ])
 }
-export const ics_6_2of6 = () => { return xyz_n_2of6(sprint, ics_6_2of6_PAaA, ics_6_3of6_PAaA.prework, activityList) }
+export const ics_6_2of6 = () => { return xyz_n_1of6(sprint, ics_6_2of6_PAaA.prework, activityListPrevious, ics_6_2of6_PAaA.agenda, ics_6_3of6_PAaA.prework, activityList, xyz_6_2of6SprintPlanning) }
 
 // Session 3 of 6: Friday
 const ics_6_3of6_PAaA = {
 	'prework':[
 		'Complete through activity 8 prior to next class', '',
-		`Be prepared sprint ${sprint-1} Demos and Retrospectives` ],
+		`Be prepared sprint ${sprint-1} Demos and Retrospectives`,
+		'Be prepared for Discussion 6 as a team' ],
 	'announcements':[ 
 		'Registration starts next week' ],
 	'agenda':[

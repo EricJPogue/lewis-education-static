@@ -174,13 +174,6 @@ const af_5_6of6_PAaA = {
 	'announcements':[ ],
 	'agenda':[ ]
 }
-
-
-
-
-
-
-
-
-
 export const af_5_6of6 = () => { return [ tUnderConstruction ] }
+
+
