@@ -1,5 +1,5 @@
 import { submissionPercentage, orderedListSlide, retrospectiveIntroduction } from '../Slides/SLSprint00'
-import { breakoutStandard, bulletListSlide, tDiscussionBreakout, tPrework } from './SLSprint00'
+import { breakoutStandard, tPrework } from './SLSprint00'
 import { tPreworkWithLogo, basicSlideWithLogo, agendaSlide, basicSlide } from '../Slides/SLSprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab, makeSlideDeck } from './SL00000Sprint00'
@@ -12,6 +12,10 @@ import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
 import { xyz_n_5of6 } from './SL00000Sprint00'
 import { xyz_n_6of6 } from './SL00000Sprint00'
 import { se_7_1of6_PAaA } from './SL44000Sprint07'
+
+
+import { xyz_n_1of6_lists } from './SL00000Sprint00'
+import { xyz_6_2of6SprintPlanning } from './SL20000Sprint06'
 
 
 // Todo: theSocialDilemma, 
@@ -70,37 +74,27 @@ export const se_6_1of6 = () => {
 	return slideDeckWithSprintPlanning
 }
 
-// Session 2 of 6: Wednesday
-const se_6_2of6_PAaA = {
-	'announcements':[ 
-		'Software Systems Capstone section available... class size limited to 10 or 10-ish',
-		'Registration for Sprint 2024 begins Monday, November 13th and continues through November 17',
-		'Summer 2024 courses begins Tuesday, November 28th' ],
-	'prework':[
-		'Complete through activity 5 prior to next class', '',
-		`Be prepared Discussion Board ${sprint}` ],
-	'agenda':[
-		`Sprint ${sprint} Planning Commitment and Sign Off`,
-		`Discussion Board ${sprint} as a scrum team`,
-		'Confirm scrum team Demos and Retrospectives for Next Class',
-		'Prework for Next Class',
-		'Lab & Programming Together' ]
-}
-export const se_6_2of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_6_2of6_PAaA, sprint, activityList)
-	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_6_3of6_PAaA.prework, sprint, activityList) }
-	const reviewDemoSchedule = () => {
-		return bulletListSlide('Consider your scrum team’s Friday’s Demo Schedule', 
-			'Let’s review Friday’s demo schedule while recalling that demos are an important part of scrum and that they:', [
-			'Occur at the beginning of each new sprint ',
-			'Are an opportunity to show what was completed in the previous sprint',
-			'Are an **easy** and hopefully rewarding experience to show off your work',
-			'Provide a chance to see how others solved a problem and to see some of the challenges they faces' ]
+
+export const se_6_2of6_PAaA = xyz_n_1of6_lists(sprint)
+export const se_6_2of6 = () => {  
+	const prework = () => { return tPreworkWithLogo('Prework For Today', se_6_1of6_PAaA.prework, sprint-1, activityListPrevious) }
+	const announcements =  () => { return basicSlideWithLogo( 'Announcements', ['Today is going to be challenging so let’s stay relaxed and focused']) }
+	const agenda = () => { return agendaSlide(se_6_1of6_PAaA.agenda) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_6_2of6_PAaA.prework, sprint, activityList) }
+	const activitiesReview = () => {
+		return basicSlide('Activity List and Assignments Review', [
+			'Let’s open our Blackboard shell and briefly review the activity list and assignments together.' ]
+		)
+	}
+	const planningBreakout = () => {
+		return orderedListSlide('Sprint Planning Scrum Team Breakout', 'As a scrum team:', [
+			`No discussion or breakout today so that we can focus on your Team’s Sprint ${sprint} planning` ]
 		)
 	}
 
-	return completeDeck(slideDeck, [ discussionBreakout, reviewDemoSchedule, preworkNext, tLab ])
+	const slideDeck = makeSlideDeck([ prework, announcements, agenda, xyz_6_2of6SprintPlanning, activitiesReview, planningBreakout, preworkNext ])
+	const slideDeckWithSprintPlanning = insertInto(slideDeck, sprintPlanningSlideDeck(sprint), 8)
+	return slideDeckWithSprintPlanning
 }
 
 const se_6_3of6_PAaA = {
