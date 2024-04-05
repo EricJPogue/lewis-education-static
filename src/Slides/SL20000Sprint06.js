@@ -96,6 +96,7 @@ export const ics_6_3of6 = () => {
 	}
 	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 	const slideDeck =  xyz_n_3of6(sprint, ics_6_3of6_PAaA, ics_6_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+	
 	return insertInto(slideDeck, [discussionBreakout], 14)
 }
 
