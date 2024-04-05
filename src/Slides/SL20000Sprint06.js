@@ -1,5 +1,3 @@
-import { getClassSection } from '../DataAndAPIs/ClassSections'
-
 import { xyz_n_1of6_lists, xyz_n_1of6 } from './SL00000Sprint00'
 import { xyz_n_3of6, xyz_n_6of6 } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, breakoutStandard } from './SLSprint00'
@@ -13,6 +11,8 @@ import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 
 import { tQuiz } from './SLSprint00'
+import { tDiscussionBreakout } from './SLSprint00'
+import { insertInto } from './SLSprintPlanning'
 
 // Todo:
 //		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
@@ -73,46 +73,30 @@ const ics_6_3of6_PAaA = {
 	'agenda':[
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
-		`Breakout for Sprint ${sprint-1} Retrospective`,
+		`Skipping or Breakout for Sprint ${sprint-1} Retrospective`,
+		`Discussion 6`,
 		'Prework for Next Class' ]
 }
 
 export const ics_6_3of6 = () => {
 	const metricsSubmissionPercentage = () => {
-		if (getClassSection() === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:26 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:25 },
-				{ name: 'Reflection', due: 27, submitted: 25 }])
-		}
-		else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:24, submitted:23 },
-				{ name: 'Quiz', due:24, submitted:23 },
-				{ name: 'Lab', due:24, submitted:23 },
-				{ name: 'Reflection', due: 24, submitted: 23 }])
-		}
+		return submissionPercentage([
+			{ name: 'Discussion', due:15, submitted:14 },
+			{ name: 'Quiz', due:15, submitted:14 },
+			{ name: 'Lab', due:15, submitted:13 },
+			{ name: 'Reflection', due:15, submitted:14 }])
 	}
 	const retrospective = () => {
-		if (getClassSection() === '002') {
-			return orderedListSlide('Class Retrospective',
-			'Feedback from Assignments & Reflections', [
-			'A little week on our submission percentage',
-			'I still owe you two sets of treats',
-			'Not all assignments are graded', 
-			'Programming assignment was challenging', 
-			'Very nice work!' ])
-		} else {
 			return orderedListSlide('Class Retrospective',
 			'Feedback from Assignments & Reflections', [
 				'A little week on our submission percentage',
 				'Not all assignments are graded', 
 				'Programming assignment was challenging', 
 				'Very nice work!' ])
-		}
 	}
-	return xyz_n_3of6(sprint, ics_6_3of6_PAaA, ics_6_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
+	const slideDeck =  xyz_n_3of6(sprint, ics_6_3of6_PAaA, ics_6_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+	return insertInto(slideDeck, [discussionBreakout], 14)
 }
 
 // Session 4 of 6: Monday
