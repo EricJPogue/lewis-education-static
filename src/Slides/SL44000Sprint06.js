@@ -154,6 +154,7 @@ const se_6_4of6_PAaA = {
 	'announcements':[ 
 		`Reminder that your team’s sprint ${sprint+1} is required, in-person, and scheduled for next Monday`, ],
 	'agenda':[
+		'Sprint Progress Polling',
 		'Metrics Breakout',
 		'Prework for Next Class',
 		'Lab & Programming Together (as time allows)' ]
