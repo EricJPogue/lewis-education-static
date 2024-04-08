@@ -103,11 +103,10 @@ export const ics_6_3of6 = () => {
 // Session 4 of 6: Monday
 const ics_6_4of6_PAaA = {
 	'prework':[
-		'Complete through activity 10 prior to next class', '',
-		'Be prepared for World Wide Web breakout' ],
+		'Complete through activity 11 prior to next class', '',
+		'Be prepared for Artificial Intelligence breakout' ],
 	'announcements':[ 
-		`All sprint ${sprint} assignments due “Sunday”! ... grace period until Tuesday morning at 6 AM`,
-		'Sprint 7 Planning will be next Wednesday' ],
+		`Registration starts this week` ],
 	'agenda':[
 		'Sprint Progress Poll',
 		'Artificial Intelligence Breakout',
@@ -138,7 +137,7 @@ export const ics_6_4of6 = () => {
 // Session 5 of 6: Wednesday
 const ics_6_5of6_PAaA = {
 	'prework':[
-		'Complete through activity 13', '',
+		'Complete through activity 14', '',
 		'Be prepared for Lab',
 		`Be prepared for Quiz ${sprint}` ],
 	'announcements':[ 

@@ -1,9 +1,11 @@
 import { xyz_n_1of6, xyz_n_1of6_lists } from './SL00000Sprint00'
 
 import { xyz_n_3of6 } from './SL00000Sprint00'
-import { submissionPercentage, orderedListSlide } from './SLSprint00'
+import { submissionPercentage, orderedListSlide, tPrework } from './SLSprint00'
 import { tDiscussionBreakout } from './SLSprint00'
 import { insertInto } from './SLSprintPlanning'
+import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
+import { completeDeck } from './SL00000Sprint00'
 
 import { list44500Sprint05 } from '../ActivityLists/AL44500Sprint05'
 import { list44500Sprint06 } from '../ActivityLists/AL44500Sprint06'
@@ -62,7 +64,43 @@ export const  af_6_3of6 = () => {
 
 const  af_6_4of6_PAaA = {
 	'prework':[
-		'Complete through activity 4'
-	]
+		'Complete through activity 4' ],
+	'announcements':[ 
+		'Registration starts today' ],
+	'agenda':[
+		`Discussion 6`,
+		'Application Frameworks and Architecture',
+		'Prework for Next Class' ]
+}
 
+export const  af_6_4of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_6_4of6_PAaA, sprint, activityList) 
+	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
+	const applicationFrameworksAndArchitecture = () => {
+		return orderedListSlide('Application Frameworks and Architecture',
+		'How do Application Frameworks and Architecture relate and interact?', [
+			'Components of Application Architecture including Presentation, Business Logic, Data Storage, API, Security, Infrastructure, Globalization',
+			'Best Practices: Scalability and Performance, Maintainability, Testing, Security', 
+			'Frameworks influence or dictate architecture',
+			'Selection of an Application Framework should be driven by the desired or required Architecture', 
+			'Customer Requirements -> Architecture -> Framework',
+			'Trends including Serverless, Containerization and Orchestration, and AI / Machine Learning Integration',
+			'How does Agile impact Architecture' ])
+	}
+	const preworkNext = () => { return tPrework('Prework For Next Class', af_6_5of6_PAaA.prework, sprint, activityList) }
+
+	return completeDeck(slideDeck, [ discussionBreakout, applicationFrameworksAndArchitecture, preworkNext ])
+}
+
+// Session 5 of 6: Wednesday
+const af_6_5of6_PAaA = {
+	'prework':[
+		'Complete through activity 5', '',
+		'Be prepared for Lab',
+		`Be prepared for Quiz ${sprint}` ],
+	'announcements':[ 
+		'Registration, registration, and more registration' ],
+	'agenda':[
+		'Lab',
+		`Quiz ${sprint}` ]
 }
