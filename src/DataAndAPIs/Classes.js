@@ -18,10 +18,7 @@ export const _CPSC_20000 = {
 	number: 20000,
 	creditHours:3,
 	description: 
-		`This course explores the field of computer science. It provides an overview of computer architecture, 
-		networking, data organization and computational theory. Students will be introduced to fundamental concepts 
-		underlying all of computing, such as algorithms, abstractions, and how computers represent numbers, text, 
-		images, and sound. Students will learn the basics of programming and computational problem solving.`,
+		`This course explores the field of computer science. It provides an overview of computer architecture, networking, data organization and computational theory. Students will be introduced to fundamental concepts underlying all of computing, such as algorithms, abstractions, and how computers represent numbers, text, images, and sound. Students will learn the basics of programming and computational problem solving.`,
 	prerequisites:'none',
 	learningOutcomes:[
 		'Use abstraction to simplify a problem to its essential elements',

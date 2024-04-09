@@ -17,6 +17,19 @@ const renderSyllabus = (courseSection) => {
 	const course = courseSection.course
 	const instructor = courseSection.instructor
 
+	// Console log the data being used to generate the syllabus in JSON format.	
+	console.log('***** Course Section *****')
+	console.log(JSON.stringify(courseSection, null, 4))
+
+	console.log('***** Course *****')
+	console.log(JSON.stringify(courseSection.course, null, 4))
+
+	console.log('***** Instructor *****')
+	console.log(JSON.stringify(courseSection.course, null, 4))
+
+	console.log('***** Sprint Calendar (not used in Syllabus) *****')
+	console.log(JSON.stringify(courseSection.calendar, null, 4))
+
 	const header = (itemArray) => {
 		return (<tr><td style={{width:'50px' }}><b>{itemArray[0]}</b></td><td style={{width:'200px' }} colSpan={2}><b>{itemArray[1]}</b></td></tr>)
 	} 
