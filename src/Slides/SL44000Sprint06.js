@@ -188,19 +188,16 @@ const se_6_5of6_PAaA = {
 		`Reminder that your team’s sprint ${sprint+1} planning is required, in-person, and scheduled for next Monday`,
 		'Reminder MongoDB programming together tutorial added' ],
 	'agenda':[
+		'Sprint Progress Polling',
 		'Lab / Backlog Grooming',
 		'Quiz' ]
 }
-/*
-export const se_6_5of6 = () => {
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_6_5of6_PAaA, sprint, activityList)
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_2of6_PAaA.prework, sprint, activityList) }
-	const slideDeckWithPrework = completeDeck(slideDeck, [ preworkNext ]) 
-	return insertInto(slideDeckWithPrework, sprintPlanningSlideDeck(sprint), 5 )
-}
-*/
-export const se_6_5of6 = () => { return xyz_n_5of6(sprint, se_6_5of6_PAaA, se_6_6of6_PAaA.prework, activityList) }
 
+export const se_6_5of6 = () => { 
+	const slideDeck = xyz_n_5of6(sprint, se_6_5of6_PAaA, se_6_6of6_PAaA.prework, activityList)
+	insertInto(slideDeck, sprintPlanningSlideDeck(sprint), 5)
+	return slideDeck
+}
 
 // Session 6 of 6
 //export const se_6_6of6 = () => { return [ tNoClassToday ] }

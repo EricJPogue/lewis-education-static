@@ -10,8 +10,11 @@ import { completeDeck } from './SL00000Sprint00'
 import { list44500Sprint05 } from '../ActivityLists/AL44500Sprint05'
 import { list44500Sprint06 } from '../ActivityLists/AL44500Sprint06'
 
+import { xyz_n_5of6 } from './SL00000Sprint00'
+import { xyz_n_6of6 } from './SL00000Sprint00'
+
 // Constants
-const sprint = 5
+const sprint = 6
 const activityListPrevious = () => { return list44500Sprint05(sprint-1) }
 const activityList = () => { return list44500Sprint06(sprint) }
 
@@ -104,3 +107,23 @@ const af_6_5of6_PAaA = {
 		'Lab',
 		`Quiz ${sprint}` ]
 }
+
+export const af_6_5of6 = () => { return xyz_n_5of6(sprint, af_6_5of6_PAaA, af_6_6of6_PAaA.prework, activityList) }
+
+// Session 6 of 6
+//export const af_6_6of6 = () => { return [ tNoClassToday ] }
+
+// Session 6 of 6: Friday
+const af_6_6of6_PAaA = {
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday!` ],
+	'prework':[
+		'Complete through activity 12', '',
+		'Be prepared for Programming Together' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+}
+export const af_6_6of6 = () => { return xyz_n_6of6(sprint, af_6_6of6_PAaA, af_7_1of6_PAaA.prework, activityList) }
+
+export const af_7_1of6_PAaA = xyz_n_1of6_lists(sprint)

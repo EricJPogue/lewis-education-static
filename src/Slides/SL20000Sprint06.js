@@ -13,12 +13,13 @@ import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { tQuiz } from './SLSprint00'
 import { tDiscussionBreakout } from './SLSprint00'
 import { insertInto } from './SLSprintPlanning'
+import { bulletListSlide } from './SLSprint00'
 
 // Todo:
 //		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
 // theSocialDilemma, 
 
-/*
+
 const programmingTogetherWithTurtleDraw = () => {
 	return bulletListSlide('Lab & Programming Together', 
 		'How can we best make progress on TurtleDraw?', [
@@ -28,9 +29,6 @@ const programmingTogetherWithTurtleDraw = () => {
 		'Pushed the updated files to GitHub',
 		'Start working on TurtleDraw' ])
 }
-
-, programmingTogetherWithTurtleDraw
-*/
 
 /*programmingTogetherWithTurtleDraw,*/
 // Introduction to Computer Science (ICS) sprint 6 global values.
@@ -152,7 +150,7 @@ export const ics_6_5of6 = () => {
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_6_6of6_PAaA.prework, sprint, activityList) }
 	const quiz = () => { return tQuiz(sprint) }
 
-	return 	completeDeck(slideDeck, [ poll, tLab, /*programmingTogetherWithTurtleDraw,*/ preworkNext, quiz ])
+	return 	completeDeck(slideDeck, [ poll, tLab, programmingTogetherWithTurtleDraw, preworkNext, quiz ])
 }
 
 // Session 6 of 6: Friday
