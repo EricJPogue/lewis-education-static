@@ -25,7 +25,7 @@ const renderSyllabus = (courseSection) => {
 	console.log(JSON.stringify(courseSection.course, null, 4))
 
 	console.log('***** Instructor *****')
-	console.log(JSON.stringify(courseSection.course, null, 4))
+	console.log(JSON.stringify(courseSection.instructor, null, 4))
 
 	console.log('***** Sprint Calendar (not used in Syllabus) *****')
 	console.log(JSON.stringify(courseSection.calendar, null, 4))
