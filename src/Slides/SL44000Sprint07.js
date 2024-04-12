@@ -25,6 +25,9 @@ import { tDemos } from './SL00000Sprint00'
 import { demoAssignment } from './SLSprint00'
 import { tQuiz } from './SLSprint00'
 
+// Todo: theSocialDilemma, 
+// import { theSocialDilemma } from './SL20000Sprint05'
+
 // Software Engineering (SE) sprint 7 global values.
 const sprint = 7
 const activityListPrevious = () => { return list44000Sprint06(sprint-1) }

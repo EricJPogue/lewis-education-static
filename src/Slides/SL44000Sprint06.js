@@ -4,23 +4,17 @@ import { tPreworkWithLogo, basicSlideWithLogo, agendaSlide, basicSlide } from '.
 
 import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab, makeSlideDeck } from './SL00000Sprint00'
 import { insertInto } from './SLSprintPlanning'
-import { sprintPlanningSlideDeck } from './SLSprintPlanning'
 
-import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
-import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
+import { xyz_n_5of6, xyz_n_6of6 } from './SL00000Sprint00'
 
-import { xyz_n_5of6 } from './SL00000Sprint00'
-import { xyz_n_6of6 } from './SL00000Sprint00'
 import { se_7_1of6_PAaA } from './SL44000Sprint07'
-
+import { sprintPlanningSlideDeck } from './SLSprintPlanning'
 
 import { xyz_n_1of6_lists } from './SL00000Sprint00'
 import { xyz_6_2of6SprintPlanning } from './SL20000Sprint06'
 
-
-// Todo: theSocialDilemma, 
-// import { theSocialDilemma } from './SL20000Sprint05'
-
+import { list44000Sprint05 } from '../ActivityLists/AL44000Sprint05'
+import { list44000Sprint06 } from '../ActivityLists/AL44000Sprint06'
 
 // Sprint 6 Software Engineering (SE) global values.
 const sprint = 6
@@ -199,9 +193,6 @@ export const se_6_5of6 = () => {
 	return slideDeck
 }
 
-// Session 6 of 6
-//export const se_6_6of6 = () => { return [ tNoClassToday ] }
-
 // Session 6 of 6: Friday
 const se_6_6of6_PAaA = {
 	'announcements':[ 
@@ -213,6 +204,10 @@ const se_6_6of6_PAaA = {
 		'Sprint Progress Polling',
 		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
 }
-export const se_6_6of6 = () => { return xyz_n_6of6(sprint, se_6_6of6_PAaA, se_7_1of6_PAaA.prework, activityList) }
+export const se_6_6of6 = () => { 
+	const slideDeck = xyz_n_6of6(sprint, se_6_6of6_PAaA, se_7_1of6_PAaA.prework, activityList) 
+	insertInto(slideDeck, sprintPlanningSlideDeck(sprint), 6)
+	return slideDeck
+}
 
 
