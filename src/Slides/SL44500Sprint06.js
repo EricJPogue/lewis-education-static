@@ -111,19 +111,17 @@ const af_6_5of6_PAaA = {
 export const af_6_5of6 = () => { return xyz_n_5of6(sprint, af_6_5of6_PAaA, af_6_6of6_PAaA.prework, activityList) }
 
 // Session 6 of 6
-//export const af_6_6of6 = () => { return [ tNoClassToday ] }
-
 // Session 6 of 6: Friday
 const af_6_6of6_PAaA = {
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday!` ],
 	'prework':[
-		'Complete through activity 12', '',
-		'Be prepared for Programming Together' ],
+		'Complete through activity 6', '',
+		'Be prepared for Lab' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'Lab & Programming Together with Matchmaker for the Web and Final Project Proposals' ]
+		'Lab' ]
 }
 export const af_6_6of6 = () => { return xyz_n_6of6(sprint, af_6_6of6_PAaA, af_7_1of6_PAaA.prework, activityList) }
 
-export const af_7_1of6_PAaA = xyz_n_1of6_lists(sprint)
+export const af_7_1of6_PAaA = xyz_n_1of6_lists(sprint+1)
