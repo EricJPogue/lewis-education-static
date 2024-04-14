@@ -1,15 +1,16 @@
+
 import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, initialPost, standardActivitiesClosing, closing } from './AL00000Sprint00'
 
-import { oreillyPlaylistICS, internalLink } from '../DataAndAPIs/Links'
 import { finalProjectProposalLink } from '../Activities/FinalProjectProposal'
 import { getFinalExamDateAndTime } from '../DataAndAPIs/ClassSections'
 import { finalProjectLink } from '../Activities/FinalProject'
+import { externalLink } from '../DataAndAPIs/Links'
 
 import { getModuleDescription } from '../DataAndAPIs/ClassSections'
 
-export const al20000Sprint07 = () => {
+export const al44500Sprint07 = () => { 
 	const sprint = 7
 	return ( <div>
 		<h5>Sprint {sprint}: {getModuleDescription(sprint-1)}</h5>
@@ -32,33 +33,28 @@ export const al20000Sprint07 = () => {
 		{learningObjectivesIntro(sprint)}
 		<ul style={{listStyleType:'square'}}>
 			<li>Deliver something uniquely your own that makes you proud</li>
-			<li>Understand Computer Security</li>
+			<li>Enhance our understanding of React, MERN, and MERNa</li>
 		</ul>
 
-		{list20000Sprint07()}
+		{list44500Sprint07()}
 		{closing(sprint)}
-	</div> )
+	</div> ) 
 }
 
-export const list20000Sprint07 = () => {
-	const daleSecurityLecture = () => { return internalLink('lecture', '/activity-dale/17' )}
+export const list44500Sprint07 = () => {
+	const reactMax = () => { return externalLink('React - The Complete Guide” ', 'https://learning.oreilly.com/videos/react-the/9781789132229/')}
 	const sprint = 7
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-			{standardActivities(sprint, finalProjectLink(), oreillyPlaylistICS())}
+			{standardActivities(sprint, finalProjectLink())}
 			<li>Verify that you will be presenting your Class Project on <em>{getFinalExamDateAndTime()}</em></li>
 			<li>Review your {finalProjectProposalLink()}</li>
 		
 			{initialPost(sprint)}
-			<li>Within {oreillyPlaylistICS()} read “Computer Science Illuminated” Security and review our associated {daleSecurityLecture()}</li>
+			<li>Within O’Reilly Books Complete {reactMax()} by Maximilian Schwarzmüller</li>
 			<li>Class Project, Class Project, and more Class Project</li>
 			{standardActivitiesClosing(sprint, finalProjectLink(), '20 hours')}
 		</ol>
 	</div>)
 }
-
-// Certified for SP24 on 04/14/2024. EJP
-
-
-
