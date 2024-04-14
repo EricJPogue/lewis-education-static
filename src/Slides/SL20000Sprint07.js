@@ -28,9 +28,9 @@ export const ics_7_1of6 = () => {
 		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
 			'Similar to previous sprints only in that it has a Discussion, Quiz, Lab, and Reflection',
 			'Everything else about sprint 7 is different from other sprints',
-			`Sprint ${sprint} is different that sprint ${sprint} has ever been in the past`,
-			`Sprint ${sprint+1} is connected with sprint ${sprint}`,
-			'I will be looking for your feedback on if these are good changes' ])
+			`Sprint ${sprint} is three weeks duration and has high expectation around effort`,
+			`Quiz ${sprint} is our final exam`,
+			`Sprint ${sprint+1} is directly connected with sprint ${sprint} in that we will be presenting our Class Projects` ])
 	}
 
 	return xyz_n_1of6(sprint, ics_7_1of6_PAaA.prework, activityListPrevious, ics_7_1of6_PAaA.agenda, ics_7_4of6_PAaA.prework, activityList, sprintPlanning) 
