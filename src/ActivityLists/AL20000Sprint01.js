@@ -56,3 +56,7 @@ export const list20000Sprint01 = (sprint) => {
 // Certified for SP24 on 12/19/23
 
 // Todo: Consider adding some more quiz bank questions for quiz 1 including topics like command line and tools of the trade.
+
+// Todo: Consider strongly having every student get a Domain name and email
+// Review: https://www.brindynschultz.com
+// Review: https://github.com/Brindyn/brindynschultz

@@ -52,7 +52,7 @@ export const _CPSC_20000 = {
 		'More JavaScript, Computing Components, and The World Wide Web',
 		'Python, Class Project Proposal, Networks, and The Internet',
 		'More Python, Update Class Project Proposal, Artificial Intelligence, and Machine Learning',
-		'Class Project, Cloud Computing, and Information Security',
+		'Class Project and Information Security',
 		'Class Project Presentation'
 	]
 }
@@ -253,8 +253,8 @@ export const _CPSC_44000 = {
 		'Class Project Proposal, Testing, Support, and Application Programming Interfaces', 
 		'Class Project utilizing Scrum Events, Artifacts, and Roles plus Software Maintenance', 
 		'Class Final Project utilizing Scrum, Software Metrics, and Serverless Computing',
-		'Class Project, Application Frameworks, and React',
-		'Class Final Project, Design Patterns, and Security'
+		'Deliver Valuable Product Stories, Fully Transition Product, Application Frameworks and React',
+		'Validate Successful Product Transition and Class Product Presentations'
 	]
 }
 
@@ -357,8 +357,8 @@ export const _CPSC_49200 = {
 		'User Support and User Recruiting, Kanban, Product Development with Support and Users',
 		'Usability, Usability Testing, Product Development with User Led Demos',
 		'User and Team Metrics, Continuous Improvement, Full Product Development',
-		'Software Product Sustainability, Product Swap with Evaluation, Full Product Development',
-		'Full Product Development, Product Presentations, Product Handoff'
+		'Deliver Valuable Product Stories and Fully Transition Product',
+		'Validate Product Successfully Transitioned and Class Product Presentations'
 	]
 }
 

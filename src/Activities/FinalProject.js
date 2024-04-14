@@ -297,12 +297,11 @@ export const finalProjectSprint7 = () => {
 	return ( <div>
 		<br />
 		<h4>{FINAL_PROJECT_SPRINT_7_NAME}</h4>
-		<h5>Summary: Let’s keep building on we have already delivered.</h5>
+		<h5>Summary: Focus on transitioning all product assets while also delivering valuable stories.</h5>
 
-		<p>We should be gaining a rhythm as we continue to work together as a team by now. Hopefully we delivered something 
-		useful in sprint 6. Now it’s time to focus on continuous improvement and living up to our sprint 7 commitments.</p>
-
-		<p>Part of that rhythm should include our requirements for the sprint.</p>
+		<p>We should be gaining a rhythm as we continue to work together as a team by now. The focus of this sprint is transitioning 
+		product knowledge and assets while also delivering valuable stories. By the end of sprint 7 all product assets must be transitioned 
+		to your team. The transition should be documented include a sign-off</p>
 		{sprintRequirements(7)}
 	</div> )
 }

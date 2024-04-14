@@ -352,11 +352,60 @@ export const CLASS_PRODUCT_SPRINT_7_ROUTE = 'class-product-sprint-7'
 export const classProductSprint7Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_7_ROUTE)}>{name5Plus(7)}</NavLink>)}
 export const classProductSprint7 = () => {
 	const sprint = 7
-	const effort = 12
+	const effort = 20
 	return ( <div>
 		<h5>{name5Plus(sprint)}</h5>
 		<p>Prerequisites: {classProductSprint6Link()} </p>
-		{classProduct(sprint, effort)}
+		<p><em>Summary:</em> Focus on transitioning product ownership and knowledge while also delivering valuable stories.</p>
+
+		<p>In sprint {sprint} you and your team will focus on fully transitioning product knowledge and ownership to the team
+		that will be continuing development in the future. Although you will still be working to deliver valuable stories, the 
+		successful transition of the product should be the top priority. This transition to take the form of stories in the 
+		sprint backlog and some of them will likely be spikes, although it should be possible to make many of the “transition” 
+		stories take the form of adding value to uses as well. <em>In sprint {sprint} each team member will commit to 
+		and deliver (make "Done) at least {effort} story points worth of stories.</em></p>
+
+		<p>Review {scrum()} as needed to make sure that you understand the identified Roles, Events, and Artifacts. As your team 
+		completes each requirement, be sure to complete the appropriate <em>artifact (in PDF format)</em> for each event.</p>
+
+		<em>Requirement 1</em>
+		<p>Complete the team’s Sprint {sprint-1} Review and Retrospective while while documenting the events 
+		in an artifact named “sprint-{sprint-1}-review-retrospective.pdf” that includes:</p>
+		<ol>
+			<li>The team’s immutable Sprint {sprint-1} Backlog</li>
+			<li>The final "Done" status for each story in the team’s Sprint {sprint-1} Backlog</li>
+			<li>Each story that was Demoed, who demoed it, the date/time it was demoed, and if it was the “best-of-the-best” demo</li>
+			<li>Each team members who participated in the Retrospective along with resulting continuous improvement prioritized list</li>
+		</ol>
+
+		<em>Requirement 2</em>
+		<p>Complete your team’s Sprint {sprint-1} Planning while documenting the event in an artifact named 
+		“sprint-{sprint}-immutable-backlog.pdf” that includes:</p>
+		<ol>
+			<li>The names of the team’s Scrum Master and Product Owner for both sprint {sprint} and sprint {sprint+1} </li>
+			<li>The team’s immutable Sprint {sprint} Backlog of prioritized, estimated, and assigned stories</li>
+			<li>Each story must be in valid story format, include a unique story identifier, and identify if it is a spike</li>
+			<li>Totals stories committed, story points committed, stories/story points per team member, and percent spike story points</li>
+		</ol>
+
+		<em>Requirement 3</em>
+		<p>Execute sprint while updating the Sprint Backlog and team Metrics {sprint}:</p>
+		<ol>
+			<li>Deliver each story including develop, test, demo, and mark as “Done” as the story is completed</li>
+			<li>Sprint {sprint} Backlog updates should occur promptly throughout the the sprint</li>
+			<li>Complete final Sprint {sprint} Backlog updates</li>
+			<li>Complete Sprint {sprint} Metrics including {capacityCommittedEffortDeliveredLink()}</li>
+		</ol>
+
+		<em>Requirement 4: :</em>
+		<p>Complete the full transition of the product assets and knowledge while documenting the ongoing owner(s) of each assets in an 
+			artifact name “ongoing-asset-ownership.pdf” that includes</p>
+		<ol>
+			<li>Ownership of each product asset must be transitioned to a primary ongoing owner</li>
+			<li>A ongoing backup owner should be given full control of each product asset as well</li>
+			<li>The current Product Owner should groom the Product Backlog by copying “non-Done” stories back into the Product Backlog</li>    
+			<li>The “test” for each of the transition stories should be “sign-off” of the new owners that they accept ownership of the asset(s)</li>
+		</ol>
 	</div> )
 }
 
@@ -364,10 +413,57 @@ export const CLASS_PRODUCT_SPRINT_8_ROUTE = 'class-product-sprint-8'
 export const classProductSprint8Link = () => {return (<NavLink to={makeInternalURL(CLASS_PRODUCT_SPRINT_8_ROUTE)}>{name5Plus(8)}</NavLink>)}
 export const classProductSprint8 = () => {
 	const sprint = 8
-	const effort = 14
+	const effort = 8
 	return ( <div>
 		<h5>{name5Plus(sprint)}</h5>
 		<p>Prerequisites: {classProductSprint7Link()} </p>
-		{classProduct(sprint, effort)}
+		<p><em>Summary:</em> Validate successful transition and present your Class Product</p>
+
+		<p>In sprint {sprint} you will complete any remaining transition activities and present your product. There is no sprint {sprint} backlog
+		as all stories should have been completed in sprint {sprint-1}. However it is anticipated that each team member will need to invest {effort}
+		or more hours completing and validating the successful transition of the product, preparing for the presentation, and delivering the presentation
+		in-person at the specified time.</p>
+		<p>Note that although there is no sprint {sprint} backlog, the Product Backlog should receive grooming as need as 
+		it is transitioned to the ongoing Product Owner. If there are multiple product backlogs, the need to be combined into one master
+		Product Backlog. All other product assets should have been transitioned and that transition should be 
+		documented and signed off on by the current and ongoing owner of the asset.</p>
+
+		<em>Requirement 1</em>
+		<p>Complete the team’s Sprint {sprint-1} Review and Retrospective while while documenting the events 
+		in an artifact named “sprint-{sprint-1}-review-retrospective.pdf” that includes:</p>
+		<ol>
+			<li>The team’s immutable Sprint {sprint-1} Backlog</li>
+			<li>The final "Done" status for each story in the team’s Sprint {sprint-1} Backlog</li>
+			<li>Each story that was Demoed, who demoed it, the date/time it was demoed, and if it was the “best-of-the-best” demo</li>
+			<li>Each team members who participated in the Retrospective along with resulting continuous improvement prioritized list</li>
+		</ol>
+
+		<em>Requirement 2</em>
+		<p>Complete your team’s Sprint {sprint-1} Planning while documenting the event in an artifact named 
+		“sprint-{sprint}-immutable-backlog.pdf” that includes:</p>
+		<ol>
+			<li>The names of the team’s Scrum Master and Product Owner for both sprint {sprint} and the next sprint</li>
+			<li>The groomed Product Backlog</li>
+		</ol>
+
+		<em>Requirement 3</em>
+		<p>Validate and update asset transition documentation contained in the “ongoing-asset-ownership.pdf” document:</p>
+		<ol>
+			<li>Deliver each story including develop, test, demo, and mark as “Done” as the story is completed</li>
+			<li>Sprint {sprint} Backlog updates should occur promptly throughout the the sprint</li>
+			<li>Complete final Sprint {sprint} Backlog updates</li>
+			<li>Complete Sprint {sprint} Metrics including {capacityCommittedEffortDeliveredLink()}</li>
+		</ol>
+
+		<em>Requirement 4: :</em>
+		<p>Prepare and deliver a Class Product presentation in-person at the designated time. The total presentation should be 10 to 15 minutes with 
+		each of the following items should be presented by a team member (2-3 minutes) and each team member should present something that they 
+		personally delivered that the are particularly proud of delivering:</p>
+		<ol>
+			<li>Product Overview identifying Key Product Enhancements This Semester</li>
+			<li>Initial and Final Customer Usage of Product including a description of the Metric(s) used</li>    
+			<li>Asset Ownership, Transition, and Sign-off Status</li>
+			<li>Each team member should present the the feature they are most proud of delivering during the semester</li>
+		</ol>
 	</div> )
 }

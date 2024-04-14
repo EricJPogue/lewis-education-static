@@ -59,8 +59,7 @@ export const list20000Sprint07 = () => {
 	</div>)
 }
 
-// Certified for SP22 (04/05/2022)
-// Certified for FA22 (11/30/2022)
-// Certified for FA23 (11/19/2023)
+// Certified for SP24 on 04/14/2024. EJP
+
 
 

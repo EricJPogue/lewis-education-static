@@ -1,9 +1,10 @@
 import React from 'react'
 
 import { learningObjectivesIntro, activitiesListIntro, standardActivities, standardActivitiesClosing, closing } from './AL00000Sprint00'
-import { finalProjectSprint8Link } from '../Activities/FinalProject'
 import { oreillyPlaylistSE } from '../DataAndAPIs/Links'
 import { getModuleDescription } from '../DataAndAPIs/ClassSections'
+
+import { classProductSprint8Link } from '../Activities/ClassProduct'
 
 export const al44000Sprint08 = () => {
 	const sprint = 8
@@ -31,15 +32,13 @@ export const list44000Sprint08 = (sprint) => {
 	return ( <div>
 		{activitiesListIntro(sprint)}
 		<ol>
-			{standardActivities(sprint, finalProjectSprint8Link(), oreillyPlaylistSE())}
-			{standardActivitiesClosing(sprint, finalProjectSprint8Link(), '4 hours')}
+			{standardActivities(sprint, classProductSprint8Link(), oreillyPlaylistSE())}
+			{standardActivitiesClosing(sprint, classProductSprint8Link(), '4 hours')}
 		</ol>
 	</div>)
 }
 
-// Certified for FA22 (12/03/2022)
-// Certified for SP23 (04/23/2023)
-// Certified for FA23 (11/19/2023)
+// Certified for SP24 on 04/14/2024. EJP
 
 
 

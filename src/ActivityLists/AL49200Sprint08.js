@@ -5,10 +5,12 @@ import { oreillyPlaylistSC } from '../DataAndAPIs/Links'
 import { lectureRecordingPlaylist } from './AL49200Sprint02'
 import { classProductSprint8Link } from '../Activities/ClassProduct'
 
+import { getModuleDescription } from '../DataAndAPIs/ClassSections'
+
 export const al49200Sprint08 = () => {
 	const sprint = 8
 	return ( <div>	
-		<h5>Sprint {sprint}: Sustainability plus meaningful product enhancements</h5>
+		<h5>Sprint {sprint}: {getModuleDescription(sprint-1)}</h5>		
 		<p><em>Welcome to sprint {sprint}.</em></p> 
 
 		<p>Stay focused on delivering stories to your production environment that add the most value for customers. However, 
