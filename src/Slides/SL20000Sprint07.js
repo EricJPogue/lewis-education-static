@@ -27,9 +27,9 @@ export const ics_7_1of6 = () => {
 	const sprintPlanning = () => {
 		return orderedListSlide('Sprint Planning as a Class', `Sprint ${sprint} Expectations:`, [
 			'Similar to previous sprints only in that it has a Discussion, Quiz, Lab, and Reflection',
-			'Everything else about sprint 7 is different from other sprints',
+			'We will be focused on our Class Projects',
 			`Sprint ${sprint} is three weeks duration and has high expectation around effort`,
-			`Quiz ${sprint} is our final exam`,
+			'Our Final Exam will be in person on Wednesday, May 1st (in person attendance required',
 			`Sprint ${sprint+1} is directly connected with sprint ${sprint} in that we will be presenting our Class Projects` ])
 	}
 
