@@ -8,6 +8,7 @@ import { ics_2_1of6_PAaA } from './SL20000Sprint02'
 import { sprint1_class_2_PAaA, sprint1_class_2 } from './SL00000Sprint00'
 
 // Todo: Recap all presentations!
+// Todo: Strongly consider adding Sprint Description above each Activity List in slides.
 
 // Introduction to Computer Science (ICS) sprint 1 global values.
 const sprint = 1

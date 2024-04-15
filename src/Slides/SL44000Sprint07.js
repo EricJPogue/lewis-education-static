@@ -45,11 +45,24 @@ export const se_7_1of6 = () => {
 			'I will be looking for your feedback on if these are good changes' ])
 	}
 
-	return xyz_n_1of6(sprint, se_7_1of6_PAaA.prework, activityListPrevious, se_7_1of6_PAaA.agenda, se_7_4of6_PAaA.prework, activityList, sprintPlanning) 
+	const slideDeck = xyz_n_1of6(sprint, se_7_1of6_PAaA.prework, activityListPrevious, se_7_1of6_PAaA.agenda, se_7_2of6_PAaA.prework, activityList, sprintPlanning)
+	insertInto(slideDeck, sprintPlanningSlideDeck(sprint), 8)
+	return slideDeck
 }
 
 // Session 2 of 6: Wednesday
-export const se_7_2of6_PAaA = xyz_n_1of6_lists(sprint)
+export const se_7_2of6_PAaA = {
+	'prework':[
+		'Complete through activity 4 prior to next class', '',
+		`Be prepared Discussion Board ${sprint}`,
+		'Be prepared Lab' ],
+	'announcements':[ 
+		'You need to have a solid start on your Class Project by Wednesday if you intend to present it at the end of sprint 7' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		`Discussion Board ${sprint} as a scrum team`,
+		'Lab' ]
+}
 export const se_7_2of6 = () => { 
 	const prework = () => { return tPreworkWithLogo('Prework For Today', se_7_2of6_PAaA.prework, sprint-1, activityListPrevious) }
 	const announcements =  () => { return basicSlideWithLogo( 'Announcements', se_7_2of6_PAaA.announcements) }
