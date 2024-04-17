@@ -106,7 +106,7 @@ export class SprintClassActivities extends Component {
 		'SecondMonday':    'Topic Discussion & Lab',
 		'SecondWednesday': 'Topic Discussion & Lab',
 		'SecondFriday':    'Lab',
-		'ThirdMonday':	   'Presentation & Lab',
+		'ThirdMonday':	   'Lab',
 		'ThirdWednesday':  'Final Exam (in-person attendance required)',
 		'ThirdFriday':     'Presentations'
 	}
