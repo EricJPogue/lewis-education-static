@@ -5,8 +5,6 @@ import { ics_7_1of6_PAaA } from './SL20000Sprint07'
 
 import { tPrework } from './SLSprint00'
 import { checklistAnnouncementsPreworkAndAgenda, tLab, completeDeck } from './SL00000Sprint00'
-
-
 import { list20000Sprint05 } from '../ActivityLists/AL20000Sprint05'
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 
@@ -14,11 +12,6 @@ import { tQuiz } from './SLSprint00'
 import { tDiscussionBreakout } from './SLSprint00'
 import { insertInto } from './SLSprintPlanning'
 import { bulletListSlide } from './SLSprint00'
-
-// Todo:
-//		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
-// theSocialDilemma, 
-
 
 const programmingTogetherWithTurtleDraw = () => {
 	return bulletListSlide('Lab & Programming Together', 
@@ -30,7 +23,6 @@ const programmingTogetherWithTurtleDraw = () => {
 		'Start working on TurtleDraw' ])
 }
 
-/*programmingTogetherWithTurtleDraw,*/
 // Introduction to Computer Science (ICS) sprint 6 global values.
 const sprint = 6
 const activityListPrevious = () => { return list20000Sprint05(sprint-1) }

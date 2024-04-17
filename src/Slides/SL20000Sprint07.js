@@ -1,6 +1,5 @@
 import { xyz_n_1of6_lists, xyz_n_4of6, xyz_n_1of6, tLab } from './SL00000Sprint00'
 import { submissionPercentage, orderedListSlide, tDiscussionBreakout, breakoutStandard } from './SLSprint00'
-import { tNoClassToday } from './SL00000Sprint00'
 
 import { checklistAnnouncementsPreworkAndAgenda } from './SL00000Sprint00'
 import { retrospectiveIntroduction } from './SLSprint00'
@@ -15,8 +14,14 @@ import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
 import { getClassSection } from '../DataAndAPIs/ClassSections'
 import { tQuiz } from './SLSprint00'
 import { basicSlide } from './SLSprint00'
+import { bulletListSlide } from './SLSprint00'
 
+
+// Todo:
+//		'YouTube, Eric’s Trip to Google, The Social Dilemma, and Technology Business Models',
+// theSocialDilemma, 
 // Introduction to Computer Science (ICS) sprint 7 global values.
+
 const sprint = 7
 const activityListPrevious = () => { return list20000Sprint06(sprint-1) }
 const activityList = () => { return list20000Sprint07(sprint) }
@@ -36,21 +41,36 @@ export const ics_7_1of6 = () => {
 	return xyz_n_1of6(sprint, ics_7_1of6_PAaA.prework, activityListPrevious, ics_7_1of6_PAaA.agenda, ics_7_4of6_PAaA.prework, activityList, sprintPlanning) 
 }
 
-// Session 2 of 6: Wednesday
-export const ics_7_2of6_PAaA = {
+// Sprint 7 session 2 of 6: Wednesday
+const ics_7_2of6_PAaA = {
 	'prework':[
-		'Recognize that there is no class Wednesday or Friday', '',
-		`Decide. Do you want to be done with sprints ${sprint} & ${sprint+1} at the end of sprint ${sprint}... this will take work over the break`,
-		'Be prepared for Discussion Board & Lab on Monday' ],
+		'Complete through activity 5 prior to next class', '',
+		`Be prepared Discussion Board ${sprint}`,
+		'Be prepared for Lab & Programming Together' ],
 	'announcements':[ 
-		'TBD' ],
+		'Any announcements?' ],
 	'agenda':[
 		`Discussion Board ${sprint} as a scrum team`,
-		`Sprint ${sprint-1} Demos`,
-		`Sprint ${sprint-1} Retrospective`,
-		'Lab' ]
+		'Review Demo Schedule for Next Class',
+		'Prework for Next Class',
+		'Lab & Programming Together' ]
 }
-export const ics_7_2of6 = () => { return [ tNoClassToday ] }
+export const ics_7_2of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_2of6_PAaA, sprint, activityList)
+	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
+	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_3of6_PAaA.prework, sprint, activityList) }
+	const reviewDemoSchedule = () => {
+		return bulletListSlide('Review Friday’s Demo Schedule', 
+			'Let’s review Wednesday’s demo schedule while recalling that demos are an important part of scrum and that they:', [
+			'Occur at the beginning of each new sprint ',
+			'Are an opportunity to show what was completed in the previous sprint',
+			'Are an **easy** and hopefully rewarding experience to show off your work',
+			'Provide a chance to see how others solved a problem and to see some of the challenges they faces' ]
+		)
+	}
+
+	return completeDeck(slideDeck, [ discussionBreakout, preworkNext, reviewDemoSchedule, tLab ])
+}
 
 // Session 3 of 6: Friday
 const ics_7_3of6_PAaA = {
