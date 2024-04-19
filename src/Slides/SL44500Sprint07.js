@@ -6,6 +6,8 @@ import { tDiscussionBreakout, tPrework } from './SLSprint00'
 import { bulletListSlide } from './SLSprint00'
 import { completeDeck } from './SL00000Sprint00'
 import { tLab } from './SL00000Sprint00'
+import { submissionPercentage } from './SLSprint00'
+import { xyz_n_3of6 } from './SL00000Sprint00'
 
 import { list44500Sprint06 } from '../ActivityLists/AL44500Sprint06'
 import { list44500Sprint07 } from '../ActivityLists/AL44500Sprint07'
@@ -67,8 +69,36 @@ const af_7_3of6_PAaA = {
 		`Be prepared sprint ${sprint-1} Demos` ],
 	'announcements':[ ],
 	'agenda':[
-		`Discussion Board ${sprint} as a scrum team`,
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
 		'Lab' ]
+}
+
+export const  af_7_3of6 = () => {
+	const metricsSubmissionPercentage = () => {
+		return submissionPercentage([
+			{ name: 'Discussion', due:4, submitted:4 },
+			{ name: 'Quiz', due:4, submitted:4 },
+			{ name: 'Lab', due:4, submitted:4 },
+			{ name: 'Reflection', due:4, submitted:4 }])
+	}
+	const retrospective = () => {
+			return orderedListSlide('Class Retrospective',
+			'Feedback from Assignments & Reflections', [
+				'As always thank you for getting everything submitted',
+				'Not all assignments are graded', 
+				'Very nice work!' ])
+	}
+	return xyz_n_3of6(sprint,  af_7_3of6_PAaA,  af_7_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+}
+
+const  af_7_4of6_PAaA = {
+	'prework':[
+		'Complete through activity 4' ],
+	'announcements':[ 
+		'Registration starts today' ],
+	'agenda':[
+		`Discussion 6`,
+		'Application Frameworks and Architecture',
+		'Prework for Next Class' ]
 }
