@@ -81,9 +81,9 @@ const se_7_3of6_PAaA = {
 	'prework':[
 		'Complete through activity 6 prior to next class', '',
 		`Be prepared sprint ${sprint} Demos and Retrospectives` ],
-	'announcements':[ '' ],
+	'announcements':[ 
+		'Godspell playing this weekend at Lewis' ],
 	'agenda':[
-		`Discussion Board ${sprint} as a scrum team`,
 		'Class Retrospective',
 		`Scrum Team Sprint ${sprint-1} Demos`,
 		'Best-of-the-best Scrum Team Demo',
@@ -93,19 +93,16 @@ const se_7_3of6_PAaA = {
 export const se_7_3of6 = () => { 
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:26, submitted:24 },
-			{ name: 'Quiz', due:26, submitted:26 },
-			{ name: 'Lab', due:26, submitted:25 },
-			{ name: 'Reflection', due: 26, submitted: 25 }
-		])
-	}
+			{ name: 'Discussion', due:28, submitted:22 },
+			{ name: 'Quiz', due:28, submitted:27 },
+			{ name: 'Lab', due:28, submitted:28 },
+			{ name: 'Reflection', due:28, submitted: 28 }])
+	} 
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
 		'Feedback from Assignments & Reflections', [
-		`Okay Sprint ${sprint-1} submission percentage... it’s that time of the year`,
-		'It’s that time of the year for me too... I am running substantially behind on grading', 
-		'Bootstrap is the legacy your class will leave for future Software Engineering classes', 
-		'I am concerned about sprint planning participation', 
+		`Excellent submission percentage... not perfect but excellent`,
+		'Grading is not complete', 
 		'Very well done!... this is hard!' ])
 	}
 	const scrumTeamDemos = () => {
@@ -114,6 +111,10 @@ export const se_7_3of6 = () => {
 			'Did you complete and create an artifact for your Demos?',
 			'Aidan Interactive Rendering Demo', 
 			'What is your team’s “Best-of-the-best” demo... as time allows' ])
+	}
+	const bestOfTheBestScrumTeamDemos = () => {
+		return orderedListSlide('Best-of-the-Best Scrum Team Demos', 
+			'Can’t wait to see!', [ ])
 	}
 	const scrumTeamRetrospective = () => {
 		return orderedListSlide('Scrum Team Retrospective',
@@ -126,7 +127,8 @@ export const se_7_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_3of6_PAaA, sprint, activityList)
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_4of6_PAaA.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [retrospectiveInto, metricsSubmissionPercentage, retrospective, scrumTeamDemos, scrumTeamRetrospective, preworkNext])
+	return completeDeck(slideDeck, [retrospectiveInto, metricsSubmissionPercentage, retrospective, scrumTeamDemos, bestOfTheBestScrumTeamDemos, 
+		scrumTeamRetrospective, preworkNext])
 }
 
 // Sprint 7 session 4 of 6: Monday
