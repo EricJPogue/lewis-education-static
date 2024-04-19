@@ -79,36 +79,26 @@ const ics_7_3of6_PAaA = {
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared for Demos & Retrospectives' ],
 	'announcements':[ 
-		'Fall 2023 registration is process',
-		'Charlie Brown at the Lewis Theater this weekend' ],
+		'Godspell playing this weekend at Lewis' ],
 	'agenda':[
-		`Discussion Board ${sprint} as a scrum team`,
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
 		'Lab' ]
 }
 export const ics_7_3of6 = () => { 
-	const discussionBreakout = () => { return tDiscussionBreakout(sprint) } 
 	const metricsSubmissionPercentage = () => {
 		return submissionPercentage([
-			{ name: 'Discussion', due:13, submitted:10 },
-			{ name: 'Quiz', due:13, submitted:12 },
-			{ name: 'Lab', due:13, submitted:11 },
-			{ name: 'Reflection', due: 13, submitted: 12 }])
+			{ name: 'Discussion', due:15, submitted:13 },
+			{ name: 'Quiz', due:15, submitted:14 },
+			{ name: 'Lab', due:15, submitted:12 },
+			{ name: 'Reflection', due:15, submitted:12 }])
 	}
 	const retrospective = () => {
 		return orderedListSlide('Class Retrospective',
-		'Feedback from Assignments & Reflections', [
-		`Not very good Sprint ${sprint-1} submission percentage`,
-		'I am running substantially behind on grading', 
-		'Can we make one final push to the end? ' ])
-	}
-	const scrumTeamDemos = () => {
-		return orderedListSlide('Scrum Team Demos', 
-			'How do/will your team handle Demos?', [
-			'Did you complete and create an artifact for your Demos?',
-			'Aidan Interactive Rendering Demo', 
-			'What is your team’s “Best-of-the-best” demo... as time allows' ])
+			'Feedback from Assignments & Reflections', [
+			`Not very good Sprint ${sprint-1} submission percentage`,
+			'Grading is complete and posted', 
+			'Can we make one final push to the end? ' ])
 	}
 	const scrumTeamRetrospective = () => {
 		return orderedListSlide('Scrum Team Retrospective',
@@ -121,7 +111,7 @@ export const ics_7_3of6 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_3of6_PAaA, sprint, activityList)
 	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_4of6_PAaA.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ discussionBreakout, sprintDemosIntro, sprintDemos, tDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, scrumTeamDemos, scrumTeamRetrospective, preworkNext])
+	return completeDeck(slideDeck, [ sprintDemosIntro, sprintDemos, tDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, scrumTeamRetrospective, preworkNext])
 }
 
 // Sprint 7 session 4 of 6: Monday
