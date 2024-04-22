@@ -12,6 +12,8 @@ import { xyz_n_3of6 } from './SL00000Sprint00'
 import { list44500Sprint06 } from '../ActivityLists/AL44500Sprint06'
 import { list44500Sprint07 } from '../ActivityLists/AL44500Sprint07'
 
+// Todo: Update naming to reflect that fact that there are nine class sessions in sprint 7. Note that that will cause issues 
+// with the “http://localhost:3000/?cpsc=sp24-cpsc-44500-001#/deck/7-4” URL routing method. 
 
 // Constants
 const sprint = 7
@@ -89,16 +91,27 @@ export const  af_7_3of6 = () => {
 				'Not all assignments are graded', 
 				'Very nice work!' ])
 	}
-	return xyz_n_3of6(sprint,  af_7_3of6_PAaA,  af_7_4of6_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
+	return xyz_n_3of6(sprint,  af_7_3of6_PAaA,  af_7_4of9_PAaA.prework, activityList, metricsSubmissionPercentage, retrospective)
 }
 
-const  af_7_4of6_PAaA = {
-	'prework':[
-		'Complete through activity 4' ],
+// Session 4 of 9: Monday
+const  af_7_4of9_PAaA = {
+	'prework':[ 'Complete through activity 6' ],
 	'announcements':[ 
-		'Registration starts today' ],
+		'Any announcements' ],
 	'agenda':[
-		`Discussion 6`,
-		'Application Frameworks and Architecture',
-		'Prework for Next Class' ]
+		'Finalize Class Product presentation time',
+		'YouTube, Eric’s Trip to Google, The Social Dilemma, Technology Business Models, and your Eyes',
+		'Is is possible for me to use YouTube and “protect” students',
+		'Lab' ]
+}
+export const af_7_4of9 = () =>  
+{
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_7_4of9_PAaA, sprint, activityList)
+	const isItPossibleTo = () => {
+		return orderedListSlide('YouTube',
+			'YouTube', [
+				'Is is possible for me to use YouTube and at the same time “protect” student’s focus?' ])
+}
+	return completeDeck(slideDeck, [ isItPossibleTo, tLab ])
 }
