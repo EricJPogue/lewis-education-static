@@ -50,6 +50,8 @@ export const list44000Sprint07 = (sprint) => {
 }
 
 // Certified for SP24 on 04/14/2024. EJP
+// Todo: Check out if there is a video already made for “Project Management, Scrum, Pairs, and Version Control” that we could add
+//     to the activity list. 
 
 
 

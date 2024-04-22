@@ -26,6 +26,10 @@ import { demoAssignment } from './SLSprint00'
 import { tQuiz } from './SLSprint00'
 import { tDiscussionBreakout } from './SLSprint00'
 
+
+// Todo: Update naming to reflect that fact that there are nine class sessions in sprint 7. Note that that will cause issues 
+// with the “http://localhost:3000/?cpsc=sp24-cpsc-44500-001#/deck/7-4” URL routing method. 
+
 // Todo: theSocialDilemma, 
 // import { theSocialDilemma } from './SL20000Sprint05'
 
@@ -138,21 +142,22 @@ const se_7_4of6_PAaA = {
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared Lab' ],
 	'announcements':[ 
-		'You need to have a solid start on your Class Project by Wednesday if you intend to present it at the end of sprint 7' ],
+		'We have a special guest Wednesday that Dr. Klump will be visiting our class',
+		'Class Product presentation times need to be finalized by Friday' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		`Discussion Board ${sprint} as a scrum team`,
+		'Breakout on Project Management, Scrum, Pairs, and Version Control',
 		'Lab' ]
 }
 
 export const se_7_4of6 = () => { 
 	const breakout = () => { 
 		return breakoutStandard( 
-			'Breakout: Project Management, Scrum, Pairs, and Version Control... next class', 
+			'Breakout: Project Management, Scrum, Pairs, and Version Control', 
 			'In this breakout session we will explore Project Management, Scrum, Pairs, and Version Control:', [
 				'Team sizes, SDLCs, and key Scrum Roles & Rituals',
 				'Project Managers, Project Management, and the Six Phases of a Project',
-				'Priority of specialized vs generalized skills in Agile vs Waterfall or Iterative',
+				'Priority of specialized vs generalized skills in Agile vs Waterfall or Iterative... what about specialized teams?',
 				'Configuration management, version control, merge conflicts, and branching',
 				'Reporting and fixing bugs: The five R’s', 
 				'Paired Programming',
