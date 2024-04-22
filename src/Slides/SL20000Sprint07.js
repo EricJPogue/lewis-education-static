@@ -121,10 +121,10 @@ const ics_7_4of6_PAaA = {
 		`Be prepared Discussion Board ${sprint}`,
 		'Be prepared Lab' ],
 	'announcements':[ 
-		'You need to have a solid start on your Class Project by Wednesday if you intend to present it at the end of sprint 7' ],
+		'Class Product presentation times need to be “finalized” by Friday' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		`Discussion Board ${sprint} as a scrum team`,
+		`Breakout on Security`,
 		'Lab' ]
 }
 
@@ -147,12 +147,10 @@ export const ics_7_4of6 = () => {
 
 // Sprint 7 session 5 of 6: Wednesday
 const ics_7_5of6_PAaA = {
-	'announcements':[ 
-		'I need to know if you are likely to be ready to demo your class project next Friday' ],
 	'prework':[
-		'Complete through activity 8 prior to next class', '',
-		'Be prepared for Demos and Retrospectives',
-		'Be prepared for Security Breakout' ],
+		'Complete through activity 9 prior to next class' ],
+	'announcements':[ 
+		'Any announcements?' ],
 	'agenda': [
 		`Sprint ${sprint-1} Demos`,
 		`Sprint ${sprint-1} Retrospective`,
