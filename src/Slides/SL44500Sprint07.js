@@ -95,7 +95,7 @@ export const  af_7_3of6 = () => {
 }
 
 // Session 4 of 9: Monday
-const  af_7_4of9_PAaA = {
+const af_7_4of9_PAaA = {
 	'prework':[ 'Complete through activity 6' ],
 	'announcements':[ 
 		'Any announcements' ],
@@ -112,6 +112,26 @@ export const af_7_4of9 = () =>
 		return orderedListSlide('YouTube',
 			'YouTube', [
 				'Is is possible for me to use YouTube and at the same time “protect” student’s focus?' ])
+	}
+	return completeDeck(slideDeck, [ isItPossibleTo, tLab ])
 }
+
+const af_7_5of9_PAaA = {
+	'prework': [ 'Complete through activity 7', '',
+		'Be prepared for Lab' ],
+	'announcements': [ 'Recall that our Final Exam is next Wednesday in class with in-person attendance required' ],
+	'agenda': [ 
+		'Confirm Class Project presentation times',
+		'Lab'
+	]
+}
+export const af_7_5of9 = () =>  
+{
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_7_5of9_PAaA, sprint, activityList)
+	const isItPossibleTo = () => {
+		return orderedListSlide('Confirm Class Project presentation times',
+			'Confirm Class Project presentation times', [
+			'Please accept Outlook meeting request for scheduled time?' ] )
+	}
 	return completeDeck(slideDeck, [ isItPossibleTo, tLab ])
 }
