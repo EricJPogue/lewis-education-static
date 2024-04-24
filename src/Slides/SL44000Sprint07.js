@@ -145,7 +145,6 @@ const se_7_4of6_PAaA = {
 		'Breakout on Project Management, Scrum, Pairs, and Version Control',
 		'Lab' ]
 }
-
 export const se_7_4of6 = () => { 
 	const breakout = () => { 
 		return breakoutStandard( 
@@ -172,22 +171,28 @@ const se_7_5of6_PAaA = {
 	'announcements':[ 'Recall that our Final Exam is next Wednesday in class with in-person attendance required' ],
 	'agenda':[
 		'Sprint Progress Polling',
-		'YouTube, Software Business Models, and your eyes',
+		'Product Transition Reflections and Feedback',
+		'YouTube, Software Business Models, and the competition for your eyes',
 		'Lab' ]
 }
-
 export const se_7_5of6 = () => { 
+	const reflections = () => {
+		return orderedListSlide('Product Transition Reflections',
+		'Now that your product is transitioning to your team consider', [
+			'In the spirit of continuous improvement, how can we improve the transition next semester?',
+			'Connect teams earlier, transition earlier (maybe sprint 6?), more standard environments?' ])
+	}
 	const isItPossibleTo = () => {
-		return orderedListSlide('YouTube, Software Business Models, and Your Eyes',
-		'YouTube, Software Business Models, and Your Eyes', [
-				'Is is possible for me to use YouTube and at the same time “protect” student’s focus?',
-				'How can I best do that?' ])
+		return orderedListSlide('YouTube and Software Business Models',
+		'YouTube, Software Business Models, and the competition for your eyes', [
+			'Is is possible for me to use YouTube and at the same time “protect” your focus?',
+			'If so, what can I do to make that happen?' ])
 	}
 	const poll = () => { return tPrework('Sprint Progress Polling', se_7_5of6_PAaA.prework, sprint, activityList) }
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_5of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_4of6_PAaA.prework, sprint, activityList) }
 
-	return completeDeck(slideDeck, [ poll, isItPossibleTo, tLab, preworkNext])
+	return completeDeck(slideDeck, [ poll, reflections, isItPossibleTo, tLab, preworkNext])
 }
 
  // Sprint 7 session 6 of 6: Friday
