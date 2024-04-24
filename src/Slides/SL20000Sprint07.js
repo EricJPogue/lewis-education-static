@@ -11,7 +11,6 @@ import { tDemos } from './SL00000Sprint00'
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
 
-import { getClassSection } from '../DataAndAPIs/ClassSections'
 import { tQuiz } from './SLSprint00'
 import { basicSlide } from './SLSprint00'
 import { bulletListSlide } from './SLSprint00'
@@ -127,7 +126,6 @@ const ics_7_4of6_PAaA = {
 		`Breakout on Security`,
 		'Lab' ]
 }
-
 export const ics_7_4of6 = () => { 
 	const breakout = () => { 
 		return breakoutStandard( 
@@ -148,56 +146,24 @@ export const ics_7_4of6 = () => {
 // Sprint 7 session 5 of 6: Wednesday
 const ics_7_5of6_PAaA = {
 	'prework':[
-		'Complete through activity 9 prior to next class' ],
+		'Complete through activity 8 prior to next class' ],
 	'announcements':[ 
-		'Any announcements?' ],
-	'agenda': [
-		`Sprint ${sprint-1} Demos`,
-		`Sprint ${sprint-1} Retrospective`,
-		'Security Breakout' ]
-}
+		'Recall that our Final Exam is next Wednesday in class with in-person attendance required' ],
+	'agenda':[
+		'Sprint Progress Polling',
+		'Software Business Models, YouTube, and the competition for your eyes',
+		'Lab' ]
+	}
 export const ics_7_5of6 = () => { 
-	const breakout = () => { 
-		return breakoutStandard( 
-			'Breakout: Security', 
-			'In this breakout session we will explore Security:', [
-				'Information Security and Confidentiality, Availability, and Integrity',
-				'Access, Authentication, Authorization, CAPTCHA',
-				'Malicious Code, Malware, Worms, Trojan Horses, Phishing, and DoS',
-				'Cryptography, Encryption/Decryption, ciphers, public-key cryptography, and digital signatures',
-				'Protecting Online Information',
-				'Security and Usability Tradeoffs' ]
-		)
-	}
-
-	const metricsSubmissionPercentage = () => {
-		if (getClassSection() === '002') {
-			return submissionPercentage([
-				{ name: 'Discussion', due:27, submitted:26 },
-				{ name: 'Quiz', due:27, submitted:27 },
-				{ name: 'Lab', due:27, submitted:25 },
-				{ name: 'Reflection', due: 27, submitted: 25 }])
-		}
-		else {
-			return submissionPercentage([
-				{ name: 'Discussion', due:24, submitted:23 },
-				{ name: 'Quiz', due:24, submitted:23 },
-				{ name: 'Lab', due:24, submitted:23 },
-				{ name: 'Reflection', due: 24, submitted: 23 }])
-		}
-	}
-	const retrospective = () => {
-		return orderedListSlide('Class Retrospective',
-		'Feedback from Assignments & Reflections', [
-		'Solid submission percentage',
-		'Grading is a work in process', 
-		'Let’s make our final push to deliver a class project that we can be proud of delivering' ])
-	}
-
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_5of6_PAaA, sprint, activityList)
-	const retrospectiveInto = () => { return retrospectiveIntroduction(sprint)}
+	const isItPossibleTo = () => {
+		return orderedListSlide('Software Business Models and YouTube',
+		'Software Business Models, YouTube, and the competition for your eyes', [
+			'Is is possible for me to use YouTube and at the same time “protect” your focus?',
+			'If so, what can I do to make that happen?' ])
+	}
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_6of6_PAaA.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ sprintDemosIntro, sprintDemos, tDemos, demoAssignment, retrospectiveInto, metricsSubmissionPercentage, retrospective, breakout, preworkNext])
+	return completeDeck(slideDeck, [isItPossibleTo, preworkNext])
 }
 
 // Sprint 7 session 6 of 6: Friday

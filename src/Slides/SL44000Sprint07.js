@@ -169,7 +169,8 @@ const se_7_5of6_PAaA = {
 		'Complete through activity 8 prior to next class', '',
 		'Be prepared for Software Business Models discussion',
 		'Be prepared for Lab' ],
-	'announcements':[ 'Recall that our Final Exam is next Wednesday in class with in-person attendance required' ],
+	'announcements':[ 
+		'Recall that our Final Exam is next Wednesday in class with in-person attendance required' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Product Transition Reflections and Feedback',
@@ -190,9 +191,9 @@ export const se_7_5of6 = () => {
 			'If so, what can I do to make that happen?' ])
 	}
 	const poll = () => { return tPrework('Sprint Progress Polling', se_7_5of6_PAaA.prework, sprint, activityList) }
+
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_5of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_4of6_PAaA.prework, sprint, activityList) }
-
 	return completeDeck(slideDeck, [ poll, reflections, isItPossibleTo, tLab, preworkNext])
 }
 
