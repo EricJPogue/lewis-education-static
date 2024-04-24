@@ -167,12 +167,13 @@ export const se_7_4of6 = () => {
 const se_7_5of6_PAaA = {
 	'prework':[
 		'Complete through activity 8 prior to next class', '',
-		'Project Management, Scrum, Pairs, and Version Control Breakout' ],
+		'Be prepared for Software Business Models discussion',
+		'Be prepared for Lab' ],
 	'announcements':[ 'Recall that our Final Exam is next Wednesday in class with in-person attendance required' ],
 	'agenda':[
 		'Sprint Progress Polling',
 		'Product Transition Reflections and Feedback',
-		'YouTube, Software Business Models, and the competition for your eyes',
+		'Software Business Models, YouTube, and the competition for your eyes',
 		'Lab' ]
 }
 export const se_7_5of6 = () => { 
@@ -183,8 +184,8 @@ export const se_7_5of6 = () => {
 			'Connect teams earlier, transition earlier (maybe sprint 6?), more standard environments?' ])
 	}
 	const isItPossibleTo = () => {
-		return orderedListSlide('YouTube and Software Business Models',
-		'YouTube, Software Business Models, and the competition for your eyes', [
+		return orderedListSlide('Software Business Models and YouTube',
+		'Software Business Models, YouTube, and the competition for your eyes', [
 			'Is is possible for me to use YouTube and at the same time “protect” your focus?',
 			'If so, what can I do to make that happen?' ])
 	}
