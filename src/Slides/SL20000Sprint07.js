@@ -170,20 +170,28 @@ export const ics_7_5of6 = () => {
 const ics_7_6of6_PAaA = {
 	'prework':[
 		'Be prepared for Lab' ],
-	'announcements':[ 
-		'Monday is Lab and Programming Together' ],
-	'agenda':[
-		'Sprint Progress Polling',
-		'Quiz',
-		'Lab & Programming Together' ]
+	'announcements':[
+		'Any announcements?' ],
+	'agenda': [ 
+		'Confirm Final Exam Time',
+		'Confirm Class Project presentation time',
+		'Practical Diversity and Working with India',
+		'Lab' ]
 }
 export const ics_7_6of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_6of6_PAaA, sprint, activityList)
-	const quiz = () => { return tQuiz(sprint) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_5of6_PAaA.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ quiz, tLab, preworkNext]) 
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_6of6_PAaA, sprint, activityList) 
+	const confirmFinalExamAndPresentationTimes = () => {
+		return orderedListSlide('Confirm Final Exam and Class Project presentation times',
+			'Confirm Final Exam and Class Project presentation times', [
+			'Confirm Final Exam next Monday (in-person attendance required)',
+			'Confirm Class Project presentation time and accept Outlook meeting request' ] )		
+	}
+	const practicalDiversityAndWorkingWithIndia = () => {
+		return orderedListSlide('Practical Diversity and Working with India',
+			'Practical Diversity and Working with India', [ ] )
+	}
+	return completeDeck(slideDeck, [ confirmFinalExamAndPresentationTimes, practicalDiversityAndWorkingWithIndia, tLab ]) 
 }
-
 
 const ics_7_7of6_PAaA = { 
 	'prework':[
