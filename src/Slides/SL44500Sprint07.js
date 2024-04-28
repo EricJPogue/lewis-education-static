@@ -8,6 +8,7 @@ import { completeDeck } from './SL00000Sprint00'
 import { tLab } from './SL00000Sprint00'
 import { submissionPercentage } from './SLSprint00'
 import { xyz_n_3of6 } from './SL00000Sprint00'
+import { tExamExpectations, tExam } from './SLSprint00'
 
 import { list44500Sprint06 } from '../ActivityLists/AL44500Sprint06'
 import { list44500Sprint07 } from '../ActivityLists/AL44500Sprint07'
@@ -159,4 +160,61 @@ export const af_7_6of9 = () => {
 			'Practical Diversity and Working with India', [ ] )
 	}
 	return completeDeck(slideDeck, [ confirmFinalExamAndPresentationTimes, practicalDiversityAndWorkingWithIndia, tLab ])
+}
+
+const af_7_7of9_PAaA = {
+	'prework': [ 'Complete through activity 7', '',
+		`Be prepared for Final Exam` ],
+	'announcements': [ 
+		`All sprint ${sprint} assignments due Sunday`,
+		`All sprint ${sprint+1} assignment due next Wednesday`, ],
+	'agenda': [ 
+		'Confirm Class Project Presentation Time',
+		'Final Exam'
+	]
+}
+export const af_7_7of9 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_7_7of9_PAaA, sprint, activityList)
+	const confirmPresentationTimes = () => {
+		return orderedListSlide('Confirm Final Exam and Class Project presentation times',
+			'Confirm Class Project Presentation Time', [ ] )		
+	}
+ 
+	return completeDeck(slideDeck, [ confirmPresentationTimes, tExamExpectations, tExam ])
+}
+
+const af_7_8of9_PAaA = {
+	'prework': [ 'Complete through activity 7', '',
+	`Final Exam / Quiz ${sprint}` ],
+	'announcements': [ 'Any announcements?' ],
+	'agenda': [ 
+		'Confirm Final Exam Time',
+		'Confirm Class Project presentation time',
+		'Practical Diversity and Working with India',
+		'Lab'
+	]
+}
+export const af_7_8of9 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_7_8of9_PAaA, sprint, activityList)
+	const practicalDiversityAndWorkingWithIndia = () => {
+		return orderedListSlide('Practical Diversity and Working with India',
+			'Practical Diversity and Working with India', [ ] )
+	}
+	return completeDeck(slideDeck, [ practicalDiversityAndWorkingWithIndia, tLab ])
+}
+
+const af_7_9of9_PAaA = {
+	'prework': [ 'Complete through activity 7', '',
+	`Final Exam / Quiz ${sprint}` ],
+	'announcements': [ 'Any announcements?' ],
+	'agenda': [ 
+		'Confirm Final Exam Time',
+		'Confirm Class Project presentation time',
+		'Practical Diversity and Working with India',
+		'Lab'
+	]
+}
+export const af_7_9of9 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_7_9of9_PAaA, sprint, activityList)
+	return completeDeck(slideDeck, [ tLab ])
 }

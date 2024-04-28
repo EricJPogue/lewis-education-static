@@ -218,7 +218,7 @@ const ics_7_8of6_PAaA = {
 		'Friday is Class Project presentations in classroom plus remote' ],
 	'agenda':[
 		'Review Class Project Presentation Schedule',
-		`Quiz ${sprint+1} (final exam)` ] 
+		`Final Exam / Quiz ${sprint+1}` ] 
 }
 export const ics_7_8of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_8of6_PAaA, sprint, activityList)
@@ -235,7 +235,7 @@ const ics_7_9of6_PAaA = {
 		'Be prepared for class project presentations in classroom plus remote' ],
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday`,
-		`All sprint ${sprint+1} assignment due Thursday next week`,
+		`All sprint ${sprint+1} assignment due Wednesday next week`,
 		`If you are presenting today, your sprint ${sprint} and sprint ${sprint+1} assignments are due Sunday` ],
 	'agenda':[
 		`Brief review of sprint ${sprint+1} assignments & expectations`,
