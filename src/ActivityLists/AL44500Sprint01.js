@@ -69,3 +69,4 @@ export const list44500Sprint01 = (sprint) => {
 // BugBug: There is no Programming Together playlist for this class so the closing link does not work. 
 // BugBug: There is no OReilly Books list (i.e. oreillyPlaylistICS) for this class so the "reminder" line for tools is not displaying... 
 // as well as there is not OReilly Books list which would be nice. 
+// Todo: Review all quizzes and tests. The questions are not indicative or very good. Final Exam is bad (I took it during the final exam time).

@@ -22,6 +22,8 @@ import { xyz_n_1of6 } from './SL00000Sprint00'
 import { tQuiz } from './SLSprint00'
 import { tDiscussionBreakout } from './SLSprint00'
 
+import { confirmFinalExamAndPresentationTimes, practicalDiversityAndWorkingWithIndia } from './SL20000Sprint07'
+
 
 // Todo: Update naming to reflect that fact that there are nine class sessions in sprint 7. Note that that will cause issues 
 // with the “http://localhost:3000/?cpsc=sp24-cpsc-44500-001#/deck/7-4” URL routing method. 
@@ -211,25 +213,26 @@ const se_7_6of6_PAaA = {
 export const se_7_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_6of6_PAaA, sprint, activityList)
 	const quiz = () => { return tQuiz(sprint) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', tWeb_7_7of6_PAaA.prework, sprint, activityList) }
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_7of6_PAaA.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ quiz, tLab, preworkNext]) 
 }
 
-const tWeb_7_7of6_PAaA = {
+// Session 7 of 6: Monday
+const se_7_7of6_PAaA = { 
 	'prework':[
 		'Be prepared for Lab' ],
 	'announcements':[ 
-		'Wednesday is required in-person Quiz 8' ],
-	'agenda':[
-		'Sprint Progress Polling',
-		'Lab & Programming Together' ]
+		'Wednesday is our Final Exam (in-person attendance required)' ],
+	'agenda':[ 
+		'Confirm Final Exam Time',
+		'Confirm Class Project presentation time',
+		'Practical Diversity and Working with India (continued)',
+		'Lab' ]
 }
-
-// Sprint 7 session 7 of 6: Monday
 export const se_7_7of6 = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(tWeb_7_7of6_PAaA, sprint, activityList)
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_7of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_8of6_PAaA.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ tLab, preworkNext]) 
+	return completeDeck(slideDeck, [ confirmFinalExamAndPresentationTimes, practicalDiversityAndWorkingWithIndia, preworkNext, tLab ]) 
 }
 
 // Sprint 7 session 8 of 6: Wednesday

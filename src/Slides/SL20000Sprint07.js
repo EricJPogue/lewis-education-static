@@ -178,18 +178,19 @@ const ics_7_6of6_PAaA = {
 		'Practical Diversity and Working with India',
 		'Lab' ]
 }
+export const confirmFinalExamAndPresentationTimes = () => {
+	return orderedListSlide('Confirm Final Exam and Class Project presentation times',
+		'Confirm Final Exam and Class Project presentation times', [
+		'Confirm Final Exam next Monday (in-person attendance required)',
+		'Confirm Class Project presentation time and accept Outlook meeting request' ] )		
+}
+export const practicalDiversityAndWorkingWithIndia = () => {
+	return orderedListSlide('Practical Diversity and Working with India',
+		'Practical Diversity and Working with India', [ ] )
+}
 export const ics_7_6of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_6of6_PAaA, sprint, activityList) 
-	const confirmFinalExamAndPresentationTimes = () => {
-		return orderedListSlide('Confirm Final Exam and Class Project presentation times',
-			'Confirm Final Exam and Class Project presentation times', [
-			'Confirm Final Exam next Monday (in-person attendance required)',
-			'Confirm Class Project presentation time and accept Outlook meeting request' ] )		
-	}
-	const practicalDiversityAndWorkingWithIndia = () => {
-		return orderedListSlide('Practical Diversity and Working with India',
-			'Practical Diversity and Working with India', [ ] )
-	}
+
 	return completeDeck(slideDeck, [ confirmFinalExamAndPresentationTimes, practicalDiversityAndWorkingWithIndia, tLab ]) 
 }
 
@@ -197,23 +198,25 @@ const ics_7_7of6_PAaA = {
 	'prework':[
 		'Be prepared for Lab' ],
 	'announcements':[ 
-		'Wednesday is Quiz 8 (in-person attendance required)' ],
-	'agenda':[
-		'Confirm Friday class project presentation schedule',
-		'Lab & Programming Together' ]
+		'Wednesday is our Final Exam (in-person attendance required)' ],
+	'agenda':[ 
+		'Confirm Final Exam Time',
+		'Confirm Class Project presentation time',
+		'Practical Diversity and Working with India (continued)',
+		'Lab' ]
 }
 
 // Sprint 7 session 7 of 6: Monday
 export const ics_7_7of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_7of6_PAaA, sprint, activityList)
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_8of6_PAaA.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ tLab, preworkNext]) 
+	return completeDeck(slideDeck, [ confirmFinalExamAndPresentationTimes, practicalDiversityAndWorkingWithIndia, preworkNext, tLab ]) 
 }
 
 // Sprint 7 session 8 of 6: Wednesday
 const ics_7_8of6_PAaA = { 
 	'prework':[
-		`Be prepared for Quiz ${sprint+1} (final exam)` ],
+		`Be prepared for our Final Exam (in-person attendance required)` ],
 	'announcements':[ 
 		'Friday is Class Project presentations in classroom plus remote' ],
 	'agenda':[
@@ -231,7 +234,7 @@ export const ics_7_8of6 = () => {
 
 const ics_7_9of6_PAaA = { 
 	'prework':[
-		`Be prepared for a quick sprint ${sprint+1} planning review`,
+		`Be prepared for a sprint ${sprint+1} planning`,
 		'Be prepared for class project presentations in classroom plus remote' ],
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday`,
