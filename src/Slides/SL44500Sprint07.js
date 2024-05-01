@@ -173,12 +173,13 @@ const af_7_7of9_PAaA = {
 		'Final Exam'
 	]
 }
+const confirmPresentationTimes = () => {
+	return orderedListSlide('Confirm Final Exam and Class Project presentation times',
+		'Confirm Class Project Presentation Time', [ ] )		
+}
 export const af_7_7of9 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_7_7of9_PAaA, sprint, activityList)
-	const confirmPresentationTimes = () => {
-		return orderedListSlide('Confirm Final Exam and Class Project presentation times',
-			'Confirm Class Project Presentation Time', [ ] )		
-	}
+
  
 	return completeDeck(slideDeck, [ confirmPresentationTimes, tExamExpectations, tExam ])
 }
@@ -186,11 +187,12 @@ export const af_7_7of9 = () => {
 const af_7_8of9_PAaA = {
 	'prework': [ 'Complete through activity 7', '',
 	`Final Exam / Quiz ${sprint}` ],
-	'announcements': [ 'Any announcements?' ],
+	'announcements': 
+	[ 	`All sprint ${sprint} assignments due Sunday`,
+		`All sprint ${sprint+1} assignment due next Wednesday`, ],
 	'agenda': [ 
-		'Confirm Final Exam Time',
-		'Confirm Class Project presentation time',
-		'Practical Diversity and Working with India',
+		'Confirm Class Project Presentation Times',
+		'Practical Diversity and Working with India (continued)',
 		'Lab'
 	]
 }
@@ -200,12 +202,13 @@ export const af_7_8of9 = () => {
 		return orderedListSlide('Practical Diversity and Working with India',
 			'Practical Diversity and Working with India', [ ] )
 	}
-	return completeDeck(slideDeck, [ practicalDiversityAndWorkingWithIndia, tLab ])
+	return completeDeck(slideDeck, [ confirmPresentationTimes, practicalDiversityAndWorkingWithIndia, tLab ])
 }
 
 const af_7_9of9_PAaA = {
-	'prework': [ 'Complete through activity 7', '',
-	`Final Exam / Quiz ${sprint}` ],
+	'prework': [ 
+		'Complete through activity 7', '',
+		`By prepared for sprint ${sprint+1} Planning` ],
 	'announcements': [ 'Any announcements?' ],
 	'agenda': [ 
 		'Confirm Final Exam Time',
