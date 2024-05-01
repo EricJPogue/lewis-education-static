@@ -170,8 +170,7 @@ const af_7_7of9_PAaA = {
 		`All sprint ${sprint+1} assignment due next Wednesday`, ],
 	'agenda': [ 
 		'Confirm Class Project Presentation Time',
-		'Final Exam'
-	]
+		'Final Exam' ]
 }
 const confirmPresentationTimes = () => {
 	return orderedListSlide('Confirm Final Exam and Class Project presentation times',
@@ -179,8 +178,6 @@ const confirmPresentationTimes = () => {
 }
 export const af_7_7of9 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_7_7of9_PAaA, sprint, activityList)
-
- 
 	return completeDeck(slideDeck, [ confirmPresentationTimes, tExamExpectations, tExam ])
 }
 

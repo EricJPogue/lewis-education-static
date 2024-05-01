@@ -24,6 +24,7 @@ import { tDiscussionBreakout } from './SLSprint00'
 
 import { confirmFinalExamAndPresentationTimes, practicalDiversityAndWorkingWithIndia } from './SL20000Sprint07'
 
+import { tExamExpectations, tExam } from './SLSprint00'
 
 // Todo: Update naming to reflect that fact that there are nine class sessions in sprint 7. Note that that will cause issues 
 // with the “http://localhost:3000/?cpsc=sp24-cpsc-44500-001#/deck/7-4” URL routing method. 
@@ -236,16 +237,19 @@ export const se_7_7of6 = () => {
 }
 
 // Sprint 7 session 8 of 6: Wednesday
-const se_7_8of6_PAaA = { 
-	'prework':[
-		`Be prepared for Quiz ${sprint+1} (final exam)` ],
-	'announcements':[ 
-		'Friday is Class Project presentations in classroom plus remote' ],
-	'agenda':[
-		'Review Class Project Presentation Schedule',
-		`Quiz ${sprint+1} (final exam)` ] 
+const se_7_8of6_PAaA = {
+	'prework': [ 'Complete through activity 10', '',
+	`Final Exam / Quiz ${sprint}` ],
+	'announcements': 
+	[ 	`All sprint ${sprint} assignments due Sunday`,
+		`All sprint ${sprint+1} assignment due next Wednesday`, ],
+	'agenda': [ 
+		'Confirm Class Project Presentation Times',
+		'Practical Diversity and Working with India (continued)',
+		'Lab'
+	]
 }
-export const se_7_8of6 = () => { 
+export const se_7_8of6X = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_8of6_PAaA, sprint, activityList)
 	const reviewPresentationSchedule = () => { return basicSlide('Class Project Presentation Schedule', [
 		'Let’s take a last look at our presentation schedule for Friday and for next week.' ])}
@@ -253,11 +257,20 @@ export const se_7_8of6 = () => {
 	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_9of6_PAaA.prework, sprint, activityList) }
 	return completeDeck(slideDeck, [ reviewPresentationSchedule, preworkNext, quiz]) 
 }
+const confirmPresentationTimes = () => {
+	return orderedListSlide('Confirm Final Exam and Class Project presentation times',
+		'Confirm Class Project Presentation Time', [ ] )		
+}
+export const se_7_8of6 = () => {
+	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_8of6_PAaA, sprint, activityList)
+	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_9of6_PAaA.prework, sprint, activityList) }
+	return completeDeck(slideDeck, [ confirmPresentationTimes, preworkNext, tExamExpectations, tExam ])
+}
 
 const se_7_9of6_PAaA = { 
-	'prework':[
-		`Be prepared for a quick sprint ${sprint} planning review`,
-		'Be for lab' ],
+	'prework': [ 
+		'Complete through activity 11', '',
+		`By prepared for sprint ${sprint+1} Planning` ],
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday`,
 		`All sprint ${sprint+1} assignment due Thursday next week` ],
