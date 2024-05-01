@@ -7,7 +7,6 @@ import { checklistAnnouncementsPreworkAndAgenda, completeDeck, tLab } from './SL
 import { tPreworkWithLogo } from './SLSprint00'
 import { basicSlideWithLogo } from './SLSprint00'
 import { agendaSlide } from './SLSprint00'
-import { basicSlide } from './SLSprint00'
 import { makeSlideDeck } from './SL00000Sprint00'
 import { insertInto } from './SLSprintPlanning'
 import { sprintPlanningSlideDeck } from './SLSprintPlanning'
@@ -238,24 +237,15 @@ export const se_7_7of6 = () => {
 
 // Sprint 7 session 8 of 6: Wednesday
 const se_7_8of6_PAaA = {
-	'prework': [ 'Complete through activity 10', '',
-	`Final Exam / Quiz ${sprint}` ],
-	'announcements': 
-	[ 	`All sprint ${sprint} assignments due Sunday`,
+	'prework': [ 
+		'Complete through activity 10', '',
+		`Final Exam` ],
+	'announcements': [ 	
+		`All sprint ${sprint} assignments due Sunday`,
 		`All sprint ${sprint+1} assignment due next Wednesday`, ],
 	'agenda': [ 
-		'Confirm Class Project Presentation Times',
-		'Practical Diversity and Working with India (continued)',
-		'Lab'
-	]
-}
-export const se_7_8of6X = () => { 
-	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_8of6_PAaA, sprint, activityList)
-	const reviewPresentationSchedule = () => { return basicSlide('Class Project Presentation Schedule', [
-		'Let’s take a last look at our presentation schedule for Friday and for next week.' ])}
-	const quiz = () => { return tQuiz(sprint+1) }
-	const preworkNext = () => { return tPrework('Prework For Next Class', se_7_9of6_PAaA.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ reviewPresentationSchedule, preworkNext, quiz]) 
+		'Confirm Class Project Presentation Time',
+		'Final Exam' ]
 }
 const confirmPresentationTimes = () => {
 	return orderedListSlide('Confirm Final Exam and Class Project presentation times',

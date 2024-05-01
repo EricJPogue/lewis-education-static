@@ -11,7 +11,7 @@ import { tDemos } from './SL00000Sprint00'
 import { list20000Sprint06 } from '../ActivityLists/AL20000Sprint06'
 import { list20000Sprint07 } from '../ActivityLists/AL20000Sprint07'
 
-import { tQuiz } from './SLSprint00'
+import { tExamExpectations, tExam } from './SLSprint00'
 import { basicSlide } from './SLSprint00'
 import { bulletListSlide } from './SLSprint00'
 
@@ -22,7 +22,7 @@ import { bulletListSlide } from './SLSprint00'
 // Introduction to Computer Science (ICS) sprint 7 global values.
 
 const sprint = 7
-const activityListPrevious = () => { return list20000Sprint06(sprint-1) }
+const activityListPrevious = () => { return list20000Sprint06(sprint-1) } 
 const activityList = () => { return list20000Sprint07(sprint) }
 
 // Session 1 of 6: Monday
@@ -214,28 +214,29 @@ export const ics_7_7of6 = () => {
 }
 
 // Sprint 7 session 8 of 6: Wednesday
-const ics_7_8of6_PAaA = { 
-	'prework':[
-		`Be prepared for our Final Exam (in-person attendance required)` ],
-	'announcements':[ 
-		'Friday is Class Project presentations in classroom plus remote' ],
-	'agenda':[
-		'Review Class Project Presentation Schedule',
-		`Final Exam / Quiz ${sprint+1}` ] 
+const ics_7_8of6_PAaA = {
+	'prework': [ 
+		'Complete through activity 8', '',
+		`Final Exam` ],
+	'announcements': [ 	
+		`All sprint ${sprint} assignments due Sunday`,
+		`All sprint ${sprint+1} assignment due next Wednesday`, ],
+	'agenda': [ 
+		'Confirm Class Project Presentation Time',
+		'Final Exam' ]
 }
 export const ics_7_8of6 = () => { 
+	const confirmPresentationTimes = () => {
+		return orderedListSlide('Confirm Final Exam and Class Project presentation times',
+			'Confirm Class Project Presentation Time', [ ] ) }
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_8of6_PAaA, sprint, activityList)
-	const reviewPresentationSchedule = () => { return basicSlide('Class Project Presentation Schedule', [
-		'Let’s take a last look at our presentation schedule for Friday and for next week.' ])}
-	const quiz = () => { return tQuiz(sprint+1) }
 	const preworkNext = () => { return tPrework('Prework For Next Class', ics_7_9of6_PAaA.prework, sprint, activityList) }
-	return completeDeck(slideDeck, [ reviewPresentationSchedule, preworkNext, quiz]) 
+	return completeDeck(slideDeck, [ confirmPresentationTimes, preworkNext, tExamExpectations, tExam ])
 }
 
 const ics_7_9of6_PAaA = { 
 	'prework':[
-		`Be prepared for a sprint ${sprint+1} planning`,
-		'Be prepared for class project presentations in classroom plus remote' ],
+		`Be prepared for a sprint ${sprint+1} planning` ],
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday`,
 		`All sprint ${sprint+1} assignment due Wednesday next week`,
