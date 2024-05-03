@@ -212,7 +212,7 @@ const af_7_9of9_PAaA = {
 		`All sprint ${sprint+1} assignment due Wednesday next week` ],
 	'agenda':[
 		`Review of sprint ${sprint+1} assignments & expectations`,
-		'Class Project presentations' ]
+		'Lab' ]
 }
 export const af_7_9of9 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_7_9of9_PAaA, sprint, activityList)
@@ -233,5 +233,5 @@ export const af_7_9of9 = () => {
 		`All sprint ${sprint} assignments due Sunday`,
 		'I will see you next week for your Class Project presentations' ], sprint, activityList) }
 
-	return completeDeck(slideDeck, [ quickSprint8PlanningReview, finalProjectPresentation, nextSteps ]) 
+	return completeDeck(slideDeck, [ quickSprint8PlanningReview, finalProjectPresentation, nextSteps, tLab ]) 
 }

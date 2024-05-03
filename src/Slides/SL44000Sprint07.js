@@ -258,38 +258,30 @@ export const se_7_8of6 = () => {
 }
 
 const se_7_9of6_PAaA = { 
-	'prework': [ 
-		'Complete through activity 11', '',
-		`By prepared for sprint ${sprint+1} Planning` ],
+	'prework':[
+		`Be prepared for a sprint ${sprint+1} planning` ],
 	'announcements':[ 
 		`All sprint ${sprint} assignments due Sunday`,
-		`All sprint ${sprint+1} assignment due Thursday next week` ],
+		`All sprint ${sprint+1} assignment due Wednesday next week` ],
 	'agenda':[
-		`Brief review of sprint ${sprint+1} expectations`,
-		'Review Class Project presentation schedule and expectations' ]
+		`Review of sprint ${sprint+1} assignments & expectations`,
+		'Lab' ]
 }
 
 export const se_7_9of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(se_7_9of6_PAaA, sprint, activityList)
 	const finalProjectPresentation = () => {
 		return orderedListSlide('Class Project Presentation Schedule and Expectations ', `Recall that your final project presentation should including a/an:`, [
-			'Review schedule...',
-			'** Detailed discussion of the teams and transition plan',
 			'Brief introduction of your team and yourself',
 			'Overview of your project proposal',
+			'** Detailed discussion of the teams and transition and who is responsible for each asset',
 			'One team member review the overall project... capstone team first',
 			'Each team member demonstrate a feature that they personally delivered that they are most proud of delivering',
 			'Description of what else you expect to complete by the end of the day Thursday' ])
 	}
-	const nextSteps = () => { return tPrework('Next Steps', 
-		[ 
+	const nextSteps = () => { return tPrework('Next Steps', [ 
 			`All sprint ${sprint} assignments are due Sunday`,
-			`All sprint ${sprint+1} assignments are due next Thursday!`, 
-			'If you completed your Class Project presentation today, please submit all assignment Sunday' ], sprint, activityList) }
-	const finalComments = () => {
-		return orderedListSlide('See everyone Monday at 4pm!',
-			'', [ ])
-	}
+			`All sprint ${sprint+1} assignment due Wednesday next week` ], sprint, activityList) }
 
-	return completeDeck(slideDeck, [ finalProjectPresentation, nextSteps, finalComments ]) 
+	return completeDeck(slideDeck, [ finalProjectPresentation, nextSteps ]) 
 }
