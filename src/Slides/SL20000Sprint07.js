@@ -242,20 +242,21 @@ const ics_7_9of6_PAaA = {
 		`All sprint ${sprint+1} assignment due Wednesday next week`,
 		`If you are presenting today, your sprint ${sprint} and sprint ${sprint+1} assignments are due Sunday` ],
 	'agenda':[
-		`Brief review of sprint ${sprint+1} assignments & expectations`,
+		`Review of sprint ${sprint+1} assignments & expectations`,
 		'Class Project presentations' ]
 }
 export const ics_7_9of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_7_9of6_PAaA, sprint, activityList)
-	const quickSprint8PlanningReview = () => { return basicSlide(`Be prepared for a quick sprint ${sprint+1} planning review`, [
+	const quickSprint8PlanningReview = () => { return basicSlide(`Review of sprint ${sprint+1} assignments & expectations`, [
 		`Let’s look at our ${sprint+1} assignments and remaining Class Project presentation schedule.` ])}
 	const finalProjectPresentation = () => {
-		return orderedListSlide('Final Project Presentations', `Recall that your final project presentation should including a/an:`, [
-			'Brief introduction of yourself',
-			'Overview of your final project proposal',
-			'Demonstration standard and advanced feature',
+		return orderedListSlide('Final Project Presentations', 'Your final project presentation should include a:', [
+			'Introduction of yourself',
+			'Review of your final project proposal',
+			'Demonstration “similar in complexity” features',
+			'Demonstration of “more complex” features',
 			'Overview of the project source code',
-			'Description of what else you expect to complete by the end of the day Thursday' ])
+			'Discussion of What you would add if you had more time' ])
 	}
 	const nextSteps = () => { return tPrework('Next Steps', [ 
 		`All sprint ${sprint} assignments due Sunday`,
@@ -266,8 +267,7 @@ export const ics_7_9of6 = () => {
 			'', [
 			'Thank you for making this a wonderful experience for me',
 			'Don’t hesitate to reach out in the future',
-			'I hope to see you in a future class', 
-			'Reach out to me if you are interested in taking Web & Distributed Programming',
+			'I hope to see you in a future class',
 			'Very nice work! I am impressed with what you have accomplished.' ])
 	}
 

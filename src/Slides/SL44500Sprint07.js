@@ -13,6 +13,8 @@ import { tExamExpectations, tExam } from './SLSprint00'
 import { list44500Sprint06 } from '../ActivityLists/AL44500Sprint06'
 import { list44500Sprint07 } from '../ActivityLists/AL44500Sprint07'
 
+import { basicSlide } from './SLSprint00'
+
 // Todo: Update naming to reflect that fact that there are nine class sessions in sprint 7. Note that that will cause issues 
 // with the “http://localhost:3000/?cpsc=sp24-cpsc-44500-001#/deck/7-4” URL routing method. 
 
@@ -202,19 +204,34 @@ export const af_7_8of9 = () => {
 	return completeDeck(slideDeck, [ confirmPresentationTimes, practicalDiversityAndWorkingWithIndia, tLab ])
 }
 
-const af_7_9of9_PAaA = {
-	'prework': [ 
-		'Complete through activity 7', '',
-		`By prepared for sprint ${sprint+1} Planning` ],
-	'announcements': [ 'Any announcements?' ],
-	'agenda': [ 
-		'Confirm Final Exam Time',
-		'Confirm Class Project presentation time',
-		'Practical Diversity and Working with India',
-		'Lab'
-	]
+const af_7_9of9_PAaA = { 
+	'prework':[
+		`Be prepared for a sprint ${sprint+1} planning` ],
+	'announcements':[ 
+		`All sprint ${sprint} assignments due Sunday`,
+		`All sprint ${sprint+1} assignment due Wednesday next week` ],
+	'agenda':[
+		`Review of sprint ${sprint+1} assignments & expectations`,
+		'Class Project presentations' ]
 }
 export const af_7_9of9 = () => {
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(af_7_9of9_PAaA, sprint, activityList)
-	return completeDeck(slideDeck, [ tLab ])
+	const quickSprint8PlanningReview = () => { 
+		return basicSlide(
+			`Review sprint ${sprint+1} assignments & expectations`, [
+			`Let’s look at our ${sprint+1} assignments and remaining Class Project presentation schedule.` ])}
+	const finalProjectPresentation = () => {
+		return orderedListSlide('Final Project Presentations', 'Your final project presentation should include a:', [
+			'Introduction of yourself',
+			'Review of your final project proposal',
+			'Demonstration “similar in complexity” features',
+			'Demonstration of “more complex” features',
+			'Overview of the project source code',
+			'Discussion of What you would add if you had more time' ])
+	}
+	const nextSteps = () => { return tPrework('Next Steps', [ 
+		`All sprint ${sprint} assignments due Sunday`,
+		'I will see you next week for your Class Project presentations' ], sprint, activityList) }
+
+	return completeDeck(slideDeck, [ quickSprint8PlanningReview, finalProjectPresentation, nextSteps ]) 
 }
