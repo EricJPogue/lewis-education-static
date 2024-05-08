@@ -9,15 +9,14 @@ const activityList = () => { return list20000Sprint08(sprint) }
 // Final Exam / Final Project Presentation
 const ics_8_7of6_PAaA = {
 	'announcements':[ 
-		'Final Project Presentations Today',
+		'Class Product Presentations',
 		'Please consider taking time to complete your course evaluation' ],
 	'prework':[
-		'Verify that you have submitted your final project presentation assignment',
-		'Be prepared for your final project presentations' ],
+		'Be prepared for your class product presentations' ],
 	'agenda':[
-		'Final Project Presentations',
-		'Next Steps',
-		'Thank you!' ]
+		'Product Overview',
+		'Individual Class Product Presentations',
+		'Thank you!' ] 
 }
 export const ics_8_7of6 = () => { 
 	const slideDeck = checklistAnnouncementsPreworkAndAgenda(ics_8_7of6_PAaA, sprint, activityList)
